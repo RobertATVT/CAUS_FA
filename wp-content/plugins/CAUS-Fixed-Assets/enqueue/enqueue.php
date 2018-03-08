@@ -20,7 +20,7 @@ function causfa_enqueue() {
 
     //Scripts
     wp_register_script('causfa_bootstrap_script', plugins_url( 'assets/js/bootstrap.js', CAUSFA_PLUGIN_URL), array(), false, true);
-    wp_register_script('causfa_toggle', plugin_url( 'assets/js/toggle.js', CAUSFA_PLUGIN_URL), array(), false, true);
+    wp_register_script('causfa_toggle', plugins_url( 'assets/js/toggle.js', CAUSFA_PLUGIN_URL), array(), false, true);
 
     wp_enqueue_script('jquery');
     wp_enqueue_sdript('causfa_toggle');
