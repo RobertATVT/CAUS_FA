@@ -11,15 +11,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="employee_asset_view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="employee_asset_view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+            <state relative-caret-position="240">
+              <caret line="21" column="61" lean-forward="false" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
               <folding>
-                <marker date="1520539701421" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
-                <marker date="1520539701421" expanded="true" signature="527:600" ph="SELECT * FRO... causfa_banner" />
+                <marker date="1520543437107" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
+                <marker date="1520543437107" expanded="true" signature="527:600" ph="SELECT * FRO... causfa_banner" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enqueue.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toggle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/toggle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -27,8 +47,18 @@
       <file leaf-file-name="filter-content.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process/filter-content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+            <state relative-caret-position="418">
+              <caret line="30" column="74" lean-forward="false" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="asset_template.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/html/asset_template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="41" column="10" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -40,7 +70,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/process/filter-content.php" />
+        <option value="$PROJECT_DIR$/assets/html/asset_template.html" />
         <option value="$PROJECT_DIR$/includes/employee_asset_view.php" />
+        <option value="$PROJECT_DIR$/assets/js/toggle.js" />
+        <option value="$PROJECT_DIR$/enqueue/enqueue.php" />
       </list>
     </option>
   </component>
@@ -79,6 +112,28 @@
             <path>
               <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="enqueue" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
@@ -133,7 +188,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1673000" />
+    <option name="totallyTimeSpent" value="2311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="36" width="1143" height="772" extended-state="0" />
@@ -183,9 +238,28 @@
         <state relative-caret-position="135">
           <caret line="14" column="112" lean-forward="false" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
           <folding>
-            <marker date="1520539701421" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
-            <marker date="1520539701421" expanded="true" signature="527:600" ph="SELECT * FRO... causfa_banner" />
+            <marker date="1520543437107" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
+            <marker date="1520543437107" expanded="true" signature="527:600" ph="SELECT * FRO... causfa_banner" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <marker date="1520543437107" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
+            <marker date="1520543437107" expanded="true" signature="527:600" ph="SELECT * FRO... causfa_banner" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="30" column="74" lean-forward="false" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -199,12 +273,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+        <state relative-caret-position="135">
+          <caret line="14" column="112" lean-forward="false" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
           <folding>
-            <marker date="1520539701421" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
-            <marker date="1520539701421" expanded="true" signature="527:600" ph="SELECT * FRO... causfa_banner" />
+            <marker date="1520543437107" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
+            <marker date="1520543437107" expanded="true" signature="527:600" ph="SELECT * FRO... causfa_banner" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="30" column="74" lean-forward="false" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="61" lean-forward="false" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+          <folding>
+            <marker date="1520543437107" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
+            <marker date="1520543437107" expanded="true" signature="527:600" ph="SELECT * FRO... causfa_banner" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/toggle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/asset_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="41" column="10" lean-forward="true" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
