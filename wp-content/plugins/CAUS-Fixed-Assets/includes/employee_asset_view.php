@@ -15,7 +15,7 @@ function causfa_load_employee_view() {
     $results = $wpdb->get_results('SELECT * FROM causfa_banner WHERE FZVFORG_CUSTODIAN = "'.$result->Name.'";');
     $value_total = 0;
     foreach ($results as $result) {
-        $value_total += $result->Amt;
+        $value_total += $result->FZVFORG_Amt;
         $output = $output.(apply_filters('causfa_employee_asset_info', $result));
     }
     $output = $output.(apply_filters('causfa_employee_asset_total', $value_total));
