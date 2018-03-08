@@ -22,15 +22,15 @@ function causfa_filter_employee_info( $content) {
 
 function causfa_filter_employee_asset_info( $content) {
     $asset_info_html = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_template.html', true);
-    $asset_info_html = str_replace('[VT TAG]', 'VT000'.$content->Ptag, $asset_info_html);
-    $asset_info_html = str_replace( '[S/N]', $content->Serial, $asset_info_html);
-    $asset_info_html = str_replace('[DESCRIPTION]', $content->Description, $asset_info_html);
-    $asset_info_html = str_replace( '[VALUE]', $content->Amt, $asset_info_html);
-    $asset_info_html = str_replace( '[ORGANIZATION]', $content->{'Orgn Title'}, $asset_info_html);
-    $asset_info_html = str_replace( '[OWNERSHIP]', $content->Ownership, $asset_info_html);
-    $asset_info_html = str_replace( '[VT SCAN]', $content->{'Last Inv Date'}, $asset_info_html);
+    $asset_info_html = str_replace('[VT TAG]', 'VT000'.$content->FZVFORG_Ptag, $asset_info_html);
+    $asset_info_html = str_replace( '[S/N]', $content->FZVFORG_Serial, $asset_info_html);
+    $asset_info_html = str_replace('[DESCRIPTION]', $content->FZVFORG_Description, $asset_info_html);
+    $asset_info_html = str_replace( '[VALUE]', $content->FZVFORG_Amt, $asset_info_html);
+    $asset_info_html = str_replace( '[ORGANIZATION]', $content->{'FZVFORG_Orgn Title'}, $asset_info_html);
+    $asset_info_html = str_replace( '[OWNERSHIP]', $content->FZVFORG_Ownership, $asset_info_html);
+    $asset_info_html = str_replace( '[VT SCAN]', $content->{'FZVFORG_Last Inv Date'}, $asset_info_html);
     $asset_info_html = str_replace( '[CAUS SCAN]', '[CAUS SCAN]', $asset_info_html);
-    $asset_info_html = str_replace( '[PURCHASE DATE]', $content->{'Acq Date'}, $asset_info_html);
+    $asset_info_html = str_replace( '[PURCHASE DATE]', $content->{'FZVFORG_Acq Date'}, $asset_info_html);
     return $asset_info_html;
 }
 
