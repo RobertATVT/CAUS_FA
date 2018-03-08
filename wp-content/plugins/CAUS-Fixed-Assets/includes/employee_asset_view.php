@@ -20,6 +20,7 @@ function causfa_load_employee_view() {
         $value_total += $result->FZVFORG_AMOUNT;
         $output = $output.(apply_filters('causfa_employee_asset_info', $result));
         $output = str_replace('[ID]', $asset_index, $output);
+        $asset_index++;
     }
     $output = $output.(apply_filters('causfa_employee_asset_total', $value_total));
     return $output;
