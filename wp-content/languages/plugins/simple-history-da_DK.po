@@ -1,0 +1,2273 @@
+# Translation of Plugins - Simple History - Stable (latest release) in Danish
+# This file is distributed under the same license as the Plugins - Simple History - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-01-05 18:37:43+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: da_DK\n"
+"Project-Id-Version: Plugins - Simple History - Stable (latest release)\n"
+
+#: loggers/SimplePostLogger.php:1133
+msgid "Featured image"
+msgstr "Udvalgt billede"
+
+#. translators: 1: WordPress version
+#: index.php:117
+msgid "Simple History requires WordPress version 4.5.1 or higher (you have version %s)."
+msgstr "Simple History kræver WordPress version 4.5.1 eller højere (du har version %s)."
+
+#: loggers/SimpleUserLogger.php:837
+msgctxt "User logger"
+msgid "Locale"
+msgstr "Sprog"
+
+#: loggers/SimplePluginLogger.php:89
+msgctxt "Plugin was disabled because of an error"
+msgid "Deactivated plugin \"{plugin_slug}\" because of an error (\"{deactivation_reason}\")."
+msgstr "Deaktiverede \"{plugin_slug}\" pluginet, pga. en fejl (\"{deactivation_reason}\")."
+
+#: inc/SimpleHistory.php:3444
+msgid "The slug for a logger in Simple History can be max 30 chars long."
+msgstr "Korttitlen for en logger i Simpel Historik, kan maks. være 30 tegn."
+
+#. translators: 1: URL to settings page
+#: dropins/SimpleHistorySidebarSettings.php:72
+msgid "<a href=\"%1$s\">Visit the settings page</a> to change things like the number of events to show and to get access to the RSS feed with all events, and more."
+msgstr "<a href=\"%1$s\">Besøg indstillinger</a> for at ændre, så som antal events der vises og for at få adgang til RSS feed med alle events og mere."
+
+#: loggers/FileEditsLogger.php:241
+msgid "File contents"
+msgstr "Fil indhold"
+
+#: loggers/FileEditsLogger.php:25
+msgctxt "Plugin logger: file edits"
+msgid "Edited theme files"
+msgstr "Ændrede tema filer"
+
+#: loggers/FileEditsLogger.php:23
+msgctxt "Plugin logger: file edits"
+msgid "All file edits"
+msgstr "Alle fil ændringer"
+
+#: loggers/FileEditsLogger.php:22
+msgctxt "Plugin logger: file edits"
+msgid "Edited theme and plugin files"
+msgstr "Ændrede tema og plugin filer"
+
+#: loggers/FileEditsLogger.php:18
+msgid "Edited file \"{file_name}\" in plugin \"{plugin_name}\""
+msgstr "Ændrede filen \"{file_name}\" i \"{plugin_name}\" pluginet."
+
+#: loggers/FileEditsLogger.php:17
+msgid "Edited file \"{file_name}\" in theme \"{theme_name}\""
+msgstr "Ændrede filen \"{file_name}\" i \"{theme_name}\" temaet."
+
+#: dropins/SimpleHistoryWPCLIDropin.php:112
+msgid "Error: parameter \"count\" must be a number"
+msgstr "Fejl: parameter \"count\" skal være et nummer."
+
+#: templates/template-settings-tab-debug.php:281
+msgctxt "debug dropin"
+msgid "Active"
+msgstr "Aktiv"
+
+#: templates/template-settings-tab-debug.php:280
+msgctxt "debug dropin"
+msgid "Plugin file path"
+msgstr "Plugin fil sti"
+
+#: templates/template-settings-tab-debug.php:279
+msgctxt "debug dropin"
+msgid "Plugin name"
+msgstr "Plugin navn"
+
+#: loggers/Plugin_DuplicatePost.php:111
+msgctxt "Logger: Plugin Duplicate Post"
+msgid "Cloned {duplicated_post_post_type_singular_name} <a href=\"{duplicated_post_edit_link}\">\"{duplicated_post_title}\"</a> to <a href=\"{new_post_edit_link}\">a new {duplicated_post_post_type_singular_name}</a>"
+msgstr "Klonede {duplicated_post_post_type_singular_name} <a href=\"{duplicated_post_edit_link}\">\"{duplicated_post_title}\"</a> til <a href=\"{new_post_edit_link}\"> {duplicated_post_post_type_singular_name}</a>"
+
+#: loggers/Plugin_DuplicatePost.php:25
+msgctxt "Logger: Plugin Duplicate Post"
+msgid "Cloned \"{duplicated_post_title}\" to a new post"
+msgstr "Klonede \"{duplicated_post_title}\" til et nyt indlæg"
+
+#: loggers/Plugin_DuplicatePost.php:22
+msgctxt "Logger: Plugin Duplicate Post"
+msgid "Using plugin Duplicate Posts"
+msgstr "Bruger Duplicate Posts pluginet"
+
+#: loggers/Plugin_DuplicatePost.php:21
+msgctxt "Logger: Plugin Duplicate Post"
+msgid "Logs posts and pages cloned using plugin Duplicate Post"
+msgstr "Logger indlæg og sider der klones via Duplicate Posts pluginet"
+
+#: inc/SimpleHistory.php:2021
+msgid "Number of items per page on the dashboard"
+msgstr "Antal elementer per side på kontrolpanelet"
+
+#: inc/SimpleHistory.php:2009
+msgid "Number of items per page on the log page"
+msgstr "Antal af elementer per side på log siden"
+
+#: loggers/Plugin_Redirection.php:31
+msgctxt "Logger: Redirection"
+msgid "Deleted {items_count} group(s)"
+msgstr "Slettet {items_count} gruppe(r)"
+
+#: loggers/Plugin_Redirection.php:30
+msgctxt "Logger: Redirection"
+msgid "Added group \"{group_name}\""
+msgstr "Tilføjede gruppe \"{group_name}\""
+
+#: loggers/Plugin_Redirection.php:29
+msgctxt "Logger: Redirection"
+msgid "Removed all options and deactivated plugin"
+msgstr "Fjernede alle indstillinger og deaktiverede plugin"
+
+#: loggers/Plugin_Redirection.php:28
+msgctxt "Logger: Redirection"
+msgid "Updated options"
+msgstr "Opdaterede indstillinger"
+
+#: loggers/Plugin_Redirection.php:27
+msgctxt "Logger: Redirection"
+msgid "Removed redirection for {items_count} URL(s)"
+msgstr "Fjernede redelegering af {items_count} URL(s)"
+
+#: loggers/Plugin_Redirection.php:26
+msgctxt "Logger: Redirection"
+msgid "Disabled the redirection for {items_count} URL(s)"
+msgstr "Deaktiverede redelegeringen af {items_count} URL(s)"
+
+#: loggers/Plugin_Redirection.php:25
+msgctxt "Logger: Redirection"
+msgid "Enabled the redirection for {items_count} URL(s)"
+msgstr "Aktiverede redelegeringen af {items_count} URL(s)"
+
+#: loggers/Plugin_Redirection.php:24
+msgctxt "Logger: Redirection"
+msgid "Edited the redirection for URL \"{source_url}"
+msgstr "Redigerede redelegeringen af URL \"{source_url}\""
+
+#: loggers/Plugin_Redirection.php:23
+msgctxt "Logger: Redirection"
+msgid "Added a redirection for URL \"{source_url}\""
+msgstr "Tilføjede en redelegering af URL \"{surce_url}\""
+
+#: loggers/Plugin_Redirection.php:20
+msgctxt "Logger: Redirection"
+msgid "In plugin Redirection"
+msgstr "I plugin redelegering"
+
+#: loggers/Plugin_Redirection.php:19
+msgctxt "Logger: Redirection"
+msgid "Text"
+msgstr "Tekst"
+
+#: loggers/AvailableUpdatesLogger.php:287
+msgid "View all updates"
+msgstr "Vis alle opdateringer"
+
+#: loggers/AvailableUpdatesLogger.php:277
+msgid "Installed version"
+msgstr "Installerede version"
+
+#: loggers/AvailableUpdatesLogger.php:273
+msgid "Available version"
+msgstr "Tilgængelig version"
+
+#: loggers/AvailableUpdatesLogger.php:50
+msgctxt "Plugin logger: updates found"
+msgid "Theme updates found"
+msgstr "Tema opdateringer fundet"
+
+#: loggers/AvailableUpdatesLogger.php:47
+msgctxt "Plugin logger: updates found"
+msgid "Plugin updates found"
+msgstr "Plugin opdateringer fundet"
+
+#: loggers/AvailableUpdatesLogger.php:44
+msgctxt "Plugin logger: updates found"
+msgid "WordPress updates found"
+msgstr "WordPress opdateringer fundet"
+
+#: loggers/AvailableUpdatesLogger.php:42
+msgctxt "Plugin logger: updates found"
+msgid "All found updates"
+msgstr "Alle fundet opdateringer"
+
+#: loggers/AvailableUpdatesLogger.php:41
+msgctxt "Plugin logger: updates found"
+msgid "WordPress and plugins updates found"
+msgstr "WordPress og Plugin opdateringer fundet"
+
+#: loggers/AvailableUpdatesLogger.php:37
+msgid "Found an update to theme \"{theme_name}\""
+msgstr "Fandt en opdatering til tema \"{theme_name}\""
+
+#: loggers/AvailableUpdatesLogger.php:36
+msgid "Found an update to plugin \"{plugin_name}\""
+msgstr "Fandt en opdatering til plugin \"{plugin_name}\""
+
+#: loggers/AvailableUpdatesLogger.php:35
+msgid "Found an update to WordPress."
+msgstr "Fandt en opdatering til WordPress."
+
+#. translators: 1: month, 2: day, 3: year, 4: hour, 5: minute
+#: dropins/SimpleHistoryFilterDropin.php:598
+msgid "%1$s %2$s, %3$s "
+msgstr "%1$s %2$s, %3$s "
+
+#: dropins/SimpleHistoryFilterDropin.php:591
+msgid "Year"
+msgstr "År"
+
+#: dropins/SimpleHistoryFilterDropin.php:590
+msgid "Day"
+msgstr "Dag"
+
+#. translators: 1: month number (01, 02, etc.), 2: month abbreviation
+#: dropins/SimpleHistoryFilterDropin.php:585
+msgid "%1$s-%2$s"
+msgstr "%1$s-%2$s"
+
+#: dropins/SimpleHistoryFilterDropin.php:567
+msgctxt "Filter dropin, custom date range"
+msgid "To"
+msgstr "Til"
+
+#: dropins/SimpleHistoryFilterDropin.php:564
+msgctxt "Filter dropin, custom date range"
+msgid "From"
+msgstr "Fra"
+
+#: dropins/SimpleHistoryFilterDropin.php:231
+msgctxt "Filter label"
+msgid "Between dates:"
+msgstr "Mellem datoer:"
+
+#: dropins/SimpleHistoryFilterDropin.php:175
+msgctxt "Filter dropin: filter custom range"
+msgid "Custom date range..."
+msgstr "Tilpasset dato periode..."
+
+#: loggers/SimpleThemeLogger.php:49
+msgctxt "Theme logger: search"
+msgid "Installed themes"
+msgstr "Installeret temaer"
+
+#: loggers/SimpleThemeLogger.php:46
+msgctxt "Theme logger: search"
+msgid "Deleted themes"
+msgstr "Slettet temaer"
+
+#: loggers/SimpleThemeLogger.php:43
+msgctxt "Theme logger: search"
+msgid "Updated themes"
+msgstr "Opdateret temaer"
+
+#: loggers/SimpleThemeLogger.php:30
+msgid "Updated theme \"{theme_name}\""
+msgstr "Opdaterede tema \"{theme_name}\""
+
+#: loggers/SimpleThemeLogger.php:29
+msgid "Deleted theme with slug \"{theme_slug}\""
+msgstr "Slettede tema med korttitel \"{theme_slug}\""
+
+#: loggers/SimpleThemeLogger.php:28
+msgid "Installed theme \"{theme_name}\""
+msgstr "Installerede tema \"{theme_name}\""
+
+#: loggers/SimplePluginLogger.php:69
+msgctxt "Plugin update failed"
+msgid "Failed to update plugin \"{plugin_name}\""
+msgstr "Fejlede under opdateringen af plugin \"{plugin_name}\""
+
+#: loggers/Plugin_LimitLoginAttempts.php:231
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "IP was blocked for %1$s"
+msgstr "IP var blokeret for %1$s"
+
+#: loggers/Plugin_LimitLoginAttempts.php:226
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minut"
+msgstr[1] "%d minutter"
+
+#: loggers/Plugin_LimitLoginAttempts.php:222
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d time"
+msgstr[1] "%d timer"
+
+#: loggers/Plugin_LimitLoginAttempts.php:214
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "%1$d failed login attempts (%2$d lockout(s)) from IP: %3$s"
+msgstr "%1$d mislykket log ind forsøg (%2$d lockout(s)) fra IP: %3$s"
+
+#: loggers/Plugin_LimitLoginAttempts.php:29
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "Updated options"
+msgstr "Opdaterede indstillinger"
+
+#: loggers/Plugin_LimitLoginAttempts.php:28
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "Cleared current lockouts"
+msgstr "Nulstillede aktuelle lockouts"
+
+#: loggers/Plugin_LimitLoginAttempts.php:27
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "Reseted lockout count"
+msgstr "Nulstillede lockout tæller"
+
+#: loggers/Plugin_LimitLoginAttempts.php:26
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "Cleared IP log"
+msgstr "Nulstillede IP log"
+
+#: loggers/Plugin_LimitLoginAttempts.php:25
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "Was locked out because too many failed login attempts"
+msgstr "Blev lockout fordi der var for mange mislykket log ind forsøg"
+
+#: loggers/Plugin_LimitLoginAttempts.php:24
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "Failed login attempt from whitelisted IP"
+msgstr "Mislykket log ind forsøg fra whitelistet IP"
+
+#: loggers/Plugin_LimitLoginAttempts.php:20
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "Using plugin Limit Login Attempts"
+msgstr "Bruger plugin Limit Login Attempts"
+
+#: loggers/Plugin_LimitLoginAttempts.php:19
+msgctxt "Logger: Plugin Limit Login Attempts"
+msgid "Logs failed login attempts, lockouts, and configuration changes made in the plugin Limit Login Attempts"
+msgstr "Logger mislykket log ind forsøg, lockouts og ændringer til pluginet Limit Login Attempts indstillinger"
+
+#: dropins/SimpleHistoryFilterDropin.php:416
+msgctxt "Filter label"
+msgid "Users:"
+msgstr "Brugere:"
+
+#: dropins/SimpleHistoryFilterDropin.php:323
+msgctxt "Filter label"
+msgid "Message types:"
+msgstr "Besked typer:"
+
+#: dropins/SimpleHistoryFilterDropin.php:286
+msgctxt "Filter label"
+msgid "Log levels:"
+msgstr "Log niveauer:"
+
+#: dropins/SimpleHistoryFilterDropin.php:255
+msgctxt "Filter label"
+msgid "Containing words:"
+msgstr "Indholder ord:"
+
+#: dropins/SimpleHistoryFilterDropin.php:161
+msgctxt "Filter label"
+msgid "Dates:"
+msgstr "Datoer:"
+
+#: templates/template-settings-tab-debug.php:207
+msgctxt "debug dropin"
+msgid "%1$s message strings"
+msgstr "%1$s besked stringe"
+
+#: templates/template-settings-tab-debug.php:174
+msgctxt "debug dropin"
+msgid "Rows count"
+msgstr "Antal rækker"
+
+#: templates/template-settings-tab-debug.php:173
+msgctxt "debug dropin"
+msgid "Capability"
+msgstr "Egenskab"
+
+#: templates/template-settings-tab-debug.php:172
+msgctxt "debug dropin"
+msgid "Messages"
+msgstr "Beskeder"
+
+#: templates/template-settings-tab-debug.php:171
+msgctxt "debug dropin"
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: templates/template-settings-tab-debug.php:170
+msgctxt "debug dropin"
+msgid "Slug"
+msgstr "Korttitel"
+
+#: templates/template-settings-tab-debug.php:169
+msgctxt "debug dropin"
+msgid "Logger name"
+msgstr "Logger navn"
+
+#: templates/template-settings-tab-debug.php:150
+msgctxt "debug dropin"
+msgid "Listing %1$d loggers, ordered by rows count in database."
+msgstr "Lister %1$d loggers, sorteret efter antal rækker i database."
+
+#: templates/template-settings-tab-debug.php:145
+msgctxt "debug dropin"
+msgid "Loggers"
+msgstr "Loggers"
+
+#: templates/template-settings-tab-debug.php:101
+msgctxt "debug dropin"
+msgid "Total %s rows, when grouped by occasion id."
+msgstr "Total %s rækker, når grupperet på \"occasion id\"."
+
+#: templates/template-settings-tab-debug.php:71
+msgctxt "debug dropin"
+msgid "%s rows"
+msgstr "%s rækker"
+
+#: templates/template-settings-tab-debug.php:66
+msgctxt "debug dropin"
+msgid "%s MB"
+msgstr "%s MB"
+
+#: templates/template-settings-tab-debug.php:59
+msgctxt "debug dropin"
+msgid "Rows"
+msgstr "Rækker"
+
+#: templates/template-settings-tab-debug.php:58
+msgctxt "debug dropin"
+msgid "Size"
+msgstr "Størrelse"
+
+#: templates/template-settings-tab-debug.php:57
+msgctxt "debug dropin"
+msgid "Table name"
+msgstr "Tabelnavn"
+
+#: loggers/SimpleOptionsLogger.php:225
+msgid "&hellip;"
+msgstr "&hellip;"
+
+#: dropins/SimpleHistorySettingsDebugDropin.php:23
+msgid "Debug"
+msgstr "Debug"
+
+#: loggers/SimpleOptionsLogger.php:378 loggers/SimpleOptionsLogger.php:405
+msgid "Your latests posts"
+msgstr "Dine seneste indlæg"
+
+#: loggers/SimpleOptionsLogger.php:369 loggers/SimpleOptionsLogger.php:395
+msgid "Page %1$s"
+msgstr "Side %1$s"
+
+#: inc/SimpleHistory.php:453
+msgctxt "Admin bar name"
+msgid "Simple History"
+msgstr "Historik"
+
+#: inc/SimpleHistory.php:386
+msgctxt "Admin bar network name"
+msgid "View History"
+msgstr "Se Historik"
+
+#: loggers/SimpleUserLogger.php:916
+msgctxt "User logger"
+msgid "Notification"
+msgstr "Notifikation"
+
+#: loggers/SimpleUserLogger.php:899
+msgctxt "User logger"
+msgid "Yes, email with account details was sent"
+msgstr "Ja, e-mail med konto detaljer blev sent"
+
+#: loggers/SimpleUserLogger.php:891
+msgctxt "User logger"
+msgid "User notification email sent"
+msgstr "Bruger notifikation e-mail sent"
+
+#: loggers/SimpleUserLogger.php:869
+msgctxt "User logger"
+msgid "Changed"
+msgstr "Ændret"
+
+#: loggers/SimpleUserLogger.php:868
+msgctxt "User logger"
+msgid "Password"
+msgstr "Adgangskode"
+
+#: loggers/SimpleUserLogger.php:834
+msgctxt "User logger"
+msgid "Role"
+msgstr "Rolle"
+
+#: loggers/SimpleUserLogger.php:831 loggers/SimpleUserLogger.php:888
+msgctxt "User logger"
+msgid "Website"
+msgstr "Websted"
+
+#: loggers/SimpleUserLogger.php:828
+msgctxt "User logger"
+msgid "Display name"
+msgstr "Vis navn offentligt som"
+
+#: loggers/SimpleUserLogger.php:824
+msgctxt "User logger"
+msgid "Email"
+msgstr "E-mail"
+
+#: loggers/SimpleUserLogger.php:817
+msgctxt "User logger"
+msgid "Jabber / Google Talk "
+msgstr "Jabber / Google Talk\t"
+
+#: loggers/SimpleUserLogger.php:814
+msgctxt "User logger"
+msgid "Yahoo IM"
+msgstr "Yahoo IM"
+
+#: loggers/SimpleUserLogger.php:811
+msgctxt "User logger"
+msgid "AIM"
+msgstr "AIM"
+
+#: loggers/SimpleUserLogger.php:808
+msgctxt "User logger"
+msgid "Colour Scheme"
+msgstr "Admin farveskema"
+
+#: loggers/SimpleUserLogger.php:804
+msgctxt "User logger"
+msgid "Show Toolbar"
+msgstr "Vis Værktøjslinje"
+
+#: loggers/SimpleUserLogger.php:800
+msgctxt "User logger"
+msgid "Keyboard shortcuts"
+msgstr "Tastaturgenveje"
+
+#: loggers/SimpleUserLogger.php:796
+msgctxt "User logger"
+msgid "Visual editor"
+msgstr "Visuel editor"
+
+#: loggers/SimpleUserLogger.php:792
+msgctxt "User logger"
+msgid "Description"
+msgstr "Biografisk info"
+
+#: loggers/SimpleUserLogger.php:789
+msgctxt "User logger"
+msgid "Nickname"
+msgstr "Kaldenavn"
+
+#: loggers/SimpleUserLogger.php:786 loggers/SimpleUserLogger.php:885
+msgctxt "User logger"
+msgid "Last name"
+msgstr "Efternavn"
+
+#: loggers/SimpleUserLogger.php:783 loggers/SimpleUserLogger.php:882
+msgctxt "User logger"
+msgid "First name"
+msgstr "Fornavn"
+
+#: loggers/SimpleUserLogger.php:505
+msgid "Created user <a href=\"{edit_profile_link}\">{created_user_login} ({created_user_email})</a> with role {created_user_role}"
+msgstr "Oprettede bruger <a href=\"{edit_profile_link}\">{created_user_login} ({created_user_email})</a> med rollen {created_user_role}"
+
+#: dropins/SimpleHistorySidebarStats.php:181
+msgid "Number of events per day."
+msgstr "Antal events per dag."
+
+#: dropins/SimpleHistorySidebarStats.php:167
+msgid "<b>%1$s events</b> have been logged the last <b>%2$s days</b>."
+msgstr "<b>%1$s events</b> er logget de seneste <b>%2$s dage</b>."
+
+#: loggers/PluginUserSwitchingLogger.php:26
+msgctxt "PluginUserSwitchingLogger"
+msgid "Using plugin User Switching"
+msgstr "Bruger pluginet Brugerskift"
+
+#: loggers/PluginEnableMediaReplaceLogger.php:25
+msgctxt "PluginUserSwitchingLogger"
+msgid "Using plugin Enable Media Replace"
+msgstr "Bruger Pluginet Enable Media Replace"
+
+#: inc/SimpleHistory.php:1945
+msgctxt "Options page menu title"
+msgid "Simple History"
+msgstr "Simpel Historik"
+
+#: inc/SimpleHistory.php:1926
+msgctxt "dashboard title name"
+msgid "Simple History"
+msgstr "Simpel Historik"
+
+#: dropins/SimpleHistorySidebarDropin.php:121
+msgctxt "Sidebar box"
+msgid "<a href=\"%1$s\">Visit the support forum</a> if you need help or have questions."
+msgstr "<a href=\"%1$s\">Besøg support forum</a> hvis du har brug for hjælp eller har spørgsmål."
+
+#: dropins/SimpleHistorySidebarDropin.php:120
+msgctxt "Sidebar box"
+msgid "Support"
+msgstr "Support"
+
+#: dropins/SimpleHistoryDonateDropin.php:74
+msgid "If you find Simple History useful please <a href=\"%1$s\">donate</a>."
+msgstr "Hvis du synes godt om Simple History, kan du <a href=\"%1$s\">donere</a>."
+
+#: loggers/SimpleUserLogger.php:27
+msgid "Failed to login with username \"{failed_username}\" (username does not exist)"
+msgstr "Mislykket log ind med brugernavn \"{failed_username}\" (brugernavn findes ikke)"
+
+#: loggers/SimpleUserLogger.php:23
+msgid "Failed to login with username \"{login}\" (incorrect password entered)"
+msgstr "Mislykket log ind med brugernavn \"{login}\" (forkert kodeord)"
+
+#: loggers/SimpleUserLogger.php:20
+msgid "Logs user logins, logouts, and failed logins"
+msgstr "Logger bruger log ind, log ud og mislykket log ind"
+
+#: loggers/SimpleUserLogger.php:19
+msgid "User Logger"
+msgstr "Bruger logger"
+
+#: loggers/SimpleCategoriesLogger.php:25
+msgid "Edited term \"{to_term_name}\" in taxonomy \"{to_term_taxonomy}\""
+msgstr "Redigerede term \"{to_term_name}\" i taxonomy \"{to_term_taxonomy}\""
+
+#: loggers/SimpleCategoriesLogger.php:24
+msgid "Deleted term \"{term_name}\" from taxonomy \"{term_taxonomy}\""
+msgstr "Slettede term \"{term_name}\" fra taxonomy \"{term_taxonomy}\""
+
+#: loggers/SimpleCategoriesLogger.php:23
+msgid "Added term \"{term_name}\" in taxonomy \"{term_taxonomy}\""
+msgstr "Tilføjede term \"{term_name}\" i taxonomy \"{term_taxonomy}\""
+
+#: loggers/SimpleCategoriesLogger.php:20
+msgid "Categories Logger"
+msgstr "Kategori logger"
+
+#: loggers/SimpleUserLogger.php:44
+msgid "Requested a password reset link for user with login '{user_login}' and email '{user_email}'"
+msgstr "Anmodede om et nulstil kodeords link, på brugeren '{user_login}' og e-mail '{user_email}'"
+
+#: loggers/SimpleUserLogger.php:43
+msgid "Reset their password"
+msgstr "Nulstillede deres kodeord"
+
+#: loggers/SimpleLogger.php:444
+msgid "%1$s local time %3$s (%2$s GMT time)"
+msgstr "%1$s lokal tid %3$s (%2$s GMT tid)"
+
+#: examples/example-dropin.php:48
+msgid "Example tab"
+msgstr "Eksempel fane"
+
+#: dropins/SimpleHistorySidebarDropin.php:108
+msgctxt "Sidebar box"
+msgid "Are there things you miss in the history log?"
+msgstr "Er der elementer du mangler i historik loggen?"
+
+#: dropins/SimpleHistorySidebarDropin.php:107
+msgctxt "Sidebar box"
+msgid "Add more to the log"
+msgstr "Tilføj mere til loggen"
+
+#: dropins/SimpleHistoryRSSDropin.php:143
+msgid "Enable RSS feed"
+msgstr "Aktiver RSS feed"
+
+#: dropins/SimpleHistoryRSSDropin.php:68
+msgid "Enable"
+msgstr "Aktivér"
+
+#: dropins/SimpleHistoryFilterDropin.php:183
+msgctxt "Filter dropin: filter week"
+msgid "Last day"
+msgstr "Sidste dag"
+
+#: loggers/SimpleCoreUpdatesLogger.php:67
+msgid "WordPress database version updated to {new_version} from {prev_version}"
+msgstr "WordPress database version opdateret til {new_version} fra {prev_version}"
+
+#: inc/SimpleHistory.php:1458
+msgid "Hm, the log could not be loaded right now. Perhaps another plugin is giving some errors. Anyway, below is the output I got from the server."
+msgstr "Hmm, loggen kunne ikke indlæses. Måske et andet plugin producere fejl."
+
+#. Author URI of the plugin/theme
+msgid "http://simple-history.com/"
+msgstr "http://simple-history.com/"
+
+#. Author of the plugin/theme
+msgid "Pär Thernström"
+msgstr "Pär Thernström"
+
+#. Description of the plugin/theme
+msgid "Plugin that logs various things that occur in WordPress and then presents those events in a very * nice GUI."
+msgstr "Plugin der logger forskellige ting der sker i WordPress og præsentere dem i et lækkert GUI."
+
+#. Plugin URI of the plugin/theme
+msgid "http://simple-history.com"
+msgstr "http://simple-history.com"
+
+#: templates/settings-statsUsers.php:10
+msgid "Deleted users are also included."
+msgstr "Slettet brugere er også inkluderet."
+
+#: templates/settings-statsUsers.php:9
+msgid "Number of logged items for the 5 users with most logged rows."
+msgstr "Antal logget events for de 5 brugere, med flest antal logget rækker."
+
+#: templates/settings-statsUsers.php:7
+msgid "Users"
+msgstr "Brugere"
+
+#: dropins/SimpleHistorySidebarStats.php:192
+#: templates/settings-statsRowsPerDay.php:38
+msgctxt "stats: date in rows per day chart"
+msgid "M j"
+msgstr "j. F"
+
+#: templates/settings-statsRowsPerDay.php:6
+msgid "Rows per day"
+msgstr "Rækker pr. dag"
+
+#: templates/settings-statsLoggers.php:5
+msgid "Loggers"
+msgstr "Log metoder"
+
+#: templates/settings-statsLogLevels.php:8
+msgid "Number of rows logged for each log level."
+msgstr "Antal rækker logget for hver log niveau."
+
+#: templates/settings-statsLogLevels.php:6
+msgid "Log levels"
+msgstr "Log niveauer"
+
+#: templates/settings-statsIntro.php:21
+msgid "<b>%1$s rows</b> have been logged the last <b>%2$s days</b>"
+msgstr "<b>%1$s rows</b> er logget de sidste <b>%2$s dage</b>"
+
+#: loggers/SimpleUserLogger.php:489
+msgid "Edited the profile for user <a href=\"{edit_profile_link}\">{edited_user_login} ({edited_user_email})</a>"
+msgstr "Redigerede profilen for <a href=\"{edit_profile_link}\">{edited_user_login} ({edited_user_email})</a>"
+
+#: loggers/SimpleUserLogger.php:482
+msgid "Edited your profile"
+msgstr "Redigerede din profil"
+
+#: loggers/SimpleUserLogger.php:476
+msgid "Edited <a href=\"{edit_profile_link}\">their profile</a>"
+msgstr "Redigerede <a href=\"{edit_profile_link}\">deres profil</a>"
+
+#: loggers/SimpleUserLogger.php:474
+msgid "Edited <a href=\"{edit_profile_link}\">your profile</a>"
+msgstr "Redigerede <a href=\"{edit_profile_link}\">din profil</a>"
+
+#: loggers/SimpleUserLogger.php:93
+msgctxt "User logger: search"
+msgid "User deletions"
+msgstr "Slettet brugere"
+
+#: loggers/SimpleUserLogger.php:90
+msgctxt "User logger: search"
+msgid "User profile updates"
+msgstr "Brugerprofil opdateringer"
+
+#: loggers/SimpleUserLogger.php:87
+msgctxt "User logger: search"
+msgid "Created users"
+msgstr "Tilføjet brugere"
+
+#: loggers/SimpleUserLogger.php:84
+msgctxt "User logger: search"
+msgid "User logouts"
+msgstr "Bruger log ud"
+
+#: loggers/SimpleUserLogger.php:80
+msgctxt "User logger: search"
+msgid "Failed user logins"
+msgstr "Mislykket bruger log ind"
+
+#: loggers/SimpleUserLogger.php:76
+msgctxt "User logger: search"
+msgid "Successful user logins"
+msgstr "Succesfulde bruger log ind"
+
+#: loggers/SimpleUserLogger.php:74
+msgctxt "User logger: search"
+msgid "All user activity"
+msgstr "Alt bruger aktivitet"
+
+#: loggers/SimpleUserLogger.php:73
+msgctxt "User logger: search"
+msgid "Users"
+msgstr "Brugere"
+
+#: loggers/SimpleUserLogger.php:64
+msgctxt "User destroys all login sessions for a user"
+msgid "Logged out \"{user_display_name}\" from all sessions"
+msgstr "Loggede ud \"{user_display_name}\" fra alle sessioner"
+
+#: loggers/SimpleUserLogger.php:55
+msgctxt "User destroys other login sessions for themself"
+msgid "Logged out from all other sessions"
+msgstr "Loggede ud fra alle andre sessioner"
+
+#: loggers/SimpleUserLogger.php:42
+msgid "Deleted user {deleted_user_login} ({deleted_user_email})"
+msgstr "Slettede bruger {deleted_user_login} ({deleted_user_email})"
+
+#: loggers/SimpleUserLogger.php:38
+msgid "Created user {created_user_login} ({created_user_email}) with role {created_user_role}"
+msgstr "Tilføjede bruger {created_user_login} ({created_user_email}) med rollen {created_user_role}"
+
+#: loggers/SimpleUserLogger.php:34
+msgid "Edited the profile for user {edited_user_login} ({edited_user_email})"
+msgstr "Redigerede brugerprofilen for {edited_user_login} ({edited_user_email})"
+
+#: loggers/SimpleUserLogger.php:33
+msgid "Logged out"
+msgstr "Loggede ud"
+
+#: loggers/SimpleUserLogger.php:32
+msgid "Unknown user logged in"
+msgstr "Ukendt bruger loggede ind"
+
+#: loggers/SimpleUserLogger.php:31
+msgid "Logged in"
+msgstr "Loggede ind"
+
+#: loggers/SimpleThemeLogger.php:746
+msgid "Section"
+msgstr "Sektion"
+
+#: loggers/SimpleThemeLogger.php:70
+msgctxt "Theme logger: search"
+msgid "Background of themes changed"
+msgstr "Baggrund og tema ændret"
+
+#: loggers/SimpleThemeLogger.php:67
+msgctxt "Theme logger: search"
+msgid "Edited widgets"
+msgstr "Ændret widgets"
+
+#: loggers/SimpleThemeLogger.php:64
+msgctxt "Theme logger: search"
+msgid "Changed widgets order"
+msgstr "Ændret widget rækkefølge"
+
+#: loggers/SimpleThemeLogger.php:61
+msgctxt "Theme logger: search"
+msgid "Removed widgets"
+msgstr "Fjernet widgets"
+
+#: loggers/SimpleThemeLogger.php:58
+msgctxt "Theme logger: search"
+msgid "Added widgets"
+msgstr "Tilføjet widgets"
+
+#: loggers/SimpleThemeLogger.php:55
+msgctxt "Theme logger: search"
+msgid "Changed appearance of themes"
+msgstr "Skiftet udseende på temaer"
+
+#: loggers/SimpleThemeLogger.php:52
+msgctxt "Theme logger: search"
+msgid "Switched themes"
+msgstr "Skiftet temaer"
+
+#: loggers/SimpleThemeLogger.php:41
+msgctxt "Theme logger: search"
+msgid "All theme activity"
+msgstr "Alt tema aktivitet"
+
+#: loggers/SimpleThemeLogger.php:40
+msgctxt "Theme logger: search"
+msgid "Themes & Widgets"
+msgstr "Tema & Widgets"
+
+#: loggers/SimpleThemeLogger.php:36
+msgid "Changed settings for the theme custom background"
+msgstr "Ændrede tema baggrund"
+
+#: loggers/SimpleThemeLogger.php:35
+msgid "Changed widget \"{widget_id_base}\" in sidebar \"{sidebar_id}\""
+msgstr "Ændrede widget \"{widget_id_base}\" i sidebar \"{sidebar_id}\""
+
+#: loggers/SimpleThemeLogger.php:34
+msgid "Changed widget order \"{widget_id_base}\" in sidebar \"{sidebar_id}\""
+msgstr "Ændrede widget rækkefølge \"{widget_id_base}\" i sidebar \"{sidebar_id}\""
+
+#: loggers/SimpleThemeLogger.php:33
+msgid "Added widget \"{widget_id_base}\" to sidebar \"{sidebar_id}\""
+msgstr "Tilføjede widget \"{widget_id_base}\" to sidebar \"{sidebar_id}\""
+
+#: loggers/SimpleThemeLogger.php:32
+msgid "Removed widget \"{widget_id_base}\" from sidebar \"{sidebar_id}\""
+msgstr "Fjernede widget \"{widget_id_base}\" fra sidebar \"{sidebar_id}\""
+
+#: loggers/SimpleThemeLogger.php:31
+msgid "Customized theme appearance \"{setting_id}\""
+msgstr "Tilpassede tema udseende \"{setting_id}\""
+
+#: loggers/SimpleThemeLogger.php:27
+msgid "Switched theme to \"{theme_name}\" from \"{prev_theme_name}\""
+msgstr "Skiftede tema til  \"{theme_name}\" from \"{prev_theme_name}\""
+
+#: loggers/SimplePostLogger.php:939
+msgid "Custom fields"
+msgstr "Brugerdefineret felter"
+
+#: loggers/SimplePostLogger.php:899
+msgid "Template"
+msgstr "Skabelon"
+
+#: loggers/SimplePostLogger.php:891
+msgid "Changed from \"{prev_page_template_name}\" to \"{new_page_template_name}\""
+msgstr "Skiftede fra \"{prev_page_template_name}\" til \"{new_page_template_name}\""
+
+#: loggers/SimplePostLogger.php:889
+msgid "Changed from {prev_page_template} to {new_page_template}"
+msgstr "Skiftede fra {prev_page_template} til {new_page_template}"
+
+#: loggers/SimplePostLogger.php:858
+msgid "Changed from {prev_user_display_name} ({prev_user_email}) to {new_user_display_name} ({new_user_email})"
+msgstr "Skiftede fra {prev_user_display_name} ({prev_user_email}) til {new_user_display_name} ({new_user_email})"
+
+#: loggers/SimplePostLogger.php:856
+msgid "Author"
+msgstr "Forfatter"
+
+#: loggers/SimplePostLogger.php:833
+msgid "Comment status"
+msgstr "Kommentar status"
+
+#: loggers/SimplePostLogger.php:819
+msgid "Permalink"
+msgstr "Permanent link"
+
+#: loggers/SimplePostLogger.php:804
+msgid "Publish date"
+msgstr "Udgivet dato"
+
+#: loggers/SimplePostLogger.php:789
+msgid "Status"
+msgstr "Status"
+
+#: loggers/SimplePostLogger.php:776
+msgid "Content"
+msgstr "Indhold"
+
+#: loggers/SimplePostLogger.php:763
+msgid "Title"
+msgstr "Titel"
+
+#: loggers/SimplePostLogger.php:708
+msgid "Moved {post_type} <a href=\"{edit_link}\">\"{post_title}\"</a> to the trash"
+msgstr "Flyttede {post_type} <a href=\"{edit_link}\">\"{post_title}\"</a> til papirkurven"
+
+#: loggers/SimplePostLogger.php:703
+msgid "Created {post_type} <a href=\"{edit_link}\">\"{post_title}\"</a>"
+msgstr "Tilføjede {post_type} <a href=\"{edit_link}\">\"{post_title}\"</a>"
+
+#: loggers/SimplePostLogger.php:695
+msgid "Updated {post_type} <a href=\"{edit_link}\">\"{post_title}\"</a>"
+msgstr "Opdaterede {post_type} <a href=\"{edit_link}\">\"{post_title}\"</a>"
+
+#: loggers/SimplePostLogger.php:142
+msgctxt "Post logger: search"
+msgid "Posts restored"
+msgstr "Indlæg gendannet"
+
+#: loggers/SimplePostLogger.php:139
+msgctxt "Post logger: search"
+msgid "Posts deleted"
+msgstr "Indlæg slettet"
+
+#: loggers/SimplePostLogger.php:136
+msgctxt "Post logger: search"
+msgid "Posts trashed"
+msgstr "Indlæg flyttet til papirkurven"
+
+#: loggers/SimplePostLogger.php:133
+msgctxt "Post logger: search"
+msgid "Posts updated"
+msgstr "Indlæg opdateret"
+
+#: loggers/SimplePostLogger.php:130
+msgctxt "Post logger: search"
+msgid "Posts created"
+msgstr "Indlæg tilføjet"
+
+#: loggers/SimplePostLogger.php:128
+msgctxt "Post logger: search"
+msgid "All posts & pages activity"
+msgstr "Alt indlæg & sider aktivitet"
+
+#: loggers/SimplePostLogger.php:127
+msgctxt "Post logger: search"
+msgid "Posts & Pages"
+msgstr "Indlæg & Sider"
+
+#: loggers/SimplePostLogger.php:123
+msgid "Moved {post_type} \"{post_title}\" to the trash"
+msgstr "Flyttede {post_type} \"{post_title}\" til papirkurven"
+
+#: loggers/SimplePostLogger.php:122 loggers/SimplePostLogger.php:699
+msgid "Deleted {post_type} \"{post_title}\""
+msgstr "Slettede {post_type} \"{post_title}\""
+
+#: loggers/SimplePostLogger.php:121
+msgid "Restored {post_type} \"{post_title}\" from trash"
+msgstr "Gendannede {post_type} \"{post_title}\" fra papirkurven"
+
+#: loggers/SimplePostLogger.php:120
+msgid "Updated {post_type} \"{post_title}\""
+msgstr "Opdaterede {post_type} \"{post_title}\""
+
+#: loggers/SimplePostLogger.php:119
+msgid "Created {post_type} \"{post_title}\""
+msgstr "Tilføjet {post_type} \"{post_title}\""
+
+#: loggers/SimplePluginLogger.php:1176
+msgctxt "plugin logger: plugin info thickbox title"
+msgid "View changelog"
+msgstr "Vis changelog"
+
+#: loggers/SimplePluginLogger.php:1171
+msgctxt "plugin logger: plugin info thickbox title"
+msgid "View plugin info"
+msgstr "Vis plugin info"
+
+#: loggers/SimplePluginLogger.php:1140 loggers/SimplePluginLogger.php:1157
+#: loggers/SimplePluginLogger.php:1201
+msgctxt "plugin logger: plugin info thickbox title view all info"
+msgid "View plugin info"
+msgstr "Vis plugin info"
+
+#: loggers/SimplePluginLogger.php:1079
+msgid "Uploaded ZIP archive"
+msgstr "Uploaded ZIP fil"
+
+#: loggers/SimplePluginLogger.php:1076
+msgid "WordPress Plugin Repository"
+msgstr "WordPress Plugin Repository"
+
+#: loggers/SimplePluginLogger.php:1033
+msgctxt "plugin logger - detailed output url"
+msgid "URL"
+msgstr "URL"
+
+#: loggers/SimplePluginLogger.php:1032
+msgctxt "plugin logger - detailed output author"
+msgid "Author"
+msgstr "Forfatter"
+
+#: loggers/SimplePluginLogger.php:1031
+msgctxt "plugin logger - detailed output version"
+msgid "Version"
+msgstr "Version"
+
+#: loggers/SimplePluginLogger.php:1030
+msgctxt "plugin logger - detailed output install source"
+msgid "Source file name"
+msgstr "Kilde filnavn"
+
+#: loggers/SimplePluginLogger.php:1029
+msgctxt "plugin logger - detailed output install source"
+msgid "Source"
+msgstr "Kilde"
+
+#: loggers/SimplePluginLogger.php:1028
+msgctxt "plugin logger - detailed output"
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: loggers/SimplePluginLogger.php:398
+msgid "You do not have sufficient permissions to delete plugins for this site."
+msgstr "Du har ikke de nødvendige tilladelser til, at slette plugins på denne side."
+
+#: loggers/SimplePluginLogger.php:334
+msgid "<p>Viewing <code>readme</code> from repository <code><a target=\"_blank\" href=\"%1$s\">%2$s</a></code>.</p>"
+msgstr "<p>Læs <code>readme</code> fra repository <code><a target=\"_blank\" href=\"%1$s\">%2$s</a></code>.</p>"
+
+#: loggers/SimplePluginLogger.php:309 loggers/SimplePluginLogger.php:314
+msgid "Could not find GitHub repository."
+msgstr "Kunne ikke finde GitHub repository."
+
+#: loggers/SimplePluginLogger.php:303
+msgid "You don't have access to this page."
+msgstr "Du har ikke adgang til denne side."
+
+#: loggers/SimplePluginLogger.php:121
+msgctxt "Plugin logger: search"
+msgid "Deleted plugins"
+msgstr "Slettet plugins"
+
+#: loggers/FileEditsLogger.php:28
+msgctxt "Plugin logger: file edits"
+msgid "Edited plugin files"
+msgstr "Ændrede plugin filer"
+
+#: loggers/SimplePluginLogger.php:118
+msgctxt "Plugin logger: search"
+msgid "Failed plugin updates"
+msgstr "Mislykket plugin opdateringer"
+
+#: loggers/SimplePluginLogger.php:114
+msgctxt "Plugin logger: search"
+msgid "Updated plugins"
+msgstr "Opdateret plugins"
+
+#: loggers/SimplePluginLogger.php:111
+msgctxt "Plugin logger: search"
+msgid "Failed plugin installs"
+msgstr "Mislykket plugin installeringer"
+
+#: loggers/SimplePluginLogger.php:108
+msgctxt "Plugin logger: search"
+msgid "Installed plugins"
+msgstr "Installeret plugins"
+
+#: loggers/SimplePluginLogger.php:104
+msgctxt "Plugin logger: search"
+msgid "Deactivated plugins"
+msgstr "Deaktiveret plugins"
+
+#: loggers/SimplePluginLogger.php:101
+msgctxt "Plugin logger: search"
+msgid "Activated plugins"
+msgstr "Aktiveret plugins"
+
+#: loggers/SimplePluginLogger.php:99
+msgctxt "Plugin logger: search"
+msgid "All plugin activity"
+msgstr "Alt plugin aktivitet"
+
+#: loggers/SimplePluginLogger.php:98
+msgctxt "Plugin logger: search"
+msgid "Plugins"
+msgstr "Plugins"
+
+#: loggers/SimplePluginLogger.php:82
+msgctxt "Plugin was updated in bulk"
+msgid "Updated plugin \"{plugin_name}\" to {plugin_version} from {plugin_prev_version}"
+msgstr "Opdaterede pluginet \"{plugin_name}\" til {plugin_version} fra {plugin_prev_version}"
+
+#: loggers/SimplePluginLogger.php:75
+msgctxt "Plugin files was deleted"
+msgid "Deleted plugin \"{plugin_name}\""
+msgstr "Slettede pluginet \"{plugin_name}\""
+
+#: loggers/SimplePluginLogger.php:63
+msgctxt "Plugin was updated"
+msgid "Updated plugin \"{plugin_name}\" to version {plugin_version} from {plugin_prev_version}"
+msgstr "Opdaterede pluginet \"{plugin_name}\" til version {plugin_version} fra {plugin_prev_version}"
+
+#: loggers/SimplePluginLogger.php:57
+msgctxt "Plugin failed to install"
+msgid "Failed to install plugin \"{plugin_name}\""
+msgstr "Mislykkede i at installere pluginet \"{plugin_name}\""
+
+#: loggers/SimplePluginLogger.php:51
+msgctxt "Plugin was installed"
+msgid "Installed plugin \"{plugin_name}\""
+msgstr "Installerede pluginet \"{plugin_name}\""
+
+#: loggers/SimplePluginLogger.php:45
+msgctxt "Plugin was non-silently deactivated by a user"
+msgid "Deactivated plugin \"{plugin_name}\""
+msgstr "Deaktiverede pluginet \"{plugin_name}\""
+
+#: loggers/SimplePluginLogger.php:39
+msgctxt "Plugin was non-silently activated by a user"
+msgid "Activated plugin \"{plugin_name}\""
+msgstr "Aktiverede pluginet \"{plugin_name}\""
+
+#: loggers/SimpleOptionsLogger.php:268 loggers/SimpleOptionsLogger.php:285
+msgid "Settings page"
+msgstr "Indstillinger side"
+
+#: loggers/SimpleOptionsLogger.php:247 loggers/SimpleOptionsLogger.php:394
+#: loggers/SimpleOptionsLogger.php:404 loggers/SimpleOptionsLogger.php:470
+#: loggers/SimpleThemeLogger.php:795
+msgid "Old value"
+msgstr "Gammel værdi"
+
+#: loggers/SimpleOptionsLogger.php:241 loggers/SimpleOptionsLogger.php:368
+#: loggers/SimpleOptionsLogger.php:377 loggers/SimpleOptionsLogger.php:480
+#: loggers/SimpleThemeLogger.php:783
+msgid "New value"
+msgstr "Ny værdi"
+
+#: loggers/SimpleOptionsLogger.php:40
+msgctxt "Options logger: search"
+msgid "Changed options"
+msgstr "Ændret indstillinger"
+
+#: loggers/SimpleOptionsLogger.php:38
+msgctxt "Options logger: search"
+msgid "Options"
+msgstr "Indstillinger"
+
+#: loggers/SimpleOptionsLogger.php:26
+msgid "Updated option \"{option}\""
+msgstr "Opdateret indstlling \"{option}\""
+
+#: loggers/SimpleMenuLogger.php:331
+msgctxt "menu logger"
+msgid "%1$s menu item removed"
+msgid_plural "%1$s menu items removed"
+msgstr[0] "%1$s menupunkt fjernet"
+msgstr[1] "%1$s menupunkter fjernet"
+
+#: loggers/SimpleMenuLogger.php:324
+msgctxt "menu logger"
+msgid "%1$s menu item added"
+msgid_plural "%1$s menu items added"
+msgstr[0] "%1$s menupunkt tilføjet"
+msgstr[1] "%1$s menupunkter tilføjet"
+
+#: loggers/SimpleMenuLogger.php:44
+msgctxt "Menu updates logger: search"
+msgid "Deleted menus"
+msgstr "Slettet menuer"
+
+#: loggers/SimpleMenuLogger.php:39
+msgctxt "Menu updates logger: search"
+msgid "Edited menus"
+msgstr "Redigeret menuer"
+
+#: loggers/SimpleMenuLogger.php:36
+msgctxt "Menu updates logger: search"
+msgid "Created menus"
+msgstr "Tilføjet menuer"
+
+#: loggers/SimpleMenuLogger.php:34
+msgctxt "Menu updates logger: search"
+msgid "All menu activity"
+msgstr "Alt menu aktivitet"
+
+#: loggers/SimpleMenuLogger.php:33
+msgctxt "Menu logger: search"
+msgid "Menus"
+msgstr "Menuer"
+
+#: loggers/SimpleMenuLogger.php:29
+msgid "Updated menu locations"
+msgstr "Opdateret menu områder"
+
+#: loggers/SimpleMenuLogger.php:28
+msgid "Edited a menu item"
+msgstr "Redigerede et menupunkt "
+
+#: loggers/SimpleMenuLogger.php:27
+msgid "Deleted menu \"{menu_name}\""
+msgstr "Slettet menu \"{menu_name}\""
+
+#: loggers/SimpleMenuLogger.php:26
+msgid "Edited menu \"{menu_name}\""
+msgstr "Redigeret menu \"{menu_name}\""
+
+#: loggers/SimpleMenuLogger.php:25
+msgid "Created menu \"{menu_name}\""
+msgstr "Tilføjet menu \"{menu_name}\""
+
+#: loggers/SimpleMediaLogger.php:253
+msgid "{full_image_width} × {full_image_height}"
+msgstr "{full_image_width} × {full_image_height}"
+
+#: loggers/SimpleMediaLogger.php:249
+msgid "{attachment_filetype_extension}"
+msgstr "{attachment_filetype_extension}"
+
+#: loggers/SimpleMediaLogger.php:248
+msgid "{attachment_size_format}"
+msgstr "{attachment_size_format}"
+
+#: loggers/SimpleMediaLogger.php:240
+msgid "{attachment_thumb}"
+msgstr "{attachment_thumb}"
+
+#: loggers/SimpleMediaLogger.php:126
+msgid "Uploaded {post_type} <a href=\"{edit_link}\">\"{attachment_title}\"</a>"
+msgstr "Uploadet {post_type} <a href=\"{edit_link}\">\"{attachment_title}\"</a>"
+
+#: loggers/SimpleMediaLogger.php:122
+msgid "Edited {post_type} <a href=\"{edit_link}\">\"{attachment_title}\"</a>"
+msgstr "Redigeret {post_type} <a href=\"{edit_link}\">\"{attachment_title}\"</a>"
+
+#: loggers/SimpleMediaLogger.php:40
+msgctxt "Media logger: search"
+msgid "Deleted media"
+msgstr "Slettet medier"
+
+#: loggers/SimpleMediaLogger.php:37
+msgctxt "Media logger: search"
+msgid "Updated media"
+msgstr "Opdateret medier"
+
+#: loggers/SimpleMediaLogger.php:34
+msgctxt "Media logger: search"
+msgid "Added media"
+msgstr "Tilføjet medier"
+
+#: loggers/SimpleMediaLogger.php:32
+msgctxt "Media logger: search"
+msgid "All media activity"
+msgstr "Alt medie aktivitet"
+
+#: loggers/SimpleMediaLogger.php:31
+msgctxt "Media logger: search"
+msgid "Media"
+msgstr "Medier"
+
+#: loggers/SimpleMediaLogger.php:27
+msgid "Deleted {post_type} \"{attachment_title}\" (\"{attachment_filename}\")"
+msgstr "Slettet {post_type} \"{attachment_title}\" (\"{attachment_filename}\")"
+
+#: loggers/SimpleMediaLogger.php:26
+msgid "Edited {post_type} \"{attachment_title}\""
+msgstr "Redigeret {post_type} \"{attachment_title}\""
+
+#: loggers/SimpleMediaLogger.php:25
+msgid "Created {post_type} \"{attachment_title}\""
+msgstr "Tilføjet {post_type} \"{attachment_title}\""
+
+#. translators: 1: last modified date and time in human time diff-format
+#: loggers/SimpleLogger.php:433
+msgid "%1$s ago"
+msgstr "%1$s siden"
+
+#. translators: Date format for log row header, see http://php.net/date
+#: loggers/SimpleLogger.php:425
+msgid "M j, Y \\a\\t G:i"
+msgstr "j. F Y \\k\\l\\. H:i"
+
+#: dropins/SimpleHistoryWPCLIDropin.php:97 loggers/SimpleLogger.php:360
+msgctxt "Event header output, when initiator is unknown"
+msgid "Other"
+msgstr "Anden"
+
+#: loggers/SimpleLogger.php:344
+msgid "Anonymous user from %1$s"
+msgstr "Anonym bruger fra %1$s"
+
+#: dropins/SimpleHistoryWPCLIDropin.php:94 loggers/SimpleLogger.php:315
+msgid "Anonymous web user"
+msgstr "Anonym besøgende"
+
+#: dropins/SimpleHistoryWPCLIDropin.php:86 loggers/SimpleLogger.php:289
+msgid "Deleted user (had id %1$s, email %2$s, login %3$s)"
+msgstr "Slettet bruger (havde ID %1$s, E-mail %2$s, brugernavn %3$s)"
+
+#: loggers/SimpleLogger.php:275
+msgctxt "header output when initiator is the currently logged in user"
+msgid "You"
+msgstr "Dig"
+
+#: loggers/SimpleLegacyLogger.php:91
+msgid "%d occasions"
+msgstr "%d begivenheder"
+
+#: loggers/SimpleLegacyLogger.php:86
+msgid "By %s"
+msgstr "af %s"
+
+#: loggers/SimpleExportLogger.php:31
+msgctxt "Export logger: search"
+msgid "Created exports"
+msgstr "Genereret eksporteringer"
+
+#: loggers/SimpleExportLogger.php:29
+msgctxt "Export logger: search"
+msgid "Export"
+msgstr "Eksport"
+
+#: loggers/SimpleExportLogger.php:25
+msgid "Created XML export"
+msgstr "Genereret XML eksport"
+
+#: loggers/SimpleExportLogger.php:22
+msgid "Logs updates to WordPress export"
+msgstr "Logger opdateringer til WordPress eksport"
+
+#: loggers/SimpleExportLogger.php:21
+msgid "Export Logger"
+msgstr "Eksport logger"
+
+#: loggers/SimpleCoreUpdatesLogger.php:73
+msgctxt "User logger: search"
+msgid "WordPress core updates"
+msgstr "WordPress Core opdateringer"
+
+#: loggers/SimpleCoreUpdatesLogger.php:71
+msgctxt "User logger: search"
+msgid "WordPress Core"
+msgstr "WordPress Core"
+
+#: loggers/SimpleCoreUpdatesLogger.php:66
+msgid "WordPress auto-updated to {new_version} from {prev_version}"
+msgstr "WordPress auto-opdaterede til {new_version} fra {prev_version}"
+
+#: loggers/SimpleCoreUpdatesLogger.php:65
+msgid "Updated WordPress to {new_version} from {prev_version}"
+msgstr "Opdaterede WordPress til {new_version} fra {prev_version}"
+
+#: loggers/SimpleCommentsLogger.php:775
+msgctxt "comments logger - edit comment"
+msgid "View/Edit"
+msgstr "Vis/Rediger"
+
+#: loggers/SimpleCommentsLogger.php:716
+msgid "Comment"
+msgstr "Kommentar"
+
+#: loggers/SimpleCommentsLogger.php:714
+msgid "Pingback"
+msgstr "Pingback"
+
+#: loggers/SimpleCommentsLogger.php:712
+msgid "Trackback"
+msgstr "Trackback"
+
+#: loggers/SimpleCommentsLogger.php:699
+msgid "Pending"
+msgstr "Afventer"
+
+#: loggers/SimpleCommentsLogger.php:697
+msgid "Approved"
+msgstr "Godkendt"
+
+#: loggers/SimpleCommentsLogger.php:695
+msgid "Spam"
+msgstr "Spam"
+
+#: loggers/SimpleCommentsLogger.php:642
+msgctxt "comments logger - detailed output content"
+msgid "Comment"
+msgstr "Kommentar"
+
+#: loggers/SimpleCommentsLogger.php:615 loggers/SimpleCommentsLogger.php:628
+msgctxt "comments logger - detailed output content"
+msgid "Content"
+msgstr "Indhold"
+
+#: loggers/SimpleCommentsLogger.php:614 loggers/SimpleCommentsLogger.php:627
+#: loggers/SimpleCommentsLogger.php:641
+msgctxt "comments logger - detailed output email"
+msgid "Email"
+msgstr "E-mail"
+
+#: loggers/SimpleCommentsLogger.php:613 loggers/SimpleCommentsLogger.php:626
+#: loggers/SimpleCommentsLogger.php:640
+msgctxt "comments logger - detailed output author"
+msgid "Name"
+msgstr "Navn"
+
+#: loggers/SimpleCommentsLogger.php:611 loggers/SimpleCommentsLogger.php:624
+#: loggers/SimpleCommentsLogger.php:638
+msgctxt "comments logger - detailed output comment status"
+msgid "Status"
+msgstr "Status"
+
+#: loggers/SimpleCommentsLogger.php:308
+msgctxt "Comments logger: search"
+msgid "Deleted comments"
+msgstr "Slettet kommentarer"
+
+#: loggers/SimpleCommentsLogger.php:303
+msgctxt "Comments logger: search"
+msgid "Untrashed comments"
+msgstr "Gendannet kommentarer"
+
+#: loggers/SimpleCommentsLogger.php:298
+msgctxt "Comments logger: search"
+msgid "Trashed comments"
+msgstr "Kommentarer flyttet til papirkurven"
+
+#: loggers/SimpleCommentsLogger.php:293
+msgctxt "Comments logger: search"
+msgid "Comments status changed to spam"
+msgstr "Kommentarer status ændre til spam"
+
+#: loggers/SimpleCommentsLogger.php:288
+msgctxt "Comments logger: search"
+msgid "Held comments"
+msgstr "Afventer kommentarer"
+
+#: loggers/SimpleCommentsLogger.php:283
+msgctxt "Comments logger: search"
+msgid "Approved  comments"
+msgstr "Godkendte kommentarer"
+
+#: loggers/SimpleCommentsLogger.php:278
+msgctxt "Comments logger: search"
+msgid "Edited comments"
+msgstr "Redigeret kommentarer"
+
+#: loggers/SimpleCommentsLogger.php:270
+msgctxt "Comments logger: search"
+msgid "Added comments"
+msgstr "Tilføjet kommentarer"
+
+#: loggers/SimpleCommentsLogger.php:268
+msgctxt "Comments logger: search"
+msgid "All comments activity"
+msgstr "Alt kommentar aktivitet"
+
+#: loggers/SimpleCommentsLogger.php:267
+msgctxt "Comments logger: search"
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: loggers/SimpleCommentsLogger.php:256
+msgctxt "A pingback was edited"
+msgid "Edited a pingback to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Redigerede en pingback til \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:250
+msgctxt "A pingback was deleted"
+msgid "Deleted a pingback to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Slettede en pingback til \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:244
+msgctxt "A pingback was restored from the trash"
+msgid "Restored a pingback to \"{comment_post_title}\" by {comment_author} ({comment_author_email}) from the trash"
+msgstr "Gendannede en pingback til \"{comment_post_title}\" af {comment_author} ({comment_author_email}) fra papirkurven"
+
+#: loggers/SimpleCommentsLogger.php:238
+msgctxt "A pingback was marked moved to the trash"
+msgid "Trashed a pingback to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Flyttede en pingback til \"{comment_post_title}\" af {comment_author} ({comment_author_email}) til papirkurven"
+
+#: loggers/SimpleCommentsLogger.php:232
+msgctxt "A pingback was marked as spam"
+msgid "Marked a pingback to post \"{comment_post_title}\" as spam"
+msgstr "Markerede en pingback til indlægget \"{comment_post_title}\" som spam"
+
+#: loggers/SimpleCommentsLogger.php:226
+msgctxt "A pingback was was unapproved"
+msgid "Unapproved a pingback to \"{comment_post_title}\" by \"{comment_author}\" ({comment_author_email})"
+msgstr "Afviste en pingback til \"{comment_post_title}\" af \"{comment_author}\" ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:220
+msgctxt "A pingback was approved"
+msgid "Approved a pingback to \"{comment_post_title}\" by \"{comment_author}\"\" ({comment_author_email})"
+msgstr "Godkendte en pingback til \"{comment_post_title}\" af \"{comment_author}\"\" ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:214
+msgctxt "A pingback was added to the database by a logged in user"
+msgid "Added a pingback to {comment_post_type} \"{comment_post_title}\""
+msgstr "Tilføjede en pingback til {comment_post_type} \"{comment_post_title}\""
+
+#: loggers/SimpleCommentsLogger.php:208
+msgctxt "A trackback was added to the database by a non-logged in internet user"
+msgid "Added a pingback to {comment_post_type} \"{comment_post_title}\""
+msgstr "Tilføjede en pingback til {comment_post_type} \"{comment_post_title}\""
+
+#: loggers/SimpleCommentsLogger.php:201
+msgctxt "A trackback was edited"
+msgid "Edited a trackback to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Redigerede en trackback til \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:195
+msgctxt "A trackback was deleted"
+msgid "Deleted a trackback to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Slettede en trackback til \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:189
+msgctxt "A trackback was restored from the trash"
+msgid "Restored a trackback to \"{comment_post_title}\" by {comment_author} ({comment_author_email}) from the trash"
+msgstr "Gendannede en trackback til \"{comment_post_title}\" af {comment_author} ({comment_author_email}) fra papirkurven"
+
+#: loggers/SimpleCommentsLogger.php:183
+msgctxt "A trackback was marked moved to the trash"
+msgid "Trashed a trackback to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Flyttede en trackback til \"{comment_post_title}\" af {comment_author} ({comment_author_email}) til papirkurven"
+
+#: loggers/SimpleCommentsLogger.php:177
+msgctxt "A trackback was marked as spam"
+msgid "Marked a trackback to post \"{comment_post_title}\" as spam"
+msgstr "Markerede en trackback til indlægget \"{comment_post_title}\" som spam"
+
+#: loggers/SimpleCommentsLogger.php:171
+msgctxt "A trackback was was unapproved"
+msgid "Unapproved a trackback to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Afviste en trackback til \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:165
+msgctxt "A trackback was approved"
+msgid "Approved a trackback to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Godkendte en trackback til \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:159
+msgctxt "A trackback was added to the database by a logged in user"
+msgid "Added a trackback to {comment_post_type} \"{comment_post_title}\""
+msgstr "Tilføjede en trackback til {comment_post_type} \"{comment_post_title}\""
+
+#: loggers/SimpleCommentsLogger.php:153
+msgctxt "A trackback was added to the database by a non-logged in internet user"
+msgid "Added a trackback to {comment_post_type} \"{comment_post_title}\""
+msgstr "Tilføjede en trackback til {comment_post_type} \"{comment_post_title}\""
+
+#: loggers/SimpleCommentsLogger.php:146
+msgctxt "A comment was edited"
+msgid "Edited a comment to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Redigerede en kommentar til \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:140
+msgctxt "A comment was deleted"
+msgid "Deleted a comment to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Slettede en kommentar til  \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:134
+msgctxt "A comment was restored from the trash"
+msgid "Restored a comment to \"{comment_post_title}\" by {comment_author} ({comment_author_email}) from the trash"
+msgstr "Gendannede en kommentar til \"{comment_post_title}\" af {comment_author} ({comment_author_email}) fra papirkurven"
+
+#: loggers/SimpleCommentsLogger.php:128
+msgctxt "A comment was marked moved to the trash"
+msgid "Trashed a comment to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Flyttede en kommentar til \"{comment_post_title}\" af {comment_author} ({comment_author_email}) i papirkurven"
+
+#: loggers/SimpleCommentsLogger.php:122
+msgctxt "A comment was marked as spam"
+msgid "Marked a comment to post \"{comment_post_title}\" as spam"
+msgstr "Markerede en kommentar til indlægget \"{comment_post_title}\" som spam"
+
+#: loggers/SimpleCommentsLogger.php:116
+msgctxt "A comment was was unapproved"
+msgid "Unapproved a comment to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Afviste en kommentar til \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:110
+msgctxt "A comment was approved"
+msgid "Approved a comment to \"{comment_post_title}\" by {comment_author} ({comment_author_email})"
+msgstr "Godkendte en kommentar til \"{comment_post_title}\" af {comment_author} ({comment_author_email})"
+
+#: loggers/SimpleCommentsLogger.php:104
+msgctxt "A comment was added to the database by a logged in user"
+msgid "Added a comment to {comment_post_type} \"{comment_post_title}\""
+msgstr "Tilføjede en kommentar til {comment_post_type} \"{comment_post_title}\""
+
+#: loggers/SimpleCommentsLogger.php:98
+msgctxt "A comment was added to the database by a non-logged in internet user"
+msgid "Added a comment to {comment_post_type} \"{comment_post_title}\""
+msgstr "Tilføjede en kommentar til {comment_post_type} \"{comment_post_title}\""
+
+#: loggers/Plugin_UltimateMembers_Logger.php:27
+msgctxt "PluginUltimateMembersLogger"
+msgid "Logged in"
+msgstr "Loggede ind"
+
+#: loggers/Plugin_UltimateMembers_Logger.php:24
+msgctxt "PluginUltimateMembersLogger"
+msgid "Logs actions from the Ultimate Members plugin"
+msgstr "Logger handlinger fra Ultimate Members plugin"
+
+#: loggers/Plugin_UltimateMembers_Logger.php:23
+msgctxt "PluginUltimateMembersLogger"
+msgid "Ultimate Members Logger"
+msgstr "Ultimate Members logger"
+
+#: loggers/PluginUserSwitchingLogger.php:32
+msgctxt "PluginUserSwitchingLogger"
+msgid "Switched off user \"{user_login}\""
+msgstr "Skiftede væk fra \"{user_login\""
+
+#: loggers/PluginUserSwitchingLogger.php:31
+msgctxt "PluginUserSwitchingLogger"
+msgid "Switched back to user \"{user_login_to}\""
+msgstr "Skiftede tilbage til bruger \"{user_login_to}\""
+
+#: loggers/PluginUserSwitchingLogger.php:30
+msgctxt "PluginUserSwitchingLogger"
+msgid "Switched back to user \"{user_login_to}\" from user \"{user_login_from}\""
+msgstr "Skiftede tilbage til bruger \"{user_login_to}\" fra bruger \"{user_login_from}\""
+
+#: loggers/PluginUserSwitchingLogger.php:29
+msgctxt "PluginUserSwitchingLogger"
+msgid "Switched to user \"{user_login_to}\" from user \"{user_login_from}\""
+msgstr "Skiftede til bruger \"{user_login_to}\" fra brugeren \"{user_login_from}\""
+
+#: loggers/PluginUserSwitchingLogger.php:24
+msgctxt "PluginUserSwitchingLogger"
+msgid "Logs user switches"
+msgstr "Logger bruger skift"
+
+#: loggers/PluginUserSwitchingLogger.php:23
+msgctxt "PluginUserSwitchingLogger"
+msgid "User Switching Logger"
+msgstr "Brugerskift(User Switching) logger"
+
+#: loggers/PluginEnableMediaReplaceLogger.php:28
+msgctxt "PluginEnableMediaReplaceLogger"
+msgid "Replaced attachment \"{prev_attachment_title}\" with new attachment \"{new_attachment_title}\""
+msgstr "Erstattede vedhæftning \"{prev_attachment_title}\" med denne \"{new_attachment_title}\""
+
+#: loggers/PluginEnableMediaReplaceLogger.php:24
+msgctxt "PluginEnableMediaReplaceLogger"
+msgid "Logs media updates made with the Enable Media Replace Plugin"
+msgstr "Logger medie opdateringer, der sker igennem Enable Media Replace pluginet"
+
+#: loggers/PluginEnableMediaReplaceLogger.php:23
+msgctxt "PluginEnableMediaReplaceLogger"
+msgid "Enable Media Replace Logger"
+msgstr "Aktivér Media Replace logger"
+
+#. translators: 1: PHP version
+#: index.php:107
+msgid "Simple History is a great plugin, but to use it your server must have at least PHP 5.3 installed (you have version %s)."
+msgstr "Simpel Historik er et fantastisk plugin, men for at bruge det, skal din server have PHP 5.3 eller nyere installeret (din server har version %s installeret)."
+
+#: inc/SimpleHistory.php:3273
+msgid "%1$s events today from %2$d users and %3$d other sources."
+msgstr "%1$s events i dag, fra %2$d brugere og %3$d kilder."
+
+#: inc/SimpleHistory.php:3267
+msgid "%1$d events today from one user and %3$d other sources."
+msgstr "%1$d events i dag, fra én bruger og %3$d kilder."
+
+#: inc/SimpleHistory.php:3255 inc/SimpleHistory.php:3261
+msgid "%1$d events today from one user and one other source."
+msgstr "%1$d events i dag, fra én bruger og én kilde"
+
+#: inc/SimpleHistory.php:3249
+msgid "%1$d events today from %2$d users."
+msgstr "%1$d events i dag fra %2$d brugere."
+
+#: inc/SimpleHistory.php:3243
+msgid "%1$d events today from one user."
+msgstr "%1$d events i dag fra én bruger."
+
+#: inc/SimpleHistory.php:3237
+msgid "One event today from one source."
+msgstr "Et event i dag, fra én kilde"
+
+#: inc/SimpleHistory.php:3231
+msgid "One event today from one user."
+msgstr "Et event i dag, fra én bruger."
+
+#: inc/SimpleHistory.php:3212
+msgid "No events today so far."
+msgstr "Endnu ingen events i dag."
+
+#: inc/SimpleHistory.php:2880
+msgctxt "Log level in gui"
+msgid "Debug"
+msgstr "Debug"
+
+#: inc/SimpleHistory.php:2876
+msgctxt "Log level in gui"
+msgid "Info"
+msgstr "Info"
+
+#: inc/SimpleHistory.php:2872
+msgctxt "Log level in gui"
+msgid "Notice"
+msgstr "Meddelse"
+
+#: inc/SimpleHistory.php:2868
+msgctxt "Log level in gui"
+msgid "Warning"
+msgstr "Advarsel"
+
+#: inc/SimpleHistory.php:2864
+msgctxt "Log level in gui"
+msgid "Error"
+msgstr "Fejl"
+
+#: inc/SimpleHistory.php:2860
+msgctxt "Log level in gui"
+msgid "Critical"
+msgstr "Kritisk"
+
+#: inc/SimpleHistory.php:2856
+msgctxt "Log level in gui"
+msgid "Alert"
+msgstr "Alarm"
+
+#: inc/SimpleHistory.php:2852
+msgctxt "Log level in gui"
+msgid "Emergency"
+msgstr "Nødstilfælde"
+
+#: inc/SimpleHistory.php:2847
+msgctxt "Log level in gui"
+msgid "debug"
+msgstr "debug"
+
+#: inc/SimpleHistory.php:2843
+msgctxt "Log level in gui"
+msgid "info"
+msgstr "info"
+
+#: inc/SimpleHistory.php:2839
+msgctxt "Log level in gui"
+msgid "notice"
+msgstr "meddelelse"
+
+#: inc/SimpleHistory.php:2835
+msgctxt "Log level in gui"
+msgid "warning"
+msgstr "advarsel"
+
+#: inc/SimpleHistory.php:2831
+msgctxt "Log level in gui"
+msgid "error"
+msgstr "fejl"
+
+#: inc/SimpleHistory.php:2827
+msgctxt "Log level in gui"
+msgid "critical"
+msgstr "kritisk"
+
+#: inc/SimpleHistory.php:2823
+msgctxt "Log level in gui"
+msgid "alert"
+msgstr "alarm"
+
+#: inc/SimpleHistory.php:2819
+msgctxt "Log level in gui"
+msgid "emergency"
+msgstr "Nødstilfælde"
+
+#: inc/SimpleHistory.php:2593
+msgid "This is potentially useful meta data that a logger has saved."
+msgstr "Dette er potentielt brugbar meta data, som en logger har gemt."
+
+#: inc/SimpleHistory.php:2592
+msgid "Context data"
+msgstr "Kontekst data"
+
+#: inc/SimpleHistory.php:2553
+msgid "Showing %1$s more"
+msgstr "%1$s flere vises"
+
+#: inc/SimpleHistory.php:2546
+msgid "Loading…"
+msgstr "Indlæser..."
+
+#: inc/SimpleHistory.php:2539
+msgid "+%1$s similar event"
+msgid_plural "+%1$s similar events"
+msgstr[0] "+%1$s tilsvarende event"
+msgstr[1] "+%1$s tilsvarende events"
+
+#: inc/SimpleHistory.php:2362
+msgctxt "simple-history"
+msgid "Simple History removed one event that were older than {days} days"
+msgid_plural "Simple History removed {num_rows} events that were older than {days} days"
+msgstr[0] "Simpel Historik fjernede et event, der var ældre end {days} dage"
+msgstr[1] "Simpel Historik fjernede {num_events} events, der var ældre end {days} dage"
+
+#: inc/SimpleHistory.php:2278
+msgid "The log for Simple History was cleared ({num_rows} rows were removed)."
+msgstr "Loggen for Simple Historik blev nulstillet ({num_rows} rækker blev fjernet)."
+
+#: inc/SimpleHistory.php:2227
+msgid "Clear log now"
+msgstr "Nulstil log nu"
+
+#: inc/SimpleHistory.php:2222
+msgid "Items in the database are kept forever."
+msgstr "Elementer i databasen gemmes for evigt."
+
+#: inc/SimpleHistory.php:2220
+msgid "Items in the database are automatically removed after %1$s days."
+msgstr "Elementer i databasen fjernes automatisk efter %1$s dage."
+
+#: inc/SimpleHistory.php:2203
+msgid "as a page under the dashboard menu"
+msgstr "som et undermenupunkt til Kontrolpanelet "
+
+#: inc/SimpleHistory.php:2198
+msgid "on the dashboard"
+msgstr "på kontrolpanelet"
+
+#: inc/SimpleHistory.php:2069
+msgctxt "history page headline"
+msgid "Simple History"
+msgstr "Simpel Historik"
+
+#: inc/SimpleHistory.php:2034
+msgid "Clear log"
+msgstr "Nulstil log"
+
+#: inc/SimpleHistory.php:1996
+msgid "Show history"
+msgstr "Vis historik"
+
+#: inc/SimpleHistory.php:1968
+msgid "Cleared database"
+msgstr "Nulstillet database"
+
+#: inc/SimpleHistory.php:1927
+msgctxt "dashboard menu name"
+msgid "Simple History"
+msgstr "Simpel Historik"
+
+#: inc/SimpleHistory.php:1864
+msgid "No valid callback found"
+msgstr "Ingen gyldig callback fundet "
+
+#: inc/SimpleHistory.php:1828 inc/SimpleHistory.php:1944
+msgid "Simple History Settings"
+msgstr "Simpel Historik opsætning"
+
+#: inc/SimpleHistory.php:1459
+msgid "Your search did not match any history events."
+msgstr "Din søgning gav ingen resultater."
+
+#: inc/SimpleHistory.php:1457
+msgid "Oups, the log could not be loaded right now."
+msgstr "Ups, loggen kunne ikke indlæses lige nu."
+
+#: inc/SimpleHistory.php:1455
+msgid "Current page"
+msgstr "Nuværende side"
+
+#: inc/SimpleHistory.php:1454
+msgid "Go to the last page"
+msgstr "Gå til den sidste side"
+
+#: inc/SimpleHistory.php:1453
+msgid "Go to the next page"
+msgstr "Gå til den næste side"
+
+#: inc/SimpleHistory.php:1452
+msgid "Go to the previous page"
+msgstr "Gå til den forrige side"
+
+#: inc/SimpleHistory.php:1451
+msgid "Go to the first page"
+msgstr "Gå til den første side"
+
+#: inc/SimpleHistory.php:1449
+msgid "Remove all log items?"
+msgstr "Fjern alle log elementer?"
+
+#. #-#-#-#-#  simple-history-code.pot (Simple History 2.20)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: inc/SimpleHistory.php:1374
+msgid "Simple History"
+msgstr "Simpel historik"
+
+#: inc/SimpleHistory.php:926
+msgid "Styles example (debug)"
+msgstr "Styles eksempel (debug)"
+
+#: inc/SimpleHistory.php:921
+msgid "Log (debug)"
+msgstr "Log (debug)"
+
+#: dropins/SimpleHistorySidebarSettings.php:53 inc/SimpleHistory.php:910
+#: inc/SimpleHistory.php:1349
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: inc/SimpleHistory.php:719
+msgctxt "API: not enought arguments passed"
+msgid "Not enough args specified"
+msgstr "Der er ikke specificeret argumenter nok"
+
+#: inc/SimpleHistory.php:669
+msgid "Sorry, but there are too many similar events to show."
+msgstr "Beklager, men der er for mange ens events."
+
+#: inc/SimpleHistory.php:626
+msgctxt "page n of n"
+msgid "of"
+msgstr "af"
+
+#: inc/SimpleHistory.php:589
+msgctxt "Message visible while waiting for log to load from server the first time"
+msgid "Loading history..."
+msgstr "Indlæser historik..."
+
+#: examples/example-logger.php:52
+msgctxt "User logger: 404"
+msgid "Pages not found"
+msgstr "Sider ikke fundet"
+
+#: examples/example-logger.php:50
+msgctxt "User logger: 404"
+msgid "Pages not found (404 errors)"
+msgstr "Sider ikke fundet (404 fejl)"
+
+#: examples/example-logger.php:46
+msgid "Got a 404-page when trying to visit \"{request_uri}\""
+msgstr "Fik en 404 fejl side, da \"{request_uri}\" blev besøgt"
+
+#: dropins/SimpleHistorySidebarDropin.php:182 loggers/SimpleLogger.php:420
+msgid "Just now"
+msgstr "Lige nu"
+
+#: dropins/SimpleHistorySidebarDropin.php:73
+msgctxt "Sidebar box"
+msgid "A good review will help new users find this plugin. And it will make the plugin author very happy :)"
+msgstr "En god anmeldelse, vil hjælpe nye brugere til at finde dette plugin. Det vil også gøre plugin forfatteren meget glad :)"
+
+#: dropins/SimpleHistorySidebarDropin.php:69
+msgctxt "Sidebar box"
+msgid "If you like Simple History then please <a href=\"%1$s\">give it a nice review over at wordpress.org</a>."
+msgstr "Hvis du synes om Simpel Historik, så <a href=\"%1$s\">kan du anmelde det på wordpress.org</a>."
+
+#: dropins/SimpleHistorySidebarDropin.php:66
+msgctxt "Sidebar box"
+msgid "Review this plugin if you like it"
+msgstr "Bedøm gerne dette plugin"
+
+#: dropins/SimpleHistorySidebarDropin.php:52
+msgctxt "Sidebar box"
+msgid "If you like and use Simple History you should <a href=\"%1$s\">donate to keep this plugin free</a>."
+msgstr "Hvis du synes om og bruger Simpel Historik, burde du <a href=\"%1$s\">donére</a>, for at bibeholde dette plugin gratis."
+
+#: dropins/SimpleHistorySidebarDropin.php:49
+msgctxt "Sidebar box"
+msgid "Donate to support development"
+msgstr "Donér for at støtte udviklingen"
+
+#: dropins/SimpleHistorySidebarDropin.php:35
+msgctxt "Sidebar box"
+msgid "You can star, fork, or report issues with this plugin over at the <a href=\"%1$s\">GitHub page</a>."
+msgstr "Du kan star, fork eller rapportere issues på pluginets <a href=\"%1$s\">GitHub side</a>."
+
+#: dropins/SimpleHistorySidebarDropin.php:32
+msgctxt "Sidebar box"
+msgid "Simple History is on GitHub"
+msgstr "Simpel Historik er på GitHub"
+
+#: dropins/SimpleHistorySettingsStatsDropin.php:29
+#: dropins/SimpleHistorySidebarStats.php:159
+msgid "Stats"
+msgstr "Statistik"
+
+#: dropins/SimpleHistorySettingsLogtestDropin.php:229
+msgid "Enter title of new page"
+msgstr "Indtast titlen på ny side"
+
+#: dropins/SimpleHistorySettingsLogtestDropin.php:226
+msgid "Plugin"
+msgstr "Plugin"
+
+#: dropins/SimpleHistorySettingsLogtestDropin.php:22
+msgid "Test data (debug)"
+msgstr "Test data (debug)"
+
+#: dropins/SimpleHistoryRSSDropin.php:431
+msgid "Simple History has a RSS feed which you can subscribe to and receive log updates. Make sure you only share the feed with people you trust, since it can contain sensitive or confidential information."
+msgstr "Simpel Historik har et RSS feed, som du kan abonnere på og modtage log opdateringer. Del kun dette feed med personer du stoler på, da det kan indeholde følsomme eller fortrolige informationer."
+
+#: dropins/SimpleHistoryRSSDropin.php:398
+msgid "Generate new address"
+msgstr "Generere ny url"
+
+#: dropins/SimpleHistoryRSSDropin.php:391
+msgid "You can generate a new address for the RSS feed. This is useful if you think that the address has fallen into the wrong hands."
+msgstr "Du kan generere en ny RSS feed url. Dette kan være nyttigt, hvis du mistænker at url'en er faldet i de forkerte hænder."
+
+#: dropins/SimpleHistoryRSSDropin.php:344
+msgid "Your RSS secret for Simple History RSS feed is wrong. Please see WordPress settings for current link to the RSS feed."
+msgstr "Din RSS nøgle i Simpel Historik RSS feed'et er forkert. Du kan finde den rigtige url under Indstillinger -> Simpel Historik."
+
+#: dropins/SimpleHistoryRSSDropin.php:343
+msgid "Wrong RSS secret"
+msgstr "Forkert RSS nøgle"
+
+#: dropins/SimpleHistoryRSSDropin.php:276
+msgid "+%1$s occasion"
+msgid_plural "+%1$s occasions"
+msgstr[0] "+%1$s begivenhed"
+msgstr[1] "+%1$s begivenheder"
+
+#: dropins/SimpleHistoryRSSDropin.php:262
+msgid "Severity level: %1$s"
+msgstr "Alvorlighedsniveau: %1$s"
+
+#: dropins/SimpleHistoryRSSDropin.php:208
+#: dropins/SimpleHistoryRSSDropin.php:340
+msgid "WordPress History for %s"
+msgstr "WordPress historik fra %s"
+
+#: dropins/SimpleHistoryRSSDropin.php:207
+#: dropins/SimpleHistoryRSSDropin.php:339
+msgid "History for %s"
+msgstr "Historik fra %s"
+
+#: dropins/SimpleHistoryRSSDropin.php:106
+msgid "Created new secret RSS address"
+msgstr "Oprettet ny RSS url"
+
+#: dropins/SimpleHistoryRSSDropin.php:88
+msgid "Regenerate"
+msgstr "Regenerere"
+
+#: dropins/SimpleHistoryRSSDropin.php:79
+msgid "Address"
+msgstr "Adresse"
+
+#: dropins/SimpleHistoryRSSDropin.php:60
+msgctxt "rss settings headline"
+msgid "RSS feed"
+msgstr "RSS feed"
+
+#: dropins/SimpleHistoryNewRowsNotifier.php:89
+msgid "1 new event"
+msgid_plural "%d new events"
+msgstr[0] "1 nyt event"
+msgstr[1] "%d nye events"
+
+#: dropins/SimpleHistoryNewRowsNotifier.php:40
+msgctxt "New rows notifier: error while checking for new rows"
+msgid "An error occured while checking for new events"
+msgstr "En fejl skete under check for nye events"
+
+#: dropins/SimpleHistoryIpInfoDropin.php:166
+msgctxt "IP Info Dropin"
+msgid "IP info provided by %1$s ipinfo.io %2$s"
+msgstr "IP info leveret af %1$s ipinfo.io %2$s"
+
+#: dropins/SimpleHistoryIpInfoDropin.php:155
+msgctxt "IP Info Dropin"
+msgid "Country"
+msgstr "Område/Land"
+
+#: dropins/SimpleHistoryIpInfoDropin.php:144
+msgctxt "IP Info Dropin"
+msgid "Region"
+msgstr "Region"
+
+#: dropins/SimpleHistoryIpInfoDropin.php:133
+msgctxt "IP Info Dropin"
+msgid "City"
+msgstr "By"
+
+#: dropins/SimpleHistoryIpInfoDropin.php:111
+#: dropins/SimpleHistoryIpInfoDropin.php:122
+msgctxt "IP Info Dropin"
+msgid "Network"
+msgstr "Netværk"
+
+#: dropins/SimpleHistoryIpInfoDropin.php:100
+msgctxt "IP Info Dropin"
+msgid "Hostname"
+msgstr "Værtsnavn(Hostname)"
+
+#: dropins/SimpleHistoryIpInfoDropin.php:89
+msgctxt "IP Info Dropin"
+msgid "IP address"
+msgstr "IP adresse"
+
+#: dropins/SimpleHistoryIpInfoDropin.php:68
+msgctxt "IP Info Dropin"
+msgid "That IP address does not seem like a public one."
+msgstr "IP adressen lader ikke til, at være en offentlig(public) IP."
+
+#: dropins/SimpleHistoryFilterDropin.php:440
+msgid "Search"
+msgstr "Søg"
+
+#: dropins/SimpleHistoryFilterDropin.php:433
+msgctxt "Filter dropin: button to hide more search options"
+msgid "Hide search options"
+msgstr "Skjul søgemuligheder"
+
+#: dropins/SimpleHistoryFilterDropin.php:420
+msgid "All users"
+msgstr "Alle brugere"
+
+#: dropins/SimpleHistoryFilterDropin.php:328
+msgid "All messages"
+msgstr "Alle beskeder"
+
+#: dropins/SimpleHistoryFilterDropin.php:291
+msgid "All log levels"
+msgstr "Alle log niveauer"
+
+#: dropins/SimpleHistoryFilterDropin.php:269
+msgctxt "Filter dropin: button to show more search options"
+msgid "Show search options"
+msgstr "Vis søgemuligheder"
+
+#: dropins/SimpleHistoryFilterDropin.php:268
+#: dropins/SimpleHistoryFilterDropin.php:432
+msgid "Search events"
+msgstr "Søg i events"
+
+#: dropins/SimpleHistoryFilterDropin.php:211
+msgctxt "Filter dropin: filter week"
+msgid "Last 60 days"
+msgstr "Sidste 60 dage"
+
+#: dropins/SimpleHistoryFilterDropin.php:204
+msgctxt "Filter dropin: filter week"
+msgid "Last 30 days"
+msgstr "Sidste 30 dage"
+
+#: dropins/SimpleHistoryFilterDropin.php:197
+msgctxt "Filter dropin: filter week"
+msgid "Last 14 days"
+msgstr "Sidste 14 dage"
+
+#: dropins/SimpleHistoryFilterDropin.php:190
+msgctxt "Filter dropin: filter week"
+msgid "Last 7 days"
+msgstr "Sidste 7 dage"
+
+#: dropins/SimpleHistoryFilterDropin.php:165
+msgid "All dates"
+msgstr "Alle datoer"
+
+#: dropins/SimpleHistoryFilterDropin.php:60
+msgid "Filter history"
+msgstr "Filtrer historik"
+
+#: dropins/SimpleHistoryExportDropin.php:247
+msgctxt "Export dropin: submit button"
+msgid "Download Export File"
+msgstr "Download eksport filen"
+
+#: dropins/SimpleHistoryExportDropin.php:229
+msgctxt "Export dropin: export format"
+msgid "CSV"
+msgstr "CSV"
+
+#: dropins/SimpleHistoryExportDropin.php:222
+msgctxt "Export dropin: export format"
+msgid "JSON"
+msgstr "JSON"
+
+#: dropins/SimpleHistoryExportDropin.php:217
+msgctxt "Export dropin: format"
+msgid "Choose format to export to"
+msgstr "Vælg formatet, der skal eksporteres til"
+
+#: dropins/SimpleHistoryExportDropin.php:213
+msgctxt "Export dropin: introtext"
+msgid "The export function will export the full history."
+msgstr "Eksport funktionen vil eksportere den fulde historik."
+
+#: dropins/SimpleHistoryExportDropin.php:23
+msgctxt "Export dropin: Tab name on settings page"
+msgid "Export"
+msgstr "Eksport"
+
+#: dropins/SimpleHistoryDonateDropin.php:53
+msgctxt "donate settings headline"
+msgid "Donate"
+msgstr "Donér"
+
+#: dropins/SimpleHistoryDonateDropin.php:38
+msgid "Donate"
+msgstr "Donér"

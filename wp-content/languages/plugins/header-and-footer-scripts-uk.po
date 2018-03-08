@@ -1,0 +1,39 @@
+# Translation of Development (trunk) in Ukrainian
+# This file is distributed under the same license as the Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-01-24 11:24:18+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: Development (trunk)\n"
+
+#. Plugin Name of the plugin/theme
+msgid "Header and Footer Scripts"
+msgstr "Header and Footer Scripts"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.blogsynthesis.com/plugins/header-and-footer-scripts/"
+msgstr "http://www.blogsynthesis.com/plugins/header-and-footer-scripts/"
+
+#. Author of the plugin/theme
+msgid "Anand Kumar"
+msgstr "Anand Kumar"
+
+#. Author URI of the plugin/theme
+msgid "http://www.blogsynthesis.com"
+msgstr "http://www.blogsynthesis.com"
+
+#: shfs.php:334
+msgid "Posted %s"
+msgstr "Оприлюднено %s"
+
+#: shfs.php:328
+msgid "No items"
+msgstr "Немає елементів"
+
+#. Description of the plugin/theme
+msgid "Allows you to insert code or text in the header or footer of your WordPress blog"
+msgstr "Дозволяє вам вставляти код або текст у заголовок (header) або підвал (footer) вашого WordPress блогу."
