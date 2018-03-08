@@ -73,14 +73,38 @@ body {
 	font-size: 175%;
 	background: #FD0;
 }
-.faa-asset-button {
-	background: none !important;
-	border: none !important;
-	border-radius: 5px;
-	padding: 0px;
-}
-.faa-asset-button a img{
+.faa-icon-transfer {
+	margin: 0px auto;
 	height: 45px;
+	width: 45px;
+	background: url(../icons/transfer.svg) no-repeat;
+}
+.faa-icon-transfer:hover {
+	height: 45px;
+	width: 45px;
+	background: url(../icons/transfer_h.svg);
+}
+.faa-icon-surplus {
+	margin: 0px auto;
+	height: 45px;
+	width: 45px;
+	background: url(../icons/surplus.svg);
+}
+.faa-icon-surplus:hover {
+	height: 45px;
+	width: 45px;
+	background: url(../icons/surplus_h.svg);
+}
+.faa-icon-gallery {
+	margin: 0px auto;
+	height: 45px;
+	width: 45px;
+	background: url(../icons/gallery.svg);
+}
+.faa-icon-gallery:hover {
+	height: 45px;
+	width: 45px;
+	background: url(../icons/gallery_h.svg);
 }
 .s1 {
 	font-size: 200%;
