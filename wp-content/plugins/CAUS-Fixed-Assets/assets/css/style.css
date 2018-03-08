@@ -106,6 +106,17 @@ body {
 	width: 45px;
 	background: url(../icons/gallery_h.svg);
 }
+.faa-icon-forms {
+	margin: 0px auto;
+	height: 45px;
+	width: 45px;
+	background: url(../icons/forms.svg);
+}
+.faa-icon-forms:hover {
+	height: 45px;
+	width: 45px;
+	background: url(../icons/forms_h.svg);
+}
 .s1 {
 	font-size: 200%;
 	font-weight: 700;
