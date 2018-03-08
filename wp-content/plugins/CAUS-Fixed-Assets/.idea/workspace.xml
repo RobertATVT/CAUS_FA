@@ -14,15 +14,11 @@
       <file leaf-file-name="employee_asset_view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="14" column="112" lean-forward="false" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
               <folding>
-                <marker date="1520534394786" expanded="true" signature="219:232" ph="SELECT * FRO... " />
-                <marker date="1520534394786" expanded="true" signature="219:233" ph="SELECT * FRO... ${$wpdb-&gt;preficausfa_custodian}" />
-                <marker date="1520534394786" expanded="true" signature="219:296" ph="SELECT * FRO... C" />
-                <marker date="1520534394786" expanded="true" signature="526:539" ph="SELECT * FRO... " />
-                <marker date="1520534394786" expanded="true" signature="526:540" ph="SELECT * FRO... ${$wpdb-&gt;preficausfa_banner}" />
-                <marker date="1520534394786" expanded="true" signature="526:591" ph="SELECT * FRO... Assets" />
+                <marker date="1520539229361" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
+                <marker date="1520539229361" expanded="true" signature="526:599" ph="SELECT * FRO... causfa_banner" />
               </folding>
             </state>
           </provider>
@@ -137,7 +133,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1327000" />
+    <option name="totallyTimeSpent" value="1347000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="36" width="1143" height="772" extended-state="0" />
@@ -184,15 +180,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="14" column="112" lean-forward="false" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
           <folding>
-            <marker date="1520534394786" expanded="true" signature="219:232" ph="SELECT * FRO... " />
-            <marker date="1520534394786" expanded="true" signature="219:233" ph="SELECT * FRO... ${$wpdb-&gt;preficausfa_custodian}" />
-            <marker date="1520534394786" expanded="true" signature="219:296" ph="SELECT * FRO... C" />
-            <marker date="1520534394786" expanded="true" signature="526:539" ph="SELECT * FRO... " />
-            <marker date="1520534394786" expanded="true" signature="526:540" ph="SELECT * FRO... ${$wpdb-&gt;preficausfa_banner}" />
-            <marker date="1520534394786" expanded="true" signature="526:591" ph="SELECT * FRO... Assets" />
+            <marker date="1520539229361" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
+            <marker date="1520539229361" expanded="true" signature="526:599" ph="SELECT * FRO... causfa_banner" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="112" lean-forward="false" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
+          <folding>
+            <marker date="1520539229361" expanded="true" signature="219:296" ph="SELECT * FRO... causfa_custodians" />
+            <marker date="1520539229361" expanded="true" signature="526:599" ph="SELECT * FRO... causfa_banner" />
           </folding>
         </state>
       </provider>
