@@ -6,9 +6,8 @@ body {
 }
 
 .faa-container {
-	width: 95%;
-	border: 1px solid #222;
-	border-radius: 5px;
+	width: 100%;
+	border: none;
 	padding: 20px;
 }
 
