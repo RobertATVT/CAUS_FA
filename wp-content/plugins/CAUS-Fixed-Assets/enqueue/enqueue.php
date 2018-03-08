@@ -23,7 +23,7 @@ function causfa_enqueue() {
     wp_register_script('causfa_toggle', plugins_url( 'assets/js/toggle.js', CAUSFA_PLUGIN_URL), array(), false, true);
 
     wp_enqueue_script('jquery');
-    wp_enqueue_sdript('causfa_toggle');
+    wp_enqueue_script('causfa_toggle');
     wp_enqueue_script('causfa_bootstrap_script');
 
 }
