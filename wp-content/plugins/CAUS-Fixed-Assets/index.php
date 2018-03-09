@@ -22,6 +22,7 @@ include('includes/activate.php');
 include('enqueue/enqueue.php');
 include('includes/employee_asset_view.php');
 include('process/filter-content.php');
+include( 'includes/groups.php');
 
 
 //Hooks
@@ -33,3 +34,4 @@ add_filter( 'causfa_employee_asset_total', 'causfa_filter_employee_asset_total',
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view');
+add_shortcode( 'causfa_test', 'causfa_groups_FAL');
