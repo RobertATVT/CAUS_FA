@@ -8,14 +8,16 @@
 function causfa_filter_employee_info( $content) {
     $employee_info_html = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/employee_info_template.html', true );
     $employee_info_html = str_replace('[NAME]', $content->Name, $employee_info_html);
-    $employee_info_html = str_replace('[FAL]', $content->FAL, $employee_info_html);
+    //$employee_info_html = str_replace('[FAL]', $content->FAL, $employee_info_html);
+    $employee_info_html = str_replace('[FAL]', causfa_groups_FAL(), $employee_info_html);
     $employee_info_html = str_replace( '[PID]', $content->PID, $employee_info_html);
     $employee_info_html = str_replace( '[EMAIL]', $content->Email, $employee_info_html);
-    $employee_info_html = str_replace( '[FAC]', $content->FAC, $employee_info_html);
+    //$employee_info_html = str_replace( '[FAC]', $content->FAC, $employee_info_html);
+    $employee_info_html = str_replace( '[FAC]', causfa_groups_FAC(), $employee_info_html);
     $employee_info_html = str_replace( '[OFFICE]', $content->Office, $employee_info_html);
     $employee_info_html = str_replace( '[PHONE]', $content->Phone, $employee_info_html);
-    $employee_info_html = str_replace( '[BM]', $content->BM, $employee_info_html);
-
+    //$employee_info_html = str_replace( '[BM]', $content->BM, $employee_info_html);
+    $employee_info_html = str_replace( '[BM]', causfa_groups_BM(), $employee_info_html);
 
     return $employee_info_html;
 }
