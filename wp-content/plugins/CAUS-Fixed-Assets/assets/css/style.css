@@ -64,6 +64,7 @@ body {
 	font-weight: 700;
 	font-size: 250%;
     background: none;
+    line-height: 35px;
 }
 .faa-asset-status {
 	padding: 0px;
