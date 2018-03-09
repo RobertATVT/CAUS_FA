@@ -41,14 +41,10 @@ body {
 .faa-asset-show {
 	height: 115px;
 }
-.faa-asset-status {
-	padding: 2px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.faa-asset-toggle {
+.faa-toggle {
 	position: absolute;
-	left: 45px;
+	right: 0px;
+    top: 5px;
 	width: 45px;
 	height: 45px;
 	border: 1px solid #333;
@@ -62,7 +58,17 @@ body {
 	font-size: 250%;
 }
 .faa-asset-status {
+	padding: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.faa-asset-status-fill {
+	height: 45px;
+	width: 95%;
+	border-radius: 5px;
+	border: 1px solid #333;
 	padding: 6px;
+	margin: 0px auto;
 	text-align: center;
 	font-weight: 900;
 	font-size: 175%;
