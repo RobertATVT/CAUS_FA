@@ -46,9 +46,10 @@ body {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-.faa-asset-toggle {
+.faa-toggle {
 	position: absolute;
-	left: 45px;
+	right: 0px;
+    top: 5px;
 	width: 45px;
 	height: 45px;
 	border: 1px solid #333;
