@@ -86,7 +86,7 @@ function causfa_groups_BM() {
                 for($k=0; $k < count($business_manager_group->users); $k++) {
                     if ($business_manager_group->users[$k]->ID == $users_in_group[$j]->ID) {
                         if ($BM_count == 0) {
-                            $output = $business_manager_group->users[$k]->user_email;
+                            $output = $business_manager_group->users[$k]->display_name;
                         } else {
                             $output = $output.(' and '.$business_manager_group->users[$k]->display_name);
                         }
