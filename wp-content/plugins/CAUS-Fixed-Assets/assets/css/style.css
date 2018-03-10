@@ -76,6 +76,9 @@ body {
 	background: #FD0;
     line-height: 42px;
 }
+.faa-asset-status-missing {
+	background: #F00 !important;
+}
 .faa-icon-transfer {
 	margin: 0px auto;
 	height: 45px;

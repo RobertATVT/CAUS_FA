@@ -14,15 +14,19 @@ function causfa_load_employee_view() {
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_header_template.html', true ));
 
     $results = $wpdb->get_results('SELECT * FROM causfa_banner WHERE FZVFORG_CUSTODIAN = "'.$result->Name.'";');
-    $value_total = 0;
+    $value_total = 0.00;
+    $missing_total = 0.00;
     $asset_index = 0;
     foreach ($results as $result) {
         $value_total += $result->FZVFORG_AMOUNT;
-        $output = $output.(apply_filters('causfa_employee_asset_info', $result));
-        $output = str_replace('[ID]', $asset_index, $output);
+        $return_value = apply_filters('causfa_employee_asset_info', $result, $asset_index);
+        $output = $output.$return_value[0];
+        if ($return_value[1]) {
+            $missing_total += $result->FZVFORG_AMOUNT;
+        }
         $asset_index++;
     }
-    $output = $output.(apply_filters('causfa_employee_asset_total', $value_total));
+    $output = $output.(apply_filters('causfa_employee_asset_total', $value_total, $missing_total));
     return $output;
 }
 

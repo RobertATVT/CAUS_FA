@@ -30,8 +30,8 @@ include( 'includes/create_tables.php');
 add_action( 'wp_enqueue_scripts', 'causfa_enqueue');
 register_activation_hook( __FILE__, 'causfa_activate_plugin' );
 add_filter( 'causfa_employee_info', 'causfa_filter_employee_info', 10, 1);
-add_filter( 'causfa_employee_asset_info', 'causfa_filter_employee_asset_info', 10, 1);
-add_filter( 'causfa_employee_asset_total', 'causfa_filter_employee_asset_total', 10, 1);
+add_filter( 'causfa_employee_asset_info', 'causfa_filter_employee_asset_info', 10, 2);
+add_filter( 'causfa_employee_asset_total', 'causfa_filter_employee_asset_total', 10, 2);
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view');
