@@ -33,6 +33,12 @@ function causfa_filter_employee_asset_info( $content) {
     $asset_info_html = str_replace( '[VT SCAN]', $content->FZVFORG_LAST_INVENTORY_DATE, $asset_info_html);
     $asset_info_html = str_replace( '[CAUS SCAN]', '[CAUS SCAN]', $asset_info_html);
     $asset_info_html = str_replace( '[PURCHASE DATE]', $content->FZVFORG_ACQ_DATE, $asset_info_html);
+    $asset_status = $content->FZVFORG_ROOM;
+    if (strpos($asset_status, 'HOME') !== false) {
+        $asset_info_html = str_replace('[STATUS]', 'Home Use', $asset_info_html);
+    } else {
+        $asset_info_html = str_replace('[STATUS]', 'Office Use', $asset_info_html);
+    }
     return $asset_info_html;
 }
 
