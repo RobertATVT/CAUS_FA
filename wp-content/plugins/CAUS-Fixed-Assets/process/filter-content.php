@@ -27,7 +27,7 @@ function causfa_filter_employee_asset_info( $content) {
     $asset_info_html = str_replace('[VT TAG]', 'VT000'.$content->FZVFORG_PTAG, $asset_info_html);
     $asset_info_html = str_replace( '[S/N]', $content->FZVFORG_SERIAL_NUM, $asset_info_html);
     $asset_info_html = str_replace('[DESCRIPTION]', $content->FZVFORG_DESCRIPTION, $asset_info_html);
-    $asset_info_html = str_replace( '[VALUE]', $content->FZVFORG_AMOUNT, $asset_info_html);
+    $asset_info_html = str_replace( '[VALUE]', ('$'.$content->FZVFORG_AMOUNT), $asset_info_html);
     $asset_info_html = str_replace( '[ORGANIZATION]', $content->FZVFORG_ORGN_TITLE, $asset_info_html);
     $asset_info_html = str_replace( '[OWNERSHIP]', $content->FZVFORG_OWNER, $asset_info_html);
     $asset_info_html = str_replace( '[VT SCAN]', $content->FZVFORG_LAST_INVENTORY_DATE, $asset_info_html);
