@@ -10,7 +10,7 @@ function causfa_activate_plugin() {
     if( version_compare( get_bloginfo('version'), '4.5', '<' )) {
         wp_die(__('You must update WordPress to use this plugin', 'CAUS Fixed Assets Application'));
     }
-    if( is_plugin_active('Groups')) {
+    if( is_plugin_active('groups/groups.php')) {
         $business_manager = Groups_Group::read_by_name('Business Manger');
         if ($business_manager == null) {
             $map = array('name' => 'Business Manager', 'description' => 'Business Manager Group');
@@ -34,4 +34,5 @@ function causfa_activate_plugin() {
     } else {
         wp_die(__('You must install the groups plugin to use this plugin', 'CAUS Fixed Assets Application'));
     }
+    create_tables();
 }

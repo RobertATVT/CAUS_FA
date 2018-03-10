@@ -23,6 +23,7 @@ include('enqueue/enqueue.php');
 include('includes/employee_asset_view.php');
 include('process/filter-content.php');
 include( 'includes/groups.php');
+include( 'includes/create_tables.php');
 
 
 //Hooks
