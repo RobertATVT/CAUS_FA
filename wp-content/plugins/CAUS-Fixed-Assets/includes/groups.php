@@ -110,3 +110,19 @@ function causfa_groups_management_code() {
         }
     }
 }
+function causfa_groups_is_admin() {
+    $is_admin = false;
+    $current_user = new Groups_User( get_current_user_id() );
+    $current_user_groups = $current_user->groups;
+    for ($i = 0; $i < count($current_user_groups); $i++) {
+        $current_user_group = $current_user_groups[$i];
+        if (strpos($current_user_group->group->name, 'Fixed Assets Liaison') !== false) {
+            $is_admin = true;
+        } else if (strpos($current_user_group->group->name, 'Fixed Assets Coordinator') !== false) {
+            $is_admin = true;
+        } else if (strpos($current_user_group->group->name, 'Business Manager') !== false) {
+            $is_admin = true;
+        }
+    }
+    return $is_admin;
+}

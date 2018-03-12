@@ -35,4 +35,4 @@ add_filter( 'causfa_employee_asset_total', 'causfa_filter_employee_asset_total',
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view');
-add_shortcode( 'causfa_test', 'causfa_groups_FAL');
+add_shortcode( 'causfa_test', 'causfa_groups_is_admin');
