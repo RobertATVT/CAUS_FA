@@ -4,6 +4,7 @@
  * User: mattwj6
  * Date: 3/7/18
  * Time: 9:16 AM
+ * This file enqueues all css styles and javascript scripts that are used by the plugin
  */
 
 
@@ -30,6 +31,8 @@ function causfa_enqueue() {
     wp_enqueue_script('causfa_modal');
     wp_enqueue_script('causfa_main');
 
+
+    //This line creates a causfa_action_obj object that passes the ajax url to the front end scripts
     wp_localize_script('causfa_main', 'causfa_action_obj', array(
         'ajax_url' => admin_url('admin-ajax.php')
     ));

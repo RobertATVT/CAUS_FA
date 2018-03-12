@@ -5,15 +5,12 @@
  * Date: 3/8/18
  * Time: 9:42 PM
  */
-function causfa_groups() {
-    $output = new stdClass();
-    $output->FAL = causfa_groups_FAL();
-    $output->FAC = causfa_groups_FAC();
-    $output->BM = causfa_groups_BM();
-    $output->code = causfa_groups_management_code();
 
-    return $output;
-}
+/**
+ * @return string - the display name(s) of the FAL(s)
+ *
+ * Uses the groups plugin to determine the FAL(s) of the current users organization
+ */
 function causfa_groups_FAL() {
     $output = '';
     $current_user = new Groups_User( get_current_user_id() );
@@ -42,6 +39,12 @@ function causfa_groups_FAL() {
     }
     return $output;
 }
+
+/**
+ * @return string - the display name(s) of the FAC(s)
+ *
+ * Uses the groups plugin to determine the FAC(s) of the current users organization
+ */
 function causfa_groups_FAC() {
     $output = '';
     $current_user = new Groups_User( get_current_user_id() );
@@ -70,6 +73,12 @@ function causfa_groups_FAC() {
     }
     return $output;
 }
+
+/**
+ * @return string - display name(s) of the BM(s)
+ *
+ * Uses the groups plugin to determine the BM(s) of the current users organization
+ */
 function causfa_groups_BM() {
     $output = '';
     $current_user = new Groups_User( get_current_user_id() );
@@ -98,6 +107,12 @@ function causfa_groups_BM() {
     }
     return $output;
 }
+
+/**
+ * @return mixed - the management code tied to the current users organization
+ *
+ * Uses the groups plugin to get the management code that is stored in the capability of the organization group
+ */
 function causfa_groups_management_code() {
     $current_user = new Groups_User( get_current_user_id() );
     $current_user_groups = $current_user->groups;
@@ -110,6 +125,10 @@ function causfa_groups_management_code() {
         }
     }
 }
+
+/**
+ * @return bool - returns true or false if the current user is a admin (FAL, FAC, BM) or a standard user (Employee)
+ */
 function causfa_groups_is_admin() {
     $is_admin = false;
     $current_user = new Groups_User( get_current_user_id() );

@@ -5,6 +5,11 @@
  * Date: 3/7/18
  * Time: 9:15 PM
  */
+
+/**
+ * @param $content - contains a row of the custodians table that corresponds to the current user
+ * @return mixed - the html that corresponds to the employee info section if employee asset view page
+ */
 function causfa_filter_employee_info( $content) {
     $response = wp_remote_get(plugins_url('assets/html/employee_info_template.html', CAUSFA_PLUGIN_URL));
     $employee_info_html = wp_remote_retrieve_body($response);
@@ -21,6 +26,13 @@ function causfa_filter_employee_info( $content) {
     return $employee_info_html;
 }
 
+/**
+ * @param $content - contains a row of the asset table that corresponds to an item that belongs to the current user
+ * @param $asset_index - contains the index value of the $content in regards to all of the assets in the current users name
+ * @return array - returns an array containing two keys
+ *      $asset_info_html - contains the html of the asset that corresponds to the content passed into the function
+ *      $missing - contains a bool that indicates if the asset has a status of missing or not.
+ */
 function causfa_filter_employee_asset_info( $content, $asset_index) {
     global $wpdb;
     $response = wp_remote_get(plugins_url('assets/html/asset_template.html', CAUSFA_PLUGIN_URL));
@@ -52,6 +64,11 @@ function causfa_filter_employee_asset_info( $content, $asset_index) {
     return array($asset_info_html, $missing);
 }
 
+/**
+ * @param $value_total - total value of items in the current users name
+ * @param $missing_total - total value of missing items in the current users name
+ * @return mixed - html corresponding to the footer of the employee asset view page
+ */
 function causfa_filter_employee_asset_total( $value_total, $missing_total) {
     $response = wp_remote_get(plugins_url('assets/html/asset_total_template.html', CAUSFA_PLUGIN_URL));
     $asset_total_html = wp_remote_retrieve_body($response);

@@ -10,6 +10,7 @@
  * Licesne URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
+//checks if WordPress exists
 if( !function_exists( 'add_action')) {
     die();
 }
@@ -36,5 +37,5 @@ add_filter( 'causfa_employee_asset_total', 'causfa_filter_employee_asset_total',
 add_action( 'wp_ajax_causfa_surplus', 'causfa_surplus');
 
 //Shortcode
-add_shortcode( 'causfa', 'causfa_load_employee_view');
-add_shortcode( 'causfa_test', 'causfa_groups_is_admin');
+add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
+add_shortcode( 'causfa_test', 'causfa_groups_is_admin'); //shortcode for a dev space to test functionality

@@ -5,6 +5,10 @@
  * Date: 3/12/18
  * Time: 3:28 PM
  */
+
+/**
+ * Function that is called from the frontend javascript using an AJAX POST request
+ */
 function causfa_surplus() {
     global $wpdb;
     $output = array(

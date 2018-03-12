@@ -6,6 +6,13 @@
  * Time: 8:54 PM
  */
 
+
+/**
+ * @return string - the html to be rendered in the browser
+ *
+ * This function is linked to the [causfa] shortcode. This function loads an individuals asset view
+ * and connects the javascript functions for modal and toggle functionality
+ */
 function causfa_load_employee_view() {
     global $wpdb;
     $current_user = wp_get_current_user();
@@ -28,6 +35,7 @@ function causfa_load_employee_view() {
         $asset_index++;
     }
     $output = $output.(apply_filters('causfa_employee_asset_total', $value_total, $missing_total));
+    //Gets the html for the modals and puts it at the bottom of the page.
     $response = wp_remote_get(plugins_url('assets/html/modal.html', CAUSFA_PLUGIN_URL));
     $modals = wp_remote_retrieve_body($response);
     $modals = str_replace('[PID]', "'".$result_user->PID."'", $modals);

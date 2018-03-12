@@ -5,6 +5,11 @@
  * Date: 3/9/18
  * Time: 10:36 PM
  */
+
+/**
+ * This function checks for the existence of each of the tables required by the plugin and if they do not
+ * exist then they are created
+ */
 function create_tables() {
     global $wpdb;
     $table_name = 'causfa_banner';
