@@ -6,7 +6,9 @@
  * Time: 9:15 PM
  */
 function causfa_filter_employee_info( $content) {
-    $employee_info_html = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/employee_info_template.html', true );
+    $response = wp_remote_get(plugins_url('assets/html/employee_info_template.html', CAUSFA_PLUGIN_URL));
+    $employee_info_html = wp_remote_retrieve_body($response);
+    //$employee_info_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/employee_info_template.html', true);
     $employee_info_html = str_replace('[NAME]', $content->Name, $employee_info_html);
     $employee_info_html = str_replace('[FAL]', causfa_groups_FAL(), $employee_info_html);
     $employee_info_html = str_replace( '[PID]', $content->PID, $employee_info_html);
@@ -21,7 +23,9 @@ function causfa_filter_employee_info( $content) {
 
 function causfa_filter_employee_asset_info( $content, $asset_index) {
     global $wpdb;
-    $asset_info_html = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_template.html', true);
+    $response = wp_remote_get(plugins_url('assets/html/asset_template.html', CAUSFA_PLUGIN_URL));
+    $asset_info_html = wp_remote_retrieve_body($response);
+    //$asset_info_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_template.html', true);
     $asset_info_html = str_replace('[VT TAG]', $content->FZVFORG_PTAG, $asset_info_html);
     $asset_info_html = str_replace( '[S/N]', $content->FZVFORG_SERIAL_NUM, $asset_info_html);
     $asset_info_html = str_replace('[DESCRIPTION]', $content->FZVFORG_DESCRIPTION, $asset_info_html);
@@ -49,7 +53,9 @@ function causfa_filter_employee_asset_info( $content, $asset_index) {
 }
 
 function causfa_filter_employee_asset_total( $value_total, $missing_total) {
-    $asset_total_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_total_template.html', true);
+    $response = wp_remote_get(plugins_url('assets/html/asset_total_template.html', CAUSFA_PLUGIN_URL));
+    $asset_total_html = wp_remote_retrieve_body($response);
+    //$asset_total_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_total_template.html', true);
     $asset_total_html = str_replace('[TOTAL VALUE]', ('$'.$value_total), $asset_total_html);
     $asset_total_html = str_replace( '[TOTAL MISSING VALUE]', ('$'.$missing_total), $asset_total_html);
     return $asset_total_html;

@@ -11,7 +11,8 @@ function causfa_load_employee_view() {
     $current_user = wp_get_current_user();
     $result = $wpdb->get_row('SELECT * FROM causfa_custodians WHERE Email = "'.$current_user->user_email.'";');
     $output = apply_filters('causfa_employee_info', $result);
-    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_header_template.html', true ));
+    $response = wp_remote_get(plugins_url('assets/html/asset_header_template.html', CAUSFA_PLUGIN_URL));
+    $output = $output.wp_remote_retrieve_body($response);
 
     $results = $wpdb->get_results('SELECT * FROM causfa_banner WHERE FZVFORG_CUSTODIAN = "'.$result->Name.'";');
     $value_total = 0.00;
@@ -27,6 +28,9 @@ function causfa_load_employee_view() {
         $asset_index++;
     }
     $output = $output.(apply_filters('causfa_employee_asset_total', $value_total, $missing_total));
+    $response = wp_remote_get(plugins_url('assets/html/modal.html', CAUSFA_PLUGIN_URL));
+    $modals = wp_remote_retrieve_body($response);
+    $output = $output.$modals;
     return $output;
 }
 

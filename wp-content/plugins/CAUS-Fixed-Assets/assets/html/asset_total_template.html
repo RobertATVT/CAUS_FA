@@ -1,125 +1,24 @@
-        </div>
-    </div>
-    <div class="row" id="asset-impact-title">
-		<div class="col-md-12 faa-header" style="margin-bottom: 10px;">
-			<div class="text-center col-sm-6 s4">TOTAL VALUE OF ASSETS</div>
-			<div class="col-sm-1"></div>
-			<div class="text-center col-sm-5 s4">TOTAL VALUE OF MISSING ASSETS</div>
-		</div>
-	</div>
-	<div class="row" id="asset-listing">
-		<div class="col-md-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #efefef;">
-		<!-- <button id="faa-asset-toggle" class="btn btn-primary faa-toggle" type="button">+</button> -->
-			<div class="col-md-6" style="padding: 10px;">
-                <div class="col-sm-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #fff;">
-				    <div class="col-sm-5 s3">TOTAL ASSET VALUE:</div>
-				    <div class="col-sm-7 s3" style="color: #080; text-align: right;">[TOTAL VALUE]</div>
-                </div>
-            </div>
-			<div class="col-md-6" style="padding: 10px;">
-                <div class="col-sm-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #fff;">
-                    <div class="col-sm-5 s3">MISSING ASSET TOTAL:</div>
-                    <div class="col-sm-7 s3" style="color: #F00; text-align: right;">[TOTAL MISSING VALUE]</div>
-                </div>
-			</div>
-		</div>
-	</div>
-		<!-----Transfer Modal----->
-		<div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title" id="transferModalLabel">Asset Transfer</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="row">
-							Asset Tag: <span class="asset-tag"></span>
-							Description: <span class="asset-description"></span>
-						</div>
-						<div class="row">
-							<form>
-								<div class="form-group">
-									<label for="recipient-name" class="form-control-label">RECEIVER PID:</label>
-									<input type="text" class="form-control" id="recipient-name">
-								</div>
-							</form>
-						</div>
-						<div class="row">
-							<p>Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
-						</div>
-
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary">Transfer</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-----Surplus Modal------>
-		<div class="modal fade" id="surplusModal" tabindex="-1" role="dialog" aria-labelledby="surplusModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title" id="surplusModalLabel">Surplus Request</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="row">
-							Asset Tag: <span class="asset-tag"></span>
-							Description: <span class="asset-description"></span>
-						</div>
-						<div class="row">
-							<p>Are you sure you want to initiate this surplus request?</p>
-						</div>
-
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary">Surplus</button>
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-----Gallery Modal------>
-		<div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title" id="galleryModalLabel">Gallery</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						...
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-----Forms Modal------>
-		<div class="modal fade" id="formsModal" tabindex="-1" role="dialog" aria-labelledby="formsModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title" id="formsModalLabel">Forms</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						...
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
+ <div class="row" id="asset-impact-title">
+	 <div class="col-md-12 faa-header" style="margin-bottom: 10px;">
+		 <div class="text-center col-sm-6 s4">TOTAL VALUE OF ASSETS</div>
+		 <div class="col-sm-1"></div>
+		 <div class="text-center col-sm-5 s4">TOTAL VALUE OF MISSING ASSETS</div>
+	 </div>
+ </div>
+ <div class="row" id="asset-listing">
+	 <div class="col-md-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #efefef;">
+		 <!-- <button id="faa-asset-toggle" class="btn btn-primary faa-toggle" type="button">+</button> -->
+		 <div class="col-md-6" style="padding: 10px;">
+			 <div class="col-sm-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #fff;">
+				 <div class="col-sm-5 s3">TOTAL ASSET VALUE:</div>
+				 <div class="col-sm-7 s3" style="color: #080; text-align: right;">[TOTAL VALUE]</div>
+			 </div>
+		 </div>
+		 <div class="col-md-6" style="padding: 10px;">
+			 <div class="col-sm-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #fff;">
+				 <div class="col-sm-5 s3">MISSING ASSET TOTAL:</div>
+				 <div class="col-sm-7 s3" style="color: #F00; text-align: right;">[TOTAL MISSING VALUE]</div>
+			 </div>
+		 </div>
+	 </div>
+ </div>
