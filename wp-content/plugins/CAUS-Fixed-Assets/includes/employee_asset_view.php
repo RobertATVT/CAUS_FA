@@ -35,7 +35,7 @@ function causfa_load_employee_view() {
     }
     $output = $output.(apply_filters('causfa_employee_asset_total', $value_total, $missing_total));
     //Gets the html for the modals and puts it at the bottom of the page.
-    $modal = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/modal.html', true ));
+    $modals = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/modal.html', true ));
     $modals = str_replace('[PID]', "'".$result_user->PID."'", $modals);
     $output = $output.$modals;
     return $output;
