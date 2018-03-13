@@ -68,13 +68,16 @@ body {
     line-height: 35px;
 }
 .faa-asset-status {
-	padding: 0px;
+	padding: 2px;
     padding-left: 0px;
 	text-align: center;
 	font-weight: 900;
 	font-size: 175%;
 	background: #FD0;
-    line-height: 42px;
+    line-height: 39px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-top: 2px;
 }
 .faa-asset-status-missing {
 	background: #F00 !important;

@@ -6,7 +6,7 @@ body {
 }
 
 .faa-container {
-	width: 95%;
+	width: 100%;
 	border: none;
 	padding: 20px;
 }
@@ -15,9 +15,9 @@ body {
 	background: #333;
 	color: #fff;
 	border-radius: 5px;
-	height: 30px;
+	height: 35px;
 	padding: 2px;
-	margin-top: 10px;
+	line-height: 35px;
 }
 
 .faa-content {
@@ -25,7 +25,7 @@ body {
 	border: 1px solid #333;
 	border-radius: 5px;
 	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 20px !important;
 	padding: 10px;
 }
 .faa-asset {
@@ -34,12 +34,20 @@ body {
 	background: #fff;
 	border: 1px solid #333;
 	border-radius: 5px;
-	padding: 5px;
+	padding: 2px;
+    padding-left: 5px;
 	margin-top: 2px;
+    margin-bottom: 10px;
+    line-height: 20px;
 	overflow: hidden;
 }
 .faa-asset-show {
-	height: 115px;
+	height: 125px;
+}
+.faa-asset-status {
+	padding: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .faa-toggle {
 	position: absolute;
@@ -56,28 +64,30 @@ body {
 	text-align: center;
 	font-weight: 700;
 	font-size: 250%;
+    background: none;
+    line-height: 35px;
 }
 .faa-asset-status {
 	padding: 2px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.faa-asset-status-fill {
-	height: 45px;
-	width: 95%;
-	border-radius: 5px;
-	border: 1px solid #333;
-	padding: 6px;
-	margin: 0px auto;
+    padding-left: 0px;
 	text-align: center;
 	font-weight: 900;
 	font-size: 175%;
 	background: #FD0;
+    line-height: 39px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+.faa-asset-status-missing {
+	background: #F00 !important;
 }
 .faa-icon-transfer {
 	margin: 0px auto;
 	height: 45px;
 	width: 45px;
+    border: none !important;
+    outline: none !important;
 	background: url(../icons/transfer.svg) no-repeat;
 }
 .faa-icon-transfer:hover {
@@ -89,6 +99,8 @@ body {
 	margin: 0px auto;
 	height: 45px;
 	width: 45px;
+    border: none !important;
+    outline: none !important;
 	background: url(../icons/surplus.svg);
 }
 .faa-icon-surplus:hover {
@@ -100,6 +112,8 @@ body {
 	margin: 0px auto;
 	height: 45px;
 	width: 45px;
+    border: none !important;
+    outline: none !important;
 	background: url(../icons/gallery.svg);
 }
 .faa-icon-gallery:hover {
@@ -111,6 +125,8 @@ body {
 	margin: 0px auto;
 	height: 45px;
 	width: 45px;
+    border: none !important;
+    outline: none !important;
 	background: url(../icons/forms.svg);
 }
 .faa-icon-forms:hover {
