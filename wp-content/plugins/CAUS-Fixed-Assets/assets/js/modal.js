@@ -1,7 +1,7 @@
 // JavaScript Document
 function transferModalRequested(elementID) {
     var id = elementID.split('-')[1];
-    var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    var tag = document.getElementById(('asset-tag-' + id)).innerHTML ;
     var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
     $('#transferModal').find('.modal-body').find('.asset-tag').html(tag);
     $('#transferModal').find('.modal-body').find('.asset-description').html(desc);
