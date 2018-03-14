@@ -37,7 +37,7 @@ add_filter( 'causfa_employee_info', 'causfa_filter_employee_info', 10, 1);
 add_filter( 'causfa_employee_asset_info', 'causfa_filter_employee_asset_info', 10, 2);
 add_filter( 'causfa_employee_asset_total', 'causfa_filter_employee_asset_total', 10, 2);
 add_action( 'wp_ajax_causfa_surplus', 'causfa_surplus');
-add_action( 'wp_ajax_causfa_transfer', 'causfa_transfer');
+add_action( 'wp_ajax_causfa_transfer_asset', 'causfa_transfer_asset');
 add_action( 'wp_ajax_causfa_autocomplete_PID', 'causfa_autocomplete_PID');
 
 //Shortcode

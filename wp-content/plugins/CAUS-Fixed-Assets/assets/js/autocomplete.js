@@ -14,7 +14,7 @@ function causfa_hinter(element) {
             action: 'causfa_autocomplete_PID',
             query: element.value
         }
-        $.post(causfa_action_obj.ajax_url, form, function(data) {
+        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
             PIDs.innerHTML = "";
             PIDs.style.display = 'none';
             data.forEach(function(item) {
