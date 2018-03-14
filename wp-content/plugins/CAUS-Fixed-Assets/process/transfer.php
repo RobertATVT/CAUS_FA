@@ -15,6 +15,7 @@ function causfa_transfer() {
     $type = $_POST['type'];
     $date_created = current_time('mysql');
     $PID_dest = $_POST['dest'];
+    $PID_dest = sanatize_text_field($PID_dest);
     $pending_status = 0;
     $wpdb->insert(
         'causfa_pending',

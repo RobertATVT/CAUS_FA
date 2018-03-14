@@ -27,6 +27,7 @@ include('includes/groups.php');
 include('includes/create_tables.php');
 include('process/surplus.php');
 include('process/transfer.php');
+include('includes/autocomplete.php');
 
 
 //Hooks
@@ -37,6 +38,7 @@ add_filter( 'causfa_employee_asset_info', 'causfa_filter_employee_asset_info', 1
 add_filter( 'causfa_employee_asset_total', 'causfa_filter_employee_asset_total', 10, 2);
 add_action( 'wp_ajax_causfa_surplus', 'causfa_surplus');
 add_action( 'wp_ajax_causfa_transfer', 'causfa_transfer');
+add_action( 'wp_ajax_causfa_autocomplete_PID', 'causfa_autocomplete_PID');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
