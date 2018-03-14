@@ -30,14 +30,15 @@ function validateForm(element, PID) {
     // Get the input element
     var input = document.getElementById('recipient-name');
     // Get the datalist
-    var PIDs = document.getElementById('PIDs');
+    var PIDs = jQuery('#PIDs');
 
 
     // If we find the input inside our list, we submit the form
-    var children = PIDs.children;
+    var children = PIDs.children();
     for(var i = 0; i < children.length; i++){
-        if(children[i] == input.value) {
+        if(children[i].value == input.value) {
             transferAsset(element, PID);
+            return true;
         }
     };
 
