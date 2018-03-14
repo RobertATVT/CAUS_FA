@@ -22,6 +22,7 @@
                             <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECIEVER PID</label>
                             <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
                             <datalist id="PIDs"></datalist>
+                            <input type="hidden" id="transferIndex" value="" />
                         </div>
                     </form>
                 </div>
@@ -54,6 +55,7 @@
                 </div>
                 <div class="row">
                     <div class="text-center col-sm-12 info-title" style="font-size: 125%;"><p>Are you sure you want to initiate this surplus request?</p></div>
+                    <input type="hidden" id="surplusIndex" value="" />
                 </div>
 
             </div>

@@ -228,15 +228,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content faa-modal-content">
             <div class="modal-header faa-modal-header">
-<!--                <button type="button" class="close btn-primary" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button> -->
+                <!--                <button type="button" class="close btn-primary" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button> -->
                 <h4 class="modal-title faa-modal-title" id="transferModalLabel">Asset Transfer</h4>
             </div>
             <div class="modal-body faa-modal-body">
                 <div class="row faa-modal-info" style="">
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag">00095959</span></div>
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description">Apple iPad 2 wi-Fi+3G 16GB fpr AT&T - Black (M</span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">&nbsp;</div>
@@ -247,6 +247,7 @@
                             <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECIEVER PID</label>
                             <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
                             <datalist id="PIDs"></datalist>
+                            <input type="hidden" id="transferIndex" value="" />
                         </div>
                     </form>
                 </div>
@@ -270,15 +271,16 @@
                 <h4 class="modal-title faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
             </div>
             <div class="modal-body faa-modal-body">
-               <div class="row" style="border: 1px solid #aaa; padding: 10px; background: #fff; border-radius: 5px;">
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag">00095959</span></div>
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description">Apple iPad 2 wi-Fi+3G 16GB fpr AT&T - Black (M</span></div>
+                <div class="row" style="border: 1px solid #aaa; padding: 10px; background: #fff; border-radius: 5px;">
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
                 </div>
                 <div class="row" >
                     <div class="col-sm-12">&nbsp;</div>
                 </div>
                 <div class="row">
                     <div class="text-center col-sm-12 info-title" style="font-size: 125%;"><p>Are you sure you want to initiate this surplus request?</p></div>
+                    <input type="hidden" id="surplusIndex" value="" />
                 </div>
 
             </div>
