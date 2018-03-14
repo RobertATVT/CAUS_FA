@@ -1,23 +1,26 @@
 <!-----Transfer Modal----->
 <div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="transferModalLabel">Asset Transfer</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+<!--                <button type="button" class="close btn-primary" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                </button> -->
+                <h4 class="modal-title faa-modal-title" id="transferModalLabel">Asset Transfer</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body faa-modal-body">
+                <div class="row faa-modal-info" style="">
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
+                </div>
                 <div class="row">
-                    Asset Tag: <span class="asset-tag"></span>
-                    Description: <span class="asset-description"></span>
+                    <div class="col-sm-12">&nbsp;</div>
                 </div>
                 <div class="row">
                     <form autocomplete="off">
-                        <div class="form-group">
-                            <label for="recipient-name" class="form-control-label">RECEIVER PID:</label>
-                            <input type="text" class="form-control" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
+                        <div class="col-sm-12 form-group" style="padding: 0px;">
+                            <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECIEVER PID</label>
+                            <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
                             <datalist id="PIDs"></datalist>
                         </div>
                     </form>
@@ -29,6 +32,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
@@ -36,26 +40,26 @@
 <!-----Surplus Modal------>
 <div class="modal fade" id="surplusModal" tabindex="-1" role="dialog" aria-labelledby="surplusModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="surplusModalLabel">Surplus Request</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+                <h4 class="modal-title faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    Asset Tag: <span class="asset-tag"></span>
-                    Description: <span class="asset-description"></span>
+            <div class="modal-body faa-modal-body">
+               <div class="row" style="border: 1px solid #aaa; padding: 10px; background: #fff; border-radius: 5px;">
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
+                </div>
+                <div class="row" >
+                    <div class="col-sm-12">&nbsp;</div>
                 </div>
                 <div class="row">
-                    <p>Are you sure you want to initiate this surplus request?</p>
+                    <div class="text-center col-sm-12 info-title" style="font-size: 125%;"><p>Are you sure you want to initiate this surplus request?</p></div>
                 </div>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset(this, [PID])">Surplus</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
@@ -66,15 +70,12 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="galleryModalLabel">Gallery</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
             <div class="modal-body">
                 ...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
@@ -85,15 +86,12 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="formsModalLabel">Forms</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
             <div class="modal-body">
                 ...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>

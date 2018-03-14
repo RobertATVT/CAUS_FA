@@ -10,7 +10,13 @@ body {
 	border: none;
 	padding: 20px;
 }
-
+.faa-reports {
+    position: ;
+    top: 30px;
+	width: 100%;
+	border: none;
+	padding: 20px;
+}
 .faa-header {
 	background: #333;
 	color: #fff;
@@ -164,30 +170,112 @@ body {
 .small-title {
 	margin-top: 4px;
 }
+.faa-modal-content {
+    background: #efefef;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0px;
+}
+
+.faa-modal-title {
+    background: #333;
+    line-height: 35px;
+    color: #fff;
+    padding: 10px;
+}
+.faa-modal-header{
+    padding: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.faa-modal-header button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 5px;
+    color: #fff;
+    background: rgba(0,110,255,1);
+    border-radius: 5px;
+    opacity: 1;
+}
+.faa-modal-body {
+    padding: 30px;
+    padding-bottom: 0px;
+}
+.faa-modal-info {
+    border: 1px solid #aaa; 
+    padding: 10px; 
+    background: #fff; 
+    border-radius: 5px;
+}
+.faa-input {
+    border: 1px solid #aaa;
+    background: #fff;
+}
+.btn-primary {
+    background: #e87722; 
+}
+.btn-primary:focus {
+    background: #861F41;
+    border: none;
+}
+.btn-primary:hover {
+    background: #861F41;
+}
+.btn-secondary {
+    background: #cfcfcf; 
+}
+.btn-secondary:focus {
+    background: #aaa;
+    border: none;
+}
+.btn-secondary:hover {
+    background: #aaa;
+}
+.btn {
+    border: none;
+}
+.btn:focus {
+    border: none;
+    outline: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: 1px solid #333;
+}
+
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
+@media only screen and (max-width : 320px) {
+
 
 }
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
+@media only screen and (max-width : 480px) {
 
+    .btn-primary {
+        background: #333;
+    }
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media only screen and (max-width : 768px) {
 
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (max-width : 992px) {
 
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
+@media only screen and (max-width : 1200px) {
 
 }
 
