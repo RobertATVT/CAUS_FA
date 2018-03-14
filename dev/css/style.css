@@ -90,6 +90,9 @@ body {
 .faa-asset-status-missing {
 	background: #F00 !important;
 }
+.faa-asset-status-pending {
+	background: #00F !important;
+}
 .faa-icon-transfer {
 	margin: 0px auto;
 	height: 45px;

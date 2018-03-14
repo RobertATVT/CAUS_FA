@@ -238,10 +238,11 @@
                     Description: <span class="asset-description"></span>
                 </div>
                 <div class="row">
-                    <form>
+                    <form autocomplete="off">
                         <div class="form-group">
                             <label for="recipient-name" class="form-control-label">RECEIVER PID:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" class="form-control" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
+                            <datalist id="PIDs"></datalist>
                         </div>
                     </form>
                 </div>
@@ -251,7 +252,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="transferButton">Transfer</button>
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
             </div>
         </div>
     </div>
@@ -267,11 +268,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="row row1">
+                <div class="row">
                     Asset Tag: <span class="asset-tag"></span>
                     Description: <span class="asset-description"></span>
                 </div>
-                <div class="row row2">
+                <div class="row">
                     <p>Are you sure you want to initiate this surplus request?</p>
                 </div>
 
