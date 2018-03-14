@@ -52,6 +52,8 @@ function causfa_filter_employee_asset_info( $content, $asset_index) {
     } elseif ($wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
         $asset_info_html = str_replace( '[STATUS]', 'Pending', $asset_info_html);
         $asset_info_html = str_replace('faa-asset-status', 'faa-asset-status faa-asset-status-pending', $asset_info_html);
+        $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+        $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
     } else {
         $asset_status = $content->FZVFORG_ROOM;
         if (strpos($asset_status, 'HOME') !== false) {

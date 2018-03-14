@@ -28,3 +28,14 @@ function formsModalRequested(elementID) {
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
     jQuery('#formsModal').modal('show');
 }
+function modalRequestedOnPendingAsset(elementID) {
+    var id = elementID.split('-')[1];
+    var tag = document.getElementById(('asset-tag-' + id)).innerHTML ;
+    var form = {
+        action: 'causfa_pending_action',
+        ptag: tag
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+        alert(JSON.stringify(data));
+    });
+}
