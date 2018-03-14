@@ -14,7 +14,7 @@ function causfa_hinter(element) {
             action: 'causfa_autocomplete_PID',
             query: element.value
         }
-        $.post(causfa_action_obj.ajax_url, form, function(data) {
+        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
             PIDs.innerHTML = "";
             PIDs.style.display = 'none';
             data.forEach(function(item) {
@@ -25,4 +25,23 @@ function causfa_hinter(element) {
             });
         });
     }
+}
+function validateForm(element, PID) {
+    // Get the input element
+    var input = document.getElementById('recipient-name');
+    // Get the datalist
+    var PIDs = document.getElementById('PIDs');
+
+
+    // If we find the input inside our list, we submit the form
+    var children = PIDs.children;
+    for(var i = 0; i < children.length; i++){
+        if(children[i] == input.value) {
+            transferAsset(element, PID);
+        }
+    };
+
+    // we send an error message
+    alert("name input is invalid")
+    return false;
 }

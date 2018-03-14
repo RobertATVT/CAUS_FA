@@ -18,278 +18,232 @@
     <![endif]-->
 </head>
 <body>
-<div class="container faa-container">
-    <div class="row" id="employee-info-title">
-        <div class="col-lg-12 faa-header s2">
-            <div class="text-center col-md-4">Employee Information</div>
-            <div class="text-center col-md-4"></div>
-            <div class="text-center col-md-4">Liaison Information</div>
-        </div>
-    </div>
-    <div class="row" id="employee-info">
-        <div class="col-lg-12 faa-content">
-            <div class="col-lg-12">
-                <div class="col-sm-2 info-title">EMPLOYEE NAME:</div>
-                <div class="col-sm-3">[NAME]</div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2 info-title">FIXED ASSETS LIAISON:</div>
-                <div class="col-sm-3">[FAL]</div>
-            </div>
-            <div class="col-lg-12">
-                <div class="col-sm-2 info-title">VT PID:</div>
-                <div class="col-sm-3">[PID]</div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-3"></div>
-            </div>
-            <div class="col-lg-12">
-                <div class="col-sm-2 info-title">EMAIL ADDRESS:</div>
-                <div class="col-sm-3">[EMAIL]</div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2 info-title">FIXED ASSETS COORDINATOR:</div>
-                <div class="col-sm-3">[FAC]</div>
-            </div>
-            <div class="col-lg-12">
-                <div class="col-sm-2 info-title">OFFICE LOCATION:</div>
-                <div class="col-sm-3">[OFFICE]</div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-3"></div>
-            </div>
-            <div class="col-lg-12">
-                <div class="col-sm-2 info-title">PHONE NUMBER:</div>
-                <div class="col-sm-3">[PHONE]</div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2 info-title">BUSINESS MANAGER:</div>
-                <div class="col-sm-3">[BM]</div>
+<!-- BEGIN user_header_template.html -->
+<!-- END user_header_template.html -->
+<!-- BEGIN admin_header_template.html -->
+<!-- Commented out for possible disuse 
+<ul class="nav nav-tabs" id="fa_nav" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="faa-main-tab" data-toggle="tab" href="#faa-main" role="tab" aria-controls="faa-main" aria-selected="true">Fixed Assets</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="faa-reports-tab" data-toggle="tab" href="#faa-reports" role="tab" aria-controls="faa-reports" aria-selected="false">Reports</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="faa-pending-tab" data-toggle="tab" href="#faa-pending" role="tab" aria-controls="faa-pending" aria-selected="false">Pending Items</a>
+    </li>
+</ul>
+<div class="tab-content" id="faa-tab-content">
+    <div class="tab-pane fade show active" id="faa-main" role="tabpanel" aria-labelledby="faa-main-tab">
+        <div class="faa-reports">
+            <div class="row" id="faa-reports-title">
+                <div class="col-lg-12 faa-header s2">
+                    <div class="text-center col-md-4">Reports</div>
+                    <div class="text-center col-md-4"></div>
+                    <div class="text-center col-md-4">Logs</div>
+                </div>
             </div>
         </div>
     </div>
-	<div class="row" id="asset-info-title">
-		<div class="col-lg-12 faa-header" style="margin-top: -10px; margin-bottom: 10px;">
-			<div class="col-lg-12" style="overflow:hidden;">
-				<div class="text-center col-md-7 s4">ASSET INFORMATION</div>
-				<div class="text-center col-md-2 s4">ASSET STATUS</div>
-				<div class="text-center col-md-3 s5 small-title">
-					<div class="col-md-3">TRANSFER</div>
-					<div class="col-md-3">SURPLUS</div>
-					<div class="col-md-3">IMAGES</div>
-					<div class="col-md-3">FORMS</div>
-				</div>
-			</div>
-		</div>
-	</div>
-    <div class="row" id="asset-listing">
-        <div class="col-md-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #efefef;">
-            <div class="col-md-7 faa-asset" id="asset-0">
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">VT TAG #</div>
-                    <div class="col-sm-4">[VT TAG]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title">SERIAL #</div>
-                    <div class="col-sm-3">[S/N]</div>
+    <div class="tab-pane fade" id="faa-reports" role="tabpanel" aria-labelledby="faa-reports-tab">
+        <div class="faa-reports">
+            <div class="row" id="faa-reports-title">
+                <div class="col-lg-12 faa-header s2">
+                    <div class="text-center col-md-4">Reports</div>
+                    <div class="text-center col-md-4"></div>
+                    <div class="text-center col-md-4">Logs</div>
                 </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">DESCRIPTION</div>
-                    <div class="col-sm-4">[DESCRIPTION]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title">VALUE</div>
-                    <div class="col-sm-3">[VALUE]</div>
-                </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">ORGANIZATION</div>
-                    <div class="col-sm-4">[ORGANIZATION]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title">OWNERSHIP</div>
-                    <div class="col-sm-3">[OWNERSHIP]</div>
-                </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">&nbsp; </div>
-                    <div class="col-sm-4"> </div>
-                    <div class="col-sm-1"> </div>
-                    <div class="col-sm-2 info-title"> </div>
-                    <div class="col-sm-3"> </div>
-                </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">LAST VT SCAN</div>
-                    <div class="col-sm-4">[VT SCAN]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title">LAST CAUS SCAN</div>
-                    <div class="col-sm-3">[CAUS SCAN]</div>
-                </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">PURCHASE DATE</div>
-                    <div class="col-sm-4">[PURCHASE DATE]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title"></div>
-                    <div class="col-sm-3"></div>
-                </div>
-                <button id="0" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
-            </div>
-            <div class="col-md-2 faa-asset-status">
-                <div class="faa-asset-status-fill">HOME USE</div>
-            </div>
-            <div class="text-center col-md-3 faa-asset-button">
-                <div class="col-md-3"><button class="faa-icon-transfer"></button></div>
-                <div class="col-md-3"><button class="faa-icon-surplus"></button></div>
-                <div class="col-md-3"><button class="faa-icon-gallery"></button></div>
-                <div class="col-md-3"><button class="faa-icon-forms"></button></div>
-            </div>
-            <div class="col-md-7 faa-asset" id="asset-1">
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">VT TAG #</div>
-                    <div class="col-sm-4">[VT TAG]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title">SERIAL #</div>
-                    <div class="col-sm-3">[S/N]</div>
-                </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">DESCRIPTION</div>
-                    <div class="col-sm-4">[DESCRIPTION]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title">VALUE</div>
-                    <div class="col-sm-3">[VALUE]</div>
-                </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">ORGANIZATION</div>
-                    <div class="col-sm-4">[ORGANIZATION]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title">OWNERSHIP</div>
-                    <div class="col-sm-3">[OWNERSHIP]</div>
-                </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">&nbsp; </div>
-                    <div class="col-sm-4"> </div>
-                    <div class="col-sm-1"> </div>
-                    <div class="col-sm-2 info-title"> </div>
-                    <div class="col-sm-3"> </div>
-                </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">LAST VT SCAN</div>
-                    <div class="col-sm-4">[VT SCAN]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title">LAST CAUS SCAN</div>
-                    <div class="col-sm-3">[CAUS SCAN]</div>
-                </div>
-                <div class="row" style="z-index: 999;">
-                    <div class="col-sm-2 info-title">PURCHASE DATE</div>
-                    <div class="col-sm-4">[PURCHASE DATE]</div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-2 info-title"></div>
-                    <div class="col-sm-3"></div>
-                </div>
-                <button id="1" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
-            </div>
-            <div class="col-md-2 faa-asset-status">
-                <div class="faa-asset-status-fill">HOME USE</div>
-            </div>
-            <div class="text-center col-md-3 faa-asset-button">
-                <div class="col-md-3"><button class="faa-icon-transfer"></button></div>
-                <div class="col-md-3"><button class="faa-icon-surplus"></button></div>
-                <div class="col-md-3"><button class="faa-icon-gallery"></button></div>
-                <div class="col-md-3"><button class="faa-icon-forms"></button></div>
             </div>
         </div>
     </div>
-	<div class="col-lg-12" id="">
-        <div class="col-md-7 faa-asset" id="asset-[ID]">
-            <div class="row row1" style="z-index: 999;">
-                <div class="col-sm-2 info-title">VT TAG #</div>
-                <div class="col-sm-4 asset-tag">[VT TAG]</div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2 info-title">SERIAL #</div>
-                <div class="col-sm-3">[S/N]</div>
+    <div class="tab-pane fade" id="faa-pending" role="tabpanel" aria-labelledby="faa-pending-tab">
+        <div class="faa-reports">
+            <div class="row" id="faa-reports-title">
+                <div class="col-lg-12 faa-header s2">
+                    <div class="text-center col-md-4">Reports</div>
+                    <div class="text-center col-md-4"></div>
+                    <div class="text-center col-md-4">Logs</div>
+                </div>
             </div>
-            <div class="row row2" style="z-index: 999;">
-                <div class="col-sm-2 info-title">DESCRIPTION</div>
-                <div class="col-sm-4 asset-description">[DESCRIPTION]</div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2 info-title">VALUE</div>
-                <div class="col-sm-3">[VALUE]</div>
-            </div>
-            <div class="row row3" style="z-index: 999;">
-                <div class="col-sm-2 info-title">ORGANIZATION</div>
-                <div class="col-sm-4">[ORGANIZATION]</div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2 info-title">OWNERSHIP</div>
-                <div class="col-sm-3">[OWNERSHIP]</div>
-            </div>
-            <div class="row row4" style="z-index: 999;">
-                <div class="col-sm-2 info-title">&nbsp; </div>
-                <div class="col-sm-4"> </div>
-                <div class="col-sm-1"> </div>
-                <div class="col-sm-2 info-title"> </div>
-                <div class="col-sm-3"> </div>
-            </div>
-            <div class="row row5" style="z-index: 999;">
-                <div class="col-sm-2 info-title">LAST VT SCAN</div>
-                <div class="col-sm-4">[VT SCAN]</div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2 info-title">LAST CAUS SCAN</div>
-                <div class="col-sm-3">[CAUS SCAN]</div>
-            </div>
-            <div class="row row 6" style="z-index: 999;">
-                <div class="col-sm-2 info-title">PURCHASE DATE</div>
-                <div class="col-sm-4">[PURCHASE DATE]</div>
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2 info-title"></div>
-                <div class="col-sm-3"></div>
-            </div>
-            <button id="[ID]" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
         </div>
-    <div class="text-center col-md-2 faa-asset faa-asset-status" id="status-[ID]">[STATUS]</div>
-    <div class="text-center col-md-3 faa-asset-button">
-        <div class="col-md-3"><button class="faa-icon-transfer" id="transfer-[ID]" onclick="transferModalRequested(this)"></button></div>
-        <div class="col-md-3"><button class="faa-icon-surplus" id="surplus-[ID]" onclick="surplusModalRequested(this)"></button></div>
-        <div class="col-md-3"><button class="faa-icon-gallery" id="gallery-[ID]" onclick="galleryModalRequested(this)"></button></div>
-        <div class="col-md-3"><button class="faa-icon-forms" id="forms-[ID]" onclick="formsModalRequested(this)"></button></div>
     </div>
-    </div>
- <div class="row" id="asset-impact-title">
-	 <div class="col-md-12 faa-header" style="margin-bottom: 10px;">
-		 <div class="text-center col-sm-6 s4">TOTAL VALUE OF ASSETS</div>
-		 <div class="col-sm-1"></div>
-		 <div class="text-center col-sm-5 s4">TOTAL VALUE OF MISSING ASSETS</div>
-	 </div>
- </div>
- <div class="row" id="asset-listing">
-	 <div class="col-md-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #efefef;">
-		 <!-- <button id="faa-asset-toggle" class="btn btn-primary faa-toggle" type="button">+</button> -->
-		 <div class="col-md-6" style="padding: 10px;">
-			 <div class="col-sm-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #fff;">
-				 <div class="col-sm-5 s3">TOTAL ASSET VALUE:</div>
-				 <div class="col-sm-7 s3" style="color: #080; text-align: right;">[TOTAL VALUE]</div>
-			 </div>
-		 </div>
-		 <div class="col-md-6" style="padding: 10px;">
-			 <div class="col-sm-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #fff;">
-				 <div class="col-sm-5 s3">MISSING ASSET TOTAL:</div>
-				 <div class="col-sm-7 s3" style="color: #F00; text-align: right;">[TOTAL MISSING VALUE]</div>
-			 </div>
-		 </div>
-	 </div>
- </div>
 </div>
+-->
+<!-- END admin_header_template.html -->
+<!-- BEGIN employee_info_template.html -->
+        <div class="faa-container">
+            <div class="row" id="employee-info-title">
+                <div class="col-lg-12 faa-header s2">
+                    <div class="text-center col-md-4">Employee Information</div>
+                    <div class="text-center col-md-4"></div>
+                    <div class="text-center col-md-4">Liaison Information</div>
+                </div>
+            </div>
+            <div class="row" id="employee-info">
+                <div class="col-lg-12 faa-content">
+                    <div class="col-lg-12" style="padding: 0px;">
+                        <div class="col-sm-2 info-title">EMPLOYEE NAME:</div>
+                        <div class="col-sm-3">[NAME]</div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2 info-title">FIXED ASSETS LIAISON:</div>
+                        <div class="col-sm-3">[FAL]</div>
+                    </div>
+                    <div class="col-lg-12" style="padding: 0px;">
+                        <div class="col-sm-2 info-title">VT PID:</div>
+                        <div class="col-sm-3">[PID]</div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                    <div class="col-lg-12" style="padding: 0px;">
+                        <div class="col-sm-2 info-title">EMAIL ADDRESS:</div>
+                        <div class="col-sm-3">[EMAIL]</div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2 info-title">FIXED ASSETS COORDINATOR:</div>
+                        <div class="col-sm-3">[FAC]</div>
+                    </div>
+                    <div class="col-lg-12" style="padding: 0px;">
+                        <div class="col-sm-2 info-title">OFFICE LOCATION:</div>
+                        <div class="col-sm-3">[OFFICE]</div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                    <div class="col-lg-12" style="padding: 0px;">
+                        <div class="col-sm-2 info-title">PHONE NUMBER:</div>
+                        <div class="col-sm-3">[PHONE]</div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2 info-title">BUSINESS MANAGER:</div>
+                        <div class="col-sm-3">[BM]</div>
+                    </div>
+                </div>
+            </div>
+        <!-- END employee_info_template.html -->
+        <!-- BEGIN asset_header_template.html -->
+            <div class="row" id="asset-info-title">
+                <div class="col-lg-12 faa-header" style="margin-top: -10px; margin-bottom: 10px;">
+                    <div class="col-lg-12" style="overflow:hidden;">
+                        <div class="text-center col-md-7 s4">ASSET INFORMATION</div>
+                        <div class="text-center col-md-2 s4">ASSET STATUS</div>
+                        <div class="text-center col-md-3 s5 small-title">
+                            <div class="col-md-3">TRANSFER</div>
+                            <div class="col-md-3">SURPLUS</div>
+                            <div class="col-md-3">IMAGES</div>
+                            <div class="col-md-3">FORMS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="asset-listing">
+                <div class="col-md-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; padding-bottom: 0px; background: #efefef; margin-bottom: 10px;">
+        <!-- END assset_header_template.html -->
+        <!-- BEGIN asset_template.html -->
+                    <div class="col-md-7 faa-asset" id="asset-[ID]">
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">VT TAG #</div>
+                            <div class="col-sm-4" id="asset-tag-[ID]">[VT TAG]</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">SERIAL #</div>
+                            <div class="col-sm-3" id=asset-serial-[ID]>[S/N]</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">DESCRIPTION</div>
+                            <div class="col-sm-4" id="asset-desc-[ID]">[DESCRIPTION]</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">VALUE</div>
+                            <div class="col-sm-3" id="asset-value-[ID]">[VALUE]</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">ORGANIZATION</div>
+                            <div class="col-sm-4" id="asset-org-[ID]">[ORGANIZATION]</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">OWNERSHIP</div>
+                            <div class="col-sm-3" id="asset-own-[ID]">[OWNERSHIP]</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">&nbsp; </div>
+                            <div class="col-sm-4"> </div>
+                            <div class="col-sm-1"> </div>
+                            <div class="col-sm-2 info-title"> </div>
+                            <div class="col-sm-3"> </div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">LAST VT SCAN</div>
+                            <div class="col-sm-4" id="asset-vt-scan-[ID]">[VT SCAN]</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">LAST CAUS SCAN</div>
+                            <div class="col-sm-3" id="asset-caus-scan-[ID]">[CAUS SCAN]</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">PURCHASE DATE</div>
+                            <div class="col-sm-4" id="asset-purchase-[ID]">[PURCHASE DATE]</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title"></div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                        <button id="[ID]" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
+                    </div>
+                    <div class="text-center col-md-2 faa-asset-status" id="status-[ID]">[STATUS]</div>
+                    <div class="text-center col-md-3 faa-asset-button">
+                        <div class="col-md-3"><button class="faa-icon-transfer" id="transfer-[ID]" onclick="transferModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-surplus" id="surplus-[ID]" onclick="surplusModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-gallery" id="gallery-[ID]" onclick="galleryModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-forms" id="forms-[ID]" onclick="formsModalRequested(this)"></button></div>
+                    </div>
+        <!-- END asset_template.html -->
+        <!-- BEGIN asset_total_template.html -->
+                    </div>
+                </div>
+                <div class="row" id="asset-impact-title">
+                 <div class="col-md-12 faa-header" style="margin-bottom: 10px;">
+                     <div class="text-center col-sm-6 s4">TOTAL VALUE OF ASSETS</div>
+                     <div class="col-sm-1"></div>
+                     <div class="text-center col-sm-5 s4">TOTAL VALUE OF MISSING ASSETS</div>
+                 </div>
+                </div>
+                <div class="row" id="asset-listing">
+                    <div class="col-md-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #efefef;">
+                     <!-- <button id="faa-asset-toggle" class="btn btn-primary faa-toggle" type="button">+</button> -->
+                        <div class="col-md-6" style="padding: 10px;">
+                            <div class="col-sm-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #fff;">
+                                <div class="col-sm-5 s3">TOTAL ASSET VALUE:</div>
+                                <div class="col-sm-7 s3" style="color: #080; text-align: right;">[TOTAL VALUE]</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="padding: 10px;">
+                            <div class="col-sm-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; background: #fff;">
+                                <div class="col-sm-5 s3">MISSING ASSET TOTAL:</div>
+                                <div class="col-sm-7 s3" style="color: #F00; text-align: right;">[TOTAL MISSING VALUE]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- END asset_total_template.html -->
+
+<!-- BEGIN modal.html -->
 <!-----Transfer Modal----->
 <div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="transferModalLabel">Asset Transfer</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+<!--                <button type="button" class="close btn-primary" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                </button> -->
+                <h4 class="modal-title faa-modal-title" id="transferModalLabel">Asset Transfer</h4>
+
             </div>
-            <div class="modal-body">
+            <div class="modal-body faa-modal-body">
                 <div class="row">
                     Asset Tag: <span class="asset-tag"></span>
                     Description: <span class="asset-description"></span>
                 </div>
                 <div class="row">
-                    <form>
+                    <form autocomplete="off">
                         <div class="form-group">
                             <label for="recipient-name" class="form-control-label">RECEIVER PID:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" class="form-control" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
+                            <datalist id="PIDs"></datalist>
                         </div>
                     </form>
                 </div>
@@ -299,7 +253,12 @@
 
             </div>
             <div class="modal-footer">
+<<<<<<< HEAD
                 <button type="button" class="btn btn-primary" id="transferButton">Transfer</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+=======
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
+>>>>>>> f35ac5dd0d856d6419d06d6da9cae627d842f83c
             </div>
         </div>
     </div>
@@ -307,26 +266,31 @@
 <!-----Surplus Modal------>
 <div class="modal fade" id="surplusModal" tabindex="-1" role="dialog" aria-labelledby="surplusModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="surplusModalLabel">Surplus Request</h4>
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+                <h4 class="modal-title faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+<<<<<<< HEAD
+            <div class="modal-body faa-modal-body">
                 <div class="row row1">
+=======
+            <div class="modal-body">
+                <div class="row">
+>>>>>>> f35ac5dd0d856d6419d06d6da9cae627d842f83c
                     Asset Tag: <span class="asset-tag"></span>
                     Description: <span class="asset-description"></span>
                 </div>
-                <div class="row row2">
+                <div class="row">
                     <p>Are you sure you want to initiate this surplus request?</p>
                 </div>
 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset(this, [PID])">Surplus</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
@@ -345,7 +309,7 @@
                 ...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
@@ -364,12 +328,12 @@
                 ...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
     </div>
 </div>
-    
+<!-- END modal.html -->    
 <script>
 	$( ".faa-asset-toggle" ).click(function() {
   	$( this ).toggleClass( "faa-asset-show" );

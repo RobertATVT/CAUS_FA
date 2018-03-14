@@ -5,7 +5,7 @@
  * Date: 3/12/18
  * Time: 11:37 PM
  */
-function causfa_transfer() {
+function causfa_transfer_asset() {
     global $wpdb;
     $output = array(
         'status' => 0
@@ -15,7 +15,7 @@ function causfa_transfer() {
     $type = $_POST['type'];
     $date_created = current_time('mysql');
     $PID_dest = $_POST['dest'];
-    $PID_dest = sanatize_text_field($PID_dest);
+    $PID_dest = $PID_dest;
     $pending_status = 0;
     $wpdb->insert(
         'causfa_pending',
