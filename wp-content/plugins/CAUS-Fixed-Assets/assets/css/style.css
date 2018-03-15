@@ -79,17 +79,26 @@ body {
 	text-align: center;
 	font-weight: 900;
 	font-size: 175%;
-	background: #FD0;
     line-height: 39px;
     border: 1px solid #333;
     border-radius: 5px;
     margin-top: 2px;
 }
+.faa-asset-status-office {
+    background: #060 !important;
+    color: #fff;
+}
+.faa-asset-status-home {
+    background: #fd0 !important;
+    color: #000;
+}
 .faa-asset-status-missing {
-	background: #F00 !important;
+	background: #900 !important;
+    color: #fff;
 }
 .faa-asset-status-pending {
-	background: #00F !important;
+	background: #46c !important;
+    color: #fff;
 }
 .faa-icon-transfer {
 	margin: 0px auto;
