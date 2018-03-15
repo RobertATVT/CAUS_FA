@@ -17,12 +17,15 @@ function causfa_hinter(element) {
         jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
             PIDs.innerHTML = "";
             PIDs.style.display = 'none';
-            data.forEach(function(item) {
+            var PID_options = data['PIDs'];
+            var Name_options = data['Names'];
+            for (var i = 0; i < PID_options.length; i++) {
                 var option = document.createElement('option');
-                option.value=item;
+                option.value = Name_options[i];
+                option.setAttribute('data_value', PID_options[i]);
                 PIDs.appendChild(option);
-                PIDs.style.display = 'block';
-            });
+            }
+            PIDs.style.display = 'block';
         });
     }
 }
@@ -37,7 +40,8 @@ function validateForm(element, PID) {
     var children = PIDs.children();
     for(var i = 0; i < children.length; i++){
         if(children[i].value == input.value) {
-            transferAsset(element, PID);
+            var PID_dest = children[i].getAttribute('data_value');
+            transferAsset(element, PID, PID_dest);
             return true;
         }
     };

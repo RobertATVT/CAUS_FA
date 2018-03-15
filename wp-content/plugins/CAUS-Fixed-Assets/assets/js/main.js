@@ -20,14 +20,13 @@ function surplusAsset(element, PID) {
     });
 }
 
-function transferAsset(element, PID) {
+function transferAsset(element, PID, PID_dest) {
     ptag = jQuery('#transferModal').find('.modal-body').find('.asset-tag').html();
-    dest = document.getElementById('recipient-name').value;
     var form = {
         action: 'causfa_transfer_asset',
         ptag: ptag,
         origin: PID,
-        dest: dest,
+        dest: PID_dest,
         type: 0
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
