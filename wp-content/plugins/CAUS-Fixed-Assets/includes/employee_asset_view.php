@@ -17,6 +17,9 @@ function causfa_load_employee_view() {
     global $wpdb;
     $current_user = wp_get_current_user();
     $result_user = $wpdb->get_row('SELECT * FROM causfa_custodians WHERE Email = "'.$current_user->user_email.'";');
+    if ($result_user == null) {
+
+    }
     $output = apply_filters('causfa_employee_info', $result_user);
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_header_template.html', true ));
 

@@ -58,8 +58,10 @@ function causfa_filter_employee_asset_info( $content, $asset_index) {
         $asset_status = $content->FZVFORG_ROOM;
         if (strpos($asset_status, 'HOME') !== false) {
             $asset_info_html= str_replace('[STATUS]', 'Home Use', $asset_info_html);
+            $asset_info_html= str_replace('faa-asset-status', 'faa-asset-status faa-asset-status-home', $asset_info_html);
         } else {
             $asset_info_html = str_replace('[STATUS]', 'Office Use', $asset_info_html);
+            $asset_info_html= str_replace('faa-asset-status', 'faa-asset-status faa-asset-status-office', $asset_info_html);
         }
     }
     return array($asset_info_html, $missing);
