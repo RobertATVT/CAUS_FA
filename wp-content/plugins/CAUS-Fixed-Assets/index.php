@@ -29,6 +29,7 @@ include('process/surplus.php');
 include('process/transfer.php');
 include('includes/autocomplete.php');
 include('process/pending_action.php');
+include('process/new_custodian.php');
 
 
 //Hooks
