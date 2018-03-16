@@ -21,6 +21,9 @@ function causfa_new_custodian() {
     $PID = $current_user->user_nicename;
     $office = sanitize_text_field($_POST['office']);
     $phone = sanitize_text_field($_POST['phone']);
+    $phone = preg_replace('/[^0-9.]+/', '', $phone);
+    $phone = substr_replace($phone,'-', 3, 0);
+    $phone = substr_replace($phone,'-', 7, 0);
     if ($wpdb->insert('causfa_custodians', array(
         Name => $name,
         PID => $PID,
