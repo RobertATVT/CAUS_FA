@@ -49,8 +49,13 @@ function causfa_filter_employee_asset_info( $content, $asset_index) {
         $asset_info_html = str_replace( '[STATUS]', 'Missing', $asset_info_html);
         $asset_info_html = str_replace('faa-asset-status', 'faa-asset-status faa-asset-status-missing', $asset_info_html);
         $missing = true;
-    } elseif ($wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
-        $asset_info_html = str_replace( '[STATUS]', 'Pending', $asset_info_html);
+    } elseif ($row = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
+        if ($row->PENDING_TYPE == 0) {
+            $asset_info_html = str_replace( '[STATUS]', 'Pending Transfer', $asset_info_html);
+        } else {
+            $asset_info_html = str_replace( '[STATUS]', 'Pending Surplus', $asset_info_html);
+        }
+
         $asset_info_html = str_replace('faa-asset-status', 'faa-asset-status faa-asset-status-pending', $asset_info_html);
         $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
         $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);

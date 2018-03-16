@@ -124,4 +124,16 @@ function create_tables() {
         ) ".$charset_collate.";";
         dbDelta($sql);
     }
+    $table_name = 'causfa_custodian';
+    if ($wpdb->get_car("SHOW TABLE LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        Name varchar(1000,
+        PID varchar(32),
+        Email varchar(39),
+        Office varchar(1000),
+        Phone varchar(13)
+        PRIMARY KEY (PID)
+        ) ".$charset_collate.";";
+        dbDelta($sql);
+    }
 }

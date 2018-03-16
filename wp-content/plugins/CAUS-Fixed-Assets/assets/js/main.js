@@ -11,7 +11,7 @@ function surplusAsset(element, PID) {
             var id = jQuery('#surplusModal').find('#surplusIndex').val();
             var status = jQuery(('#status-' + id))
             status.addClass('faa-asset-status-pending');
-            status.html("Pending");
+            status.html("Pending Surplus");
             jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery('#surplusModal').find('.modal-body').html('<p>An email has been sent to your Fixed Asset Liaison and Business manager contianing the infromation about your surplus request. They will contact your soon to make arrangements.</p>');
@@ -34,7 +34,7 @@ function transferAsset(element, PID, PID_dest) {
             var id = jQuery('#transferModal').find('#transferIndex').val();
             var status = jQuery(('#status-' + id))
             status.addClass('faa-asset-status-pending');
-            status.html("Pending");
+            status.html("Pending Transfer");
             jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery('#transferModal').find('.modal-body').html('<p>An email has been sent to your Fixed Asset Liaison and Business manager contianing the infromation about your transfer request. They will contact your soon to make arrangements.</p>');
@@ -42,4 +42,25 @@ function transferAsset(element, PID, PID_dest) {
 
         }
     });
+}
+function new_custodian_submit() {
+    var office = jQuery('#Office').val();
+    var phone = jQuery('#Phone').val();
+    if (office == null) {
+        alert('Office field cannot be empty');
+    } else if (phone == null) {
+        alert('Phone field cannot be empty');
+    } else {
+        var form = {
+            action: 'causfa_new_custodian',
+            office: office,
+            phone: phone
+        };
+        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+            if (data == 1) {
+                location.reload();
+            }
+        });
+    }
+
 }

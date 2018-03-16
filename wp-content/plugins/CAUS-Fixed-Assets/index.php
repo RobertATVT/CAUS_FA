@@ -42,6 +42,7 @@ add_action( 'wp_ajax_causfa_surplus', 'causfa_surplus');
 add_action( 'wp_ajax_causfa_transfer_asset', 'causfa_transfer_asset');
 add_action( 'wp_ajax_causfa_autocomplete_PID', 'causfa_autocomplete_PID');
 add_action( 'wp_ajax_causfa_pending_action', 'causfa_pending_action');
+add_action( 'wp_ajax_causfa_new_custodian', 'causfa_new_custodian');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
