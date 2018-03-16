@@ -1,6 +1,7 @@
 <?php
 define('WP_AUTO_UPDATE_CORE', false);// This setting was defined by WordPress Toolkit to prevent WordPress auto-updates. Do not change it to avoid conflicts with the WordPress Toolkit auto-updates feature.
 /**
+ * Testing gitignore
  * The base configuration for WordPress
  *
  * The wp-config.php creation script uses this file during the
