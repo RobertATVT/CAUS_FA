@@ -74,7 +74,69 @@
                 <h4 class="modal-title faa-modal-title" id="galleryModalLabel">Gallery</h4>
             </div>
             <div class="modal-body faa-modal-body">
-                ...
+                <!-- Slider -->
+                <div class="row" id="slider">
+                    <!-- Top part of the slider -->
+                    <div class="col-md-12"  style="padding: 0px;">
+                        <div class="col-md-12" id="carousel-bounding-box"  style="padding: 0px;">
+                            <div class="carousel slide" id="myCarousel">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item" data-slide-number="0">
+                                    <img src="images\kitchen_adventurer_caramel.jpg"></div>
+
+                                    <div class="item" data-slide-number="1">
+                                    <img src="images\kitchen_adventurer_cheesecake_brownie.jpg"></div>
+
+                                    <div class="item" data-slide-number="2">
+                                    <img src="images/kitchen_adventurer_donut.jpg"></div>
+
+                                    <div class="item" data-slide-number="3">
+                                    <img src="images/kitchen_adventurer_lemon.jpg"></div>
+                                </div><!-- Carousel nav -->
+                                <a class="carousel-control left" data-slide="prev" href="#myCarousel">‹</a> <a class="carousel-control right" data-slide="next" href="#myCarousel">›</a>
+                            </div>
+                            <div class="col-md-12" id="carousel-text">
+                                <div id="slide-content">
+                                    <div id="slide-content-0">
+                                        <h2>Slider One</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                    <div id="slide-content-1" style="display: none;">
+                                        <h2>Slider Two</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                    <div id="slide-content-2" style="display: none;">
+                                        <h2>Slider Three</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                    <div id="slide-content-3" style="display: none;">
+                                        <h2>Slider Four</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!--/Slider-->
+
+                <div class="row hidden-phone" id="slider-thumbs">
+                    <div class="col-sm-12" style="margin-left: -25px;">
+                        <!-- Bottom switcher of slider -->
+                        <ul class="thumbnails">
+                            <li class="col-xs-3"><a class="thumbnail" id="carousel-selector-0"><img src="images\kitchen_adventurer_caramel.jpg"></a></li>
+                            <li class="col-xs-3"><a class="thumbnail" id="carousel-selector-1"><img src="images\kitchen_adventurer_cheesecake_brownie.jpg"></a></li>
+                            <li class="col-xs-3"><a class="thumbnail" id="carousel-selector-2"><img src="images/kitchen_adventurer_donut.jpg"></a></li>
+                            <li class="col-xs-3"><a class="thumbnail" id="carousel-selector-3"><img src="images/kitchen_adventurer_lemon.jpg"></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
