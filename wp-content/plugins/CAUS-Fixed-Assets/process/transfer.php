@@ -29,6 +29,14 @@ function causfa_transfer_asset() {
             'PENDING_STATUS' => $pending_status
         ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
     );
+    $logger_info = array(
+        'PID' => $PID_origin,
+        'Action' => 1,
+        'FZVFORG_PTAG' => $ptag,
+        'PID_dest' => $PID_dest,
+        'Info' => null
+    );
+    causfa_logger($logger_info);
     $output['status'] = 1;
     wp_send_json($output);
 }

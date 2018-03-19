@@ -1,23 +1,42 @@
 // JavaScript Document
-function transferModalRequested(element) {
-    var tag = $(element).closest('.col-lg-12').find('.faa-asset').find('.row1').find('.asset-tag').html();
-    var desc = $(element).closest('.col-lg-12').find('.faa-asset').find('.row2').find('.asset-description').html();
-    $('#transferModal').find('.modal-body').find('.asset-tag').html(tag);
-    $('#transferModal').find('.modal-body').find('.asset-description').html(desc);
-    $('#transferModal').modal('show');
+function transferModalRequested(elementID) {
+    var id = elementID.split('-')[1];
+    var tag = document.getElementById(('asset-tag-' + id)).innerHTML ;
+    var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
+    document.getElementById('recipient-name').value = '';
+    jQuery('#transferModal').find('#transferIndex').val(id);
+    jQuery('#transferModal').find('.modal-body').find('.asset-tag').html(tag);
+    jQuery('#transferModal').find('.modal-body').find('.asset-description').html(desc);
+    jQuery('#transferModal').modal('show');
 }
-function surplusModalRequested(element) {
-    var tag = $(element).closest('.col-lg-12').find('.faa-asset').find('.row1').find('.asset-tag').html();
-    var desc = $(element).closest('.col-lg-12').find('.faa-asset').find('.row2').find('.asset-description').html();
-    $('#surplusModal').find('.modal-body').find('.asset-tag').html(tag);
-    $('#surplusModal').find('.modal-body').find('.asset-description').html(desc);
-    $('#surplusModal').modal('show');
+function surplusModalRequested(elementID) {
+    var id = elementID.split('-')[1];
+    var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
+    jQuery('#surplusModal').find('#surplusIndex').val(id);
+    jQuery('#surplusModal').find('.modal-body').find('.asset-tag').html(tag);
+    jQuery('#surplusModal').find('.modal-body').find('.asset-description').html(desc);
+    jQuery('#surplusModal').modal('show');
 }
-function galleryModalRequested(element) {
-    var tag = $(element).closest('.col-lg-12').find('.faa-asset').find('.row1').find('.asset-tag').html();
-    $('#galleryModal').modal('show');
+function galleryModalRequested(elementID) {
+    var id = elementID.split('-')[1];
+    var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    jQuery('#galleryModal').modal('show');
 }
-function formsModalRequested(element) {
-    var tag = $(element).closest('.col-lg-12').find('faa-asset').find('.row1').find('.asset-tag').html();
-    $('#formsModal').modal('show');
+function formsModalRequested(elementID) {
+    var id = elementID.split('-')[1];
+    var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    jQuery('#formsModal').find('#formsPtag').val(tag);
+    jQuery('#formsModal').modal('show');
+}
+function modalRequestedOnPendingAsset(elementID) {
+    var id = elementID.split('-')[1];
+    var tag = document.getElementById(('asset-tag-' + id)).innerHTML ;
+    var form = {
+        action: 'causfa_pending_action',
+        ptag: tag
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+        alert(JSON.stringify(data));
+    });
 }

@@ -26,6 +26,7 @@ function galleryModalRequested(elementID) {
 function formsModalRequested(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    jQuery('#formsModal').find('#formsPtag').val(tag);
     jQuery('#formsModal').modal('show');
 }
 function modalRequestedOnPendingAsset(elementID) {

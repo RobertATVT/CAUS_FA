@@ -156,7 +156,9 @@
                 <h4 class="modal-title faa-modal-title" id="formsModalLabel">Forms</h4>
             </div>
             <div class="modal-body faa-modal-body">
-                ...
+                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 0)">Generate Home Use Form</button>
+                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 1)">Generate Office Use Form</button>
+                <input type="hidden" id="formsPtag" value="" />
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>

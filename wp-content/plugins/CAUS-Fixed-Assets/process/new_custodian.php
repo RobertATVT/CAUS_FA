@@ -6,8 +6,12 @@
  * Time: 12:49 PM
  */
 function causfa_new_custodian_dialog() {
-    $new_custodian_modal = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/new_custodian.html', true);
-    return $new_custodian_modal;
+    if (is_user_logged_in()) {
+        $new_custodian_modal = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/new_custodian.html', true);
+        return $new_custodian_modal;
+    } else {
+        return "Please login to view this page";
+    }
 }
 
 function causfa_new_custodian() {

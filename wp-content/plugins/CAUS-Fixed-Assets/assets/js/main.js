@@ -43,6 +43,24 @@ function transferAsset(element, PID, PID_dest) {
         }
     });
 }
+function generateForm(element, action) {
+    var ptag = jQuery('#formsModal').find('#formsPtag').val();
+    var form_type = '';
+    if (action == 0) {
+        var form_type = 'causfa_generate_form_Home';
+    } else {
+        form_type = 'causfa_generate_form_Office';
+    }
+    var form = {
+        action: form_type,
+        ptag: ptag
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+        if (data['status'] == 1) {
+            window.open(data['url'])
+        }
+    });
+}
 function new_custodian_submit() {
     var office = jQuery('#Office').val();
     var phone = jQuery('#Phone').val();

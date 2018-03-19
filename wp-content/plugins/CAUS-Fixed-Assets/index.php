@@ -30,10 +30,13 @@ include('process/transfer.php');
 include('includes/autocomplete.php');
 include('process/pending_action.php');
 include('process/new_custodian.php');
+include('process/generate_form.php');
+include('process/logger.php');
 
 
 //Hooks
 add_action( 'wp_enqueue_scripts', 'causfa_enqueue', 100);
+add_action( 'wp_login', 'causfa_logger_login', 100, 2);
 register_activation_hook( __FILE__, 'causfa_activate_plugin' );
 add_filter( 'causfa_employee_info', 'causfa_filter_employee_info', 10, 1);
 add_filter( 'causfa_employee_asset_info', 'causfa_filter_employee_asset_info', 10, 2);
@@ -43,7 +46,10 @@ add_action( 'wp_ajax_causfa_transfer_asset', 'causfa_transfer_asset');
 add_action( 'wp_ajax_causfa_autocomplete_PID', 'causfa_autocomplete_PID');
 add_action( 'wp_ajax_causfa_pending_action', 'causfa_pending_action');
 add_action( 'wp_ajax_causfa_new_custodian', 'causfa_new_custodian');
+add_action( 'wp_ajax_causfa_logger', 'causfa_logger');
+add_action( 'wp_ajax_causfa_generate_form_Home', 'causfa_generate_form_Home');
+add_action( 'wp_ajax_causfa_generate_form_Office', 'causfa_generate_form_Office');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
-add_shortcode( 'causfa_test', 'causfa_groups_is_admin'); //shortcode for a dev space to test functionality
+add_shortcode( 'causfa_test', 'causfa_generate_form_Home'); //shortcode for a dev space to test functionality
