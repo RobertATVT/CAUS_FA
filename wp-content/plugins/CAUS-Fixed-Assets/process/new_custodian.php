@@ -26,6 +26,10 @@ function causfa_new_custodian() {
     $office = sanitize_text_field($_POST['office']);
     $phone = sanitize_text_field($_POST['phone']);
     $phone = preg_replace('/[^0-9.]+/', '', $phone);
+    if (strlen($phone) != 10) {
+        $output = 2;
+        wp_send_json($output);
+    }
     $phone = substr_replace($phone,'-', 3, 0);
     $phone = substr_replace($phone,'-', 7, 0);
     if ($wpdb->insert('causfa_custodians', array(
