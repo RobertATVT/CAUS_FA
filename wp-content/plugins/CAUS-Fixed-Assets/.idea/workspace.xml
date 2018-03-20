@@ -21,11 +21,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="79" column="34" lean-forward="false" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="file_upload.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new_custodian.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -60,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activate.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/activate.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
@@ -119,8 +139,6 @@
         <option value="$PROJECT_DIR$/assets/js/modal.js" />
         <option value="$PROJECT_DIR$/assets/cellfit/cellfit.php" />
         <option value="$PROJECT_DIR$/process/generate_form.php" />
-        <option value="$PROJECT_DIR$/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/process/new_custodian.php" />
         <option value="$PROJECT_DIR$/process/surplus.php" />
         <option value="$PROJECT_DIR$/process/transfer.php" />
         <option value="$PROJECT_DIR$/assets/html/modal.html" />
@@ -129,6 +147,8 @@
         <option value="$PROJECT_DIR$/process/logger.php" />
         <option value="$PROJECT_DIR$/includes/file_upload.php" />
         <option value="$PROJECT_DIR$/includes/activate.php" />
+        <option value="$PROJECT_DIR$/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/process/new_custodian.php" />
       </list>
     </option>
   </component>
@@ -168,6 +188,17 @@
             <path>
               <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
@@ -229,12 +260,12 @@
       <workItem from="1521033292316" duration="4763000" />
       <workItem from="1521040950267" duration="6258000" />
       <workItem from="1521121336355" duration="15999000" />
-      <workItem from="1521318940729" duration="22995000" />
+      <workItem from="1521318940729" duration="23660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108034000" />
+    <option name="totallyTimeSpent" value="108699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="223" y="23" width="1217" height="807" extended-state="0" />
@@ -556,14 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -595,14 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -680,14 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/autocomplete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -717,6 +724,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="79" column="34" lean-forward="false" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
           <folding />
         </state>
       </provider>

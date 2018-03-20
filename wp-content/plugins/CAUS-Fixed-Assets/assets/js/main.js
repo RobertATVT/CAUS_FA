@@ -77,6 +77,8 @@ function new_custodian_submit() {
         jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
             if (data == 1) {
                 location.reload();
+            } else if (data == 2) {
+                alert('Please enter your 10 digit phone number')
             }
         });
     }
