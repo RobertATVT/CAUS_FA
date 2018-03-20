@@ -41,6 +41,25 @@ function causfa_logger_login($user_login, $user) {
             FZVFORG_PTAG => null,
             PID_dest => null,
             Info => null
-        )
+        ), array('%s', '%d', '%s', '%s', '%s')
     );
+}
+function causfa_ajax_logger() {
+    global $wpdb;
+    $PID = $_POST['PID'];
+    $type = $_POST['type'];
+    $ptag = $_POST['ptag'];
+    $PID_dest = $_POST['PID_dest'];
+    $Info = $_POST['Info'];
+    $wpdb->insert(
+        'causfa_logs',
+        array(
+            PID => $PID,
+            Action=> $type,
+            FZVFORG_PTAG => $ptag,
+            PID_dest => $PID_dest,
+            Info => $Info
+        ), array('%s', '%d', '%s', '%s', '%s')
+    );
+    wp_send_json('1');
 }

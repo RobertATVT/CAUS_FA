@@ -11,21 +11,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="modal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
+      <file leaf-file-name="logger.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/process/logger.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="870">
+              <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
+      <file leaf-file-name="file_upload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="134" column="19" lean-forward="false" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autocomplete.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/autocomplete.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="93" lean-forward="false" selection-start-line="14" selection-start-column="93" selection-end-line="14" selection-end-column="93" />
+              <folding>
+                <marker date="1521144842737" expanded="true" signature="312:345" ph="SELECT PID F... causfa_custodians" />
+                <marker date="1521144842737" expanded="true" signature="312:364" ph="SELECT PID F... causfa_custodians" />
+                <marker date="1521144842737" expanded="true" signature="312:376" ph="SELECT PID F... causfa_custodians" />
+                <marker date="1521144842737" expanded="true" signature="312:378" ph="SELECT PID F... causfa_custodians" />
+                <marker date="1521144842737" expanded="true" signature="312:379" ph="SELECT PID F... causfa_custodians" />
+                <marker date="1521144842737" expanded="true" signature="409:462" ph="SELECT Name causfa_custodians" />
+                <marker date="1521144842737" expanded="true" signature="409:474" ph="SELECT Name causfa_custodians" />
+                <marker date="1521144842737" expanded="true" signature="409:578" ph="SELECT Name causfa_custodians" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activate.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/activate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -60,7 +99,6 @@
         <option value="$PROJECT_DIR$/assets/html/asset_total_template.html" />
         <option value="$PROJECT_DIR$/assets/html/asset_header_template.html" />
         <option value="$PROJECT_DIR$/assets/html/employee_info_template.html" />
-        <option value="$PROJECT_DIR$/includes/activate.php" />
         <option value="$PROJECT_DIR$/includes/groups.php" />
         <option value="$PROJECT_DIR$/assets/html/asset_template.html" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
@@ -77,7 +115,6 @@
         <option value="$PROJECT_DIR$/assets/js/toggle.js" />
         <option value="$PROJECT_DIR$/process/filter-content.php" />
         <option value="$PROJECT_DIR$/../../../wp-config.php" />
-        <option value="$PROJECT_DIR$/includes/create_tables.php" />
         <option value="$PROJECT_DIR$/includes/employee_asset_view.php" />
         <option value="$PROJECT_DIR$/assets/js/modal.js" />
         <option value="$PROJECT_DIR$/assets/cellfit/cellfit.php" />
@@ -86,9 +123,12 @@
         <option value="$PROJECT_DIR$/process/new_custodian.php" />
         <option value="$PROJECT_DIR$/process/surplus.php" />
         <option value="$PROJECT_DIR$/process/transfer.php" />
-        <option value="$PROJECT_DIR$/process/logger.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/html/modal.html" />
+        <option value="$PROJECT_DIR$/includes/create_tables.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/process/logger.php" />
+        <option value="$PROJECT_DIR$/includes/file_upload.php" />
+        <option value="$PROJECT_DIR$/includes/activate.php" />
       </list>
     </option>
   </component>
@@ -100,7 +140,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="109" />
+    <option name="x" value="223" />
     <option name="y" value="23" />
     <option name="width" value="1217" />
     <option name="height" value="807" />
@@ -128,6 +168,16 @@
             <path>
               <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="process" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -179,15 +229,15 @@
       <workItem from="1521033292316" duration="4763000" />
       <workItem from="1521040950267" duration="6258000" />
       <workItem from="1521121336355" duration="15999000" />
-      <workItem from="1521318940729" duration="19641000" />
+      <workItem from="1521318940729" duration="22995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104680000" />
+    <option name="totallyTimeSpent" value="108034000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="23" width="1217" height="807" extended-state="0" />
+    <frame x="223" y="23" width="1217" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4025532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -243,13 +293,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/toggle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/process/filter-content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -432,43 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/pending_action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <marker date="1521058998392" expanded="true" signature="217:266" ph="SELECT * FRO... causfa_pending" />
-            <marker date="1521058998392" expanded="true" signature="217:267" ph="SELECT * FRO... causfa_pending" />
-            <marker date="1521058998392" expanded="true" signature="217:277" ph="SELECT * FRO... causfa_pending" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/activate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/autocomplete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="93" lean-forward="false" selection-start-line="14" selection-start-column="93" selection-end-line="14" selection-end-column="93" />
-          <folding>
-            <marker date="1521144842737" expanded="true" signature="312:345" ph="SELECT PID F... causfa_custodians" />
-            <marker date="1521144842737" expanded="true" signature="312:364" ph="SELECT PID F... causfa_custodians" />
-            <marker date="1521144842737" expanded="true" signature="312:376" ph="SELECT PID F... causfa_custodians" />
-            <marker date="1521144842737" expanded="true" signature="312:378" ph="SELECT PID F... causfa_custodians" />
-            <marker date="1521144842737" expanded="true" signature="312:379" ph="SELECT PID F... causfa_custodians" />
-            <marker date="1521144842737" expanded="true" signature="409:462" ph="SELECT Name causfa_custodians" />
-            <marker date="1521144842737" expanded="true" signature="409:474" ph="SELECT Name causfa_custodians" />
-            <marker date="1521144842737" expanded="true" signature="409:578" ph="SELECT Name causfa_custodians" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/autocomplete.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -515,31 +521,6 @@
         <state relative-caret-position="-1495">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/create_tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="100" column="5" lean-forward="false" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
-          <folding>
-            <marker date="1521343920425" expanded="true" signature="524:1688" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="1949:3113" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="3297:3546" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="3738:3987" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="4173:4399" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="4583:4958" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="5145:5158" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="5145:5393" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="5145:5394" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="5145:5395" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="5145:5414" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="5145:5416" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="5575:5588" ph="CREATE TABLE... ${causfa_logs}" />
-            <marker date="1521343920425" expanded="true" signature="5784:5821" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="5784:5822" ph="CREATE TABLE... ${$table_name}" />
-            <marker date="1521343920425" expanded="true" signature="5784:5843" ph="CREATE TABLE... ${$table_name}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,14 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/logger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/process/generate_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -646,10 +619,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="38" column="50" lean-forward="false" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+        <state relative-caret-position="230">
+          <caret line="134" column="19" lean-forward="false" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -662,10 +635,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
+    <entry file="file://$PROJECT_DIR$/includes/create_tables.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="134" column="19" lean-forward="false" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+        <state relative-caret-position="515">
+          <caret line="146" column="34" lean-forward="false" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
+          <folding>
+            <marker date="1521502963379" expanded="true" signature="524:1688" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="1949:3113" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="3297:3546" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="3738:3987" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="4173:4399" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="4583:4958" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="5145:5158" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="5145:5393" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="5145:5394" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="5145:5395" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="5145:5414" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="5145:5416" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="5575:5588" ph="CREATE TABLE... ${causfa_logs}" />
+            <marker date="1521502963379" expanded="true" signature="5854:5891" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="5854:5892" ph="CREATE TABLE... ${$table_name}" />
+            <marker date="1521502963379" expanded="true" signature="5854:5913" ph="CREATE TABLE... ${$table_name}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/pending_action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <marker date="1521058998392" expanded="true" signature="217:266" ph="SELECT * FRO... causfa_pending" />
+            <marker date="1521058998392" expanded="true" signature="217:267" ph="SELECT * FRO... causfa_pending" />
+            <marker date="1521058998392" expanded="true" signature="217:277" ph="SELECT * FRO... causfa_pending" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/logger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/autocomplete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="93" lean-forward="false" selection-start-line="14" selection-start-column="93" selection-end-line="14" selection-end-column="93" />
+          <folding>
+            <marker date="1521144842737" expanded="true" signature="312:345" ph="SELECT PID F... causfa_custodians" />
+            <marker date="1521144842737" expanded="true" signature="312:364" ph="SELECT PID F... causfa_custodians" />
+            <marker date="1521144842737" expanded="true" signature="312:376" ph="SELECT PID F... causfa_custodians" />
+            <marker date="1521144842737" expanded="true" signature="312:378" ph="SELECT PID F... causfa_custodians" />
+            <marker date="1521144842737" expanded="true" signature="312:379" ph="SELECT PID F... causfa_custodians" />
+            <marker date="1521144842737" expanded="true" signature="409:462" ph="SELECT Name causfa_custodians" />
+            <marker date="1521144842737" expanded="true" signature="409:474" ph="SELECT Name causfa_custodians" />
+            <marker date="1521144842737" expanded="true" signature="409:578" ph="SELECT Name causfa_custodians" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/activate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
           <folding />
         </state>
       </provider>

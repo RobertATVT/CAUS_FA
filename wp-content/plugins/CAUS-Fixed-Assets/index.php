@@ -46,7 +46,7 @@ add_action( 'wp_ajax_causfa_transfer_asset', 'causfa_transfer_asset');
 add_action( 'wp_ajax_causfa_autocomplete_PID', 'causfa_autocomplete_PID');
 add_action( 'wp_ajax_causfa_pending_action', 'causfa_pending_action');
 add_action( 'wp_ajax_causfa_new_custodian', 'causfa_new_custodian');
-add_action( 'wp_ajax_causfa_logger', 'causfa_logger');
+add_action( 'wp_ajax_causfa_ajax_logger', 'causfa_ajax_logger');
 add_action( 'wp_ajax_causfa_generate_form_Home', 'causfa_generate_form_Home');
 add_action( 'wp_ajax_causfa_generate_form_Office', 'causfa_generate_form_Office');
 

@@ -142,8 +142,10 @@ function create_tables() {
         ID INT NOT NULL AUTO_INCREMENT,
         TIMESTAMP TIMESTAMP NOT NULL,
         PID VARCHAR(32) NOT NULL,
-        Action TINYINT NOT NULL ,
-        More_Info TINYINT NULL , 
+        Action TINYINT NOT NULL,
+        FZVFORG_PTAG varchar(9) NULL,
+        PID_dest varchar(32) NULL,
+        Info varchar(32) NULL, 
         PRIMARY KEY  (ID)
         ) ".$charset_collate.";";
         dbDelta($sql);
