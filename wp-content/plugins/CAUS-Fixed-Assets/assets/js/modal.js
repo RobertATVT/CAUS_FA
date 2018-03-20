@@ -21,6 +21,10 @@ function surplusModalRequested(elementID) {
 function galleryModalRequested(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    jQuery('#galleryModal').find('#galleryPtag').val(tag);
+    var PID = document.getElementById('employeePID').innerHTML;
+    jQuery('#galleryModal').find('#galleryPID').val(PID);
+    jQuery('#imageFileToUpload').val('');
     jQuery('#galleryModal').modal('show');
 }
 function formsModalRequested(elementID) {

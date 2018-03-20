@@ -84,3 +84,38 @@ function new_custodian_submit() {
     }
 
 }
+function uploadImage() {
+    var fileInput = jQuery('#imageFileToUpload');
+    var file = fileInput.prop('files')[0];
+    if (!file) {
+        alert('Please select a file to upload');
+    } else {
+        var PID = jQuery('#galleryPID').val();
+        var ptag = jQuery('#galleryPtag').val();
+        var form = new FormData();
+        form.append('action', 'causfa_upload_image');
+        form.append('PID', PID);
+        form.append('ptag', ptag);
+        form.append('imageFileToUpload', file);
+        // var form = {
+        //     action: 'causfa_upload_image',
+        //     PID: PID,
+        //     ptag: ptag,
+        //     imageFileToUpload: file
+        // };
+        jQuery.ajax({
+            url: causfa_action_obj.ajax_url,
+            type: 'post',
+            contentType: false,
+            processData: false,
+            data: form,
+            success: function (data) {
+                if (data['status'] == 0) {
+                    alert(data['message']);
+                } else {
+                    alert(data['message']);
+                }
+            }
+        });
+    }
+}

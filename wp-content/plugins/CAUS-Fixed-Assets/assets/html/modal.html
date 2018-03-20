@@ -74,6 +74,15 @@
                 <h4 class="modal-title faa-modal-title" id="galleryModalLabel">Gallery</h4>
             </div>
             <div class="modal-body faa-modal-body">
+                <div class="row">
+                    <form >
+                        Upload new image:
+                        <input type="file" name="fileToUpload" id="imageFileToUpload">
+                        <input type="button" value="Upload Image" onclick="uploadImage()">
+                        <input type="hidden" id="galleryPID">
+                        <input type="hidden" id="galleryPtag">
+                    </form>
+                </div>
                 <!-- Slider -->
                 <div class="row" id="slider">
                     <!-- Top part of the slider -->

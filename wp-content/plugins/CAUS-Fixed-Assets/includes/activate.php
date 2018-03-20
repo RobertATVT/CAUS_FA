@@ -37,11 +37,6 @@ function causfa_activate_plugin() {
     if(! is_dir($upload_dir_forms_office)) {
         mkdir($upload_dir_forms_office);
     }
-    define('CAUSFA_UPLOADS_DIR', $upload_dir);
-    define('CAUSFA_UPLOADS_IMAGES', $upload_dir_images);
-    define('CAUSFA_UPLOADS_FORMS', $upload_dir_forms);
-    define('CAUSFA_UPLOADS_FORMS_HOME', $upload_dir_forms_home);
-    define('CAUSFA_UPLOADS_FROMS_OFFICE', $upload_dir_forms_office);
     //Checks to make sure that the groups plugin is active and if it is then it makes sure the required groups are available
     if( is_plugin_active('groups/groups.php')) {
         $business_manager = Groups_Group::read_by_name('Business Manger');

@@ -32,6 +32,7 @@ include('process/pending_action.php');
 include('process/new_custodian.php');
 include('process/generate_form.php');
 include('process/logger.php');
+include('includes/file_upload.php');
 
 
 //Hooks
@@ -49,6 +50,7 @@ add_action( 'wp_ajax_causfa_new_custodian', 'causfa_new_custodian');
 add_action( 'wp_ajax_causfa_ajax_logger', 'causfa_ajax_logger');
 add_action( 'wp_ajax_causfa_generate_form_Home', 'causfa_generate_form_Home');
 add_action( 'wp_ajax_causfa_generate_form_Office', 'causfa_generate_form_Office');
+add_action( 'wp_ajax_causfa_upload_image', 'causfa_upload_image');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
