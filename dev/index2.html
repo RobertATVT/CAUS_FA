@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CAUS Intranet Fixed Assets Application</title>
 
-<!-- Bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <title>CAUS Intranet Fixed Assets Application</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
 </head>
 <body>
 <!-- BEGIN user_header_template.html -->
@@ -191,6 +194,216 @@
                         <div class="col-md-3"><button class="faa-icon-forms" id="forms-[ID]" onclick="formsModalRequested(this)"></button></div>
                     </div>
         <!-- END asset_template.html -->
+        <!-- BEGIN EXTRA FILLER FOR DEVELOPMENT -->
+                    <div class="col-md-7 faa-asset" id="asset-0">
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">VT TAG #</div>
+                            <div class="col-sm-4" id="asset-tag-0">000378917</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">SERIAL #</div>
+                            <div class="col-sm-3" id=asset-serial-0>C02K505CFGFL</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">DESCRIPTION</div>
+                            <div class="col-sm-4" id="asset-desc-0">Laptop, Apple Macbook Pro</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">VALUE</div>
+                            <div class="col-sm-3" id="asset-value-0">$2662.89</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">ORGANIZATION</div>
+                            <div class="col-sm-4" id="asset-org-0">Architecture Support</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">OWNERSHIP</div>
+                            <div class="col-sm-3" id="asset-own-0">University owned</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">&nbsp; </div>
+                            <div class="col-sm-4"> </div>
+                            <div class="col-sm-1"> </div>
+                            <div class="col-sm-2 info-title"> </div>
+                            <div class="col-sm-3"> </div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">LAST VT SCAN</div>
+                            <div class="col-sm-4" id="asset-vt-scan-0">01-AUG-2017</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">LAST CAUS SCAN</div>
+                            <div class="col-sm-3" id="asset-caus-scan-0">10-JAN-2018</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">PURCHASE DATE</div>
+                            <div class="col-sm-4" id="asset-purchase-0">23-MAR-2015</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title"></div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                        <button id="0" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
+                    </div>
+                    <div class="text-center col-md-2 faa-asset-status faa-asset-status-home" id="status-0">HOME USE</div>
+                    <div class="text-center col-md-3 faa-asset-button">
+                        <div class="col-md-3"><button class="faa-icon-transfer" id="transfer-0" onclick="transferModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-surplus" id="surplus-0" onclick="surplusModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-gallery" id="gallery-0" onclick="galleryModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-forms" id="forms-0" onclick="formsModalRequested(this)"></button></div>
+                    </div>
+                    <div class="col-md-7 faa-asset" id="asset-2">
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">VT TAG #</div>
+                            <div class="col-sm-4" id="asset-tag-2">000374279</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">SERIAL #</div>
+                            <div class="col-sm-3" id=asset-serial-2>C1MPF5FJG944</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">DESCRIPTION</div>
+                            <div class="col-sm-4" id="asset-desc-2">Laptop, Apple Macbook Air</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">VALUE</div>
+                            <div class="col-sm-3" id="asset-value-2">$1678.84</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">ORGANIZATION</div>
+                            <div class="col-sm-4" id="asset-org-2">Architecture Support</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">OWNERSHIP</div>
+                            <div class="col-sm-3" id="asset-own-2">University owned</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">&nbsp; </div>
+                            <div class="col-sm-4"> </div>
+                            <div class="col-sm-1"> </div>
+                            <div class="col-sm-2 info-title"> </div>
+                            <div class="col-sm-3"> </div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">LAST VT SCAN</div>
+                            <div class="col-sm-4" id="asset-vt-scan-2">02-NOV-2016</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">LAST CAUS SCAN</div>
+                            <div class="col-sm-3" id="asset-caus-scan-2">10-JAN-2018</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">PURCHASE DATE</div>
+                            <div class="col-sm-4" id="asset-purchase-2">16-APR-2015</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title"></div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                        <button id="2" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
+                    </div>
+                    <div class="text-center col-md-2 faa-asset-status faa-asset-status-office" id="status-2">OFFICE USE</div>
+                    <div class="text-center col-md-3 faa-asset-button">
+                        <div class="col-md-3"><button class="faa-icon-transfer" id="transfer-2" onclick="transferModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-surplus" id="surplus-2" onclick="surplusModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-gallery" id="gallery-2" onclick="galleryModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-forms" id="forms-2" onclick="formsModalRequested(this)"></button></div>
+                    </div>
+                    <div class="col-md-7 faa-asset" id="asset-2">
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">VT TAG #</div>
+                            <div class="col-sm-4" id="asset-tag-2">000374279</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">SERIAL #</div>
+                            <div class="col-sm-3" id=asset-serial-2>C1MPF5FJG944</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">DESCRIPTION</div>
+                            <div class="col-sm-4" id="asset-desc-2">Laptop, Apple Macbook Air</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">VALUE</div>
+                            <div class="col-sm-3" id="asset-value-2">$1678.84</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">ORGANIZATION</div>
+                            <div class="col-sm-4" id="asset-org-2">Architecture Support</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">OWNERSHIP</div>
+                            <div class="col-sm-3" id="asset-own-2">University owned</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">&nbsp; </div>
+                            <div class="col-sm-4"> </div>
+                            <div class="col-sm-1"> </div>
+                            <div class="col-sm-2 info-title"> </div>
+                            <div class="col-sm-3"> </div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">LAST VT SCAN</div>
+                            <div class="col-sm-4" id="asset-vt-scan-2">02-NOV-2016</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">LAST CAUS SCAN</div>
+                            <div class="col-sm-3" id="asset-caus-scan-2">10-JAN-2018</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">PURCHASE DATE</div>
+                            <div class="col-sm-4" id="asset-purchase-2">16-APR-2015</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title"></div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                        <button id="1" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
+                    </div>
+                    <div class="text-center col-md-2 faa-asset-status faa-asset-status-missing" id="status-2">MISSING</div>
+                    <div class="text-center col-md-3 faa-asset-button">
+                        <div class="col-md-3"><button class="faa-icon-transfer" id="transfer-2" onclick="transferModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-surplus" id="surplus-2" onclick="surplusModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-gallery" id="gallery-2" onclick="galleryModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-forms" id="forms-2" onclick="formsModalRequested(this)"></button></div>
+                    </div>
+                    <div class="col-md-7 faa-asset" id="asset-3">
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">VT TAG #</div>
+                            <div class="col-sm-4" id="asset-tag-3">000374279</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">SERIAL #</div>
+                            <div class="col-sm-3" id=asset-serial-3>C1MPF5FJG944</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">DESCRIPTION</div>
+                            <div class="col-sm-4" id="asset-desc-3">Laptop, Apple Macbook Air</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">VALUE</div>
+                            <div class="col-sm-3" id="asset-value-3">$1678.84</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">ORGANIZATION</div>
+                            <div class="col-sm-4" id="asset-org-3">Architecture Support</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">OWNERSHIP</div>
+                            <div class="col-sm-3" id="asset-own-3">University owned</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">&nbsp; </div>
+                            <div class="col-sm-4"> </div>
+                            <div class="col-sm-1"> </div>
+                            <div class="col-sm-2 info-title"> </div>
+                            <div class="col-sm-3"> </div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">LAST VT SCAN</div>
+                            <div class="col-sm-4" id="asset-vt-scan-3">02-NOV-2016</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title">LAST CAUS SCAN</div>
+                            <div class="col-sm-3" id="asset-caus-scan-3">10-JAN-2018</div>
+                        </div>
+                        <div class="row" style="z-index: 999;">
+                            <div class="col-sm-2 info-title">PURCHASE DATE</div>
+                            <div class="col-sm-4" id="asset-purchase-3">16-APR-2015</div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 info-title"></div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                        <button id="2" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
+                    </div>
+                    <div class="text-center col-md-2 faa-asset-status faa-asset-status-pending" id="status-3">PENDING TRANSFER</div>
+                    <div class="text-center col-md-3 faa-asset-button">
+                        <div class="col-md-3"><button class="faa-icon-transfer" id="transfer-3" onclick="transferModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-surplus" id="surplus-3" onclick="surplusModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-gallery" id="gallery-3" onclick="galleryModalRequested(this)"></button></div>
+                        <div class="col-md-3"><button class="faa-icon-forms" id="forms-3" onclick="formsModalRequested(this)"></button></div>
+                    </div>
+        <!-- END EXTRA FILLER FOR DEVELOPMENT -->
         <!-- BEGIN asset_total_template.html -->
                     </div>
                 </div>
@@ -234,8 +447,8 @@
             </div>
             <div class="modal-body faa-modal-body">
                 <div class="row faa-modal-info" style="">
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag">00095959</span></div>
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description">Apple iPad 2 wi-Fi+3G 16GB fpr AT&T - Black (M</span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">&nbsp;</div>
@@ -246,6 +459,7 @@
                             <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECIEVER PID</label>
                             <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
                             <datalist id="PIDs"></datalist>
+                            <input type="hidden" id="transferIndex" value="" />
                         </div>
                     </form>
                 </div>
@@ -270,14 +484,15 @@
             </div>
             <div class="modal-body faa-modal-body">
                <div class="row" style="border: 1px solid #aaa; padding: 10px; background: #fff; border-radius: 5px;">
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag">00095959</span></div>
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description">Apple iPad 2 wi-Fi+3G 16GB fpr AT&T - Black (M</span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
                 </div>
                 <div class="row" >
                     <div class="col-sm-12">&nbsp;</div>
                 </div>
                 <div class="row">
                     <div class="text-center col-sm-12 info-title" style="font-size: 125%;"><p>Are you sure you want to initiate this surplus request?</p></div>
+                    <input type="hidden" id="surplusIndex" value="" />
                 </div>
 
             </div>
@@ -291,12 +506,78 @@
 <!-----Gallery Modal------>
 <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="galleryModalLabel">Gallery</h4>
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+                <h4 class="modal-title faa-modal-title" id="galleryModalLabel">Gallery</h4>
             </div>
-            <div class="modal-body">
-                ...
+            <div class="modal-body faa-modal-body">
+                <!-- Slider -->
+                <div class="row" id="slider">
+                    <!-- Top part of the slider -->
+                    <div class="col-md-12"  style="padding: 0px;">
+                        <div class="col-md-12" id="carousel-bounding-box"  style="padding: 0px;">
+                            <div class="col-md-8 carousel slide" id="myCarousel">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item" data-slide-number="0">
+                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_caramel.jpg"></div>
+
+                                    <div class="item" data-slide-number="1">
+                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_cheesecake_brownie.jpg"></div>
+
+                                    <div class="item" data-slide-number="2">
+                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_donut.jpg"></div>
+
+                                    <div class="item" data-slide-number="3">
+                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_lemon.jpg"></div>
+                                </div><!-- Carousel nav -->
+                                <a class="carousel-control left" data-slide="prev" href="#myCarousel">‹</a> <a class="carousel-control right" data-slide="next" href="#myCarousel">›</a>
+                            </div>
+                            <div class="col-md-4" id="carousel-text">
+                                <div id="slide-content">
+                                    <div id="slide-content-0">
+                                        <h2>Slider One</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                    <div id="slide-content-1" style="display: none;">
+                                        <h2>Slider Two</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                    <div id="slide-content-2" style="display: none;">
+                                        <h2>Slider Three</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                    <div id="slide-content-3" style="display: none;">
+                                        <h2>Slider Four</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!--/Slider-->
+
+                <div class="row hidden-phone" id="slider-thumbs">
+                    <div class="col-sm-12" style="margin-left: -25px;">
+                        <!-- Bottom switcher of slider -->
+                        <ul class="thumbnails">
+                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="0" id="carousel-selector-0">
+                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_caramel.jpg"></a></li>
+                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="1" id="carousel-selector-1">
+                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_cheesecake_brownie.jpg"></a></li>
+                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="2" id="carousel-selector-2">
+                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_donut.jpg"></a></li>
+                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="3" id="carousel-selector-3">
+                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_lemon.jpg"></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -307,12 +588,14 @@
 <!-----Forms Modal------>
 <div class="modal fade" id="formsModal" tabindex="-1" role="dialog" aria-labelledby="formsModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="formsModalLabel">Forms</h4>
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+                <h4 class="modal-title faa-modal-title" id="formsModalLabel">Forms</h4>
             </div>
-            <div class="modal-body">
-                ...
+            <div class="modal-body faa-modal-body">
+                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 0)">Generate Home Use Form</button>
+                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 1)">Generate Office Use Form</button>
+                <input type="hidden" id="formsPtag" value="" />
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -320,12 +603,41 @@
         </div>
     </div>
 </div>
-<!-- END modal.html -->    
+<!-- END modal.html -->   
+  <!-- jQuery -->
+
 <script>
 	$( ".faa-asset-toggle" ).click(function() {
   	$( this ).toggleClass( "faa-asset-show" );
 	});
 </script>
+    
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+ 
+        $('#myCarousel').carousel({
+                interval: 5000
+        });
+ 
+        $('#carousel-text').html($('#slide-content-0').html());
+ 
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click( function(){
+                var id_selector = $(this).attr("id");
+                var id = id_selector.substr(id_selector.length -1);
+                var id = parseInt(id);
+                $('#myCarousel').carousel(id);
+        });
+ 
+ 
+        // When the carousel slides, auto update the text
+        $('#myCarousel').on('slide', function (e) {
+                var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+        });
+  });
+</script>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="js/jquery-1.11.3.min.js"></script>
 <!-- <script src="js/toggle.js"></script> -->
