@@ -15,7 +15,7 @@ function causfa_enqueue() {
     wp_register_style('caus_bootstrap_style', plugins_url('assets/css/style.css', CAUSFA_PLUGIN_URL));
     wp_register_style('caus_bootstrap_style3', plugins_url('assets/css/style3.css', CAUSFA_PLUGIN_URL));
     wp_register_style('caus_purecss_style', 'https://unpkg.com/purecss@1.0.0/build/pure-min.css');
-    wp_register_style('caus_materialize_style', 'assets/css/materialize.css');
+    wp_register_style('caus_materialize_style', plugins_url('assets/css/materialize.css', CAUSFA_PLUGIN_URL));
     wp_register_style('caus_material_icons_style', 'https://fonts.googleapis.com/icon?family=Material+Icons');
     wp_register_style('caus_animate_style', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
 
