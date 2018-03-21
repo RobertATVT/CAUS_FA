@@ -13,7 +13,7 @@ function causfa_enqueue() {
     //Styles
     wp_register_style('caus_bootstrap', plugins_url( 'assets/css/bootstrap.css', CAUSFA_PLUGIN_URL));
     wp_register_style('caus_bootstrap_style', plugins_url('assets/css/style.css', CAUSFA_PLUGIN_URL));
-    wp_register_style('caus_bootstrap_style3', plugins_url('assets/css/style3.css', CAUSFA_PLUGIN_URL));
+    wp_register_style('caus_bootstrap_style4', plugins_url('assets/css/style4.css', CAUSFA_PLUGIN_URL));
     wp_register_style('caus_purecss_style', 'https://unpkg.com/purecss@1.0.0/build/pure-min.css');
     wp_register_style('caus_materialize_style', plugins_url('assets/css/materialize.css', CAUSFA_PLUGIN_URL));
     wp_register_style('caus_material_icons_style', 'https://fonts.googleapis.com/icon?family=Material+Icons');
@@ -21,17 +21,11 @@ function causfa_enqueue() {
 
     wp_enqueue_style('caus_bootstrap');
     wp_enqueue_style('caus_bootstrap_style');
-<<<<<<< HEAD
-    wp_enqueue_style('caus_bootstrap_style3');
     wp_enqueue_style('caus_purecss_style');
     wp_enqueue_style('caus_materialize_style');
     wp_enqueue_style('caus_material_icons_style');
-=======
     wp_enqueue_style('caus_bootstrap_style4');
-    wp_enqueue_style('caus_meterialize_style');
-    wp_enqueue_style('caus_meterial_icons_style');
     wp_enqueue_style('caus_purecss_style');
->>>>>>> parent of 4b31952... Fixed typos in enqueue.php
     wp_enqueue_style('caus_animate_style');
 
     //Scripts
