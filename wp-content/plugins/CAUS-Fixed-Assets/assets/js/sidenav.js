@@ -20,7 +20,7 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
-function sideNav(){
+function causSideNav() {
     $('.button-collapse').sideNav({
         menuWidth: 300, // Default is 300
         edge: 'left', // Choose the horizontal origin
