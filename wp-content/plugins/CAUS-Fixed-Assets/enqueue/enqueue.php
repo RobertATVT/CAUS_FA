@@ -24,6 +24,7 @@ function causfa_enqueue() {
     wp_enqueue_style('causfa_bootstrap_style4');
     wp_enqueue_style('causfa_purecss_style');
     wp_enqueue_style('causfa_animate_style');
+    wp_enqueue_style('causfa_materialize_style');
     wp_enqueue_style('causfa_material_icons');
 
     //Scripts
