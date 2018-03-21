@@ -35,7 +35,7 @@ function causfa_upload_image() {
         }
     }
     if (move_uploaded_file($_FILES['imageFileToUpload']['tmp_name'], $target_file)) {
-        
+
         $output['status'] = 1;
         wp_send_json($output);
     } else {

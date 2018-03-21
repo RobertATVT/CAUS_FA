@@ -22,8 +22,8 @@ function causfa_enqueue() {
     wp_enqueue_style('caus_bootstrap');
     wp_enqueue_style('caus_bootstrap_style');
     wp_enqueue_style('caus_bootstrap_style4');
-    wp_enqueue_style('caus_meterialize_style');
-    wp_enqueue_style('caus_meterial_icons_style');
+    wp_enqueue_style('caus_materialize_style');
+    wp_enqueue_style('caus_material_icons_style');
     wp_enqueue_style('caus_purecss_style');
     wp_enqueue_style('caus_animate_style');
 
