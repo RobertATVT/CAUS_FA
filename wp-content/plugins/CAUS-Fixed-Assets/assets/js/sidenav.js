@@ -1,8 +1,13 @@
 function openNav() {
+    var wpBar = document.getElementById('wpadminbar')[0]:
+        if (wpBar !== null){
+            var wpBarHeight = document.getElementById('wpadminbar').offsetHeight;
+        }
     var headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
     alert(headerHeight);
+    headerHeight = headerHeight+wpBarHeight;
     /* var headerHeight = "142px"; */
-    document.getElementById("mySidenav").style.top = headerHeight;
+    document.getElementById("mySidenav").style.top = (headerHeight+"px;");
     document.getElementById("mySidenav").style.width = "300px";
     document.getElementById("main").style.marginLeft = "300px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
