@@ -7,7 +7,7 @@ function openNav() {
     headerHeight = headerHeight+wpBarHeight;
     alert(headerHeight);
     /* var headerHeight = "142px"; */
-    document.getElementById("mySidenav").style.top = (headerHeight+"px;");
+    document.getElementById("mySidenav").style.setProperty("top", headerHeight+"px");
     document.getElementById("mySidenav").style.width = "300px";
     document.getElementById("main").style.marginLeft = "300px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
