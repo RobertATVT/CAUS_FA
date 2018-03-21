@@ -2179,7 +2179,6 @@ header,
 hgroup,
 main,
 menu,
-nav,
 section,
 summary {
   display: block;
@@ -2582,7 +2581,7 @@ a {
           box-shadow: none !important;
 }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+.z-depth-1, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
@@ -4207,11 +4206,11 @@ nav ul a span.badge {
 }
 
 nav {
-  color: #fff;
+/*  color: #fff;
   background-color: #ee6e73;
   width: 100%;
   height: 56px;
-  line-height: 56px;
+  line-height: 56px; */
 }
 
 nav.nav-extended {
@@ -4229,7 +4228,7 @@ nav.nav-extended .nav-content {
 }
 
 nav a {
-  color: #fff;
+/*  color: #fff;*/
 }
 
 nav i,
@@ -4318,28 +4317,28 @@ nav .nav-title {
 }
 
 nav ul {
-  margin: 0;
+/*  margin: 0; */
 }
 
 nav ul li {
-  -webkit-transition: background-color .3s;
+/*  -webkit-transition: background-color .3s;
   transition: background-color .3s;
   float: left;
-  padding: 0;
+  padding: 0;*/
 }
 
 nav ul li.active {
-  background-color: rgba(0, 0, 0, 0.1);
+/*  background-color: rgba(0, 0, 0, 0.1); */
 }
 
 nav ul a {
-  -webkit-transition: background-color .3s;
+/*  -webkit-transition: background-color .3s;
   transition: background-color .3s;
   font-size: 1rem;
   color: #fff;
   display: block;
   padding: 0 15px;
-  cursor: pointer;
+  cursor: pointer;*/
 }
 
 nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
@@ -4354,7 +4353,7 @@ nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.b
 }
 
 nav ul a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+/*  background-color: rgba(0, 0, 0, 0.1); */
 }
 
 nav ul.left {
@@ -4362,7 +4361,7 @@ nav ul.left {
 }
 
 nav form {
-  height: 100%;
+/*height: 100%;*/
 }
 
 nav .input-field {
@@ -4413,8 +4412,8 @@ nav .input-field label.active i {
     min-height: 64px;
   }
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-    height: 64px;
-    line-height: 64px;
+/*  height: 64px;
+    line-height: 64px; */
   }
   .navbar-fixed {
     height: 64px;
@@ -8309,10 +8308,19 @@ input[type=range]:focus::-ms-fill-upper {
   visibility: visible;
   -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
           animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-  -webkit-transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s 1s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
 }
 
 .tap-target {
@@ -8365,10 +8373,19 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tap-target-wave::after {
   visibility: hidden;
-  -webkit-transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s;
-  transition: opacity .3s, transform .3s, visibility 0s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s,
+ visibility 0s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ visibility 0s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s,
+ -webkit-transform .3s;
   z-index: -1;
 }
 

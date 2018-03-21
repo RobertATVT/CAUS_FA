@@ -5,7 +5,7 @@ function openNav() {
         }
     var headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
     headerHeight = headerHeight+wpBarHeight;
-    alert(headerHeight);
+    
     /* var headerHeight = "142px"; */
     document.getElementById("mySidenav").style.setProperty("top", headerHeight+"px");
     document.getElementById("mySidenav").style.width = "300px";
@@ -19,3 +19,14 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
     document.body.style.backgroundColor = "white";
 }
+
+function sideNav(){
+    $('.button-collapse').sideNav({
+        menuWidth: 300, // Default is 300
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true // Choose whether you can drag to open on touch screens
+        });
+          // START OPEN
+    $('.button-collapse').sideNav('hide');
+};
