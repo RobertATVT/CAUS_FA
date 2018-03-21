@@ -168,6 +168,17 @@
                 <button type="button" class="btn btn-secondary" onclick="generateForm(this, 0)">Generate Home Use Form</button>
                 <button type="button" class="btn btn-secondary" onclick="generateForm(this, 1)">Generate Office Use Form</button>
                 <input type="hidden" id="formsPtag" value="" />
+                <input type="hidden" id="formsPID" value="" />
+                <form >
+                    Upload new Home Use Form:
+                    <input type="file" name="fileToUpload" id="homeFormToUpload">
+                    <input type="button" value="Upload Image" onclick="uploadFormHome()">
+                </form>
+                <form >
+                    Upload new Office Use Form:
+                    <input type="file" name="fileToUpload" id="officeFormToUpload">
+                    <input type="button" value="Upload Image" onclick="uploadFormOffice()">
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>

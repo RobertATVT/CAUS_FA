@@ -97,12 +97,64 @@ function uploadImage() {
         form.append('PID', PID);
         form.append('ptag', ptag);
         form.append('imageFileToUpload', file);
-        // var form = {
-        //     action: 'causfa_upload_image',
-        //     PID: PID,
-        //     ptag: ptag,
-        //     imageFileToUpload: file
-        // };
+        jQuery.ajax({
+            url: causfa_action_obj.ajax_url,
+            type: 'post',
+            contentType: false,
+            processData: false,
+            data: form,
+            success: function (data) {
+                if (data['status'] == 0) {
+                    alert(data['message']);
+                } else {
+                    alert(data['message']);
+                }
+            }
+        });
+    }
+}
+function uploadFormHome(){
+    var fileInput = jQuery('#homeFormToUpload');
+    var file = fileInput.prop('files')[0];
+    if (!file) {
+        alert('Please select a file to upload');
+    } else {
+        var PID = jQuery('#formsPID').val();
+        var ptag = jQuery('#formsPtag').val();
+        var form = new FormData();
+        form.append('action', 'causfa_upload_form_home');
+        form.append('PID', PID);
+        form.append('ptag', ptag);
+        form.append('homeFormToUpload', file);
+        jQuery.ajax({
+            url: causfa_action_obj.ajax_url,
+            type: 'post',
+            contentType: false,
+            processData: false,
+            data: form,
+            success: function (data) {
+                if (data['status'] == 0) {
+                    alert(data['message']);
+                } else {
+                    alert(data['message']);
+                }
+            }
+        });
+    }
+}
+function uploadFormOffice(){
+    var fileInput = jQuery('#officeFormToUpload');
+    var file = fileInput.prop('files')[0];
+    if (!file) {
+        alert('Please select a file to upload');
+    } else {
+        var PID = jQuery('#formsPID').val();
+        var ptag = jQuery('#formsPtag').val();
+        var form = new FormData();
+        form.append('action', 'causfa_upload_form_office');
+        form.append('PID', PID);
+        form.append('ptag', ptag);
+        form.append('officeFormToUpload', file);
         jQuery.ajax({
             url: causfa_action_obj.ajax_url,
             type: 'post',

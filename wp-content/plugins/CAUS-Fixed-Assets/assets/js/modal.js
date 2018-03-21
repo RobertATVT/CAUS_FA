@@ -30,7 +30,11 @@ function galleryModalRequested(elementID) {
 function formsModalRequested(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    var PID = document.getElementById('employeePID').innerHTML;
+    jQuery('#formsModal').find('#formsPID').val(PID);
     jQuery('#formsModal').find('#formsPtag').val(tag);
+    jQuery('#homeFormToUpload').val('');
+    jQuery('#officeFormToUpload').val('');
     jQuery('#formsModal').modal('show');
 }
 function modalRequestedOnPendingAsset(elementID) {

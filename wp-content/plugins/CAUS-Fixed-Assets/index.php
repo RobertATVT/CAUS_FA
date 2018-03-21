@@ -51,6 +51,8 @@ add_action( 'wp_ajax_causfa_ajax_logger', 'causfa_ajax_logger');
 add_action( 'wp_ajax_causfa_generate_form_Home', 'causfa_generate_form_Home');
 add_action( 'wp_ajax_causfa_generate_form_Office', 'causfa_generate_form_Office');
 add_action( 'wp_ajax_causfa_upload_image', 'causfa_upload_image');
+add_action( 'wp_ajax_causfa_upload_form_home', 'causfa_upload_form_home');
+add_action( 'wp_ajax_causfa_upload_form_office', 'causfa_upload_form_office');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
