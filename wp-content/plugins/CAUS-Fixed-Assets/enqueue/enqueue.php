@@ -13,13 +13,13 @@ function causfa_enqueue() {
     //Styles
     wp_register_style('causfa_bootstrap', plugins_url( 'assets/css/bootstrap.css', CAUSFA_PLUGIN_URL));
     wp_register_style('causfa_bootstrap_style', plugins_url('assets/css/style.css', CAUSFA_PLUGIN_URL));
-    wp_register_style('causfa_bootstrap_style3', plugins_url('assets/css/style3.css', CAUSFA_PLUGIN_URL));
+//    wp_register_style('causfa_bootstrap_style3', plugins_url('assets/css/style3.css', CAUSFA_PLUGIN_URL));
     wp_register_style('causfa_purecss_style', 'https://unpkg.com/purecss@1.0.0/build/pure-min.css');
     wp_register_style('causfa_animate_style', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
 
     wp_enqueue_style('causfa_bootstrap');
     wp_enqueue_style('causfa_bootstrap_style');
-    wp_enqueue_style('causfa_bootstrap_style3');
+//    wp_enqueue_style('causfa_bootstrap_style3');
     wp_enqueue_style('causfa_purecss_style');
     wp_enqueue_style('causfa_animate_style');
 
