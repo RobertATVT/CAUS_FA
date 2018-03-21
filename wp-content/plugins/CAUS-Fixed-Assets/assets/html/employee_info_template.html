@@ -1,69 +1,40 @@
 <!-- BEGIN SIDENAV TEST -->
-<nav>
-    <div class="nav-wrapper">
-        <a href="#" data-activates="faa-sidebar" class="button-collapse show-on-large" onload="causSideNav"><i class="material-icons">menu</i></a>
-        <h3 class="faa-topbar" style="margin-top: 0px; height: 50px; line-height: 50px; font-weight: 700;">CAUS FIXED ASSETS</h3>
-
-        <ul class="side-nav white" id="faa-sidebar">
-            <li class="sidenav-header">
-                <div class="row">
-                    <div class="col m12 center lh-35" style="font-size: 150%;">[NAME]</div>
-                    <div class="col m12 center lh-25" style="font-size: 125%;">[OFFICE]</div>
-                    <div class="col m12 center lh-25" style="font-size: 90%;">[PHONE]</div>
-                </div>
-            </li>
-            <li class="white left lw-100">
-                <span class="left lw-100" style="color: #333; font-size: 120%; padding-left: 50px; line-height: 40px;">Fixed Assets Liaison</span>
-                <span class="left lw=100" style="color: #333; font-size: 100%; padding-left: 10px; line-height: 50px">
-                    <i class="material-icons left icon-sm-grey" style="font-size: 175%;">person</i>
-                    [FAL]
-                </span>
-            </li>
-            <li><div class="divider"></div></li>
-            <li class="white left lw-100">
-                <span class="left lw-100" style="color: #333; font-size: 120%; padding-left: 50px; line-height: 40px;">Fixed Assets Liaison</span>
-                <span class="left lw=100" style="color: #333; font-size: 100%; padding-left: 10px; line-height: 50px">
-                    <i class="material-icons left icon-sm-grey" style="font-size: 175%;">person</i>
-                    [FAL]
-                </span>
-            </li>
-            <li class="white left lw-100">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header waves-effect waves-blue"><i class="material-icons">folder_special</i>Layouts <i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
-                        <div class="collapsible-body">
-                        <ul>
-                            <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">fullscreen</i>Full Screen<span class="new badge right yellow grey lighten-1" data-badge-caption="updated"></span></a></li>
-                            <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">swap_horiz</i>Horizontal Menu<span class="new badge right yellow darken-3"></span></a></li>
-                            <li><div class="divider"></div></li>
-                        </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <li class="white left lw-100">
-                <ul class="collapsible collapsible-accordion">
-                    <li>
-                        <a class="collapsible-header waves-effect waves-blue"><i class="material-icons">folder_open</i>A submenu <i class="material-icons right" style="margin-right:0;">arrow_drop_down</i></a>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">fullscreen</i>Full Screen</a></li>
-                                <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">swap_horiz</i>Horizontal Menu</a></li>
-                                <li><div class="divider"></div></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            
-            <li class="white left lw-100"><a href="#" class="waves-effect waves-blue"><i class="material-icons">call</i> Menu item</a></li>
-            <li class="white left lw-100"><a href="#" class="waves-effect waves-blue"><i class="material-icons">android</i> Menu item</a></li>
-            <li class="white left lw-100"><a href="#" class="waves-effect waves-blue"><i class="material-icons">dialpad</i> Menu item</a></li>
-            <li class="white left lw-100"><div class="divider"></div></li>
-            <li class="white left lw-100"><a href="#" class="waves-effect waves-blue"><i class="material-icons">language</i> Menu item<span class="new badge right yellow darken-3"></span></a></li>
-          </ul>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
     </div>
-</nav>
+
+    <div class="pure-g">
+        <!-- Use any element to open the sidenav -->
+        <div class="pure-u-24-24" style="background: #861F41; height: 35px; color: #fff; font-size: 150%; line-height: 35px; padding-left: 5px; margin-bottom: 10px;">
+                <span onclick="openNav()">&#9776;</span>
+        </div>
+        <div class="pure-u-24-24" id="main" style="padding: 0px;">
+            <ul class="nav nav-tabs" id="FAA-Nav" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="FixedAssets-Tab" data-toggle="tab" href="#FixedAssets" role="tab" aria-controls="FixedAssets" aria-selected="true">Fixed Assets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="PendingItems-Tab" data-toggle="tab" href="#PendingItems" role="tab" aria-controls="PendingItems" aria-selected="false">Pending Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="AdminReports-Tab" data-toggle="tab" href="#AdminReports" role="tab" aria-controls="AdminReports" aria-selected="false">Admin Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" id="Disabled-Tab" data-toggle="tab" href="#Disabled" role="tab" aria-controls="Disabled" aria-selected="false">Disabled</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="FAA-Body">
+                <div class="tab-pane fade show active" id="FixedAssets" role="tabpanel" aria-labelledby="FixedAssets-Tab">Page 1</div>
+                <div class="tab-pane fade" id="PendingItems" role="tabpanel" aria-labelledby="PendingItems-Tab">Page 2</div>
+                <div class="tab-pane fade" id="AdminReports" role="tabpanel" aria-labelledby="AdminReports-Tab">Page 3</div>
+                <div class="tab-pane fade" id="Disabled" role="tabpanel" aria-labelledby="Disabled-Tab">Page 4</div>
+            </div>
+        </div>
+    </div>
 <!-- END SIDENAV TEST -->
 
     <div style="padding-left: 10px; padding-right: 10px; border: 1px solid #ccc; background: #f8f8f8;">
