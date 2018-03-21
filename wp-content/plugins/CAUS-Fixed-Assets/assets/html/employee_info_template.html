@@ -38,32 +38,76 @@
  END SIDENAV TEST -->
 <nav>
     <div class="nav-wrapper">
-        <a href="#" data-activates="faa-sidebar" class="button-collapse show-on-large" onclick="causSideNav()"><i class="material-icons">menu</i></a>
-        <h3 class="faa-topbar" style="margin-top: 0px; height: 50px; line-height: 50px; font-weight: 700;">CAUS FIXED ASSETS</h3>
+        <a href="#" data-activates="faa-sidebar" class="button-collapse show-on-large" onload="causSideNav()"><i class="material-icons">menu</i></a>
+        <h3 class="faa-topbar">CAUS FIXED ASSETS</h3>
 
         <ul class="side-nav white" id="faa-sidebar">
             <li class="sidenav-header">
                 <div class="row">
-                    <div class="col m12 center lh-35" style="font-size: 150%;">[NAME]</div>
-                    <div class="col m12 center lh-25" style="font-size: 125%;">[OFFICE]</div>
-                    <div class="col m12 center lh-25" style="font-size: 90%;">[PHONE]</div>
+                    <div class="col m12 center lh-35" style="font-size: 150%; color: #fff;">[NAME]</div>
+                    <div class="col m12 center lh-25" style="font-size: 125%; color: #fff;">[OFFICE]</div>
+                    <div class="col m12 center lh-25" style="font-size: 90%; color: #fff;">[PHONE]</div>
                 </div>
             </li>
             <li class="white left lw-100">
-                <span class="left lw-100" style="color: #333; font-size: 120%; padding-left: 50px; line-height: 40px;">Fixed Assets Liaison</span>
-                <span class="left lw=100" style="color: #333; font-size: 100%; padding-left: 10px; line-height: 50px">
-                    <i class="material-icons left icon-sm-grey" style="font-size: 175%;">person</i>
-                    [FAL]
-                </span>
+                <div class="pure-g">
+                    <div class="pure-u-24-24">
+                        <span class="left lw-100 faa-sn-header">Fixed Assets Liaison</span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i1"><b>[FAL]</b></span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i2"><b>EMAIL:</b> [FAL-EMAIL]</span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i2"><b>PHONE:</b> [FAL-PHONE]</span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i3">&nbsp;</span>
+                    </div>
+                </div>
             </li>
-            <li><div class="divider"></div></li>
             <li class="white left lw-100">
-                <span class="left lw-100" style="color: #333; font-size: 120%; padding-left: 50px; line-height: 40px;">Fixed Assets Liaison</span>
-                <span class="left lw=100" style="color: #333; font-size: 100%; padding-left: 10px; line-height: 50px">
-                    <i class="material-icons left icon-sm-grey" style="font-size: 175%;">person</i>
-                    [FAL]
-                </span>
+                <div class="pure-g">
+                    <div class="pure-u-24-24">
+                        <span class="left lw-100 faa-sn-header">Fixed Assets Coordinator</span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i1"><b>[FAC]</b></span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i2"><b>EMAIL:</b> [FAC-EMAIL]</span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i2"><b>PHONE:</b> [FAC-PHONE]</span>
+                    </div>
+                     <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i3">&nbsp;</span>
+                    </div>
+                </div>
             </li>
+            <li class="white left lw-100">
+                <div class="pure-g">
+                    <div class="pure-u-24-24">
+                        <span class="left lw-100 faa-sn-header">Business Manager</span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i1"><b>[BM]</b></span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i2"><b>EMAIL:</b> [BM-EMAIL]</span>
+                    </div>
+                    <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i2"><b>PHONE:</b> [BM-PHONE]</span>
+                    </div>
+                     <div class="pure-u-24-24">
+                        <span class="left lw=100 faa-sn-i3">&nbsp;</span>
+                    </div>
+                </div>
+            </li>
+            <li><hr style="border-top: 1px solid #ccc;"></li>
+<!--
             <li class="white left lw-100">
                 <ul class="collapsible collapsible-accordion">
                     <li>
@@ -92,12 +136,9 @@
                     </li>
                 </ul>
             </li>
-            
-            <li class="white left lw-100"><a href="#" class="waves-effect waves-blue"><i class="material-icons">call</i> Menu item</a></li>
-            <li class="white left lw-100"><a href="#" class="waves-effect waves-blue"><i class="material-icons">android</i> Menu item</a></li>
-            <li class="white left lw-100"><a href="#" class="waves-effect waves-blue"><i class="material-icons">dialpad</i> Menu item</a></li>
             <li class="white left lw-100"><div class="divider"></div></li>
             <li class="white left lw-100"><a href="#" class="waves-effect waves-blue"><i class="material-icons">language</i> Menu item<span class="new badge right yellow darken-3"></span></a></li>
+-->
           </ul>
     </div>
 </nav>
