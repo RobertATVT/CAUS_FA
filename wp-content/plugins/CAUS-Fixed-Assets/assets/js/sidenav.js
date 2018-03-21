@@ -1,5 +1,5 @@
 function openNav() {
-    var headerHeight = document.getElementsByTagName('header')[0].getHeight();
+    var headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
     alert(headerHeight);
     /* var headerHeight = "142px"; */
     document.getElementById("mySidenav").style.top = headerHeight;
