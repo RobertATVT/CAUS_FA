@@ -23,7 +23,6 @@ html {
 }
 
 .sidenav-header {
-  background: url("../images/user-bg.jpg") no-repeat center center;
   background-size: cover;
   margin-bottom: 0px;
   padding: 15px 0 0 15px;
@@ -48,12 +47,48 @@ html {
   background-color: inherit;
   opacity: 1;
 }
-
+.faa-sn-header {
+    color: #333; 
+    font-size: 120%; 
+    padding-left: 15px; 
+    line-height: 40px;
+    font-weight: 700;
+    text-align: center;
+    background: #efefef;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.faa-sn-i1 {
+    color: #333; 
+    font-size: 120%; 
+    margin-top: 10px;
+    padding-left: 10px; 
+    line-height: 30px
+}
+.faa-sn-i2 {
+    color: #333; 
+    font-size: 100%; 
+    padding-left: 10px; 
+    line-height: 25px
+}
+.faa-sn-i3 {
+    color: #333; 
+    font-size: 90%; 
+    padding-left: 10px; 
+    line-height: 20px;
+    
+}
 .faa-topbar  {
     font-size: 200%;
+    margin-top: 0px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    color: #fff;
 }
 .nav-wrapper .material-icons {
     font-size: 250%;
+    color: #fff;
 }
 .sidenav-header {
     background: #ee7122;
