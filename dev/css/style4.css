@@ -130,10 +130,10 @@ html, button, input, select, textarea,
 .faa-header {
 	background: #333;
 	color: #fff;
-	border-radius: 5px;
+	border-radius: 0px;
 	height: 35px;
 	padding: 0px;
-	line-height: 0px;
+	line-height: 35px;
     text-align: center;
 }
 .faa-header-active {
@@ -454,7 +454,11 @@ ul.thumbnails {
 }
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
-
+@media (min-width: 320px) {
+    div.asset-status {
+        display: hidden;
+    }
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
  
