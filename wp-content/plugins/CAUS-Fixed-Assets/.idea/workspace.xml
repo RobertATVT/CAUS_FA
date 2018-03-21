@@ -11,21 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="file_upload.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="file_upload.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enqueue.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+            <state relative-caret-position="485">
+              <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -84,6 +74,7 @@
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/assets/css/autocomplete.css" />
         <option value="$PROJECT_DIR$/includes/autocomplete_footer.php" />
+        <option value="$PROJECT_DIR$/enqueue/enqueue.php" />
         <option value="$PROJECT_DIR$/../../../dev/css/style.css" />
         <option value="$PROJECT_DIR$/../../../dev/index.html" />
         <option value="$PROJECT_DIR$/process/pending_action.php" />
@@ -109,7 +100,6 @@
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/includes/activate.php" />
         <option value="$PROJECT_DIR$/includes/file_upload.php" />
-        <option value="$PROJECT_DIR$/enqueue/enqueue.php" />
       </list>
     </option>
   </component>
@@ -159,12 +149,6 @@
               <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -172,11 +156,6 @@
               <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="enqueue" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
@@ -239,12 +218,12 @@
       <workItem from="1521040950267" duration="6258000" />
       <workItem from="1521121336355" duration="15999000" />
       <workItem from="1521318940729" duration="23714000" />
-      <workItem from="1521572558633" duration="8450000" />
+      <workItem from="1521572558633" duration="8206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117203000" />
+    <option name="totallyTimeSpent" value="116959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="459" y="23" width="1072" height="807" extended-state="0" />
@@ -478,6 +457,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="115" lean-forward="false" selection-start-line="20" selection-start-column="115" selection-end-line="20" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/process/filter-content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -665,16 +651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        <state relative-caret-position="485">
+          <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
           <folding />
         </state>
       </provider>
