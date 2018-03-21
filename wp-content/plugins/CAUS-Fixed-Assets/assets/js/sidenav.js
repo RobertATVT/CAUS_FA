@@ -1,6 +1,6 @@
 function openNav() {
-    var headerHeight = $('header').outerHeight();
-    document.getElementById("mySidenav").style.top = "142px";
+    var headerHeight = document.getElementsByTagName('header')[0].Height();
+    document.getElementById("mySidenav").style.top = headerHeight;
     document.getElementById("mySidenav").style.width = "300px";
     document.getElementById("main").style.marginLeft = "300px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
