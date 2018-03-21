@@ -1,11 +1,11 @@
 function openNav() {
-    var wpBar = document.getElementById('wpadminbar')[0]
+    var wpBar = document.getElementById('wpadminbar')[0];
         if (wpBar !== null){
             var wpBarHeight = document.getElementById('wpadminbar').offsetHeight;
         }
     var headerHeight = document.getElementsByTagName('header')[0].offsetHeight;
-    alert(headerHeight);
     headerHeight = headerHeight+wpBarHeight;
+    alert(headerHeight);
     /* var headerHeight = "142px"; */
     document.getElementById("mySidenav").style.top = (headerHeight+"px;");
     document.getElementById("mySidenav").style.width = "300px";
