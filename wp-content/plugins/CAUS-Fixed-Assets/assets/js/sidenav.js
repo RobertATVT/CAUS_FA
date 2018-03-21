@@ -1,5 +1,5 @@
 function openNav() {
-    var wpBar = document.getElementById('wpadminbar')[0]:
+    var wpBar = document.getElementById('wpadminbar')[0]
         if (wpBar !== null){
             var wpBarHeight = document.getElementById('wpadminbar').offsetHeight;
         }
