@@ -33,15 +33,28 @@ function causSideNav() {
 };
 function scrollSideNav() {
     var offset = 0;
-    if (jQuery(window).height() > 992) {
+    if (jQuery(window).width() > 992) {
         var menu = document.getElementById('menu-main-nav');
         var menuRect = menu.getBoundingClientRect();
         offset = menuRect.bottom;
+    } else if (jQuery(window).width() > 600) {
+        var header = document.getElementsByTagName('header')[0];
+        var headerRect = header.getBoundingClientRect();
+        if (headerRect.bottom <= 0) {
+            var wpBar = document.getElementById('wpadminbar');
+            var wpRect = wpBar.getBoundingClientRect();
+            offset = wpRect.bottom;
+        } else {
+            offset = headerRect.bottom;
+        }
     } else {
         var header = document.getElementsByTagName('header')[0];
         var headerRect = header.getBoundingClientRect();
-        offset = headerRect.bottom;
-
+        if (headerRect.bottom <= 0) {
+            offset = 0;
+        } else {
+            offset = headerRect.bottom;
+        }
     }
 
     offset = offset + 'px';
