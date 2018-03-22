@@ -5,9 +5,10 @@ function transferModalRequested(elementID) {
     var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
     document.getElementById('recipient-name').value = '';
     jQuery('#transferModal').find('#transferIndex').val(id);
-    jQuery('#transferModal').find('.modal-body').find('.asset-tag').html(tag);
-    jQuery('#transferModal').find('.modal-body').find('.asset-description').html(desc);
-    jQuery('#transferModal').modal('show');
+    jQuery('#transferModal').find('.asset-tag').html(tag);
+    jQuery('#transferModal').find('.asset-description').html(desc);
+    jQuery('#transferModal').modal();
+    jQuery('#transferModal').modal('open');
 }
 function surplusModalRequested(elementID) {
     var id = elementID.split('-')[1];
