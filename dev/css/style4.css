@@ -195,6 +195,7 @@ html {
     background: #861F41;
     line-height: 45px;
     box-shadow: none;
+    color: #fff;
 }
 .faa-toggle:hover {
     background: #e87222;

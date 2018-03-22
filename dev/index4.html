@@ -18,7 +18,7 @@
 <!-- BEGIN employee_info_template.htm l -->
 <nav>
     <div class="nav-wrapper">
-        <a href="#" data-activates="faa-sidebar" class="button-collapse show-on-large" onclick="causSideNav"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="faa-sidebar" class="button-collapse show-on-large" onclick="causSideNav()"><i class="material-icons">menu</i></a>
         <h3 class="faa-topbar">CAUS FIXED ASSETS</h3>
         <ul class="side-nav white" id="faa-sidebar">
             <li class="sidenav-header lw-100">
@@ -232,7 +232,7 @@
                     <div class="col m3 s3"></div>
                 </div>
             </div>
-            <div class="col m1 s1 center faa-button"><button id="0" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button></div>
+            <div class="col m1 s1 center faa-button"><button id="0" class="faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button></div>
             <div class="text-center col m2 s12 faa-asset-status faa-asset-status-office" id="status-0">[STATUS]</div>
             <div class="text-center col m3 s12 faa-asset-button">
                 <div class="col m3 s3 center"><button class="faa-icon-transfer" id="transfer-0" onclick="transferModalRequested(this)"></button></div>
