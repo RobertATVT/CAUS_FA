@@ -70,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -81,6 +81,16 @@
                 <marker date="1521730935687" expanded="false" signature="1140:1153" ph="..." />
                 <marker date="1521730935687" expanded="false" signature="1257:1293" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enqueue.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,7 +157,6 @@
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/includes/activate.php" />
         <option value="$PROJECT_DIR$/includes/file_upload.php" />
-        <option value="$PROJECT_DIR$/enqueue/enqueue.php" />
         <option value="$PROJECT_DIR$/assets/html/asset_total_template.html" />
         <option value="$PROJECT_DIR$/assets/js/sidenav.js" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -157,6 +166,7 @@
         <option value="$PROJECT_DIR$/assets/html/asset_template.html" />
         <option value="$PROJECT_DIR$/assets/html/modal.html" />
         <option value="$PROJECT_DIR$/assets/js/modal.js" />
+        <option value="$PROJECT_DIR$/enqueue/enqueue.php" />
       </list>
     </option>
   </component>
@@ -290,7 +300,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138312000" />
+    <option name="totallyTimeSpent" value="138515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
@@ -618,14 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="49" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -751,6 +753,14 @@
             <marker date="1521730935687" expanded="false" signature="1140:1153" ph="..." />
             <marker date="1521730935687" expanded="false" signature="1257:1293" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
