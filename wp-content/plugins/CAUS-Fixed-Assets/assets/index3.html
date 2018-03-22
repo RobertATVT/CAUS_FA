@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your page title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="css/style3.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s4">
+                    <a class="active" href="#FixedAssets">Fixed Assets</a>
+                </li>
+                <li class="tab col s4">
+                    <a href="#PendingList">Pending List</a>
+                </li>
+                <li class="tab col s4">
+                    <a href="#AdminReports">Admin Reports</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col s12" id="FixedAssets">Page 1</div>
+        <div class="col s12" id="PendingList">Page 2</div>
+
+        <div class="col s12" id="AdminReports">Page 3</div>
+    
+    </div>
+   
+    <script src="js/materialize.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/toggle.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+          // Or with jQuery
+
+          $(document).ready(function(){
+            $('.tabs').tabs();
+          });
+    </script>
+    
+</body>
+</html>
