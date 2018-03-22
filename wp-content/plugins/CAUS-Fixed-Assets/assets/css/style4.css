@@ -484,16 +484,20 @@ ul.thumbnails {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-        height: 50px;
-        line-height: 50px;
+        height: 60px;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
      nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-        height: 35px;
-        line-height: 50px;
+        height: 60px;
+    } 
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1600px) {
+     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 30px;
     } 
 }
 
