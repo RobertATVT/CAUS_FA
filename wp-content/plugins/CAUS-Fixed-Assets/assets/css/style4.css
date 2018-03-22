@@ -17,7 +17,6 @@ html {
     height: 50px;
     line-height: 50px;
 }
-
 .side-nav li > a {
   padding: 0 16px;
 }
@@ -85,16 +84,21 @@ html {
     line-height: 20px;
 }
 .faa-topbar  {
+    position: relative;
     font-size: 200%;
-    margin-top: 0px;
+    margin: 0px;
     height: 50px;
     line-height: 50px;
     font-weight: 700;
     color: #fff;
+    margin-top: -60px;
+    margin-left: 50px;
 }
 .nav-wrapper .material-icons {
     font-size: 250%;
     color: #fff;
+    line-height: 50px;
+    height: 50px;
 }
 .sidenav-header {
     background: #ee7122;
@@ -323,7 +327,7 @@ html {
     transform: translateY(25%) !important;
 }
 .modal .modal-content {
-    padding: 0px !important;
+    padding: 0px;
 }
 .faa-modal-content {
     background: #efefef;
@@ -366,41 +370,7 @@ html {
     border: 1px solid #aaa;
     background: #fff;
 }
-.btn-primary {
-    background: #e87722; 
-}
-.btn-primary:focus {
-    background: #861F41;
-    border: none;
-}
-.btn-primary:hover {
-    background: #861F41;
-}
-.btn-secondary {
-    background: #cfcfcf; 
-}
-.btn-secondary:focus {
-    background: #aaa;
-    border: none;
-}
-.btn-secondary:hover {
-    background: #aaa;
-}
-.btn {
-    border: none;
-}
-.btn:focus {
-    border: none;
-    outline: none;
-}
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    outline: 1px solid #333;
-}
+
 
 /*==============  Gallery CSS  ==============*/
 .carousel-control:before {
@@ -486,9 +456,6 @@ ul.thumbnails {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-        height: 35px;
-        line-height: 35px;
-    } 
+    
 }
 
