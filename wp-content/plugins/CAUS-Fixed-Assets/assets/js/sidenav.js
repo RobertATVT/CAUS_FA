@@ -32,9 +32,18 @@ function causSideNav() {
     $('.button-collapse').sideNav('hide');
 };
 function scrollSideNav() {
-    var menu = document.getElementById('menu-main-nav');
-    var rect = menu.getBoundingClientRect();
-    offset = rect.bottom;
+    var offset = 0;
+    if (jQuery(window).height() > 992) {
+        var menu = document.getElementById('menu-main-nav');
+        var menuRect = menu.getBoundingClientRect();
+        offset = menuRect.bottom;
+    } else {
+        var header = jQuery('header');
+        var headerRect = header.getBoundingClientRect();
+        offset = headerRect.bottom;
+
+    }
+
     offset = offset + 'px';
     var sidebar = document.getElementById('faa-sidebar');
     sidebar.style.top = offset;

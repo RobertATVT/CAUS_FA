@@ -21,6 +21,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="groups.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/groups.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,7 +72,7 @@
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#1700#1706#0" expanded="true" />
+                <element signature="e#1682#1688#0" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -73,24 +83,33 @@
       <file leaf-file-name="modal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+            <state relative-caret-position="3330">
+              <caret line="222" column="14" lean-forward="false" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="14" />
               <folding>
-                <marker date="1521730935687" expanded="false" signature="606:619" ph="..." />
-                <marker date="1521730935687" expanded="false" signature="757:770" ph="..." />
-                <marker date="1521730935687" expanded="false" signature="1140:1153" ph="..." />
-                <marker date="1521730935687" expanded="false" signature="1257:1293" ph="..." />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1521739105226" expanded="false" signature="606:619" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="757:770" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="1140:1153" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="1257:1293" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="4727:4803" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="4866:4879" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="5017:5030" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="5363:5379" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="8198:8211" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="8296:8309" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="10130:10144" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="10492:10506" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="10856:10870" ph="..." />
+                <marker date="1521739105226" expanded="false" signature="11456:11475" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enqueue.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -98,8 +117,18 @@
       <file leaf-file-name="modal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="45">
+              <caret line="3" column="70" lean-forward="true" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidenav.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/sidenav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -121,8 +150,8 @@
       <find>faa-asset-status</find>
       <find>faa-asset</find>
       <find>$</find>
-      <find>fit</find>
       <find>FAC</find>
+      <find>fit</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -154,19 +183,19 @@
         <option value="$PROJECT_DIR$/includes/create_tables.php" />
         <option value="$PROJECT_DIR$/process/logger.php" />
         <option value="$PROJECT_DIR$/process/new_custodian.php" />
-        <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/includes/activate.php" />
         <option value="$PROJECT_DIR$/includes/file_upload.php" />
         <option value="$PROJECT_DIR$/assets/html/asset_total_template.html" />
-        <option value="$PROJECT_DIR$/assets/js/sidenav.js" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/process/filter-content.php" />
         <option value="$PROJECT_DIR$/assets/html/employee_info_template.html" />
         <option value="$PROJECT_DIR$/includes/groups.php" />
         <option value="$PROJECT_DIR$/assets/html/asset_template.html" />
-        <option value="$PROJECT_DIR$/assets/html/modal.html" />
-        <option value="$PROJECT_DIR$/assets/js/modal.js" />
         <option value="$PROJECT_DIR$/enqueue/enqueue.php" />
+        <option value="$PROJECT_DIR$/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/assets/js/modal.js" />
+        <option value="$PROJECT_DIR$/assets/html/modal.html" />
+        <option value="$PROJECT_DIR$/assets/js/sidenav.js" />
       </list>
     </option>
   </component>
@@ -300,7 +329,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138515000" />
+    <option name="totallyTimeSpent" value="143874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
@@ -416,7 +445,7 @@
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#1700#1706#0" expanded="true" />
+            <element signature="e#1682#1688#0" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
@@ -605,14 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="156" column="29" lean-forward="true" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/activate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -693,18 +714,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/sidenav.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/toggle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/employee_info_template.html">
+    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+        <state relative-caret-position="525">
+          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="33" lean-forward="true" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -720,46 +749,65 @@
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#1700#1706#0" expanded="true" />
+            <element signature="e#1682#1688#0" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/toggle.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="45">
+          <caret line="3" column="70" lean-forward="true" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
+    <entry file="file://$PROJECT_DIR$/assets/html/employee_info_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="1425">
+          <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        <state relative-caret-position="3330">
+          <caret line="222" column="14" lean-forward="false" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="14" />
           <folding>
-            <marker date="1521730935687" expanded="false" signature="606:619" ph="..." />
-            <marker date="1521730935687" expanded="false" signature="757:770" ph="..." />
-            <marker date="1521730935687" expanded="false" signature="1140:1153" ph="..." />
-            <marker date="1521730935687" expanded="false" signature="1257:1293" ph="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1521739105226" expanded="false" signature="606:619" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="757:770" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="1140:1153" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="1257:1293" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="4727:4803" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="4866:4879" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="5017:5030" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="5363:5379" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="8198:8211" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="8296:8309" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="10130:10144" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="10492:10506" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="10856:10870" ph="..." />
+            <marker date="1521739105226" expanded="false" signature="11456:11475" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/sidenav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        <state relative-caret-position="540">
+          <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
           <folding />
         </state>
       </provider>

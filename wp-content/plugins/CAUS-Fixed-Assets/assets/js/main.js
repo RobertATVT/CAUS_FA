@@ -1,5 +1,5 @@
 function surplusAsset(element, PID) {
-    ptag = jQuery('#surplusModal').find('.modal-body').find('.asset-tag').html();
+    ptag = jQuery('#surplusModal').find('.asset-tag').html();
     var form = {
         action: 'causfa_surplus',
         ptag: ptag,
@@ -21,7 +21,7 @@ function surplusAsset(element, PID) {
 }
 
 function transferAsset(element, PID, PID_dest) {
-    ptag = jQuery('#transferModal').find('.modal-body').find('.asset-tag').html();
+    ptag = jQuery('#transferModal').find('.asset-tag').html();
     var form = {
         action: 'causfa_transfer_asset',
         ptag: ptag,
