@@ -319,6 +319,9 @@ html {
 .small-title {
 	margin-top: 4px;
 }
+.modal {
+    transform: translateY(25%) !important;
+}
 .modal .modal-content {
     padding: 0px;
 }
