@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Your page title</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"></head>
+    
+    <link href="css/bootstrap.css" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -19,69 +19,59 @@
     <div class="nav-wrapper">
         <a href="#" data-activates="faa-sidebar" class="button-collapse show-on-large" onclick="causSideNav"><i class="material-icons">menu</i></a>
         <h3 class="faa-topbar">CAUS FIXED ASSETS</h3>
-
         <ul class="side-nav white" id="faa-sidebar">
-            <li class="sidenav-header">
-                <div class="pure-g">
-                    <div class="pure-u-24-24 center lh-35" style="font-size: 150%; color: #fff;">[NAME]</div>
-                    <div class="pure-u-24-24 center lh-25" style="font-size: 125%; color: #fff;">[OFFICE]</div>
-                    <div class="pure-u-24-24 center lh-25" style="font-size: 90%; color: #fff;">[PHONE]</div>
+            <li class="sidenav-header lw-100">
+                <div class="row">
+                    <div class="col m12 center lh-35" style="font-size: 150%; color: #fff;">[NAME]</div>
+                    <div class="col m12 center lh-25" style="font-size: 125%; color: #fff;">[OFFICE]</div>
+                    <div class="col m12 center lh-25" style="font-size: 90%; color: #fff;">[PHONE]</div>
                 </div>
             </li>
-            <li class="white left lw-100">
-                <div class="pure-g">
-                    <div class="pure-u-24-24">
+            <li class="white lw-100">
+                <div class="row">
+                    <div class="col m12" style="padding: 0px;">
                         <span class="left lw-100 faa-sn-header">Fixed Assets Liaison</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i1"><b>[FAL]</b></span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>EMAIL:</b> [FAL-EMAIL]</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>PHONE:</b> [FAL-PHONE]</span>
                     </div>
-                    <div class="pure-u-24-24">
-                        <span class="left lw=100 faa-sn-i3">&nbsp;</span>
-                    </div>
                 </div>
             </li>
-            <li class="white left lw-100">
-                <div class="pure-g">
-                    <div class="pure-u-24-24">
+            <li class="white lw-100">
+                <div class="row">
+                    <div class="col m12" style="padding: 0px;">
                         <span class="left lw-100 faa-sn-header">Fixed Assets Coordinator</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i1"><b>[FAC]</b></span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>EMAIL:</b> [FAC-EMAIL]</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>PHONE:</b> [FAC-PHONE]</span>
-                    </div>
-                     <div class="pure-u-24-24">
-                        <span class="left lw=100 faa-sn-i3">&nbsp;</span>
                     </div>
                 </div>
             </li>
-            <li class="white left lw-100">
-                <div class="pure-g">
-                    <div class="pure-u-24-24">
+            <li class="white lw-100">
+                <div class="row">
+                    <div class="col m12" style="padding: 0px;">
                         <span class="left lw-100 faa-sn-header">Business Manager</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i1"><b>[BM]</b></span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>EMAIL:</b> [BM-EMAIL]</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>PHONE:</b> [BM-PHONE]</span>
-                    </div>
-                     <div class="pure-u-24-24">
-                        <span class="left lw=100 faa-sn-i3">&nbsp;</span>
                     </div>
                 </div>
             </li>
@@ -122,32 +112,376 @@
     </div>
 </nav>
 <!-- BEGIN asset_header_Template.html -->
-<div class="pure-g" id="asset-info-title">
-    <div class="pure-u-24-24 faa-header" style="margin-top: 10px; margin-bottom: 10px;">
-                    <div class="pure-g">
-                        <div class="center pure-u-10-24 s4 asset-info">ASSET INFORMATION</div>
-                        <div class="pure-u-2-24"></div>
-                        <div class="center pure-u-4-24 s4 asset-status">ASSET STATUS</div>
-                        <div class="pure-u-2-24"></div>
-                        <div class="pure-u-1-24 asset-transfer">TRANSFER</div>
-                        <div class="pure-u-1-24 asset-surplus">SURPLUS</div>
-                        <div class="pure-u-1-24 asset-images">IMAGES</div>
-                        <div class="pure-u-1-24 asset-forms">FORMS</div>
-                        <div class="pure-u-2-24"></div>
+<div class="row faa-header" id="asset-info-title" style="margin-bottom: 0px;">
+    <div class="col m12">
+        <div class="col m6 s12 center">ASSET INFORMATION</div>
+        <div class="col m1 hide-on-small-only"> </div>
+        <div class="col m2 hide-on-small-only center">ASSET STATUS</div>
+        <div class="col m3 hide-on-small-only">
+            <div class="col m3 asset-icon-label">TRANSFER</div>
+            <div class="col m3 asset-icon-label">SURPLUS</div>
+            <div class="col m3 asset-icon-label">IMAGES</div>
+            <div class="col m3 asset-icon-label">FORMS</div>
+        </div>
+    </div>
+</div>
+<div class="row" id="asset-listing" style="margin-top: 0px; margin-bottom: 0px;">
+    <div class="col m12 s12 faa-content" style="">
+<!-- END asset_header_template,html -->
+<!-- BEGIN asset_template.html -->
+        <div class="row faa-content-grey">
+            <div class="col m6 s10 faa-asset" id="asset-[ID] style="background: #fff; padding: 10px;>
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">VT TAG #</div>
+                    <div class="col m4 s3" id="asset-tag-[ID]">[VT TAG]</div>
+                    <div class="col m1 hide-on-small-only"></div>
+                    <div class="col m2 s3 info-title">SERIAL #</div>
+                    <div class="col m3 s3" id=asset-serial-[ID]>[S/N]</div>
+                </div>
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">DESCRIPTION</div>
+                    <div class="col m4 s3" id="asset-desc-[ID]">[DESCRIPTION]</div>
+                    <div class="col m1 hide-on-small-only"></div>
+                    <div class="col m2 s3 info-title">VALUE</div>
+                    <div class="col m3 s3" id="asset-value-[ID]">[VALUE]</div>
+                </div>
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">ORGANIZATION</div>
+                    <div class="col m4 s3" id="asset-org-[ID]">[ORGANIZATION]</div>
+                    <div class="col m1 hide-on-small-only"></div>
+                    <div class="col m2 s3 info-title">OWNERSHIP</div>
+                    <div class="col m3 s3" id="asset-own-[ID]">[OWNERSHIP]</div>
+                </div>
+                <div class="row hide-on-small-only" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">&nbsp; </div>
+                    <div class="col m4 s3"> </div>
+                    <div class="col m1"> </div>
+                    <div class="col m2 s3 info-title"> </div>
+                    <div class="col m3 s3"> </div>
+                </div>
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">VT SCAN</div>
+                    <div class="col m4 s3" id="asset-vt-scan-[ID]">[VT SCAN]</div>
+                    <div class="col m1 hide-on-small-only"></div>
+                    <div class="col m2 s3 info-title">CAUS SCAN</div>
+                    <div class="col m3 s3" id="asset-caus-scan-[ID]">[CAUS SCAN]</div>
+                </div>
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">PURCHASE</div>
+                    <div class="col m4 s4" id="asset-purchase-[ID]">[PURCHASE DATE]</div>
+                    <div class="col m1 hide-on-mobile-only"></div>
+                    <div class="col m2 s2 info-title"></div>
+                    <div class="col m3 s3"></div>
+                </div>
+            </div>
+            <div class="col m1 s1 center"><button id="[ID]" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button></div>
+            <div class="text-center col m2 s12 faa-asset-status" id="status-[ID]">[STATUS]</div>
+            <div class="text-center col m3 s12 faa-asset-button">
+                <div class="col m3 s3 center"><button class="faa-icon-transfer" id="transfer-[ID]" onclick="transferModalRequested(this)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-surplus" id="surplus-[ID]" onclick="surplusModalRequested(this)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-gallery" id="gallery-[ID]" onclick="galleryModalRequested(this)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-forms" id="forms-[ID]" onclick="formsModalRequested(this)"></button></div>
+            </div>
+        </div>
+<!-- END asset_template.html -->
+<!-- BEGIN EXTRA FILLER FOR DEVELOPMENT -->
+        <div class="row faa-content-grey">
+            <div class="col m6 s10 faa-asset" id="asset-0">
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">VT TAG #</div>
+                    <div class="col m4 s3" id="asset-tag-0">[VT TAG]</div>
+                    <div class="col m1 hide-on-small-only"></div>
+                    <div class="col m2 s3 info-title">SERIAL #</div>
+                    <div class="col m3 s3" id=asset-serial-0>[S/N]</div>
+                </div>
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">DESCRIPTION</div>
+                    <div class="col m4 s3" id="asset-desc-0">[DESCRIPTION]</div>
+                    <div class="col m1 hide-on-small-only"></div>
+                    <div class="col m2 s3 info-title">VALUE</div>
+                    <div class="col m3 s3" id="asset-value-0">[VALUE]</div>
+                </div>
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">ORGANIZATION</div>
+                    <div class="col m4 s3" id="asset-org-0">[ORGANIZATION]</div>
+                    <div class="col m1 hide-on-small-only"></div>
+                    <div class="col m2 s3 info-title">OWNERSHIP</div>
+                    <div class="col m3 s3" id="asset-own-0">[OWNERSHIP]</div>
+                </div>
+                <div class="row hide-on-small-only" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">&nbsp; </div>
+                    <div class="col m4 s3"> </div>
+                    <div class="col m1"> </div>
+                    <div class="col m2 s3 info-title"> </div>
+                    <div class="col m3 s3"> </div>
+                </div>
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">VT SCAN</div>
+                    <div class="col m4 s3" id="asset-vt-scan-0">[VT SCAN]</div>
+                    <div class="col m1 hide-on-small-only"></div>
+                    <div class="col m2 s3 info-title">CAUS SCAN</div>
+                    <div class="col m3 s3" id="asset-caus-scan-0">[CAUS SCAN]</div>
+                </div>
+                <div class="row" style="z-index: 999;">
+                    <div class="col m2 s3 info-title">PURCHASE</div>
+                    <div class="col m4 s4" id="asset-purchase-0">[PURCHASE DATE]</div>
+                    <div class="col m1 hide-on-mobile-only"></div>
+                    <div class="col m2 s2 info-title"></div>
+                    <div class="col m3 s3"></div>
+                </div>
+            </div>
+            <div class="col m1 s1 center">
+                <button id="0" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
+            </div>
+            <div class="text-center col m2 s12 faa-asset-status faa-asset-status-office" id="status-0">[STATUS]</div>
+            <div class="text-center col m3 s12 faa-asset-button">
+                <div class="col m3 s3 center"><button class="faa-icon-transfer" id="transfer-0" onclick="transferModalRequested(this)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-surplus" id="surplus-0" onclick="surplusModalRequested(this)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-gallery" id="gallery-0" onclick="galleryModalRequested(this)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-forms" id="forms-0" onclick="formsModalRequested(this)"></button></div>
+            </div>
+        </div>
+<!-- END EXTRA FILLER FOR DEVELOPMENT -->
+<!-- BEGIN asset_total_template.html -->        
+    </div>
+</div>
+<div class="row faa-header" id="asset-impact-title">
+ <div class="col m12 s12 center">TOTAL ASSET IMPACT</div>
+</div>
+<div class="row" id="asset-listing">
+    <div class="col m12 s12 faa-content">
+        <div class="col m12 s12" style="border: 1px solid #ccc; border-radius: 0px; padding: 5px; background: #efefef;">
+            <div class="col m5 s12" style="border: 1px solid #ccc; padding: 5px; background: #fff;">
+                <div class="col m6 s6">TOTAL ASSET VALUE:</div>
+                <div class="col m6 s6" style="color: #080; text-align: right;">[TOTAL VALUE]</div>
+            </div>
+            <div class="col m2 s12"></div>
+            <div class="col m5 s12" style="border: 1px solid #ccc; padding: 5px; background: #fff;">
+                <div class="col m6 s6">MISSING ASSET TOTAL:</div>
+                <div class="col m6 s6" style="color: #F00; text-align: right;">[TOTAL MISSING VALUE]</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END asset_total_template.html -->
+<!-- BEGIN modal.html -->
+<!-----Transfer Modal----->
+<div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+<!--                <button type="button" class="close btn-primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button> -->
+                <h4 class="modal-title faa-modal-title" id="transferModalLabel">Asset Transfer</h4>
+            </div>
+            <div class="modal-body faa-modal-body">
+                <div class="row faa-modal-info" style="">
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <form autocomplete="off">
+                        <div class="col-sm-12 form-group" style="padding: 0px;">
+                            <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECIEVER PID</label>
+                            <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
+                            <datalist id="PIDs"></datalist>
+                            <input type="hidden" id="transferIndex" value="" />
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <p>Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----Surplus Modal------>
+<div class="modal fade" id="surplusModal" tabindex="-1" role="dialog" aria-labelledby="surplusModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+                <h4 class="modal-title faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
+            </div>
+            <div class="modal-body faa-modal-body">
+               <div class="row" style="border: 1px solid #aaa; padding: 10px; background: #fff; border-radius: 5px;">
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
+                </div>
+                <div class="row" >
+                    <div class="col-sm-12">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="text-center col-sm-12 info-title" style="font-size: 125%;"><p>Are you sure you want to initiate this surplus request?</p></div>
+                    <input type="hidden" id="surplusIndex" value="" />
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset(this, [PID])">Surplus</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----Gallery Modal------>
+<div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+                <h4 class="modal-title faa-modal-title" id="galleryModalLabel">Gallery</h4>
+            </div>
+            <div class="modal-body faa-modal-body">
+                <div class="row">
+                    <form >
+                        Select image to upload:
+                        <input type="file" name="fileToUpload" id="imageFileToUpload">
+                        <input type="button" value="Upload Image" onclick="uploadImage()">
+                    </form>
+                </div>
+                <!-- Slider -->
+                <div class="row" id="slider">
+                    <!-- Top part of the slider -->
+                    <div class="col-md-12"  style="padding: 0px;">
+                        <div class="col-md-12" id="carousel-bounding-box"  style="padding: 0px;">
+                            <div class="col-md-8 carousel slide" id="myCarousel">
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item" data-slide-number="0">
+                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_caramel.jpg"></div>
+
+                                    <div class="item" data-slide-number="1">
+                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_cheesecake_brownie.jpg"></div>
+
+                                    <div class="item" data-slide-number="2">
+                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_donut.jpg"></div>
+
+                                    <div class="item" data-slide-number="3">
+                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_lemon.jpg"></div>
+                                </div><!-- Carousel nav -->
+                                <a class="carousel-control left" data-slide="prev" href="#myCarousel">‹</a> <a class="carousel-control right" data-slide="next" href="#myCarousel">›</a>
+                            </div>
+                            <div class="col-md-4" id="carousel-text">
+                                <div id="slide-content">
+                                    <div id="slide-content-0">
+                                        <h2>Slider One</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                    <div id="slide-content-1" style="display: none;">
+                                        <h2>Slider Two</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                    <div id="slide-content-2" style="display: none;">
+                                        <h2>Slider Three</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                    <div id="slide-content-3" style="display: none;">
+                                        <h2>Slider Four</h2>
+                                        <p>Lorem Ipsum Dolor</p>
+                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!--/Slider-->
+
+                <div class="row hidden-phone" id="slider-thumbs">
+                    <div class="col-sm-12" style="margin-left: -25px;">
+                        <!-- Bottom switcher of slider -->
+                        <ul class="thumbnails">
+                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="0" id="carousel-selector-0">
+                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_caramel.jpg"></a></li>
+                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="1" id="carousel-selector-1">
+                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_cheesecake_brownie.jpg"></a></li>
+                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="2" id="carousel-selector-2">
+                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_donut.jpg"></a></li>
+                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="3" id="carousel-selector-3">
+                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_lemon.jpg"></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="row" id="asset-listing">
-                <div class="col-md-12" style="border: 1px solid #333; border-radius: 5px; padding: 10px; padding-bottom: 0px; background: #efefef; margin-bottom: 10px;">
-<!-- END asset_header_template,html -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
     </div>
 </div>
+<!-----Forms Modal------>
+<div class="modal fade" id="formsModal" tabindex="-1" role="dialog" aria-labelledby="formsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content faa-modal-content">
+            <div class="modal-header faa-modal-header">
+                <h4 class="modal-title faa-modal-title" id="formsModalLabel">Forms</h4>
+            </div>
+            <div class="modal-body faa-modal-body">
+                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 0)">Generate Home Use Form</button>
+                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 1)">Generate Office Use Form</button>
+                <input type="hidden" id="formsPtag" value="" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END modal.html -->   
+  <!-- jQuery -->
 
+    <script>
+        $( ".faa-asset-toggle" ).click(function() {
+        $( this ).toggleClass( "faa-asset-show" );
+        });
+    </script>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+
+            $('#myCarousel').carousel({
+                    interval: 5000
+            });
+
+            $('#carousel-text').html($('#slide-content-0').html());
+
+            //Handles the carousel thumbnails
+            $('[id^=carousel-selector-]').click( function(){
+                    var id_selector = $(this).attr("id");
+                    var id = id_selector.substr(id_selector.length -1);
+                    var id = parseInt(id);
+                    $('#myCarousel').carousel(id);
+            });
+
+
+            // When the carousel slides, auto update the text
+            $('#myCarousel').on('slide', function (e) {
+                    var id = $('.item.active').data('slide-number');
+                    $('#carousel-text').html($('#slide-content-'+id).html());
+            });
+      });
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
 <!--    <script type="text/javascript" src="js/sidenav.js"></script>-->
-
+    <script src="js/bootstrap.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/toggle.js"></script>
+    <script src="js/main.js"></script>
     <script>
         // SIDEBAR
         jQuery( document ).ready(function(){

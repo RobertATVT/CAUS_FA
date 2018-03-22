@@ -4,6 +4,10 @@ html {
 
 }
 
+.x-navbar-inner {
+    max-height: 30px;
+}
+
 /* BEGIN SIDENAV MENU */
 .nav-wrapper {
     background: #861F41;
@@ -76,6 +80,7 @@ html {
     font-size: 90%; 
     padding-left: 10px; 
     line-height: 20px;
+    
     
 }
 .faa-topbar  {
@@ -277,26 +282,6 @@ html, button, input, select, textarea,
 	height: 45px;
 	width: 45px;
 	background: url(../icons/forms_h.svg);
-}
-.s1 {
-	font-size: 200%;
-	font-weight: 700;
-}
-.s2 {
-	font-size: 175%;
-	font-weight: 700;
-}
-.s3 {
-	font-size: 150%;
-	font-weight: 700;
-}
-.s4 {
-	font-size: 125%;
-	font-weight: 700;
-}
-.s5 {
-	font-size: 100%;
-	font-weight: 700;
 }
 .lh-35 {
     line-height: 35px;
