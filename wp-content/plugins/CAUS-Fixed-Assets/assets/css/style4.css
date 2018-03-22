@@ -167,7 +167,7 @@ html {
     padding-bottom: 10px;
 }
 .row .faa-asset-items {
-    padding-bottom: 3px;
+    margin-bottom: 3px;
 }
 .row .col.faa-asset {
 	height: 45px;
@@ -177,13 +177,13 @@ html {
 	border-radius: 0px;
 	padding: 0px;
     padding-top: 10px;
-    line-height: 0px;
+    line-height: 14px;
 	overflow: hidden;
     width: 54%;
 }
 .row .col.faa-asset-show {
 	height: 135px;
-    line-height: 0px;
+    line-height: 14px;
     padding-top: 15px;
 }
 .faa-toggle {
