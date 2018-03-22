@@ -13,13 +13,64 @@
 function causfa_filter_employee_info( $content) {
     $employee_info_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/employee_info_template.html', true);
     $employee_info_html = str_replace('[NAME]', $content->Name, $employee_info_html);
-    $employee_info_html = str_replace('[FAL]', causfa_groups_FAL(), $employee_info_html);
     $employee_info_html = str_replace( '[PID]', $content->PID, $employee_info_html);
     $employee_info_html = str_replace( '[EMAIL]', $content->Email, $employee_info_html);
-    $employee_info_html = str_replace( '[FAC]', causfa_groups_FAC(), $employee_info_html);
     $employee_info_html = str_replace( '[OFFICE]', $content->Office, $employee_info_html);
     $employee_info_html = str_replace( '[PHONE]', $content->Phone, $employee_info_html);
-    $employee_info_html = str_replace( '[BM]', causfa_groups_BM(), $employee_info_html);
+    $FAL_info = causfa_groups_FAL();
+    $FAL_name = '';
+    $FAL_email = '';
+    $FAL_phone = '';
+    for ($i = 0; $i < count($FAL_info); $i++) {
+        if ($i == 0) {
+            $FAL_name = $FAL_info[$i]['Name'];
+            $FAL_email = $FAL_info[$i]['Email'];
+            $FAL_phone = $FAL_info[$i]['Phone'];
+        } else {
+            $FAL_name = $FAL_name.', '.$FAL_info[$i]['Name'];
+            $FAL_email = $FAL_email.', '.$FAL_info[$i]['Email'];
+            $FAL_phone = $FAL_phone.', '.$FAL_info[$i]['Phone'];
+        }
+    }
+    $employee_info_html = str_replace('[FAL]', $FAL_name, $employee_info_html);
+    $employee_info_html = str_replace('[FAL-EMAIL]', $FAL_email, $employee_info_html);
+    $employee_info_html = str_replace('[FAL-PHONE]', $FAL_phone, $employee_info_html);
+    $FAC_info = causfa_groups_FAC();
+    $FAC_name = '';
+    $FAC_email = '';
+    $FAC_phone = '';
+    for ($i = 0; $i < count($FAC_info); $i++) {
+        if ($i == 0) {
+            $FAC_name = $FAC_info[$i]['Name'];
+            $FAC_email = $FAC_info[$i]['Email'];
+            $FAC_phone = $FAC_info[$i]['Phone'];
+        } else {
+            $FAC_name = $FAC_name.', '.$FAC_info[$i]['Name'];
+            $FAC_email = $FAC_email.', '.$FAC_info[$i]['Email'];
+            $FAC_phone = $FAC_phone.', '.$FAC_info[$i]['Phone'];
+        }
+    }
+    $employee_info_html = str_replace( '[FAC]', $FAC_name, $employee_info_html);
+    $employee_info_html = str_replace( '[FAC-EMAIL]', $FAC_email, $employee_info_html);
+    $employee_info_html = str_replace( '[FAC-PHONE]', $FAC_phone, $employee_info_html);
+    $BM_info = causfa_groups_BM();
+    $BM_name = '';
+    $BM_email = '';
+    $BM_phone = '';
+    for ($i = 0; $i < count($BM_info); $i++) {
+        if ($i == 0) {
+            $BM_name = $BM_info[$i]['Name'];
+            $BM_email = $BM_info[$i]['Email'];
+            $BM_phone = $BM_info[$i]['Phone'];
+        } else {
+            $BM_name = $BM_name.', '.$BM_info[$i]['Name'];
+            $BM_email = $BM_email.', '.$BM_info[$i]['Email'];
+            $BM_phone = $BM_phone.', '.$BM_info[$i]['Phone'];
+        }
+    }
+    $employee_info_html = str_replace( '[BM]', $BM_name, $employee_info_html);
+    $employee_info_html = str_replace( '[BM-EMAIL]', $BM_email, $employee_info_html);
+    $employee_info_html = str_replace( '[BM-PHONE]', $BM_phone, $employee_info_html);
 
     return $employee_info_html;
 }

@@ -56,4 +56,4 @@ add_action( 'wp_ajax_causfa_upload_form_office', 'causfa_upload_form_office');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
-add_shortcode( 'causfa_test', 'causfa_generate_form_Home'); //shortcode for a dev space to test functionality
+add_shortcode( 'causfa_test', 'causfa_groups_FAL'); //shortcode for a dev space to test functionality
