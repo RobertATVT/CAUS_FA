@@ -4,6 +4,9 @@ html {
  font-size: 12px;
 }
 
+.row {
+    margin-bottom: 0px;
+}
 .x-navbar-inner {
     /* max-height: 30px; */
 }
@@ -172,19 +175,16 @@ html {
 .row .col.faa-asset {
 	height: 45px;
 	min-height: 45px;
-	background: #fff;
 	border: 1px solid #ccc;
 	border-radius: 0px;
-	padding: 0px;
-    padding-top: 10px;
-    line-height: 15px;
+    line-height: 18px;
 	overflow: hidden;
     width: 54%;
+    background: #fff;
 }
 .row .col.faa-asset-show {
-	height: 135px;
+	height: 115px;
     line-height: 17px;
-    padding-top: 15px;
 }
 .faa-toggle {
 	width: 45px;
@@ -319,23 +319,25 @@ html {
 .small-title {
 	margin-top: 4px;
 }
+.modal .modal-content {
+    padding: 0px;
+}
 .faa-modal-content {
     background: #efefef;
     border: 1px solid #333;
     border-radius: 5px;
     padding: 0px;
 }
-
 .faa-modal-title {
     background: #333;
     line-height: 35px;
     color: #fff;
     padding: 10px;
+    margin-bottom: 0px
 }
 .faa-modal-header{
     padding: 0px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 0px;
 }
 .faa-modal-header button {
     position: absolute;
@@ -344,7 +346,7 @@ html {
     padding: 5px;
     color: #fff;
     background: rgba(0,110,255,1);
-    border-radius: 5px;
+    border-radius: 0px;
     opacity: 1;
 }
 .faa-modal-body {
@@ -355,7 +357,7 @@ html {
     border: 1px solid #aaa; 
     padding: 10px; 
     background: #fff; 
-    border-radius: 5px;
+    border-radius: 0px;
 }
 .faa-input {
     border: 1px solid #aaa;
