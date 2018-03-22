@@ -25,12 +25,20 @@ function causfa_groups_FAL() {
             for ($j=0; $j < count($users_in_group); $j++) {
                 for($k=0; $k < count($liaison_group->users); $k++) {
                     if ($liaison_group->users[$k]->ID == $users_in_group[$j]->ID) {
-                        $FAL = array(
-                            'Name' => $liaison_group->users[$k]->display_name,
-                            'Email' => $liaison_group->users[$k]->user_email,
-                            'Phone' => ''
-                        );
-                        $output[] = $FAL;
+                        $isInList = false;
+                        for($l=0; $l < count($output); $l++) {
+                            if($output[$l]['Name'] == $liaison_group->users[$k]->display_name) {
+                                $isInList = true;
+                            }
+                        }
+                        if (!$isInList) {
+                            $FAL = array(
+                                'Name' => $liaison_group->users[$k]->display_name,
+                                'Email' => $liaison_group->users[$k]->user_email,
+                                'Phone' => ''
+                            );
+                            $output[] = $FAL;
+                        }
                     }
                 }
             }
@@ -58,12 +66,20 @@ function causfa_groups_FAC() {
             for ($j=0; $j < count($users_in_group); $j++) {
                 for($k=0; $k < count($coordinator_group->users); $k++) {
                     if ($coordinator_group->users[$k]->ID == $users_in_group[$j]->ID) {
-                        $FAC = array(
-                            'Name' => $coordinator_group->users[$k]->display_name,
-                            'Email' => $coordinator_group->users[$k]->user_email,
-                            'Phone' => ''
-                        );
-                        $output[] = $FAC;
+                        $isInList = false;
+                        for($l=0; $l < count($output); $l++) {
+                            if($output[$l]['Name'] == $coordinator_group->users[$k]->display_name) {
+                                $isInList = true;
+                            }
+                        }
+                        if (!$isInList) {
+                            $FAC = array(
+                                'Name' => $coordinator_group->users[$k]->display_name,
+                                'Email' => $coordinator_group->users[$k]->user_email,
+                                'Phone' => ''
+                            );
+                            $output[] = $FAC;
+                        }
                     }
                 }
             }
@@ -91,12 +107,20 @@ function causfa_groups_BM() {
             for ($j=0; $j < count($users_in_group); $j++) {
                 for($k=0; $k < count($business_manager_group->users); $k++) {
                     if ($business_manager_group->users[$k]->ID == $users_in_group[$j]->ID) {
-                        $BM = array(
-                            'Name' => $business_manager_group->users[$k]->display_name,
-                            'Email' => $business_manager_group->users[$k]->user_email,
-                            'Phone' => ''
-                        );
-                        $output[] = $BM;
+                        $isInList = false;
+                        for($l=0; $l < count($output); $l++) {
+                            if($output[$l]['Name'] == $business_manager_group->users[$k]->display_name) {
+                                $isInList = true;
+                            }
+                        }
+                        if(!$isInList) {
+                            $BM = array(
+                                'Name' => $business_manager_group->users[$k]->display_name,
+                                'Email' => $business_manager_group->users[$k]->user_email,
+                                'Phone' => ''
+                            );
+                            $output[] = $BM;
+                        }
                     }
                 }
             }
