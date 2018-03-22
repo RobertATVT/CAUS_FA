@@ -13,8 +13,9 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="css/style4.css" rel="stylesheet" type="text/css">
-
+</head>
 <body>
+<!-- BEGIN employee_info_template.htm l -->
 <nav>
     <div class="nav-wrapper">
         <a href="#" data-activates="faa-sidebar" class="button-collapse show-on-large" onclick="causSideNav"><i class="material-icons">menu</i></a>
@@ -111,10 +112,11 @@
           </ul>
     </div>
 </nav>
+<!-- END employee_info_template.html -->
 <!-- BEGIN asset_header_Template.html -->
 <div class="row faa-header" id="asset-info-title" style="margin-bottom: 0px;">
     <div class="col m12">
-        <div class="col m6 s12 center">ASSET INFORMATION</div>
+        <div class="center col m6 s12">ASSET INFORMATION</div>
         <div class="col m1 hide-on-small-only"> </div>
         <div class="col m2 hide-on-small-only center">ASSET STATUS</div>
         <div class="col m3 hide-on-small-only">
@@ -174,7 +176,7 @@
                     <div class="col m3 s3"></div>
                 </div>
             </div>
-            <div class="col m1 s1 center"><button id="[ID]" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button></div>
+            <div class="col m1 s1 faa-button center"><button id="[ID]" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button></div>
             <div class="text-center col m2 s12 faa-asset-status" id="status-[ID]">[STATUS]</div>
             <div class="text-center col m3 s12 faa-asset-button">
                 <div class="col m3 s3 center"><button class="faa-icon-transfer" id="transfer-[ID]" onclick="transferModalRequested(this)"></button></div>
@@ -230,9 +232,7 @@
                     <div class="col m3 s3"></div>
                 </div>
             </div>
-            <div class="col m1 s1 center">
-                <button id="0" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button>
-            </div>
+            <div class="col m1 s1 center faa-button"><button id="0" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button></div>
             <div class="text-center col m2 s12 faa-asset-status faa-asset-status-office" id="status-0">[STATUS]</div>
             <div class="text-center col m3 s12 faa-asset-button">
                 <div class="col m3 s3 center"><button class="faa-icon-transfer" id="transfer-0" onclick="transferModalRequested(this)"></button></div>

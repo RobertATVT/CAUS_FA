@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 html {
-
+ font-size: 12px;
 }
 
 .x-navbar-inner {
-    max-height: 30px;
+    /* max-height: 30px; */
 }
 
 /* BEGIN SIDENAV MENU */
@@ -80,8 +80,6 @@ html {
     font-size: 90%; 
     padding-left: 10px; 
     line-height: 20px;
-    
-    
 }
 .faa-topbar  {
     font-size: 200%;
@@ -103,21 +101,6 @@ html {
 }
 /* END SIDENAV MENU*/
 
-
-/* BEGIN PURE.CSS MODIFICATIONS */
-
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-    /* Set your content font stack here: */
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
-	font-size: 14px;
-}
-
-
-/* END PURE.CSS MODIFICATIONS */
-
-
-
 /* BEGIN FAA STYLING */
 
 .faa-container {
@@ -132,14 +115,17 @@ html, button, input, select, textarea,
 	border: none;
 	padding: 20px;
 }
-.faa-header {
+.row.faa-header {
 	background: #333;
 	color: #fff;
-	border-radius: 5px;
+	border-radius: 0px;
 	height: 35px;
 	padding: 0px;
-	line-height: 0px;
-    text-align: center;
+	line-height: 35px;
+    font-size: 110%;
+    font-weight: 700; 
+    letter-spacing: .1em;
+    margin-bottom: 0px
 }
 .faa-header-active {
 	background: #333;
@@ -157,63 +143,87 @@ html, button, input, select, textarea,
 	line-height: 0px;
     text-align: center;
 }
-.faa-content {
-	background: #efefef;
-	border: 1px solid #333;
-	border-radius: 5px;
-	margin-top: 10px;
-	margin-bottom: 20px !important;
-	padding: 10px;
+.row .col.faa-content {
+    border: 0px solid #ccc; 
+    border-radius: 0px; 
+    padding: 5px; 
+    background: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-.faa-asset {
+.row.faa-content-grey {
+    padding: 5px;
+    padding-top: 7px;
+    background: #efefef;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+.row .col.faa-asset-listing {
+    border: 0px solid #ccc; 
+    border-radius: 0px; 
+    padding: 5px; 
+    background: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.row .col.faa-asset {
 	height: 45px;
 	min-height: 45px;
 	background: #fff;
-	border: 1px solid #333;
-	border-radius: 5px;
-	padding: 2px;
-    padding-left: 5px;
-	margin-top: 2px;
-    margin-bottom: 10px;
-    line-height: 20px;
+	border: 1px solid #ccc;
+	border-radius: 0px;
+	padding: 0px;
+    padding-top: 10px;
+    line-height: 0px;
 	overflow: hidden;
+    width: 54%;
 }
-.faa-asset-show {
-	height: 125px;
-}
-.faa-asset-status {
-	padding: 2px;
-	padding-left: 10px;
-	padding-right: 10px;
+.row .col.faa-asset-show {
+	height: 135px;
+    line-height: 0px;
+    padding-top: 15px;
 }
 .faa-toggle {
-	position: absolute;
-	right: 0px;
-    top: 5px;
 	width: 45px;
 	height: 45px;
 	border: 1px solid #333;
 	border-radius: 5px;
 	padding: 0px;
-	padding-bottom: 1px;
-	margin-top: -6px;
-	margin-right: -1px;
 	text-align: center;
 	font-weight: 700;
 	font-size: 250%;
-    background: none;
-    line-height: 35px;
+    background: #861F41;
+    line-height: 45px;
+    box-shadow: none;
+}
+.faa-toggle:hover {
+    background: #e87222;
+    box-shadow: none;
+}
+.faa-toggle:focus {
+    background: #e87222;
+    box-shadow: none;
+    border: none;
+}
+.asset-icon-label {
+    font-size: 70%;
+    font-weight: 700;
+}
+.row .col.faa-button {
+    width: 4%;
+    
 }
 .faa-asset-status {
-	padding: 2px;
-    padding-left: 0px;
+	padding: 0px;
 	text-align: center;
-	font-weight: 900;
+	font-weight: 700;
 	font-size: 175%;
-    line-height: 39px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    margin-top: 2px;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-top: 0px;
+    background: #fff;
 }
 .faa-asset-status-office {
     background: #060 !important;
@@ -441,8 +451,28 @@ ul.thumbnails {
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
- 
+@media (max-width: 576px) {
+    .row .col.faa-asset {
+        height: 45px;
+        font-size: 65%;
+        padding-top: 10px;
+        margin-bottom: 5px;
+        width: 86%;
+    }
+    .row .col.faa-asset-show {
+        height: 110px;
+        font-size: 65%;
+        padding-top: 10px;
+    }
+    .row .col.faa-asset-status {
+        margin-bottom: 5px
+    }
+    .lw-100 .row .col {
+        width: 100%;
+    }
+    .row .col.faa-button {
+        width: 6%;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */

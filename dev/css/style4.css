@@ -5,7 +5,7 @@ html {
 }
 
 .x-navbar-inner {
-    max-height: 30px;
+    /* max-height: 30px; */
 }
 
 /* BEGIN SIDENAV MENU */
@@ -176,6 +176,7 @@ html {
     padding-top: 10px;
     line-height: 0px;
 	overflow: hidden;
+    width: 54%;
 }
 .row .col.faa-asset-show {
 	height: 135px;
@@ -208,7 +209,10 @@ html {
     font-size: 70%;
     font-weight: 700;
 }
-
+.row .col.faa-button {
+    width: 4%;
+    
+}
 .faa-asset-status {
 	padding: 0px;
 	text-align: center;
@@ -450,13 +454,14 @@ ul.thumbnails {
 @media (max-width: 576px) {
     .row .col.faa-asset {
         height: 45px;
-        font-size: 80%;
+        font-size: 65%;
         padding-top: 10px;
         margin-bottom: 5px;
+        width: 86%;
     }
     .row .col.faa-asset-show {
         height: 110px;
-        font-size: 80%;
+        font-size: 65%;
         padding-top: 10px;
     }
     .row .col.faa-asset-status {
@@ -464,6 +469,9 @@ ul.thumbnails {
     }
     .lw-100 .row .col {
         width: 100%;
+    }
+    .row .col.faa-button {
+        width: 6%;
     }
 }
 

@@ -1,108 +1,60 @@
-<!-- BEGIN SIDENAV TEST
-    <div id="mySidenav" onscroll="" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-    </div>
-
-    <div class="pure-g">
-
-        <div class="pure-u-24-24" style="background: #861F41; height: 35px; color: #fff; font-size: 150%; line-height: 35px; padding-left: 5px; margin-bottom: 10px;">
-                <span onclick="openNav()">&#9776;</span>
-        </div>
-        <div class="pure-u-24-24" id="main" style="padding: 0px;">
-            <ul class="nav nav-tabs" id="FAA-Nav" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="FixedAssets-Tab" data-toggle="tab" href="#FixedAssets" role="tab" aria-controls="FixedAssets" aria-selected="true">Fixed Assets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="PendingItems-Tab" data-toggle="tab" href="#PendingItems" role="tab" aria-controls="PendingItems" aria-selected="false">Pending Items</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="AdminReports-Tab" data-toggle="tab" href="#AdminReports" role="tab" aria-controls="AdminReports" aria-selected="false">Admin Reports</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" id="Disabled-Tab" data-toggle="tab" href="#Disabled" role="tab" aria-controls="Disabled" aria-selected="false">Disabled</a>
-                </li>
-            </ul>
-            <div class="tab-content" id="FAA-Body">
-                <div class="tab-pane fade show active" id="FixedAssets" role="tabpanel" aria-labelledby="FixedAssets-Tab">Page 1</div>
-                <div class="tab-pane fade" id="PendingItems" role="tabpanel" aria-labelledby="PendingItems-Tab">Page 2</div>
-                <div class="tab-pane fade" id="AdminReports" role="tabpanel" aria-labelledby="AdminReports-Tab">Page 3</div>
-                <div class="tab-pane fade" id="Disabled" role="tabpanel" aria-labelledby="Disabled-Tab">Page 4</div>
-            </div>
-        </div>
-    </div>
- END SIDENAV TEST -->
 <nav>
     <div class="nav-wrapper">
-        <a href="#" data-activates="faa-sidebar" class="button-collapse show-on-large" onclick="causSideNav()"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="faa-sidebar" class="button-collapse show-on-large" onclick="causSideNav"><i class="material-icons">menu</i></a>
         <h3 class="faa-topbar">CAUS FIXED ASSETS</h3>
-
         <ul class="side-nav white" id="faa-sidebar">
-            <li class="sidenav-header">
+            <li class="sidenav-header lw-100">
                 <div class="row">
                     <div class="col m12 center lh-35" style="font-size: 150%; color: #fff;">[NAME]</div>
                     <div class="col m12 center lh-25" style="font-size: 125%; color: #fff;">[OFFICE]</div>
                     <div class="col m12 center lh-25" style="font-size: 90%; color: #fff;">[PHONE]</div>
                 </div>
             </li>
-            <li class="white left lw-100">
-                <div class="pure-g">
-                    <div class="pure-u-24-24">
+            <li class="white lw-100">
+                <div class="row">
+                    <div class="col m12" style="padding: 0px;">
                         <span class="left lw-100 faa-sn-header">Fixed Assets Liaison</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i1"><b>[FAL]</b></span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>EMAIL:</b> [FAL-EMAIL]</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>PHONE:</b> [FAL-PHONE]</span>
                     </div>
-                    <div class="pure-u-24-24">
-                        <span class="left lw=100 faa-sn-i3">&nbsp;</span>
-                    </div>
                 </div>
             </li>
-            <li class="white left lw-100">
-                <div class="pure-g">
-                    <div class="pure-u-24-24">
+            <li class="white lw-100">
+                <div class="row">
+                    <div class="col m12" style="padding: 0px;">
                         <span class="left lw-100 faa-sn-header">Fixed Assets Coordinator</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i1"><b>[FAC]</b></span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>EMAIL:</b> [FAC-EMAIL]</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>PHONE:</b> [FAC-PHONE]</span>
-                    </div>
-                     <div class="pure-u-24-24">
-                        <span class="left lw=100 faa-sn-i3">&nbsp;</span>
                     </div>
                 </div>
             </li>
-            <li class="white left lw-100">
-                <div class="pure-g">
-                    <div class="pure-u-24-24">
+            <li class="white lw-100">
+                <div class="row">
+                    <div class="col m12" style="padding: 0px;">
                         <span class="left lw-100 faa-sn-header">Business Manager</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i1"><b>[BM]</b></span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>EMAIL:</b> [BM-EMAIL]</span>
                     </div>
-                    <div class="pure-u-24-24">
+                    <div class="col m12">
                         <span class="left lw=100 faa-sn-i2"><b>PHONE:</b> [BM-PHONE]</span>
-                    </div>
-                     <div class="pure-u-24-24">
-                        <span class="left lw=100 faa-sn-i3">&nbsp;</span>
                     </div>
                 </div>
             </li>
@@ -142,54 +94,3 @@
           </ul>
     </div>
 </nav>
-
-    <div style="padding-left: 10px; padding-right: 10px; border: 1px solid #ccc; background: #f8f8f8;">
-        <div class="container-fluid faa-container">
-<!--- Unused Employee Info Template
-            <div class="row" id="employee-info-title">
-                <div class="col-lg-12 faa-header s2">
-                    <div class="text-center col-md-4">Employee Information</div>
-                    <div class="text-center col-md-4"></div>
-                    <div class="text-center col-md-4">Liaison Information</div>
-                </div>
-            </div>
-            <div class="row" id="employee-info">
-                <div class="col-lg-12 faa-content">
-                    <div class="col-lg-12" style="padding: 0px;">
-                        <div class="col-sm-2 info-title">EMPLOYEE NAME:</div>
-                        <div class="col-sm-3">[NAME]</div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-2 info-title">FIXED ASSETS LIAISON:</div>
-                        <div class="col-sm-3">[FAL]</div>
-                    </div>
-                    <div class="col-lg-12" style="padding: 0px;">
-                        <div class="col-sm-2 info-title">VT PID:</div>
-                        <div class="col-sm-3" id="employeePID">[PID]</div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-3"></div>
-                    </div>
-                    <div class="col-lg-12" style="padding: 0px;">
-                        <div class="col-sm-2 info-title">EMAIL ADDRESS:</div>
-                        <div class="col-sm-3">[EMAIL]</div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-2 info-title">FIXED ASSETS COORDINATOR:</div>
-                        <div class="col-sm-3">[FAC]</div>
-                    </div>
-                    <div class="col-lg-12" style="padding: 0px;">
-                        <div class="col-sm-2 info-title">OFFICE LOCATION:</div>
-                        <div class="col-sm-3">[OFFICE]</div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-3"></div>
-                    </div>
-                    <div class="col-lg-12" style="padding: 0px;">
-                        <div class="col-sm-2 info-title">PHONE NUMBER:</div>
-                        <div class="col-sm-3">[PHONE]</div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-2 info-title">BUSINESS MANAGER:</div>
-                        <div class="col-sm-3">[BM]</div>
-                    </div>
-                </div>
-            </div>
----->
