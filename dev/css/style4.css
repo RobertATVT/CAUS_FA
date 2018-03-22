@@ -166,6 +166,9 @@ html {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.row .faa-asset-items {
+    margin-bottom: 3px;
+}
 .row .col.faa-asset {
 	height: 45px;
 	min-height: 45px;
@@ -174,13 +177,13 @@ html {
 	border-radius: 0px;
 	padding: 0px;
     padding-top: 10px;
-    line-height: 0px;
+    line-height: 15px;
 	overflow: hidden;
     width: 54%;
 }
 .row .col.faa-asset-show {
 	height: 135px;
-    line-height: 0px;
+    line-height: 17px;
     padding-top: 15px;
 }
 .faa-toggle {
@@ -191,9 +194,9 @@ html {
 	padding: 0px;
 	text-align: center;
 	font-weight: 700;
-	font-size: 250%;
+	font-size: 200%;
     background: #861F41;
-    line-height: 45px;
+    line-height: 35px;
     box-shadow: none;
     color: #fff;
 }
@@ -343,22 +346,6 @@ html {
     background: rgba(0,110,255,1);
     border-radius: 5px;
     opacity: 1;
-}
-.modal {
-    text-align: center;
-    padding-right: 0px;
-}
-.modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-}
-.modal-dialog {
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
-    width: 50%;
 }
 .faa-modal-body {
     padding: 30px;

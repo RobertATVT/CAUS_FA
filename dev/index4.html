@@ -6,7 +6,7 @@
 
     <title>Your page title</title>
     
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -179,10 +179,10 @@
             <div class="col m1 s1 faa-button center"><button id="[ID]" class="btn faa-toggle" type="button" onclick="faa_asset_more_info(this.id)">+</button></div>
             <div class="text-center col m2 s12 faa-asset-status" id="status-[ID]">[STATUS]</div>
             <div class="text-center col m3 s12 faa-asset-button">
-                <div class="col m3 s3 center"><button class="faa-icon-transfer" id="transfer-[ID]" onclick="transferModalRequested(this)"></button></div>
-                <div class="col m3 s3 center"><button class="faa-icon-surplus" id="surplus-[ID]" onclick="surplusModalRequested(this)"></button></div>
-                <div class="col m3 s3 center"><button class="faa-icon-gallery" id="gallery-[ID]" onclick="galleryModalRequested(this)"></button></div>
-                <div class="col m3 s3 center"><button class="faa-icon-forms" id="forms-[ID]" onclick="formsModalRequested(this)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-transfer" id="transfer-[ID]" onclick="transferModalRequested(this.id)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-gallery" id="gallery-[ID]" onclick="galleryModalRequested(this.id)"></button></div>
+                <div class="col m3 s3 center"><button class="faa-icon-forms" id="forms-[ID]" onclick="formsModalRequested(this.id)"></button></div>
             </div>
         </div>
 <!-- END asset_template.html -->
@@ -266,13 +266,10 @@
 <!-- END asset_total_template.html -->
 <!-- BEGIN modal.html -->
 <!-----Transfer Modal----->
-<div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
+<!--<div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content faa-modal-content">
             <div class="modal-header faa-modal-header">
-<!--                <button type="button" class="close btn-primary" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button> -->
                 <h4 class="modal-title faa-modal-title" id="transferModalLabel">Asset Transfer</h4>
             </div>
             <div class="modal-body faa-modal-body">
@@ -303,6 +300,36 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
         </div>
+    </div>
+</div>
+--->
+<div id="transferModal" class="modal">
+    <div class="modal-content">
+        <h4 class="faa-modal-title">Asset Transfer</h4>
+        <div class="row faa-modal-info" style="">
+            <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+            <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <form autocomplete="off">
+                <div class="col-sm-12 form-group" style="padding: 0px;">
+                    <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECIEVER PID</label>
+                    <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
+                    <datalist id="PIDs"></datalist>
+                    <input type="hidden" id="transferIndex" value="" />
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <p>Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
+        <button type="button" class="btn btn-secondary modal-close">Cancel</button>
     </div>
 </div>
 <!-----Surplus Modal------>
@@ -343,9 +370,11 @@
             <div class="modal-body faa-modal-body">
                 <div class="row">
                     <form >
-                        Select image to upload:
+                        Upload new image:
                         <input type="file" name="fileToUpload" id="imageFileToUpload">
                         <input type="button" value="Upload Image" onclick="uploadImage()">
+                        <input type="hidden" id="galleryPID">
+                        <input type="hidden" id="galleryPtag">
                     </form>
                 </div>
                 <!-- Slider -->
@@ -433,6 +462,17 @@
                 <button type="button" class="btn btn-secondary" onclick="generateForm(this, 0)">Generate Home Use Form</button>
                 <button type="button" class="btn btn-secondary" onclick="generateForm(this, 1)">Generate Office Use Form</button>
                 <input type="hidden" id="formsPtag" value="" />
+                <input type="hidden" id="formsPID" value="" />
+                <form >
+                    Upload new Home Use Form:
+                    <input type="file" name="fileToUpload" id="homeFormToUpload">
+                    <input type="button" value="Upload Image" onclick="uploadFormHome()">
+                </form>
+                <form >
+                    Upload new Office Use Form:
+                    <input type="file" name="fileToUpload" id="officeFormToUpload">
+                    <input type="button" value="Upload Image" onclick="uploadFormOffice()">
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -478,7 +518,7 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
 <!--    <script type="text/javascript" src="js/sidenav.js"></script>-->
-    <script src="js/bootstrap.js"></script>
+<!--    <script src="js/bootstrap.js"></script> -->
     <script src="js/modal.js"></script>
     <script src="js/toggle.js"></script>
     <script src="js/main.js"></script>

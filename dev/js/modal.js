@@ -5,9 +5,10 @@ function transferModalRequested(elementID) {
     var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
     document.getElementById('recipient-name').value = '';
     jQuery('#transferModal').find('#transferIndex').val(id);
-    jQuery('#transferModal').find('.modal-body').find('.asset-tag').html(tag);
-    jQuery('#transferModal').find('.modal-body').find('.asset-description').html(desc);
-    jQuery('#transferModal').modal('show');
+    jQuery('#transferModal').find('.asset-tag').html(tag);
+    jQuery('#transferModal').find('.asset-description').html(desc);
+    jQuery('#transferModal').modal();
+    jQuery('#transferModal').modal('open');
 }
 function surplusModalRequested(elementID) {
     var id = elementID.split('-')[1];
@@ -21,12 +22,20 @@ function surplusModalRequested(elementID) {
 function galleryModalRequested(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    jQuery('#galleryModal').find('#galleryPtag').val(tag);
+    var PID = document.getElementById('employeePID').innerHTML;
+    jQuery('#galleryModal').find('#galleryPID').val(PID);
+    jQuery('#imageFileToUpload').val('');
     jQuery('#galleryModal').modal('show');
 }
 function formsModalRequested(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    var PID = document.getElementById('employeePID').innerHTML;
+    jQuery('#formsModal').find('#formsPID').val(PID);
     jQuery('#formsModal').find('#formsPtag').val(tag);
+    jQuery('#homeFormToUpload').val('');
+    jQuery('#officeFormToUpload').val('');
     jQuery('#formsModal').modal('show');
 }
 function modalRequestedOnPendingAsset(elementID) {
