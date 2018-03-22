@@ -166,6 +166,9 @@ html {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.row .faa-asset-items {
+    padding-bottom: 3px;
+}
 .row .col.faa-asset {
 	height: 45px;
 	min-height: 45px;
