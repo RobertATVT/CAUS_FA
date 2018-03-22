@@ -320,7 +320,7 @@ html {
 	margin-top: 4px;
 }
 .modal .modal-content {
-    padding: 0px;
+    padding: 0px !important;
 }
 .faa-modal-content {
     background: #efefef;
