@@ -17,6 +17,7 @@ html {
     height: 50px;
     line-height: 50px;
 }
+
 .side-nav li > a {
   padding: 0 16px;
 }
@@ -327,7 +328,7 @@ html {
     transform: translateY(25%) !important;
 }
 .modal .modal-content {
-    padding: 0px;
+    padding: 0px !important;
 }
 .faa-modal-content {
     background: #efefef;
@@ -370,7 +371,41 @@ html {
     border: 1px solid #aaa;
     background: #fff;
 }
-
+.btn-primary {
+    background: #e87722; 
+}
+.btn-primary:focus {
+    background: #861F41;
+    border: none;
+}
+.btn-primary:hover {
+    background: #861F41;
+}
+.btn-secondary {
+    background: #cfcfcf; 
+}
+.btn-secondary:focus {
+    background: #aaa;
+    border: none;
+}
+.btn-secondary:hover {
+    background: #aaa;
+}
+.btn {
+    border: none;
+}
+.btn:focus {
+    border: none;
+    outline: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: 1px solid #333;
+}
 
 /*==============  Gallery CSS  ==============*/
 .carousel-control:before {
@@ -456,6 +491,9 @@ ul.thumbnails {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    
+     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 35px;
+        line-height: 50px;
+    } 
 }
 
