@@ -21,14 +21,7 @@ function closeNav() {
 }
 
 function causSideNav() {
-    var header = jQuery('header');
-    var mainBody = header.next();
-    var offset = mainBody.offset();
-    var scrollTop = jQuery(window).scrollTop();
-    offset = offset['top'] - scrollTop;
-    offset = offset + 'px';
-    var sidebar = document.getElementById('faa-sidebar');
-    sidebar.style.top = offset;
+    setInterval(function() {scrollSideNav()}, 10);
     $('.button-collapse').sideNav({
         menuWidth: 300, // Default is 300
         edge: 'left', // Choose the horizontal origin
@@ -36,5 +29,14 @@ function causSideNav() {
         draggable: true // Choose whether you can drag to open on touch screens
         });
           // START OPEN
-    //$('.button-collapse').sideNav('hide');
+    $('.button-collapse').sideNav('hide');
 };
+function scrollSideNav() {
+    var menu = document.getElementById('menu-main-nav');
+    var rect = menu.getBoundingClientRect();
+    offset = rect.bottom;
+    offset = offset + 'px';
+    var sidebar = document.getElementById('faa-sidebar');
+    sidebar.style.top = offset;
+}
+
