@@ -38,7 +38,7 @@ function scrollSideNav() {
         var menuRect = menu.getBoundingClientRect();
         offset = menuRect.bottom;
     } else {
-        var header = jQuery('header');
+        var header = document.getElementsByTagName('header')[0];
         var headerRect = header.getBoundingClientRect();
         offset = headerRect.bottom;
 
