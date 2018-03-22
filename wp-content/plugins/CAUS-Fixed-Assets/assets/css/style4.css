@@ -444,7 +444,7 @@ ul.thumbnails {
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     .row .col.faa-asset {
         height: 45px;
         font-size: 65%;
@@ -469,7 +469,7 @@ ul.thumbnails {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .nav-tabs > li {
         width: 25%;
         outline: 0px;
@@ -486,6 +486,9 @@ ul.thumbnails {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    
+     nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 35px;
+        line-height: 35px;
+    } 
 }
 

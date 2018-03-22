@@ -444,7 +444,7 @@ ul.thumbnails {
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     .row .col.faa-asset {
         height: 45px;
         font-size: 65%;
@@ -469,7 +469,7 @@ ul.thumbnails {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
     .nav-tabs > li {
         width: 25%;
         outline: 0px;
