@@ -29,8 +29,9 @@ html {
 }
 
 .sidenav-header {
+    position: absolute;
+    top: 0px;
     background-size: cover;
-
     background: #e87722;
     padding: 0px;
     height: 100px !important;
@@ -609,7 +610,7 @@ ul.thumbnails {
     background-color: #fff;
     left: 45px;
     height: 100%;
-    width: 98.42%;
+    width: 97.65%;
     padding-left: 0px;
     padding-top: 0px;
     z-index: 10;
