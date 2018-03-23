@@ -15,7 +15,9 @@
  */
 function causfa_load_employee_view() {
     global $wpdb;
+    //session_start();
     $current_user = wp_get_current_user();
+    $_SESSION['PID'] = $current_user->user_nicename;
     $result_user = $wpdb->get_row('SELECT * FROM causfa_custodians WHERE Email = "'.$current_user->user_email.'";');
     if ($result_user == null) {
         return causfa_new_custodian_dialog();

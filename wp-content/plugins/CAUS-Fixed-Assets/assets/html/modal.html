@@ -64,7 +64,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
+        <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
         <button type="button" class="btn btn-secondary modal-close">Cancel</button>
     </div>
 </div>
@@ -112,7 +112,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset(this, [PID])">Surplus</button>
+        <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
         <button type="button" class="btn btn-secondary modal-close">Cancel</button>
     </div>
 </div>
@@ -217,7 +217,6 @@
                 Upload new image:
                 <input type="file" name="fileToUpload" id="imageFileToUpload">
                 <input type="button" value="Upload Image" onclick="uploadImage()">
-                <input type="hidden" id="galleryPID">
                 <input type="hidden" id="galleryPtag">
             </form>
         </div>
@@ -260,7 +259,6 @@
         <button type="button" class="btn btn-secondary" onclick="generateForm(this, 0)">Generate Home Use Form</button>
         <button type="button" class="btn btn-secondary" onclick="generateForm(this, 1)">Generate Office Use Form</button>
         <input type="hidden" id="formsPtag" value="" />
-        <input type="hidden" id="formsPID" value="" />
         <form >
             Upload new Home Use Form:
             <input type="file" name="fileToUpload" id="homeFormToUpload">
@@ -274,5 +272,15 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+    </div>
+</div>
+
+<!---- Response Modal ----->
+<div id="responseModal" class="modal">
+    <div class="modal-content">
+        <p>An email has been sent to your Fixed Asset Liaison and Business manager containing the information about your request. They will contact your soon to make arrangements.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary modal-close">Close</button>
     </div>
 </div>

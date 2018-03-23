@@ -41,7 +41,7 @@ function validateForm(element, PID) {
     for(var i = 0; i < children.length; i++){
         if(children[i].value == input.value) {
             var PID_dest = children[i].getAttribute('data_value');
-            transferAsset(element, PID, PID_dest);
+            transferAsset(PID_dest);
             return true;
         }
     };

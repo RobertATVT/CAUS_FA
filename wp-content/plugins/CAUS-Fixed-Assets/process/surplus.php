@@ -14,8 +14,8 @@ function causfa_surplus() {
     $output = array(
         'status' => 0
     );
-    $ptag = $_POST['ptag'];
-    $PID_origin = $_POST['origin'];
+    $ptag = $_SESSION['ptag'];
+    $PID_origin = $_SESSION['PID'];
     $type = $_POST['type'];
     $date_created = current_time('mysql');
     $PID_dest = 'surplus';

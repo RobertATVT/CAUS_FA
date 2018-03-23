@@ -1,9 +1,7 @@
-function surplusAsset(element, PID) {
+function surplusAsset() {
     ptag = jQuery('#surplusModal').find('.asset-tag').html();
     var form = {
         action: 'causfa_surplus',
-        ptag: ptag,
-        origin:  PID,
         type: 1
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
@@ -12,20 +10,18 @@ function surplusAsset(element, PID) {
             var status = jQuery(('#status-' + id))
             status.addClass('faa-asset-status-pending');
             status.html("Pending Surplus");
-            jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id');
+            jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery('#surplusModal').find('.modal-body').html('<p>An email has been sent to your Fixed Asset Liaison and Business manager contianing the infromation about your surplus request. They will contact your soon to make arrangements.</p>');
-            jQuery('#surplusModal').find('.modal-footer').html('<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>');
+            jQuery('#surplusModal').modal('close');
+            jQuery('#responseModal').modal();
+            jQuery('#responseModal').modal('open');
         }
     });
 }
 
-function transferAsset(element, PID, PID_dest) {
-    ptag = jQuery('#transferModal').find('.asset-tag').html();
+function transferAsset(PID_dest) {
     var form = {
         action: 'causfa_transfer_asset',
-        ptag: ptag,
-        origin: PID,
         dest: PID_dest,
         type: 0
     };
@@ -35,11 +31,11 @@ function transferAsset(element, PID, PID_dest) {
             var status = jQuery(('#status-' + id))
             status.addClass('faa-asset-status-pending');
             status.html("Pending Transfer");
-            jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id');
+            jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery('#transferModal').find('.modal-body').html('<p>An email has been sent to your Fixed Asset Liaison and Business manager contianing the infromation about your transfer request. They will contact your soon to make arrangements.</p>');
-            jQuery('#transferModal').find('.modal-footer').html('<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>');
-
+            jQuery('#transferModal').modal('close');
+            jQuery('#responseModal').modal();
+            jQuery('#responseModal').modal('open');
         }
     });
 }
@@ -84,17 +80,27 @@ function new_custodian_submit() {
     }
 
 }
+function submitSVar(obj) {
+    var form = {
+        action: 'causfa_set_session',
+        name: obj['Name'],
+        input: obj['Input']
+    };
+    jQUery.post(causfa_action_obj.ajax_url, form, function(data) {
+       if (data != 1) {
+           alert('Something went wrong');
+       }
+    });
+}
 function uploadImage() {
     var fileInput = jQuery('#imageFileToUpload');
     var file = fileInput.prop('files')[0];
     if (!file) {
         alert('Please select a file to upload');
     } else {
-        var PID = jQuery('#galleryPID').val();
         var ptag = jQuery('#galleryPtag').val();
         var form = new FormData();
         form.append('action', 'causfa_upload_image');
-        form.append('PID', PID);
         form.append('ptag', ptag);
         form.append('imageFileToUpload', file);
         jQuery.ajax({
@@ -119,11 +125,9 @@ function uploadFormHome(){
     if (!file) {
         alert('Please select a file to upload');
     } else {
-        var PID = jQuery('#formsPID').val();
         var ptag = jQuery('#formsPtag').val();
         var form = new FormData();
         form.append('action', 'causfa_upload_form_home');
-        form.append('PID', PID);
         form.append('ptag', ptag);
         form.append('homeFormToUpload', file);
         jQuery.ajax({
@@ -148,11 +152,9 @@ function uploadFormOffice(){
     if (!file) {
         alert('Please select a file to upload');
     } else {
-        var PID = jQuery('#formsPID').val();
         var ptag = jQuery('#formsPtag').val();
         var form = new FormData();
         form.append('action', 'causfa_upload_form_office');
-        form.append('PID', PID);
         form.append('ptag', ptag);
         form.append('officeFormToUpload', file);
         jQuery.ajax({

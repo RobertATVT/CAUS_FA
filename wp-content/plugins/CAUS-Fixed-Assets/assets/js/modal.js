@@ -3,6 +3,12 @@ function transferModalRequested(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML ;
     var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
+    var form = {
+        action: 'causfa_set_session',
+        Name: 'ptag',
+        Input: tag
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
     document.getElementById('recipient-name').value = '';
     jQuery('#transferModal').find('#transferIndex').val(id);
     jQuery('#transferModal').find('.asset-tag').html(tag);
@@ -15,6 +21,12 @@ function surplusModalRequested(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
     var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
+    var form = {
+        action: 'causfa_set_session',
+        Name: 'ptag',
+        Input: tag
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
     jQuery('#surplusModal').find('#surplusIndex').val(id);
     jQuery('#surplusModal').find('.asset-tag').html(tag);
     jQuery('#surplusModal').find('.asset-description').html(desc);
@@ -25,8 +37,6 @@ function galleryModalRequested(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
     jQuery('#galleryModal').find('#galleryPtag').val(tag);
-    //var PID = document.getElementById('employeePID').innerHTML;
-    //jQuery('#galleryModal').find('#galleryPID').val(PID);
     jQuery('#imageFileToUpload').val('');
     jQuery('#galleryModal').modal();
     jQuery('#galleryModal').modal('open');
@@ -34,8 +44,6 @@ function galleryModalRequested(elementID) {
 function formsModalRequested(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
-    //var PID = document.getElementById('employeePID').innerHTML;
-    //jQuery('#formsModal').find('#formsPID').val(PID);
     jQuery('#formsModal').find('#formsPtag').val(tag);
     jQuery('#homeFormToUpload').val('');
     jQuery('#officeFormToUpload').val('');

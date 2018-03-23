@@ -46,7 +46,7 @@ function causfa_logger_login($user_login, $user) {
 }
 function causfa_ajax_logger() {
     global $wpdb;
-    $PID = $_POST['PID'];
+    $PID = $_SESSION['PID'];
     $type = $_POST['type'];
     $ptag = $_POST['ptag'];
     $PID_dest = $_POST['PID_dest'];
