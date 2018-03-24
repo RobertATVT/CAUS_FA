@@ -37,6 +37,7 @@ include('process/generate_form.php');
 include('process/logger.php');
 include('includes/file_upload.php');
 include('process/set_session.php');
+include('process/DBSerialize.php');
 
 
 //Hooks
@@ -58,6 +59,7 @@ add_action( 'wp_ajax_causfa_upload_image', 'causfa_upload_image');
 add_action( 'wp_ajax_causfa_upload_form_home', 'causfa_upload_form_home');
 add_action( 'wp_ajax_causfa_upload_form_office', 'causfa_upload_form_office');
 add_action( 'wp_ajax_causfa_set_session', 'causfa_set_session');
+add_action( 'wp_ajax_causfa_output_images', 'causfa_output_images');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app

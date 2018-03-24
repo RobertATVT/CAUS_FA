@@ -95,14 +95,18 @@ function submitSVar(obj) {
 function uploadImage() {
     var fileInput = jQuery('#imageFileToUpload');
     var file = fileInput.prop('files')[0];
+    var desc = jQuery('#imageDescription').val();
     if (!file) {
         alert('Please select a file to upload');
+    } else if (!desc) {
+        alert('Please enter a image description');
     } else {
         var ptag = jQuery('#galleryPtag').val();
         var form = new FormData();
         form.append('action', 'causfa_upload_image');
         form.append('ptag', ptag);
         form.append('imageFileToUpload', file);
+        form.append('desc', desc);
         jQuery.ajax({
             url: causfa_action_obj.ajax_url,
             type: 'post',
