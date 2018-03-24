@@ -18,6 +18,7 @@ function causfa_enqueue() {
     wp_register_style('causfa_animate_style', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
     wp_register_style('causfa_materialize_style', plugins_url('assets/css/materialize.css', CAUSFA_PLUGIN_URL));
     wp_register_style('causfa_material_icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
+    wp_register_style('causfa_flexslider', plugins_url('assets/css/flexslider.css', CAUSFA_PLUGIN_URL));
 
     //wp_enqueue_style('causfa_bootstrap');
    // wp_enqueue_style('causfa_bootstrap_style');
@@ -26,6 +27,7 @@ function causfa_enqueue() {
     wp_enqueue_style('causfa_animate_style');
     wp_enqueue_style('causfa_materialize_style');
     wp_enqueue_style('causfa_material_icons');
+    wp_enqueue_style('causfa_flexslider');
 
     //Scripts
     //wp_register_script('causfa_bootstrap_script', plugins_url( 'assets/js/bootstrap.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
@@ -35,6 +37,7 @@ function causfa_enqueue() {
     wp_register_script('causfa_autocomplete', plugins_url('assets/js/autocomplete.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_sidenav', plugins_url('assets/js/sidenav.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_materialize', plugins_url('assets/js/materialize.min.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causfa_flexslider_script', plugins_url('assets/js/jquery.flexslider.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
 
 
     wp_enqueue_script('jquery');
@@ -45,6 +48,7 @@ function causfa_enqueue() {
     wp_enqueue_script('causfa_autocomplete');
     wp_enqueue_script('causfa_sidenav');
     wp_enqueue_script('causfa_materialize');
+    wp_enqueue_script('causfa_flexslider_script');
 
 
     //This line creates a causfa_action_obj object that passes the ajax url to the front end scripts
