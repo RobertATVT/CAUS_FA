@@ -46,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filter-content.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="filter-content.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process/filter-content.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
@@ -55,6 +55,16 @@
                 <marker date="1522002537428" expanded="true" signature="5863:5948" ph="SELECT * FRO... causfa_banner_missing" />
                 <marker date="1522002537428" expanded="true" signature="6197:6275" ph="SELECT * FRO... causfa_pending" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style3.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/css/style3.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,6 +139,7 @@
         <option value="$PROJECT_DIR$/assets/html/faa-impact-template.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-asset-template.html" />
         <option value="$PROJECT_DIR$/process/filter-content.php" />
+        <option value="$PROJECT_DIR$/assets/css/style3.css" />
       </list>
     </option>
   </component>
@@ -140,8 +151,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
-    <option name="y" value="23" />
+    <option name="x" value="106" />
+    <option name="y" value="32" />
     <option name="width" value="1245" />
     <option name="height" value="797" />
   </component>
@@ -178,13 +189,7 @@
               <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
@@ -256,15 +261,15 @@
       <workItem from="1521813940406" duration="15664000" />
       <workItem from="1521904688603" duration="305000" />
       <workItem from="1521942633858" duration="974000" />
-      <workItem from="1522000544374" duration="1621000" />
+      <workItem from="1522000544374" duration="2265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174737000" />
+    <option name="totallyTimeSpent" value="175381000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="23" width="1245" height="797" extended-state="0" />
+    <frame x="106" y="32" width="1245" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43308395" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -320,13 +325,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="30" column="74" lean-forward="false" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/process/filter-content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -671,6 +669,14 @@
             <marker date="1522002537428" expanded="true" signature="5863:5948" ph="SELECT * FRO... causfa_banner_missing" />
             <marker date="1522002537428" expanded="true" signature="6197:6275" ph="SELECT * FRO... causfa_pending" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style3.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
