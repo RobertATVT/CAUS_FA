@@ -81,10 +81,12 @@ function causfa_filter_header( $content) {
  * @param $missing_total - total value of missing items in the current users name
  * @return mixed - html corresponding to the footer of the employee asset view page
  */
-function causfa_filter_impact( $value_total, $missing_total) {
+function causfa_filter_impact( $value_total, $total_number, $missing_total, $missing_number) {
     $asset_impact_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-impact-template.html', true);
     $asset_impact_html = str_replace('[TOTAL VALUE]', ('$'.$value_total), $asset_impact_html);
+    $asset_impact_html = str_replace('[TOTAL NUMBER]', $total_number, $asset_impact_html);
     $asset_impact_html = str_replace( '[TOTAL MISSING VALUE]', ('$'.$missing_total), $asset_impact_html);
+    $asset_impact_html = str_replace('[MISSING NUMBER]', $missing_number, $asset_impact_html);
     return $asset_impact_html;
 }
 
@@ -108,6 +110,7 @@ function causfa_filter_asset_info( $content, $asset_index) {
     $asset_info_html = str_replace( '[CAUS SCAN]', '[CAUS SCAN]', $asset_info_html);
     $asset_info_html = str_replace( '[PURCHASE DATE]', $content->FZVFORG_ACQ_DATE, $asset_info_html);
     $asset_info_html = str_replace('[ID]', $asset_index, $asset_info_html);
+    $asset_info_html = str_replace('[PURCHASED]', $content->FZVFORG_ACQ_DATE, $asset_info_html);
     $missing = false;
     if ($wpdb->get_row("SELECT * FROM causfa_banner_missing WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
         $asset_info_html = str_replace( '[STATUS]', 'Missing', $asset_info_html);

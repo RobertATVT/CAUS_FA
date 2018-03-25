@@ -14,8 +14,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="42" column="7" lean-forward="false" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+            <state relative-caret-position="310">
+              <caret line="48" column="58" lean-forward="false" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
               <folding>
                 <element signature="e#6#321#0#PHP" expanded="true" />
               </folding>
@@ -23,12 +23,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enqueue.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+      <file leaf-file-name="employee_asset_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+            <state relative-caret-position="418">
+              <caret line="43" column="86" lean-forward="false" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
+              <folding>
+                <marker date="1522002208788" expanded="true" signature="524:601" ph="SELECT * FRO... causfa_custodians" />
+                <marker date="1522002208788" expanded="true" signature="939:1017" ph="SELECT * FRO... causfa_banner" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="faa-asset-template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/html/faa-asset-template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="82" lean-forward="false" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filter-content.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/process/filter-content.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="112" column="96" lean-forward="false" selection-start-line="112" selection-start-column="96" selection-end-line="112" selection-end-column="96" />
+              <folding>
+                <marker date="1522002537428" expanded="true" signature="5863:5948" ph="SELECT * FRO... causfa_banner_missing" />
+                <marker date="1522002537428" expanded="true" signature="6197:6275" ph="SELECT * FRO... causfa_pending" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,25 +108,27 @@
         <option value="$PROJECT_DIR$/process/new_custodian.php" />
         <option value="$PROJECT_DIR$/includes/activate.php" />
         <option value="$PROJECT_DIR$/assets/html/asset_total_template.html" />
-        <option value="$PROJECT_DIR$/process/filter-content.php" />
         <option value="$PROJECT_DIR$/assets/html/employee_info_template.html" />
         <option value="$PROJECT_DIR$/includes/groups.php" />
         <option value="$PROJECT_DIR$/assets/html/asset_template.html" />
         <option value="$PROJECT_DIR$/assets/js/sidenav.js" />
         <option value="$PROJECT_DIR$/process/logger.php" />
-        <option value="$PROJECT_DIR$/includes/employee_asset_view.php" />
         <option value="$PROJECT_DIR$/process/transfer.php" />
         <option value="$PROJECT_DIR$/assets/js/autocomplete.js" />
         <option value="$PROJECT_DIR$/process/surplus.php" />
         <option value="$PROJECT_DIR$/process/set_session.php" />
         <option value="$PROJECT_DIR$/assets/css/style4.css" />
         <option value="$PROJECT_DIR$/process/DBSerialize.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/html/modal.html" />
         <option value="$PROJECT_DIR$/assets/js/modal.js" />
         <option value="$PROJECT_DIR$/includes/file_upload.php" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/enqueue/enqueue.php" />
+        <option value="$PROJECT_DIR$/includes/employee_asset_view.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/assets/html/faa-impact-template.html" />
+        <option value="$PROJECT_DIR$/assets/html/faa-asset-template.html" />
+        <option value="$PROJECT_DIR$/process/filter-content.php" />
       </list>
     </option>
   </component>
@@ -228,12 +256,12 @@
       <workItem from="1521813940406" duration="15664000" />
       <workItem from="1521904688603" duration="305000" />
       <workItem from="1521942633858" duration="974000" />
-      <workItem from="1522000544374" duration="304000" />
+      <workItem from="1522000544374" duration="1621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173420000" />
+    <option name="totallyTimeSpent" value="174737000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="23" width="1245" height="797" extended-state="0" />
@@ -292,27 +320,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="112" lean-forward="false" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/process/filter-content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
@@ -454,20 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -617,21 +610,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-header-template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="42" column="7" lean-forward="false" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+        <state relative-caret-position="310">
+          <caret line="48" column="58" lean-forward="false" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
           <folding>
             <element signature="e#6#321#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-impact-template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+        <state relative-caret-position="345">
+          <caret line="23" column="68" lean-forward="false" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="43" column="86" lean-forward="false" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
+          <folding>
+            <marker date="1522002208788" expanded="true" signature="524:601" ph="SELECT * FRO... causfa_custodians" />
+            <marker date="1522002208788" expanded="true" signature="939:1017" ph="SELECT * FRO... causfa_banner" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-asset-template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="82" lean-forward="false" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="112" column="96" lean-forward="false" selection-start-line="112" selection-start-column="96" selection-end-line="112" selection-end-column="96" />
+          <folding>
+            <marker date="1522002537428" expanded="true" signature="5863:5948" ph="SELECT * FRO... causfa_banner_missing" />
+            <marker date="1522002537428" expanded="true" signature="6197:6275" ph="SELECT * FRO... causfa_pending" />
+          </folding>
         </state>
       </provider>
     </entry>
