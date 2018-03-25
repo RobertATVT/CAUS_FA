@@ -10,13 +10,13 @@
  * @param $content - contains a row of the custodians table that corresponds to the current user
  * @return mixed - the html that corresponds to the employee info section if employee asset view page
  */
-function causfa_filter_employee_info( $content) {
-    $employee_info_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/employee_info_template.html', true);
-    $employee_info_html = str_replace('[NAME]', $content->Name, $employee_info_html);
-    $employee_info_html = str_replace( '[PID]', $content->PID, $employee_info_html);
-    $employee_info_html = str_replace( '[EMAIL]', $content->Email, $employee_info_html);
-    $employee_info_html = str_replace( '[OFFICE]', $content->Office, $employee_info_html);
-    $employee_info_html = str_replace( '[PHONE]', $content->Phone, $employee_info_html);
+function causfa_filter_header( $content) {
+    $faa_head_info = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-header-template.html', true);
+    $faa_head_info = str_replace('[NAME]', $content->Name, $faa_head_info);
+    $faa_head_info = str_replace( '[PID]', $content->PID, $faa_head_info);
+    $faa_head_info = str_replace( '[EMAIL]', $content->Email, $faa_head_info);
+    $faa_head_info = str_replace( '[OFFICE]', $content->Office, $faa_head_info);
+    $faa_head_info = str_replace( '[PHONE]', $content->Phone, $faa_head_info);
     $FAL_info = causfa_groups_FAL();
     $FAL_name = '';
     $FAL_email = '';
@@ -32,9 +32,9 @@ function causfa_filter_employee_info( $content) {
             $FAL_phone = $FAL_phone.', '.$FAL_info[$i]['Phone'];
         }
     }
-    $employee_info_html = str_replace('[FAL]', $FAL_name, $employee_info_html);
-    $employee_info_html = str_replace('[FAL-EMAIL]', $FAL_email, $employee_info_html);
-    $employee_info_html = str_replace('[FAL-PHONE]', $FAL_phone, $employee_info_html);
+    $faa_head_info = str_replace('[FAL]', $FAL_name, $faa_head_info);
+    $faa_head_info = str_replace('[FAL-EMAIL]', $FAL_email, $faa_head_info);
+    $faa_head_info = str_replace('[FAL-PHONE]', $FAL_phone, $faa_head_info);
     $FAC_info = causfa_groups_FAC();
     $FAC_name = '';
     $FAC_email = '';
@@ -50,9 +50,9 @@ function causfa_filter_employee_info( $content) {
             $FAC_phone = $FAC_phone.', '.$FAC_info[$i]['Phone'];
         }
     }
-    $employee_info_html = str_replace( '[FAC]', $FAC_name, $employee_info_html);
-    $employee_info_html = str_replace( '[FAC-EMAIL]', $FAC_email, $employee_info_html);
-    $employee_info_html = str_replace( '[FAC-PHONE]', $FAC_phone, $employee_info_html);
+    $faa_head_info = str_replace( '[FAC]', $FAC_name, $faa_head_info);
+    $faa_head_info = str_replace( '[FAC-EMAIL]', $FAC_email, $faa_head_info);
+    $faa_head_info = str_replace( '[FAC-PHONE]', $FAC_phone, $faa_head_info);
     $BM_info = causfa_groups_BM();
     $BM_name = '';
     $BM_email = '';
@@ -68,11 +68,24 @@ function causfa_filter_employee_info( $content) {
             $BM_phone = $BM_phone.', '.$BM_info[$i]['Phone'];
         }
     }
-    $employee_info_html = str_replace( '[BM]', $BM_name, $employee_info_html);
-    $employee_info_html = str_replace( '[BM-EMAIL]', $BM_email, $employee_info_html);
-    $employee_info_html = str_replace( '[BM-PHONE]', $BM_phone, $employee_info_html);
+    $faa_head_info = str_replace( '[BM]', $BM_name, $faa_head_info);
+    $faa_head_info = str_replace( '[BM-EMAIL]', $BM_email, $faa_head_info);
+    $faa_head_info = str_replace( '[BM-PHONE]', $BM_phone, $faa_head_info);
 
-    return $employee_info_html;
+    return $faa_head_info;
+}
+
+
+/**
+ * @param $value_total - total value of items in the current users name
+ * @param $missing_total - total value of missing items in the current users name
+ * @return mixed - html corresponding to the footer of the employee asset view page
+ */
+function causfa_filter_impact( $value_total, $missing_total) {
+    $asset_impact_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-impact-template.html', true);
+    $asset_impact_html = str_replace('[TOTAL VALUE]', ('$'.$value_total), $asset_impact_html);
+    $asset_impact_html = str_replace( '[TOTAL MISSING VALUE]', ('$'.$missing_total), $asset_impact_html);
+    return $asset_impact_html;
 }
 
 /**
@@ -82,9 +95,9 @@ function causfa_filter_employee_info( $content) {
  *      $asset_info_html - contains the html of the asset that corresponds to the content passed into the function
  *      $missing - contains a bool that indicates if the asset has a status of missing or not.
  */
-function causfa_filter_employee_asset_info( $content, $asset_index) {
+function causfa_filter_asset_info( $content, $asset_index) {
     global $wpdb;
-    $asset_info_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_template.html', true);
+    $asset_info_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-asset-template.html', true);
     $asset_info_html = str_replace('[VT TAG]', $content->FZVFORG_PTAG, $asset_info_html);
     $asset_info_html = str_replace( '[S/N]', $content->FZVFORG_SERIAL_NUM, $asset_info_html);
     $asset_info_html = str_replace('[DESCRIPTION]', $content->FZVFORG_DESCRIPTION, $asset_info_html);
@@ -98,7 +111,7 @@ function causfa_filter_employee_asset_info( $content, $asset_index) {
     $missing = false;
     if ($wpdb->get_row("SELECT * FROM causfa_banner_missing WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
         $asset_info_html = str_replace( '[STATUS]', 'Missing', $asset_info_html);
-        $asset_info_html = str_replace('faa-asset-status', 'faa-asset-status faa-asset-status-missing', $asset_info_html);
+        $asset_info_html = str_replace('asset-status', 'asset-status missing', $asset_info_html);
         $missing = true;
     } elseif ($row = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
         if ($row->PENDING_TYPE == 0) {
@@ -107,30 +120,18 @@ function causfa_filter_employee_asset_info( $content, $asset_index) {
             $asset_info_html = str_replace( '[STATUS]', 'Pending Surplus', $asset_info_html);
         }
 
-        $asset_info_html = str_replace('faa-asset-status', 'faa-asset-status faa-asset-status-pending', $asset_info_html);
+        $asset_info_html = str_replace('asset-status', 'asset-status pending', $asset_info_html);
         $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
         $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
     } else {
         $asset_status = $content->FZVFORG_ROOM;
         if (strpos($asset_status, 'HOME') !== false) {
             $asset_info_html= str_replace('[STATUS]', 'Home Use', $asset_info_html);
-            $asset_info_html= str_replace('faa-asset-status', 'faa-asset-status faa-asset-status-home', $asset_info_html);
+            $asset_info_html= str_replace('asset-status', 'asset-status home', $asset_info_html);
         } else {
             $asset_info_html = str_replace('[STATUS]', 'Office Use', $asset_info_html);
-            $asset_info_html= str_replace('faa-asset-status', 'faa-asset-status faa-asset-status-office', $asset_info_html);
+            $asset_info_html= str_replace('asset-status', 'asset-status office', $asset_info_html);
         }
     }
     return array($asset_info_html, $missing);
-}
-
-/**
- * @param $value_total - total value of items in the current users name
- * @param $missing_total - total value of missing items in the current users name
- * @return mixed - html corresponding to the footer of the employee asset view page
- */
-function causfa_filter_employee_asset_total( $value_total, $missing_total) {
-    $asset_total_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_total_template.html', true);
-    $asset_total_html = str_replace('[TOTAL VALUE]', ('$'.$value_total), $asset_total_html);
-    $asset_total_html = str_replace( '[TOTAL MISSING VALUE]', ('$'.$missing_total), $asset_total_html);
-    return $asset_total_html;
 }

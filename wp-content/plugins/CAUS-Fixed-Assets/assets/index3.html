@@ -8,11 +8,10 @@
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link href="css/style3.css" rel="stylesheet" type="text/css">
-    <link href="css/paradox.css" rel="stylesheet" type="text/css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/tippy.js@2.4.1/dist/tippy.all.min.js"></script>
+    <link href="css/style3.css" rel="stylesheet" type="text/css">
+    <link href="css/paradox.css" rel="stylesheet" type="text/css">
     
 </head>
 <body>
@@ -80,9 +79,8 @@
             </ul>
         </nav>
     </div>
-<!-- END TEMPLATE faa-header.html -->
-<!-- END employee_info_template.html -->
-<!-- BEGIN asset_header_Template.html -->
+<!-- END TEMPLATE faa-header-template.html -->
+<!-- BEGIN TEMPLATE faa-impact-template.html -->
     <div id="asset-view">
         <div id="overlay" onclick="hideNav()"></div>
         <div class="rw" style="margin:0px; display: block;">
@@ -131,8 +129,8 @@
                     <div class="center cl xl3 l3 m3 hide-on-small-only">STATUS</div>
                     <div class="center cl xl2 l2 m3 hide-on-small-only">ACTIONS</div>
                 </div>
-<!-- END asset_header_template,html -->
-<!-- BEGIN asset_template.html -->                
+<!-- END TEMPLATE faa-impact-template,html -->
+<!-- BEGIN TEMPLATE faa-asset-template.html -->                
                 <div class="rw asset-list" id="asset-[ID]" style="margin:0px">
                     <div class="center cl xl2 l2 m2 t6" id="asset-tag-[ID]">[VT TAG]</div>
                     <div class="center cl xl2 l2 m2 t8" id="asset-serial-[ID]">[S/N]</div>
@@ -338,75 +336,17 @@
                         </div>
                     </div>
                 </div>
-                                                                               
-                
 <!-- END EXTRA FILLER FOR DEVELOPMENT -->                
-
-<!-- BEGIN asset_total_template.html -->        
+<!-- END TEMPLATE faa-asset-template.html -->
+<!-- BEGIN TEMPLATE faa-footer-template.html -->        
                 <div class="rw asset-list-footer" style="margin:0px;">
                     <div class="center cl t20"></div>
                 </div>
             </div>
         </div>
-<!--        <div class="rw faa-header" id="asset-impact-title">
-         <div class="cl m20 s12 center">TOTAL ASSET IMPACT</div>
-        </div>
-        <div class="rw" id="asset-listing">
-            <div class="cl m20 s12 faa-content">
-                <div class="cl m20 s12" style="border: 1px solid #ccc; border-radius: 0px; padding: 5px; background: #efefef;">
-                    <div class="cl m5 s12" style="border: 1px solid #ccc; padding: 5px; background: #fff;">
-                        <div class="cl m6 s6">TOTAL ASSET VALUE:</div>
-                        <div class="cl m6 s6" style="color: #080; text-align: right;">[TOTAL VALUE]</div>
-                    </div>
-                    <div class="cl m2 s12"></div>
-                    <div class="cl m5 s12" style="border: 1px solid #ccc; padding: 5px; background: #fff;">
-                        <div class="cl m6 s6">MISSING ASSET TOTAL:</div>
-                        <div class="cl m6 s6" style="color: #F00; text-align: right;">[TOTAL MISSING VALUE]</div>
-                    </div>
-                </div>
-            </div>
-        </div>
--->
-<!-- END asset_total_template.html -->
+<!-- END TEMPLATE faa-footer-template.html -->
         <!-- BEGIN modal.html -->
         <!-----Transfer Modal----->
-        <!--<div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content faa-modal-content">
-                    <div class="modal-header faa-modal-header">
-                        <h4 class="modal-title faa-modal-title" id="transferModalLabel">Asset Transfer</h4>
-                    </div>
-                    <div class="modal-body faa-modal-body">
-                        <div class="rw faa-modal-info" style="">
-                            <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
-                            <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
-                        </div>
-                        <div class="rw">
-                            <div class="col-sm-12">&nbsp;</div>
-                        </div>
-                        <div class="rw">
-                            <form autocomplete="off">
-                                <div class="col-sm-12 form-group" style="padding: 0px;">
-                                    <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECIEVER PID</label>
-                                    <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
-                                    <datalist id="PIDs"></datalist>
-                                    <input type="hidden" id="transferIndex" value="" />
-                                </div>
-                            </form>
-                        </div>
-                        <div class="rw">
-                            <p>Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        --->
         <div id="transferModal" class="modal">
             <div class="modal-content">
                 <h4 class="center faa-modal-title">Asset Transfer</h4>
@@ -592,11 +532,13 @@
 </div>
     
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/toggle.js"></script>
 <script src="js/main.js"></script>
+<script src="js/sidenav.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
 
+    
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         $('#myCarousel').carousel({
@@ -621,24 +563,7 @@
 </script>
     
 <script>
-    function showNav() {
-        document.getElementById("sidebar").style.left = "0px";
-        document.getElementById("overlay").style.display = "block";
-        document.getElementById("sidebar-items").style.width = "100%";
-        //document.getElementById("sidebar-items").classList.remove('lw-250');
-        //document.getElementById("sidebar-items").classList.add('lw-100');
-        //document.getElementById("newcontent").style.marginLeft = "255px";
-        jQuery('#sidebar-toggle').attr('onclick', 'hideNav()');
-    }
-    function hideNav() {
-        document.getElementById("sidebar").style.left = "-255px";
-        document.getElementById("overlay").style.display = "none";
-        document.getElementById("sidebar-items").style.width = "250px";
-        //document.getElementById("sidebar-items").classList.remove('lw-100');
-        //document.getElementById("sidebar-items").classList.add('lw-250');
-        // document.getElementById("newcontent").style.marginLeft = "0";
-        jQuery('#sidebar-toggle').attr('onclick', 'showNav()');
-    }
+
 </script>
 </body>
 </html>
