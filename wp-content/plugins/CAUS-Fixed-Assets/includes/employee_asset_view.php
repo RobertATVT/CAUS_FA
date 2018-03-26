@@ -43,6 +43,7 @@ function causfa_load_employee_view() {
         }
         $output = $output.(apply_filters('causfa_impact', $value_total, $total_number, $missing_total, $missing_number));
         $output = $output.$assets;
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-footer-template.html', true));
         
         //Gets the html for the modals and puts it at the bottom of the page.
         $modals = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/modal.html', true ));

@@ -338,63 +338,102 @@
                     </div>
                 </div>
 <!-- END EXTRA FILLER FOR DEVELOPMENT -->
-<!-- BEGIN TEMPLATE faa-footer-template.html -->        
+                <!-- BEGIN TEMPLATE faa-footer-template.html -->
                 <div class="rw asset-list-footer" style="margin:0px;">
                     <div class="center cl t20"></div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 <!-- END TEMPLATE faa-footer-template.html -->
         <!-- BEGIN modal.html -->
         <!-----Transfer Modal----->
+        <!--<div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content faa-modal-content">
+                    <div class="modal-header faa-modal-header">
+                        <h4 class="modal-title faa-modal-title" id="transferModalLabel">Asset Transfer</h4>
+                    </div>
+                    <div class="modal-body faa-modal-body">
+                        <div class="row faa-modal-info" style="">
+                            <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                            <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">&nbsp;</div>
+                        </div>
+                        <div class="row">
+                            <form autocomplete="off">
+                                <div class="col-sm-12 form-group" style="padding: 0px;">
+                                    <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECIEVER PID</label>
+                                    <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
+                                    <datalist id="PIDs"></datalist>
+                                    <input type="hidden" id="transferIndex" value="" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <p>Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        --->
         <div id="transferModal" class="modal">
             <div class="modal-content">
                 <h4 class="center faa-modal-title">Asset Transfer</h4>
-                <div class="rw" style="padding: 10px; margin-bottom: 0px">
-                    <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                        <div class="cl xl2 l4 m4 s4 info-title" style="padding: 0px;">Asset Tag:</div>
-                        <div class="cl xl3 l8 m8 s8"><span class="asset-tag"></span></div>
-                        <div class="cl xl2 l4 m4 s4 info-title" style="padding: 0px;">Description: </div>
-                        <div class="cl xl5 l8 m8 s8"><span class="asset-description"></span></div>
+                <div class="row" style="padding: 10px; margin-bottom: 0px">
+                    <div class="row faa-modal-info" style="margin-bottom: 0px;">
+                        <div class="col m1 info-title" style="padding: 0px;">Asset Tag:</div>
+                        <div class="col m4"><span class="asset-tag"></span></div>
+                        <div class="col m1 info-title" style="padding: 0px;">Description: </div>
+                        <div class="col m6"><span class="asset-description"></span></div>
                     </div>
                 </div>
-                <div class="rw" style="padding: 10px;">
-                    <div class="rw faa-modal-info" style="margin-bottom: 0px">
-                    <form autocomplete="off">
-                        <div class="center cl m20 form-group" style="padding: 0px;">
-                            <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>
-                            <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
-                            <datalist id="PIDs"></datalist>
-                            <input type="hidden" id="transferIndex" value="" />
-                        </div>
-                    </form>
+                <div class="row" style="padding: 10px;">
+                    <div class="row faa-modal-info" style="margin-bottom: 0px">
+                        <form autocomplete="off">
+                            <div class="center col m12 form-group" style="padding: 0px;">
+                                <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>
+                                <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
+                                <datalist id="PIDs"></datalist>
+                                <input type="hidden" id="transferIndex" value="" />
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="rw" style="margin-bottom: 0px;">
+                <div class="row" style="margin-bottom: 0px;">
                     <p class="center info-title">Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
         </div>
         <!-----Surplus Modal------>
-        <div class="modal fade" id="surplusModal" tabindex="-1" role="dialog" aria-labelledby="surplusModalLabel" aria-hidden="true">
+        <!----<div class="modal fade" id="surplusModal" tabindex="-1" role="dialog" aria-labelledby="surplusModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content faa-modal-content">
                     <div class="modal-header faa-modal-header">
                         <h4 class="modal-title faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
                     </div>
                     <div class="modal-body faa-modal-body">
-                       <div class="rw" style="border: 1px solid #aaa; padding: 10px; background: #fff; border-radius: 5px;">
-                            <div class="cl m2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
-                            <div class="cl m info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
+                       <div class="row" style="border: 1px solid #aaa; padding: 10px; background: #fff; border-radius: 5px;">
+                            <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                            <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
                         </div>
-                        <div class="rw" >
+                        <div class="row" >
                             <div class="col-sm-12">&nbsp;</div>
                         </div>
-                        <div class="rw">
+                        <div class="row">
                             <div class="text-center col-sm-12 info-title" style="font-size: 125%;"><p>Are you sure you want to initiate this surplus request?</p></div>
                             <input type="hidden" id="surplusIndex" value="" />
                         </div>
@@ -406,8 +445,29 @@
                     </div>
                 </div>
             </div>
+        </div>---->
+        <div id="surplusModal" class="modal">
+            <div class="modal-content">
+                <h4 class="center faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
+                <div class="row" style="border: 1px solid #aaa; padding: 10px; background: #fff; border-radius: 5px;">
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
+                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
+                </div>
+                <div class="row" >
+                    <div class="col-sm-12">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="text-center col-sm-12 info-title" style="font-size: 125%;"><p>Are you sure you want to initiate this surplus request?</p></div>
+                    <input type="hidden" id="surplusIndex" value="" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
+                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            </div>
         </div>
         <!-----Gallery Modal------>
+        <!---
         <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content faa-modal-content">
@@ -415,7 +475,7 @@
                         <h4 class="modal-title faa-modal-title" id="galleryModalLabel">Gallery</h4>
                     </div>
                     <div class="modal-body faa-modal-body">
-                        <div class="rw">
+                        <div class="row">
                             <form >
                                 Upload new image:
                                 <input type="file" name="fileToUpload" id="imageFileToUpload">
@@ -424,13 +484,13 @@
                                 <input type="hidden" id="galleryPtag">
                             </form>
                         </div>
-                        <!-- Slider -->
-                        <div class="rw" id="slider">
-                            <!-- Top part of the slider -->
+                        // Slider
+                        <div class="row" id="slider">
+                            // Top part of the slider
                             <div class="col-md-12"  style="padding: 0px;">
                                 <div class="col-md-12" id="carousel-bounding-box"  style="padding: 0px;">
                                     <div class="col-md-8 carousel slide" id="myCarousel">
-                                        <!-- Carousel items -->
+                                        // Carousel items
                                         <div class="carousel-inner">
                                             <div class="active item" data-slide-number="0">
                                             <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_caramel.jpg"></div>
@@ -443,7 +503,7 @@
 
                                             <div class="item" data-slide-number="3">
                                             <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_lemon.jpg"></div>
-                                        </div><!-- Carousel nav -->
+                                        </div>//Carousel nav
                                         <a class="carousel-control left" data-slide="prev" href="#myCarousel">‹</a> <a class="carousel-control right" data-slide="next" href="#myCarousel">›</a>
                                     </div>
                                     <div class="col-md-4" id="carousel-text">
@@ -474,11 +534,11 @@
                             </div>
                         </div>
 
-                        <!--/Slider-->
+                        //Slider
 
-                        <div class="rw hidden-phone" id="slider-thumbs">
+                        <div class="row hidden-phone" id="slider-thumbs">
                             <div class="col-sm-12" style="margin-left: -25px;">
-                                <!-- Bottom switcher of slider -->
+                                //Bottom switcher of slider
                                 <ul class="thumbnails">
                                     <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="0" id="carousel-selector-0">
                                         <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_caramel.jpg"></a></li>
@@ -498,7 +558,30 @@
                 </div>
             </div>
         </div>
+        --->
+        <div id="galleryModal" class="modal">
+            <div class="modal-content">
+                <h4 class="center faa-modal-title" id="galleryModalLabel">Gallery</h4>
+                <div class="row">
+                    <form >
+                        Upload new image:
+                        <input type="file" name="fileToUpload" id="imageFileToUpload">
+                        <input type="button" value="Upload Image" onclick="uploadImage()">
+                        <input type="hidden" id="galleryPtag">
+                    </form>
+                </div>
+                <div class="row">
+                    Image Description:
+                    <input type="text" id ="imageDescription">
+                </div>
+                <div id="slider" class="flexslider">
+                    <ul class="slides" id ="slides">
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!-----Forms Modal------>
+        <!---
         <div class="modal fade" id="formsModal" tabindex="-1" role="dialog" aria-labelledby="formsModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content faa-modal-content">
@@ -525,6 +608,38 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        --->
+        <div id="formsModal" class="modal">
+            <div class="modal-content">
+                <h4 class="center faa-modal-title" id="formsModalLabel">Forms</h4>
+                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 0)">Generate Home Use Form</button>
+                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 1)">Generate Office Use Form</button>
+                <input type="hidden" id="formsPtag" value="" />
+                <form >
+                    Upload new Home Use Form:
+                    <input type="file" name="fileToUpload" id="homeFormToUpload">
+                    <input type="button" value="Upload Image" onclick="uploadFormHome()">
+                </form>
+                <form >
+                    Upload new Office Use Form:
+                    <input type="file" name="fileToUpload" id="officeFormToUpload">
+                    <input type="button" value="Upload Image" onclick="uploadFormOffice()">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            </div>
+        </div>
+
+        <!---- Response Modal ----->
+        <div id="responseModal" class="modal">
+            <div class="modal-content">
+                <p>An email has been sent to your Fixed Asset Liaison and Business manager containing the information about your request. They will contact your soon to make arrangements.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary modal-close">Close</button>
             </div>
         </div>
         <!-- END modal.html --> 
