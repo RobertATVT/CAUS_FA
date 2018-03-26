@@ -11,90 +11,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="index3.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/index3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="48" column="58" lean-forward="false" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+            <state relative-caret-position="201">
+              <caret line="339" column="41" lean-forward="false" selection-start-line="339" selection-start-column="41" selection-end-line="339" selection-end-column="41" />
               <folding>
-                <element signature="e#6#321#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#a#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#7346#7352#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enqueue.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employee_asset_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="43" column="86" lean-forward="false" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
-              <folding>
-                <marker date="1522002208788" expanded="true" signature="524:601" ph="SELECT * FRO... causfa_custodians" />
-                <marker date="1522002208788" expanded="true" signature="939:1017" ph="SELECT * FRO... causfa_banner" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="faa-asset-template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/html/faa-asset-template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="82" lean-forward="false" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filter-content.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/process/filter-content.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="116" column="75" lean-forward="false" selection-start-line="116" selection-start-column="75" selection-end-line="116" selection-end-column="75" />
-              <folding>
-                <marker date="1522022687548" expanded="true" signature="5863:5948" ph="SELECT * FRO... causfa_banner_missing" />
-                <marker date="1522022687548" expanded="true" signature="6203:6281" ph="SELECT * FRO... causfa_pending" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style3.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/style3.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="263" column="1" lean-forward="true" selection-start-line="263" selection-start-column="1" selection-end-line="263" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="faa-header-template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/html/faa-header-template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidenav.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/sidenav.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -171,6 +105,7 @@
         <option value="$PROJECT_DIR$/assets/html/faa-asset-template.html" />
         <option value="$PROJECT_DIR$/assets/css/style3.css" />
         <option value="$PROJECT_DIR$/process/filter-content.php" />
+        <option value="$PROJECT_DIR$/assets/index3.html" />
       </list>
     </option>
   </component>
@@ -243,15 +178,6 @@
               <item name="CAUS-Fixed-Assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="process" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="CAUS-Fixed-Assets" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-              <item name="PHP Runtime" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -307,12 +233,12 @@
       <workItem from="1521813940406" duration="15664000" />
       <workItem from="1521904688603" duration="305000" />
       <workItem from="1521942633858" duration="974000" />
-      <workItem from="1522000544374" duration="2773000" />
+      <workItem from="1522000544374" duration="3434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175889000" />
+    <option name="totallyTimeSpent" value="176550000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="106" y="32" width="1245" height="797" extended-state="0" />
@@ -371,20 +297,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="112" lean-forward="false" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/custom.css" />
     <entry file="file://$PROJECT_DIR$/assets/css/autocomplete.css" />
     <entry file="file://$PROJECT_DIR$/includes/autocomplete_footer.php" />
@@ -650,14 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-impact-template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="68" lean-forward="false" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -669,10 +573,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-asset-template.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/sidenav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="82" lean-forward="false" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
+        <state relative-caret-position="300">
+          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -687,33 +599,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/sidenav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-header-template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style3.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="818">
           <caret line="263" column="1" lean-forward="true" selection-start-line="263" selection-start-column="1" selection-end-line="263" selection-end-column="1" />
           <folding />
         </state>
@@ -721,11 +609,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process/filter-content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="205">
           <caret line="116" column="75" lean-forward="false" selection-start-line="116" selection-start-column="75" selection-end-line="116" selection-end-column="75" />
           <folding>
             <marker date="1522022687548" expanded="true" signature="5863:5948" ph="SELECT * FRO... causfa_banner_missing" />
             <marker date="1522022687548" expanded="true" signature="6203:6281" ph="SELECT * FRO... causfa_pending" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-footer-template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-impact-template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="49" column="46" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="49" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-asset-template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-header-template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="59" column="20" lean-forward="false" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/index3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="339" column="41" lean-forward="false" selection-start-line="339" selection-start-column="41" selection-end-line="339" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#7346#7352#0" expanded="true" />
           </folding>
         </state>
       </provider>

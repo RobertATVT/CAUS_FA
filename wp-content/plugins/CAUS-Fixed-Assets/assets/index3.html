@@ -80,7 +80,7 @@
         </nav>
     </div>
 <!-- END TEMPLATE faa-header-template.html -->
-<!-- BEGIN TEMPLATE faa-impact-template.html -->
+    <!-- BEGIN TEMPLATE faa-impact-template.html -->
     <div id="asset-view">
         <div id="overlay" onclick="hideNav()"></div>
         <div class="rw" style="margin:0px; display: block;">
@@ -92,7 +92,7 @@
             <div class="cl t20">
                 <div class="cl m10 t20" style="padding:10px;">
                     <div class="cl xxl20 xl20 l20 m20 s20 t20 vt-teal vt-txt-white asset-block">
-                        <div class="cl t10 biggertext">35</div>
+                        <div class="cl t10 biggertext">[TOTAL NUMBER]</div>
                         <div class="cl t10 subtext">Total Number of Assets</div>
                         <div class="cl m10 t10 bigtext">[TOTAL VALUE]</div>
                         <div class="cl m10 t10 subtext">Total Asset Values</div>
@@ -103,7 +103,7 @@
                 </div>
                 <div class="cl m10 t20" style="padding:10px;">
                     <div class="cl t20 vt-pink vt-txt-white asset-block">
-                        <div class="cl t10 biggertext">35</div>
+                        <div class="cl t10 biggertext">[MISSING NUMBER]</div>
                         <div class="cl t10 subtext">Total Missing Assets</div>
                         <div class="cl t10 bigtext">[TOTAL MISSING VALUE]</div>
                         <div class="cl t10 subtext">Total Missing Value</div>
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
         <div class="rw" id="asset-title" style="margin: 0px;">
             <div class="cl t20" style="padding:10px 10px;">
                 <div class="rw asset-list-header" style="margin:0px;">
@@ -129,8 +129,8 @@
                     <div class="center cl xl3 l3 m3 hide-on-small-only">STATUS</div>
                     <div class="center cl xl2 l2 m3 hide-on-small-only">ACTIONS</div>
                 </div>
-<!-- END TEMPLATE faa-impact-template,html -->
-<!-- BEGIN TEMPLATE faa-asset-template.html -->                
+                <!-- END TEMPLATE faa-impact-template.html -->
+                <!-- BEGIN TEMPLATE faa-asset-template.html -->
                 <div class="rw asset-list" id="asset-[ID]" style="margin:0px">
                     <div class="center cl xl2 l2 m2 t6" id="asset-tag-[ID]">[VT TAG]</div>
                     <div class="center cl xl2 l2 m2 t8" id="asset-serial-[ID]">[S/N]</div>
@@ -140,7 +140,7 @@
                     <div class="center cl xl2 l2 m2 hide-on-small-only" id="asset-org-[ID]">[ORGANIZATION]</div>
                     <div class="center cl xl1 hide-large-down" id="asset-vt-scan-[ID]">[VT SCAN]</div>
                     <div class="center cl xl1 hide-large-down" id="asset-caus-scan-[ID]">[CAUS]</div>
-                    <div class="center cl xl1 hide-large-down" id="asset-vt-scan-[ID]">[PURCHASED]</div>
+                    <div class="center cl xl1 hide-large-down" id="asset-purchased-[ID]">[PURCHASED]</div>
                     <div class="center cl xl3 l3 m3 t20"><div id="status-[ID]" class="asset-status">[STATUS]</div></div>
                     <div class="center cl xl2 l2 m3 t20 asset-actions" style="display: inline-flex;">
                         <div class="cl t5">
@@ -150,7 +150,7 @@
                         </div>
                         <div class="cl t5">
                             <button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
-                                    <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                <i class="fas fa-2x fa-external-link-square-alt"></i>
                             </button>
                         </div>
                         <div class="cl t5">
@@ -165,6 +165,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- END TEMPLATE faa-asset-template.html -->
 <!-- BEGIN EXTRA FILLER FOR DEVELOPMENT -->
                 <div class="rw asset-list" id="asset-[ID]" style="margin:0px">
                     <div class="center cl xl2 l2 m2 t6" id="asset-tag-[ID]">[VT TAG]</div>
@@ -336,8 +337,7 @@
                         </div>
                     </div>
                 </div>
-<!-- END EXTRA FILLER FOR DEVELOPMENT -->                
-<!-- END TEMPLATE faa-asset-template.html -->
+<!-- END EXTRA FILLER FOR DEVELOPMENT -->
 <!-- BEGIN TEMPLATE faa-footer-template.html -->        
                 <div class="rw asset-list-footer" style="margin:0px;">
                     <div class="center cl t20"></div>
