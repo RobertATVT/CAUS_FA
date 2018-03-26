@@ -2,7 +2,19 @@
 .x-navbar-inner {
     /* max-height: 30px; */
 }
-
+.x-container.offset {
+    margin: auto;
+}
+x.container.max {
+    width: 100px;
+}
+x.container.width {
+    width: 100%;
+}
+ul, ol {
+    padding: 0 !important;
+    margin: 0 !important;
+}
 /* VT BACKGROUND COLORS */
 .vt-lt-orange {
     background: #ED8B00;

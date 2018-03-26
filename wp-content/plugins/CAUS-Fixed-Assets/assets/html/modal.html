@@ -1,41 +1,4 @@
 <!-----Transfer Modal----->
-<!--<div class="modal fade" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content faa-modal-content">
-            <div class="modal-header faa-modal-header">
-                <h4 class="modal-title faa-modal-title" id="transferModalLabel">Asset Transfer</h4>
-            </div>
-            <div class="modal-body faa-modal-body">
-                <div class="row faa-modal-info" style="">
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">&nbsp;</div>
-                </div>
-                <div class="row">
-                    <form autocomplete="off">
-                        <div class="col-sm-12 form-group" style="padding: 0px;">
-                            <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECIEVER PID</label>
-                            <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
-                            <datalist id="PIDs"></datalist>
-                            <input type="hidden" id="transferIndex" value="" />
-                        </div>
-                    </form>
-                </div>
-                <div class="row">
-                    <p>Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this, [PID])">Transfer</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            </div>
-        </div>
-    </div>
-</div>
---->
 <div id="transferModal" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title">Asset Transfer</h4>
@@ -69,33 +32,6 @@
     </div>
 </div>
 <!-----Surplus Modal------>
-<!----<div class="modal fade" id="surplusModal" tabindex="-1" role="dialog" aria-labelledby="surplusModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content faa-modal-content">
-            <div class="modal-header faa-modal-header">
-                <h4 class="modal-title faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
-            </div>
-            <div class="modal-body faa-modal-body">
-               <div class="row" style="border: 1px solid #aaa; padding: 10px; background: #fff; border-radius: 5px;">
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Asset Tag:</div><div class="col-sm-3"><span class="asset-tag"></span></div>
-                    <div class="col-sm-2 info-title" style="padding: 0px;">Description: </div><div class="col-sm-5"><span class="asset-description"></span></div>
-                </div>
-                <div class="row" >
-                    <div class="col-sm-12">&nbsp;</div>
-                </div>
-                <div class="row">
-                    <div class="text-center col-sm-12 info-title" style="font-size: 125%;"><p>Are you sure you want to initiate this surplus request?</p></div>
-                    <input type="hidden" id="surplusIndex" value="" />
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset(this, [PID])">Surplus</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            </div>
-        </div>
-    </div>
-</div>---->
 <div id="surplusModal" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
@@ -117,98 +53,6 @@
     </div>
 </div>
 <!-----Gallery Modal------>
-<!---
-<div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content faa-modal-content">
-            <div class="modal-header faa-modal-header">
-                <h4 class="modal-title faa-modal-title" id="galleryModalLabel">Gallery</h4>
-            </div>
-            <div class="modal-body faa-modal-body">
-                <div class="row">
-                    <form >
-                        Upload new image:
-                        <input type="file" name="fileToUpload" id="imageFileToUpload">
-                        <input type="button" value="Upload Image" onclick="uploadImage()">
-                        <input type="hidden" id="galleryPID">
-                        <input type="hidden" id="galleryPtag">
-                    </form>
-                </div>
-                // Slider
-                <div class="row" id="slider">
-                    // Top part of the slider
-                    <div class="col-md-12"  style="padding: 0px;">
-                        <div class="col-md-12" id="carousel-bounding-box"  style="padding: 0px;">
-                            <div class="col-md-8 carousel slide" id="myCarousel">
-                                // Carousel items
-                                <div class="carousel-inner">
-                                    <div class="active item" data-slide-number="0">
-                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_caramel.jpg"></div>
-
-                                    <div class="item" data-slide-number="1">
-                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_cheesecake_brownie.jpg"></div>
-
-                                    <div class="item" data-slide-number="2">
-                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_donut.jpg"></div>
-
-                                    <div class="item" data-slide-number="3">
-                                    <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_lemon.jpg"></div>
-                                </div>//Carousel nav
-                                <a class="carousel-control left" data-slide="prev" href="#myCarousel">‹</a> <a class="carousel-control right" data-slide="next" href="#myCarousel">›</a>
-                            </div>
-                            <div class="col-md-4" id="carousel-text">
-                                <div id="slide-content">
-                                    <div id="slide-content-0">
-                                        <h2>Slider One</h2>
-                                        <p>Lorem Ipsum Dolor</p>
-                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
-                                    </div>
-                                    <div id="slide-content-1" style="display: none;">
-                                        <h2>Slider Two</h2>
-                                        <p>Lorem Ipsum Dolor</p>
-                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
-                                    </div>
-                                    <div id="slide-content-2" style="display: none;">
-                                        <h2>Slider Three</h2>
-                                        <p>Lorem Ipsum Dolor</p>
-                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
-                                    </div>
-                                    <div id="slide-content-3" style="display: none;">
-                                        <h2>Slider Four</h2>
-                                        <p>Lorem Ipsum Dolor</p>
-                                        <p class="sub-text">October 24 2012 - <a href="#">Read more</a></p>
-                                    </div>
-                                </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            
-                //Slider
-
-                <div class="row hidden-phone" id="slider-thumbs">
-                    <div class="col-sm-12" style="margin-left: -25px;">
-                        //Bottom switcher of slider
-                        <ul class="thumbnails">
-                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="0" id="carousel-selector-0">
-                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_caramel.jpg"></a></li>
-                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="1" id="carousel-selector-1">
-                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_cheesecake_brownie.jpg"></a></li>
-                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="2" id="carousel-selector-2">
-                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_donut.jpg"></a></li>
-                            <li class="col-xs-3"><a href="#myCarousel" class="thumbnail" data-slide-to="3" id="carousel-selector-3">
-                                <img src="https:\\inside.caus.vt.edu\dev\images\kitchen_adventurer_lemon.jpg"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            </div>
-        </div>
-    </div>
-</div>
---->
 <div id="galleryModal" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title" id="galleryModalLabel">Gallery</h4>
@@ -231,36 +75,6 @@
     </div>
 </div>
 <!-----Forms Modal------>
-<!---
-<div class="modal fade" id="formsModal" tabindex="-1" role="dialog" aria-labelledby="formsModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content faa-modal-content">
-            <div class="modal-header faa-modal-header">
-                <h4 class="modal-title faa-modal-title" id="formsModalLabel">Forms</h4>
-            </div>
-            <div class="modal-body faa-modal-body">
-                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 0)">Generate Home Use Form</button>
-                <button type="button" class="btn btn-secondary" onclick="generateForm(this, 1)">Generate Office Use Form</button>
-                <input type="hidden" id="formsPtag" value="" />
-                <input type="hidden" id="formsPID" value="" />
-                <form >
-                    Upload new Home Use Form:
-                    <input type="file" name="fileToUpload" id="homeFormToUpload">
-                    <input type="button" value="Upload Image" onclick="uploadFormHome()">
-                </form>
-                <form >
-                    Upload new Office Use Form:
-                    <input type="file" name="fileToUpload" id="officeFormToUpload">
-                    <input type="button" value="Upload Image" onclick="uploadFormOffice()">
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            </div>
-        </div>
-    </div>
-</div>
---->
 <div id="formsModal" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title" id="formsModalLabel">Forms</h4>
