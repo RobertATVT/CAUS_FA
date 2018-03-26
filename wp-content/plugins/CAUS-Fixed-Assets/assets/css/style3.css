@@ -285,10 +285,11 @@ ul, ol {
 }
 /* SIDEBAR AND CONTENT CONTAINERS */
 #sidebar {
-    transition: margin-left .4s;    
+    transition: margin-left .4s;
+    transition: left .4s;    
     position: sticky;
     top: 0px;
-/*    left: -255px; */
+    left: -255px; 
     width: 300px;
     height: 100%;
     margin-left: -255px;
@@ -296,7 +297,7 @@ ul, ol {
     background-color: #E87722;
     padding: 0px;
     overflow: auto;
-    z-index: 900;
+    z-index: 500;
 }
 #sidebar::-webkit-scrollbar {
     display: none;
@@ -536,7 +537,7 @@ ul.thumbnails {
         font-size:130%;
     }
     .bigtext {
-        font-size:110%;
+        font-size:90%;
     }
     .subtext {
         font-size:80%;

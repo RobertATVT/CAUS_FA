@@ -23,13 +23,13 @@ function closeNav() {
 }
 
 function showNav() {
-    document.getElementById("sidebar").style.marginLeft = "0px";
+    document.getElementById("sidebar").style.left = "0px";
     document.getElementById("overlay").style.display = "block";
     document.getElementById("sidebar-items").style.width = "100%";
     jQuery('#sidebar-toggle').attr('onclick', 'hideNav()');
 };
 function hideNav() {
-    document.getElementById("sidebar").style.marginLeft = "-255px";
+    document.getElementById("sidebar").style.left = "-300px";
     document.getElementById("overlay").style.display = "none";
     document.getElementById("sidebar-items").style.width = "250px";
     jQuery('#sidebar-toggle').attr('onclick', 'showNav()');
