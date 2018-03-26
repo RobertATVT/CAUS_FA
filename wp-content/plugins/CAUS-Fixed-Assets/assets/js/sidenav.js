@@ -16,20 +16,17 @@ function openNav() {
 */
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
-}
 
 function showNav() {
-    document.getElementById("sidebar").style.left = "0px";
+//    document.getElementById("sidebar").style.left = "0px";
+    document.getElementById("sidebar").style.marginLeft = "-30px";
     document.getElementById("overlay").style.display = "block";
     document.getElementById("sidebar-items").style.width = "100%";
     jQuery('#sidebar-toggle').attr('onclick', 'hideNav()');
 };
 function hideNav() {
-    document.getElementById("sidebar").style.left = "-300px";
+//    document.getElementById("sidebar").style.left = "-300px";
+    document.getElementById("sidebar").style.marginLeft = "-330px";
     document.getElementById("overlay").style.display = "none";
     document.getElementById("sidebar-items").style.width = "250px";
     jQuery('#sidebar-toggle').attr('onclick', 'showNav()');
