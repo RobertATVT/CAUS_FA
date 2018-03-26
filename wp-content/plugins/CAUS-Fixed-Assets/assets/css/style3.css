@@ -249,20 +249,20 @@
     margin-top: -1px;
     margin: 0px auto;
 }
-.office {
+.asset-office {
     background: #060 !important;
     color: #fff;
 }
-.home {
+.asset-home {
     background: #fd0 !important;
     color: #000;
 }
-.missing {
+.asset-missing {
 	background: #900 !important;
     color: #fff;
     letter-spacing: .2em;
 }
-.pending {
+.asset-pending {
     font-size: 85%;
 	background: #46c !important;
     color: #fff;

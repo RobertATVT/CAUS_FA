@@ -114,7 +114,7 @@ function causfa_filter_asset_info( $content, $asset_index) {
     $missing = false;
     if ($wpdb->get_row("SELECT * FROM causfa_banner_missing WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
         $asset_info_html = str_replace( '[STATUS]', 'Missing', $asset_info_html);
-        $asset_info_html = str_replace('asset-status', 'asset-status missing', $asset_info_html);
+        $asset_info_html = str_replace('asset-status', 'asset-status asset-missing', $asset_info_html);
         $missing = true;
     } elseif ($row = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
         if ($row->PENDING_TYPE == 0) {
@@ -123,17 +123,17 @@ function causfa_filter_asset_info( $content, $asset_index) {
             $asset_info_html = str_replace( '[STATUS]', 'Pending Surplus', $asset_info_html);
         }
 
-        $asset_info_html = str_replace('asset-status', 'asset-status pending', $asset_info_html);
+        $asset_info_html = str_replace('asset-status', 'asset-status asset-pending', $asset_info_html);
         $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
         $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
     } else {
         $asset_status = $content->FZVFORG_ROOM;
         if (strpos($asset_status, 'HOME') !== false) {
             $asset_info_html= str_replace('[STATUS]', 'Home Use', $asset_info_html);
-            $asset_info_html= str_replace('asset-status', 'asset-status home', $asset_info_html);
+            $asset_info_html= str_replace('asset-status', 'asset-status asset-home', $asset_info_html);
         } else {
             $asset_info_html = str_replace('[STATUS]', 'Office Use', $asset_info_html);
-            $asset_info_html= str_replace('asset-status', 'asset-status office', $asset_info_html);
+            $asset_info_html= str_replace('asset-status', 'asset-status asset-office', $asset_info_html);
         }
     }
     return array($asset_info_html, $missing);
