@@ -26,7 +26,7 @@ function showNav() {
 };
 function hideNav() {
 //    document.getElementById("sidebar").style.left = "-300px";
-    document.getElementById("sidebar").style.marginLeft = "-330px";
+    document.getElementById("sidebar").style.marginLeft = "-280px";
     document.getElementById("overlay").style.display = "none";
     document.getElementById("sidebar-items").style.width = "250px";
     jQuery('#sidebar-toggle').attr('onclick', 'showNav()');

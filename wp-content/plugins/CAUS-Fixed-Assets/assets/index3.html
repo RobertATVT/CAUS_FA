@@ -17,97 +17,71 @@
 <body>
 <!-- BEGIN employee_info_template.html -->
 <!-- BEGIN TEMPLATE faa-header.html -->
-<div id="sidebar">
-        <nav id="nav">
-            <ul style="margin-top: 0px;">
-                <li>
-                    <a id="sidebar-toggle" onclick="showNav()" class="btn-menu right"><i class="material-icons" style="font-size: 40px;">menu</i></a>
-                </li>
-                <li class="sidenav-header lw-250" >
-                    <div class="rw">
-                        <div class="left cl t20 lh-35" style="font-size: 150%; color: #fff; font-weight: 700;letter-spacing: .05em;overflow: visible;">[NAME]</div>
-                        <div class="left cl t20 lh-25" style="font-size: 125%; color: #fff;">[OFFICE]</div>
-                        <div class="left cl t20 lh-25" style="font-size: 90%; color: #fff;">[PHONE]</div>
-                    </div>
-                </li>
-                <li id="sidebar-items" class="white">
-                    <div class="rw">
-                        <div class="cl t20" style="padding: 0px;">
-                            <span class="left lw-100 sidenav-heading">Fixed Assets Liaison</span>
-                        </div>
-                        <div class="cl t20">
-                            <span class="left lw-100 sidenav-i1"><b>[FAL]</b></span>
-                        </div>
-                        <div class="cl t20">
-                            <span class="left lw-100 sidenav-i2"><b>EMAIL:</b> [FAL-EMAIL]</span>
-                        </div>
-                        <div class="cl t20">
-                            <span class="left lw-100 sidenav-i2"><b>PHONE:</b> [FAL-PHONE]</span>
-                        </div>
-                    </div>
-                    <div class="rw">
-                        <div class="cl t20" style="padding: 0px;">
-                            <span class="left lw-100 sidenav-heading">Fixed Assets Coordinator</span>
-                        </div>
-                            <div class="cl t20">
-                                <span class="left lw-100 sidenav-i1"><b>[FAC]</b></span>
-                            </div>
-                            <div class="cl t20">
-                                <span class="left lw-100 sidenav-i2"><b>EMAIL:</b> [FAC-EMAIL]</span>
-                            </div>
-                            <div class="cl t20">
-                                <span class="left lw-100 sidenav-i2"><b>PHONE:</b> [FAC-PHONE]</span>
-                            </div>
-                    </div>
-                    <div class="rw">
-                        <div class="cl t20" style="padding: 0px;">
-                            <span class="left lw-100 sidenav-heading">Business Manager</span>
-                        </div>
-                        <div class="cl t20">
-                            <span class="left lw-100 sidenav-i1"><b>[BM]</b></span>
-                        </div>
-                        <div class="cl t20">
-                            <span class="left lw-100 sidenav-i2"><b>EMAIL:</b> [BM-EMAIL]</span>
-                        </div>
-                        <div class="cl t20">
-                            <span class="left lw-100 sidenav-i2"><b>PHONE:</b> [BM-PHONE]</span>
-                        </div>
-                    </div>
-                    <hr style="border-top: 1px solid #ccc;">
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div id="asset-container">
-    
-<!-- END TEMPLATE faa-header-template.html -->
-    <!-- BEGIN TEMPLATE faa-impact-template.html -->
+<div id="asset-container">
     <div id="asset-view">
+        <div class="rw" style="margin:0px;">
+            <div class="cl t20">
+                <div class="cl l5 m10 t20 hide-small" style="padding:5px;">
+                    <div class="cl t20 vt-orange vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+                        <div class="cl center t20 block-header block-headtext">Employee Information</div>
+                        <div class="cl t20 block-bigtext">[NAME]</div>
+                        <div class="cl t20 block-text">[OFFICE]</div>
+                        <div class="cl t20 block-text">[PHONE]</div>
+                    </div>
+                </div>
+                <div class="cl l5 m10 t20" style="padding:5px;">
+                    <div class="cl t20 vt-orange vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+                        <div class="cl center t20 block-header block-headtext">FIXED ASSETS LIAISON</div>
+                        <div class="cl t20 block-bigtext">[FAL]</div>
+                        <div class="cl t20 block-text">[FAL-EMAIL]</div>
+                        <div class="cl t20 block-text">[FAL-PHONE]</div>
+                    </div>
+                </div>
+                <div class="cl l5 m10 t20" style="padding:5px;">
+                    <div class="cl t20 vt-orange vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+                        <div class="cl center t20 block-header block-headtext">FIXED ASSETS COORDINATOR</div>
+                        <div class="cl t20 block-bigtext">[FAC]</div>
+                        <div class="cl t20 block-text">[FAC-EMAIL]</div>
+                        <div class="cl t20 block-text">[FAC-PHONE]</div>
+                    </div>
+                </div>
+                <div class="cl l5 m10 t20" style="padding:5px;">
+                    <div class="cl t20 vt-orange vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+                        <div class="cl center t20 block-header block-headtext">BUSINESS MANAGER</div>
+                        <div class="cl t20 block-bigtext">[BM]</div>
+                        <div class="cl t20 block-text">[BM-EMAIL]</div>
+                        <div class="cl t20 block-text">[BM-PHONE]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="overlay" onclick="hideNav()"></div>
         <div class="rw" style="margin:0px; display: block;">
-            <div class="cl t20" style="padding: 10px; padding-bottom: 10px;">
+            <div class="cl t20" style="padding: 5px; padding-bottom: 5px;">
                 <div id="asset-alerts" class="">[ALERT TEXT]</div>
             </div>
         </div>
+<!-- END TEMPLATE faa-header-template.html -->
+<!-- BEGIN TEMPLATE faa-impact-template.html -->
         <div class="rw" style="margin:0px;">
             <div class="cl t20">
-                <div class="cl m10 t20" style="padding:10px;">
+                <div class="cl m10 t20" style="padding:5px;">
                     <div class="cl t20 vt-teal vt-txt-white asset-block">
                         <div class="cl t10 biggertext">[TOTAL NUMBER]</div>
-                        <div class="cl t10 subtext">Total Number of Assets</div>
+                        <div class="cl t10 subtext-right">Total Number of Assets</div>
                         <div class="cl t10 bigtext">[TOTAL VALUE]</div>
-                        <div class="cl t10 subtext">Total Asset Values</div>
+                        <div class="cl t10 subtext-right">Total Asset Values</div>
                         <div class="center cl t20 block-footer">
                             <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a>
                         </div>
                     </div>
                 </div>
-                <div class="cl m10 t20" style="padding:10px;">
+                <div class="cl m10 t20" style="padding:5px;">
                     <div class="cl t20 vt-pink vt-txt-white asset-block">
                         <div class="cl m10 t10 biggertext">[MISSING NUMBER]</div>
-                        <div class="cl m10 t10 subtext">Total Missing Assets</div>
+                        <div class="cl m10 t10 subtext-right">Total Missing Assets</div>
                         <div class="cl m10 t10 bigtext">[TOTAL MISSING VALUE]</div>
-                        <div class="cl m10 t10 subtext">Total Missing Value</div>
+                        <div class="cl m10 t10 subtext-right">Total Missing Value</div>
                         <div class="center cl t20 block-footer">
                             <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a>
                         </div>
@@ -116,7 +90,7 @@
             </div>
         </div>
         <div class="rw" id="asset-title" style="margin: 0px;">
-            <div class="cl t20" style="padding:10px 10px;">
+            <div class="cl t20" style="padding: 5px;">
                 <div class="rw asset-list-header" style="margin:0px;">
                     <div class="center cl xl2 l2 m2 t6">TAG NUMBER</div>
                     <div class="center cl xl2 l2 m2 t8">SERIAL NUMBER</div>
