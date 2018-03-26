@@ -120,14 +120,9 @@ ul, ol {
 }
 /* FIXED ASSETS ELEMENTS*/
 #asset-container {
-    position: absolute;
-    top: 0px;
-    left: 0px;
     width: 100%;
-    height: 100%;
     background: #E5E1E6;
     padding: 0px;
-    overflow: visible;
 }
 #asset-alerts {
     padding: 5px; 
