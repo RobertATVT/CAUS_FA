@@ -30,7 +30,8 @@ function causfa_load_employee_view() {
         $assets = '';
         $total_number = 0;
         $missing_number = 0;
-        foreach ($results_assets as $result_asset) {
+        for ($i =0; $i < count($results_assets); $i++) {
+            $result_asset = $results_assets[$i];
             $value_total += $result_asset->FZVFORG_AMOUNT;
             $total_number++;
             $return_value = apply_filters('causfa_asset_info', $result_asset, $asset_index);
