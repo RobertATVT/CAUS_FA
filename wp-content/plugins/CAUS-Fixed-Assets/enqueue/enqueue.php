@@ -53,7 +53,7 @@ function causfa_enqueue() {
     wp_enqueue_script('causfa_materialize');
     wp_enqueue_script('causfa_flexslider_script');
     wp_enqueue_script('causfa_tippy_script');
-    wp_enqueue_style('causfa_font_awesome_script');
+    wp_enqueue_script('causfa_font_awesome_script');
 
 
     //This line creates a causfa_action_obj object that passes the ajax url to the front end scripts
