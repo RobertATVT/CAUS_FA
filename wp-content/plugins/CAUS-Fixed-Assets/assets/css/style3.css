@@ -1,3 +1,12 @@
+.x-container.offset {
+    margin: .25em auto !important;
+}
+.x-container.width {
+    width: 100% !important;
+}
+.entry-wrap{
+    padding: 10px !important;
+}
 
 /* VT BACKGROUND COLORS */
 .vt-lt-orange {
@@ -106,7 +115,7 @@
 #asset-container {
     width: 100%;
     background: #E5E1E6;
-    padding: 0px;
+    padding: 10px;
 }
 #asset-alerts {
     padding: 5px; 
