@@ -22,7 +22,7 @@ function causfa_load_employee_view() {
         return causfa_new_custodian_dialog();
     } else {
         $output = apply_filters('causfa_header', $result_user);
-        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_header_template.html', true ));
+        /* $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_header_template.html', true )); */
         $results_assets = $wpdb->get_results('SELECT * FROM causfa_banner WHERE FZVFORG_CUSTODIAN = "'.$result_user->Name.'";');
         $value_total = 0.00;
         $missing_total = 0.00;
