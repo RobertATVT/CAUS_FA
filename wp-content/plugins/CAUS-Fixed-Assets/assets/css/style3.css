@@ -183,7 +183,7 @@ ul, ol {
     border-top-right-radius:3px;
     border-bottom: 1px solid #D7D2CB;
     font-weight: 700; 
-    font-size: 70%;
+    font-size: 80%;
 }
 .asset-list-footer {
     background: #fff; 
@@ -204,7 +204,7 @@ ul, ol {
     border: 0px; 
     border-bottom: 1px solid #D7D2CB;
     font-weight: 400; 
-    font-size: 70%;
+    font-size: 75%;
     line-height: 20px;
 }
 .asset-show {
@@ -262,32 +262,36 @@ ul, ol {
     margin: 0px auto;
 }
 .asset-office {
+    font-size: 135%;
     background: #060 !important;
     color: #fff;
 }
 .asset-home {
+    font-size: 135%;
     background: #fd0 !important;
     color: #000;
 }
 .asset-missing {
-	background: #900 !important;
+    font-size: 135%;
+    background: #900 !important;
     color: #fff;
     letter-spacing: .2em;
 }
 .asset-pending {
-    font-size: 85%;
+    font-size: 135%;
 	background: #46c !important;
     color: #fff;
     line-height: 20px;
 }
 /* SIDEBAR AND CONTENT CONTAINERS */
 #sidebar {
-    transition: left .4s;    
+    transition: margin-left .4s;    
     position: sticky;
-    left: -255px;
+    top: 0px;
+/*    left: -255px; */
     width: 300px;
     height: 100%;
-    margin-left: -300px;
+    margin-left: -255px;
     color: #fff;
     background-color: #E87722;
     padding: 0px;
@@ -600,11 +604,30 @@ ul.thumbnails {
     .bigtext {
         font-size:100%;
     }
+    .asset-office {
+    font-size: 125%;
+    }
+    .asset-home {
+        font-size: 125%;
+    }
+    .asset-missing {
+        font-size: 125%;
+    }
+    .asset-pending {
+        font-size: 125%;
+    }
 }
 
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 993px) {
+     .asset-list-header {
+        font-size: 70%;
+    }
+    .asset-list {
+        font-size: 70%;
+        line-height: 20px;
+    }
     .asset-actions {
         margin-top: 0px;
         margin-bottom: 0px;
@@ -625,5 +648,23 @@ ul.thumbnails {
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1601px) {
- 
+     .asset-list-header {
+        font-size: 100%;
+    }
+    .asset-list {
+        font-size: 90%;
+        line-height: 20px;
+    }
+    .asset-actions {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 120%;
+        line-height: 20px;
+    }
+    .asset-status {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 90%;
+        font-size: 120%;
+    } 
 }
