@@ -648,6 +648,9 @@ ul.thumbnails {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 601px) {
+    #asset-container {
+        margin-top: 0px;
+    }
     .nav-tabs > li {
         width: 25%;
         outline: 0px;
@@ -704,9 +707,9 @@ ul.thumbnails {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 993px) {
     #asset-container {
-        margin-top: 30px;
+        margin-top: 0px;
     }
-     .asset-list-header {
+    .asset-list-header {
         font-size: 70%;
     }
     .asset-list {
@@ -742,6 +745,9 @@ ul.thumbnails {
     }
     .emp-info-inside {
         display: inline-flex;
+    }
+    .x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce) {
+        font-size: 8px !important;
     }
 }
 
