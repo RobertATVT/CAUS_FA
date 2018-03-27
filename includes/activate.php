@@ -15,7 +15,28 @@ function causfa_activate_plugin() {
     if( version_compare( get_bloginfo('version'), '4.5', '<' )) {
         wp_die(__('You must update WordPress to use this plugin', 'CAUS Fixed Assets Application'));
     }
-
+    $upload = wp_upload_dir();
+    $upload_dir = $upload['basedir'];
+    $upload_dir = $upload_dir.'/causfa';
+    if(! is_dir($upload_dir)) {
+        mkdir($upload_dir, 0755);
+    }
+    $upload_dir_images = $upload_dir.'/images';
+    if(! is_dir($upload_dir_images)) {
+        mkdir($upload_dir_images, 0755);
+    }
+    $upload_dir_forms = $upload_dir.'/forms';
+    if(! is_dir($upload_dir_forms)) {
+        mkdir($upload_dir_forms);
+    }
+    $upload_dir_forms_home = $upload_dir_forms.'/home';
+    if(! is_dir($upload_dir_forms_home)) {
+        mkdir($upload_dir_forms_home);
+    }
+    $upload_dir_forms_office = $upload_dir_forms.'/office';
+    if(! is_dir($upload_dir_forms_office)) {
+        mkdir($upload_dir_forms_office);
+    }
     //Checks to make sure that the groups plugin is active and if it is then it makes sure the required groups are available
     if( is_plugin_active('groups/groups.php')) {
         $business_manager = Groups_Group::read_by_name('Business Manger');

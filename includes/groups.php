@@ -12,7 +12,8 @@
  * Uses the groups plugin to determine the FAL(s) of the current users organization
  */
 function causfa_groups_FAL() {
-    $output = '';
+    global $wpdb;
+    $output = array();
     $current_user = new Groups_User( get_current_user_id() );
     $liaison = Groups_Group::read_by_name('Fixed Assets Liaison');
     $liaison_group = new Groups_Group( $liaison->group_id);
@@ -21,17 +22,28 @@ function causfa_groups_FAL() {
         $current_user_group = $current_user_groups[$i];
         $can_org = $current_user_group->__get('capabilities');
         if($can_org) {
-            $FAL_count = 0;
             $users_in_group = $current_user_group->users;
             for ($j=0; $j < count($users_in_group); $j++) {
                 for($k=0; $k < count($liaison_group->users); $k++) {
                     if ($liaison_group->users[$k]->ID == $users_in_group[$j]->ID) {
-                        if ($FAL_count == 0) {
-                            $output = $liaison_group->users[$k]->display_name;
-                        } else {
-                            $output = $output.(' and '.$liaison_group->users[$k]->display_name);
+                        $isInList = false;
+                        for($l=0; $l < count($output); $l++) {
+                            if($output[$l]['Name'] == $liaison_group->users[$k]->display_name) {
+                                $isInList = true;
+                            }
                         }
-                        $FAL_count++;
+                        if (!$isInList) {
+                            $phone = $wpdb->get_var('SELECT Phone FROM causfa_custodians WHERE Email = "'.$liaison_group->users[$k]->user_email.'";');
+                            if ($phone === null) {
+                                $phone = '';
+                            }
+                            $FAL = array(
+                                'Name' => $liaison_group->users[$k]->display_name,
+                                'Email' => $liaison_group->users[$k]->user_email,
+                                'Phone' => $phone
+                            );
+                            $output[] = $FAL;
+                        }
                     }
                 }
             }
@@ -46,7 +58,8 @@ function causfa_groups_FAL() {
  * Uses the groups plugin to determine the FAC(s) of the current users organization
  */
 function causfa_groups_FAC() {
-    $output = '';
+    global $wpdb;
+    $output = array();
     $current_user = new Groups_User( get_current_user_id() );
     $coordinator = Groups_Group::read_by_name('Fixed Assets Coordinator');
     $coordinator_group = new Groups_Group( $coordinator->group_id);
@@ -55,17 +68,28 @@ function causfa_groups_FAC() {
         $current_user_group = $current_user_groups[$i];
         $can_org = $current_user_group->__get('capabilities');
         if($can_org) {
-            $FAC_count = 0;
             $users_in_group = $current_user_group->users;
             for ($j=0; $j < count($users_in_group); $j++) {
                 for($k=0; $k < count($coordinator_group->users); $k++) {
                     if ($coordinator_group->users[$k]->ID == $users_in_group[$j]->ID) {
-                        if ($FAC_count == 0) {
-                            $output =  $coordinator_group->users[$k]->display_name;
-                        } else {
-                            $output = $output.(' and '.$coordinator_group->users[$k]->display_name);
+                        $isInList = false;
+                        for($l=0; $l < count($output); $l++) {
+                            if($output[$l]['Name'] == $coordinator_group->users[$k]->display_name) {
+                                $isInList = true;
+                            }
                         }
-                        $FAC_count++;
+                        if (!$isInList) {
+                            $phone = $wpdb->get_var('SELECT Phone FROM causfa_custodians WHERE Email = "'.$coordinator_group->users[$k]->user_email.'";');
+                            if ($phone === null) {
+                                $phone = '';
+                            }
+                            $FAC = array(
+                                'Name' => $coordinator_group->users[$k]->display_name,
+                                'Email' => $coordinator_group->users[$k]->user_email,
+                                'Phone' => $phone
+                            );
+                            $output[] = $FAC;
+                        }
                     }
                 }
             }
@@ -80,7 +104,8 @@ function causfa_groups_FAC() {
  * Uses the groups plugin to determine the BM(s) of the current users organization
  */
 function causfa_groups_BM() {
-    $output = '';
+    global $wpdb;
+    $output = array();
     $current_user = new Groups_User( get_current_user_id() );
     $business_manager = Groups_Group::read_by_name('Business Manager');
     $business_manager_group = new Groups_Group( $business_manager->group_id);
@@ -89,17 +114,28 @@ function causfa_groups_BM() {
         $current_user_group = $current_user_groups[$i];
         $can_org = $current_user_group->__get('capabilities');
         if($can_org) {
-            $BM_count = 0;
             $users_in_group = $current_user_group->users;
             for ($j=0; $j < count($users_in_group); $j++) {
                 for($k=0; $k < count($business_manager_group->users); $k++) {
                     if ($business_manager_group->users[$k]->ID == $users_in_group[$j]->ID) {
-                        if ($BM_count == 0) {
-                            $output = $business_manager_group->users[$k]->display_name;
-                        } else {
-                            $output = $output.(' and '.$business_manager_group->users[$k]->display_name);
+                        $isInList = false;
+                        for($l=0; $l < count($output); $l++) {
+                            if($output[$l]['Name'] == $business_manager_group->users[$k]->display_name) {
+                                $isInList = true;
+                            }
                         }
-                        $BM_count++;
+                        if(!$isInList) {
+                            $phone = $wpdb->get_var('SELECT Phone FROM causfa_custodians WHERE Email = "'.$business_manager_group->users[$k]->user_email.'";');
+                            if ($phone === null) {
+                                $phone = '';
+                            }
+                            $BM = array(
+                                'Name' => $business_manager_group->users[$k]->display_name,
+                                'Email' => $business_manager_group->users[$k]->user_email,
+                                'Phone' => $phone
+                            );
+                            $output[] = $BM;
+                        }
                     }
                 }
             }
