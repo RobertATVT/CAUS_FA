@@ -118,6 +118,8 @@ function uploadImage() {
                     alert(data['message']);
                 } else {
                     alert(data['message']);
+                    alert (data['src']);
+                    addImages(data['src'], data['desc'], data['date']);
                 }
             }
         });
