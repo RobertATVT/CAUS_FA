@@ -753,7 +753,9 @@ ul.thumbnails {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1201px) {
-
+    .x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce) {
+        font-size: 11px !important;
+    }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1601px) {
@@ -776,4 +778,5 @@ ul.thumbnails {
         width: 90%;
         font-size: 120%;
     } 
+    
 }
