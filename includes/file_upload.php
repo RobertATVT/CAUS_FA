@@ -25,16 +25,15 @@ function causfa_upload_image() {
     $PID = $_SESSION['PID'];
     $ptag = $_SESSION['ptag'];
     $target_dir = wp_upload_dir()['basedir'].'/causfa/images/'.$ptag;
-    $target_url = wp_upload_dir()['url'].'/causfa/images/'.$ptag;
+    $target_url = wp_upload_dir()['baseurl'].'/causfa/images/'.$ptag;
     $date = getdate();
     if(! is_dir($target_dir)) {
         mkdir($target_dir, 0755);
     }
     for ($i = 0; $i<99; $i++) {
         $target_file = $target_dir.'/'.$date['year'].$date['mon'].$date['mday'].'_'.$PID.'_'.$i.'.'.$imageFileType;
-        $target_url = $target_url.'/'.$date['year'].$date['mon'].$date['mday'].'_'.$PID.'_'.$i.'.'.$imageFileType;
-
         if (!file_exists($target_file)) {
+            $target_url = $target_url.'/'.$date['year'].$date['mon'].$date['mday'].'_'.$PID.'_'.$i.'.'.$imageFileType;
             $i = 100;
         }
     }
@@ -46,6 +45,9 @@ function causfa_upload_image() {
         } else {
             $output['status'] = 1;
             $output['message'] = 'File Upload Successful';
+            $output['src'] = $target_url;
+            $output['desc'] = $desc;
+            $output['date'] = $date['year'].'-'.$date['mon'].'-'.$date['mday'];
         }
         wp_send_json($output);
     } else {
@@ -76,7 +78,7 @@ function causfa_upload_form_home() {
     $last_name = $user->last_name;
     $date = getdate();
     $target_dir = wp_upload_dir()['basedir'].'/causfa/forms/home/'.$date['year'];
-    $target_url = wp_upload_dir()['url'].'/causfa/forms/home/'.$date['year'];
+    $target_url = wp_upload_dir()['baseurl'].'/causfa/forms/home/'.$date['year'];
     if(! is_dir($target_dir)) {
         mkdir($target_dir, 0755);
     }
@@ -127,7 +129,7 @@ function causfa_upload_form_office() {
     $last_name = $user->last_name;
     $date = getdate();
     $target_dir = wp_upload_dir()['basedir'].'/causfa/forms/office/'.$date['year'];
-    $target_url = wp_upload_dir()['url'].'/causfa/forms/office/'.$date['year'];
+    $target_url = wp_upload_dir()['baseurl'].'/causfa/forms/office/'.$date['year'];
     if(! is_dir($target_dir)) {
         mkdir($target_dir, 0755);
     }
@@ -169,9 +171,12 @@ function causfa_output_images() {
         date => array()
     );
     for ($i = 0; $i < count($results); $i++) {
-        array_push($output['src'], unserialize($results[$i]->IMG_URL));
-        array_push($output['desc'], unserialize($results[$i]->IMG_DESC));
-        array_push($output['date'], unserialize($results[$i]->IMG_DATE));
+        $output['src'] = unserialize($results[$i]->IMG_URL);
+        $output['desc'] = unserialize($results[$i]->IMG_DESC);
+        $output['date'] = unserialize($results[$i]->IMG_DATE);
+    }
+    if (count($output['src']) == 0) {
+        $output['src'][] =  wp_upload_dir()['baseurl'].'/causfa/images/no-image-available.png';
     }
     wp_send_json($output);
 }

@@ -45,19 +45,20 @@ function galleryModalRequested(elementID) {
     jQuery('#galleryModal').find('#galleryPtag').val(tag);
     jQuery('#imageFileToUpload').val('');
     jQuery('#imageDescription').val('');
-    var list = document.getElementById('slides').innerHTML ='';
-    var form = {
-        action: 'causfa_output_images'
-    };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        for (i = 0; i < data['src'].length; i++) {
-            addImages(data['src'][i], data['desc'][i], data['date'][i]);
-        }
-        $('.flexslider').flexslider({
-            animation: "slide",
-            controlNav: "thumbnails"
+    //var list = document.getElementById('slides').innerHTML ='';
+    var loaded = jQuery('#loaded').val();
+    if (loaded == 0) {
+        var form = {
+            action: 'causfa_output_images'
+        };
+        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+            alert(JSON.stringify(data['src']));
+            for (i = 0; i < data['src'].length; i++) {
+                addImages(data['src'][i], data['desc'][i], data['date'][i]);
+            }
+            jQuery('#loaded').val(1);
         });
-    });
+    }
     jQuery('#galleryModal').modal();
     jQuery('#galleryModal').modal('open');
 }
@@ -65,11 +66,17 @@ function addImages(image, desc, date) {
     var list = document.getElementById('slides');
     var item = document.createElement('LI');
     var img = document.createElement('img');
+    item.setAttribute('data-thumb', image);
     img.src = image;
     var text = document.createTextNode(desc + "  Uploaded on: " + date);
     item.appendChild(img);
     item.appendChild(text);
     list.appendChild(item);
+    $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails",
+        namespace: 'faa-'
+    });
 }
 function formsModalRequested(elementID) {
     var id = elementID.split('-')[1];
