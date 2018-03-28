@@ -1,11 +1,39 @@
-<p>Before you can use the CAUS Fixed Assets App we need a little bit of information from you.</p>
-<form>
-    Office location and number:<br>
-    <input type="text" name="office" id="Office" value="">
-    <br>
-    Phone number:<br>
-    <input type="text" name="phone" id="Phone" value="">
-    <br><br>
-<button type="button" class="btn btn-primary" id="newCustodianButton" onclick="new_custodian_submit()">Submit</button>
-</form>
+<div class="new-custodian">
+    <h4 class="center new-custodian-title" style="">NEW CUSTODIAN LOGIN</h4>
+    <div class="rw new-custodian-info" style="">
+        <div class="rw" style="padding: 0px; margin-bottom: 0px;">
+            <form>
+                <div class="rw" style="margin-bottom: 0px; font-size: 120% !important;">
+                    <div class="cl t20 info-title" style="text-align:center;padding: 0px; padding-top: 10px; padding-bottom: 15px;">Before you can use the CAUS Fixed Assets App we need a little bit of information from you.</div>
+                    <div class="row"><hr style="padding: 10px !important;">
+                        <div class="cl t20">
+                            <div class="cl t20">
+                                <div class="cl m8 t20 info-title">Office location and number:</div>
+                                <div class="cl m12 t20" style="padding: 0px;"><input type="text" name="office" id="Office" value=""></div>    
+                            </div>
+                            <div class="cl t20">
+                                <div class="cl m8 t20 info-title">Phone Number (please include Area Code):</div>
+                                <div class="cl m12 t20" style="padding: 0px;"><input type="text" name="phone" id="Phone" value=""></div> 
+                            </div>
+                            <div class="cl t20">
+                                <div class="cl m8 t20 info-title">Please select the Organization that employs you:</div>
+                                <div class="cl m12 t20" style="padding: 0px;">
+                                    <select id="org">
+                                        <option value="CAUS">College of Architecture and Urban Studies</option>
+                                        <option value="A+D">Architecture + Design</option>
+                                        <option value="BC">Building Construction</option>
+                                        <option value="MLSoC">Myers-Lawson School of Construction</option>
+                                        <option value="SOVA">School of Visual Arts</option>
+                                        <option value="SPIA">School of Public and International Affairs</option>
+                                    </select>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cl t20" style="text-align: right;"><button type="button" class="btn btn-primary" id="newCustodianButton" onclick="new_custodian_submit()">Submit</button></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 

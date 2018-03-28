@@ -23,6 +23,22 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     -webkit-box-shadow: 0 1px 0 0 #E87722;
     box-shadow: 0 1px 0 0 #E87722;
 }
+select {
+    display:inherit !important;
+    background-color: #f6f6f6;
+    border: 1px solid #9e9e9e;
+    border-bottom: 2px solid #9e9e9e;
+    height: 2.5rem;
+    text-align: center;
+}
+select:focus {
+    outline: 1px solid #75787B;
+}
+
+select#org option:hover {
+    background-color: #ED8B00 !important;
+    box-shadow: 0 0 10px 100px #1882A8 inset !important;
+}
 
 /* VT BACKGROUND COLORS */
 .vt-lt-orange {
@@ -454,17 +470,15 @@ a.btn-menu {
 .modal {
     width: 45% !important;
     margin:0 auto;
-    
-    position: absolute;
+    position: fixed;
     left: 0;
     right:0;
-    top: 50%; 
-    border:1px solid;
+    top: 50% !important; 
     -webkit-transform:translateY(-50%);
     -moz-transform:translateY(-50%);
     -ms-transform:translateY(-50%);
     -o-transform:translateY(-50%);
-    transform:translateY(-50%);
+    transform:translateY(-50%) !important;
 }
 .modal .modal-content {
     padding: 0px !important;
@@ -708,6 +722,59 @@ a.btn-menu {
         font-size:80%;
         line-height: 17px;
     }
+    .modal {
+        width: 90% !important;
+    }
+    .faa-modal-title {
+        font-size: 150%;
+    }
+    .home-generate {
+        width: 95% !important;
+        font-size: 80% !important;
+    }
+    .home-upload {
+        width: 95% !important;
+        font-size: 80% !important;
+    }
+    .home-file {
+        width: 95% !important;
+    }
+    .forms-modal-left {
+        padding: 5px !important; 
+        padding-top: 10px !important; 
+        border: 1px solid #ccc; 
+    }
+    .forms-modal-center {
+        padding: 5px !important; 
+        padding-top: 10px !important;
+        border-top: 0px !important;
+        border: 1px solid #ccc; 
+    }
+    .forms-modal-right {
+        padding: 10px !important; 
+        border: 1px solid #ccc;
+        border-top: 0px !important;
+    }
+    .new-custodian {
+        width: 95%;
+        margin: 0px auto;
+        background: #efefef;
+        padding: 0px;
+    }
+    .new-custodian-title {
+        background: #333;
+        color: #fff;
+        padding: 5px;
+        margin: 0px;
+        border-radius: 5px 5px 0px 0px;
+        font-size: 90%;
+    }
+    .new-custodian-info {
+        border: 1px solid #aaa; 
+        padding: 10px; 
+        background: #fff; 
+        border-radius: 0px 0px 5px 5px;
+    }
 }
 
 
@@ -738,6 +805,33 @@ a.btn-menu {
     .block-text {
         font-size:80%;
         line-height: 17px;
+    }
+    .home-generate {
+        width: 95% !important;
+        font-size: 100% !important;
+    }
+    .home-upload {
+        width: 95% !important;
+        font-size: 70% !important;
+    }
+    .home-file {
+        width: 95% !important;
+    }
+    .forms-modal-left {
+        padding: 5px !important; 
+        padding-top: 10px !important; 
+        border: 1px solid #ccc; 
+    }
+    .forms-modal-center {
+        padding: 5px !important; 
+        padding-top: 10px !important; 
+        border: 1px solid #ccc; 
+    }
+    .forms-modal-right {
+        padding: 10px !important; 
+        border: 1px solid #ccc !important;
+        border-top: 0px !important;
+        height: 100%;
     }
 }
 
@@ -795,7 +889,37 @@ a.btn-menu {
     .asset-pending {
         font-size: 125%;
     }
-
+    .modal {
+        width: 90% !important;
+    }
+    .home-generate {
+        width: 95% !important;
+        font-size: 85% !important;
+    }
+    .home-upload {
+        width: 95% !important;
+        font-size: 85% !important;
+    }
+    .home-file {
+        width: 90%;
+    }
+    .forms-modal-left {
+        padding: 5px !important; 
+        padding-top: 10px !important; 
+        border: 1px solid #ccc !important; 
+        border-right: 0px !important;
+    }
+    .forms-modal-center {
+        padding: 5px !important; 
+        padding-top: 10px !important; 
+        border: 1px solid #ccc !important;
+    }
+    .forms-modal-right {
+        padding: 10px !important; 
+        border: 1px solid #ccc !important;
+        border-top: 0px !important;
+        height: 100%;
+    }
 }
 
 
@@ -844,12 +968,47 @@ a.btn-menu {
     .x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce) {
         font-size: 8px !important;
     }
+    .modal {
+        width: 75% !important;
+    }
+    .home-generate {
+        width: 95% !important;
+        font-size: 95% !important;
+    }
+    .home-upload {
+        width: 95% !important;
+        font-size: 95% !important;
+    }
+    .home-file {
+        width: 90%;
+    }
+    .forms-modal-left {
+        padding: 5px !important; 
+        padding-top: 10px !important; 
+        border: 1px solid #ccc !important; 
+        border-right: 0px !important;
+    }
+    .forms-modal-center {
+        padding: 5px !important; 
+        padding-top: 10px !important; 
+        border: 1px solid #ccc !important;
+    }
+    .forms-modal-right {
+        padding: 10px !important; 
+        border: 1px solid #ccc !important;
+        border-top: 0px !important;
+        height: 100%;
+    }
+    
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1201px) {
     .x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce) {
         font-size: 11px !important;
+    }
+    .modal {
+        width: 45% !important;
     }
 }
 /* Extra large devices (large desktops, 1200px and up) */
@@ -872,6 +1031,45 @@ a.btn-menu {
         margin-bottom: 0px;
         width: 90%;
         font-size: 120%;
-    } 
+        min-height: 25px !important;
+        line-height: 25px;
+    }
+    .forms-modal-left {
+        padding: 5px !important; 
+        padding-top: 10px !important; 
+        border: 1px solid #ccc; 
+        border-right: 0px;
+    }
+    .forms-modal-center {
+        padding: 5px !important; 
+        padding-top: 10px !important; 
+        border: 1px solid #ccc; 
+        border-right: 0px;
+    }
+    .forms-modal-right {
+        padding: 10px; 
+        border: 1px solid #ccc;
+    }
+    .new-custodian {
+        width: 65%;
+        margin: 0px auto;
+        background: #efefef;
+        padding: 0px;
+    }
+    .new-custodian-title {
+        background: #333;
+        line-height: 35px;
+        color: #fff;
+        padding: 10px;
+        margin: 0px;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .new-custodian-info {
+        border: 1px solid #aaa; 
+        padding: 10px; 
+        background: #fff; 
+        border-radius: 0px 0px 5px 5px;
+    }
+
     
 }
