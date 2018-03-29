@@ -47,7 +47,7 @@ function galleryModalRequested(elementID) {
     jQuery('#imageDescription').val('');
     //document.getElementById('slides').innerHTML ='';
     var loaded = jQuery('#loaded').val();
-    alert(loaded.length);
+    //alert(loaded.length);
     jQuery('#loaded').val(tag);
     if (!loaded.length) {
         $('.slider-nav').empty();

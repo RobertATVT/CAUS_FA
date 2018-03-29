@@ -470,28 +470,24 @@ a.btn-menu {
 .modal {
     width: 45% !important;
     margin:0 auto;
-<<<<<<< HEAD
     
-    position: fixed;
-    left: 0;
-    right:0;
-    top: 50% !important;
-    border:1px solid;
-=======
+    border: none;
+    border-radius: 3px;
     position: fixed;
     left: 0;
     right:0;
     top: 50% !important; 
->>>>>>> 99efb5761f5d44d3440be86439fb502152c68fb3
+    overflow-y: visible !important;
+
     -webkit-transform:translateY(-50%);
     -moz-transform:translateY(-50%);
     -ms-transform:translateY(-50%);
     -o-transform:translateY(-50%);
     transform:translateY(-50%) !important;
-<<<<<<< HEAD
-=======
-    overflow-y: visible;
->>>>>>> 99efb5761f5d44d3440be86439fb502152c68fb3
+}
+
+#gallerModal {
+    overflow-y: auto !important;
 }
 .modal .modal-content {
     padding: 0px !important;
@@ -592,12 +588,26 @@ img{
 }
 .slider-nav .slick-track{
     height: 85px;
+    background-color: #333 !important;
+}
+.slick-slider .slick-next, .slick-slider .slick-prev {
+    top: 0px !important;
+    height: 100% !important;
+    line-height: 100px !important;
+    border: none !important;
+    background-color: rgba(0,0,0,0.3) !important;
+    color: #000 !important;
+    font-size: 30px;
+    opacity: 0.5;
 }
 .slick-arrow{
     position: absolute;
     top: 50%;
     z-index: 50;
-    margin-top: -12px;
+    margin-top: 0px;
+}
+.slick-arrow:hover {
+    color: #fff !important;
 }
 .slick-prev{
     left: 0;
