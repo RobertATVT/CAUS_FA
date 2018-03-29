@@ -430,7 +430,7 @@ a.btn-menu {
     margin:0 auto;
     
     border: none;
-    border-radius: 3px;
+    border-radius: 3px !important;
     position: fixed;
     left: 0;
     right:0;
@@ -457,11 +457,13 @@ a.btn-menu {
     line-height: 35px;
     color: #fff;
     padding: 10px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 .faa-modal-header{
     padding: 0px;
-    border-radius: 0px;
+    border-top-left-radius: 3px;
 }
 .faa-modal-header button {
     position: absolute;
@@ -482,6 +484,10 @@ a.btn-menu {
     padding: 10px; 
     background: #fff; 
     border-radius: 0px;
+}
+.modal .modal-footer {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .faa-input {
     border: 1px solid #aaa;
@@ -990,6 +996,9 @@ slider-for{
     }
     .modal {
         width: 33% !important;
+    }
+    #reportsModal {
+        width: 50% !important;
     }
 }
 /* Extra large devices (large desktops, 1200px and up) */

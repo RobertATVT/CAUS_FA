@@ -139,6 +139,14 @@ function formsModalRequested(elementID) {
     jQuery('#formsModal').modal();
     jQuery('#formsModal').modal('open');
 }
+function addAssetModalRequested(elementID) {
+    jQuery('#addAssetsModal').modal();
+    jQuery('#addAssetsModal').modal('open');
+}
+function reportModalRequested(elementID) {
+    jQuery('#reportModal').modal();
+    jQuery('#reportModal').modal('open');
+}
 function getLastForm(tag) {
     var form ={
         action: 'causfa_get_last_form',

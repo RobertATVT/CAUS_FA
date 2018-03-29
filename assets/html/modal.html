@@ -147,7 +147,49 @@
         <button type="button" class="btn btn-secondary modal-close">Cancel</button>
     </div>
 </div>
-
+<!---- Reports Modal ----->
+<div id="reportModal" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="modal-response-title">Report Problem</h4>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+            <div class="rw" style="margin-bottom: 0px; padding: 0px;">
+                <div id="modal-response-alert" class="center cl m20 t20">Report a problem with this asset</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary modal-close">Close</button>
+    </div>
+</div>
+<!---- Add Assets Modal ----->
+<div id="addAssetsModal" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="modal-response-title">Add Missing Asset</h4>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+            <form>
+<!--        
+            <div class="rw" style="margin-bottom: 0px; padding: 0px;">
+                <div class="center cl m5 t5">VT Tag Number</div>
+                <div class="center cl m5 t5">Serial Number</div>
+                <div class="center cl m10 t10">Description</div>
+            </div>
+-->
+                <div class="rw" style="margin-bottom: 0px; padding: 0px;">
+                    <div class="center cl m5 t5"><input type="text" id ="addAssetPTAG" placeholder="Enter VT Tag Number" style="width: 95%;"></div>
+                    <div class="center cl m5 t5"><input type="text" id ="addAssetSerial" placeholder="Enter Serial Number" style="width: 95%;"></div>
+                    <div class="center cl m10 t10"><input type="text" id ="addAssetDesc" placeholder="Please enter a Description" style="width: 95%;"></div>
+                </div>
+                <div class="rw" style="margin-bottom: 0px; padding: 0px;">
+                    <div class="center cl m20 t20"><textarea id ="addAssetNotes" placeholder="Please enter any relevenat information such as why this should be added." style="width: 98%; height: auto; border-color: #ccc !important;"></textarea></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="reportButton" onclick="validateForm(this)">SUBMIT REQUEST</button>
+    <button type="button" class="btn btn-secondary modal-close">CANCEL REQUEST</button>
+    </div>
+</div>
 <!---- Response Modal ----->
 <div id="responseModal" class="modal">
     <div class="modal-content">
