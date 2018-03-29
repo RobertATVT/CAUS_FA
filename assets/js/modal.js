@@ -105,7 +105,8 @@ function slickInit() {
         slidesToScroll: 1,
         arrows: true,
         fade: true,
-        autoplay: true
+        autoplay: true,
+        adaptiveHeight: true
     });
     $('.slider-nav').slick({
         slidesToShow: 3,
