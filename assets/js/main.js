@@ -124,7 +124,12 @@ function uploadImage() {
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    alert(data['message']);
+                    //alert(data['message']);
+                    $('#imageDescription').val('');
+                    $('#imageFileToUpload').val('');
+                    //var index = $('#slider-nav').slick('slickCurrentSlide');
+                    //index++;
+                    //$('#slider-nav').slick('slickGoTo', index);
                     addImages(data['src'], data['desc'], data['date']);
                 }
             }
