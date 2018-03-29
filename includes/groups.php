@@ -181,3 +181,11 @@ function causfa_groups_is_admin() {
     }
     return $is_admin;
 }
+
+function causfa_groups_add($name) {
+    global $wpdb;
+    $group_id = $wpdb->get_var('SELECT group_id FROM '.$wpdb->prefix.'groups_group WHERE name = "'.$name.'";');
+    Groups_User_Group::create( array( 'user_id' => get_current_user_id(), 'group_id' =>  $group_id) );
+    $employeeGroup = Groups_Group::read_by_name('Employee');
+    Groups_User_Group::create( array( 'user_id' => get_current_user_id(), 'group_id' =>  $employeeGroup->group_id) );
+}

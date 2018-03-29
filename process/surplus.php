@@ -12,7 +12,8 @@
 function causfa_surplus() {
     global $wpdb;
     $output = array(
-        'status' => 0
+        'status' => 0,
+        'message' => ''
     );
     $ptag = $_SESSION['ptag'];
     $PID_origin = $_SESSION['PID'];
@@ -41,6 +42,7 @@ function causfa_surplus() {
     );
     causfa_logger($logger_info);
     $output['status'] = 1;
+    $output['message'] = 'A surplus request has been sent to your Fixed Assets Liaison and Business Manager. They will be in contact with you soon to facilitate the transfer of the asset.';
     wp_send_json($output);
 
 }

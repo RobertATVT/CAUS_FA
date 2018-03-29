@@ -13,6 +13,8 @@ function surplusAsset() {
             jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery('#surplusModal').modal('close');
+            jQuery('#responseModal').find('#modal-response-title').text('Surplus Request Submitted');
+            jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
             jQuery('#responseModal').modal();
             jQuery('#responseModal').modal('open');
         }
@@ -34,6 +36,8 @@ function transferAsset(PID_dest) {
             jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery('#transferModal').modal('close');
+            jQuery('#responseModal').find('#modal-response-title').text('Transfer Request Submitted');
+            jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
             jQuery('#responseModal').modal();
             jQuery('#responseModal').modal('open');
         }
@@ -68,9 +72,10 @@ function new_custodian_submit() {
         alert('Phone field cannot be empty');
     } else {
         var form = {
-            action: 'causfa_new_custodian',
-            office: office,
-            phone: phone
+            'action': 'causfa_new_custodian',
+            'office': office,
+            'phone': phone,
+            'org': org
         };
         jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
             if (data == 1) {

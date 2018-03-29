@@ -33,11 +33,11 @@ function causfa_new_custodian() {
     $phone = substr_replace($phone,'-', 3, 0);
     $phone = substr_replace($phone,'-', 7, 0);
     if ($wpdb->insert('causfa_custodians', array(
-        Name => $name,
-        PID => $PID,
-        Email => $email,
-        Office => $office,
-        Phone => $phone
+        'Name' => $name,
+        'PID' => $PID,
+        'Email' => $email,
+        'Office' => $office,
+        'Phone' => $phone
     ), array(
         '%s',
         '%s',
@@ -47,6 +47,7 @@ function causfa_new_custodian() {
         ))) {
         $output = 1;
     }
+    causfa_groups_add($_POST['org']);
     wp_send_json($output);
 
 }
