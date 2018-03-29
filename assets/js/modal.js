@@ -122,6 +122,7 @@ function slickDisable() {
     $('.slider-for').slick('unslick');
 }
 function formsModalRequested(elementID) {
+    $('#last-form').html('');
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
     var form = {
@@ -130,11 +131,28 @@ function formsModalRequested(elementID) {
         Input: tag
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
+    getLastForm(tag);
     jQuery('#formsModal').find('#formsPtag').val(tag);
     jQuery('#homeFormToUpload').val('');
     jQuery('#officeFormToUpload').val('');
     jQuery('#formsModal').modal();
     jQuery('#formsModal').modal('open');
+}
+function getLastForm(tag) {
+    var form ={
+        action: 'causfa_get_last_form',
+        ptag: tag
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+        if (data['status'] === 0) {
+            $('#last-form').html('No form on record');
+        } else if(data['type'] === 0) {
+            $('#last-form').html('<a target="_blank" href="' + data['url'] + '">OfficeUse-' + data['date'] + '</a>');
+        } else {
+            $('#last-form').html('<a target="_blank" href="' + data['url'] + '">HomeUse-' + data['date'] + '</a>');
+        }
+
+    });
 }
 function modalRequestedOnPendingAsset(elementID) {
     var id = elementID.split('-')[1];

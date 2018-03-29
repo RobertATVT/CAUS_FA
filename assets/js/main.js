@@ -159,6 +159,7 @@ function uploadFormHome(){
                 } else {
                     alert(data['message']);
                     $('#homeFormToUpload').val('');
+                    getLastForm(ptag);
                 }
             }
         });
@@ -186,7 +187,8 @@ function uploadFormOffice(){
                     alert(data['message']);
                 } else {
                     alert(data['message']);
-                    $('#officeFormToUpload').val();
+                    $('#officeFormToUpload').val('');
+                    getLastForm(ptag);
                 }
             }
         });
