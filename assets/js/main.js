@@ -124,7 +124,7 @@ function uploadImage() {
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    //alert(data['message']);
+                    alert(data['message']);
                     $('#imageDescription').val('');
                     $('#imageFileToUpload').val('');
                     //var index = $('#slider-nav').slick('slickCurrentSlide');
@@ -158,6 +158,7 @@ function uploadFormHome(){
                     alert(data['message']);
                 } else {
                     alert(data['message']);
+                    $('#homeFormToUpload').val('');
                 }
             }
         });
@@ -185,6 +186,7 @@ function uploadFormOffice(){
                     alert(data['message']);
                 } else {
                     alert(data['message']);
+                    $('#officeFormToUpload').val();
                 }
             }
         });
