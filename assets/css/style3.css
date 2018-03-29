@@ -479,6 +479,7 @@ a.btn-menu {
     -ms-transform:translateY(-50%);
     -o-transform:translateY(-50%);
     transform:translateY(-50%) !important;
+    overflow-y: visible;
 }
 .modal .modal-content {
     padding: 0px !important;
@@ -672,6 +673,22 @@ a.btn-menu {
     cursor: default;
     z-index: -1;
 }
+
+.col-1 {
+    text-align: left;
+    padding-left: 10px !important;
+}
+
+.col-2 {
+    text-align: left;
+}
+.col-3 {
+    text-align: left;
+}
+.col-4 {
+    text-align: left;
+}
+
 @media screen and (max-width: 860px) {
     .faa-direction-nav .faa-prev {
         opacity: 1;
@@ -700,6 +717,10 @@ a.btn-menu {
         margin-top: 10px;
         font-size: 80%;
     }
+    .asset-list {
+        margin-bottom: 10px !important;
+        border-radius: 3px;
+    }
     .asset-status {
         margin-top: 3px;
         margin-bottom: 3px;
@@ -709,6 +730,7 @@ a.btn-menu {
         margin-top: 5px;
         margin-bottom: 3px;
         font-size: 180%;
+        padding: 0px !important;
     }
     .block-headtext {
         font-size:110%;
@@ -774,6 +796,24 @@ a.btn-menu {
         padding: 10px; 
         background: #fff; 
         border-radius: 0px 0px 5px 5px;
+    }
+    .col-1 {
+        text-align: center !important;
+        font-size: 80% !important;
+    }
+
+    .col-2 {
+        text-align: center !important;
+        font-size: 80% !important;
+    }
+    .col-3 {
+        text-align: center !important;
+        font-size: 80% !important;
+    }
+    .col-4 {
+        text-align: center !important;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -845,11 +885,13 @@ a.btn-menu {
         outline: 0px;
     } 
     .asset-list-header {
-        font-size: 60%;
+        font-size: 65%;
     }
     .asset-list {
         font-size: 60%;
         line-height: 20px;
+        margin-bottom: 0px !important;
+        border-radius: 0px !important;
     }
     .asset-actions {
         margin-top: 0px;
@@ -876,6 +918,9 @@ a.btn-menu {
     .block-text {
         font-size:80%;
         line-height: 17px;
+    }
+    .asset-list-header {
+        font-size: 55% !important;
     }
     .asset-office {
     font-size: 125%;
@@ -920,6 +965,24 @@ a.btn-menu {
         border-top: 0px !important;
         height: 100%;
     }
+    .col-1 {
+        text-align: left !important;
+        padding-left: 5px !important;
+        font-size: 100% !important;
+    }
+
+    .col-2 {
+        text-align: left !important;
+        font-size: 100% !important;
+    }
+    .col-3 {
+        text-align: left !important;
+        font-size: 100% !important;
+    }
+    .col-4 {
+        text-align: left !important;
+        font-size: 100% !important;
+    }
 }
 
 
@@ -929,7 +992,7 @@ a.btn-menu {
         margin-top: 0px;
     }
     .asset-list-header {
-        font-size: 70%;
+        font-size: 80% !important;
     }
     .asset-list {
         font-size: 70%;
