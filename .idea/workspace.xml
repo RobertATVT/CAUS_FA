@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/html/modal.html" afterPath="$PROJECT_DIR$/assets/html/modal.html" />
+      <change beforePath="$PROJECT_DIR$/assets/js/modal.js" afterPath="$PROJECT_DIR$/assets/js/modal.js" />
+      <change beforePath="$PROJECT_DIR$/process/filter-content.php" afterPath="$PROJECT_DIR$/process/filter-content.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,18 +17,18 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="126" column="20" lean-forward="false" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
+            <state relative-caret-position="292">
+              <caret line="41" column="51" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="41" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modal.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="108" column="28" lean-forward="true" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+            <state relative-caret-position="592">
+              <caret line="154" column="151" lean-forward="false" selection-start-line="154" selection-start-column="151" selection-end-line="154" selection-end-column="151" />
               <folding />
             </state>
           </provider>
@@ -66,12 +67,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="825">
               <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employee_asset_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+              <folding>
+                <marker date="1522173932009" expanded="true" signature="524:601" ph="SELECT * FRO... causfa_custodians" />
+                <marker date="1522173932009" expanded="true" signature="945:1023" ph="SELECT * FRO... causfa_banner" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filter-content.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/process/filter-content.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="119" column="74" lean-forward="true" selection-start-line="119" selection-start-column="74" selection-end-line="119" selection-end-column="74" />
+              <folding>
+                <marker date="1522338656861" expanded="true" signature="5863:5948" ph="SELECT * FRO... causfa_banner_missing" />
+                <marker date="1522338656861" expanded="true" signature="6434:6512" ph="SELECT * FRO... causfa_pending" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,7 +169,6 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-impact-template.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-asset-template.html" />
-        <option value="$PROJECT_DIR$/process/filter-content.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-footer-template.html" />
         <option value="$PROJECT_DIR$/assets/index3.html" />
         <option value="$PROJECT_DIR$/includes/employee_asset_view.php" />
@@ -156,8 +182,9 @@
         <option value="$PROJECT_DIR$/process/new_custodian.php" />
         <option value="$PROJECT_DIR$/includes/groups.php" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/assets/js/modal.js" />
         <option value="$PROJECT_DIR$/assets/html/modal.html" />
+        <option value="$PROJECT_DIR$/process/filter-content.php" />
+        <option value="$PROJECT_DIR$/assets/js/modal.js" />
       </list>
     </option>
   </component>
@@ -287,12 +314,12 @@
       <workItem from="1522085191356" duration="306000" />
       <workItem from="1522175798578" duration="14613000" />
       <workItem from="1522293854529" duration="7112000" />
-      <workItem from="1522328224503" duration="2310000" />
+      <workItem from="1522328224503" duration="2650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202867000" />
+    <option name="totallyTimeSpent" value="203207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="164" y="23" width="1245" height="797" extended-state="0" />
@@ -584,20 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="116" column="75" lean-forward="false" selection-start-line="116" selection-start-column="75" selection-end-line="116" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/materialize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -692,26 +705,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
+    <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="108" column="28" lean-forward="true" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+        <state relative-caret-position="825">
+          <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding>
+            <marker date="1522173932009" expanded="true" signature="524:601" ph="SELECT * FRO... causfa_custodians" />
+            <marker date="1522173932009" expanded="true" signature="945:1023" ph="SELECT * FRO... causfa_banner" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="119" column="74" lean-forward="true" selection-start-line="119" selection-start-column="74" selection-end-line="119" selection-end-column="74" />
+          <folding>
+            <marker date="1522338656861" expanded="true" signature="5863:5948" ph="SELECT * FRO... causfa_banner_missing" />
+            <marker date="1522338656861" expanded="true" signature="6434:6512" ph="SELECT * FRO... causfa_pending" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="126" column="20" lean-forward="false" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="20" />
+        <state relative-caret-position="292">
+          <caret line="41" column="51" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="41" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+        <state relative-caret-position="592">
+          <caret line="154" column="151" lean-forward="false" selection-start-line="154" selection-start-column="151" selection-end-line="154" selection-end-column="151" />
           <folding />
         </state>
       </provider>

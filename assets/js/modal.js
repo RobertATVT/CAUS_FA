@@ -144,6 +144,15 @@ function modalRequestedOnPendingAsset(elementID) {
         ptag: tag
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        alert(JSON.stringify(data));
+        jQuery('#responseModal').find('#modal-response-title').text('Asset Status Pending');
+        jQuery('#responseModal').find('#modal-response-alert').text(data);
+        jQuery('#responseModal').modal();
+        jQuery('#responseModal').modal('open');
     });
+}
+function modalRequestedOnMissingAsset(elementID) {
+    jQuery('#responseModal').find('#modal-response-title').text('Asset Missing');
+    jQuery('#responseModal').find('#modal-response-alert').text('You can not perform actions on this asset because it is currently on the missing list');
+    jQuery('#responseModal').modal();
+    jQuery('#responseModal').modal('open');
 }

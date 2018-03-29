@@ -116,6 +116,8 @@ function causfa_filter_asset_info( $content, $asset_index) {
         $asset_info_html = str_replace( '[STATUS]', 'Missing', $asset_info_html);
         $asset_info_html = str_replace('asset-status', 'asset-status asset-missing', $asset_info_html);
         $missing = true;
+        $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
+        $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
     } elseif ($row = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
         if ($row->PENDING_TYPE == 0) {
             $asset_info_html = str_replace( '[STATUS]', 'Pending Transfer', $asset_info_html);
