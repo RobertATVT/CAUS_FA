@@ -166,9 +166,9 @@ function causfa_output_images() {
         WHERE FZVFORG_PTAG = '.$ptag.';'
     );
     $output = array(
-        src => array(),
-        desc => array(),
-        date => array()
+        'src' => array(),
+        'desc' => array(),
+        'date' => array()
     );
     for ($i = 0; $i < count($results); $i++) {
         $output['src'] = unserialize($results[$i]->IMG_URL);
@@ -176,7 +176,9 @@ function causfa_output_images() {
         $output['date'] = unserialize($results[$i]->IMG_DATE);
     }
     if (count($output['src']) == 0) {
-        $output['src'][] =  wp_upload_dir()['baseurl'].'/causfa/images/no-image-available.png';
+        $output['src'][] =  plugins_url('assets/no-image-available.png', CAUSFA_PLUGIN_URL);
+        $output['desc'][] = 'No image available for this asset';
+        $output['date'][] = '';
     }
     wp_send_json($output);
 }

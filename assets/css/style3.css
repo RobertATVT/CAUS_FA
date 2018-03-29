@@ -455,16 +455,16 @@ a.btn-menu {
     width: 45% !important;
     margin:0 auto;
     
-    position: absolute;
+    position: fixed;
     left: 0;
     right:0;
-    top: 50%; 
+    top: 50% !important;
     border:1px solid;
     -webkit-transform:translateY(-50%);
     -moz-transform:translateY(-50%);
     -ms-transform:translateY(-50%);
     -o-transform:translateY(-50%);
-    transform:translateY(-50%);
+    transform:translateY(-50%) !important;
 }
 .modal .modal-content {
     padding: 0px !important;
@@ -547,126 +547,44 @@ a.btn-menu {
 }
 
 /*==============  Gallery CSS  ==============*/
-@font-face {
-    font-family: flexslider-icon;
-    src: url('../fonts/flexslider-icon.eot');
-    src: url('../fonts/flexslider-icon.svg');
-    src: url('../fonts/flexslider-icon.ttf');
-    src: url('../fonts/flexslider-icon.woff');
-}
-.faa-control-nav {
-    width: 100%;
-    position: absolute;
-    bottom: -40px;
-    text-align: center;
-}
-.faa-control-nav li {
-    margin: 0 6px;
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-}
-.faa-control-thumbs {
-    margin: 5px 0 0;
-    position: static;
+slider-for{
+    width: 500px;
+    height: 250px;
+    margin: 30px auto 1px;
     overflow: hidden;
+    position: relative;
 }
-.faa-control-thumbs li {
-    width: 25%;
-    float: left;
-    margin: 0;
-}
-.faa-control-thumbs img {
+img{
     width: 100%;
-    height: auto;
-    display: block;
-    opacity: .7;
-    cursor: pointer;
-    -moz-user-select: none;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    min-height: 100%;
 }
-.faa-control-thumbs img:hover {
-    opacity: 1;
+.slider-nav{
+    width: 500px;
+    height: 85px;
+    margin: auto;
 }
-.faa-control-thumbs .faa-active {
-    opacity: 1;
-    cursor: default;
+.slider-nav .slick-track{
+    height: 85px;
 }
-.faa-direction-nav {
-    *height: 0;
-}
-.faa-direction-nav a {
-    text-decoration: none;
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin: -20px 0 0;
+.slick-arrow{
     position: absolute;
     top: 50%;
-    z-index: 10;
-    overflow: hidden;
-    opacity: 0;
-    cursor: pointer;
-    color: rgba(0, 0, 0, 0.8);
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-.faa-direction-nav a:before {
-    font-family: "flexslider-icon";
-    font-size: 40px;
+    z-index: 50;
     margin-top: -12px;
-    display: inline-block;
-    content: '\f001';
-    color: rgba(0, 0, 0, 0.8);
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 }
-.faa-direction-nav a.faa-next:before {
-    content: '\f002';
+.slick-prev{
+    left: 0;
 }
-.faa-direction-nav .faa-prev {
-    left: -50px;
+.slick-next{
+    right: 0;
 }
-.faa-direction-nav .faa-next {
-    right: -50px;
-    text-align: right;
-}
-.flexslider:hover .faa-direction-nav .faa-prev {
-    opacity: 0.7;
-    left: 10px;
-}
-.flexslider:hover .faa-direction-nav .faa-prev:hover {
-    opacity: 1;
-}
-.flexslider:hover .faa-direction-nav .faa-next {
-    opacity: 0.7;
-    right: 10px;
-}
-.flexslider:hover .faa-direction-nav .faa-next:hover {
-    opacity: 1;
-}
-.faa-direction-nav .faa-disabled {
-    opacity: 0!important;
-    filter: alpha(opacity=0);
-    cursor: default;
-    z-index: -1;
-}
-@media screen and (max-width: 860px) {
-    .faa-direction-nav .faa-prev {
-        opacity: 1;
-        left: 10px;
-    }
-    .faa-direction-nav .faa-next {
-        opacity: 1;
-        right: 10px;
-    }
+.slide__caption {
+    bottom: 0;
+    min-height: 80px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
 }
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */

@@ -70,11 +70,9 @@
             Image Description:
             <input type="text" id ="imageDescription">
         </div>
-        <div id="slider" class="flexslider">
-            <ul class="slides" id ="slides">
-            </ul>
-        </div>
-        <input type="hidden" id="loaded" value=0>
+        <div class="slider-for"></div>
+        <div class="slider-nav"></div>
+        <input type="hidden" id="loaded">
     </div>
 </div>
 <!-----Forms Modal------>
@@ -103,7 +101,7 @@
 <!---- Response Modal ----->
 <div id="responseModal" class="modal">
     <div class="modal-content">
-        <p>An email has been sent to your Fixed Asset Liaison and Business manager containing the information about your request. They will contact your soon to make arrangements.</p>
+        <p id="responseText">An email has been sent to your Fixed Asset Liaison and Business manager containing the information about your request. They will contact your soon to make arrangements.</p>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-primary modal-close">Close</button>

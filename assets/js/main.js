@@ -8,7 +8,7 @@ function surplusAsset() {
         if(data['status'] == 1) {
             var id = jQuery('#surplusModal').find('#surplusIndex').val();
             var status = jQuery(('#status-' + id))
-            status.addClass('faa-asset-status-pending');
+            status.addClass('asset-pending');
             status.html("Pending Surplus");
             jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
@@ -29,7 +29,7 @@ function transferAsset(PID_dest) {
         if(data['status'] == 1) {
             var id = jQuery('#transferModal').find('#transferIndex').val();
             var status = jQuery(('#status-' + id))
-            status.addClass('faa-asset-status-pending');
+            status.addClass('asset-pending');
             status.html("Pending Transfer");
             jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
@@ -60,6 +60,8 @@ function generateForm(element, action) {
 function new_custodian_submit() {
     var office = jQuery('#Office').val();
     var phone = jQuery('#Phone').val();
+    var org = jQuery('#org').val();
+    alert(org);
     if (office == null) {
         alert('Office field cannot be empty');
     } else if (phone == null) {
@@ -118,7 +120,6 @@ function uploadImage() {
                     alert(data['message']);
                 } else {
                     alert(data['message']);
-                    alert (data['src']);
                     addImages(data['src'], data['desc'], data['date']);
                 }
             }
