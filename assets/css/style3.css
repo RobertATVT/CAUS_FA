@@ -600,6 +600,24 @@ slider-for{
         margin-top: 10px;
         font-size: 80%;
     }
+    .add-asset-text {
+        font-size: 105%; 
+        min-height: 20px !important;
+        line-height: 20px;
+        text-align: center !important;
+    }
+    .add-asset-btn {
+        max-height: 20px;
+        line-height: 20px;
+        font-size: 90%;
+        width: 100% !important;
+    }
+    .add-asset-btn-div {
+        text-align: center !important;
+    }
+    .make-small {
+        max-height: 5px !important;
+    }
     .asset-list {
         margin-bottom: 10px !important;
         border-radius: 3px;
@@ -703,6 +721,9 @@ slider-for{
 
 /* Small devices (landscape phones, 400px and up) */
 @media (min-width: 421px) {
+     .add-asset-text {
+        font-size: 120%; 
+    }
     .biggertext {
         font-size:180%;
     }
@@ -767,18 +788,7 @@ slider-for{
         width: 25%;
         outline: 0px;
     } 
-    .add-asset-text {
-        font-size: 110%; 
-        padding-left: 15px !important; 
-        min-height: 20px !important;
-        line-height: 20px;
-        text-align: center !important;
-    }
-    .add-asset-btn {
-        max-height: 20px;
-        line-height: 20px;
-        font-size: 90%;
-    }
+
     .asset-list-header {
         font-size: 65%;
     }
@@ -798,6 +808,9 @@ slider-for{
         margin-top: 0px;
         margin-bottom: 0px;
         width: 90%;
+    }
+    .make-small {
+        max-height: unset !important;
     }
     .bigtext {
         font-size:100%;
@@ -888,14 +901,13 @@ slider-for{
     }
     .add-asset-text {
         font-size: 90%; 
-        padding-left: 15px !important; 
+        padding-left: 10px !important; 
         min-height: 20px !important;
         line-height: 20px;
+        text-align: left !important;
     }
-    .add-asset-btn {
-        max-height: 20px;
-        line-height: 20px;
-        font-size: 90%;
+    .add-asset-btn-div {
+        text-align: right !important;
     }
     .asset-list-header {
         font-size: 80% !important;
