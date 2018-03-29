@@ -156,8 +156,30 @@ select#org option:hover {
     border-left: 4px solid rgba(255,255,255,.4); 
     font-weight: 700; 
     font-size: 12px; 
-    width: 100%;
     color: #fff;
+}
+#add-asset {
+    padding: 5px; 
+    background: #642667;
+    border-radius: 3px; 
+    border-left: 4px solid rgba(255,255,255,.4); 
+    font-weight: 700; 
+    font-size: 12px; 
+    color: #fff;
+}
+.add-asset-text {
+    font-size: 120%; 
+    padding-left: 10px; 
+    line-height:25px;
+    font-weight: 700;
+}
+.add-asset-btn {
+    color: #333 !important;
+    background: rgba(255,255,255,0.75) !important;
+    max-height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    font-weight: 700;
 }
 #asset-view {
     transition: margin-left .4s;
@@ -393,70 +415,6 @@ a.btn-menu {
     cursor: pointer;
     vertical-align: middle;
 }
-#overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
-}
-
-.sidenav-header {
-    background-size: cover;
-    background: #e87722;
-    padding: 0px;
-    height: 100px !important;
-    vertical-align: text-top;
-    padding-left: 15px;
-}
-.sidenav-footer {
-  margin-bottom: 0px;
-  padding: 0;
-}
-.sidenav-footer .rw {
-  margin-bottom: 0;
-}
-#sidebar-items {
-    transition: width .4s;
-    width: 250px;
-}
-.sidenav-heading {
-    color: #333; 
-    font-size: 120%; 
-    padding-left: 15px; 
-    line-height: 40px;
-    font-weight: 700;
-    text-align: center;
-    background: #efefef;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-}
-.sidenav-i1 {
-    color: #333; 
-    font-size: 120%; 
-    margin-top: 0px;
-    padding-left: 10px; 
-    line-height: 35px
-}
-.sidenav-i2 {
-    color: #333; 
-    font-size: 100%; 
-    padding-left: 10px; 
-    line-height: 25px
-}
-.sidenav-i3 {
-    color: #333; 
-    font-size: 90%; 
-    padding-left: 10px; 
-    line-height: 20px;
-}
-/* END SIDENAV MENU*/
 
 /* BEGIN FAA STYLING */
 
@@ -484,10 +442,6 @@ a.btn-menu {
     -ms-transform:translateY(-50%);
     -o-transform:translateY(-50%);
     transform:translateY(-50%) !important;
-}
-
-#gallerModal {
-    overflow-y: auto !important;
 }
 .modal .modal-content {
     padding: 0px !important;
@@ -577,14 +531,19 @@ slider-for{
     overflow: hidden;
     position: relative;
 }
-img{
-    width: 100%;
-    min-height: 100%;
+
+
+.slider-for img{
+    margin: 0px auto !important;
+    /*max-height: 350px !important;*/
 }
 .slider-nav{
     width: 500px;
     height: 85px;
     margin: auto;
+}
+.slider-nav img {
+    min-height: 85px !important;
 }
 .slider-nav .slick-track{
     height: 85px;
@@ -595,10 +554,10 @@ img{
     height: 100% !important;
     line-height: 100px !important;
     border: none !important;
-    background-color: rgba(0,0,0,0.3) !important;
+    background-color: rgba(255,255,255,0.5) !important;
     color: #000 !important;
     font-size: 30px;
-    opacity: 0.5;
+    opacity: 1;
 }
 .slick-arrow{
     position: absolute;
@@ -607,7 +566,7 @@ img{
     margin-top: 0px;
 }
 .slick-arrow:hover {
-    color: #fff !important;
+    color: #E87722 !important;
 }
 .slick-prev{
     left: 0;
@@ -808,6 +767,18 @@ img{
         width: 25%;
         outline: 0px;
     } 
+    .add-asset-text {
+        font-size: 110%; 
+        padding-left: 15px !important; 
+        min-height: 20px !important;
+        line-height: 20px;
+        text-align: center !important;
+    }
+    .add-asset-btn {
+        max-height: 20px;
+        line-height: 20px;
+        font-size: 90%;
+    }
     .asset-list-header {
         font-size: 65%;
     }
@@ -915,6 +886,17 @@ img{
     #asset-container {
         margin-top: 0px;
     }
+    .add-asset-text {
+        font-size: 90%; 
+        padding-left: 15px !important; 
+        min-height: 20px !important;
+        line-height: 20px;
+    }
+    .add-asset-btn {
+        max-height: 20px;
+        line-height: 20px;
+        font-size: 90%;
+    }
     .asset-list-header {
         font-size: 80% !important;
     }
@@ -995,7 +977,7 @@ img{
         font-size: 11px !important;
     }
     .modal {
-        width: 45% !important;
+        width: 33% !important;
     }
 }
 /* Extra large devices (large desktops, 1200px and up) */

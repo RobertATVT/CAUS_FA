@@ -103,6 +103,7 @@ function slickInit() {
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        asNavFor: '.slider-nav',
         arrows: true,
         fade: true,
         autoplay: true,
