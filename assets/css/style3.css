@@ -675,6 +675,7 @@ img{
         padding: 3px !important;
         margin-top: 10px;
         font-size: 80%;
+        min-height: 15px !important;
     }
     .asset-list {
         margin-bottom: 10px !important;
