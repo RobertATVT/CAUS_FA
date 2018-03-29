@@ -21,7 +21,7 @@ function causfa_enqueue() {
     //wp_register_style('causfa_style4', plugins_url('assets/css/style4.css', CAUSFA_PLUGIN_URL));
     wp_register_style('causfa_paradox', plugins_url('assets/css/paradox.css', CAUSFA_PLUGIN_URL));
     wp_register_style('causfa_slick', plugins_url('assets/slick/slick.css', CAUSFA_PLUGIN_URL));
-    wp_register_style('casufa_slick_theme', plugins_url('assets/slick/slick.css', CAUSFA_PLUGIN_URL));
+    wp_register_style('casufa_slick_theme', plugins_url('assets/slick/slick-theme.css', CAUSFA_PLUGIN_URL));
 
     //wp_enqueue_style('causfa_bootstrap');
     //wp_enqueue_style('causfa_bootstrap_style');
@@ -46,7 +46,7 @@ function causfa_enqueue() {
     wp_register_script('causfa_flexslider_script', plugins_url('assets/js/jquery.flexslider.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_tippy_script', 'https://unpkg.com/tippy.js@2.4.1/dist/tippy.all.min.js', array('jquery'), false, true);
     wp_register_script('causfa_font_awesome_script', 'https://use.fontawesome.com/releases/v5.0.8/js/all.js', array('jquery'), false, true);
-    wp_register_script('causfa_slick_script', plugins_url('assets/slick/slick.min.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causfa_slick_script', plugins_url('assets/slick/slick.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
 
     wp_enqueue_script('jquery');
     //wp_enqueue_script('causfa_bootstrap_script');

@@ -80,20 +80,30 @@
 <div id="galleryModal" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title" id="galleryModalLabel">Gallery</h4>
-        <div class="row">
-            <form >
-                Upload new image:
-                <input type="file" name="fileToUpload" id="imageFileToUpload">
-                <input type="button" value="Upload Image" onclick="uploadImage()">
-                <input type="hidden" id="galleryPtag">
-            </form>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+            <div class="rw" style="margin-bottom: 0px; padding: 0px;">
+                <div class="center cl t20" style="">
+                    <form >
+                        <input type="hidden" id="galleryPtag">
+                        <div class="center cl t20" style="padding-bottom: 0px;margin-bottom: 2px !important;height: 35px;">
+                            <input type="text" id ="imageDescription" placeholder="Please Enter Asset Description Here" style="width: 95%;">
+                        </div>
+                        <div class="center cl t10" style="padding-bottom: 0px; margin: 0px !important;padding-left: 2.5%;">
+                            <input type="file" class="home-file" name="fileToUpload" id="imageFileToUpload">
+                        </div>
+                        <div class="center cl t10" style="padding-bottom: 0px;  margin: 0px !important;padding-right: 2.5%;">
+                            <input type="button" class="btn btn-primary home-upload" value="Upload New Image" onclick="uploadImage()">    
+                        </div>
+
+                    </form>
+                </div>
+                <div class="center cl t20" style="display:block; margin-top: 5px;">
+                    <div class="slider-for"></div>
+                    <div class="slider-nav"></div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            Image Description:
-            <input type="text" id ="imageDescription">
-        </div>
-        <div class="slider-for"></div>
-        <div class="slider-nav"></div>
+
         <input type="hidden" id="loaded">
     </div>
 </div>
@@ -112,7 +122,7 @@
                         <hr style="padding: 10px; margin: 0px; margin-top: 10px;">
                         <form >
                             <input type="file" class="home-file" name="fileToUpload" id="homeFormToUpload"><br>
-                            <input type="button" class="btn btn-primary home-upload" value="Upload New Home USe Form" onclick="uploadFormHome()">
+                            <input type="button" class="btn btn-primary home-upload" value="Upload New Home Use Form" onclick="uploadFormHome()">
                         </form>
                     </div>
                 </div>
@@ -142,16 +152,12 @@
 <!---- Response Modal ----->
 <div id="responseModal" class="modal">
     <div class="modal-content">
-<<<<<<< HEAD
-        <p id="responseText">An email has been sent to your Fixed Asset Liaison and Business manager containing the information about your request. They will contact your soon to make arrangements.</p>
-=======
         <h4 class="center faa-modal-title" id="modal-response-title">[MODAL TITLE]</h4>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw" style="margin-bottom: 0px; padding: 0px;">
                 <div id="modal-response-alert" class="center cl m20 t20">[MODAL RESPONSE]</div>
             </div>
         </div>
->>>>>>> 99efb5761f5d44d3440be86439fb502152c68fb3
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-primary modal-close">Close</button>

@@ -469,33 +469,35 @@ a.btn-menu {
 }
 .modal {
     width: 45% !important;
+    max-height: 70% !important;
     margin:0 auto;
-<<<<<<< HEAD
     
     position: fixed;
     left: 0;
     right:0;
     top: 50% !important;
-    border:1px solid;
-=======
-    position: fixed;
-    left: 0;
-    right:0;
-    top: 50% !important; 
->>>>>>> 99efb5761f5d44d3440be86439fb502152c68fb3
+    border: 0px !important;
+    border-radius: 3px !important;
+
     -webkit-transform:translateY(-50%);
     -moz-transform:translateY(-50%);
     -ms-transform:translateY(-50%);
     -o-transform:translateY(-50%);
     transform:translateY(-50%) !important;
-<<<<<<< HEAD
-=======
-    overflow-y: visible;
->>>>>>> 99efb5761f5d44d3440be86439fb502152c68fb3
+    overflow-y: auto !important;
 }
 .modal .modal-content {
     padding: 0px !important;
 }
+.modal:before,
+.modal:after {
+    content : "";
+    display : table;
+}
+.modal:after {
+    clear : both;
+}
+
 .faa-modal-content {
     background: #efefef;
     border: 1px solid #333;
@@ -575,7 +577,7 @@ a.btn-menu {
 
 /*==============  Gallery CSS  ==============*/
 slider-for{
-    width: 500px;
+    width: 95% !important;
     height: 250px;
     margin: 30px auto 1px;
     overflow: hidden;
@@ -586,9 +588,9 @@ img{
     min-height: 100%;
 }
 .slider-nav{
-    width: 500px;
+    width: 100%;
     height: 85px;
-    margin: auto;
+    margin: 0px auto;
 }
 .slider-nav .slick-track{
     height: 85px;
@@ -597,7 +599,22 @@ img{
     position: absolute;
     top: 50%;
     z-index: 50;
-    margin-top: -12px;
+    margin-top: 0px;
+}
+.slick-slider .slick-next, .slick-slider .slick-prev {
+    height: 100% !important;
+    font-size: 40px;
+    top: 50%;
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform:translateY(-50%) !important;
+    margin-top: 0px !important;
+    line-height: 50px !important;
+    border: 0px !important;
+    background-color: rgba(0,0,0,0.3) !important;
+    color: #fff !important;
 }
 .slick-prev{
     left: 0;
@@ -605,7 +622,6 @@ img{
 .slick-next{
     right: 0;
 }
-<<<<<<< HEAD
 .slide__caption {
     bottom: 0;
     min-height: 80px;
@@ -613,7 +629,9 @@ img{
     position: absolute;
     width: 100%;
     z-index: 2;
-=======
+}
+
+/* ASSET COLUMN ADDITIONS */
 
 .col-1 {
     text-align: left;
@@ -639,7 +657,6 @@ img{
         opacity: 1;
         right: 10px;
     }
->>>>>>> 99efb5761f5d44d3440be86439fb502152c68fb3
 }
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
@@ -974,7 +991,7 @@ img{
         font-size: 8px !important;
     }
     .modal {
-        width: 75% !important;
+        width: 65% !important;
     }
     .home-generate {
         width: 95% !important;
@@ -1013,7 +1030,8 @@ img{
         font-size: 11px !important;
     }
     .modal {
-        width: 45% !important;
+        width: 44% !important;
+        max-height: 65% !important;
     }
 }
 /* Extra large devices (large desktops, 1200px and up) */
@@ -1075,6 +1093,9 @@ img{
         background: #fff; 
         border-radius: 0px 0px 5px 5px;
     }
-
+    .modal {
+        width: 44% !important;
+        max-height: 65% !important;
+    }
     
 }
