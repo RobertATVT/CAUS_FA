@@ -4,7 +4,7 @@ function causfa_hinter(element) {
     var PIDs = document.getElementById('PIDs');
 
     // minimum number of characters before we start to generate suggestions
-    var min_characters = 0;
+    var min_characters = 2;
     if (element.value.length < min_characters ) {
         PIDs.style.display = 'none';
         PIDs.innerHTML = "";
@@ -25,7 +25,7 @@ function causfa_hinter(element) {
                 option.setAttribute('data_value', PID_options[i]);
                 PIDs.appendChild(option);
             }
-            PIDs.style.display = 'block';
+            //PIDs.style.display = 'block';
         });
     }
 }

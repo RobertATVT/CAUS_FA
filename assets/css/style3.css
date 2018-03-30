@@ -588,6 +588,56 @@ slider-for{
     width: 100%;
     z-index: 2;
 }
+
+/* AUTOCOMPLETE CSS */
+
+/*
+.faa-autocomplete {
+  position: relative;
+  display: inline-block;
+}
+div.faa-autocomplete > input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+div.faa-autocomplete > input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+div.faa-autocomplete > input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+.faa-autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.faa-autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.faa-autocomplete-items div:hover {
+  when hovering an item:
+  background-color: #e9e9e9; 
+}
+.faa=autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+*/
+
+
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
 
@@ -995,7 +1045,7 @@ slider-for{
         font-size: 11px !important;
     }
     .modal {
-        width: 33% !important;
+        width: 50% !important;
     }
     #reportsModal {
         width: 50% !important;
