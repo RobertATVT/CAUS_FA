@@ -13,12 +13,12 @@ function causfa_autocomplete_PID() {
     global $wpdb;
     $CurrentPrefix = $wpdb->base_prefix;
     $PIDs = $wpdb->get_col('SELECT user_login FROM '.$CurrentPrefix.'users WHERE display_name LIKE "%'.$query.'%"');
-    $Names = $wpdb->get_col('SELECT display_name FROM '.$CurrentPrefix.'users WHERE user_login LIKE "%'.$query.'%"');
+    $Names = $wpdb->get_col('SELECT display_name FROM '.$CurrentPrefix.'users WHERE display_name LIKE "%'.$query.'%"');
 //    $PIDs = $wpdb->get_col('SELECT PID FROM causfa_custodians WHERE Name LIKE "%'.$query.'%"');
 //    $Names = $wpdb->get_col('SELECT Name FROM causfa_custodians WHERE Name LIKE "%'.$query.'%"');
     $values = array(
-        PIDs => $PIDs,
-        Names => $Names
+        'PIDs' => $PIDs,
+        'Names' => $Names
     );
     wp_send_json($values);
 }
