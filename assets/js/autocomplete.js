@@ -19,7 +19,7 @@ function causfa_hinter(element) {
             PIDs.style.display = 'none';
             var PID_options = data['PIDs'];
             var Name_options = data['Names'];
-            alert(JSON.stringify(PID_options));
+            //alert(JSON.stringify(PID_options));
             for (var i = 0; i < PID_options.length; i++) {
                 var option = document.createElement('option');
                 option.value = Name_options[i];
