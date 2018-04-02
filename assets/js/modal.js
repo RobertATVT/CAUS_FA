@@ -214,6 +214,8 @@ $(document).ready(function() {
 		var sel_value = $('option:selected').val();
 			if (sel_value == "other") {
 				document.getElementById('addTicketNotes').style.display = "block";
-				};
+			} else {
+			    document.getElementById('addTicketNotes').style.display = "none";
+            }
 			})
 	});

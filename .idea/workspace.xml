@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/process/add_ticket.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/html/modal.html" afterPath="$PROJECT_DIR$/assets/html/modal.html" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" afterPath="$PROJECT_DIR$/assets/js/main.js" />
       <change beforePath="$PROJECT_DIR$/assets/js/modal.js" afterPath="$PROJECT_DIR$/assets/js/modal.js" />
-      <change beforePath="$PROJECT_DIR$/includes/create_tables.php" afterPath="$PROJECT_DIR$/includes/create_tables.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,38 +17,24 @@
       <file leaf-file-name="modal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
+            <state relative-caret-position="-509">
               <caret line="198" column="59" lean-forward="false" selection-start-line="198" selection-start-column="59" selection-end-line="198" selection-end-column="59" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <marker date="1522454168116" expanded="false" signature="250:284" ph="..." />
-                <marker date="1522454168116" expanded="false" signature="344:363" ph="..." />
-                <marker date="1522454168116" expanded="false" signature="430:443" ph="..." />
-                <marker date="1522454168116" expanded="false" signature="614:627" ph="..." />
-                <marker date="1522454168116" expanded="false" signature="827:879" ph="..." />
-                <marker date="1522454168116" expanded="false" signature="939:957" ph="..." />
-                <marker date="1522454168116" expanded="false" signature="1070:1083" ph="..." />
-                <marker date="1522454168116" expanded="false" signature="1190:1226" ph="..." />
-                <marker date="1522454168116" expanded="false" signature="1774:1826" ph="..." />
-                <marker date="1522454168116" expanded="false" signature="1890:1924" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modal.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="181" column="4" lean-forward="false" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modal.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="217" column="81" lean-forward="false" selection-start-line="217" selection-start-column="81" selection-end-line="217" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
@@ -197,12 +178,12 @@
         <option value="$PROJECT_DIR$/process/retrieveForms.php" />
         <option value="$PROJECT_DIR$/assets/js/autocomplete.js" />
         <option value="$PROJECT_DIR$/includes/autocomplete.php" />
-        <option value="$PROJECT_DIR$/assets/js/modal.js" />
         <option value="$PROJECT_DIR$/assets/html/modal.html" />
         <option value="$PROJECT_DIR$/includes/create_tables.php" />
         <option value="$PROJECT_DIR$/process/add_notes.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/assets/js/modal.js" />
       </list>
     </option>
   </component>
@@ -333,18 +314,18 @@
       <workItem from="1522175798578" duration="14613000" />
       <workItem from="1522293854529" duration="7112000" />
       <workItem from="1522328224503" duration="7161000" />
-      <workItem from="1522435502811" duration="6311000" />
+      <workItem from="1522435502811" duration="6621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214029000" />
+    <option name="totallyTimeSpent" value="214339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="122" y="23" width="1245" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46300915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39842632" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -682,6 +663,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <marker date="1522340841443" expanded="true" signature="200:248" ph="SELECT * FRO... causfa_forms" />
+            <marker date="1522340841443" expanded="true" signature="200:257" ph="SELECT * FRO... causfa_forms" />
+            <marker date="1522340841443" expanded="true" signature="200:258" ph="SELECT * FRO... causfa_forms" />
+            <marker date="1522340841443" expanded="true" signature="200:260" ph="SELECT * FRO... causfa_forms" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -689,6 +676,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding>
+            <marker date="1522173932009" expanded="true" signature="524:601" ph="SELECT * FRO... causfa_custodians" />
+            <marker date="1522173932009" expanded="true" signature="945:1023" ph="SELECT * FRO... causfa_banner" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -696,6 +687,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="119" column="74" lean-forward="true" selection-start-line="119" selection-start-column="74" selection-end-line="119" selection-end-column="74" />
+          <folding>
+            <marker date="1522338656861" expanded="true" signature="5863:5948" ph="SELECT * FRO... causfa_banner_missing" />
+            <marker date="1522338656861" expanded="true" signature="6434:6512" ph="SELECT * FRO... causfa_pending" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -712,40 +707,10 @@
         <state relative-caret-position="300">
           <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
           <folding>
-            <marker date="1522436167515" expanded="true" signature="353:438" ph="SELECT user_... ${$CurrentPrefix}" />
-            <marker date="1522436167515" expanded="true" signature="471:558" ph="SELECT displ... ${$CurrentPrefix}" />
-            <marker date="1522436167515" expanded="true" signature="691:756" ph="SELECT Name causfa_custodians" />
+            <marker date="1522701410990" expanded="true" signature="353:438" ph="SELECT user_... ${$CurrentPrefix}" />
+            <marker date="1522701410990" expanded="true" signature="471:558" ph="SELECT displ... ${$CurrentPrefix}" />
+            <marker date="1522701410990" expanded="true" signature="627:692" ph="SELECT Name causfa_custodians" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="198" column="59" lean-forward="false" selection-start-line="198" selection-start-column="59" selection-end-line="198" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <marker date="1522454168116" expanded="false" signature="250:284" ph="..." />
-            <marker date="1522454168116" expanded="false" signature="344:363" ph="..." />
-            <marker date="1522454168116" expanded="false" signature="430:443" ph="..." />
-            <marker date="1522454168116" expanded="false" signature="614:627" ph="..." />
-            <marker date="1522454168116" expanded="false" signature="827:879" ph="..." />
-            <marker date="1522454168116" expanded="false" signature="939:957" ph="..." />
-            <marker date="1522454168116" expanded="false" signature="1070:1083" ph="..." />
-            <marker date="1522454168116" expanded="false" signature="1190:1226" ph="..." />
-            <marker date="1522454168116" expanded="false" signature="1774:1826" ph="..." />
-            <marker date="1522454168116" expanded="false" signature="1890:1924" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="181" column="4" lean-forward="false" selection-start-line="181" selection-start-column="4" selection-end-line="181" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,6 +764,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="200" column="42" lean-forward="false" selection-start-line="200" selection-start-column="42" selection-end-line="200" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-509">
+          <caret line="198" column="59" lean-forward="false" selection-start-line="198" selection-start-column="59" selection-end-line="198" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="217" column="81" lean-forward="false" selection-start-line="217" selection-start-column="81" selection-end-line="217" selection-end-column="81" />
           <folding />
         </state>
       </provider>
