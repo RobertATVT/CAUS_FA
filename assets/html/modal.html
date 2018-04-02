@@ -61,7 +61,7 @@
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
                         <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>
-                        <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">
+                        <input type="text" class="awesomplete" id="recipient-name" list="PIDs"-+>
                         <datalist id="PIDs"></datalist>
                         <input type="hidden" id="transferIndex" value="" />
                     </div>
@@ -193,8 +193,8 @@
         <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
     </div>
 </div>
-<!---- Reports Modal ----->
-<div id="reportModal" class="modal" style="width: 50% !important;">
+<!---- Ticket Modal ----->
+<div id="ticketModal" class="modal" style="width: 50% !important;">
     <div class="modal-content">
         <h4 class="center faa-modal-title" id="modal-report-title">Report Problem</h4>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
@@ -215,13 +215,17 @@
                 <p class="center info-title" style="font-size: 130%;">If the information above is correct please choose why you are filing this report below:</p>
             </div>
             <div class="cl t20" style="padding: 0px;margin:0px;margin-bottom: 10px;">
-                <select>
-                    <option value="not-missing">This item is not missing</option>
-                    <option value="item-surplused">This item was previosuly surplused</option>
-                    <option value="not-mine">This item was previously transferred</option>
-                    <option value="what-is">I have no idea what this item is</option>
+                <select id="ticketSelect">
+                    <option value="not-missing">This item is not missing.</option>
+                    <option value="item-surplused">This item was previosuly surplused.</option>
+                    <option value="not-mine">This item was previously transferred.</option>
+                    <option value="what-is">I have no idea what this item is.</option>
+					<option value="other">Other options not listed here.</option>
                 </select>
             </div>
+			<div class="center cl m20 t20">
+				<textarea id ="addTicketNotes" placeholder="Please enter any relevenat information such as why this should be added." style="width: 100%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea>
+			</div>
         </div>
     </div>
     <div class="modal-footer">

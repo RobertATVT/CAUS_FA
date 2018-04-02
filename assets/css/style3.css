@@ -181,6 +181,12 @@ select#org option:hover {
     vertical-align: middle;
     font-weight: 700;
 }
+#addTicketNotes {
+	display: none;
+}
+#addAssetNotes {
+	
+}
 #asset-view {
     transition: margin-left .4s;
     position: absolute;
@@ -489,10 +495,7 @@ a.btn-menu {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-.faa-input {
-    border: 1px solid #aaa;
-    background: #fff;
-}
+
 .btn-primary {
     background: #e87722; 
 }

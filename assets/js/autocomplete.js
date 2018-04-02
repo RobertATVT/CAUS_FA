@@ -19,13 +19,27 @@ function causfa_hinter(element) {
             PIDs.style.display = 'none';
             var PID_options = data['PIDs'];
             var Name_options = data['Names'];
+			var input = document.getElementById("recipient-name");
+			var list_fill = new Array();
+			for (var i = 0; i < PID_options.length; i++) {
+				var list_item = new Array();
+				list_item[0] = Name_options[i];
+				list_item[1] = Name_options[i];
+				list_fill.push(list_item);
+			}
+			// alert(JSON.stringify(list_fill));
+			new Awesomplete(input, {
+				list: list_fill
+			})
             //alert(JSON.stringify(PID_options));
+/*
             for (var i = 0; i < PID_options.length; i++) {
                 var option = document.createElement('option');
                 option.value = Name_options[i];
                 option.setAttribute('data_value', PID_options[i]);
                 PIDs.appendChild(option);
             }
+*/
             //PIDs.style.display = 'block';
         });
     }
