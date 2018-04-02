@@ -139,31 +139,6 @@ function formsModalRequested(elementID) {
     jQuery('#formsModal').modal();
     jQuery('#formsModal').modal('open');
 }
-function addAssetModalRequested(elementID) {
-    jQuery('#addAssetsModal').modal();
-    jQuery('#addAssetsModal').modal('open');
-}
-function reportModalRequested(elementID) {
-    jQuery('#reportModal').modal();
-    jQuery('#reportModal').modal('open');
-}
-function testModalRequested(elementID) {
-    var id = elementID.split('-')[1];
-    var tag = document.getElementById(('asset-tag-' + id)).innerHTML ;
-    var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
-    var form = {
-        action: 'causfa_set_session',
-        Name: 'ptag',
-        Input: tag
-    };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
-    document.getElementById('recipient-name').value = '';
-    jQuery('#testModal').find('#transferIndex').val(id);
-    jQuery('#testModal').find('.asset-tag').html(tag);
-    jQuery('#testModal').find('.asset-description').html(desc);
-    jQuery('#testModal').modal();
-    jQuery('#testModal').modal('open');
-}
 function getLastForm(tag) {
     var form ={
         action: 'causfa_get_last_form',
@@ -180,6 +155,31 @@ function getLastForm(tag) {
 
     });
 }
+function addAssetModalRequested(elementID) {
+    jQuery('#addAssetsModal').modal();
+    jQuery('#addAssetsModal').modal('open');
+}
+function reportModalRequested(elementID) {
+    jQuery('#reportModal').modal();
+    jQuery('#reportModal').modal('open');
+}
+// function testModalRequested(elementID) {
+//     var id = elementID.split('-')[1];
+//     var tag = document.getElementById(('asset-tag-' + id)).innerHTML ;
+//     var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
+//     var form = {
+//         action: 'causfa_set_session',
+//         Name: 'ptag',
+//         Input: tag
+//     };
+//     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
+//     document.getElementById('recipient-name').value = '';
+//     jQuery('#testModal').find('#transferIndex').val(id);
+//     jQuery('#testModal').find('.asset-tag').html(tag);
+//     jQuery('#testModal').find('.asset-description').html(desc);
+//     jQuery('#testModal').modal();
+//     jQuery('#testModal').modal('open');
+// }
 function modalRequestedOnPendingAsset(elementID) {
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML ;

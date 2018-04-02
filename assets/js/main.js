@@ -194,3 +194,20 @@ function uploadFormOffice(){
         });
     }
 }
+function addAsset() {
+    var ptag = $('#addAssetPTAG').val();
+    var serial = $('#addAssetSerial').val();
+    var desc = $('#addAssetDesc').val();
+    var notes = $('#addAssetNotes').val();
+    var form = {
+        action: 'causfa_add_ticket',
+        ptag: ptag,
+        serial: serial,
+        desc: desc,
+        note: notes
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+
+    });
+
+}

@@ -42,7 +42,6 @@ function create_tables() {
         FZVFORG_LAST_INVENTORY_DATE varchar(30) NOT NULL,
         PRIMARY KEY  (FZVFORG_PTAG)
         ) ".$charset_collate.";";
-        require_once ( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta( $sql );
     }
     $table_name = 'causfa_banner_missing';
@@ -127,7 +126,7 @@ function create_tables() {
     $table_name = 'causfa_custodians';
     if ($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
         $sql = "CREATE TABLE ".$table_name." (
-        Name varchar(1000 NOT NULL,
+        Name varchar(1000) NOT NULL,
         PID varchar(32) NOT NULL,
         Email varchar(39) NOT NULL,
         Office varchar(1000) NOT NULL,
@@ -148,6 +147,21 @@ function create_tables() {
         Info varchar(32) NULL, 
         PRIMARY KEY  (ID)
         ) ".$charset_collate.";";
+        dbDelta($sql);
+    }
+    $table_name = 'causfa_tickets';
+    if ($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        ID INT NOT NULL AUTO_INCREMENT,
+        TIMESTAMP TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        PID_Submit varchar(32) NOT NULL,
+        PID_Assigned varchar(32) NOT NULL,
+        FZVFORG_PTAG varchar(9) NOT NULL,
+        FZVFORG_SERIAL_NUM varchar(40),
+        FZVFORG_DESCRIPTION varchar(1000),
+        Notes LONGTEXT,
+        PRIMARY KEY (ID)
+        )".$charset_collate.";";
         dbDelta($sql);
     }
 }
