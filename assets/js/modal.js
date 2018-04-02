@@ -9,6 +9,7 @@ function transferModalRequested(elementID) {
         Input: tag
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
+	transferModalLoad();
     document.getElementById('recipient-name').value = '';
     jQuery('#transferModal').find('#transferIndex').val(id);
     jQuery('#transferModal').find('.asset-tag').html(tag);
@@ -16,6 +17,31 @@ function transferModalRequested(elementID) {
     jQuery('#transferModal').modal();
     jQuery('#transferModal').modal('open');
 
+}
+function transferModalLoad(elementID) {
+	var form = {
+            action: 'causfa_autocomplete_PID',
+        }
+        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+            var PID_options = data['PIDs'];
+            var Name_options = data['Names'];
+			var input = document.getElementById("recipient-name");
+			var list_fill = new Array();
+			for (var i = 0; i < PID_options.length; i++) {
+				var list_item = new Array();
+				list_item[0] = Name_options[i];
+				list_item[1] = Name_options[i];
+				list_fill.push(list_item);
+				var option = document.createElement('option');
+                option.value = Name_options[i];
+                option.setAttribute('data_value', PID_options[i]);
+                PIDs.appendChild(option);
+			}
+			// alert(JSON.stringify(list_fill));
+			new Awesomplete(input, {
+				list: list_fill
+			})
+        });
 }
 function surplusModalRequested(elementID) {
     var id = elementID.split('-')[1];
@@ -143,9 +169,9 @@ function addAssetModalRequested(elementID) {
     jQuery('#addAssetsModal').modal();
     jQuery('#addAssetsModal').modal('open');
 }
-function reportModalRequested(elementID) {
-    jQuery('#reportModal').modal();
-    jQuery('#reportModal').modal('open');
+function ticketModalRequested(elementID) {
+    jQuery('#ticketModal').modal();
+    jQuery('#ticketModal').modal('open');
 }
 function testModalRequested(elementID) {
     var id = elementID.split('-')[1];
@@ -200,3 +226,11 @@ function modalRequestedOnMissingAsset(elementID) {
     jQuery('#responseModal').modal();
     jQuery('#responseModal').modal('open');
 }
+$(document).ready(function() {
+	$('select#ticketSelect').change(function() {
+		var sel_value = $('option:selected').val();
+			if (sel_value == "other") {
+				document.getElementById('addTicketNotes').style.display = "block";
+				};
+			})
+	});

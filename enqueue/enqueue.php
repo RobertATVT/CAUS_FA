@@ -21,6 +21,7 @@ function causfa_enqueue() {
     //wp_register_style('causfa_style4', plugins_url('assets/css/style4.css', CAUSFA_PLUGIN_URL));
     wp_register_style('causfa_paradox', plugins_url('assets/css/paradox.css', CAUSFA_PLUGIN_URL));
     wp_register_style('causfa_slick', plugins_url('assets/slick/slick.css', CAUSFA_PLUGIN_URL));
+	wp_register_style('causfa_awesomplete', plugins_url('assets/css/awesomplete.css', CAUSFA_PLUGIN_URL));
     //wp_register_style('causfa_slick_theme', plugins_url('assets/slick/slick-theme.css', CAUSFA_PLUGIN_URL));
 
     //wp_enqueue_style('causfa_bootstrap');
@@ -33,6 +34,7 @@ function causfa_enqueue() {
     //wp_enqueue_style('causfa_style4');
     wp_enqueue_style('causfa_paradox');
     wp_enqueue_style('causfa_slick');
+	wp_enqueue_style('causfa_awesomplete');
     //wp_enqueue_style('causfa_slick_theme');
 
     //Scripts
@@ -47,6 +49,7 @@ function causfa_enqueue() {
     wp_register_script('causfa_tippy_script', 'https://unpkg.com/tippy.js@2.4.1/dist/tippy.all.min.js', array('jquery'), false, true);
     wp_register_script('causfa_font_awesome_script', 'https://use.fontawesome.com/releases/v5.0.8/js/all.js', array('jquery'), false, true);
     wp_register_script('causfa_slick_script', plugins_url('assets/slick/slick.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+	wp_register_script('causfa_awesomplete_script', plugins_url('assets/js/awesomplete.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
 
     wp_enqueue_script('jquery');
     //wp_enqueue_script('causfa_bootstrap_script');
@@ -60,6 +63,7 @@ function causfa_enqueue() {
     wp_enqueue_script('causfa_tippy_script');
     wp_enqueue_script('causfa_font_awesome_script');
     wp_enqueue_script('causfa_slick_script');
+	wp_enqueue_script('causfa_awesomplete_script');
 
 
     //This line creates a causfa_action_obj object that passes the ajax url to the front end scripts
