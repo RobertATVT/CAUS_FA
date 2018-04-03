@@ -207,7 +207,13 @@ function addAsset() {
         note: notes
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-
+        if (data['status'] == 1) {
+            jQuery('#addAssetsModal').modal('close');
+            jQuery('#responseModal').find('#modal-response-title').text('Add Asset Request Submitted');
+            jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
+            jQuery('#responseModal').modal();
+            jQuery('#responseModal').modal('open');
+        }
     });
 
 }

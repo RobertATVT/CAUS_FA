@@ -30,5 +30,10 @@ function causfa_add_ticket() {
             'Type' => 0
         ), array('%s','%s','%s','%s','%s','%s','%d')
     );
+    $output = array(
+        'status' => 1,
+        'message' => 'Your request has been submitted and will be processed by your Fixed Assets Liaison'
+    );
+    wp_send_json($output);
 
 }

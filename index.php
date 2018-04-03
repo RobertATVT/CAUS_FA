@@ -20,6 +20,7 @@ if (!session_id()) {
 
 //Setup
 define( 'CAUSFA_PLUGIN_URL', __FILE__);
+define( 'CAUSFA_SEND_EMAIL', false);
 
 //Includes
 include('includes/activate.php');
