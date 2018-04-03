@@ -12,12 +12,17 @@ function causfa_add_ticket() {
     $desc = sanitize_text_field($_POST['desc']);
     $note = sanitize_text_field($_POST['note']);
     $user = wp_get_current_user()->user_nicename;
-    $FAL = 'mattwj6';
+    $FALs = causfa_groups_FAL();
+    $FAL_PIDs = array();
+    for ($i = 0; $i < count($FALs); $i++) {
+        $FAL_PIDs[] = explode('@', $FALs[$i]['Email'])[0];
+    }
+    $FAL_PIDs_s = maybe_serialize($FAL_PIDs);
     $wpdb->insert(
         'causfa_tickets',
         array(
             'PID_Submit' => $user,
-            'PID_Assigned' => $FAL,
+            'PID_Assigned' => $FAL_PIDs_s,
             'FZVFORG_PTAG' => $ptag,
             'FZVFORG_SERIAL_NUM' => $serial,
             'FZVFORG_DESCRIPTION' => $desc,
