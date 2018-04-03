@@ -11,6 +11,7 @@ function causfa_add_ticket() {
     $serial = sanitize_text_field($_POST['serial']);
     $desc = sanitize_text_field($_POST['desc']);
     $note = sanitize_text_field($_POST['note']);
+    $type = ($_POST['type']);
     $user = wp_get_current_user()->user_nicename;
     $FALs = causfa_groups_FAL();
     $FAL_PIDs = array();

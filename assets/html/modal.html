@@ -200,13 +200,13 @@
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw faa-modal-info" style="margin-bottom: 5px;">
                 <div class="cl m3 t20 info-title" style="padding: 0px;">VT Tag Number:</div>
-                <div class="cl m7 t20"><span class="asset-tag"></span></div>
+                <div class="cl m7 t20"><span class="asset-tag" id="ticketPtag"></span></div>
                 <div class="cl m3 t20 info-title" style="padding: 0px;">Serial Number:</div>
-                <div class="cl m7 t20"><span class="asset-serial"></span></div>
+                <div class="cl m7 t20"><span class="asset-serial" id="ticketSerial"></span></div>
             </div>
             <div class="rw faa-modal-info" style="margin-bottom: 5px;">
                 <div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>
-                <div class="cl m8 t20"><span class="asset-description"></span></div>
+                <div class="cl m8 t20"><span class="asset-description" id="ticketDescription"></span></div>
                 <input type="hidden" id="reportIndex" value="" />
             </div>
         </div>
@@ -217,7 +217,7 @@
             <div class="cl t20" style="padding: 0px;margin:0px;margin-bottom: 10px;">
                 <select id="ticketSelect">
                     <option value="not-missing">This item is not missing.</option>
-                    <option value="item-surplused">This item was previosuly surplused.</option>
+                    <option value="item-surplused">This item was previously surplused.</option>
                     <option value="not-mine">This item was previously transferred.</option>
                     <option value="what-is">I have no idea what this item is.</option>
 					<option value="other">Other options not listed here.</option>
@@ -229,7 +229,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="reportButton" onclick="validateForm(this)">SUBMIT REPORT</button>
+        <button type="button" class="btn btn-primary" id="reportButton" onclick="addTicket()">SUBMIT REPORT</button>
         <button type="button" class="btn btn-secondary modal-close">CANCEL</button>
     </div>
 </div>

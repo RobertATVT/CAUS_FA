@@ -186,6 +186,13 @@ function addAssetModalRequested(elementID) {
     jQuery('#addAssetsModal').modal('open');
 }
 function ticketModalRequested(elementID) {
+    var id = elementID.split('-')[1];
+    var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
+    var serial = document.getElementById(('asset-serial-' + id)).innerHTML;
+    var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
+    jQuery('#ticketPtag').text(tag);
+    jQuery('#ticketSerial').text(serial);
+    jQuery('#ticketDescription').text(desc);
     jQuery('#ticketModal').modal();
     jQuery('#ticketModal').modal('open');
 }

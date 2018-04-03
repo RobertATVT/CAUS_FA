@@ -65,7 +65,6 @@ function new_custodian_submit() {
     var office = jQuery('#Office').val();
     var phone = jQuery('#Phone').val();
     var org = jQuery('#org').val();
-    alert(org);
     if (office == null) {
         alert('Office field cannot be empty');
     } else if (phone == null) {
@@ -85,7 +84,6 @@ function new_custodian_submit() {
             }
         });
     }
-
 }
 function submitSVar(obj) {
     var form = {
@@ -204,16 +202,56 @@ function addAsset() {
         ptag: ptag,
         serial: serial,
         desc: desc,
-        note: notes
+        note: notes,
+        type: 0
     };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if (data['status'] == 1) {
-            jQuery('#addAssetsModal').modal('close');
-            jQuery('#responseModal').find('#modal-response-title').text('Add Asset Request Submitted');
-            jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
-            jQuery('#responseModal').modal();
-            jQuery('#responseModal').modal('open');
+    if (ptag == null) {
+        alert('Please enter the PTag for the asset');
+    } else if (serial == null) {
+        alert('Please enter the Serial number for the asset');
+    } else if (desc == null) {
+        alert('Please enter a description of the asset');
+    } else {
+        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+            if (data['status'] == 1) {
+                jQuery('#addAssetsModal').modal('close');
+                jQuery('#responseModal').find('#modal-response-title').text('Add Asset Request Submitted');
+                jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
+                jQuery('#responseModal').modal();
+                jQuery('#responseModal').modal('open');
+            }
+        });
+    }
+}
+function addTicket() {
+    var ptag = $('#ticketPtag').text();
+    var serial = $('#ticketSerial').text();
+    var desc = $('#ticketDescription').text();
+    var notes = $('#ticketSelect').val();
+    var status = 1;
+    if (notes == 'other') {
+        notes = jQuery('#addTicketNotes').val();
+        if (notes.length == 0) {
+            status = 0;
         }
-    });
-
+    }
+    if (status != 0) {
+        var form = {
+            action: 'causfa_add_ticket',
+            ptag: ptag,
+            serial: serial,
+            desc: desc,
+            note: notes,
+            type: 1
+        };
+        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+            if (data['status'] == 1) {
+                jQuery('#ticketModal').modal('close');
+                jQuery('#responseModal').find('#modal-response-title').text('Add Asset Request Submitted');
+                jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
+                jQuery('#responseModal').modal();
+                jQuery('#responseModal').modal('open');
+            }
+        });
+    }
 }
