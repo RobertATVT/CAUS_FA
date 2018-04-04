@@ -160,6 +160,7 @@ function create_tables() {
         FZVFORG_SERIAL_NUM varchar(40),
         FZVFORG_DESCRIPTION varchar(1000),
         Notes LONGTEXT,
+        Type tinyint
         PRIMARY KEY (ID)
         )".$charset_collate.";";
         dbDelta($sql);
