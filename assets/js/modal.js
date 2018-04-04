@@ -101,6 +101,7 @@ function galleryModalRequested(elementID) {
                 addImages(data['src'][i], data['desc'][i], data['date'][i]);
 
             }
+            $('#imageCount').val(data['count']);
         });
     }
     jQuery('#galleryModal').modal();
@@ -121,6 +122,10 @@ function addImages(image, desc, date) {
     item.appendChild(img);
     item2.appendChild(img2)
     slickDisable()
+    if ($('#imageCount').val() == 0) {
+        $('.slider-nav').empty();
+        $('.slider-for').empty();
+    }
     $('.slider-nav').append(item);
     $('.slider-for').append(item2);
     slickInit();
@@ -132,8 +137,7 @@ function slickInit() {
         asNavFor: '.slider-nav',
         arrows: true,
         fade: true,
-        autoplay: true,
-        adaptiveHeight: true
+        autoplay: true
     });
     $('.slider-nav').slick({
         slidesToShow: 3,
@@ -182,6 +186,10 @@ function getLastForm(tag) {
     });
 }
 function addAssetModalRequested(elementID) {
+    jQuery('#addAssetPTAG').val('');
+    jQuery('#addAssetSerial').val('');
+    jQuery('#addAssetDesc').val('');
+    jQuery('#addAssetNotes').val('');
     jQuery('#addAssetsModal').modal();
     jQuery('#addAssetsModal').modal('open');
 }
@@ -190,6 +198,8 @@ function ticketModalRequested(elementID) {
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
     var serial = document.getElementById(('asset-serial-' + id)).innerHTML;
     var desc = document.getElementById(('asset-desc-' + id)).innerHTML;
+    jQuery('#addTicketNotes').val('');
+    jQuery('#ticketSelect').val('not-missing');
     jQuery('#ticketPtag').text(tag);
     jQuery('#ticketSerial').text(serial);
     jQuery('#ticketDescription').text(desc);

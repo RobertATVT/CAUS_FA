@@ -168,12 +168,14 @@ function causfa_output_images() {
     $output = array(
         'src' => array(),
         'desc' => array(),
-        'date' => array()
+        'date' => array(),
+        'count' => 0
     );
     for ($i = 0; $i < count($results); $i++) {
         $output['src'] = unserialize($results[$i]->IMG_URL);
         $output['desc'] = unserialize($results[$i]->IMG_DESC);
         $output['date'] = unserialize($results[$i]->IMG_DATE);
+        $output['count'] = count($output['src']);
     }
     if (count($output['src']) == 0) {
         $output['src'][] =  plugins_url('assets/no-image-available.png', CAUSFA_PLUGIN_URL);
