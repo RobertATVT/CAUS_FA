@@ -152,7 +152,7 @@ select#org option:hover {
 #asset-alerts {
     padding: 5px; 
     background: #642667;
-    border-radius: 3px; 
+    border-radius: 2px; 
     border-left: 4px solid rgba(255,255,255,.4); 
     font-weight: 700; 
     font-size: 12px; 
@@ -203,7 +203,7 @@ select#org option:hover {
 .asset-block {
     box-sizing: border-box;
     min-height: 50px;
-    border-radius: 3px 3px 3px 3px; 
+    border-radius: 2px 2px 2px 2px; 
     padding: 0px !important;
 }
 .block-header {
@@ -779,7 +779,7 @@ div.faa-autocomplete > input[type=submit] {
 
 
 /* Small devices (landscape phones, 400px and up) */
-@media (min-width: 421px) {
+@media (min-width: 420px) {
      .add-asset-text {
         font-size: 120%; 
     }
@@ -839,7 +839,7 @@ div.faa-autocomplete > input[type=submit] {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 601px) {
+@media (min-width: 768px) {
     #asset-container {
         margin-top: 0px;
     }
@@ -954,7 +954,7 @@ div.faa-autocomplete > input[type=submit] {
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 993px) {
+@media (min-width: 992px) {
     #asset-container {
         margin-top: 0px;
     }
@@ -1043,7 +1043,7 @@ div.faa-autocomplete > input[type=submit] {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1201px) {
+@media (min-width: 1200px) {
     .x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce) {
         font-size: 11px !important;
     }
@@ -1055,7 +1055,7 @@ div.faa-autocomplete > input[type=submit] {
     }
 }
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1601px) {
+@media (min-width: 1600px) {
      .asset-list-header {
         font-size: 100%;
     }
