@@ -152,19 +152,10 @@ select#org option:hover {
 #app-title-block {
 	padding: 5px; 
 }
-
-#app-title-block > div.title-block {
-	background: #D7D2CB;
-    border-radius: 2px;
-	border: 1px solid rgba(255,255,255,0.25);
-    border-left: 4px solid rgba(255,255,255,0.25); 
-	border-right: 4px solid rgba(255,255,255,0.25); 
-    font-weight: 700; 
-    font-size: 175%; 
-	text-align: center;
-    color: #333;
+#app-admin-block {
+	padding: 5px; 
 }
-#app-title-block > div.admin-block {
+#app-title-block > button.title-block {
 	background: #D7D2CB;
     border-radius: 2px;
 	border: 1px solid rgba(255,255,255,0.25);
@@ -174,6 +165,19 @@ select#org option:hover {
     font-size: 175%; 
 	text-align: center;
     color: #333;
+	width: 100%;
+}
+#app-admin-block > button.admin-block {
+	background: #D7D2CB;
+    border-radius: 2px;
+	border: 1px solid rgba(255,255,255,0.25);
+    border-left: 4px solid rgba(255,255,255,0.25); 
+	border-right: 4px solid rgba(255,255,255,0.25); 
+    font-weight: 700; 
+    font-size: 175%; 
+	text-align: center;
+    color: #333;
+	width: 100%;
 }
 #asset-alerts {
     padding: 5px; 

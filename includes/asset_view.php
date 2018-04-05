@@ -8,10 +8,10 @@
 
 
 function causfa_load_view (){
-	if (isset($_SESSION["admin_view"])) {
-		causfa_load_admin_view();
+	if (isset($_SESSION['admin_view']) && $_SESSION['admin_view'] == 1) {
+		return causfa_load_admin_view();
 	} else {
-		causfa_load_employee_view();
+		return causfa_load_employee_view();
 	}
 }
 
