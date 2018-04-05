@@ -177,6 +177,7 @@ select#org option:hover {
     font-size: 175%; 
 	text-align: center;
     color: #333;
+	width: 100%;
 }
 #asset-alerts {
     padding: 5px; 
