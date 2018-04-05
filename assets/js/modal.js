@@ -195,6 +195,7 @@ function addAssetModalRequested(elementID) {
 }
 function ticketModalRequested(elementID) {
     var id = elementID.split('-')[1];
+    jQuery('#ticketModal').find('#reportIndex').val(id);
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
     var serial = document.getElementById(('asset-serial-' + id)).innerHTML;
     var desc = document.getElementById(('asset-desc-' + id)).innerHTML;

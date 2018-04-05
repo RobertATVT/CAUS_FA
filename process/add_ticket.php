@@ -7,11 +7,17 @@
  */
 function causfa_add_ticket() {
     global $wpdb;
+    $output = array();
     $ptag = sanitize_text_field($_POST['ptag']);
+    if ($wpdb->get_var("SELECT ID FROM causfa_tickets WHERE FZVFORG_PTAG = ".$ptag.";") != null) {
+        $output['status'] = 0;
+        $output['message'] = 'Your request has not been submitted because a request under this tag number has already been submitted';
+        wp_send_json($output);
+    }
     $serial = sanitize_text_field($_POST['serial']);
     $desc = sanitize_text_field($_POST['desc']);
     $note = sanitize_text_field($_POST['note']);
-    $type = ($_POST['type']);
+    $type = $_POST['type'];
     $user = wp_get_current_user()->user_nicename;
     $FALs = causfa_groups_FAL();
     $FAL_PIDs = array();
@@ -28,13 +34,24 @@ function causfa_add_ticket() {
             'FZVFORG_SERIAL_NUM' => $serial,
             'FZVFORG_DESCRIPTION' => $desc,
             'Notes' => $note,
-            'Type' => 0
+            'Type' => $type
         ), array('%s','%s','%s','%s','%s','%s','%d')
     );
-    $output = array(
-        'status' => 1,
-        'message' => 'Your request has been submitted and will be processed by your Fixed Assets Liaison'
+    if ($type == 0) {
+        $action = 18;
+    } else {
+        $action = 19;
+    }
+    $logger_info = array(
+        'PID' => $user,
+        'Action' => $action,
+        'FZVFORG_PTAG' => $ptag,
+        'PID_dest' => $FAL_PIDs_s,
+        'Info' => $note
     );
+    causfa_logger($logger_info);
+    $output['status'] = 1;
+    $output['message'] = 'Your request has been submitted and will be processed by your Fixed Assets Liaison';
     wp_send_json($output);
 
 }

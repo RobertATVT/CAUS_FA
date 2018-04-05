@@ -143,8 +143,8 @@ function create_tables() {
         PID VARCHAR(32) NOT NULL,
         Action TINYINT NOT NULL,
         FZVFORG_PTAG varchar(9) NULL,
-        PID_dest varchar(32) NULL,
-        Info varchar(32) NULL, 
+        PID_dest LONGTEXT NULL,
+        Info LONGTEXT NULL, 
         PRIMARY KEY  (ID)
         ) ".$charset_collate.";";
         dbDelta($sql);
@@ -155,7 +155,7 @@ function create_tables() {
         ID INT NOT NULL AUTO_INCREMENT,
         TIMESTAMP TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
         PID_Submit varchar(32) NOT NULL,
-        PID_Assigned varchar(32) NOT NULL,
+        PID_Assigned LONGTEXT) NOT NULL,
         FZVFORG_PTAG varchar(9) NOT NULL,
         FZVFORG_SERIAL_NUM varchar(40),
         FZVFORG_DESCRIPTION varchar(1000),

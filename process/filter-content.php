@@ -128,6 +128,12 @@ function causfa_filter_asset_info( $content, $asset_index) {
         $asset_info_html = str_replace('asset-status', 'asset-status asset-pending', $asset_info_html);
         $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
         $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+    } else if ($row = $wpdb->get_row("SELECT * FROM causfa_tickets WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
+        $asset_info_html = str_replace('[STATUS]', 'Pending Ticket', $asset_info_html);
+        $asset_info_html = str_replace('asset-status', 'asset-status asset-pending', $asset_info_html);
+        $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+        $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+        $asset_info_html = str_replace('ticketModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
     } else {
         $asset_status = $content->FZVFORG_ROOM;
         if (strpos($asset_status, 'HOME') !== false) {
