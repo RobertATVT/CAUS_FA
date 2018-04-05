@@ -23,6 +23,11 @@
  * 12 = surplus - Surplus picked up and confirmation uploaded
  * 13 = surplus - Updated in banner
  * 14 = surplus - Cancelled by Liaison/IT
+ * 15 = image upload
+ * 16 = home use form upload
+ * 17 = office use form upload
+ * 18 = add asset request
+ * 19 = asset ticket submitted
  */
 function causfa_logger($input) {
     global $wpdb;

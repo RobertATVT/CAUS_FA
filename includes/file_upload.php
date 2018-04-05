@@ -49,6 +49,19 @@ function causfa_upload_image() {
             $output['desc'] = $desc;
             $output['date'] = $date['year'].'-'.$date['mon'].'-'.$date['mday'];
         }
+        $logger_data = array(
+            'url' => $target_url,
+            'desc' => $desc,
+            'date' => $date
+        );
+        $logger_info = array(
+            'PID' => wp_get_current_user()->user_nicename,
+            'Action' => 15,
+            'FZVFORG_PTAG' => $ptag,
+            'PID_dest' => null,
+            'Info' => maybe_serialize($logger_data)
+        );
+        causfa_logger($logger_info);
         wp_send_json($output);
     } else {
         $output['message'] = 'There was an error uploading your file.';
@@ -99,6 +112,18 @@ function causfa_upload_form_home() {
                 $output['status'] = 1;
                 $output['message'] = 'File Upload Successful';
             }
+            $logger_data = array(
+                'url' => $target_url,
+                'date' => $date
+            );
+            $logger_info = array(
+                'PID' => wp_get_current_user()->user_nicename,
+                'Action' => 16,
+                'FZVFORG_PTAG' => $ptag,
+                'PID_dest' => null,
+                'Info' => maybe_serialize($logger_data)
+            );
+            causfa_logger($logger_info);
             wp_send_json($output);
         } else {
             $output['message'] = 'There was an error uploading your file.';
@@ -150,6 +175,18 @@ function causfa_upload_form_office() {
                 $output['status'] = 1;
                 $output['message'] = 'File Upload Successful';
             }
+            $logger_data = array(
+                'url' => $target_url,
+                'date' => $date
+            );
+            $logger_info = array(
+                'PID' => wp_get_current_user()->user_nicename,
+                'Action' => 17,
+                'FZVFORG_PTAG' => $ptag,
+                'PID_dest' => null,
+                'Info' => maybe_serialize($logger_data)
+            );
+            causfa_logger($logger_info);
             wp_send_json($output);
         } else {
             $output['message'] = 'There was an error uploading your file.';

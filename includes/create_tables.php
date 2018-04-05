@@ -143,8 +143,8 @@ function create_tables() {
         PID VARCHAR(32) NOT NULL,
         Action TINYINT NOT NULL,
         FZVFORG_PTAG varchar(9) NULL,
-        PID_dest varchar(32) NULL,
-        Info varchar(32) NULL, 
+        PID_dest LONGTEXT NULL,
+        Info LONGTEXT NULL, 
         PRIMARY KEY  (ID)
         ) ".$charset_collate.";";
         dbDelta($sql);

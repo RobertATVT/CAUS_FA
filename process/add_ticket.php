@@ -37,6 +37,19 @@ function causfa_add_ticket() {
             'Type' => $type
         ), array('%s','%s','%s','%s','%s','%s','%d')
     );
+    if ($type == 0) {
+        $action = 18;
+    } else {
+        $action = 19;
+    }
+    $logger_info = array(
+        'PID' => $user,
+        'Action' => $action,
+        'FZVFORG_PTAG' => $ptag,
+        'PID_dest' => $FAL_PIDs_s,
+        'Info' => $note
+    );
+    causfa_logger($logger_info);
     $output['status'] = 1;
     $output['message'] = 'Your request has been submitted and will be processed by your Fixed Assets Liaison';
     wp_send_json($output);
