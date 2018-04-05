@@ -10,7 +10,9 @@ function causfa_pending_action() {
     $tag = $_POST['ptag'];
     $output = "";
     $result = $wpdb->get_row('SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '.$tag.';');
-    if(!$result->PENDING_TYPE) {
+    if ($result == null) {
+      $output = 'This item is pending a ticket. Your Fixed Assets Liaison may contact you with additional questions or to let you know when the issue is resolved.';
+    } else if(!$result->PENDING_TYPE) {
         switch($result->PENDIND_STATUS) {
             case 0:
                 $output = 'This item is pending transfer. You are currently waiting to be contacted by your Fixed Assets Liaison or Business Manger';

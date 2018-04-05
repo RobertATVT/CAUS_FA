@@ -155,7 +155,7 @@ function create_tables() {
         ID INT NOT NULL AUTO_INCREMENT,
         TIMESTAMP TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
         PID_Submit varchar(32) NOT NULL,
-        PID_Assigned varchar(32) NOT NULL,
+        PID_Assigned LONGTEXT) NOT NULL,
         FZVFORG_PTAG varchar(9) NOT NULL,
         FZVFORG_SERIAL_NUM varchar(40),
         FZVFORG_DESCRIPTION varchar(1000),

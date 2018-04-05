@@ -219,6 +219,12 @@ function addAsset() {
                 jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
                 jQuery('#responseModal').modal();
                 jQuery('#responseModal').modal('open');
+            } else {
+                jQuery('#addAssetsModal').modal('close');
+                jQuery('#responseModal').find('#modal-response-title').text('Add Asset Request Rejected');
+                jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
+                jQuery('#responseModal').modal();
+                jQuery('#responseModal').modal('open');
             }
         });
     }
@@ -248,6 +254,19 @@ function addTicket() {
             if (data['status'] == 1) {
                 jQuery('#ticketModal').modal('close');
                 jQuery('#responseModal').find('#modal-response-title').text('Add Asset Request Submitted');
+                jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
+                jQuery('#responseModal').modal();
+                jQuery('#responseModal').modal('open');
+                var id = jQuery('#reportIndex').val();
+                var status = jQuery(('#status-' + id))
+                status.addClass('asset-pending');
+                status.html("Pending Ticket");
+                jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+                jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+                jQuery(('#problem-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+            } else {
+                jQuery('#ticketModal').modal('close');
+                jQuery('#responseModal').find('#modal-response-title').text('Ticket Rejected');
                 jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
                 jQuery('#responseModal').modal();
                 jQuery('#responseModal').modal('open');
