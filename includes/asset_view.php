@@ -65,5 +65,6 @@ function causfa_load_employee_view() {
 }
 
 function causfa_load_admin_view(){
-	
+	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-full.html', true));
+	return $output;
 }
