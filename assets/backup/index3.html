@@ -284,90 +284,41 @@
 						</form>
 					</div>
 <!-- END TICKETS FILLER -->
-<!-- BEGIN TEMPLATE faa-misc-admin.html -->
+<!-- BEGIN TEMPLATE faa-reports-admin.html -->
 				</div>
 			</div>
 			<div class="cl l10 m10 s20 t20 emp-info-inside hide-small-down" style="padding:5px;">
-				<div class="cl t20 vt-purple vt-txt-white asset-block" style="padding-bottom: 10px !important;">
-					<div class="cl center t20 block-header block-headtext" style="margin-bottom: 0px !important;">PENDING MISC</div>
-					<div class="cl t20 block-text admin-list-heading" style="">
-						<div class="cl t2 center">VT PTAG</div>
-						<div class="cl t2 center">OWNER PID</div>
-						<div class="cl t2 center">DATE</div>
-						<div class="cl t2 center">CONTACTED</div>
-						<div class="cl t2 center">RECIEVED</div>
-						<div class="cl t2 center">RECIEVER PID</div>
-						<div class="cl t2 center">UPDATED</div>
-						<div class="cl t2 center">PICKED UP</div>
-						<div class="cl t2 center">UPLOAD</div>
-						<div class="cl t2 center">COMPLETE</div>
-					</div>
-<!-- END TEMPLATE faa-misc-admin.html -->
-<!-- BEGIN TEMPLATE faa-misc-fill.html -->
+				<div class="cl t20 vt-grey vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+					<div class="cl center t20 block-header block-headtext" style="margin-bottom: 0px !important;">BANNER REPORTS</div>
 					<div class="cl t20 block-text" style="margin-top: 5px;">
-						<form id="surplus-[ID]" actoin="#">
-							<div class="cl t2 center" id="surplus-ptag-[ID]">[PTAG]</div>
-							<div class="cl t2 center" id="surplus-pid1-[ID]">[PID 1]</div>
-							<div class="cl t2 center" id="surplus-pid2-[ID]">[PID 2]</div>
-							<div class="cl t2 center" id="surplus-date-[ID]">[DATE]</div>
-							<div class="cl t2 center" id="surplus-stage1-[ID]">
-								<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in">
-								<label for="surplus-stage-1-[ID]"></label>
+						<form id="report-[ID]" actoin="#">
+<!-- END TEMPLATE faa-reports-admin.html -->
+<!-- BEGIN TEMPLATE faa-reports-fill.html -->
+							<div class="cl t10 center" id="report-[ID]">
+								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
 							</div>
-							<div class="cl t2 center" id="surplus-stage2-[ID]">
-								<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in" disabled="disabled">
-								<label for="surplus-stage-2-[ID]"></label>
+<!-- END TEMPLATE faa-reports-fill.html -->
+<!-- BEGIN REPORTS FILLER -->
+							<div class="cl t10 center" id="report-[ID]">
+								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
 							</div>
-							<div class="cl t2 center" id="surplus-stage3-[ID]">
-								<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in" disabled="disabled">
-								<label for="surplus-stage-3-[ID]"></label>
+							<div class="cl t10 center" id="report-[ID]">
+								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
 							</div>
-							<div class="cl t2 center" id="surplus-stage4-[ID]">
-								<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in" disabled="disabled">
-								<label for="surplus-stage-4-[ID]"></label>
+							<div class="cl t10 center" id="report-[ID]">
+								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
 							</div>
-							<div class="cl t2 center" id="surplus-stage5-[ID]">
-								<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
+							<div class="cl t10 center" id="report-[ID]">
+								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
 							</div>
-							<div class="cl t2 center" id="surplus-stage6-[ID]">
-								<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+							<div class="cl t10 center" id="report-[ID]">
+								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
 							</div>
+
+<!-- END REPORTS FILLER -->
+<!-- BEGIN TEMPLATE faa-footer-admin.html -->
 						</form>
 					</div>
-<!-- END TEMPLATE faa-tickets-fill.html -->
-<!-- BEGIN MISC FILLER -->
-					<div class="cl t20 block-text" style="margin-top: 5px;">
-						<form id="surplus-0" actoin="#">
-							<div class="cl t2 center" id="surplus-ptag-0">[PTAG]</div>
-							<div class="cl t2 center" id="surplus-pid1-0">[PID 1]</div>
-							<div class="cl t2 center" id="surplus-pid2-0">[PID 2]</div>
-							<div class="cl t2 center" id="surplus-date-0">[DATE]</div>
-							<div class="cl t2 center" id="surplus-stage1-0">
-								<input id="surplus-stage-1-0" type="checkbox" value="surplus-stage-1-complete-0" class="filled-in">
-								<label for="surplus-stage-1-0"></label>
-							</div>
-							<div class="cl t2 center" id="transfer-stage2-[ID]">
-								<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete[ID]" class="filled-in" disabled="disabled">
-								<label for="surplus-stage-2-[ID]"></label>
-							</div>
-							<div class="cl t2 center" id="transfer-stage3-[ID]">
-								<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete[ID]" class="filled-in" disabled="disabled">
-								<label for="surplus-stage-3-[ID]"></label>
-							</div>
-							<div class="cl t2 center" id="transfer-stage4-[ID]">
-								<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete[ID]" class="filled-in" disabled="disabled">
-								<label for="surplus-stage-4-[ID]"></label>
-							</div>
-							<div class="cl t2 center" id="surplus-stage5-[ID]">
-								<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
-							</div>
-							<div class="cl t2 center" id="surplus-stage6-[ID]">
-								<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
-							</div>
-						</form>
-					</div>
-<!-- END MISC FILLER -->
-<!-- BEGIN TEMPLATE faa-reports-admin.html -->
 				</div>
 			</div>
 		</div>
@@ -376,93 +327,6 @@
                 <div class="cl t20 vt-dk-grey" style="padding: 5px;"></div>
             </div>
 		</div>
-		<div class="rw" style="margin:0px; display: block;">
-			<div class="cl l10 m10 s20 t20 emp-info-inside hide-small-down" style="padding:5px;">
-				<div class="cl t20 vt-grey vt-txt-white asset-block" style="padding-bottom: 10px !important;">
-					<div class="cl center t20 block-header block-headtext" style="margin-bottom: 0px !important;">BANNER REPORTS</div>
-					<div class="cl t20 block-text admin-list-heading" style="">
-						<div class="cl t10 center vt-txt-charcoal b">REPORT TYPE</div>
-						<div class="cl t10 center vt-txt-charcoal b">REPORT TYPE</div>
-					</div>
-<!-- END TEMPLATE faa-reports-admin.html -->
-<!-- BEGIN TEMPLATE faa-reports-fill.html -->
-					<div class="cl t20 block-text" style="margin-top: 5px;">
-						<form id="report-[ID]" actoin="#">
-							<div class="cl t10 center" id="report-[ID]">
-								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
-							</div>
-							<div class="cl t10 center" id="report-[ID]">
-								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
-							</div>
-						</form>
-					</div>
-<!-- END TEMPLATE faa-reports-fill.html -->
-<!-- BEGIN REPORTS FILLER -->
-					<div class="cl t20 block-text" style="margin-top: 5px;">
-						<form id="report-[ID]" actoin="#">
-							<div class="cl t10 center" id="report-[ID]">
-								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
-							</div>
-							<div class="cl t10 center" id="report-[ID]">
-								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
-							</div>
-						</form>
-					</div>
-					<div class="cl t20 block-text" style="margin-top: 5px;">
-						<form id="report-[ID]" actoin="#">
-							<div class="cl t10 center" id="report-[ID]">
-								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
-							</div>
-							<div class="cl t10 center" id="report-[ID]">
-								<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
-							</div>
-						</form>
-					</div>
-<!-- END REPORTS FILLER -->
-<!-- BEGIN TEMPLATE faa-history-admin.html -->
-				</div>
-			</div>
-			<div class="cl l10 m10 s20 t20 emp-info-inside hide-small-down" style="padding:5px;">
-				<div class="cl t20 vt-grey vt-txt-white asset-block" style="padding-bottom: 10px !important;">
-					<div class="cl center t20 block-header block-headtext" style="margin-bottom: 0px !important;">HISTORY & LOGS</div>
-					<div class="cl t20 block-text admin-list-heading" style="">
-						<div class="cl t10 center vt-txt-charcoal b">HISTORY</div>
-						<div class="cl t10 center vt-txt-charcoal b">REPORT TYPE</div>
-					</div>
-<!-- END TEMPLATE faa-history-admin.html -->
-<!-- BEGIN TEMPLATE faa-history-fill.html -->
-					<div class="cl t20 block-text" style="margin-top: 5px;">
-						<form id="report-[ID]" actoin="#">
-							<div class="cl t16 left" id="report-[ID]">[REPORT NAME]</div>
-							<div class="cl t4 right" id="report-get-[ID]">
-								<input type="button" class="btn btn-secondary ticket-complete" value="get-report" onclick="get-report(this.id)">
-							</div>
-						</form>
-					</div>
-<!-- END TEMPLATE faa-history-fill.html -->
-<!-- BEGIN HISTORY FILLER -->
-					<div class="cl t20 block-text" style="margin-top: 5px;">
-						<form id="report-[ID]" actoin="#">
-							<div class="cl t16 left" id="report-[ID]">[REPORT NAME]</div>
-							<div class="cl t4 right" id="report-get-[ID]">
-								<input type="button" class="btn btn-secondary ticket-complete" value="get-report" onclick="get-report(this.id)">
-							</div>
-						</form>
-					</div>
-					<div class="cl t20 block-text" style="margin-top: 5px;">
-						<form id="report-[ID]" actoin="#">
-							<div class="cl t16 left" id="report-[ID]">[REPORT NAME]</div>
-							<div class="cl t4 right" id="report-get-[ID]">
-								<input type="button" class="btn btn-secondary ticket-complete" value="get-report" onclick="get-report(this.id)">
-							</div>
-						</form>
-					</div>
-<!-- END HISTORY FILLER -->
-<!-- BEGIN TEMPLATE faa-tickets-admin.html -->
-				</div>
-			</div>
-		</div>
-<!-- BEGIN TEMPLATE faa-footer-admin.html -->
 	</div>
 </div>
 <!-- END TEMPLATE faa-footer-admin.html -->

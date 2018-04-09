@@ -11,7 +11,7 @@
  * @return mixed - the html that corresponds to the employee info section if employee asset view page
  */
 function causfa_filter_header( $content) {
-    $faa_head_info = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-header-template.html', true);
+    $faa_head_info = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-header.html', true);
     $faa_head_info = str_replace('[NAME]', $content->Name, $faa_head_info);
     $faa_head_info = str_replace( '[PID]', $content->PID, $faa_head_info);
     $faa_head_info = str_replace( '[EMAIL]', $content->Email, $faa_head_info);
@@ -82,7 +82,7 @@ function causfa_filter_header( $content) {
  * @return mixed - html corresponding to the footer of the employee asset view page
  */
 function causfa_filter_impact( $value_total, $total_number, $missing_total, $missing_number) {
-    $asset_impact_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-impact-template.html', true);
+    $asset_impact_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-impact.html', true);
     $asset_impact_html = str_replace('[TOTAL VALUE]', ('$'.$value_total), $asset_impact_html);
     $asset_impact_html = str_replace('[TOTAL NUMBER]', $total_number, $asset_impact_html);
     $asset_impact_html = str_replace( '[TOTAL MISSING VALUE]', ('$'.$missing_total), $asset_impact_html);
@@ -99,7 +99,7 @@ function causfa_filter_impact( $value_total, $total_number, $missing_total, $mis
  */
 function causfa_filter_asset_info( $content, $asset_index) {
     global $wpdb;
-    $asset_info_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-asset-template.html', true);
+    $asset_info_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-asset-list.html', true);
     $asset_info_html = str_replace('[VT TAG]', $content->FZVFORG_PTAG, $asset_info_html);
     $asset_info_html = str_replace( '[S/N]', $content->FZVFORG_SERIAL_NUM, $asset_info_html);
     $asset_info_html = str_replace('[DESCRIPTION]', $content->FZVFORG_DESCRIPTION, $asset_info_html);

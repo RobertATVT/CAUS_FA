@@ -32,7 +32,6 @@ function causfa_load_employee_view() {
         return causfa_new_custodian_dialog();
     } else {
         $output = apply_filters('causfa_header', $result_user);
-        /* $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/asset_header_template.html', true )); */
         $results_assets = $wpdb->get_results('SELECT * FROM causfa_banner WHERE FZVFORG_CUSTODIAN = "'.$result_user->Name.'";');
         $value_total = 0.00;
         $missing_total = 0.00;
@@ -53,8 +52,10 @@ function causfa_load_employee_view() {
             $asset_index++;
         }
         $output = $output.(apply_filters('causfa_impact', $value_total, $total_number, $missing_total, $missing_number));
+		$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-asset-header.html', true ));
         $output = $output.$assets;
-        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-footer-template.html', true));
+		$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-asset-footer.html', true ));
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-footer.html', true));
         
         //Gets the html for the modals and puts it at the bottom of the page.
         $modals = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/modal.html', true ));

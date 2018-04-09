@@ -606,6 +606,7 @@ a.btn-menu {
 	padding: 1px;
 	max-height: 20px;
 	line-height: 20px;
+	margin-bottom: 4px;
 }
 [type="checkbox"] + label {
 	padding-left: 0px !important;
