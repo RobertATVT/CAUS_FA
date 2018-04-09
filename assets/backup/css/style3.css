@@ -88,6 +88,9 @@ select#org option:hover {
 .vt-txt-white {
     color: #fff;
 }
+.vt-txt-charcoal {
+	color: #333;
+}
 .h1-text {
     font-size:175%;
     font-weight:700;
@@ -587,6 +590,15 @@ a.btn-menu {
 	line-height: 20px;
 }
 .ticket-complete {
+	width: 95% !important;
+	font-size: 65% !important;
+	font-weight: 700;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px;
+	line-height: 20px;
+}
+.report-button {
 	width: 95% !important;
 	font-size: 65% !important;
 	font-weight: 700;

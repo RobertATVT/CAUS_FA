@@ -54,6 +54,23 @@ html {
     min-height: 1px;
 }
 
+/* TEXT ITEMS */
+.l {
+	font-weight: 300 !important;
+}
+.m {
+	font-weight: 500 !important;
+}
+.b {
+	font-weight: 700 !important;
+}
+.eb {
+	font-weight: 900 !important;
+}
+.em {
+	font-style:  italic !important;
+}
+
 /* UTILITY ITEMS */
 .hide {
   display: none !important;
