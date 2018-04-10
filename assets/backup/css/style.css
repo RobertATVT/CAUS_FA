@@ -88,6 +88,9 @@ select#org option:hover {
 .vt-txt-white {
     color: #fff;
 }
+.vt-txt-charcoal {
+	color: #333;
+}
 .h1-text {
     font-size:175%;
     font-weight:700;
@@ -149,6 +152,36 @@ select#org option:hover {
     background: #45484b;
     padding: 10px;
 }
+#app-title-block {
+	padding: 5px; 
+}
+#app-admin-block {
+	padding: 5px; 
+}
+#app-title-block > button.title-block {
+	background: #D7D2CB;
+    border-radius: 2px;
+	border: 1px solid rgba(255,255,255,0.25);
+    border-left: 4px solid rgba(255,255,255,0.25); 
+	border-right: 4px solid rgba(255,255,255,0.25); 
+    font-weight: 700; 
+    font-size: 175%; 
+	text-align: center;
+    color: #333;
+	width: 100%;
+}
+#app-admin-block > button.admin-block {
+	background: #D7D2CB;
+    border-radius: 2px;
+	border: 1px solid rgba(255,255,255,0.25);
+    border-left: 4px solid rgba(255,255,255,0.25); 
+	border-right: 4px solid rgba(255,255,255,0.25); 
+    font-weight: 700; 
+    font-size: 175%; 
+	text-align: center;
+    color: #333;
+	width: 100%;
+}
 #asset-alerts {
     padding: 5px; 
     background: #642667;
@@ -209,7 +242,7 @@ select#org option:hover {
     padding: 0px !important;
 }
 .block-header {
-    background: rgba(100,0,0,.3);
+    background: rgba(0,0,0,.3);
     min-height: 15px; 
     border-radius: 3px 3px 0px 0px; 
     padding: 3px !important;
@@ -285,6 +318,12 @@ select#org option:hover {
     font-weight: 700; 
     font-size: 80%;
 }
+.asset-list-header > th {
+    padding-top:3px !important;
+	padding-bottom:3px !important;
+    font-weight: 700; 
+    font-size: 100%;
+}
 .asset-list-footer {
     background: #fff; 
     padding:5px 0px !important;
@@ -304,8 +343,9 @@ select#org option:hover {
     border: 0px; 
     border-bottom: 1px solid #D7D2CB;
     font-weight: 400; 
-    font-size: 75%;
-    line-height: 20px;
+    font-size: 90%;
+    line-height: 30px;
+	height: 30px;
 }
 .asset-show {
 	height: 115px;
@@ -357,7 +397,6 @@ select#org option:hover {
     height: 20px;
     width: 80%;
     border: 0px;
-    border-radius: 3px;
     margin-top: -1px;
     margin: 0px auto;
 }
@@ -365,23 +404,33 @@ select#org option:hover {
     font-size: 135%;
     background: #060 !important;
     color: #fff;
+	border-radius: 3px;
 }
 .asset-home {
     font-size: 135%;
     background: #fd0 !important;
     color: #000;
+	border-radius: 3px;
 }
 .asset-missing {
     font-size: 135%;
     background: #900 !important;
     color: #fff;
     letter-spacing: .2em;
+	border-radius: 3px;
 }
 .asset-pending {
     font-size: 135%;
 	background: #46c !important;
     color: #fff;
     line-height: 20px;
+	border-radius: 3px;
+}
+.admin-list-heading {
+	background: rgba(255,255,255,.2); 
+	padding-top: 5px !important; 
+	padding-bottom: 3px !important;
+	border-bottom: 1px solid rgba(255,255,255,.3);
 }
 /* SIDEBAR AND CONTENT CONTAINERS */
 #sidebar {
@@ -533,7 +582,73 @@ a.btn-menu {
 .btn.active.focus {
     outline: 1px solid #333;
 }
-
+.home-generate {
+	width: 95% !important;
+	font-size: 80% !important;
+}
+.home-upload {
+	width: 95% !important;
+	font-size: 80% !important;
+}
+.form-upload {
+	width: 95% !important;
+	font-size: 65% !important;
+	font-weight: 700;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px;
+	line-height: 20px;
+}
+.ticket-complete {
+	width: 95% !important;
+	font-size: 65% !important;
+	font-weight: 700;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px;
+	line-height: 20px;
+}
+.report-button {
+	width: 95% !important;
+	font-size: 65% !important;
+	font-weight: 700;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px;
+	line-height: 20px;
+	margin-bottom: 4px;
+}
+[type="checkbox"] + label {
+	padding-left: 0px !important;
+	height: 15px !important;
+	line-height: 15px !important;
+}
+[type="checkbox"].filled-in:not(:checked) + label:after {
+	height: 15px !important;
+	width: 15px !important;
+}
+[type="checkbox"].filled-in:checked + label:before {
+	top: -1px !important;
+	left: 0px !important;
+	width: 7px !important;
+	height: 11px !important;
+	border-top: 0 !important;
+	border-left: 0 !important;
+}
+[type="checkbox"].filled-in:checked + label:after {
+	width: 15px !important;
+	height: 15px !important;
+	border: 2px solid #e87722 !important;
+	background-color: #e87722 !important;
+}
+[type="checkbox"].filled-in:not(:checked) + label:after {
+	width: 15px !important;
+	height: 15px !important;
+	border: 2px solid #ddd !important;
+}
+[type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
+	
+}
 /*==============  Gallery CSS  ==============*/
 slider-for{
     width: 500px;
@@ -760,20 +875,20 @@ div.faa-autocomplete > input[type=submit] {
         background: #fff; 
         border-radius: 0px 0px 5px 5px;
     }
-    .col-1 {
+    td.col-1 {
         text-align: center !important;
         font-size: 80% !important;
     }
 
-    .col-2 {
+    td.col-2 {
         text-align: center !important;
         font-size: 80% !important;
     }
-    .col-3 {
+    td.col-3 {
         text-align: center !important;
         font-size: 80% !important;
     }
-    .col-4 {
+    td.col-4 {
         text-align: center !important;
         padding-left: 10px;
         padding-right: 10px;
@@ -935,23 +1050,23 @@ div.faa-autocomplete > input[type=submit] {
         border-top: 0px !important;
         height: 100%;
     }
-    .col-1 {
+    td.col-1 {
         text-align: left !important;
         padding-left: 5px !important;
-        font-size: 100% !important;
+		font-size: 90% !important;
     }
 
-    .col-2 {
+    td.col-2 {
         text-align: left !important;
-        font-size: 100% !important;
+		font-size: 90% !important;
     }
-    .col-3 {
+    td.col-3 {
         text-align: left !important;
-        font-size: 100% !important;
+		font-size: 90% !important;
     }
-    .col-4 {
+    td.col-4 {
         text-align: left !important;
-        font-size: 100% !important;
+		font-size: 90% !important;
     }
 }
 
