@@ -1,0 +1,3 @@
+[EMPLOYEE] is requesting an asset be sent to surplus. The asset is a [MANUFACTURER] [MODEL] with tag number [PTAG]
+
+Email genereated on behalf of [EMPLOYEE] by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application

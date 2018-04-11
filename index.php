@@ -41,6 +41,7 @@ include('process/set_session.php');
 include('process/DBSerialize.php');
 include('process/retrieveForms.php');
 include('process/add_ticket.php');
+include('includes/email.php');
 
 
 //Hooks
