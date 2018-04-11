@@ -373,7 +373,11 @@ select#org option:hover {
     background: #e87222;
     box-shadow: none;
     border: none;
-}    
+}
+.asset-actions {
+	font-size: 100%;
+	padding: 0px !important;
+}
 .asset-action {
     background: transparent !important;
 	border: 0 !important;
@@ -402,18 +406,21 @@ select#org option:hover {
 }
 .asset-office {
     font-size: 135%;
+	font-weight: 700;
     background: #060 !important;
     color: #fff;
 	border-radius: 3px;
 }
 .asset-home {
     font-size: 135%;
+	font-weight: 700;
     background: #fd0 !important;
     color: #000;
 	border-radius: 3px;
 }
 .asset-missing {
     font-size: 135%;
+	font-weight: 700;
     background: #900 !important;
     color: #fff;
     letter-spacing: .2em;
@@ -421,9 +428,9 @@ select#org option:hover {
 }
 .asset-pending {
     font-size: 135%;
+	font-weight: 700;
 	background: #46c !important;
     color: #fff;
-    line-height: 20px;
 	border-radius: 3px;
 }
 .admin-list-heading {
@@ -804,9 +811,7 @@ div.faa-autocomplete > input[type=submit] {
         margin-bottom: 3px;
         width: 95%;
     }
-    .asset-actions {
-        margin-top: 5px;
-        margin-bottom: 3px;
+    .asset-action {
         font-size: 180%;
         padding: 0px !important;
     }
@@ -875,6 +880,24 @@ div.faa-autocomplete > input[type=submit] {
         background: #fff; 
         border-radius: 0px 0px 5px 5px;
     }
+	th.col-1 {
+        text-align: center !important;
+        font-size: 80% !important;
+    }
+
+    th.col-2 {
+        text-align: center !important;
+        font-size: 80% !important;
+    }
+    th.col-3 {
+        text-align: center !important;
+        font-size: 80% !important;
+    }
+    th.col-4 {
+        text-align: center !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     td.col-1 {
         text-align: center !important;
         font-size: 80% !important;
@@ -898,7 +921,8 @@ div.faa-autocomplete > input[type=submit] {
 
 /* Small devices (landscape phones, 400px and up) */
 @media (min-width: 420px) {
-     .add-asset-text {
+	
+    .add-asset-text {
         font-size: 120%; 
     }
     .biggertext {
@@ -965,20 +989,23 @@ div.faa-autocomplete > input[type=submit] {
         width: 25%;
         outline: 0px;
     } 
-
+	.asset-action {
+        font-size: 100%;
+        line-height: 20px;
+    }
     .asset-list-header {
         font-size: 65%;
     }
     .asset-list {
-        font-size: 60%;
+        font-size: 70%;
         line-height: 20px;
         margin-bottom: 0px !important;
         border-radius: 0px !important;
     }
-    .asset-actions {
-        margin-top: 0px;
+    .asset-action {
+        margin-top: 3px;
         margin-bottom: 0px;
-        font-size: 130%;
+        font-size: 110%;
         line-height: 20px;
     }
     .asset-status {
@@ -1005,7 +1032,7 @@ div.faa-autocomplete > input[type=submit] {
         line-height: 17px;
     }
     .asset-list-header {
-        font-size: 55% !important;
+        font-size: 60% !important;
     }
     .asset-office {
     font-size: 125%;
@@ -1017,7 +1044,7 @@ div.faa-autocomplete > input[type=submit] {
         font-size: 125%;
     }
     .asset-pending {
-        font-size: 125%;
+        font-size: 90%;
     }
     .modal {
         width: 90% !important;
@@ -1050,23 +1077,41 @@ div.faa-autocomplete > input[type=submit] {
         border-top: 0px !important;
         height: 100%;
     }
+    th.col-1 {
+        text-align: left !important;
+        padding-left: 5px !important;
+		font-size: 100% !important;
+    }
+
+    th.col-2 {
+        text-align: left !important;
+		font-size: 100% !important;
+    }
+    th.col-3 {
+        text-align: left !important;
+		font-size: 100% !important;
+    }
+    th.col-4 {
+        text-align: left !important;
+		font-size: 100% !important;
+    }
     td.col-1 {
         text-align: left !important;
         padding-left: 5px !important;
-		font-size: 90% !important;
+		font-size: 100% !important;
     }
 
     td.col-2 {
         text-align: left !important;
-		font-size: 90% !important;
+		font-size: 100% !important;
     }
     td.col-3 {
         text-align: left !important;
-		font-size: 90% !important;
+		font-size: 100% !important;
     }
     td.col-4 {
         text-align: left !important;
-		font-size: 90% !important;
+		font-size: 100% !important;
     }
 }
 
@@ -1093,10 +1138,10 @@ div.faa-autocomplete > input[type=submit] {
         font-size: 70%;
         line-height: 20px;
     }
-    .asset-actions {
+    .asset-action {
         margin-top: 0px;
         margin-bottom: 0px;
-        font-size: 120%;
+        font-size: 85%;
         line-height: 20px;
     }
     .asset-status {
@@ -1171,6 +1216,12 @@ div.faa-autocomplete > input[type=submit] {
     #reportsModal {
         width: 50% !important;
     }
+	.asset-action {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 60%;
+        line-height: 20px;
+    }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1600px) {
@@ -1181,10 +1232,10 @@ div.faa-autocomplete > input[type=submit] {
         font-size: 90%;
         line-height: 20px;
     }
-    .asset-actions {
+    .asset-action {
         margin-top: 0px;
         margin-bottom: 0px;
-        font-size: 120%;
+        font-size: 80%;
         line-height: 20px;
     }
     .asset-status {
