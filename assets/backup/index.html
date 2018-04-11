@@ -71,31 +71,39 @@
 <!-- END TEMPLATE faa-header-template.html -->
 <!-- BEGIN TEMPLATE faa-employee-impact.html -->
 	<div class="rw" style="margin:0px;">
-		<div class="cl t20">
-			<div class="cl m10 t20" style="padding:7px;">
-				<div class="cl m20 s20 t20 vt-teal vt-txt-white asset-block">
-					<div class="cl m10 s8 t8 biggertext">[TOTAL NUMBER]</div>
-					<div class="cl m10 s12 t12 subtext-right">Total Number of Assets</div>
-					<div class="cl m10 s8 t8 bigtext">[TOTAL VALUE]</div>
-					<div class="cl m10 s12 t12 subtext-right">Total Asset Values</div>
-					<div class="left-text cl t20 block-footer">
-						<div class="cl l12 m20 t20 add-asset-text" style="">Do you own an asset that isn't in the list below?</div>
-						<div class="cl l8 m20 t20 add-asset-btn-div"><input type="button" class="btn btn-primary add-asset-btn" value="Submit Request" onclick="addAssetModalRequested(this.id)"></div>
-						<!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
-					</div>
+		<div class="cl l20 m20 t20">
+			<div class="cl l10 m10 t20" style="padding:7px;">
+				<div class="cl l20 m20 s20 t20 vt-teal vt-txt-white asset-block">
+                    <div class="rw" style="margin:0px;">
+                        <div class="cl l10 m10 s8 t8 biggertext">[TOTAL NUMBER]</div>
+                        <div class="cl l10 m10 s12 t12 subtext-right">Total Number of Assets</div>
+                    </div>
+                    <div class="rw" style="margin:0px;">
+                        <div class="cl l10 m10 s8 t8 bigtext">[TOTAL VALUE]</div>
+                        <div class="cl l10 m10 s12 t12 subtext-right">Total Asset Values</div>
+                        <div class="left-text cl l20 m20 t20 block-footer">
+                            <div class="cl l12 m20 t20 add-asset-text" style="">Do you own an asset that isn't in the list below?</div>
+                            <div class="cl l8 m20 t20 add-asset-btn-div"><input type="button" class="btn btn-primary add-asset-btn" value="Submit Request" onclick="addAssetModalRequested(this.id)"></div>
+                            <!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
+					   </div>
+                    </div>
 				</div>
 			</div>
 			<div class="cl m10 t20" style="padding:7px;">
 				<div class="cl t20 vt-pink vt-txt-white asset-block">
-					<div class="cl m10 t8 biggertext">[MISSING NUMBER]</div>
-					<div class="cl m10 t12 subtext-right">Total Missing Assets</div>
-					<div class="cl m10 t8 bigtext">[TOTAL MISSING VALUE]</div>
-					<div class="cl m10 t12 subtext-right">Total Missing Value</div>
-					<div class="left-text cl t20 block-footer">
-						<div class="cl l12 m20 t20 add-asset-text make-small">&nbsp;</div>
-						<div class="cl l8 m20 t20 add-asset-btn-div make-small">&nbsp;</div>
-						<!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
-					</div>
+                    <div class="rw" style="margin:0px;">
+                        <div class="cl l10 m10 t8 biggertext">[MISSING NUMBER]</div>
+                        <div class="cl l10 m10 t12 subtext-right">Total Missing Assets</div>
+                    </div>
+                    <div class="rw" style="margin:0px;">
+                        <div class="cl l10 m10 t8 bigtext">[MISSING VALUE]</div>
+                        <div class="cl l10 m10 t12 subtext-right">Total Missing Value</div>
+                        <div class="left-text cl t20 block-footer">
+                            <div class="cl l12 m20 t20 add-asset-text make-small">&nbsp;</div>
+                            <div class="cl l8 m20 t20 add-asset-btn-div make-small">&nbsp;</div>
+                            <!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -109,7 +117,7 @@
 					<tr class="rw asset-list-header">
 						<th class="cl xl2 l2 m2 t6 col-1">TAG NUMBER</th>
 						<th class="cl xl2 l2 m2 t8 col-2">SERIAL NUMBER</th>
-						<th class="cl xl1 l2 m2 t6 col-3">VALUE</th>
+						<th class="center cl xl1 l2 m2 t6 col-3">VALUE</th>
 						<th class="cl xl4 l4 m5 hide-small-down col-4">DESCRIPTION</th>
 						<th class="center cl xl2 l2 m3 hide-small-down">OWNERSHIP</th>
 						<th class="center cl xl2 l2 hide-medium-down">ORGANIZATION</th>
@@ -125,7 +133,7 @@
 					<tr class="rw asset-list" id="asset-[ID]">
 						<td class="cl xl2 l2 m2 t6 col-1" id="asset-tag-[ID]">[VT TAG]</td>
 						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">[S/N]</td>
-						<td class="cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">[VALUE]</td>
+						<td class="center cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">[VALUE]</td>
 						<td class="cl xl4 l4 m5 t20 col-4" id="asset-desc-[ID]">[DESCRIPTION]</td>
 						<td class="center cl xl2 l2 m3 hide-small-down" id="asset-own-[ID]">[OWNERSHIP]</td>
 						<td class="center cl xl2 l2 hide-medium-down" id="asset-org-[ID]">[ORGANIZATION]</td>
