@@ -274,3 +274,13 @@ function addTicket() {
         });
     }
 }
+function loadView(n) {
+	var form = {
+        action: 'causfa_set_session',
+        Name: 'admin_view',
+        Input: n
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+		location.reload();
+	});
+}
