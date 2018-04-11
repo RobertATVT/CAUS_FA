@@ -11,7 +11,7 @@
  * @return mixed - the html that corresponds to the employee info section if employee asset view page
  */
 function causfa_filter_header( $content) {
-    $faa_head_info = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-header.html', true);
+    $faa_head_info = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-info.html', true);
     $faa_head_info = str_replace('[NAME]', $content->Name, $faa_head_info);
     $faa_head_info = str_replace( '[PID]', $content->PID, $faa_head_info);
     $faa_head_info = str_replace( '[EMAIL]', $content->Email, $faa_head_info);

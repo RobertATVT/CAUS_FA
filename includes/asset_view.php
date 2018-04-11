@@ -8,10 +8,16 @@
 
 
 function causfa_load_view (){
-	if (isset($_SESSION['admin_view']) && $_SESSION['admin_view'] == 1) {
-		return causfa_load_admin_view();
+	if (causfa_groups_is_admin() == 'true') {
+		if (isset($_SESSION['admin_view']) && $_SESSION['admin_view'] == 1) {
+			return causfa_load_admin_view();
+		} else {
+			$header = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-header.html', true ));
+			return $header.causfa_load_employee_view();
+		} 
 	} else {
-		return causfa_load_employee_view();
+		$header = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-header.html', true ));
+		return $header.causfa_load_employee_view();
 	}
 }
 
@@ -66,6 +72,6 @@ function causfa_load_employee_view() {
 }
 
 function causfa_load_admin_view(){
-	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-full.html', true));
+	$output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-full.html', true));
 	return $output;
 }
