@@ -1147,6 +1147,18 @@ div.faa-autocomplete > input[type=submit] {
         border-top: 0px !important;
         height: 100%;
     }
+	.admin-list-heading {
+		font-size: 70% !important;
+	}
+	.block-text > form {
+		font-size: 90% !important;
+	}
+	.block-text > form .report-button {
+		font-size: 95% !important;
+	}
+	.admin-block-line {
+		margin-bottom: 5px !important;
+	}
     
 }
 
@@ -1161,6 +1173,15 @@ div.faa-autocomplete > input[type=submit] {
     #reportsModal {
         width: 50% !important;
     }
+	.admin-list-heading {
+		font-size: 70% !important;
+	}
+	.block-text > form {
+		font-size: 90% !important;
+	}
+	.block-text > form .report-button {
+		font-size: 95% !important;
+	}
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1600px) {
