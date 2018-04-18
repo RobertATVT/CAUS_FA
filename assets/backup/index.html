@@ -19,15 +19,15 @@
 <body>
 <!-- BEGIN TEMPLATE faa-header.html -->
 <div id="asset-container">
-	<div class="rw" style="margin:0p;">
-		<div id="app-title-block" class="cl t10" style="">
-			<button class="title-block">CAUS FIXED ASSETS</button>
-		</div>
-		<div id="app-admin-block" class="cl t10" style="">
-			<button class="admin-block">ADMIN REPORTS</button>
+	<div class="rw" style="margin:0px; display: block;">
+		<div class="cl t20" style="padding-bottom: 5px;">
+			<div id="app-title-block" class="cl t20" style="">
+				<button class="title-block">CAUS FIXED ASSETS</button>
+			</div>
 		</div>
 	</div>
-
+<!-- END TEMPLATE faa-header-template.html -->
+<!-- BEGIN TEMPLATE faa-employee-info.html -->
 	<div class="rw emp-info-outside" style="margin:0px;">
 			<div class="cl l5 m10 s20 t20 emp-info-inside hide-small-down" style="padding:5px;">
 				<div class="cl t20 vt-orange vt-txt-white asset-block" style="padding-bottom: 10px !important;">
@@ -70,42 +70,34 @@
 			</div>
 		</div>
 	</div>
-<!-- END TEMPLATE faa-header-template.html -->
+<!-- END TEMPLATE faa-employee-info.html -->
 <!-- BEGIN TEMPLATE faa-employee-impact.html -->
 	<div class="rw" style="margin:0px;">
-		<div class="cl l20 m20 t20">
-			<div class="cl l10 m10 t20" style="padding:7px;">
-				<div class="cl l20 m20 s20 t20 vt-teal vt-txt-white asset-block">
-                    <div class="rw" style="margin:0px;">
-                        <div class="cl l10 m10 s8 t8 biggertext">[TOTAL NUMBER]</div>
-                        <div class="cl l10 m10 s12 t12 subtext-right">Total Number of Assets</div>
-                    </div>
-                    <div class="rw" style="margin:0px;">
-                        <div class="cl l10 m10 s8 t8 bigtext">[TOTAL VALUE]</div>
-                        <div class="cl l10 m10 s12 t12 subtext-right">Total Asset Values</div>
-                        <div class="left-text cl l20 m20 t20 block-footer">
-                            <div class="cl l12 m20 t20 add-asset-text" style="">Do you own an asset that isn't in the list below?</div>
-                            <div class="cl l8 m20 t20 add-asset-btn-div"><input type="button" class="btn btn-primary add-asset-btn" value="Submit Request" onclick="addAssetModalRequested(this.id)"></div>
-                            <!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
-					   </div>
-                    </div>
+		<div class="cl t20">
+			<div class="cl m10 t20" style="padding:7px;">
+				<div class="cl t20 vt-teal vt-txt-white asset-block">
+					<div class="cl m10 t8 biggertext">[TOTAL NUMBER]</div>
+					<div class="cl m10 t12 subtext-right">Total Number of Assets</div>
+					<div class="cl m10 t8 bigtext">[TOTAL VALUE]</div>
+					<div class="cl m10 t12 subtext-right">Total Asset Values</div>
+					<div class="left-text cl t20 block-footer">
+						<div class="cl l12 m20 t20 add-asset-text" style="">Do you own an asset that isn't in the list below?</div>
+						<div class="cl l8 m20 t20 add-asset-btn-div"><input type="button" class="btn btn-primary add-asset-btn" value="Submit Request" onclick="addAssetModalRequested(this.id)"></div>
+						<!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
+					</div>
 				</div>
 			</div>
 			<div class="cl m10 t20" style="padding:7px;">
 				<div class="cl t20 vt-pink vt-txt-white asset-block">
-                    <div class="rw" style="margin:0px;">
-                        <div class="cl l10 m10 t8 biggertext">[MISSING NUMBER]</div>
-                        <div class="cl l10 m10 t12 subtext-right">Total Missing Assets</div>
-                    </div>
-                    <div class="rw" style="margin:0px;">
-                        <div class="cl l10 m10 t8 bigtext">[MISSING VALUE]</div>
-                        <div class="cl l10 m10 t12 subtext-right">Total Missing Value</div>
-                        <div class="left-text cl t20 block-footer">
-                            <div class="cl l12 m20 t20 add-asset-text make-small">&nbsp;</div>
-                            <div class="cl l8 m20 t20 add-asset-btn-div make-small">&nbsp;</div>
-                            <!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
-                        </div>
-                    </div>
+					<div class="cl m10 t8 biggertext">[MISSING NUMBER]</div>
+					<div class="cl m10 t12 subtext-right">Total Missing Assets</div>
+					<div class="cl m10 t8 bigtext">[MISSING VALUE]</div>
+					<div class="cl m10 t12 subtext-right">Total Missing Value</div>
+					<div class="left-text cl t20 block-footer">
+						<div class="cl l12 m20 t20 add-asset-text make-small">&nbsp;</div>
+						<div class="cl l8 m20 t20 add-asset-btn-div make-small">&nbsp;</div>
+						<!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
+					</div>
 				</div>
 			</div>
 		</div>
@@ -129,9 +121,9 @@
 						<th class="center cl xl2 l3 m3 hide-small-down">ACTIONS</th>
 					</tr>
 				</thead>
+				<tbody>
 <!-- END TEMPLATE faa-employee-asset-header.html -->
 <!-- BEGIN TEMPLATE faa-employee-asset-list.html --> 
-				<tbody>
 					<tr class="rw asset-list" id="asset-[ID]">
 						<td class="cl xl2 l2 m2 t6 col-1" id="asset-tag-[ID]">[VT TAG]</td>
 						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">[S/N]</td>
@@ -215,13 +207,13 @@
 						</td>
 					</tr>
 					<tr class="asset-list" id="asset-[ID]">
-						<td class="cl xl2 l2 m2 t6 col-1" id="asset-tag-[ID]">000345678</td>
-						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">C000123456</td>
-						<td class="cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">$2015.53</td>
-						<td class="cl xl4 l4 m5 t20 col-4" id="asset-desc-[ID]">Apple MacBook Pro 15"</td>
-						<td class="center cl xl2 l2 m3 hide-small-down" id="asset-own-[ID]">University Owned</td>
+						<td class="cl xl2 l2 m2 t6 col-1" id="asset-tag-[ID]">000378209</td>
+						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">C98A8OI209K</td>
+						<td class="cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">$1650.25</td>
+						<td class="cl xl4 l4 m5 t20 col-4" id="asset-desc-[ID]">Apple MacBook Air"</td>
+						<td class="center cl xl2 l2 m3 hide-small-down" id="asset-own-[ID]">SCHEV Owned</td>
 						<td class="center cl xl2 l2 m2 hide-medium-down" id="asset-org-[ID]">Architecture Support</td>
-						<td class="center cl xl1 hide-large-down" id="asset-vt-scan-[ID]">10-APR-2017</td>
+						<td class="center cl xl1 hide-large-down" id="asset-vt-scan-[ID]">15-MAR-2016</td>
 						<td class="center cl xl1 hide-large-down" id="asset-purchased-[ID]">06-MAR-2016</td>
 						<td class="center cl xl3 l3 m3 t20" id="status-[ID]" style="padding: 4px !important;">
 							<div class="asset-office">OFFICE USE</div>
@@ -255,10 +247,10 @@
 						</td>
 					</tr>
 					<tr class="asset-list" id="asset-[ID]">
-						<td class="cl xl2 l2 m2 t6 col-1" id="asset-tag-[ID]">000345678</td>
-						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">C000123456</td>
-						<td class="cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">$2015.53</td>
-						<td class="cl xl4 l4 m5 t20 col-4" id="asset-desc-[ID]">Apple MacBook Pro 15"</td>
+						<td class="cl xl2 l2 m2 t6 col-1" id="asset-tag-[ID]">000298765</td>
+						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">D09823OLIJ</td>
+						<td class="cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">$1985.71</td>
+						<td class="cl xl4 l4 m5 t20 col-4" id="asset-desc-[ID]">Del XPS 13</td>
 						<td class="center cl xl2 l2 m3 hide-small-down" id="asset-own-[ID]">University Owned</td>
 						<td class="center cl xl2 l2 m2 hide-medium-down" id="asset-org-[ID]">Architecture Support</td>
 						<td class="center cl xl1 hide-large-down" id="asset-vt-scan-[ID]">10-APR-2017</td>
@@ -374,12 +366,15 @@
 							</div>
 						</td>
 					</tr>
+				
 <!-- END ASSET LIST FILLER -->
 <!-- BEGIN TEMPLATE faa-employee-asset-footer.html -->
-					<tr class="rw asset-list-footer" style="margin:0px;">
-						<td class="center cl t20"></td>
-					</tr>
 				</tbody>
+				<tfoot>
+					<tr class="rw asset-list-footer" style="margin:0px;">
+						<td class="center cl t20" colspan="10"></td>
+					</tr>
+				</tfoot>
 			</table>
 <!-- END TEMPLATE faa-employee-asset-footer.html -->
 <!-- BEGIN TEMPLATE faa-employee-footer.html -->        
@@ -679,6 +674,7 @@
 <script src="js/main.js"></script>
 <script src="js/sidenav.js"></script>
 <script src="js/jquery.tablesorter.js"></script>	
+<script src="js/tablesort.js"></script>
 <script src="slick/slick.js"></script>
 
 <script>
