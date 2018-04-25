@@ -19,12 +19,327 @@
 <body>
 <!-- BEGIN TEMPLATE faa-header-admin.html -->
 <div id="asset-container">
-	<div class="rw" style="margin:0p;">
+	<!--<div class="rw" style="margin:0p;">
 		<div id="app-title-block" class="cl t10" style="">
 			<button class="title-block">FIXED ASSETS</button>
 		</div>
 		<div id="app-admin-block" class="cl t10" style="">
 			<button class="admin-block">ADMIN REPORTS</button>
+		</div>
+	</div>-->
+
+
+	<div class="rw">
+		<div class="cl t5 tab">
+			<button class="tablink" onclick="openPage('PendingTransfers', this, '#508590')" id="defaultOpen">PENDING TRANSFERS</button>
+		</div>
+		<div class="cl t5 tab">
+			<button class="tablink" onclick="openPage('PendingSurplus', this, '#861F41')">PENDING SURPLUS</button>
+		</div>
+		<div class="cl t5 tab">
+			<button class="tablink" onclick="openPage('PendingTickets', this, '#CE0058')">PENDING TICKETS</button>
+		</div>
+		<div class="cl t5 tab">
+			<button class="tablink" onclick="openPage('Reports', this, '#D7D2CB')">REPORTS</button>
+		</div>
+		<div id="PendingTransfers" class="cl t20 tabcontent">
+			<!-- BEGIN TEMPLATE faa-transfer-admin.html -->
+			<div class="rw" style="margin:0px; display: block;">
+				<div class="cl l20 m20 s20 t20 emp-info-inside">
+					<div class="cl t20 vt-teal vt-txt-white asset-block" style="padding-bottom: 0px !important;">
+						<div class="cl t20 block-text admin-list-heading" style="">
+							<div class="cl xl2 t5 center admin-block-line">VT PTAG</div>
+							<div class="cl xl2 t5 center admin-block-line">ISSUER PID</div>
+							<div class="cl xl2 t5 center admin-block-line">RECIEVER PID</div>
+							<div class="cl xl2 t5 center admin-block-line">DATE</div>
+							<div class="cl xl2 center hide-large-down">CONTACTED</div>
+							<div class="cl xl2 center hide-large-down">RECIEVED</div>
+							<div class="cl xl2 center hide-large-down">DEPLOYED</div>
+							<div class="cl xl2 center hide-large-down">UPDATED</div>
+							<div class="cl xl2 center hide-large-down">UPLOAD</div>
+							<div class="cl xl2 center hide-large-down">COMPLETE</div>
+						</div>
+			<!-- END TEMPLATE faa-transfer-admin.html -->
+			<!-- BEGIN TEMPLATE faa-transfer-fill.html -->
+						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
+							<form id="transfer-[ID]" action="#">
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-ptag-[ID]">[PTAG]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid1-[ID]">[PID 1]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
+								<div class="cl xl2 t5 center admin-block-line=t" id="transfer-date-[ID]">[DATE]</div>
+								<div class="cl xl2 t5 center" id="transfer-stage1-[ID]">
+									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
+									<label for="transfer-stage-1-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
+									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<label for="transfer-stage-2-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage3-[ID]">
+									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<label for="transfer-stage-3-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage4-[ID]">
+									<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<label for="transfer-stage-4-[ID]"></label>
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage5-[ID]">
+									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage6-[ID]">
+									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+								</div>
+							</form>
+						</div>
+			<!-- END TEMPLATE faa-transfer-fill.html -->
+			<!-- BEGIN TRANSFER FILLER -->
+						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
+							<form id="transfer-[ID]" action="#">
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-ptag-[ID]">[PTAG]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid1-[ID]">[PID 1]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
+								<div class="cl xl2 t5 center admin-block-line=t" id="transfer-date-[ID]">[DATE]</div>
+								<div class="cl xl2 t5 center" id="transfer-stage1-[ID]">
+									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
+									<label for="transfer-stage-1-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
+									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<label for="transfer-stage-2-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage3-[ID]">
+									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<label for="transfer-stage-3-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage4-[ID]">
+									<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<label for="transfer-stage-4-[ID]"></label>
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage5-[ID]">
+									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage6-[ID]">
+									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+								</div>
+							</form>
+						</div>
+			<!-- END TRANSFER FILLER -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="PendingSurplus" class="cl t20 tabcontent">
+		<!-- BEGIN TEMPLATE faa-surplus-admin.html -->
+			<div class="rw" style="margin:0px; display: block;">
+				<div class="cl l20 m20 s20 t20 emp-info-inside" style="padding:0px !important;">
+					<div class="cl t20 vt-maroon vt-txt-white asset-block" style="padding-bottom: 0px !important;">
+						<div class="cl t20 block-text admin-list-heading" style="">
+							<div class="cl xl2 t5 center admin-block-line">VT PTAG</div>
+							<div class="cl xl2 t5 center admin-block-line">OWNER PID</div>
+							<div class="cl xl2 t5 center admin-block-line">DATE</div>
+							<div class="cl xl2 t5 center admin-block-line">CONTACTED</div>
+							<div class="cl xl2 hide-large-down center">RECIEVED</div>
+							<div class="cl xl2 hide-large-down center">RECIEVER PID</div>
+							<div class="cl xl2 hide-large-down center">UPDATED</div>
+							<div class="cl xl2 hide-large-down center">PICKED UP</div>
+							<div class="cl xl2 hide-large-down center">UPLOAD</div>
+							<div class="cl xl2 hide-large-down center">COMPLETE</div>
+						</div>
+		<!-- END TEMPLATE faa-surplus-admin.html -->
+		<!-- BEGIN TEMPLATE faa-surplus-fill.html -->
+						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
+							<form id="surplus-[ID]" actoin="#">
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-ptag-[ID]">[PTAG]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-[ID]">[PID 1]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid2-[ID]">[PID 2]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-date-[ID]">[DATE]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-stage1-[ID]">
+									<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
+									<label for="surplus-stage-1-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="surplus-stage2-[ID]">
+									<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="surplus-stage-2-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="surplus-stage3-[ID]">
+									<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="surplus-stage-3-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="surplus-stage4-[ID]">
+									<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="surplus-stage-4-[ID]"></label>
+								</div>
+								<div class="cl xl2 t10 center" id="surplus-stage5-[ID]">
+									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
+								</div>
+								<div class="cl xl2 t10 center" id="surplus-stage6-[ID]">
+									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+								</div>
+							</form>
+						</div>
+		<!-- END TEMPLATE faa-surplus-fill.html -->
+		<!-- BEGIN SURPLUS FILLER -->
+						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
+							<form id="surplus-[ID]" actoin="#">
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-ptag-[ID]">[PTAG]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-[ID]">[PID 1]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid2-[ID]">[PID 2]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-date-[ID]">[DATE]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-stage1-[ID]">
+									<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
+									<label for="surplus-stage-1-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="surplus-stage2-[ID]">
+									<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="surplus-stage-2-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="surplus-stage3-[ID]">
+									<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="surplus-stage-3-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="surplus-stage4-[ID]">
+									<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="surplus-stage-4-[ID]"></label>
+								</div>
+								<div class="cl xl2 t10 center" id="surplus-stage5-[ID]">
+									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
+								</div>
+								<div class="cl xl2 t10 center" id="surplus-stage6-[ID]">
+									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+								</div>
+							</form>
+						</div>
+		<!-- END SURPLUS FILLER -->
+		<!-- BEGIN TEMPLATE faa-tickets-admin.html -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="PendingTickets" class="cl t20 tabcontent">
+<!-- BEGIN TEMPLATE faa-tickets-admin.html -->
+			<div class="rw" style="margin:0px; display: block;">
+				<div class="cl l20 m20 s20 t20 emp-info-inside" style="padding:0px !important;">
+					<div class="cl t20 vt-pink vt-txt-white asset-block" style="padding-bottom: 0px !important;">
+						<div class="cl t20 block-text admin-list-heading" style="">
+							<div class="cl xl2 t5 center admin-block-line">VT PTAG</div>
+							<div class="cl xl2 t5 center admin-block-line">ISSUER PID</div>
+							<div class="cl xl2 t5 center admin-block-line">RECIEVER PID</div>
+							<div class="cl xl2 t5 center admin-block-line">DATE</div>
+							<div class="cl xl2 hide-large-down center">CONTACTED</div>
+							<div class="cl xl2 hide-large-down center">RECIEVED</div>
+							<div class="cl xl2 hide-large-down center">DEPLOYED</div>
+							<div class="cl xl2 hide-large-down center">UPDATED</div>
+							<div class="cl xl2 hide-large-down center">UPLOAD</div>
+							<div class="cl xl2 hide-large-down center">COMPLETE</div>
+						</div>
+		<!-- END TEMPLATE faa-tickets-admin.html -->
+		<!-- BEGIN TEMPLATE faa-tickets-fill.html -->
+						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
+							<form id="transfer-[ID]" actoin="#">
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-ptag-[ID]">[PTAG]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid1-[ID]">[PID 1]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-date-[ID]">[DATE]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-stage1-[ID]">
+									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
+									<label for="transfer-stage-1-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
+									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="transfer-stage-2-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage3-[ID]">
+									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="transfer-stage-3-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage4-[ID]">
+									<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="transfer-stage-4-[ID]"></label>
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage5-[ID]">
+									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage6-[ID]">
+									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+								</div>
+							</form>
+						</div>
+		<!-- END TEMPLATE faa-tickets-fill.html -->
+		<!-- BEGIN TICKETS FILLER -->
+						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
+							<form id="transfer-[ID]" actoin="#">
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-ptag-[ID]">[PTAG]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid1-[ID]">[PID 1]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-date-[ID]">[DATE]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-stage1-[ID]">
+									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
+									<label for="transfer-stage-1-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
+									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="transfer-stage-2-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage3-[ID]">
+									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="transfer-stage-3-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage4-[ID]">
+									<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="transfer-stage-4-[ID]"></label>
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage5-[ID]">
+									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage6-[ID]">
+									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+								</div>
+							</form>
+						</div>
+		<!-- END TICKETS FILLER -->
+		<!-- BEGIN TEMPLATE faa-reports-admin.html -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="Reports" class="cl t20 tabcontent">
+<!-- BEGIN TEMPLATE faa-reports-admin.html -->
+			<div class="rw" style="margin:0px; display: block;">
+				<div class="cl l20 m20 s20 t20 emp-info-inside" style="padding:5px;">
+					<div class="cl t20 vt-grey vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+						<div class="cl center t20 block-header block-headtext" style="margin-bottom: 0px !important;">BANNER REPORTS</div>
+						<div class="cl t20 block-text" style="margin-top: 5px;">
+							<form id="report-[ID]" actoin="#">
+		<!-- END TEMPLATE faa-reports-admin.html -->
+		<!-- BEGIN TEMPLATE faa-reports-fill.html -->
+								<div class="cl t10 center" id="report-[ID]">
+									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+								</div>
+		<!-- END TEMPLATE faa-reports-fill.html -->
+		<!-- BEGIN REPORTS FILLER -->
+								<div class="cl t10 center" id="report-[ID]">
+									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+								</div>
+								<div class="cl t10 center" id="report-[ID]">
+									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+								</div>
+								<div class="cl t10 center" id="report-[ID]">
+									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+								</div>
+								<div class="cl t10 center" id="report-[ID]">
+									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+								</div>
+								<div class="cl t10 center" id="report-[ID]">
+									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+								</div>
+
+		<!-- END REPORTS FILLER -->
+		<!-- BEGIN TEMPLATE faa-footer-admin.html -->
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 <!-- END TEMPLATE faa-header-admin.html -->
@@ -605,74 +920,73 @@
 </div>
 <!-- END modal.html --> 
 
-    
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/toggle.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/sidenav.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="slick/slick.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script src="js/modal.js"></script>
-<script src="js/toggle.js"></script>
-<script src="js/main.js"></script>
-<script src="js/sidenav.js"></script>
-<script src="slick/slick.js"></script>
+	<script>
+	  $( function() {
+		var PIDs = [
+		  "ActionScript",
+		  "AppleScript",
+		  "Asp",
+		  "BASIC",
+		  "C",
+		  "C++",
+		  "Clojure",
+		  "COBOL",
+		  "ColdFusion",
+		  "Erlang",
+		  "Fortran",
+		  "Groovy",
+		  "Haskell",
+		  "Java",
+		  "JavaScript",
+		  "Lisp",
+		  "Perl",
+		  "PHP",
+		  "Python",
+		  "Ruby",
+		  "Scala",
+		  "Scheme"
+		];
+		$( "#recipient-name" ).autocomplete({
+		  source: PIDs
+		});
+	  } );
+	  </script>
 
-<script>
-  $( function() {
-    var PIDs = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#recipient-name" ).autocomplete({
-      source: PIDs
-    });
-  } );
-  </script>
-    
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $('#myCarousel').carousel({
-            interval: 5000
-        });
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('#myCarousel').carousel({
+				interval: 5000
+			});
 
-        $('#carousel-text').html($('#slide-content-0').html());
+			$('#carousel-text').html($('#slide-content-0').html());
 
-        //Handles the carousel thumbnails
-        $('[id^=carousel-selector-]').click( function(){
-            var id_selector = $(this).attr("id");
-            var id = id_selector.substr(id_selector.length -1);
-            var id = parseInt(id);
-            $('#myCarousel').carousel(id);
-        });
-        // When the carousel slides, auto update the text
-        $('#myCarousel').on('slide', function (e) {
-            var id = $('.item.active').data('slide-number');
-            $('#carousel-text').html($('#slide-content-'+id).html());
-        });
-    });
-</script>
-    
-<script>
+			//Handles the carousel thumbnails
+			$('[id^=carousel-selector-]').click( function(){
+				var id_selector = $(this).attr("id");
+				var id = id_selector.substr(id_selector.length -1);
+				var id = parseInt(id);
+				$('#myCarousel').carousel(id);
+			});
+			// When the carousel slides, auto update the text
+			$('#myCarousel').on('slide', function (e) {
+				var id = $('.item.active').data('slide-number');
+				$('#carousel-text').html($('#slide-content-'+id).html());
+			});
+		});
+	</script>
 
-</script>
+	<script>
+
+	</script>
 </body>
 </html>
