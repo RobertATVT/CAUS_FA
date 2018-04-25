@@ -1,49 +1,3 @@
-<!--&lt;!&ndash;-&#45;&#45;Test Modal-&#45;&#45;&ndash;&gt;-->
-<!--<div id="testModal" class="modal">-->
-    <!--<div class="modal-content">-->
-        <!--<h4 class="center faa-modal-title">Asset Transfer</h4> -->
-        <!--<div class="rw" style="padding: 10px; margin-bottom: 0px;">-->
-            <!--<div class="rw faa-modal-info" style="margin-bottom: 0px;">-->
-                <!--<div class="cl m3 t20 info-title" style="padding: 0px;">VT Tag Number:</div>-->
-                <!--<div class="cl m6 t20"><span class="asset-tag"></span></div>-->
-                <!--<div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>-->
-                <!--<div class="cl m8 t20"><span class="asset-description"></span></div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -10px;">-->
-            <!--<div class="rw faa-modal-info" style="margin-bottom: 0px">-->
-                <!--<form autocomplete="off">-->
-                    <!--<div class="center cl t20" style="padding: 0px;">-->
-                        <!--<label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>-->
-                        <!--<input type="text" class="form-control faa-input" id="recipient-name" list="PIDs" onkeyup="causfa_hinter(this)">-->
-                        <!--<datalist id="PIDs"></datalist>-->
-                        <!--<input type="hidden" id="transferIndex" value="" />-->
-                        <!--<input type="hidden" id="transferIndex" value="" />-->
-                    <!--</div>-->
-                <!--</form>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;">-->
-            <!--<div class="cl m20 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">-->
-                <!--<p class="center info-title">Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="modal-footer">-->
-        <!--<div class="rw">-->
-            <!--<div class="center cl t10 hide-medium-up">-->
-                <!--<button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>-->
-            <!--</div>-->
-            <!--<div class="center cl t10 hide-medium-up">-->
-                <!--<button type="button" class="btn btn-secondary modal-close">Cancel</button>-->
-            <!--</div>-->
-            <!--<div class="cl m20 hide-small-down">-->
-                <!--<button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>-->
-                <!--<button type="button" class="btn btn-secondary modal-close">Cancel</button>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
 <!-----Transfer Modal----->
 <div id="transferModal" class="modal">
     <div class="modal-content">
@@ -260,6 +214,50 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-primary" id="addAssetButton" onclick="addAsset()">SUBMIT REQUEST</button>
+        <button type="button" class="btn btn-secondary modal-close">CANCEL REQUEST</button>
+    </div>
+</div>
+<!---- New Custodian Modal ---->
+<div id="custodianModal" class="modal">
+    <div class="modal-content">
+		<h4 class="center faa-modal-title" id="modal-add-asset-title">EDIT CUSTODIAN INFORMATION</h4>
+		<div class="rw new-custodian-info" style="">
+			<div class="rw" style="padding: 0px; margin-bottom: 0px;">
+				<form>
+					<div class="rw" style="margin-bottom: 0px; font-size: 120% !important;">
+						<div class="cl t20 info-title" style="text-align:center;padding: 0px; padding-top: 10px; padding-bottom: 15px;">Please enter the new information to update.</div>
+						<div class="rw">
+							<div class="cl t20">
+								<div class="cl t20">
+									<div class="cl m8 t20">Office location and number:</div>
+									<div class="cl m12 t20" style="padding: 0px;"><input type="text" name="office" id="Office" value="" placeholder="Office Location"></div>    
+								</div>
+								<div class="cl t20">
+									<div class="cl m8 t20">Phone Number</div>
+									<div class="cl m12 t20" style="padding: 0px;"><input type="text" name="phone" id="Phone" value="" placeholder="000-000-0000"></div> 
+								</div>
+								<div class="cl t20">
+									<div class="cl m8 t20">Organization</div>
+									<div class="cl m12 t20" style="padding: 0px;">
+										<select id="org">
+											<option value="CAUS">College of Architecture and Urban Studies</option>
+											<option value="A+D">Architecture + Design</option>
+											<option value="BC">Building Construction</option>
+											<option value="MLSoC">Myers-Lawson School of Construction</option>
+											<option value="SOVA">School of Visual Arts</option>
+											<option value="SPIA">School of Public and International Affairs</option>
+										</select>
+									</div> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+    	<button type="button" class="btn btn-primary"  id="newCustodianButton" onclick="new_custodian_submit()">SUBMIT REQUEST</button>
         <button type="button" class="btn btn-secondary modal-close">CANCEL REQUEST</button>
     </div>
 </div>

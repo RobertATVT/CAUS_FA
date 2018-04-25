@@ -392,6 +392,21 @@ select#org option:hover {
 .asset-action:focus {
     color: #e87222;;
 }
+.edit-action {
+    background: transparent !important;
+	border: 0 !important;
+	padding: 0px;
+	text-align: right;
+    line-height: 20px;
+    color:#ddd;
+}
+.edit-action:hover {
+    color: #fff;
+}
+.edit-action:focus {
+    color: #fff;;
+}
+
 .asset-status {
     box-sizing: border-box;
 	padding: 0px;
@@ -813,6 +828,11 @@ div.faa-autocomplete > input[type=submit] {
     }
     .asset-action {
         font-size: 180%;
+        padding: 0px !important;
+    }
+	.edit-action {
+		text-align: right;
+        font-size: 80%;
         padding: 0px !important;
     }
     .block-headtext {
