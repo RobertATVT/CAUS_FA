@@ -9,7 +9,7 @@ function causfa_email_transfer($requester, $ptag, $name, $recipient) {
     if (CAUSFA_SEND_EMAIL) {
         $from = $requester.'@vt.edu';
         $requester_FAL = causfa_groups_FAL($requester);
-        $requester_BM = casufa_groups_BM($requester);
+        $requester_BM = causfa_groups_BM($requester);
         $recipient_FAL = causfa_groups_FAL($recipient);
         $recipient_BM = causfa_groups_BM($recipient);
         $to = $requester.'@vt.edu';
@@ -35,7 +35,7 @@ function causfa_email_transfer($requester, $ptag, $name, $recipient) {
         $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);
         $transferBody = $transferBody.'  '.$to;
         $headers = 'From: '.$from.'\r\n';
-        mail('mattwj6@vt.edu', $transferSubject, $transferBody, $headers);
+        wp_mail('mattwj6@vt.edu', $transferSubject, $transferBody, $headers);
     }
 }
 
