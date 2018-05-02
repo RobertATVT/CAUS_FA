@@ -68,7 +68,7 @@ add_action( 'wp_ajax_causfa_get_last_form', 'causfa_get_last_form');
 add_action( 'wp_ajax_causfa_add_ticket', 'causfa_add_ticket');
 
 //Shortcode
-add_shortcode( 'causfa', 'causfa_load_view'); //shortcode for the main page of the app
+add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
 add_shortcode( 'causfa_test', 'causfa_test'); //shortcode for a dev space to test functionality
 add_shortcode( 'causfa_admin', 'causfa_load_admin_view'); // shortcode for the admin page of the app
 
