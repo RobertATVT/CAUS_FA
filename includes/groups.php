@@ -11,10 +11,14 @@
  *
  * Uses the groups plugin to determine the FAL(s) of the current users organization
  */
-function causfa_groups_FAL() {
+function causfa_groups_FAL($PID = null) {
     global $wpdb;
     $output = array();
-    $current_user = new Groups_User( get_current_user_id() );
+    if ($PID != null) {
+        $current_user = new Groups_User(get_user_by('email', $PID.'@vt.edu')->ID);
+    } else {
+        $current_user = new Groups_User( get_current_user_id() );
+    }
     $liaison = Groups_Group::read_by_name('Fixed Assets Liaison');
     $liaison_group = new Groups_Group( $liaison->group_id);
     $current_user_groups = $current_user->groups;
@@ -103,10 +107,14 @@ function causfa_groups_FAC() {
  *
  * Uses the groups plugin to determine the BM(s) of the current users organization
  */
-function causfa_groups_BM() {
+function causfa_groups_BM($PID = null) {
     global $wpdb;
     $output = array();
-    $current_user = new Groups_User( get_current_user_id() );
+    if($PID != null) {
+        $current_user = new Groups_User(get_user_by('email', $PID.'@vt.edu')->ID);
+    } else {
+        $current_user = new Groups_User( get_current_user_id() );
+    }
     $business_manager = Groups_Group::read_by_name('Business Manager');
     $business_manager_group = new Groups_Group( $business_manager->group_id);
     $current_user_groups = $current_user->groups;

@@ -41,11 +41,11 @@ function causfa_logger_login($user_login, $user) {
     $wpdb->insert(
         'causfa_logs',
         array(
-            PID => $PID,
-            Action => 0,
-            FZVFORG_PTAG => null,
-            PID_dest => null,
-            Info => null
+            'PID' => $PID,
+            'Action' => 0,
+            'FZVFORG_PTAG' => null,
+            'PID_dest' => null,
+            'Info' => null
         ), array('%s', '%d', '%s', '%s', '%s')
     );
 }
