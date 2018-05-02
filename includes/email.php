@@ -9,14 +9,18 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
     if (CAUSFA_SEND_EMAIL) {
         $to = causfa_get_recipient_list($requester, $recipient);
         $transferSubject = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-subject.txt', true);
+        $transferSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferSubject);
         $transferSubject = str_replace('[EMPLOYEE]', $requester, $transferSubject);
         $transferSubject = str_replace( '[PTAG]', $ptag, $transferSubject);
+        $transferSubject = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($recipient), $transferSubject);
         $transferSubject = str_replace( '[RECIPIENT]', $recipient, $transferSubject);
         $transferBody = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body.txt', true);
+        $transferBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferBody);
         $transferBody = str_replace( '[EMPLOYEE]', $requester, $transferBody);
         $transferBody = str_replace( '[PTAG]', $ptag, $transferBody);
         $transferBody = str_replace('[MANUFACTURER]', $manufacturer, $transferBody);
         $transferBody = str_replace('[MODEL]', $model, $transferBody);
+        $transferBody = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($recipient), $transferBody);
         $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
         wp_mail('mattwj6@vt.edu', $transferSubject, $transferBody);
@@ -67,4 +71,9 @@ function causfa_get_recipient_list($requester, $recipient) {
         }
     }
     return $to;
+}
+
+function causfa_email_get_name($PID) {
+    $user = get_user_by('Email', $PID.'@vt.edu');
+    return $user->disply_name;
 }

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/transfer.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/transfer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="email.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="email.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+            <state relative-caret-position="330">
+              <caret line="22" column="104" selection-start-line="22" selection-start-column="104" selection-end-line="22" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -33,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="transfer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="transfer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process/transfer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="503">
-              <caret line="41" column="99" selection-start-line="41" selection-start-column="99" selection-end-line="41" selection-end-column="99" />
+              <caret line="41" column="100" selection-start-line="41" selection-start-column="100" selection-end-line="41" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -63,7 +61,7 @@
       <file leaf-file-name="groups.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/groups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="150">
               <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
               <folding>
                 <marker date="1525273323324" expanded="true" signature="1566:1659" ph="SELECT Phone... causfa_custodians" />
@@ -170,8 +168,8 @@
         <option value="$PROJECT_DIR$/assets/emailTemplates/transfer-subject.txt" />
         <option value="$PROJECT_DIR$/assets/emailTemplates/transfer-body.txt" />
         <option value="$PROJECT_DIR$/includes/groups.php" />
-        <option value="$PROJECT_DIR$/includes/email.php" />
         <option value="$PROJECT_DIR$/process/transfer.php" />
+        <option value="$PROJECT_DIR$/includes/email.php" />
       </list>
     </option>
   </component>
@@ -295,12 +293,12 @@
       <workItem from="1523241322451" duration="6807000" />
       <workItem from="1524270001057" duration="2125000" />
       <workItem from="1525232602974" duration="3209000" />
-      <workItem from="1525266832232" duration="5865000" />
+      <workItem from="1525266832232" duration="6404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250446000" />
+    <option name="totallyTimeSpent" value="250985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="183" y="23" width="1245" height="797" extended-state="0" />
@@ -593,13 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/emailTemplates/transfer-subject.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="80" selection-start-column="80" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/emailTemplates/transfer-body.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -614,9 +605,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/process/transfer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="41" column="100" selection-start-line="41" selection-start-column="100" selection-end-line="41" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/groups.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="150">
           <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <marker date="1525273323324" expanded="true" signature="1566:1659" ph="SELECT Phone... causfa_custodians" />
@@ -633,17 +631,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/email.php">
+    <entry file="file://$PROJECT_DIR$/assets/emailTemplates/transfer-subject.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+        <state>
+          <caret column="80" selection-start-column="80" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/transfer.php">
+    <entry file="file://$PROJECT_DIR$/includes/email.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="41" column="99" selection-start-line="41" selection-start-column="99" selection-end-line="41" selection-end-column="99" />
+        <state relative-caret-position="330">
+          <caret line="22" column="104" selection-start-line="22" selection-start-column="104" selection-end-line="22" selection-end-column="104" />
         </state>
       </provider>
     </entry>
