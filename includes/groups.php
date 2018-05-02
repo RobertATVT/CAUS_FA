@@ -173,9 +173,13 @@ function causfa_groups_management_code() {
 /**
  * @return bool - returns true or false if the current user is a admin (FAL, FAC, BM) or a standard user (Employee)
  */
-function causfa_groups_is_admin() {
+function causfa_groups_is_admin($PID = null) {
     $is_admin = false;
-    $current_user = new Groups_User( get_current_user_id() );
+    if($PID != null) {
+        $current_user = new Groups_User(get_user_by('email', $PID.'@vt.edu')->ID);
+    } else {
+        $current_user = new Groups_User( get_current_user_id() );
+    }
     $current_user_groups = $current_user->groups;
     for ($i = 0; $i < count($current_user_groups); $i++) {
         $current_user_group = $current_user_groups[$i];

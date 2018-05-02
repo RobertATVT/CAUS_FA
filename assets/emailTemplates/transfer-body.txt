@@ -1,3 +1,3 @@
-[EMPLOYEE] is requesting an asset transfer to [RECIPIENT]. The asset is a [MANUFACTURER] [MODEL] with tag number [PTAG]
+[EMPLOYEE_NAME]([EMPLOYEE]) is requesting an asset transfer to [RECIPIENT_NAME]([RECIPIENT]). The asset is a [MANUFACTURER] [MODEL] with tag number [PTAG]
 
-Email generated on behalf of [EMPLOYEE] by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application
+Email generated on behalf of [EMPLOYEE_NAME]([EMPLOYEE]) by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application

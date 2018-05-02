@@ -38,7 +38,7 @@ function causfa_transfer_asset() {
         'Info' => null
     );
     causfa_logger($logger_info);
-    causfa_email_transfer($PID_origin, $ptag, $PID_origin, $PID_dest);
+    causfa_email_transfer($PID_origin, $ptag, $PID_dest);
     $output['status'] = 1;
     $output['message'] = 'A transfer request has been sent to your Fixed Assets Liaison and Business Manager. They will be in contact with you soon to facilitate the transfer of the asset.';
     wp_send_json($output);
