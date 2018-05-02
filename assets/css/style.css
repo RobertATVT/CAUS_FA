@@ -329,8 +329,8 @@ select#org option:hover {
 .asset-block {
     box-sizing: border-box;
     min-height: 50px;
-	border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 2px 2px 2px 2px; 
+/*	border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 2px 2px 2px 2px; */
     padding: 0px !important;
 }
 .block-header {
@@ -706,6 +706,54 @@ slider-for{
     z-index: 2;
 }
 
+/* ========== TABS STYLING ========== */
+/* Style tab links */
+.tablink {
+  	background-color: #8c8c88;
+  	color: white;
+  	float: center;
+  	border: 1px solid rgba(255,255,255,0.25);
+  	outline: none;
+  	cursor: pointer;
+  	padding: 2px 2px;
+	width: 97%;
+	font-size: 90%;
+	font-weight: 700;
+	letter-spacing: .05em;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.cl .tabcontent {
+  color: white;
+  display: none;
+  padding: 20px;
+  height: 100%;
+}
+
+#PendingTransfers {
+	background-color: #508590;
+	border: 1px solid rgba(255,255,255,0.25);
+	padding: 0px !important;
+}
+#PendingSurplus {
+	background-color: #861F41;
+	border: 1px solid rgba(255,255,255,0.25);
+	padding: 0px !important;
+}
+#PendingTickets {
+	background-color: #C64600;
+	border: 1px solid rgba(255,255,255,0.25);
+	padding: 0px !important;	
+}
+#Reports {
+	background-color: #D7D2CB;
+	border: 1px solid rgba(255,255,255,0.25);
+	padding: 0px !important;
+}
 
 
 

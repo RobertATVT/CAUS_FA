@@ -1,11 +1,16 @@
-<!-- BEGIN TEMPLATE faa-header-admin.html -->
+<!-- BEGIN TEMPLATE faa-admin-header.html -->
 <div id="asset-container">
-	<div class="rw" style="margin:0p;">
-		<div id="app-title-block" class="cl t10" style="">
-			<button class="title-block" onclick="loadView(0)">FIXED ASSETS</button>
+	<div class="rw">
+		<div class="cl t5 tab">
+			<button class="tablink" onclick="openPage('PendingTransfers', this, '#508590')" id="defaultOpen">PENDING TRANSFERS</button>
 		</div>
-		<div id="app-admin-block" class="cl t10" style="">
-			<button class="admin-block" onclick="loadView(1)">ADMIN REPORTS</button>
+		<div class="cl t5 tab">
+			<button class="tablink" onclick="openPage('PendingSurplus', this, '#861F41')">PENDING SURPLUS</button>
 		</div>
-	</div>
-<!-- END TEMPLATE faa-header-admin.html -->
+		<div class="cl t5 tab">
+			<button class="tablink" onclick="openPage('PendingTickets', this, '#C64600')">PENDING TICKETS</button>
+		</div>
+		<div class="cl t5 tab">
+			<button class="tablink" onclick="openPage('Reports', this, '#D7D2CB')">BANNER REPORTS</button>
+		</div>
+<!-- END TEMPLATE faa-admin-header.html -->

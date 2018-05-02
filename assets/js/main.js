@@ -7,9 +7,9 @@ function surplusAsset() {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if(data['status'] == 1) {
             var id = jQuery('#surplusModal').find('#surplusIndex').val();
-            var status = jQuery(('#status-' + id))
-            status.addClass('asset-pending');
-            status.html("Pending Surplus");
+            var status = jQuery(('#status-' + id));
+            /*status.addClass('asset-pending');*/
+            status.html('<div class="asset-status asset-pending">Pending Surplus</div>');
             jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery('#surplusModal').modal('close');
@@ -30,9 +30,9 @@ function transferAsset(PID_dest) {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if(data['status'] == 1) {
             var id = jQuery('#transferModal').find('#transferIndex').val();
-            var status = jQuery(('#status-' + id))
-            status.addClass('asset-pending');
-            status.html("Pending Transfer");
+            var status = jQuery(('#status-' + id));
+            /*status.addClass('asset-pending');*/
+            status.html('<div class="asset-status asset-pending">Pending Transfer</div>');
             jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
             jQuery('#transferModal').modal('close');

@@ -1,32 +1,32 @@
-<!-- BEGIN TEMPLATE faa-tickets-fill.html -->
-				<div class="cl t20 block-text" style="margin-top: 5px;">
-					<form id="transfer-[ID]" actoin="#">
-						<div class="cl t2 center" id="transfer-ptag-[ID]">[PTAG]</div>
-						<div class="cl t2 center" id="transfer-pid1-[ID]">[PID 1]</div>
-						<div class="cl t2 center" id="transfer-pid2-[ID]">[PID 2]</div>
-						<div class="cl t2 center" id="transfer-date-[ID]">[DATE]</div>
-						<div class="cl t2 center" id="transfer-stage1-[ID]">
-							<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in">
-							<label for="transfer-stage-1-[ID]"></label>
+<!-- BEGIN TEMPLATE faa-admin-tickets-fill.html -->
+						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
+							<form id="transfer-[ID]" actoin="#">
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-ptag-[ID]">[PTAG]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid1-[ID]">[PID 1]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-date-[ID]">[DATE]</div>
+								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-stage1-[ID]">
+									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
+									<label for="transfer-stage-1-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
+									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="transfer-stage-2-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage3-[ID]">
+									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="transfer-stage-3-[ID]"></label>
+								</div>
+								<div class="cl xl2 t5 center" id="transfer-stage4-[ID]">
+									<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in" disabled="disabled admin-block-line-b">
+									<label for="transfer-stage-4-[ID]"></label>
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage5-[ID]">
+									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
+								</div>
+								<div class="cl xl2 t10 center" id="transfer-stage6-[ID]">
+									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+								</div>
+							</form>
 						</div>
-						<div class="cl t2 center" id="transfer-stage2-[ID]">
-							<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in" disabled="disabled">
-							<label for="transfer-stage-2-[ID]"></label>
-						</div>
-						<div class="cl t2 center" id="transfer-stage3-[ID]">
-							<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in" disabled="disabled">
-							<label for="transfer-stage-3-[ID]"></label>
-						</div>
-						<div class="cl t2 center" id="transfer-stage4-[ID]">
-							<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in" disabled="disabled">
-							<label for="transfer-stage-4-[ID]"></label>
-						</div>
-						<div class="cl t2 center" id="transfer-stage5-[ID]">
-							<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
-						</div>
-						<div class="cl t2 center" id="transfer-stage6-[ID]">
-							<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
-						</div>
-					</form>
-				</div>
-<!-- END TEMPLATE faa-tickets-fill.html -->
+<!-- END TEMPLATE faa-admin-tickets-fill.html -->
