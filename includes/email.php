@@ -43,23 +43,22 @@ function causfa_get_recipient_list($requester, $recipient) {
     $requester_BM = causfa_groups_BM($requester);
     $recipient_FAL = causfa_groups_FAL($recipient);
     $recipient_BM = causfa_groups_BM($recipient);
-    $to = array();
     $to[] = $requester.'@vt.edu';
     foreach($requester_FAL as $FAL) {
         $newEmail = true;
         for ($i = 0; $i < $to.count(); $i++) {
-            if ($FAL['Email'] == $to[$i]) {
+            if (strcmp($FAL['Email'], $to[$i]) == 0) {
                 $newEmail = false;
             }
         }
-        if ($newEmail) {
+        if ($newEmail == true) {
             $to[] = $FAL['Email'];
         }
     }
     foreach($requester_BM as $BM) {
         $newEmail = true;
         for ($i = 0; $i < $to.count(); $i++) {
-            if ($BM['Email'] == $to[$i]) {
+            if (strcmp($BM['Email'], $to[$i]) == 0) {
                 $newEmail = false;
             }
         }
@@ -70,14 +69,14 @@ function causfa_get_recipient_list($requester, $recipient) {
     foreach($recipient_FAL as $FAL) {
         $newEmail = true;
         for ($i = 0; $i < $to.count(); $i++) {
-            if ($FAL['Email'] == $to[$i]) {
+            if (strcmp($FAL['Email'], $to[$i]) == 0) {
                 $newEmail = false;
             }
         }
         if ($newEmail) {
             $newEmail = true;
             for ($i = 0; $i < $to.count(); $i++) {
-                if ($FAL['Email'] == $to[$i]) {
+                if (strcmp($BM['Email'], $to[$i]) == 0) {
                     $newEmail = false;
                 }
             }
