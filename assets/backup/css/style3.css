@@ -699,7 +699,7 @@ slider-for{
 
 /* Style tab links */
 .tablink {
-  	background-color: #555;
+  	background-color: #8c8c88;
   	color: white;
   	float: center;
   	border: 1px solid rgba(255,255,255,0.25);
@@ -735,7 +735,7 @@ slider-for{
 	padding: 0px !important;
 }
 #PendingTickets {
-	background-color: #CE0058;
+	background-color: #C64600;
 	border: 1px solid rgba(255,255,255,0.25);
 	padding: 0px !important;	
 }
