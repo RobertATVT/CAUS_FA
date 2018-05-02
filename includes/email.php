@@ -34,7 +34,7 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
         $surplusSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $surplusSubject);
         $surplusSubject = str_replace('[EMPLOYEE]', $requester, $surplusSubject);
         $surplusSubject = str_replace( '[PTAG]', $ptag, $surplusSubject);
-        $surplusBody = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/surplus-subject.txt', true);
+        $surplusBody = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/surplus-body.txt', true);
         $surplusBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $surplusBody);
         $surplusBody = str_replace( '[EMPLOYEE]', $requester, $surplusBody);
         $surplusBody = str_replace( '[PTAG]', $ptag, $surplusBody);
