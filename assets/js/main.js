@@ -30,7 +30,7 @@ function transferAsset(PID_dest) {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if(data['status'] == 1) {
             var id = jQuery('#transferModal').find('#transferIndex').val();
-            var status = jQuery(('#status-' + id))
+            var status = jQuery(('#status-' + id));
             status.addClass('asset-pending');
             status.html("Pending Transfer");
             jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
