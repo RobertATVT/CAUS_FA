@@ -27,9 +27,21 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
     }
 }
 
-function causfa_email_surplus($to, $from, $ptag) {
+function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
     if (CAUSFA_SEND_EMAIL) {
-
+        $to = causfa_get_recipient_list($requester);
+        $surplusSubject = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/surplus-subject.txt', true);
+        $surplusSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $surplusSubject);
+        $surplusSubject = str_replace('[EMPLOYEE]', $requester, $surplusSubject);
+        $surplusSubject = str_replace( '[PTAG]', $ptag, $surplusSubject);
+        $surplusBody = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/surplus-subject.txt', true);
+        $surplusBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $surplusBody);
+        $surplusBody = str_replace( '[EMPLOYEE]', $requester, $surplusBody);
+        $surplusBody = str_replace( '[PTAG]', $ptag, $surplusBody);
+        $surplusBody = str_replace('[MANUFACTURER]', $manufacturer, $surplusBody);
+        $surplusBody = str_replace('[MODEL]', $model, $surplusBody);
+        $surplusBody = $surplusBody.'  '.print_r($to, true);
+        wp_mail('mattwj6@vt.edu', $surplusSubject, $surplusBody);
     }
 }
 
@@ -44,12 +56,10 @@ function causfa_email_add_asset($to, $from, $ptag, $desc, $serial) {
 
     }
 }
-function causfa_get_recipient_list($requester, $recipient) {
+function causfa_get_recipient_list($requester, $recipient = null) {
+    $to[] = $requester.'@vt.edu';
     $requester_FAL = causfa_groups_FAL($requester);
     $requester_BM = causfa_groups_BM($requester);
-    $recipient_FAL = causfa_groups_FAL($recipient);
-    $recipient_BM = causfa_groups_BM($recipient);
-    $to[] = $requester.'@vt.edu';
     foreach($requester_FAL as $FAL) {
         if (!in_array($FAL['Email'], $to)) {
             $to[] = $FAL['Email'];
@@ -60,14 +70,18 @@ function causfa_get_recipient_list($requester, $recipient) {
             $to[] = $BM['Email'];
         }
     }
-    foreach($recipient_FAL as $FAL) {
-        if (!in_array($FAL['Email'], $to)) {
-            $to[] = $FAL['Email'];
+    if ($recipient != null) {
+        $recipient_FAL = causfa_groups_FAL($recipient);
+        $recipient_BM = causfa_groups_BM($recipient);
+        foreach($recipient_FAL as $FAL) {
+            if (!in_array($FAL['Email'], $to)) {
+                $to[] = $FAL['Email'];
+            }
         }
-    }
-    foreach($recipient_BM as $BM) {
-        if (!in_array($BM['Email'], $to)) {
-            $to[] = $BM['Email'];
+        foreach($recipient_BM as $BM) {
+            if (!in_array($BM['Email'], $to)) {
+                $to[] = $BM['Email'];
+            }
         }
     }
     return $to;

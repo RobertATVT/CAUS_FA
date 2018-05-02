@@ -41,6 +41,8 @@ function causfa_surplus() {
         'Info' => null
     );
     causfa_logger($logger_info);
+    $result = $wpdb->get_row('SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = '. $ptag.';');
+    causfa_email_surplus($PID_origin, $ptag, $result->FZVFORG_MANUFACTURER, $result->FZVFORG_MODEL);
     $output['status'] = 1;
     $output['message'] = 'A surplus request has been sent to your Fixed Assets Liaison and Business Manager. They will be in contact with you soon to facilitate the transfer of the asset.';
     wp_send_json($output);

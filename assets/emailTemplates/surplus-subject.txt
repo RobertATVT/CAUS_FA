@@ -1,1 +1,1 @@
-Asset Surplus: [EMPLOYEE]-[PTAG]
+Asset Surplus: [EMPLOYEE_NAME]([EMPLOYEE])-[PTAG]
