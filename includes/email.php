@@ -35,7 +35,7 @@ function causfa_email_transfer($requester, $ptag, $name, $recipient) {
         $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);
         $transferBody = $transferBody.'  '.$to;
         $headers = 'From: '.$from.'\r\n';
-        wp_mail('mattwj6@vt.edu', $transferSubject, $transferBody, $headers);
+        wp_mail('mattwj6@vt.edu', $transferSubject, $transferBody);
     }
 }
 
