@@ -74,6 +74,6 @@ function causfa_get_recipient_list($requester, $recipient) {
 }
 
 function causfa_email_get_name($PID) {
-    $user = get_user_by('Email', $PID.'@vt.edu');
+    $user = get_user_by('email', $PID.'@vt.edu');
     return $user->disply_name;
 }
