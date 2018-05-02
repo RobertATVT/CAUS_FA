@@ -5,7 +5,7 @@
  * Date: 4/5/18
  * Time: 1:25 PM
  */
-function causfa_email_transfer($requester, $ptag, $recipient) {
+function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipient) {
     if (CAUSFA_SEND_EMAIL) {
         $to = causfa_get_recipient_list($requester, $recipient);
         $transferSubject = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-subject.txt', true);
@@ -15,6 +15,8 @@ function causfa_email_transfer($requester, $ptag, $recipient) {
         $transferBody = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body.txt', true);
         $transferBody = str_replace( '[EMPLOYEE]', $requester, $transferBody);
         $transferBody = str_replace( '[PTAG]', $ptag, $transferBody);
+        $transferBody = str_replace('[MANUFACTURER]', $manufacturer, $transferBody);
+        $transferBody = str_replace('[MODEL]', $model, $transferBody);
         $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
         wp_mail('mattwj6@vt.edu', $transferSubject, $transferBody);
