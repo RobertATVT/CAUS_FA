@@ -16,7 +16,7 @@ function causfa_email_transfer($requester, $ptag, $recipient) {
         $transferBody = str_replace( '[EMPLOYEE]', $requester, $transferBody);
         $transferBody = str_replace( '[PTAG]', $ptag, $transferBody);
         $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);
-        $transferBody = $transferBody.'  '.$to;
+        $transferBody = $transferBody.'  '.print_r($to, true);
         wp_mail('mattwj6@vt.edu', $transferSubject, $transferBody);
     }
 }

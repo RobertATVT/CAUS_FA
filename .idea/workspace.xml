@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/emailTemplates/transfer-body.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/emailTemplates/transfer-body.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/emailTemplates/transfer-subject.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/emailTemplates/transfer-subject.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/transfer.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/transfer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/includes/email.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -288,12 +283,12 @@
       <workItem from="1523241322451" duration="6807000" />
       <workItem from="1524270001057" duration="2125000" />
       <workItem from="1525232602974" duration="3209000" />
-      <workItem from="1525266832232" duration="2305000" />
+      <workItem from="1525266832232" duration="2484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246886000" />
+    <option name="totallyTimeSpent" value="247065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1245" height="797" extended-state="0" />
@@ -636,7 +631,7 @@
     <entry file="file://$PROJECT_DIR$/includes/email.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
         </state>
       </provider>
     </entry>
