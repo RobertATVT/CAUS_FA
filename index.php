@@ -7,7 +7,7 @@
  * Author URI: http://www.caus.vt.edu
  * Text Domain: CAUS Fixed Assets Application
  * License: GPL-2.0+
- * Licesne URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
 //checks if WordPress exists
@@ -66,6 +66,7 @@ add_action( 'wp_ajax_causfa_set_session', 'causfa_set_session');
 add_action( 'wp_ajax_causfa_output_images', 'causfa_output_images');
 add_action( 'wp_ajax_causfa_get_last_form', 'causfa_get_last_form');
 add_action( 'wp_ajax_causfa_add_ticket', 'causfa_add_ticket');
+add_action( 'wp_ajax_causfa_get_custodian', 'causfa_get_custodian');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app

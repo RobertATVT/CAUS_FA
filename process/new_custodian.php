@@ -32,22 +32,57 @@ function causfa_new_custodian() {
     }
     $phone = substr_replace($phone,'-', 3, 0);
     $phone = substr_replace($phone,'-', 7, 0);
-    if ($wpdb->insert('causfa_custodians', array(
-        'Name' => $name,
-        'PID' => $PID,
-        'Email' => $email,
-        'Office' => $office,
-        'Phone' => $phone
-    ), array(
-        '%s',
-        '%s',
-        '%s',
-        '%s',
-        '%s'
-        ))) {
+    $org = $_POST['org'];
+    $oldOrg = $wpdb->get_var("SELECT Org FROM causfa_custodians WHERE PID='".$PID."';");
+    if ($wpdb->get_row("SELECT * FROM causfa_custodians WHERE PID='".$PID."';")) {
+       $wpdb->update('causfa_custodians',
+           array(
+               'Office' => $office,
+               'Phone' => $phone,
+               'Org' => $org
+           ), array('PID' => $PID));
         $output = 1;
+        causfa_groups_remove($oldOrg);
+        causfa_groups_add($org);
+    } else {
+        if ($wpdb->insert('causfa_custodians', array(
+            'Name' => $name,
+            'PID' => $PID,
+            'Email' => $email,
+            'Office' => $office,
+            'Phone' => $phone,
+            'Org' => $org
+        ), array(
+            '%s',
+            '%s',
+            '%s',
+            '%s',
+            '%s'
+        ))) {
+            $output = 1;
+        }
+        causfa_groups_add($org);
     }
-    causfa_groups_add($_POST['org']);
     wp_send_json($output);
 
+}
+
+function causfa_get_custodian() {
+    global $wpdb;
+    $current_user = wp_get_current_user();
+    $PID = $current_user->user_nicename;
+    $result = $wpdb->get_row("SELECT * FROM causfa_custodians WHERE PID='".$PID."';");
+    $output = array(
+        'Office' => '',
+        'Phone' => '',
+        'Org' => 'CAUS'
+    );
+    if ($result) {
+        $output = array(
+            'Office'=> $result->Office,
+            'Phone'=> $result->Phone,
+            'Org'=> $result->Org
+        );
+    }
+    wp_send_json($output);
 }

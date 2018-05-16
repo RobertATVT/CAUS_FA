@@ -131,6 +131,7 @@ function create_tables() {
         Email varchar(39) NOT NULL,
         Office varchar(1000) NOT NULL,
         Phone varchar(13) NOT NULL,
+        Org varchar(6) NOT NULL,
         PRIMARY KEY  (PID)
         ) ".$charset_collate.";";
         dbDelta($sql);

@@ -207,13 +207,17 @@ function ticketModalRequested(elementID) {
     jQuery('#ticketModal').modal();
     jQuery('#ticketModal').modal('open');
 }
-function custodianModalRequested(elementID) {
-    jQuery('#addAssetPTAG').val('');
-    jQuery('#addAssetSerial').val('');
-    jQuery('#addAssetDesc').val('');
-    jQuery('#addAssetNotes').val('');
-    jQuery('#custodianModal').modal();
-    jQuery('#custodianModal').modal('open');
+function custodianModalRequested() {
+    var form = {
+        action: 'causfa_get_custodian'
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+        jQuery('#Office').val(data['Office']);
+        jQuery('#Phone').val(data['Phone']);
+        jQuery('#org').val(data['Org']);
+        jQuery('#custodianModal').modal();
+        jQuery('#custodianModal').modal('open');
+    });
 }
 function modalRequestedOnPendingAsset(elementID) {
     var id = elementID.split('-')[1];

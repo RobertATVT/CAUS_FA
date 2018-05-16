@@ -201,3 +201,8 @@ function causfa_groups_add($name) {
     $employeeGroup = Groups_Group::read_by_name('Employee');
     Groups_User_Group::create( array( 'user_id' => get_current_user_id(), 'group_id' =>  $employeeGroup->group_id) );
 }
+function causfa_groups_remove($name) {
+    global $wpdb;
+    $groups_id = $wpdb->get_var('SELECT group_id FROM '.$wpdb->prefix.'groups_group WHERE name ="'.$name.'";');
+    Groups_User_Group::delete(get_current_user_id(), $groups_id);
+}
