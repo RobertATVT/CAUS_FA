@@ -313,7 +313,10 @@ select#org option:hover {
     padding: 3px !important;
     margin-top: 10px;
 }
-
+.tablesorter-header-inner{
+	min-height: 25px;
+	line-height: 25px;
+}
 .asset-list-header {
     background: #fff; 
     padding:5px 0px !important;
@@ -345,6 +348,9 @@ select#org option:hover {
     font-weight: 400; 
     font-size: 75%;
     line-height: 20px;
+}
+.asset-list > td {
+	line-height: 31px;
 }
 .asset-show {
 	height: 115px;
@@ -386,6 +392,20 @@ select#org option:hover {
 }
 .asset-action:focus {
     color: #e87222;;
+}
+.edit-action {
+    background: transparent !important;
+	border: 0 !important;
+	padding: 0px;
+	text-align: right;
+    line-height: 20px;
+    color:#ddd;
+}
+.edit-action:hover {
+    color: #fff;
+}
+.edit-action:focus {
+    color: #fff;;
 }
 .asset-status {
     box-sizing: border-box;
@@ -635,7 +655,16 @@ a.btn-menu {
 	max-height: 20px;
 	line-height: 20px;
 }
-
+.report-button {
+	width: 95% !important;
+	font-size: 65% !important;
+	font-weight: 700;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px;
+	line-height: 20px;
+	margin-bottom: 4px;
+}
 [type="checkbox"] + label {
 	padding-left: 0px !important;
 	height: 15px !important;
