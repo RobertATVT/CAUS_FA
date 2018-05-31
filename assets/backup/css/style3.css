@@ -13,9 +13,10 @@
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
     background-color: #f6f6f6;
     border: 1px solid #9e9e9e;
-    border-bottom: 2px solid #9e9e9e;
-    height: 2rem;
+	border-bottom: 2px solid #9e9e9e;
+    height: 1.25rem !important;
     text-align: center;
+	margin: 0px !important;
 }
 
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
@@ -146,6 +147,61 @@ select#org option:hover {
 .lh-20 {
     line-height: 20px;
 }
+
+/* TYPOGRAPHY ELEMENTS */
+
+.biggertext {
+    font-size:190%;
+    font-weight:700;
+    letter-spacing: .1em; 
+    line-height: 20px;
+    padding-left: 10px !important;
+    padding-top: 10px !important;
+}
+.bigtext {
+    font-size:150%;
+    font-weight:700;
+    letter-spacing: .1em; 
+    line-height: 20px;
+    padding-left: 10px !important;
+    padding-top: 10px !important;
+}
+.block-headtext {
+    font-size:140%;
+    font-weight:700;
+    text-transform: uppercase;
+    letter-spacing: .05em; 
+}
+.block-bigtext {
+    font-size:115%;
+    font-weight:700;
+    line-height: 25px;
+    padding-top: 0px !important;    
+    padding-left: 10px !important;    
+}
+.block-text {
+    font-size:100%;
+    font-weight:400; 
+    line-height: 20px;
+    padding-top: 0px !important;    
+    padding-left: 10px !important;
+}
+.subtext {
+    font-size:100%;
+    font-weight:400; 
+    line-height: 20px;
+    padding-left: 10px !important;
+    padding-top: 10px !important;
+}
+.subtext-right {
+    font-size:100%;
+    font-weight:400; 
+    line-height: 20px;
+    padding-right: 10px !important;
+    padding-top: 10px !important;
+    text-align: right;
+}
+
 /* FIXED ASSETS ELEMENTS*/
 #asset-container {
     width: 100%;
@@ -255,57 +311,7 @@ select#org option:hover {
     padding: 3px !important;
     margin-top: 10px;
 }
-.biggertext {
-    font-size:190%;
-    font-weight:700;
-    letter-spacing: .1em; 
-    line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
-}
-.bigtext {
-    font-size:150%;
-    font-weight:700;
-    letter-spacing: .1em; 
-    line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
-}
-.block-headtext {
-    font-size:140%;
-    font-weight:700;
-    text-transform: uppercase;
-    letter-spacing: .05em; 
-}
-.block-bigtext {
-    font-size:115%;
-    font-weight:700;
-    line-height: 25px;
-    padding-top: 0px !important;    
-    padding-left: 10px !important;    
-}
-.block-text {
-    font-size:100%;
-    font-weight:400; 
-    line-height: 20px;
-    padding-top: 0px !important;    
-    padding-left: 10px !important;
-}
-.subtext {
-    font-size:100%;
-    font-weight:400; 
-    line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
-}
-.subtext-right {
-    font-size:100%;
-    font-weight:400; 
-    line-height: 20px;
-    padding-right: 10px !important;
-    padding-top: 10px !important;
-    text-align: right;
-}
+
 .asset-list-header {
     background: #fff; 
     padding:5px 0px !important;
@@ -420,6 +426,37 @@ select#org option:hover {
 	padding-bottom: 3px !important;
 	border-bottom: 1px solid rgba(255,255,255,.3);
 }
+
+/* ADMIN REPORT ELEMENTS */
+
+.report-block-header {
+	background-color: rgba(255,255,255,0.2); 
+	padding: 2px !important; 
+	text-transform: uppercase; 
+	font-weight: 700;
+	font-size: 130%; 
+	letter-spacing: .05em;
+}
+.report-input {
+	width: 95% !important;
+	font-size: 100% !important;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px !important;
+	line-height: 20px !important;
+	margin-bottom: 0px;
+}
+.report-button {
+	width: 95% !important;
+	font-size: 65% !important;
+	font-weight: 700;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px !important;
+	line-height: 20px !important;
+	margin-bottom: 4px;
+}
+
 /* SIDEBAR AND CONTENT CONTAINERS */
 #sidebar {
     transition: margin-left .4s;
@@ -596,16 +633,7 @@ a.btn-menu {
 	max-height: 20px;
 	line-height: 20px;
 }
-.report-button {
-	width: 95% !important;
-	font-size: 65% !important;
-	font-weight: 700;
-	text-align: center;
-	padding: 1px;
-	max-height: 20px;
-	line-height: 20px;
-	margin-bottom: 4px;
-}
+
 [type="checkbox"] + label {
 	padding-left: 0px !important;
 	height: 15px !important;

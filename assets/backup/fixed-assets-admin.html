@@ -21,7 +21,7 @@
 <div id="asset-container">
 	<div class="rw">
 		<div class="cl t5 tab">
-			<button class="tablink" onclick="openPage('Dashboard', this, '#D7D2CB')" id="defaultOpen">Dashboard</button>
+			<button class="tablink" onclick="openPage('Dashboard', this, '#D7D2CB')" id="defaultOpen">DASHBOARD</button>
 		</div>
 		<div class="cl t5 tab">
 			<button class="tablink" onclick="openPage('PendingTransfers', this, '#508590')">PENDING TRANSFERS</button>
@@ -33,18 +33,17 @@
 			<button class="tablink" onclick="openPage('PendingTickets', this, '#C64600')">PENDING TICKETS</button>
 		</div>
 <!-- END TEMPLATE faa-admin-header.html -->
-<!-- BEGIN TEMPLATE faa-admin-reports-header.html -->
+<!-- BEGIN TEMPLATE faa-admin-impact.html -->
 		<div id="Dashboard" class="cl t20 tabcontent">
 			<div class="rw" style="margin:0px; display: block;">
 				<div class="cl l20 m20 s20 t20 emp-info-inside" style="padding:5px;">
 					<div class="cl t20 vt-grey vt-txt-white asset-block" style="padding-bottom: 10px !important;">
 						<div class="cl t20 block-text" style="margin-top: 5px;">
-<!-- BEGIN TEMPLATE faa-employee-impact.html -->
 							<div class="rw" style="margin:0px;">
 								<div class="cl t20">
 									<div class="cl m7 t20" style="padding:7px;">
 										<div class="cl t20 vt-teal vt-txt-white asset-block">
-											<div class="cl m10 t8 biggertext">[TRANSFER NUMBER]</div>
+											<div class="cl m10 t8 biggertext">[TRANSFER#]</div>
 											<div class="cl m10 t12 subtext-right">Total Pending Transfers</div>
 											<div class="cl m10 t8 bigtext">[TRANSFER OLD]</div>
 											<div class="cl m10 t12 subtext-right">Total Transfers over 14 days</div>
@@ -58,7 +57,7 @@
 									</div>
 									<div class="cl m6 t20" style="padding:7px;">
 										<div class="cl t20 vt-maroon vt-txt-white asset-block">
-											<div class="cl m10 t8 biggertext">[SURPLUS NUMBER]</div>
+											<div class="cl m10 t8 biggertext">[SURPLUS#]</div>
 											<div class="cl m10 t12 subtext-right">Total Pending Surplus Requests</div>
 											<div class="cl m10 t8 bigtext">[SURPLUS OLD]</div>
 											<div class="cl m10 t12 subtext-right">Total Surplus over 14 days</div>
@@ -72,7 +71,7 @@
 									</div>
 									<div class="cl m7 t20" style="padding:7px;">
 										<div class="cl t20 vt-dk-orange vt-txt-white asset-block">
-											<div class="cl m10 t8 biggertext">[TICKET NUMBER]</div>
+											<div class="cl m10 t8 biggertext">[TICKET#]</div>
 											<div class="cl m10 t12 subtext-right">Total Pending Tickets</div>
 											<div class="cl m10 t8 bigtext">[TICKET OLD]</div>
 											<div class="cl m10 t12 subtext-right">Total Tickets over 14 days</div>
@@ -86,39 +85,104 @@
 									</div>
 								</div>
 							</div>				
-<!-- END TEMPLATE faa-employee-impact.html -->
-							<form id="report-[ID]" action="#">
-<!-- END TEMPLATE faa-admin-reports-header.html -->
-<!-- BEGIN TEMPLATE faa-admin-reports-fill.html -->
-								<div class="cl t10 center" id="report-[ID]">
-									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+<!-- END TEMPLATE faa-admin-impact.html -->
+<!-- END TEMPLATE faa-admin-reports.html -->
+							<div class="cl t10 center" id="report-[ID]" style="padding: 5px;">
+								<div class="rw vt-dk-grey" style="border-radius: 2px;">
+									<div class="cl t20 center report-block-header">Individual Asset Report</div>
+									<div class="cl t20" style="padding: 10px;">
+										<form>
+											<div class="cl t10">
+												<input type="text" placeholder="VT Tag Number" class="report-input">
+											</div>
+											<div class="cl t10">
+												<input type="button" class="btn btn-primary report-button" value="Look Up Asset" onclick="get-report(this.id)">
+											</div>
+										</form>
+									</div>
 								</div>
-<!-- END TEMPLATE faa-admin-reports-fill.html -->
-<!-- BEGIN REPORTS FILLER -->
-								<div class="cl t10 center" id="report-[ID]">
-									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+							</div>
+							<div class="cl t10 center" id="report-[ID]" style="padding: 5px;">
+								<div class="rw vt-dk-grey" style="border-radius: 2px;">
+									<div class="cl t20 center report-block-header">Organizational Asset Report</div>
+									<div class="cl t20" style=" padding: 10px;">
+										<form>
+											<div class="cl t10">
+												<input type="text" placeholder="Organizational Code" class="report-input">
+											</div>
+											<div class="cl t10">
+												<input type="button" class="btn btn-primary report-button" value="Look Up ORganization Assets" onclick="get-report(this.id)">
+											</div>
+										</form>
+									</div>
 								</div>
-								<div class="cl t10 center" id="report-[ID]">
-									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+							</div>
+							<div class="cl t10 center" id="report-[ID]" style="padding: 5px;">
+								<div class="rw vt-dk-grey" style="border-radius: 2px;">
+									<div class="cl t20 center report-block-header">Individual Employee Report</div>
+									<div class="cl t20" style=" padding: 10px;">
+										<form>
+											<div class="cl t10">
+												<input type="text" placeholder="Employee PID" class="report-input">
+											</div>
+											<div class="cl t10">
+												<input type="button" class="btn btn-primary report-button" value="Look Up Employee" onclick="get-report(this.id)">
+											</div>
+										</form>
+									</div>
 								</div>
-								<div class="cl t10 center" id="report-[ID]">
-									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+							</div>
+							<div class="cl t10 center" id="report-[ID]" style="padding: 5px;">
+								<div class="rw vt-dk-grey" style="border-radius: 2px;">
+									<div class="cl t20 center report-block-header">Missing Asset Report</div>
+									<div class="cl t20" style=" padding: 10px;">
+										<form>
+											<div class="cl t10">
+												<input type="text" placeholder="Organizational Code" class="report-input">
+											</div>
+											<div class="cl t10">
+												<input type="button" class="btn btn-primary report-button" value="Look Up Asset" onclick="get-report(this.id)">
+											</div>
+										</form>
+									</div>
 								</div>
-								<div class="cl t10 center" id="report-[ID]">
-									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+							</div>
+							<div class="cl t10 center" id="report-[ID]" style="padding: 5px;">
+								<div class="rw vt-dk-grey" style="border-radius: 2px;">
+									<div class="cl t20 center report-block-header">Individual Location Report</div>
+									<div class="cl t20" style=" padding: 10px;">
+										<form>
+											<div class="cl t10">
+												<input type="text" placeholder="Room Code" class="report-input">
+											</div>
+											<div class="cl t10">
+												<input type="button" class="btn btn-primary report-button" value="Look Up Asset" onclick="get-report(this.id)">
+											</div>
+										</form>
+									</div>
 								</div>
-								<div class="cl t10 center" id="report-[ID]">
-									<input type="button" class="btn btn-primary report-button" value="report-text-[ID]" onclick="get-report(this.id)">
+							</div>
+							<div class="cl t10 center" id="report-[ID]" style="padding: 5px;">
+								<div class="rw vt-dk-grey" style="border-radius: 2px;">
+									<div class="cl t20 center report-block-header">Add/Change Report</div>
+									<div class="cl t20" style=" padding: 10px;">
+										<form>
+											<div class="cl t10">
+												<input type="text" placeholder="Organizational Report" class="report-input">
+											</div>
+											<div class="cl t10">
+												<input type="button" class="btn btn-primary report-button" value="Look Up Asset" onclick="get-report(this.id)">
+											</div>
+										</form>
+									</div>
 								</div>
-<!-- END REPORTS FILLER -->
-<!-- BEGIN TEMPLATE faa-admin-reports-footer.html -->
-							</form>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-<!-- END TEMPLATE faa-admin-reports-footer.html -->
+<!-- END TEMPLATE faa-admin-reports.html -->
 <!-- BEGIN TEMPLATE faa-admin-transfer-header.html -->
 		<div id="PendingTransfers" class="cl t20 tabcontent">
 			<div class="rw" style="margin:0px; display: block;">
