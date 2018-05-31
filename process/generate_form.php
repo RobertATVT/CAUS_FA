@@ -45,6 +45,27 @@ function causfa_generate_form_Home() {
     );
     wp_send_json($output);
 }
+use Dompdf\Dompdf;
+function causfa_generate_form_Home_SVG() {
+    global $wpdb;
+    $contents = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/backup/testForm.html', true);
+    echo $contents;
+    /*$ptag = $_POST['ptag'];
+    $result = $wpdb->get_row("SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = ".$ptag.";");
+    $model = $result->FZVFORG_MODEL;
+    $manufacturer = $result->FZVFORG_MANUFACTURER;
+    $custodian = $result->FZVFORG_CUSTODIAN;
+    $serial = $result->FZVFORG_SERIAL_NUM;
+    $desc = $result->FZVFORG_DESCRIPTION;*/
+    require_once(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/dompdf/autoload.inc.php');
+    $pdf = new Dompdf();
+    $pdf->loadHtml($contents);
+    $pdf->setPaper('letter', 'portrait');
+    $pdf->render();
+    $output = $pdf->output();
+    //echo $output;
+    file_put_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'CAUS_OFFICE_USE_FORM.pdf', $output);
+}
 
 function causfa_generate_form_Office() {
     require_once(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/fpdf181/fpdf.php');
@@ -61,4 +82,12 @@ function causfa_generate_form_Office() {
     }
     $pdf->useTemplate($templateID);
     $pdf->Output('D', 'CAUS_Office_Use_Form.pdf');
+}
+function causfa_SVG_to_PDF() {
+
+    $im = new Imagick();
+    $svg = '<?xml version="1.0"?>'.file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/CAUS_HOME_USE_FORM.svg');
+    $im->readImageBlob($svg);
+    $im->setImageFormat('pdf');
+    $im->writeImage('test.pdf', false);
 }

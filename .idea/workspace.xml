@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/CAUS_HOME_USE_FORM.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/CAUS_OFFICE_USE_FORM.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-employee-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-employee-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/create_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/create_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/groups.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/groups.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAUS_Home_Use_Form.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/CAUS_Home_Use_Form.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/new_custodian.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/new_custodian.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/generate_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/generate_form.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +21,7 @@
       <file leaf-file-name="groups.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/groups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
+            <state relative-caret-position="3015">
               <caret line="206" column="65" selection-start-line="206" selection-start-column="65" selection-end-line="206" selection-end-column="65" />
               <folding>
                 <marker date="1526495828597" expanded="true" signature="1566:1659" ph="SELECT Phone... causfa_custodians" />
@@ -40,11 +39,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_custodian.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
+      <file leaf-file-name="generate_form.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/process/generate_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
+            <state relative-caret-position="503">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+              <folding>
+                <element signature="e#6#323#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,16 +103,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/html/asset_header_template.html" />
-        <option value="$PROJECT_DIR$/assets/css/autocomplete.css" />
-        <option value="$PROJECT_DIR$/includes/autocomplete_footer.php" />
-        <option value="$PROJECT_DIR$/../../../dev/css/style.css" />
         <option value="$PROJECT_DIR$/../../../dev/index.html" />
         <option value="$PROJECT_DIR$/assets/html/new_custodian_modal.html" />
         <option value="$PROJECT_DIR$/assets/js/toggle.js" />
         <option value="$PROJECT_DIR$/../../../wp-config.php" />
         <option value="$PROJECT_DIR$/assets/cellfit/cellfit.php" />
-        <option value="$PROJECT_DIR$/process/generate_form.php" />
         <option value="$PROJECT_DIR$/includes/activate.php" />
         <option value="$PROJECT_DIR$/assets/html/asset_total_template.html" />
         <option value="$PROJECT_DIR$/assets/html/employee_info_template.html" />
@@ -138,11 +144,16 @@
         <option value="$PROJECT_DIR$/process/surplus.php" />
         <option value="$PROJECT_DIR$/includes/email.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-employee-info.html" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/create_tables.php" />
         <option value="$PROJECT_DIR$/assets/js/modal.js" />
         <option value="$PROJECT_DIR$/includes/groups.php" />
         <option value="$PROJECT_DIR$/process/new_custodian.php" />
+        <option value="$PROJECT_DIR$/assets/CAUS_HOME_USE_FORM.svg" />
+        <option value="$PROJECT_DIR$/assets/CAUS_OFFICE_USE_FORM.svg" />
+        <option value="$PROJECT_DIR$/assets/backup/caus-office-use.html" />
+        <option value="$PROJECT_DIR$/assets/backup/testForm.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/process/generate_form.php" />
       </list>
     </option>
   </component>
@@ -155,9 +166,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="123" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="191" />
+    <option name="y" value="53" />
     <option name="width" value="1245" />
     <option name="height" value="797" />
   </component>
@@ -180,33 +191,6 @@
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="enqueue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="process" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -221,6 +205,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -272,18 +261,19 @@
       <workItem from="1524270001057" duration="2125000" />
       <workItem from="1525232602974" duration="3209000" />
       <workItem from="1525266832232" duration="9443000" />
-      <workItem from="1525753183240" duration="6910000" />
+      <workItem from="1525753183240" duration="15781000" />
+      <workItem from="1527603077450" duration="106000" />
+      <workItem from="1527604865828" duration="1943000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260934000" />
+    <option name="totallyTimeSpent" value="271854000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="123" y="23" width="1245" height="797" extended-state="1" />
-    <editor active="true" />
+    <frame x="191" y="53" width="1245" height="797" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.43059018" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4455528" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32857144" />
@@ -337,42 +327,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/FPDI-2.0.2/src/Fpdi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1495" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/fpdf181/fpdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="1837" column="49" selection-start-line="1837" selection-start-column="46" selection-end-line="1837" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/cellfit/cellfit.php" />
-    <entry file="file://$PROJECT_DIR$/../../../dev/index4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/toggle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/generate_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/asset_total_template.html" />
-    <entry file="file://$PROJECT_DIR$/assets/html/employee_info_template.html" />
     <entry file="file://$PROJECT_DIR$/assets/html/asset_header_template.html" />
     <entry file="file://$PROJECT_DIR$/assets/html/asset_template.html" />
     <entry file="file://$PROJECT_DIR$/process/set_session.php">
@@ -452,13 +406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-397">
-          <caret line="84" column="127" selection-start-line="84" selection-start-column="127" selection-end-line="84" selection-end-column="127" />
         </state>
       </provider>
     </entry>
@@ -553,33 +500,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-635">
-          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="68" column="68" selection-start-line="68" selection-start-column="68" selection-end-line="68" selection-end-column="68" />
-          <folding>
-            <element signature="e#6#323#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/faa-modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3297" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
@@ -589,9 +512,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-employee-asset-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/backup/caus-home-use.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="3438" column="6" lean-forward="true" selection-start-line="20" selection-end-line="3438" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="101" column="127" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/backup/caus-office-use.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/backup/testForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1042">
+          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/groups.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
+        <state relative-caret-position="3015">
           <caret line="206" column="65" selection-start-line="206" selection-start-column="65" selection-end-line="206" selection-end-column="65" />
           <folding>
             <marker date="1526495828597" expanded="true" signature="1566:1659" ph="SELECT Phone... causfa_custodians" />
@@ -608,10 +585,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
+    <entry file="file://$PROJECT_DIR$/assets/imagick-3.4.3/imagick-3.4.3/examples/thumbnail.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
+        <state relative-caret-position="555">
+          <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+          <folding>
+            <element signature="e#6#323#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/imagick-3.4.3/imagick-3.4.3/examples/captcha.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/imagick-3.4.3/imagick-3.4.3/examples/polygon.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/generate_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>

@@ -70,9 +70,5 @@ add_action( 'wp_ajax_causfa_get_custodian', 'causfa_get_custodian');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
-add_shortcode( 'causfa_test', 'causfa_test'); //shortcode for a dev space to test functionality
+add_shortcode( 'causfa_test', 'causfa_SVG_to_PDF'); //shortcode for a dev space to test functionality
 add_shortcode( 'causfa_admin', 'causfa_load_admin_view'); // shortcode for the admin page of the app
-
-function causfa_test() {
-    echo (wp_mail('mattwj6@vt.edu', 'Test', 'This is a test email'));
-}
