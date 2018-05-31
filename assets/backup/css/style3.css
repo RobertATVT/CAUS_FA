@@ -82,7 +82,7 @@ select#org option:hover {
     background: #003C71;
 }
 
-/* VT TEXT COLORS */
+/* ========== VT TEXT COLORS ========== */
 .vt-txt-grey {
     color: #75787B;;
 }
@@ -92,6 +92,8 @@ select#org option:hover {
 .vt-txt-charcoal {
 	color: #333;
 }
+
+/* ========== TYPOGRAPHY SETTINGS ========== */
 .h1-text {
     font-size:175%;
     font-weight:700;
@@ -202,7 +204,7 @@ select#org option:hover {
     text-align: right;
 }
 
-/* FIXED ASSETS ELEMENTS*/
+/* ========== FIXED ASSETS SETTINGS ========== */
 #asset-container {
     width: 100%;
     background: #45484b;
@@ -725,6 +727,7 @@ slider-for{
     z-index: 2;
 }
 
+/* ========== TABS STYLING ========== */
 /* Style tab links */
 .tablink {
   	background-color: #8c8c88;
