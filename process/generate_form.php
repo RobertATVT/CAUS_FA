@@ -85,9 +85,9 @@ function causfa_generate_form_Office() {
 }
 function causfa_SVG_to_PDF() {
 
-    $im = new Imagick();
+    $im = new imagick();
     $svg = '<?xml version="1.0"?>'.file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/CAUS_HOME_USE_FORM.svg');
     $im->readImageBlob($svg);
     $im->setImageFormat('pdf');
-    $im->writeImage('test.pdf', false);
+    $im->writeImage(wp_upload_dir()['basedir'].'/test.pdf', false);
 }

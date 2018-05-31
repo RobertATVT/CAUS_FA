@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="" />
+    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/process/generate_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/generate_form.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +37,17 @@
       <file leaf-file-name="generate_form.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/process/generate_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="473">
+              <caret line="87" column="24" lean-forward="true" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file_upload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="155" column="33" lean-forward="true" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -44,7 +55,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
+            <state relative-caret-position="555">
               <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
               <folding>
                 <element signature="e#6#323#0#PHP" expanded="true" />
@@ -126,7 +137,6 @@
         <option value="$PROJECT_DIR$/process/pending_action.php" />
         <option value="$PROJECT_DIR$/process/filter-content.php" />
         <option value="$PROJECT_DIR$/process/add_ticket.php" />
-        <option value="$PROJECT_DIR$/includes/file_upload.php" />
         <option value="$PROJECT_DIR$/process/logger.php" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/assets/emailTemplates/transfer-subject.txt" />
@@ -146,6 +156,7 @@
         <option value="$PROJECT_DIR$/assets/backup/caus-office-use.html" />
         <option value="$PROJECT_DIR$/assets/backup/testForm.html" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/includes/file_upload.php" />
         <option value="$PROJECT_DIR$/process/generate_form.php" />
       </list>
     </option>
@@ -182,6 +193,16 @@
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
+              <item name="process" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -257,15 +278,16 @@
       <workItem from="1525753183240" duration="15781000" />
       <workItem from="1527603077450" duration="106000" />
       <workItem from="1527604865828" duration="1943000" />
-      <workItem from="1527777484350" duration="186000" />
+      <workItem from="1527777484350" duration="433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272040000" />
+    <option name="totallyTimeSpent" value="272287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="191" y="53" width="1245" height="797" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.45303407" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -553,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1042">
-          <caret line="115" column="37" selection-start-line="115" selection-start-column="37" selection-end-line="115" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/groups.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3015">
@@ -582,9 +597,15 @@
     <entry file="file://$PROJECT_DIR$/assets/imagick-3.4.3/imagick-3.4.3/examples/thumbnail.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/imagick-3.4.3/imagick-3.4.3/examples/captcha.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/imagick-3.4.3/imagick-3.4.3/examples/polygon.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
+        <state relative-caret-position="555">
           <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
           <folding>
             <element signature="e#6#323#0#PHP" expanded="true" />
@@ -592,16 +613,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/imagick-3.4.3/imagick-3.4.3/examples/captcha.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/imagick-3.4.3/imagick-3.4.3/examples/polygon.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="155" column="33" lean-forward="true" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="44" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/process/generate_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="473">
+          <caret line="87" column="24" lean-forward="true" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
         </state>
       </provider>
     </entry>
