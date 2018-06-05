@@ -1,76 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="612px" height="792px" viewBox="0 0 612 792" xml:space="preserve">
-	<style type="text/css">
-		.sv-footer1 {
-			font-family: arial;
-			font-size: 9px;
-			text-transform: uppercase;
-			font-style: italic;
-			font-weight: 700;
-			text-align: center;
-			letter-spacing: .05rem;	
-		}
-		.sv-footer2 {
-			font-family: arial;
-			font-size: 7px;
-			text-transform: uppercase;
-			text-align: center;
-			letter-spacing: .15rem;
-		}
-		.sv-footer3 {
-			font-family: arial;
-			font-size: 8px;
-			font-style: italic;
-			letter-spacing: .1rem;
-		}
-		.sv-paragraph {
-			font-family: arial;
-			font-size: 10px;
-			line-height: 100%;
-			height: 300px;
-		}
-		.ls1 {
-			letter-spacing: .01em;
-		}
-		.ls15 {
-			letter-spacing: .018em;
-		}
-		.ls2 {
-			letter-spacing: .02em;
-		}
-		.ls25 {
-			letter-spacing: .029em;
-		}
-		.ls3 {
-			letter-spacing: .035em;
-		}
-		.ls4 {
-			letter-spacing: .04em;
-		}
-		.ls5 {
-			letter-spacing: .05em;
-		}
-		.ls6 {
-			letter-spacing: .06em;
-		}
-		.fs90 {
-			font-size: .90em;
-		}
-		.fs85 {
-			font-size: .85em;
-		}
-		.tsb {
-			font-weight: 700;
-		}
-		.sv-block-header {
-			font-size: 7px;
-			font-weight: 700;
-		}
-		.sv-address {
-			font-size: 8px;
-		}
-	</style>
-	
-	<g id="form-body" class="fm-body">
+
+	<g id="form-body">
 		<rect x="0" y="0" width="612" height="792" style="fill: #ffffff"/>
 		<!-- ########## DESIGN ELEMENTS ########## -->
 		<line x1="225" y1="35" x2="520" y2="35" style="stroke:rgb(0,0,0);stroke-width:.5" />
@@ -78,8 +8,8 @@
 		<line x1="55" y1="720" x2="430" y2="720" style="stroke:rgb(0,0,0);stroke-width:.5" />
 
 		<!-- ########## ADDRESS BLOCK ########## -->
-		<g id="College-Address" transform="matrix(1 0 0 1 400 50)" class="sv-address">
-			<text x="0" y="0" class="tsb">OFFICE OF THE DEAN</text>
+		<g id="College-Address" transform="matrix(1 0 0 1 400 50)" style="font-size: 8px;">
+			<text x="0" y="0" style="font-weight: 700;">OFFICE OF THE DEAN</text>
 			<text x="0" y="10">202 Cowgill Hall (0205)</text>
 			<text x="0" y="20">Blacksburg, Virginia, 24061</text>
 			<text x="0" y="30">540-231-6416 FAX: 540-231-6332</text>
@@ -87,42 +17,42 @@
 		</g>
 
 		<!-- ########## POLICY BLOCK ########## -->
-		<g id="AgreementText" transform="matrix(1 0 0 1 70 120)" class="sv-paragraph">
-			<text x="10">This letter is to formalize the <tspan class="tsb">agreement for university equipment used at home.</tspan></text>
-			<text x="10" y="24" class="sv-paragraph ls2">
+		<g id="AgreementText" transform="matrix(1 0 0 1 70 120)" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;">
+			<text x="10">This letter is to formalize the <tspan style="font-weight: 700;">agreement for university equipment used at home.</tspan></text>
+			<text x="10" y="24" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;letter-spacing: .02em;">
 					This equipment is being provided to you for university business while you are an employee in the 
 			</text>
-			<text y="36" class="ls3">
+			<text y="36" style="letter-spacing: .02em;">
 					College of Architecture and Urban Studies and is subject to Virginia Tech Acceptable Usage Policy.  
 			</text>
-			<text y="48" class="ls1">
+			<text y="48" style="letter-spacing: .01em;">
 					This equipment is owned by the university and will be returned upon request of the Department Head, 
 			</text>
-			<text y="60" class="ls25">
+			<text y="60" style="letter-spacing: .029em;">
 					Auditors, Inventory Services, or prior to your departure from this department. Failure to return the 
 			</text>
-			<text y="72" class="ls2">
+			<text y="72" style="letter-spacing: .02em;">
 					equipment as requested will result in a deduction of the original purchase price from your paycheck, 
 			</text>	
 			<text y="84">
 				and/or other debt collection means.
 			</text>
-			<text x="10" y="102" class="ls15">
+			<text x="10" y="102" style="letter-spacing: .018em;">
 					In the event that this equipment is destroyed or lost, you are responsible for immediately notifying 
 			</text>
-			<text y="114" class="sv-paragraph ls6">
+			<text y="114" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;letter-spacing: .06em;">
 					your department, and for working with your department's fixed assets liaison to ensure Risk  
 			</text>
-			<text y="126" class="sv-paragraph">
+			<text y="126" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;">
 					 Management, Inventory Service, and your local Police Department are also notified.
 			</text>
-			<text y="150" class="fs90">
+			<text y="150" style="font-size: .90em;">
 					This letter will be kept in your personnel file, and the department fixed assets liaison will retain a
 					duplicate copy.
 			</text>
 		</g>
 		<!-- ########## INFORMATION BLOCK ########## -->
-		<g transform="matrix(1 0 0 1 70 285)" class="sv-paragraph sv-block-header">
+		<g transform="matrix(1 0 0 1 70 285)" style="font-family: arial;font-size: 7px;line-height: 100%;height: 300px;font-size: 7px;font-weight: 700;">
 			<rect width="455" height="48" style="fill:none;stroke: rgb(0,0,0); stroke-width:1;" />
 			<!-- HORIZONTAL LINES -->
 			<line x1="0" y1="12" x2="455" y2="12" style="stroke:rgb(0,0,0);stroke-width:1" />
@@ -161,7 +91,7 @@
 			<text id="office-fill" x="373" y="45">Example</text>
 		</g>
 		<!-- ########## SIGNATURES ########## -->
-		<g transform="matrix(1 0 0 1 70 345)" class="sv-paragraph">
+		<g transform="matrix(1 0 0 1 70 345)" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;">
 			<!-- <rect width="455" height="48" style="fill:none;stroke: rgb(0,0,0); stroke-width:1;" />
 			HORIZONTAL LINES -->
 
@@ -171,59 +101,59 @@
 				<text x="15" y="0" id="acceptance-employee">Employee Name</text>
 				<text x="215" y="0">, acknowledge and agree to the above, in its entirety.</text>
 
-				<text x="0" y="46" class="fs90">SIGNATURE</text>
+				<text x="0" y="46" style="font-size: .90em;">SIGNATURE</text>
 				<line x1="0" y1="36" x2="355" y2="36" style="stroke:rgb(0,0,0);stroke-width:.5" />
-				<text x="390" y="46" class="fs90">DATE</text>
+				<text x="390" y="46" style="font-size: .90em;">DATE</text>
 				<line x1="365" y1="36" x2="455" y2="36" style="stroke:rgb(0,0,0);stroke-width:.5" />
 			</g>
 
 			<!-- ACCEPTANCE DEPARTMENT HEAD -->
 			<g transform="matrix(1 0 0 1 0 84)">
-				<text x="0" y="0" class="fs85">I, the Department Head for the employee listed above, approve this equipment is for universtiy business use at home.</text>
-				<text x="0" y="46" class="fs90">SIGNATURE</text>
+				<text x="0" y="0" style="font-size: .85em;">I, the Department Head for the employee listed above, approve this equipment is for universtiy business use at home.</text>
+				<text x="0" y="46" style="font-size: .90em;">SIGNATURE</text>
 				<line x1="0" y1="36" x2="355" y2="36" style="stroke:rgb(0,0,0);stroke-width:.5" />
-				<text x="390" y="46" class="fs90">DATE</text>
+				<text x="390" y="46" style="font-size: .90em;">DATE</text>
 				<line x1="365" y1="36" x2="455" y2="36" style="stroke:rgb(0,0,0);stroke-width:.5" />
 			</g>
 			<!-- ACCEPTANCE FIXED ASSETS -->
 			<g transform="matrix(1 0 0 1 0 156)">
-				<text x="0" y="0" class="fs90">I, the Fixed Asets Liaison, have accounted for and updated the above information in the fixed assets system</text>
-				<text x="0" y="46" class="fs90">SIGNATURE</text>
+				<text x="0" y="0" style="font-size: .90em;">I, the Fixed Asets Liaison, have accounted for and updated the above information in the fixed assets system</text>
+				<text x="0" y="46" style="font-size: .90em;">SIGNATURE</text>
 				<line x1="0" y1="36" x2="355" y2="36" style="stroke:rgb(0,0,0);stroke-width:.5" />
-				<text x="390" y="46" class="fs90">DATE</text>
+				<text x="390" y="46" style="font-size: .90em;">DATE</text>
 				<line x1="365" y1="36" x2="455" y2="36" style="stroke:rgb(0,0,0);stroke-width:.5" />
 			</g>
 			<!-- RETURN EMPLOYEE -->
 			<g transform="matrix(1 0 0 1 0 228)">
-				<text x="0" y="0" class="fs90 tsb">ACKNOWLEDGEMENT OF EQUIPMENT RETURN</text>
+				<text x="0" y="0" style="font-weight: 700;font-size: .90em;">ACKNOWLEDGEMENT OF EQUIPMENT RETURN</text>
 				<text x="0" y="24">I,</text>
 				<text x="15" y="24" id="return-employee">Employee Name</text>
 				<text x="300" y="24">, have returned this equipment.</text>
-				<text x="0" y="70" class="fs90">SIGNATURE</text>
+				<text x="0" y="70" style="font-size: .90em;">SIGNATURE</text>
 				<line x1="0" y1="60" x2="355" y2="60" style="stroke:rgb(0,0,0);stroke-width:.5" />
-				<text x="390" y="70" class="fs90">DATE</text>
+				<text x="390" y="70" style="font-size: .90em;">DATE</text>
 				<line x1="365" y1="60" x2="455" y2="60" style="stroke:rgb(0,0,0);stroke-width:.5" />
 			</g>
 			<!-- RETURN FIXED ASSETS -->
 			<g transform="matrix(1 0 0 1 0 320)">
-				<text x="0" y="0" class="fs90">I, the Fixed Assets Liaison, have reconciled the equipment returned with the information listed above and have </text>
+				<text x="0" y="0" style="font-size: .90em;">I, the Fixed Assets Liaison, have reconciled the equipment returned with the information listed above and have </text>
 				<text x="0" y="12">updated the fixed assets sytem to reflect its return.</text>
-				<text x="0" y="46" class="fs90">SIGNATURE</text>
+				<text x="0" y="46" style="font-size: .90em;">SIGNATURE</text>
 				<line x1="0" y1="36" x2="355" y2="36" style="stroke:rgb(0,0,0);stroke-width:.5" />
-				<text x="390" y="46" class="fs90">DATE</text>
+				<text x="390" y="46" style="font-size: .90em;">DATE</text>
 				<line x1="365" y1="36" x2="455" y2="36" style="stroke:rgb(0,0,0);stroke-width:.5" />
 			</g>
 		</g>
 
 		<!-- ########## FOOTER ########## -->
 		<g>
-			<text id="footer-motto" x="374" y="718" class="sv-footer1">UT PROSIM</text>
+			<text id="footer-motto" x="374" y="718" style="font-family: arial;font-size: 9px; text-transform: uppercase; font-style: italic; font-weight: 700; text-align: center; letter-spacing: .05rem;">UT PROSIM</text>
 		</g>
 		<g>
-			<text id="footer-text1" x="306" y="735" class="sv-footer2" text-anchor="middle" alignment-baseline="central">Virginia Tech Polytechnic Institiute and State University</text>
+			<text id="footer-text1" x="306" y="735" style="font-family: arial; font-size: 7px; text-transform: uppercase; text-align: center; letter-spacing: .15rem;" text-anchor="middle" alignment-baseline="central">Virginia Tech Polytechnic Institiute and State University</text>
 		</g>
 		<g>
-			<text id="footer-text2" x="306" y="750"  class="sv-footer3" text-anchor="middle" alignment-baseline="central">An equal opportunity, affirmative action institution</text>
+			<text id="footer-text2" x="306" y="750"  style="font-family: arial; font-size: 8px; font-style: italic; letter-spacing: .1rem;" text-anchor="middle" alignment-baseline="central">An equal opportunity, affirmative action institution</text>
 		</g>
 
 		<g transform="matrix(1 0 0 1 0 0)" style="clip-path:url(#SVGID_12_);">
