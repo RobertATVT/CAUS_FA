@@ -18,18 +18,18 @@
 
 		<!-- ########## POLICY BLOCK ########## -->
 		<g id="AgreementText" transform="matrix(1 0 0 1 70 120)" style="font-family: arial;font-size: 11px;line-height: 100%;height: 300px;">
-			<text x="38%" text-anchor="middle" alignment-baseline="middle"><tspan style="font-weight: 700;text-transform: uppercase;text-align: center;">acknowledgment for the use of university equipment</tspan></text>
+			<text x="38%" text-anchor="middle" alignment-baseline="middle"><tspan style="font-weight: 700;text-align: center;">ACKNOWLEDGEMENT FOR THE USE OF UNIVERSITY EQUIPMENT</tspan></text>
 			<text x="10" y="24" style="letter-spacing: .0225em;">
 					This equipment is being provided to you for university business while you are an employee in the 
 			</text>
-			<text y="36" style="letter-spacing: .018em;">
-					College of Architecture and Urban Studies and is subject to the <a href="http://www.policies.vt.edu/7000.pdf" style="font-weight: 700; ">Virginia Tech Acceptable Use and</a>  
+			<text y="36" style="letter-spacing: .03em;">
+					College of Architecture and Urban Studies and is subject to the Virginia Tech Acceptable Use and 
 			</text>
-			<text y="48" style="letter-spacing: .035em;">
-					<a href="http://www.policies.vt.edu/7000.pdf" style="font-weight: 700;">Administration of Computer and Communications Systems Policy</a> and the <a href="https://cafm.vt.edu/content/dam/cafm_vt_edu/buscondstand/Statement_Business_Conduct_Standards.pdf" style="font-weight: 700;">VT Statement of</a>
+			<text y="48" style="letter-spacing: .07em;">
+					Administration of Computer and Communications Systems Policy and the VT Statement of
 			</text>
 			<text y="60" style="letter-spacing: .03em;">
-					<a href="https://cafm.vt.edu/content/dam/cafm_vt_edu/buscondstand/Statement_Business_Conduct_Standards.pdf" style="font-weight: 700; ">Business Conduct Standards</a>.
+					Business Conduct Standards.
 			</text>
 			<text x="10" y="84">
 				It is understood that this equipment is owned by Virginia Tech and custodianship will be returned upon
