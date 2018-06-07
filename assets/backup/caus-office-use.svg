@@ -17,8 +17,8 @@
 		</g>
 
 		<!-- ########## POLICY BLOCK ########## -->
-		<g id="AgreementText" transform="matrix(1 0 0 1 70 120)" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;">
-			<text x="38%" text-anchor="middle" alignment-baseline="middle"><tspan style="font-family: arial;font-size: 9.5px;font-weight: 700;text-transform: uppercase;text-align: center;">acknowledgment for the use of university equipment</tspan></text>
+		<g id="AgreementText" transform="matrix(1 0 0 1 70 120)" style="font-family: arial;font-size: 11px;line-height: 100%;height: 300px;">
+			<text x="38%" text-anchor="middle" alignment-baseline="middle"><tspan style="font-weight: 700;text-transform: uppercase;text-align: center;">acknowledgment for the use of university equipment</tspan></text>
 			<text x="10" y="24" style="letter-spacing: .0225em;">
 					This equipment is being provided to you for university business while you are an employee in the 
 			</text>
