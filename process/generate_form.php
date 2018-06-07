@@ -28,7 +28,7 @@ function causfa_form_fill_data() {
         'desc' => $desc,
         'pid' => $PID,
         'bldg' => $bldg,
-        'office' => 0
+        'office' => '0'
     );
     wp_send_json($output);
 }

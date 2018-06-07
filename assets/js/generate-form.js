@@ -70,19 +70,19 @@ function generateHomeUse(data) {
 	doc.text(398, 330, 'OFFICE');
 
 	doc.setFontType("normal");
-	doc.text(105, 306, '[manufacturer]', null, null, 'center');
-	doc.text(203, 306, '[model]', null, null, 'center');
-	doc.text(338, 306, '[serial]', null, null, 'center');
-	doc.text(465, 306, '[ptag]', null, null, 'center');
-	doc.text(185, 318, '[description]');
-	doc.text(135, 330, '[pid]');
-	doc.text(280, 330, '[building]');
-	doc.text(440, 330, '[office]');
+	doc.text(105, 306, data['manufacturer'], null, null, 'center');
+	doc.text(203, 306, data['model'], null, null, 'center');
+	doc.text(338, 306, data['serial'], null, null, 'center');
+	doc.text(465, 306, data['ptag'], null, null, 'center');
+	doc.text(185, 318, data['desc']);
+	doc.text(135, 330, data['pid']);
+	doc.text(280, 330, data['bldg']);
+	doc.text(440, 330, data['office']);
 
 	doc.setFontSize(10);
 	doc.text(70, 355, 'I,');
 	doc.setFontType("bold");
-	doc.text(80, 355, '[employee name]');
+	doc.text(80, 355, data['custodian']);
 	doc.setFontType("normal");
 	doc.text(265, 355, ', acknowledge and agree to the above, in its entirety.');
 
@@ -122,7 +122,7 @@ function generateHomeUse(data) {
 	doc.setFontSize(10);
 	doc.text(70, 590, 'I,');
 	doc.setFontType("bold");
-	doc.text(80, 590, '[employee name]');
+	doc.text(80, 590, data['custodian']);
 	doc.setFontType("normal");
 	doc.text(265, 590, ', have returned this equipment.');
 
