@@ -41,7 +41,7 @@ function causfa_enqueue() {
 	wp_register_script('causfa_tablesort_script', plugins_url('assets/js/tablesort.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
 	wp_register_script('causfa_tabs_script', plugins_url('assets/js/tabs.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_forms_script', plugins_url('assets/js/generate-form.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
-    wp_register_script('jspdf_script', 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js', array(), false, true);
+    wp_register_script('jspdf_script', plugins_url('assets/js/jsPDF-master/dist/jspdf.debug.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('causfa_modal');
