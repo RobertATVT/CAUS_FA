@@ -21,23 +21,21 @@ doc.text(400, 90, 'www.caus.vt.edu');
 doc.setFont("helvetica");
 doc.setFontType("bold");
 doc.setFontSize(9);
-doc.text(306, 120, 'AGREEMENT FOR UNIVERSITY EQUIPMENT USED AT HOME', null, null, 'center');
+doc.text(306, 120, 'AGREEMENT FOR THE USE OF UNIVERSITY EQUIPMENT', null, null, 'center');
 doc.setFontSize(10);
 doc.setFontType("normal");
 
 doc.text(80, 144, 'This equipment is being provided to you for university business while you are an employee in the');
-doc.text(70, 156, 'College of Architecture and Urban Studies and is subject to Virginia Tech Acceptable Usage Policy.');
-doc.text(70, 168, 'This equipment is owned by the university and will be returned upon request of the Department Head,');
-doc.text(70, 180, 'Auditors, Inventory Services, or prior to your departure from this department. Failure to return the');
-doc.text(70, 192, 'equipment as requested will result in a deduction of the original purchase price from your paycheck,');
-doc.text(70, 204, 'and/or other debt collection means.');
+doc.text(70, 156, 'College of Architecture and Urban Studies and is subject to Virginia Tech Acceptable Use and');
+doc.text(70, 168, 'Administration of Computer and Communications Systems Policy, and the VT Statement of');
+doc.text(70, 180, 'Business Conduct Standards.');
 
-doc.text(80, 226, 'In the event that this equipment is destroyed or lost, you are responsible for immediately notifying');
-doc.text(70, 238, 'your department, and for working with your department\'s fixed assets liaison to ensure Risk');
-doc.text(70, 250, 'Management, Inventory Service, and your local Police Department are also notified.');
-doc.setFontSize(8.5);
-
-doc.text(80, 274, 'This letter will be kept in your personnel file, and the department fixed assets liaison will retain a duplicate copy.');
+doc.text(80, 204, 'It is understoof that this equipment is owned by Virginia Tech and custodianship will be returned');
+doc.text(70, 216, 'upon request of the Departmen Head, Auditors, Inventory Services, or prior to your departure from');
+doc.text(70, 228, 'CAUS. In the event that this equipment is destroyed or lost, you are responsible for immediately');
+doc.text(70, 240, 'notifying your Department Head and your departments fixed assets liaison. Any problems that you');
+doc.text(70, 252, 'with the asset will be reported to your IT Staff. Should this equipment need to be moved from its');
+doc.text(70, 264, 'current location, prior approval and coordination with IT and/or Facilities is required.');
 
 doc.setDrawColor(0);
 doc.setFillColor(230,230,230);
@@ -85,66 +83,54 @@ doc.text(80, 355, '[employee name]');
 doc.setFontType("normal");
 doc.text(265, 355, ', acknowledge and agree to the above, in its entirety.');
 
-doc.line(70, 390, 410, 390);
-doc.line(430, 390, 525, 390);
+doc.line(70, 400, 410, 400);
+doc.line(430, 400, 525, 400);
 
 doc.setFontType("bold");
-doc.text(70, 400, 'SIGNATURE');
-doc.text(460, 400, 'DATE');
+doc.text(70, 410, 'SIGNATURE');
+doc.text(460, 410, 'DATE');
 
 doc.setFontSize(8.75);
 doc.setFontType("normal");
-doc.text(70, 420, 'I, the Department Head for the employee listed above, approve this equipment is for universtiy business use at home.');
+doc.text(70, 440, 'I, the Fixed Asets Liaison, have accounted for and updated the above information in the fixed assets system.');
 
-doc.line(70, 455, 410, 455);
-doc.line(430, 455, 525, 455);
+doc.line(70, 485, 410, 485);
+doc.line(430, 485, 525, 485);
 
 doc.setFontSize(10);
 doc.setFontType("bold");
-doc.text(70, 465, 'SIGNATURE');
-doc.text(460, 465, 'DATE');
+doc.text(70, 495, 'SIGNATURE');
+doc.text(460, 495, 'DATE');
+
+doc.text(70, 535, 'ACKNOWLEDGEMENT OF EQUIPMENT RETURN');
+
+doc.setFontSize(10);
+doc.text(70, 570, 'I,');
+doc.setFontType("bold");
+doc.text(80, 570, '[employee name]');
+doc.setFontType("normal");
+doc.text(265, 570, ', have returned this equipment.');
+
+doc.line(70, 615, 410, 615);
+doc.line(430, 615, 525, 615);
+
+doc.setFontSize(10);
+doc.setFontType("bold");
+doc.text(70, 625, 'SIGNATURE');
+doc.text(460, 625, 'DATE');
 
 doc.setFontSize(8.75);
 doc.setFontType("normal");
-doc.text(70, 485, 'I, the Fixed Asets Liaison, have accounted for and updated the above information in the fixed assets system');
+doc.text(80, 655, 'I, the Fixed Assets Liaison, have reconciled the equipment returned with the information listed above and have ');
+doc.text(70, 665, 'updated the fixed assets sytem to reflect its return.');
 
-doc.line(70, 520, 410, 520);
-doc.line(430, 520, 525, 520);
-
-doc.setFontSize(10);
-doc.setFontType("bold");
-doc.text(70, 535, 'SIGNATURE');
-doc.text(460, 535, 'DATE');
-
-doc.text(70, 565, 'ACKNOWLEDGEMENT OF EQUIPMENT RETURN');
-
-doc.setFontSize(10);
-doc.text(70, 590, 'I,');
-doc.setFontType("bold");
-doc.text(80, 590, '[employee name]');
-doc.setFontType("normal");
-doc.text(265, 590, ', have returned this equipment.');
-
-doc.line(70, 625, 410, 625);
-doc.line(430, 625, 525, 625);
+doc.line(70, 710, 410, 710);
+doc.line(430, 710, 525, 710);
 
 doc.setFontSize(10);
 doc.setFontType("bold");
-doc.text(70, 635, 'SIGNATURE');
-doc.text(460, 635, 'DATE');
-
-doc.setFontSize(8.75);
-doc.setFontType("normal");
-doc.text(80, 670, 'I, the Fixed Assets Liaison, have reconciled the equipment returned with the information listed above and have ');
-doc.text(70, 680, 'updated the fixed assets sytem to reflect its return.');
-
-doc.line(70, 715, 410, 715);
-doc.line(430, 715, 525, 715);
-
-doc.setFontSize(10);
-doc.setFontType("bold");
-doc.text(70, 725, 'SIGNATURE');
-doc.text(460, 725, 'DATE');
+doc.text(70, 720, 'SIGNATURE');
+doc.text(460, 720, 'DATE');
 
 doc.setFontSize(11);
 doc.setFontType("bolditalic");
