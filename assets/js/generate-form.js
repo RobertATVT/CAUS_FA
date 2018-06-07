@@ -17,7 +17,7 @@ function generateHomeUse(data) {
 	doc.text(400, 60, '202 Cowgill Hall (0205)');
 	doc.text(400, 70, 'Blacksburg, Virginia, 24061');
 	doc.text(400, 80, '540-231-6416 FAX: 540-231-6332');
-	doc.textWithLink(400, 90, 'www.caus.vt.edu', {url:'https://www.caus.vt.edu'});
+	doc.text(400, 90, 'www.caus.vt.edu');
 
 	doc.setFont("helvetica");
 	doc.setFontType("bold");
