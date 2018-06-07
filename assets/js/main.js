@@ -45,19 +45,17 @@ function transferAsset(PID_dest) {
 }
 function generateForm(element, action) {
     var ptag = jQuery('#formsModal').find('#formsPtag').val();
-    var form_type = '';
-    if (action == 0) {
-        var form_type = 'causfa_generate_form_Home';
-    } else {
-        form_type = 'causfa_generate_form_Office';
-    }
     var form = {
-        action: form_type,
+        action: 'causfa_form_fill_data',
         ptag: ptag
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] == 1) {
-            window.open(data['url'])
+            if (action == 1) {
+                generateOffieUse(data);
+            } else {
+                generateHomeUse(data);
+            }
         }
     });
 }

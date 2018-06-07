@@ -5,89 +5,30 @@
  * Date: 3/17/18
  * Time: 11:37 PM
  */
-function causfa_generate_form_Home() {
+
+function causfa_form_fill_data() {
     global $wpdb;
     $ptag = $_POST['ptag'];
-    $result = $wpdb->get_row("SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = ".$ptag.";");
+    $result = $wpdb->get_row("SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = " . $ptag . ";");
     $model = $result->FZVFORG_MODEL;
     $manufacturer = $result->FZVFORG_MANUFACTURER;
     $custodian = $result->FZVFORG_CUSTODIAN;
     $serial = $result->FZVFORG_SERIAL_NUM;
     $desc = $result->FZVFORG_DESCRIPTION;
-    require_once(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/fpdf181/fpdf.php');
-    require_once(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/FPDI-2.0.2/src/autoload.php');
-    require_once(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/FPDI-2.0.2/src/Fpdi.php');
-    $pdf = new \setasign\Fpdi\FPDI();
-    $pdf->setSourceFile(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/CAUS_Home_Use_Form.pdf');
-    $templateID = $pdf->importPage(1);
-    $size = $pdf->getTemplateSize($templateID);
-    if ($size['width'] > $size['height']) {
-        $pdf->AddPage('L', array($size['width'], $size['height']));
-    } else {
-        $pdf->AddPage('P', array($size['width'], $size['height']));
-    }
-    $pdf->useTemplate($templateID);
-    $pdf->setXY(24, 118);
-    $pdf->SetFont('Times', '', 12);
-    $pdf->SetFontSize(10);
-    $pdf->Cell(40,4,$manufacturer, 0, 0, 'L', false);
-    $pdf->Cell(35,4,$model, 0, 0, 'L', false);
-    $pdf->Cell(44,4,$serial, 0, 0, 'L', false);
-    $pdf->Cell(37,4,$ptag, 0, 0, 'L', false);
-    $pdf->setXY(64, 123);
-    $pdf->Cell(115,4, $desc, 0, 0, 'L', false);
-    $pdf->SetXY(28, 134);
-    $pdf->Cell(40, 4, $custodian, 0,0,'L', false);
-    $pdf->Output('F', plugin_dir_path(CAUSFA_PLUGIN_URL).'CAUS_Home_Use_Form.pdf');
+    $result = $wpdb->get_row("SELECT * FROM causfa_custodians WHERE Name = '" . $custodian . "';");
+    $PID = $result->PID;
+    $bldg = $result->Office;
     $output = array(
         'status' => 1,
-        'url' => plugin_dir_url(CAUSFA_PLUGIN_URL).'/CAUS_Home_Use_Form.pdf'
+        'ptag' => $ptag,
+        'model' => $model,
+        'manufacturer' => $manufacturer,
+        'custodian' => $custodian,
+        'serial' => $serial,
+        'desc' => $desc,
+        'pid' => $PID,
+        'bldg' => $bldg,
+        'office' => 0
     );
     wp_send_json($output);
-}
-use Dompdf\Dompdf;
-function causfa_generate_form_Home_SVG() {
-    global $wpdb;
-    $contents = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/backup/testForm.html', true);
-    echo $contents;
-    /*$ptag = $_POST['ptag'];
-    $result = $wpdb->get_row("SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = ".$ptag.";");
-    $model = $result->FZVFORG_MODEL;
-    $manufacturer = $result->FZVFORG_MANUFACTURER;
-    $custodian = $result->FZVFORG_CUSTODIAN;
-    $serial = $result->FZVFORG_SERIAL_NUM;
-    $desc = $result->FZVFORG_DESCRIPTION;*/
-    require_once(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/dompdf/autoload.inc.php');
-    $pdf = new Dompdf();
-    $pdf->loadHtml($contents);
-    $pdf->setPaper('letter', 'portrait');
-    $pdf->render();
-    $output = $pdf->output();
-    //echo $output;
-    file_put_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'CAUS_OFFICE_USE_FORM.pdf', $output);
-}
-
-function causfa_generate_form_Office() {
-    require_once(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/fpdf181/fpdf.php');
-    require_once(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/FPDI-2.0.2/src/autoload.php');
-    require_once(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/FPDI-2.0.2/src/Fpdi.php');
-    $pdf = new \setasign\Fpdi\FPDI();
-    $pdf->setSourceFile(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/CAUS_Office_Use_Form.pdf');
-    $templateID = $pdf->importPage(1);
-    $size = $pdf->getTemplateSize($templateID);
-    if ($size['width'] > $size['height']) {
-        $pdf->AddPage('L', array($size['width'], $size['height']));
-    } else {
-        $pdf->AddPage('P', array($size['width'], $size['height']));
-    }
-    $pdf->useTemplate($templateID);
-    $pdf->Output('D', 'CAUS_Office_Use_Form.pdf');
-}
-function causfa_SVG_to_PDF() {
-
-    $im = new imagick();
-    $svg = '<?xml version="1.0"?>'.file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets/CAUS_HOME_USE_FORM.svg');
-    $im->readImageBlob($svg);
-    $im->setImageFormat('pdf');
-    $im->writeImage(wp_upload_dir()['basedir'].'/test.pdf', false);
 }

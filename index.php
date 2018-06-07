@@ -57,8 +57,7 @@ add_action( 'wp_ajax_causfa_autocomplete_PID', 'causfa_autocomplete_PID');
 add_action( 'wp_ajax_causfa_pending_action', 'causfa_pending_action');
 add_action( 'wp_ajax_causfa_new_custodian', 'causfa_new_custodian');
 add_action( 'wp_ajax_causfa_ajax_logger', 'causfa_ajax_logger');
-add_action( 'wp_ajax_causfa_generate_form_Home', 'causfa_generate_form_Home');
-add_action( 'wp_ajax_causfa_generate_form_Office', 'causfa_generate_form_Office');
+add_action( 'wp_ajax_causfa_form_fill_data', 'causfa_form_fill_data');
 add_action( 'wp_ajax_causfa_upload_image', 'causfa_upload_image');
 add_action( 'wp_ajax_causfa_upload_form_home', 'causfa_upload_form_home');
 add_action( 'wp_ajax_causfa_upload_form_office', 'causfa_upload_form_office');
@@ -70,5 +69,5 @@ add_action( 'wp_ajax_causfa_get_custodian', 'causfa_get_custodian');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
-add_shortcode( 'causfa_test', 'causfa_SVG_to_PDF'); //shortcode for a dev space to test functionality
+add_shortcode( 'causfa_test', 'causfa_fill_form_Home_SVG'); //shortcode for a dev space to test functionality
 add_shortcode( 'causfa_admin', 'causfa_load_admin_view'); // shortcode for the admin page of the app
