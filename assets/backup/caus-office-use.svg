@@ -75,20 +75,20 @@
 			<text x="240" y="8.5">SERIAL NUMBER</text>
 			<text x="370" y="8.5">VT ASSET TAG</text>
 			<!-- TOP LINE FILL -->
-			<text id="manufacturer-fill" text-anchor="middle" x="35" y="20.5">Example</text>
-			<text id="model-fill" text-anchor="middle" x="137" y="20.5">Example</text>
-			<text id="serial-fill" text-anchor="middle" x="268" y="20.5">Example</text>
-			<text id="ptag-fill" text-anchor="middle" x="395" y="20.5">Example</text>
+			<text id="manufacturer-fill" text-anchor="middle" x="35" y="20.5">[manufacturer]</text>
+			<text id="model-fill" text-anchor="middle" x="137" y="20.5">[model]</text>
+			<text id="serial-fill" text-anchor="middle" x="268" y="20.5">[serial]</text>
+			<text id="ptag-fill" text-anchor="middle" x="395" y="20.5">[ptag]</text>
 			<!-- SECOND LINE -->
 			<text x="5" y="32.5">EQUIPMENT DESCRIPTION</text>
-			<text x="115" y="32.5">Example</text>
+			<text x="115" y="32.5">[description]</text>
 			<!-- THIRD LINE -->
 			<text x="5" y="45">EMPLOYEE PID</text>
-			<text id="empid-fill" x="70" y="45">Example</text>
+			<text id="empid-fill" x="70" y="45">[pid]</text>
 			<text x="165" y="45">BUILDING</text>
-			<text id="bldg-fill" x="215" y="45">Example</text>
+			<text id="bldg-fill" x="215" y="45">[building]</text>
 			<text x="325" y="45">OFFICE #</text>
-			<text id="office-fill" x="373" y="45">Example</text>
+			<text id="office-fill" x="373" y="45">[office]</text>
 		</g>
 		<!-- ########## SIGNATURES ########## -->
 		<g transform="matrix(1 0 0 1 70 365)" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;">
@@ -98,7 +98,7 @@
 			<!-- ACCEPTANCE EMPLOYEE -->
 			<g transform="matrix(1 0 0 1 0 12)">
 				<text x="0" y="0">I,</text>
-				<text x="15" y="0" id="acceptance-employee">Employee Name</text>
+				<text x="15" y="0" id="acceptance-employee">[name]</text>
 				<text x="215" y="0">, acknowledge and agree to the above, in its entirety.</text>
 
 				<text x="0" y="46" style="font-size: .90em;">SIGNATURE</text>
@@ -118,7 +118,7 @@
 			<g transform="matrix(1 0 0 1 0 168)">
 				<text x="0" y="0" style="font-size: .90em; font-weight: 700;">ACKNOWLEDGEMENT OF EQUIPMENT RETURN</text>
 				<text x="0" y="24">I,</text>
-				<text x="15" y="24" id="return-employee">Employee Name</text>
+				<text x="15" y="24" id="return-employee">[name]</text>
 				<text x="300" y="24">, have returned this equipment.</text>
 				<text x="0" y="70" style="font-size: .90em;">SIGNATURE</text>
 				<line x1="0" y1="60" x2="355" y2="60" style="stroke:rgb(0,0,0);stroke-width:.5" />
