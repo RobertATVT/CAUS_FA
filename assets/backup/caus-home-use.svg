@@ -17,9 +17,9 @@
 		</g>
 
 		<!-- ########## POLICY BLOCK ########## -->
-		<g id="AgreementText" transform="matrix(1 0 0 1 70 120)" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;">
+		<g id="AgreementText" transform="matrix(1 0 0 1 70 120)" style="font-family: arial;font-size: 11px;line-height: 100%;height: 300px;">
 			<text x="10">This letter is to formalize the <tspan style="font-weight: 700;">agreement for university equipment used at home.</tspan></text>
-			<text x="10" y="24" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;letter-spacing: .02em;">
+			<text x="10" y="24" style="letter-spacing: .02em;">
 					This equipment is being provided to you for university business while you are an employee in the 
 			</text>
 			<text y="36" style="letter-spacing: .02em;">
@@ -40,13 +40,13 @@
 			<text x="10" y="102" style="letter-spacing: .018em;">
 					In the event that this equipment is destroyed or lost, you are responsible for immediately notifying 
 			</text>
-			<text y="114" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;letter-spacing: .06em;">
+			<text y="114" style="letter-spacing: .06em;">
 					your department, and for working with your department's fixed assets liaison to ensure Risk  
 			</text>
-			<text y="126" style="font-family: arial;font-size: 10px;line-height: 100%;height: 300px;">
+			<text y="126">
 					 Management, Inventory Service, and your local Police Department are also notified.
 			</text>
-			<text y="150" style="font-size: .90em;">
+			<text y="150" style="font-size: 10px;">
 					This letter will be kept in your personnel file, and the department fixed assets liaison will retain a
 					duplicate copy.
 			</text>
