@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/generate-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/generate-form.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,8 +91,17 @@
       <file leaf-file-name="generate-form.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/generate-form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="319" column="101" selection-start-line="319" selection-start-column="101" selection-end-line="319" selection-end-column="101" />
+            <state relative-caret-position="506">
+              <caret line="307" column="26" selection-start-line="307" selection-start-column="26" selection-end-line="307" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="caus-office-jpdf.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/backup/caus-office-jpdf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="142" column="97" selection-start-line="78" selection-end-line="142" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -223,7 +233,7 @@
       <path value="$PROJECT_DIR$/assets/js/jsPDF-master/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="85" />
     <option name="y" value="24" />
     <option name="width" value="1245" />
@@ -345,10 +355,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285453000" />
+    <option name="totallyTimeSpent" value="286511000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="24" width="1245" height="797" extended-state="0" />
+    <frame x="85" y="24" width="1245" height="797" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -357,7 +367,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32905984" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.47547796" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.47547796" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32917705" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
@@ -417,13 +427,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/process/set_session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style4.css" />
     <entry file="file://$PROJECT_DIR$/assets/index4.html" />
     <entry file="file://$PROJECT_DIR$/assets/html/faa-footer-template.html" />
@@ -696,10 +699,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/backup/caus-office-jpdf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="142" column="97" selection-start-line="78" selection-end-line="142" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/generate-form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="319" column="101" selection-start-line="319" selection-start-column="101" selection-end-line="319" selection-end-column="101" />
+        <state relative-caret-position="506">
+          <caret line="307" column="26" selection-start-line="307" selection-start-column="26" selection-end-line="307" selection-end-column="26" />
         </state>
       </provider>
     </entry>
