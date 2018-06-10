@@ -17,7 +17,8 @@ function causfa_form_fill_data() {
     $desc = $result->FZVFORG_DESCRIPTION;
     $result = $wpdb->get_row("SELECT * FROM causfa_custodians WHERE Name = '" . $custodian . "';");
     $PID = $result->PID;
-    $bldg = $result->Office;
+    $bldg = $result->Building;
+    $office = $result->Office;
     $output = array(
         'status' => 1,
         'ptag' => $ptag,
@@ -28,7 +29,7 @@ function causfa_form_fill_data() {
         'desc' => $desc,
         'pid' => $PID,
         'bldg' => $bldg,
-        'office' => '0'
+        'office' => $office
     );
     wp_send_json($output);
 }

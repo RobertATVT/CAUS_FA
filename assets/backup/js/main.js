@@ -62,9 +62,13 @@ function generateForm(element, action) {
     });
 }
 function new_custodian_submit() {
+    var building = jQuery('#Building');
     var office = jQuery('#Office').val();
     var phone = jQuery('#Phone').val();
     var org = jQuery('#org').val();
+    if (building == null) {
+        alert('Building field cannot be empty');
+    }
     if (office == null) {
         alert('Office field cannot be empty');
     } else if (phone == null) {
@@ -72,6 +76,7 @@ function new_custodian_submit() {
     } else {
         var form = {
             'action': 'causfa_new_custodian',
+            'building': building,
             'office': office,
             'phone': phone,
             'org': org

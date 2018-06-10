@@ -212,6 +212,7 @@ function custodianModalRequested() {
         action: 'causfa_get_custodian'
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+        jQuery('#Building').val(data['Building']);
         jQuery('#Office').val(data['Office']);
         jQuery('#Phone').val(data['Phone']);
         jQuery('#org').val(data['Org']);

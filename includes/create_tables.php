@@ -129,6 +129,7 @@ function create_tables() {
         Name varchar(1000) NOT NULL,
         PID varchar(32) NOT NULL,
         Email varchar(39) NOT NULL,
+        Building varchar(1000) NOT NULL,
         Office varchar(1000) NOT NULL,
         Phone varchar(13) NOT NULL,
         Org varchar(6) NOT NULL,

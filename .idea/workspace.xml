@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/generate-form.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/generate-form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/backup/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backup/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/faa-modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/faa-new-custodian.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-new-custodian.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/create_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/create_tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/new_custodian.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/new_custodian.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +36,7 @@
       <file leaf-file-name="groups.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/groups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3015">
+            <state>
               <caret line="206" column="65" selection-start-line="206" selection-start-column="65" selection-end-line="206" selection-end-column="65" />
               <folding>
                 <marker date="1526495828597" expanded="true" signature="1566:1659" ph="SELECT Phone... causfa_custodians" />
@@ -61,20 +66,17 @@
       <file leaf-file-name="filter-content.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process/filter-content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
+            <state relative-caret-position="385">
               <caret line="101" column="127" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="127" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="employee_asset_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="59" column="67" selection-start-line="59" selection-start-column="67" selection-end-line="59" selection-end-column="67" />
-              <folding>
-                <element signature="e#6#323#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="212">
+              <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -82,26 +84,26 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+            <state relative-caret-position="-2662">
+              <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generate-form.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/js/generate-form.js">
+      <file leaf-file-name="new_custodian.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="307" column="26" selection-start-line="307" selection-start-column="26" selection-end-line="307" selection-end-column="26" />
+            <state relative-caret-position="518">
+              <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="caus-office-jpdf.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/backup/caus-office-jpdf.js">
+      <file leaf-file-name="modal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="142" column="97" selection-start-line="78" selection-end-line="142" selection-end-column="97" />
+            <state relative-caret-position="45">
+              <caret line="199" column="75" lean-forward="true" selection-start-line="199" selection-start-column="75" selection-end-line="199" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -109,17 +111,8 @@
       <file leaf-file-name="faa-modal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/html/faa-modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="115" column="54" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enqueue.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+            <state relative-caret-position="251">
+              <caret line="234" column="72" selection-start-line="234" selection-start-column="72" selection-end-line="234" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -168,9 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/html/new_custodian_modal.html" />
-        <option value="$PROJECT_DIR$/assets/js/toggle.js" />
-        <option value="$PROJECT_DIR$/../../../wp-config.php" />
         <option value="$PROJECT_DIR$/assets/cellfit/cellfit.php" />
         <option value="$PROJECT_DIR$/includes/activate.php" />
         <option value="$PROJECT_DIR$/assets/html/asset_total_template.html" />
@@ -205,20 +195,23 @@
         <option value="$PROJECT_DIR$/process/surplus.php" />
         <option value="$PROJECT_DIR$/includes/email.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-employee-info.html" />
-        <option value="$PROJECT_DIR$/includes/create_tables.php" />
-        <option value="$PROJECT_DIR$/assets/js/modal.js" />
         <option value="$PROJECT_DIR$/includes/groups.php" />
-        <option value="$PROJECT_DIR$/process/new_custodian.php" />
         <option value="$PROJECT_DIR$/assets/CAUS_HOME_USE_FORM.svg" />
         <option value="$PROJECT_DIR$/assets/CAUS_OFFICE_USE_FORM.svg" />
         <option value="$PROJECT_DIR$/assets/backup/caus-office-use.html" />
         <option value="$PROJECT_DIR$/assets/backup/testForm.html" />
         <option value="$PROJECT_DIR$/includes/file_upload.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/enqueue/enqueue.php" />
         <option value="$PROJECT_DIR$/process/generate_form.php" />
         <option value="$PROJECT_DIR$/assets/js/generate-form.js" />
+        <option value="$PROJECT_DIR$/assets/backup/js/main.js" />
+        <option value="$PROJECT_DIR$/assets/js/modal.js" />
+        <option value="$PROJECT_DIR$/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/assets/html/faa-modal.html" />
+        <option value="$PROJECT_DIR$/assets/html/faa-new-custodian.html" />
+        <option value="$PROJECT_DIR$/includes/create_tables.php" />
+        <option value="$PROJECT_DIR$/process/new_custodian.php" />
       </list>
     </option>
   </component>
@@ -233,7 +226,7 @@
       <path value="$PROJECT_DIR$/assets/js/jsPDF-master/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="85" />
     <option name="y" value="24" />
     <option name="width" value="1245" />
@@ -261,13 +254,12 @@
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="backup" type="462c0819:PsiDirectoryNode" />
+              <item name="enqueue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="enqueue" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
@@ -355,10 +347,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286511000" />
+    <option name="totallyTimeSpent" value="289436000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="24" width="1245" height="797" extended-state="1" />
+    <frame x="85" y="24" width="1245" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -367,7 +359,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32905984" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.47547796" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.47547796" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32917705" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
@@ -427,9 +419,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/style4.css" />
-    <entry file="file://$PROJECT_DIR$/assets/index4.html" />
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-footer-template.html" />
     <entry file="file://$PROJECT_DIR$/assets/js/sidenav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -476,13 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -563,20 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="216" column="18" selection-start-line="216" selection-start-column="18" selection-end-line="216" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/faa-employee-asset-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-52" />
@@ -605,7 +573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/groups.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3015">
+        <state>
           <caret line="206" column="65" selection-start-line="206" selection-start-column="65" selection-end-line="206" selection-end-column="65" />
           <folding>
             <marker date="1526495828597" expanded="true" signature="1566:1659" ph="SELECT Phone... causfa_custodians" />
@@ -633,10 +601,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/CAUS_HOME_USE_FORM.svg" />
-    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
+    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="101" column="127" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="127" />
+        <state relative-caret-position="279">
+          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/activate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/backup/caus-office-jpdf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="142" column="97" selection-start-line="78" selection-end-line="142" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/generate-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="307" column="26" selection-start-line="307" selection-start-column="26" selection-end-line="307" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -652,43 +641,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process/add_ticket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="593">
           <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-modal.html">
+    <entry file="file://$PROJECT_DIR$/assets/backup/js/modal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="115" column="54" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
+        <state relative-caret-position="-1273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/backup/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-new-custodian.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/activate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        <state relative-caret-position="210">
+          <caret line="14" column="72" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/create_tables.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
-          <caret line="164" column="24" lean-forward="true" selection-start-line="164" selection-start-column="24" selection-end-line="164" selection-end-column="24" />
+        <state relative-caret-position="192">
+          <caret line="131" column="40" selection-start-line="131" selection-start-column="40" selection-end-line="131" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+        <state relative-caret-position="251">
+          <caret line="234" column="72" selection-start-line="234" selection-start-column="72" selection-end-line="234" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="199" column="75" lean-forward="true" selection-start-line="199" selection-start-column="75" selection-end-line="199" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -699,17 +693,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/backup/caus-office-jpdf.js">
+    <entry file="file://$PROJECT_DIR$/process/filter-content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="142" column="97" selection-start-line="78" selection-end-line="142" selection-end-column="97" />
+        <state relative-caret-position="385">
+          <caret line="101" column="127" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="127" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/generate-form.js">
+    <entry file="file://$PROJECT_DIR$/includes/employee_asset_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="307" column="26" selection-start-line="307" selection-start-column="26" selection-end-line="307" selection-end-column="26" />
+        <state relative-caret-position="212">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2662">
+          <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
         </state>
       </provider>
     </entry>
