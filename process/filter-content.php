@@ -15,7 +15,7 @@ function causfa_filter_header( $content) {
     $faa_head_info = str_replace('[NAME]', $content->Name, $faa_head_info);
     $faa_head_info = str_replace( '[PID]', $content->PID, $faa_head_info);
     $faa_head_info = str_replace( '[EMAIL]', $content->Email, $faa_head_info);
-    $faa_head_info = str_replace( '[OFFICE]', $content->Office, $faa_head_info);
+    $faa_head_info = str_replace( '[OFFICE]', $content->Building.' '.$content->Office, $faa_head_info);
     $faa_head_info = str_replace( '[PHONE]', $content->Phone, $faa_head_info);
     $FAL_info = causfa_groups_FAL();
     $FAL_name = '';
