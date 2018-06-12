@@ -41,7 +41,7 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
         $surplusBody = str_replace('[MANUFACTURER]', $manufacturer, $surplusBody);
         $surplusBody = str_replace('[MODEL]', $model, $surplusBody);
         $surplusBody = $surplusBody.'  '.print_r($to, true);
-        wp_mail('mattwj6@vt.edu', $surplusSubject, $surplusBody);
+        wp_mail('caus@vt.edu', $surplusSubject, $surplusBody);
     }
 }
 
