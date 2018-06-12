@@ -18,7 +18,9 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
         $transferSubject = str_replace( '[RECIPIENT]', $recipient, $transferSubject);
         $transferBody = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body.html', true);
 		$bodyText = causfa_email_get_name($requester) . " (" . $requester . ") is requesting an asset transfer to " . causfa_email_get_name($recipient) . " (" . $recipient . "). The asset is a " . $manufacturer . " " . $model . " with a tag number " . $ptag . "."; 
+		$footerText = "Email generated on behalf of " . causfa_email_get_name($requester) . " (" . $requester . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application "; 
 		$transferBody = str_replace( '[TransferBody]', $bodyText, $transferBody);
+		$transferBody = str_replace( '[footer]', $footerText, $transferBody);
 /*        $transferBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferBody);
         $transferBody = str_replace( '[EMPLOYEE]', $requester, $transferBody);
         $transferBody = str_replace( '[PTAG]', $ptag, $transferBody);
