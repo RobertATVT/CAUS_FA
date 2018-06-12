@@ -58,35 +58,38 @@ function causfa_email_add_asset($to, $from, $ptag, $desc, $serial) {
 }
 function causfa_get_recipient_list($requester, $recipient = null) {
     $to[] = $requester.'@vt.edu';
-    $requester_FAL = causfa_groups_FAL($requester);
-    $requester_BM = causfa_groups_BM($requester);
-    foreach($requester_FAL as $FAL) {
-        if (!in_array($FAL['Email'], $to)) {
-            $to[] = $FAL['Email'];
-        }
-    }
-    foreach($requester_BM as $BM) {
-        if (!in_array($BM['Email'], $to)) {
-            $to[] = $BM['Email'];
-        }
-    }
-    if ($recipient != null) {
-        $recipient_FAL = causfa_groups_FAL($recipient);
-        $recipient_BM = causfa_groups_BM($recipient);
-        foreach($recipient_FAL as $FAL) {
+    if (!causfa_groups_is_admin($requester)) {
+        $requester_FAL = causfa_groups_FAL($requester);
+        $requester_BM = causfa_groups_BM($requester);
+        foreach($requester_FAL as $FAL) {
             if (!in_array($FAL['Email'], $to)) {
                 $to[] = $FAL['Email'];
             }
         }
-        foreach($recipient_BM as $BM) {
+        foreach($requester_BM as $BM) {
             if (!in_array($BM['Email'], $to)) {
                 $to[] = $BM['Email'];
             }
         }
     }
+    if ($recipient != null) {
+        if (!causfa_groups_is_admin($recipient)) {
+            $recipient_FAL = causfa_groups_FAL($recipient);
+            $recipient_BM = causfa_groups_BM($recipient);
+            foreach($recipient_FAL as $FAL) {
+                if (!in_array($FAL['Email'], $to)) {
+                    $to[] = $FAL['Email'];
+                }
+            }
+            foreach($recipient_BM as $BM) {
+                if (!in_array($BM['Email'], $to)) {
+                    $to[] = $BM['Email'];
+                }
+            }
+        }
+    }
     return $to;
 }
-
 function causfa_email_get_name($PID) {
     $user = get_user_by('email', $PID.'@vt.edu');
     return $user->display_name;
