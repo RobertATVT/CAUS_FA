@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="" />
+    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/html/faa-employee-alert-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-employee-alert-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/alerts.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/alerts.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +32,20 @@
       <file leaf-file-name="alerts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/process/alerts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+            <state relative-caret-position="135">
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
               <folding>
                 <element signature="e#6#88#0#PHP" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="faa-employee-alert-item.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/html/faa-employee-alert-item.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="132" selection-start-line="10" selection-start-column="132" selection-end-line="10" selection-end-column="132" />
             </state>
           </provider>
         </entry>
@@ -82,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/html/asset_template.html" />
         <option value="$PROJECT_DIR$/assets/js/sidenav.js" />
         <option value="$PROJECT_DIR$/process/set_session.php" />
         <option value="$PROJECT_DIR$/assets/css/style4.css" />
@@ -132,6 +144,7 @@
         <option value="$PROJECT_DIR$/assets/html/faa-alert-footer.html" />
         <option value="$PROJECT_DIR$/process/filter-content.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-employee-info.html" />
+        <option value="$PROJECT_DIR$/assets/html/faa-employee-alert-item.html" />
         <option value="$PROJECT_DIR$/process/alerts.php" />
       </list>
     </option>
@@ -171,6 +184,12 @@
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,10 +272,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295098000" />
+    <option name="totallyTimeSpent" value="296364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="84" y="24" width="1245" height="797" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32857144" />
@@ -267,7 +287,7 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.47547796" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32917705" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32905984" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24937657" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -324,13 +344,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/process/DBSerialize.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="146" column="34" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/faa-header-template.html" />
     <entry file="file://$PROJECT_DIR$/assets/html/faa-impact-template.html" />
     <entry file="file://$PROJECT_DIR$/assets/html/faa-asset-template.html" />
@@ -568,22 +581,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-alert-footer.html">
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-employee-alert-footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-alert-header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="39" selection-start-column="39" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-alert-item.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/groups.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -625,10 +628,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-employee-alert-header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/backup/fixed-assets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="87" column="22" lean-forward="true" selection-start-line="76" selection-start-column="16" selection-end-line="87" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-employee-alert-item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="132" selection-start-line="10" selection-start-column="132" selection-end-line="10" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/process/alerts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        <state relative-caret-position="135">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
           <folding>
             <element signature="e#6#88#0#PHP" />
           </folding>

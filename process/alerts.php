@@ -12,7 +12,11 @@ function causfa_alerts() {
     $results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 0 AND PENDING_STATUS = 0 AND PID_DESTINATION = '" . $PID . "';");
     for ($i = 0; $i < count($results); $i++) {
         $asset = $wpdb->get_row("SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = '".$results[$i]->FZVFORG_PTAG."';");
+        $person = $wpdb->get_row("SELECT * FROM causfa_custodians WHERE PID ='".$results[$i]->PID_ORIGIN."';");
         $alert = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-alert-item.html', true);
+        $alert = str_replace('[Issuer]', $person->Name, $alert);
+        $alert = str_replace('[PTAG]', $results[$i]->FZVFORG_PTAG, $alert);
+        $alert = str_replace('[DESCRIPTION]', $asset->FZVFORG_DESCRIPTION, $alert);
         $output = $output.$alert;
     }
     $output = $output.file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-alert-footer.html', true);
