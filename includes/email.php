@@ -24,6 +24,7 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
         $transferBody = str_replace('[MODEL]', $model, $transferBody);
         $transferBody = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($recipient), $transferBody);
         $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);
+		$transferBody = str_replace( '[date]', date(D, m d, Y), $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
         wp_mail('caus@vt.edu', $transferSubject, $transferBody, $headers);
     }
