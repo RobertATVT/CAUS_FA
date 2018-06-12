@@ -53,7 +53,7 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
         $surplusBody = str_replace( '[PTAG]', $ptag, $surplusBody);
         $surplusBody = str_replace('[MANUFACTURER]', $manufacturer, $surplusBody);
         $surplusBody = str_replace('[MODEL]', $model, $surplusBody);*/
-		$surplus = str_replace( '[date]', date("D, m d, Y"), $surplusBody);
+		$surplusBody = str_replace( '[date]', date("D, m d, Y"), $surplusBody);
         $surplusBody = $surplusBody.'  '.print_r($to, true);
         wp_mail('caus@vt.edu', $surplusSubject, $surplusBody, $headers);
     }
