@@ -46,8 +46,8 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
         $surplusBody = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/surplus-body.html', true);
 		$bodyText = causfa_email_get_name($requester) . " (" . $requester . ") is requesting a surplus of a " . $manufacturer . " " . $model . " with a tag number of " . $ptag . "."; 
 		$footerText = "Email generated on behalf of " . causfa_email_get_name($requester) . " (" . $requester . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application "; 
-		$surplusBody = str_replace( '[surplusBody]', $bodyText, $transferBody);
-		$surplusBody = str_replace( '[footer]', $footerText, $transferBody);
+		$surplusBody = str_replace( '[surplusBody]', $bodyText, $surplusBody);
+		$surplusBody = str_replace( '[footer]', $footerText, $surplusBody);
        /* $surplusBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $surplusBody);
         $surplusBody = str_replace( '[EMPLOYEE]', $requester, $surplusBody);
         $surplusBody = str_replace( '[PTAG]', $ptag, $surplusBody);
