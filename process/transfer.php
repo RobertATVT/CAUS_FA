@@ -44,3 +44,11 @@ function causfa_transfer_asset() {
     $output['message'] = 'A transfer request has been sent to your Fixed Assets Liaison and Business Manager. They will be in contact with you soon to facilitate the transfer of the asset.';
     wp_send_json($output);
 }
+
+function causfa_transfer_number() {
+    global $wpdb;
+    $managementCode = causfa_groups_management_code();
+    $results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE FZVFORG_ORGN_CODE = " . $managementCode . ";");
+    echo count($results);
+
+}

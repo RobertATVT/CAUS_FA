@@ -72,6 +72,9 @@ function causfa_filter_header( $content) {
     $faa_head_info = str_replace( '[BM-EMAIL]', $BM_email, $faa_head_info);
     $faa_head_info = str_replace( '[BM-PHONE]', $BM_phone, $faa_head_info);
 
+    $faa_head_info = $faa_head_info.causfa_alerts();
+
+
     return $faa_head_info;
 }
 

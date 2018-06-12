@@ -42,6 +42,7 @@ include('process/DBSerialize.php');
 include('process/retrieveForms.php');
 include('process/add_ticket.php');
 include('includes/email.php');
+include('process/alerts.php');
 
 
 //Hooks
