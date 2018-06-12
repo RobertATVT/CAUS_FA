@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-employee-alert-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-employee-alert-item.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process/alerts.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/alerts.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +30,8 @@
       <file leaf-file-name="alerts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/process/alerts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+            <state relative-caret-position="60">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
                 <element signature="e#6#88#0#PHP" />
               </folding>
@@ -272,7 +270,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="296364000" />
+    <option name="totallyTimeSpent" value="296571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="84" y="24" width="1245" height="797" extended-state="0" />
@@ -651,8 +649,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process/alerts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        <state relative-caret-position="60">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
             <element signature="e#6#88#0#PHP" />
           </folding>
