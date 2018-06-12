@@ -7,6 +7,8 @@
  */
 function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipient) {
     if (CAUSFA_SEND_EMAIL) {
+		$headers = "MIME-Version: 1.0\n";
+		$headers .= "Content-type: text/html; charset=iso-8859-1";
         $to = causfa_get_recipient_list($requester, $recipient);
         $transferSubject = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-subject.txt', true);
         $transferSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferSubject);
@@ -23,12 +25,14 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
         $transferBody = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($recipient), $transferBody);
         $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
-        wp_mail('mattwj6@vt.edu', $transferSubject, $transferBody);
+        wp_mail('caus@vt.edu', $transferSubject, $transferBody, $headers);
     }
 }
 
 function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
     if (CAUSFA_SEND_EMAIL) {
+		$headers = "MIME-Version: 1.0\n";
+		$headers .= "Content-type: text/html; charset=iso-8859-1";
         $to = causfa_get_recipient_list($requester);
         $surplusSubject = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/surplus-subject.txt', true);
         $surplusSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $surplusSubject);
@@ -41,7 +45,7 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
         $surplusBody = str_replace('[MANUFACTURER]', $manufacturer, $surplusBody);
         $surplusBody = str_replace('[MODEL]', $model, $surplusBody);
         $surplusBody = $surplusBody.'  '.print_r($to, true);
-        wp_mail('caus@vt.edu', $surplusSubject, $surplusBody);
+        wp_mail('caus@vt.edu', $surplusSubject, $surplusBody, $headers);
     }
 }
 
