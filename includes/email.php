@@ -17,13 +17,15 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
         $transferSubject = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($recipient), $transferSubject);
         $transferSubject = str_replace( '[RECIPIENT]', $recipient, $transferSubject);
         $transferBody = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body.html', true);
-        $transferBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferBody);
+		$bodyText = causfa_email_get_name($requester) . " (" . $requester . ") is requesting an asset transfer to " . causfa_email_get_name($recipient) . " (" . $recipient . "). The asset is a " . $manufacturer . " " . $model . " with a tag number " . $ptag . "."; 
+		$transferBody = str_replace( '[TransferBody]', $bodyText, $transferBody);
+/*        $transferBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferBody);
         $transferBody = str_replace( '[EMPLOYEE]', $requester, $transferBody);
         $transferBody = str_replace( '[PTAG]', $ptag, $transferBody);
         $transferBody = str_replace('[MANUFACTURER]', $manufacturer, $transferBody);
         $transferBody = str_replace('[MODEL]', $model, $transferBody);
         $transferBody = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($recipient), $transferBody);
-        $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);
+        $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);*/
 		$transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
         wp_mail('caus@vt.edu', $transferSubject, $transferBody, $headers);
