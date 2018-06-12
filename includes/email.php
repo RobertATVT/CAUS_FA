@@ -14,7 +14,7 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
         $transferSubject = str_replace( '[PTAG]', $ptag, $transferSubject);
         $transferSubject = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($recipient), $transferSubject);
         $transferSubject = str_replace( '[RECIPIENT]', $recipient, $transferSubject);
-        $transferBody = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body.txt', true);
+        $transferBody = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body.html', true);
         $transferBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferBody);
         $transferBody = str_replace( '[EMPLOYEE]', $requester, $transferBody);
         $transferBody = str_replace( '[PTAG]', $ptag, $transferBody);
