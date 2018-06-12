@@ -21,13 +21,6 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 		$footerText = "Email generated on behalf of " . causfa_email_get_name($requester) . " (" . $requester . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application "; 
 		$transferBody = str_replace( '[TransferBody]', $bodyText, $transferBody);
 		$transferBody = str_replace( '[footer]', $footerText, $transferBody);
-/*        $transferBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferBody);
-        $transferBody = str_replace( '[EMPLOYEE]', $requester, $transferBody);
-        $transferBody = str_replace( '[PTAG]', $ptag, $transferBody);
-        $transferBody = str_replace('[MANUFACTURER]', $manufacturer, $transferBody);
-        $transferBody = str_replace('[MODEL]', $model, $transferBody);
-        $transferBody = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($recipient), $transferBody);
-        $transferBody = str_replace( '[RECIPIENT]', $recipient, $transferBody);*/
 		$transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
         wp_mail('caus@vt.edu', $transferSubject, $transferBody, $headers);
@@ -48,11 +41,6 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
 		$footerText = "Email generated on behalf of " . causfa_email_get_name($requester) . " (" . $requester . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application "; 
 		$surplusBody = str_replace( '[surplusBody]', $bodyText, $surplusBody);
 		$surplusBody = str_replace( '[footer]', $footerText, $surplusBody);
-       /* $surplusBody = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $surplusBody);
-        $surplusBody = str_replace( '[EMPLOYEE]', $requester, $surplusBody);
-        $surplusBody = str_replace( '[PTAG]', $ptag, $surplusBody);
-        $surplusBody = str_replace('[MANUFACTURER]', $manufacturer, $surplusBody);
-        $surplusBody = str_replace('[MODEL]', $model, $surplusBody);*/
 		$surplusBody = str_replace( '[date]', date("D, m d, Y"), $surplusBody);
         $surplusBody = $surplusBody.'  '.print_r($to, true);
         wp_mail('caus@vt.edu', $surplusSubject, $surplusBody, $headers);
