@@ -285,7 +285,8 @@ function acceptTransfer(ptag, id) {
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] === 1) {
-
+            $("#alert-body-" + id).remove();
+            $("#alert-header-" + id).remove();
         }
     });
 }
@@ -297,6 +298,9 @@ function denyTransfer(ptag, id) {
         ptag: ptag
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        // remove alert from list
+        if (data['status'] === 1) {
+            $("#alert-body-" + id).remove();
+            $("#alert-header-" + id).remove();
+        }
     });
 }
