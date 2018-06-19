@@ -809,7 +809,7 @@ slider-for{
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
 
-@media (min-width: 200px) and (max-width: 419px){
+@media (min-width: 200px){
     .biggertext {
         font-size:130%;
     }
@@ -1037,7 +1037,7 @@ slider-for{
         width: 90%;
     }
 	.add-asset-text {
-		font-size: 85% !important;
+		font-size: 90% !important;
 	}
     .make-small {
         max-height: unset !important;

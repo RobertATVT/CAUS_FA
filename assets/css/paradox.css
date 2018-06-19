@@ -99,6 +99,10 @@ html {
   padding: 0 !important;
 }
 
+.no-overflow {
+	overflow: hidden;
+}
+
 /* DEFAULT ALL SCREEN GRID */
 
 @media only screen and (min-width: 200px) and (max-width: 599px) {
