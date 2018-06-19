@@ -424,17 +424,20 @@ select#org option:hover {
     font-size: 135%;
     background: #060 !important;
     color: #fff;
+    line-height: 20px;
 }
 .asset-home {
     font-size: 135%;
     background: #fd0 !important;
     color: #000;
+	line-height: 20px;
 }
 .asset-missing {
     font-size: 135%;
     background: #900 !important;
     color: #fff;
     letter-spacing: .2em;
+	line-height: 20px;
 }
 .asset-pending {
     font-size: 135%;
