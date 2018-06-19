@@ -1013,7 +1013,7 @@ slider-for{
         width: 25%;
         outline: 0px;
     } 
-	,asset-block {
+	.asset-block {
 		height: 115px !important;
 	}
     .asset-list-header {
