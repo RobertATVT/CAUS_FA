@@ -277,7 +277,7 @@ function addTicket() {
     }
 }
 
-function acceptTransfer(ptag) {
+function acceptTransfer(ptag, id) {
     var form = {
         action: 'causfa_update_transfer',
         type: 0,
@@ -290,7 +290,7 @@ function acceptTransfer(ptag) {
     });
 }
 
-function denyTransfer(ptag) {
+function denyTransfer(ptag, id) {
     var form = {
         action: 'causfa_update_transfer',
         type: 1,
