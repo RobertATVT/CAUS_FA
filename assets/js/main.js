@@ -287,7 +287,7 @@ function acceptTransfer(ptag, id) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
             $("#alert-header-" + id).remove();
-            if (!$("#asset-alerts").hasChildNodes()) {
+            if ($("#asset-alerts").children().length === 0) {
                 $("#asset-alerts").remove();
             }
         }
@@ -304,7 +304,7 @@ function denyTransfer(ptag, id) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
             $("#alert-header-" + id).remove();
-            if (!$("#asset-alerts").hasChildNodes()) {
+            if ($("#asset-alerts").children().length === 0) {
                 $("#asset-alerts").remove();
             }
         }
