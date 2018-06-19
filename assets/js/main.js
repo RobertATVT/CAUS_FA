@@ -287,6 +287,9 @@ function acceptTransfer(ptag, id) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
             $("#alert-header-" + id).remove();
+            if (!$("#asset-alerts").hasChildNodes()) {
+                $("#asset-alerts").remove();
+            }
         }
     });
 }
@@ -301,6 +304,9 @@ function denyTransfer(ptag, id) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
             $("#alert-header-" + id).remove();
+            if (!$("#asset-alerts").hasChildNodes()) {
+                $("#asset-alerts").remove();
+            }
         }
     });
 }

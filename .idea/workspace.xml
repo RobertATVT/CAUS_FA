@@ -27,29 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="292" column="30" selection-start-line="292" selection-start-column="30" selection-end-line="292" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="asset_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/asset_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="99" selection-start-line="23" selection-start-column="99" selection-end-line="23" selection-end-column="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="faa-employee-alert-item.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/html/faa-employee-alert-item.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="386">
+              <caret line="289" column="32" lean-forward="true" selection-start-line="289" selection-start-column="32" selection-end-line="289" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -317,12 +299,12 @@
       <workItem from="1528054506748" duration="397000" />
       <workItem from="1528254068237" duration="7431000" />
       <workItem from="1529418749623" duration="140000" />
-      <workItem from="1529419029718" duration="950000" />
+      <workItem from="1529419029718" duration="1319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302427000" />
+    <option name="totallyTimeSpent" value="302796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="84" y="24" width="1245" height="797" extended-state="0" />
@@ -649,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/asset_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="99" selection-start-line="23" selection-start-column="99" selection-end-line="23" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/process/alerts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -670,17 +645,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-employee-alert-item.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="292" column="30" selection-start-line="292" selection-start-column="30" selection-end-line="292" selection-end-column="30" />
+        <state relative-caret-position="150">
+          <caret line="10" column="232" lean-forward="true" selection-start-line="10" selection-start-column="232" selection-end-line="10" selection-end-column="232" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-employee-alert-item.html">
+    <entry file="file://$PROJECT_DIR$/includes/asset_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        <state relative-caret-position="151">
+          <caret line="23" column="99" selection-start-line="23" selection-start-column="99" selection-end-line="23" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="289" column="32" lean-forward="true" selection-start-line="289" selection-start-column="32" selection-end-line="289" selection-end-column="32" />
         </state>
       </provider>
     </entry>
