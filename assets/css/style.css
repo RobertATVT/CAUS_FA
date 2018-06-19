@@ -945,7 +945,7 @@ slider-for{
 
 
 /* Small devices (landscape phones, 400px and up) */
-@media (min-width: 420px) and (max-width: 599px) {
+@media (min-width: 420px){
      .add-asset-text {
         font-size: 120%; 
     }
@@ -1005,7 +1005,7 @@ slider-for{
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 600px) and (max-width: 991px){
+@media (min-width: 600px){
     #asset-container {
         margin-top: 0px;
     }
@@ -1036,6 +1036,9 @@ slider-for{
         margin-bottom: 0px;
         width: 90%;
     }
+	.add-asset-text {
+		font-size: 85% !important;
+	}
     .make-small {
         max-height: unset !important;
     }
@@ -1122,7 +1125,7 @@ slider-for{
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199px){
+@media (min-width: 992px){
     #asset-container {
         margin-top: 0px;
     }
@@ -1223,7 +1226,7 @@ slider-for{
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) and (max-width: 1599px) {
+@media (min-width: 1200px){
     .x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce) {
         font-size: 11px !important;
     }
