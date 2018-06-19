@@ -101,6 +101,7 @@ html {
 
 .no-overflow {
 	overflow: hidden;
+	white-space: nowrap;
 }
 
 /* DEFAULT ALL SCREEN GRID */
