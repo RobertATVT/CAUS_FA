@@ -1041,6 +1041,7 @@ slider-for{
     }
 	.add-asset-text {
 		font-size: 90% !important;
+		min-height: 0px !important;
 	}
     .make-small {
         max-height: unset !important;
