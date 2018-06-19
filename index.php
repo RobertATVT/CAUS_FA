@@ -67,6 +67,7 @@ add_action( 'wp_ajax_causfa_output_images', 'causfa_output_images');
 add_action( 'wp_ajax_causfa_get_last_form', 'causfa_get_last_form');
 add_action( 'wp_ajax_causfa_add_ticket', 'causfa_add_ticket');
 add_action( 'wp_ajax_causfa_get_custodian', 'causfa_get_custodian');
+add_action( 'wp_ajax_causfa_update_transfer', 'causfa_update_transfer');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app

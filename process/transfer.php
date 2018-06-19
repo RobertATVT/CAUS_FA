@@ -45,6 +45,25 @@ function causfa_transfer_asset() {
     wp_send_json($output);
 }
 
+function causfa_update_transfer() {
+    global $wpdb;
+    $ptag = $_POST['ptag'];
+    $type = $_POST['type'];
+    $output = array(
+        'status' => 0
+    );
+    if ($type === '0') {
+        $wpdb->update('causfa_pending', array( 'PENDING_STATUS' => 1), array( 'FZVFORG_PTAG' => $ptag));
+        $output['status'] = 1;
+        // send acceptance email
+    } else {
+        $wpdb->delete('causfa_pending', array( 'FZVFORG_PTAG' => $ptag));
+        // send reject email
+        $output['status'] = 1;
+    }
+    wp_send_json($output);
+}
+
 function causfa_transfer_number() {
     global $wpdb;
     $managementCode = causfa_groups_management_code();

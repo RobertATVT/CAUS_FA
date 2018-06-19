@@ -276,13 +276,27 @@ function addTicket() {
         });
     }
 }
-function loadView(n) {
-	var form = {
-        action: 'causfa_set_session',
-        Name: 'admin_view',
-        Input: n
+
+function acceptTransfer(ptag) {
+    var form = {
+        action: 'causfa_update_transfer',
+        type: 0,
+        ptag: ptag
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-		location.reload();
-	});
+        if (data['status'] === 1) {
+
+        }
+    });
+}
+
+function denyTransfer(ptag) {
+    var form = {
+        action: 'causfa_update_transfer',
+        type: 1,
+        ptag: ptag
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+        // remove alert from list
+    });
 }
