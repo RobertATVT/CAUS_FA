@@ -809,7 +809,7 @@ slider-for{
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
 
-@media (min-width: 200px) {
+@media (min-width: 200px) and (max-width: 419px){
     .biggertext {
         font-size:130%;
     }
@@ -945,7 +945,7 @@ slider-for{
 
 
 /* Small devices (landscape phones, 400px and up) */
-@media (min-width: 420px) {
+@media (min-width: 420px) and (max-width: 599px) {
      .add-asset-text {
         font-size: 120%; 
     }
@@ -1005,7 +1005,7 @@ slider-for{
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 600px) and (max-width: 991px){
     #asset-container {
         margin-top: 0px;
     }
@@ -1013,7 +1013,9 @@ slider-for{
         width: 25%;
         outline: 0px;
     } 
-
+	,asset-block {
+		height: 115px !important;
+	}
     .asset-list-header {
         font-size: 65%;
     }
@@ -1120,7 +1122,7 @@ slider-for{
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px){
     #asset-container {
         margin-top: 0px;
     }
@@ -1221,7 +1223,7 @@ slider-for{
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
     .x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce) {
         font-size: 11px !important;
     }
