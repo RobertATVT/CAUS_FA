@@ -150,9 +150,12 @@ html {
 }
 
 @media only screen and (min-width: 993px) {
-  .show-large {
-    display: block !important;
-  }
+	.show-large {
+		display: block !important;
+	}
+	.hide-large-up{
+		display: none !important;
+	}
 }
 
 @media only screen and (min-width: 600px) and (max-width: 992px) {
