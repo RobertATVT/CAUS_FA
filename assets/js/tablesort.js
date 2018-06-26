@@ -1,6 +1,7 @@
 $(document).ready(function() {
+    alert("BLLLLLLAAAAAAAHHHHHH");
     if ($('#asset-table').length > 0) {
-        alert("BLLLLLLAAAAAAAHHHHHH")
+
         $("table").tablesorter();
 
         $("#ajax-append").click(function() {
