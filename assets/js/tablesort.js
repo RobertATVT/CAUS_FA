@@ -1,5 +1,5 @@
 $(function() {
-
+  alert("BLLLLLLAAAAAAAHHHHHH")
   $("table").tablesorter();
 
   $("#ajax-append").click(function() {
