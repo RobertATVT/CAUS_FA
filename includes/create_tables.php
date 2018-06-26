@@ -119,6 +119,7 @@ function create_tables() {
         PID_ORIGIN varchar(32) NOT NULL,
         PID_DESTINATION varchar(32) NOT NULL,
         PENDING_STATUS tinyint(2) NOT NULL,
+        ASSIGNEE varchar(32) NOT NULL,
         PRIMARY KEY  (FZVFORG_PTAG)
         ) ".$charset_collate.";";
         dbDelta($sql);
