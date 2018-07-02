@@ -17,6 +17,11 @@ function causfa_transfer_asset() {
     $date_created = current_time('mysql');
     $PID_dest = $_POST['dest'];
     $PID_dest = $PID_dest;
+    $Assignee_info = causfa_groups_FAL($PID_origin);
+    $Assignee_pids = array();
+    foreach($Assignee_info as $value) {
+        $Assignee_pids[] = $value['PID'];
+    }
     $pending_status = 0;
     $wpdb->insert(
         'causfa_pending',
@@ -27,7 +32,8 @@ function causfa_transfer_asset() {
             'DATE_CREATED' => $date_created,
             'PID_ORIGIN' => $PID_origin,
             'PID_DESTINATION' => $PID_dest,
-            'PENDING_STATUS' => $pending_status
+            'PENDING_STATUS' => $pending_status,
+            'ASSIGNEE' => $Assignee_pids
         ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
     );
     $logger_info = array(
@@ -53,12 +59,12 @@ function causfa_update_transfer() {
         'status' => 0
     );
     if ($type === '0') {
+        causfa_email_transfer_update(0, $ptag);
         $wpdb->update('causfa_pending', array( 'PENDING_STATUS' => 1), array( 'FZVFORG_PTAG' => $ptag));
         $output['status'] = 1;
-        // send acceptance email
     } else {
+        causfa_email_transfer_update(1, $ptag);
         $wpdb->delete('causfa_pending', array( 'FZVFORG_PTAG' => $ptag));
-        // send reject email
         $output['status'] = 1;
     }
     wp_send_json($output);

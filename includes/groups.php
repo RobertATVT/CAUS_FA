@@ -44,6 +44,7 @@ function causfa_groups_FAL($PID = null) {
                             $FAL = array(
                                 'Name' => $liaison_group->users[$k]->display_name,
                                 'Email' => $liaison_group->users[$k]->user_email,
+                                'PID' => $liaison_group->users[$k]->user_nicename,
                                 'Phone' => $phone
                             );
                             $output[] = $FAL;

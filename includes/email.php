@@ -27,6 +27,21 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
     }
 }
 
+function causfa_email_transfer_update($action, $ptag) {
+    if (CAUSFA_SEND_EMAIL) {
+        global $wpdb;
+        $result = $wpdb->get_row("SELECT * FROM causfa_pending where FZVFORG_PTAG = '".$ptag."';");
+        $headers = "MIME-Version: 1.0\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1";
+        $to = causfa_getRecipient_list($result->PID_ORIGIN, $result->PID_DESTINATION);
+        if (action === 0) {
+
+        } else {
+
+        }
+    }
+}
+
 function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
     if (CAUSFA_SEND_EMAIL) {
 		$headers = "MIME-Version: 1.0\n";
@@ -49,17 +64,19 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
 
 function causfa_email_problem($to, $from, $ptag, $problem) {
     if (CAUSFA_SEND_EMAIL) {
-
+        $headers = "MIME-Version: 1.0\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1";
     }
 }
 
 function causfa_email_add_asset($to, $from, $ptag, $desc, $serial) {
     if (CAUSFA_SEND_EMAIL) {
-
+        $headers = "MIME-Version: 1.0\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1";
     }
 }
 function causfa_get_recipient_list($requester, $recipient = null) {
-    $to[] = $requester.'@vt.edu';
+    $to = array();
     if (!causfa_groups_is_admin($requester)) {
         $requester_FAL = causfa_groups_FAL($requester);
         $requester_BM = causfa_groups_BM($requester);
