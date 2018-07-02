@@ -358,6 +358,21 @@ select#org option:hover {
 .asset-list-r2 {
 	padding-top: 7px !important;
 }
+#transfer-ribbon:hover {
+	color: #e87722;
+}
+#surplus-ribbon:hover {
+	color: #e87722;
+}
+#gallery-ribbon:hover {
+	color: #e87722;
+}
+#forms-ribbon:hover {
+	color: #e87722;
+}
+#report-ribbon:hover {
+	color: #e87722;
+}
 .asset-show {
 	height: 115px;
     line-height: 20px;
