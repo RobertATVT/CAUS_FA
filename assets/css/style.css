@@ -352,6 +352,12 @@ select#org option:hover {
 .asset-list > td {
 	line-height: 31px;
 }
+.asset-list-r {
+	padding-top: 5px !important;
+}
+.asset-list-r2 {
+	padding-top: 7px !important;
+}
 .asset-show {
 	height: 115px;
     line-height: 20px;

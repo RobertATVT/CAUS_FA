@@ -1,19 +1,78 @@
 <!-- BEGIN TEMPLATE faa-employee-asset-header.html -->
+	<div class="rw hide-large-down" id="asset-ribbon" style="margin: 0px; padding: 7px;">
+		<div class="cl t20" style="padding: 3px; background-color: #efefef; border-radius: 2px;">
+			<div class="cl t4" style="padding: 3px;">
+				<a href="#" id="transfer-[ID]" onclick="transferModalRequested(this.id)" title="Transfer asset to another faculty or staff" style="color: #333 !important;">
+					<div id="transfer-ribbon" class="cl t20" style="border: 1px solid #bbb; border-radius: 2px; background: #dfdfdf; padding-left: 5px; padding-top: 5px;">
+						<div class="cl t2">
+						<!--<button class="asset-action"  >-->
+							<i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+						<!--</button>-->
+						</div>
+						<div class="cl t18 center b" style="line-height: 35px;">TRANSFER ASSET</div>
+					</div>
+				</a>
+			</div>
+			<div class="cl t4" style="padding: 3px;">
+				<a href="#" id="surplus-[ID]" onclick="surplusModalRequested(this.id)" title="Initiate process to surplus asset" style="color: #333 !important;">
+					<div id="surplus-ribbon" class="cl t20" style="border: 1px solid #bbb; border-radius: 2px; background: #dfdfdf; padding-left: 5px; padding-top: 5px;">
+						<div class="cl t2">
+							<i class="fas fa-2x fa-external-link-square-alt"></i>
+						</div>
+						<div class="cl t18 center b" style="line-height: 35px;">SURPLUS ASSET</div>
+					</div>
+				</a>
+			</div>
+			<div class="cl t4" style="padding: 3px;">
+				<a href="#" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)" style="color: #333 !important;">
+					<div id="gallery-ribbon" class="cl t20" style="border: 1px solid #bbb; border-radius: 2px; background: #dfdfdf; padding-left: 5px; padding-top: 5px;">
+						<div class="cl t2">
+							<i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+						</div>
+						<div class="cl t18 center b" style="line-height: 35px;">IMAGE GALLERY</div>
+					</div>
+				</a>
+			</div>
+			<div class="cl t4" style="padding: 3px;">
+				<a href="#" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)" style="color: #333 !important;">
+					<div id="forms-ribbon" class="cl t20" style="border: 1px solid #bbb; border-radius: 2px; background: #dfdfdf; padding-left: 5px; padding-top: 5px;">
+						<div class="cl t2">
+							<i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+						</div>
+						<div class="cl t18 center b" style="line-height: 35px;">UPLOAD & VIEW FORMS</div>
+					</div>
+				</a>
+			</div>
+			<div class="cl t4" style="padding: 3px;">
+				<a href="#" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)" style="color: #333 !important;">
+					<div id="report-ribbon" class="cl t20" style="border: 1px solid #bbb; border-radius: 2px; background: #dfdfdf; padding-left: 5px; padding-top: 5px;">
+						<div class="cl t2">
+							<i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+						</div>
+						<div class="cl t18 center b" style="line-height: 35px;">REPORT PROBLEMS</div>
+					</div>
+				</a>
+			</div>
+			<div class="cl t20 center b" style="padding: 3px; font-size: 85%; color: #777;">
+				Select and asset below by clicking the checkbox next to it and then click on a corresponding button above for the action you wish to perform. Transfers and Surplus can be done with multiple assets selected.
+			</div>
+		</div>
+	</div>
 	<div class="rw" id="asset-title" style="margin: 0px;">
-		<div class="cl t20" style="padding: 5px;">
+		<div class="cl t20" style="padding: 7px;">
 			<table class="tablesorter" role="grid">
 				<thead>
-					<tr class="rw asset-list-header" style="">
-						<th class="cl xl2 l2 m2 t6 col-1">TAG #</th>
-						<th class="cl xl2 l2 m2 t8 col-2">SERIAL #</th>
-						<th class="center cl xl1 l2 m2 t6 col-3">VALUE</th>
-						<th class="cl xl4 l4 m5 hide-small-down col-4">DESCRIPTION</th>
-						<th class="center cl xl2 l2 m3 hide-small-down">OWNERSHIP</th>
-						<th class="center cl xl2 l2 hide-medium-down">ORGANIZATION</th>
+					<tr class="rw asset-list-header">
+						<th class="cl center xl1 l1 m1 t1 hide-medium-up" style="padding-left: 12px !important;">SELECT</th>
+						<th class="center cl xl2 l2 m2 t6">TAG NUMBER</th>
+						<th class="center cl xl2 l2 m2 t8">SERIAL NUMBER</th>
+						<th class="center cl xl2 l2 m2 t6">VALUE</th>
+						<th class="cl xl4 l4 m5 hide-medium-down">DESCRIPTION</th>
+						<th class="center cl xl2 l2 m3 hide-medium-down">OWNERSHIP</th>
+						<th class="center cl xl3 l3 hide-medium-down">ORGANIZATION</th>
 						<th class="center cl xl1 hide-large-down">VT SCAN</th>
 						<th class="center cl xl1 hide-large-down">&nbsp;PURCHASED</th>
-						<th class="center cl xl3 l3 m3 hide-small-down">STATUS</th>
-						<th class="center cl xl2 l3 m3 hide-small-down">ACTIONS</th>
+						<th class="center cl xl3 l3 m3 hide-medium-down">STATUS</th>
 					</tr>
 				</thead>
 				<tbody>

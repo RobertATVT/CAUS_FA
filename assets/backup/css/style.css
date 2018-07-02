@@ -241,6 +241,12 @@ select#org option:hover {
     border-radius: 2px 2px 2px 2px; 
     padding: 0px !important;
 }
+.asset-list-r {
+	padding-top: 5px !important;
+}
+.asset-list-r2 {
+	padding-top: 7px !important;
+}
 .block-header {
     background: rgba(0,0,0,.3);
     min-height: 15px; 
