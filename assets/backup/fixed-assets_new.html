@@ -190,10 +190,10 @@
 			<table class="tablesorter" role="grid">
 				<thead>
 					<tr class="rw asset-list-header">
-						<th class="cl center xl1 l1 m1 t1 hide-medium-up" style="padding-left: 12px !important;">SELECT</th>
+						<th class="cl center xl1 l1 m1 t1 hide-medium-down" style="padding-left: 12px !important;">SELECT</th>
 						<th class="center cl xl2 l2 m2 t6">TAG NUMBER</th>
 						<th class="center cl xl2 l2 m2 t8">SERIAL NUMBER</th>
-						<th class="center cl xl2 l2 m2 t6">VALUE</th>
+						<th class="center cl xl1 l1 m2 t6">VALUE</th>
 						<th class="cl xl4 l4 m5 hide-medium-down">DESCRIPTION</th>
 						<th class="center cl xl2 l2 m3 hide-medium-down">OWNERSHIP</th>
 						<th class="center cl xl3 l3 hide-medium-down">ORGANIZATION</th>
@@ -206,13 +206,13 @@
 <!-- END TEMPLATE faa-employee-asset-header.html -->
 <!-- BEGIN TEMPLATE faa-employee-asset-list.html --> 
 					<tr class="rw asset-list" >
-						<td class="cl center xl1 l1 m1 t1 asset-list-r2 hide-medium-up">
+						<td class="cl center xl1 l1 m1 t1 asset-list-r2 hide-medium-down">
 							<input id="asset-select-[ID]" type="checkbox" value="asset-select-[ID]" class="filled-in admin-block-line-b">
 							<label for="asset-select-[ID]"></label>
 						</td>
 						<td class="cl xl2 l2 m2 t6 center asset-list-r"id="asset-tag-[ID]">[VT TAG]</td>
 						<td class="center cl xl2 l2 m2 t8 asset-list-r" id="asset-serial-[ID]">[S/N]</td>
-						<td class="center cl xl2 l2 m2 t6 asset-list-r" id="asset-value-[ID]">[VALUE]</td>
+						<td class="center cl xl1 l1 m2 t6 asset-list-r" id="asset-value-[ID]">[VALUE]</td>
 						<td class="cl xl4 l4 m5 t10 asset-list-r" id="asset-desc-[ID]" style="padding-left: 10px;">[DESCRIPTION]</td>
 						<td class="center cl xl2 l2 m3 t10 hide-small-down asset-list-r" id="asset-own-[ID]">[OWNERSHIP]</td>
 						<td class="center cl xl3 l3 hide-medium-down asset-list-r" id="asset-org-[ID]">[ORGANIZATION]</td>
@@ -252,13 +252,13 @@
 <!-- END TEMPLATE faa-employee-asset-list.html -->
 <!-- BEGIN ASSET LIST FILLERl --> 
 					<tr class="asset-list" id="asset-0">
-						<td class="cl center xl1 l1 m1 t1 asset-list-r2 hide-medium-up">
+						<td class="cl center xl1 l1 m1 t1 asset-list-r2 hide-medium-down">
 							<input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b">
 							<label for="asset-select-0"></label>
 						</td>
 						<td class="center cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-[ID]">000345678</td>
 						<td class="center cl xl2 l2 m2 t8 asset-list-r" id="asset-serial-[ID]">C000123456</td>
-						<td class="center cl xl2 l2 m2 t6 asset-list-r" id="asset-value-[ID]">$2015.53</td>
+						<td class="center cl xl1 l1 m2 t6 asset-list-r" id="asset-value-[ID]">$2015.53</td>
 						<td class="cl xl4 l4 m5 t10 asset-list-r" id="asset-desc-[ID]" style="padding-left: 10px;">Apple MacBook Pro 15"</td>
 						<td class="center cl xl2 l2 m3 t10 hide-small-down asset-list-r" id="asset-own-[ID]">University Owned</td>
 						<td class="center cl xl3 l3 hide-medium-down asset-list-r" id="asset-org-[ID]">Architecture Support</td>
