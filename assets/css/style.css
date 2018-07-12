@@ -295,8 +295,8 @@ select#org option:hover {
 .asset-block {
     box-sizing: border-box;
     min-height: 50px;
-/*	border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 2px 2px 2px 2px; */
+	border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 3px;
     padding: 0px !important;
 }
 .block-header {
