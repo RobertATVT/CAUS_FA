@@ -37,34 +37,11 @@ function transferModalLoad(elementID) {
                 option.setAttribute('data_value', PID_options[i]);
                 PIDs.appendChild(option);
 			}
-			// alert(JSON.stringify(list_fill));
-			new Awesomplete(input, {
-				list: list_fill
-			})
+			// RN_# For Loop goes here
         });
 }
-function transferModalLoadTest(elementID) {
-	var form = {
-            action: 'causfa_autocomplete_PID',
-        }
-		var list_fill = new Array();
-        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-            var PID_options = data['PIDs'];
-            var Name_options = data['Names'];
-			var input = document.getElementById("recipient-name");
-
-			for (var i = 0; i < PID_options.length; i++) {
-				var list_item = new Array();
-				list_item[0] = Name_options[i];
-				list_item[1] = Name_options[i];
-				list_fill.push(list_item);
-				var option = document.createElement('option');
-                option.value = Name_options[i];
-                option.setAttribute('data_value', PID_options[i]);
-                PIDs.appendChild(option);
-		}
-	});
-	return list_fill;
+function transferModalLoadFill(element,list_fill) {
+	new Awesomplete(document.getElementById(element), {list:list_fill});
 }
 function surplusModalRequested(elementID) {
     var id = elementID.split('-')[1];
