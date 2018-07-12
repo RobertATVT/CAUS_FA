@@ -363,16 +363,16 @@ select#org option:hover {
 	border: 1px solid #777; 
 	border-radius: 2px; 
 	background: #888; 
-	padding-left: 5px; 
-	padding-top: 5px;
+	padding-left: 5px !important; 
+	padding-top: 5px !important;
 }
 .ribbon-active {
 	color: #fff;
 	border: 1px solid #d76611; 
 	border-radius: 2px; 
 	background: #E87722; 
-	padding-left: 5px; 
-	padding-top: 5px;
+	padding-left: 5px !important; 
+	padding-top: 5px !important;
 }
 .ribbon-active:hover {
 	border-color: rgba(255,255,255,0.4);
