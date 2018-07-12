@@ -207,7 +207,7 @@ select#org option:hover {
 /* ========== FIXED ASSETS SETTINGS ========== */
 #asset-container {
     width: 100%;
-    background: #45484b;
+    background: #efefef;
     padding: 10px;
 }
 #app-title-block {
@@ -295,9 +295,11 @@ select#org option:hover {
 .asset-block {
     box-sizing: border-box;
     min-height: 50px;
-	border: 1px solid rgba(0,0,0,0.5);
-    border-radius: 3px;
-    padding: 0px !important;
+}
+.asset border {
+	border: 1px solid rgba(0,0,0,0.15) !important;
+    border-radius: 3px !important;
+    padding: 0px !important;	
 }
 .block-header {
     background: rgba(0,0,0,.3);
