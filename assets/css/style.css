@@ -256,7 +256,7 @@ select#org option:hover {
 }
 #general-alerts {
     padding: 5px; 
-    background: #D7D2CB;
+    background: #75787B;
     border-radius: 2px;
 	border: 1px solid rgba(255,255,255,0.25);
     border-left: 4px solid rgba(255,255,255,0.25); 
