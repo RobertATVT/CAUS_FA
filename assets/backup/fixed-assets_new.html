@@ -70,31 +70,66 @@
 	</div>
 	<div class="rw" style="margin:0px; display: block;">
 		<div class="cl t20" style="padding: 5px; padding-bottom: 7px;">
-<!-- BEGIN ALERT HEADER -->
+<!-- BEGIN GENERAL ALERT HEADER -->
 			<div id="general-alerts" class="cl t20">
-				[ALERT TEXT]
+				<div class="rw" style="margin: 0px !important; margin-top: 5px !important; margin-bottom: 5px !important;background: rgba(255,255,255,0.2);">
+					<div class="cl t2 left" style="padding-left: 10px; border: 1px solid rgba(255,255,255, 0.5); border-right: none;">ORG</div>
+					<div class="cl t4 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">ISSUER</div>
+					<div class="cl t10 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">MESSAGE</div>
+					<div class="cl t4 center" style="padding-right: 10px;border: 1px solid rgba(255,255,255, 0.5); border-left: none; ">EXPIRES</div>
+				</div>
+<!-- END GENERAL ALERT HEADER -->
+<!-- BEGIN ASSET ALERT FILL -->
+				<div class="rw alert-normal" style="margin: 0px !important; margin-bottom: 5px !important; border: 1px solid rgba(255,255,255, 0.5);">
+					<div class="cl t2 left" style="padding-left: 10px; border-right: none;">[ORG]</div>
+					<div class="cl t4 left" style="">[ISSUER]</div>
+					<div class="cl t10 left" style="">[MESSAGE]</div>
+					<div class="cl t4 center" style="padding-right: 10px;">[EXPIRATION]</div>
+				</div>
+<!-- END ASSET ALERT FILL -->				
+<!-- BEGIN ASSET ALERT FILLER -->
+				<div class="rw alert-normal" style="margin: 0px !important; margin-bottom: 5px !important; padding: 3px !important; border: 1px solid rgba(255,255,255, 0.5);">
+					<div class="cl t2 left" style="padding-left: 10px; border-right: none;">CAUS</div>
+					<div class="cl t4 left" style="">Erin Poff</div>
+					<div class="cl t10 left" style="">
+						Please be advised that Inventory will occur on Nov 1st 2018, please check your Fixed Assets so that you know what will need to be scanned. If you have any issues with any items in your fixed assets list please be sure to contact your Fixed Assets Liaison to get them corrected before the inventory date. Thank you.
+					</div>
+					<div class="cl t4 center" style="padding-right: 10px;">Nov 1, 2018</div>
+				</div>
+<!-- END ASSET ALERT FILLER -->
+<!-- BEGIN GENERALL ASSET ALERT FOOTER -->
 			</div>
+<!-- END GENERALL ASSET ALERT FOOTER -->
+<!-- BEGIN ASSET ALERT HEADER -->
 			<div id="asset-alerts" class="cl t20">
-<!-- END ALERT HEADER -->
-<!-- BEGIN ALERT FILLER -->
-				<div class="rw" style="margin: 0px !important; margin-top: 5px !important;background: rgba(255,255,255,0.2);">
+				<div class="rw" style="margin: 0px !important; margin-top: 5px !important; margin-bottom: 5px !important;background: rgba(255,255,255,0.2);">
 					<div class="cl t5 left" style="padding-left: 10px; border: 1px solid rgba(255,255,255, 0.5); border-right: none;">Issuer Name</div>
 					<div class="cl t3 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">PTAG</div>
 					<div class="cl t7 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">Description</div>
 					<div class="cl t5 center" style="padding-right: 10px;border: 1px solid rgba(255,255,255, 0.5); border-left: none; ">ACCEPT | DENY</div>
 				</div>
+<!-- END ASSET ALERT HEADER -->
+<!-- BEGIN ASSET ALERT FILL -->
+				<div class="rw" style="margin: 0px !important; margin-bottom: 5px !important; background: #fff; color: #333;">
+					<div class="cl t5 left" style="padding-left: 10px; border: 1px solid rgba(255,255,255, 0.5); border-right: none;">[ISSUER]</div>
+					<div class="cl t3 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">[PTAG]</div>
+					<div class="cl t7 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">[REASON]</div>
+					<div class="cl t5 center" style="padding-right: 10px;border: 1px solid rgba(255,255,255, 0.5); border-left: none;"><a href="">ACCEPT</a> | <a href="">DENY</a></div>
+				</div>
+<!-- END ASSET ALERT FILL -->				
+<!-- BEGIN ASSET ALERT FILLER -->
 				<div class="rw" style="margin: 0px !important; margin-bottom: 5px !important; background: #fff; color: #333;">
 					<div class="cl t5 left" style="padding-left: 10px; border: 1px solid rgba(255,255,255, 0.5); border-right: none;">John Q Faculty</div>
 					<div class="cl t3 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">000000</div>
 					<div class="cl t7 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">This Asset I don't want anymore</div>
 					<div class="cl t5 center" style="padding-right: 10px;border: 1px solid rgba(255,255,255, 0.5); border-left: none;"><a href="">ACCEPT</a> | <a href="">DENY</a></div>
 				</div>
-<!-- END ALERT HEADER -->
-<!-- BEGIN ALERT FOOTER -->
+<!-- END ASSET ALERT FILLER -->
+<!-- BEGIN ASSET ALERT FOOTER -->
 			</div>
-<!-- END ALERT HEADER -->
 		</div>
 	</div>
+<!-- END ASSET ALERT HEADER -->
 <!-- END TEMPLATE faa-employee-info.html -->
 <!-- BEGIN TEMPLATE faa-employee-impact.html -->
 	<div class="rw" style="margin:0px;">
@@ -735,8 +770,13 @@
 						<div class="cl m14 t20 shorten-text text-left"><span class="asset-description-2">15" MacBook Pro w/ Retina Display and 2.8ghz CPU</span></div>
                     </div>
 <!-- BULK SURPLUS ASSET FILLER END -->
-                </form>
+                </form>	
             </div>
+			<div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;margin-bottom: -10px;">
+            	<div class="cl t20" style="padding: 0px;">
+                <p class="center info-title" style="font-size: 130%;">Are you sure you want to initiate this surplus request?</p>
+            	</div>
+        	</div>
         </div>
     </div>
     <div class="modal-footer">

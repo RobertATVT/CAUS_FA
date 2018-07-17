@@ -256,7 +256,7 @@ select#org option:hover {
 }
 #general-alerts {
     padding: 5px; 
-    background: #642667;
+    background: #D7D2CB;
     border-radius: 2px;
 	border: 1px solid rgba(255,255,255,0.25);
     border-left: 4px solid rgba(255,255,255,0.25); 
@@ -264,6 +264,22 @@ select#org option:hover {
     font-size: 12px; 
     color: #fff;
 	margin-bottom: 10px !important;
+}
+.alert-normal {
+	background: #fcfcfc;
+	color: #333;
+}
+.alert-low {
+	background: #F7EA48;
+	color: #333;
+}
+.alert-medium {
+	background: #ED8B00;
+	color: #333;
+}
+.alert-high {
+	background:  #CC0E00;
+	color: #fff;
 }
 #add-asset {
     padding: 5px; 
