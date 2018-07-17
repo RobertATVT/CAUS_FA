@@ -1,48 +1,3 @@
-function surplusAsset() {
-    ptag = jQuery('#surplusModal').find('.asset-tag').html();
-    var form = {
-        action: 'causfa_surplus',
-        type: 1
-    };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if(data['status'] == 1) {
-            var id = jQuery('#surplusModal').find('#surplusIndex').val();
-            var status = jQuery(('#status-' + id));
-            /*status.addClass('asset-pending');*/
-            status.html('<div class="asset-status asset-pending">Pending Surplus</div>');
-            jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery('#surplusModal').modal('close');
-            jQuery('#responseModal').find('#modal-response-title').text('Surplus Request Submitted');
-            jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
-            jQuery('#responseModal').modal();
-            jQuery('#responseModal').modal('open');
-        }
-    });
-}
-
-function transferAsset(PID_dest) {
-    var form = {
-        action: 'causfa_transfer_asset',
-        dest: PID_dest,
-        type: 0
-    };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if(data['status'] == 1) {
-            var id = jQuery('#transferModal').find('#transferIndex').val();
-            var status = jQuery(('#status-' + id));
-            /*status.addClass('asset-pending');*/
-            status.html('<div class="asset-status asset-pending">Pending Transfer</div>');
-            jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery('#transferModal').modal('close');
-            jQuery('#responseModal').find('#modal-response-title').text('Transfer Request Submitted');
-            jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
-            jQuery('#responseModal').modal();
-            jQuery('#responseModal').modal('open');
-        }
-    });
-}
 function generateForm(element, action) {
     var ptag = jQuery('#formsModal').find('#formsPtag').val();
     var form = {
@@ -277,36 +232,55 @@ function addTicket() {
     }
 }
 
-function acceptTransfer(ptag, id) {
-    var form = {
-        action: 'causfa_update_transfer',
-        type: 0,
-        ptag: ptag
-    };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if (data['status'] === 1) {
-            $("#alert-body-" + id).remove();
-            $("#alert-header-" + id).remove();
-            if ($("#asset-alerts").children().length === 0) {
-                $("#asset-alerts").remove();
-            }
-        }
-    });
-}
-
-function denyTransfer(ptag, id) {
-    var form = {
-        action: 'causfa_update_transfer',
-        type: 1,
-        ptag: ptag
-    };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if (data['status'] === 1) {
-            $("#alert-body-" + id).remove();
-            $("#alert-header-" + id).remove();
-            if ($("#asset-alerts").children().length === 0) {
-                $("#asset-alerts").remove();
-            }
-        }
-    });
+function checkSelected() {
+    var input = $( "input:checkbox:checked" );
+    if (input.length > 1) {
+        jQuery("#transfer-ribbon").removeClass("ribbon-disabled");
+        jQuery("#transfer-ribbon").addClass("ribbon-active");
+        jQuery("#transfer-ribbon-button").attr('onClick', 'bulkTransferModalRequested()');
+        jQuery("#surplus-ribbon").removeClass("ribbon-disabled");
+        jQuery("#surplus-ribbon").addClass("ribbon-active");
+        jQuery("#surplus-ribbon-button").attr('onClick', 'bulkSurplusModalRequested()');
+        jQuery("#gallery-ribbon").removeClass("ribbon-active");
+        jQuery("#gallery-ribbon").addClass("ribbon-disabled");
+        jQuery("#gallery-ribbon-button").attr('onClick', '');
+        jQuery("#forms-ribbon").removeClass("ribbon-active");
+        jQuery("#forms-ribbon").addClass("ribbon-disabled");
+        jQuery("#forms-ribbon-button").attr('onClick', '');
+        jQuery("#report-ribbon").removeClass("ribbon-active");
+        jQuery("#report-ribbon").addClass("ribbon-disabled");
+        jQuery("#report-ribbon-button").attr('onClick', '');
+    } else if (input.length > 0) {
+        jQuery("#transfer-ribbon").removeClass("ribbon-disabled");
+        jQuery("#transfer-ribbon").addClass("ribbon-active");
+        jQuery("#transfer-ribbon-button").attr('onClick', 'bulkTransferModalRequested()');
+        jQuery("#surplus-ribbon").removeClass("ribbon-disabled");
+        jQuery("#surplus-ribbon").addClass("ribbon-active");
+        jQuery("#surplus-ribbon-button").attr('onClick', 'bulkSurplusModalRequested()');
+        jQuery("#gallery-ribbon").removeClass("ribbon-disabled");
+        jQuery("#gallery-ribbon").addClass("ribbon-active");
+        jQuery("#gallery-ribbon-button").attr('onClick', '');
+        jQuery("#forms-ribbon").removeClass("ribbon-disabled");
+        jQuery("#forms-ribbon").addClass("ribbon-active");
+        jQuery("#forms-ribbon-button").attr('onClick', '');
+        jQuery("#report-ribbon").removeClass("ribbon-disabled");
+        jQuery("#report-ribbon").addClass("ribbon-active");
+        jQuery("#report-ribbon-button").attr('onClick', '');
+    } else {
+        jQuery("#transfer-ribbon").removeClass("ribbon-active");
+        jQuery("#transfer-ribbon").addClass("ribbon-disabled");
+        jQuery("#transfer-ribbon-button").attr('onClick', '');
+        jQuery("#surplus-ribbon").removeClass("ribbon-active");
+        jQuery("#surplus-ribbon").addClass("ribbon-disabled");
+        jQuery("#surplus-ribbon-button").attr('onClick', '');
+        jQuery("#gallery-ribbon").removeClass("ribbon-active");
+        jQuery("#gallery-ribbon").addClass("ribbon-disabled");
+        jQuery("#gallery-ribbon-button").attr('onClick', '');
+        jQuery("#forms-ribbon").removeClass("ribbon-active");
+        jQuery("#forms-ribbon").addClass("ribbon-disabled");
+        jQuery("#forms-ribbon-button").attr('onClick', '');
+        jQuery("#report-ribbon").removeClass("ribbon-active");
+        jQuery("#report-ribbon").addClass("ribbon-disabled");
+        jQuery("#report-ribbon-button").attr('onClick', '');
+    }
 }
