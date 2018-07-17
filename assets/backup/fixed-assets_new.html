@@ -12,6 +12,7 @@
     <script src="https://unpkg.com/tippy.js@2.4.1/dist/tippy.all.min.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/paradox.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
     <link href="slick/slick.css" rel="stylesheet" type="text/css">
     <link href="slick/slick-theme.css" rel="stylesheet" type="text/css">
     
@@ -581,31 +582,70 @@
         </div>
     </div>
 </div>
-<!-----Bulk Transfer Modal----->
+<!-- BULK TRANSFER BEGIN -->
 <div id="bulk-transferModal" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title">Asset Transfer</h4> 
-        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+        <div class="rw" style="padding: 10px; margin-bottom: 0px; !important">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                <div class="cl m3 t20 info-title" style="padding: 0px;">VT Tag Number:</div>
-                <div class="cl m6 t20"><span class="asset-tag"></span></div>
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>
-                <div class="cl m8 t20"><span class="asset-description"></span></div>
+                <div class="cl m3 t20 info-title center" style="padding: 0px;">VT Tag Number</div>
+                <div class="cl m7 t20 info-title center" style="padding: 0px;">Description</div>
+				<div class="cl m7 t20 info-title center" style="padding: 0px;">Reciever</div>
+				<div class="cl m3 t20 info-title center" style="padding: 0px;">Same Receiver</div>
             </div>
         </div>
-        <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -10px;">
+
+        <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -21px;">
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
-                    <div class="center cl t20 form-group" style="padding: 0px;">
-                        <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>
-                        <input type="text" class="awesomplete" id="recipient-name" list="PIDs"-+>
-                        <datalist id="PIDs"></datalist>
-                        <input type="hidden" id="transferIndex" value="" />
+<!-- BULK TRANSFER ASSET FILL BEGIN -->
+					<div class="center cl t20 form-group" style="padding: 0px; margin-bottom: 3px;">
+						<div class="cl m3 t20"><span class="asset-tag-[ID]"></span></div>
+						<div class="cl m7 t20 shorten-text"><span class="asset-description-[ID]"></span></div>
+						<div class="cl m7 t20">
+                        	<input type="text" class="awesomplete" id="recipient-name-[ID]" list="PIDs">
+                        	<datalist id="PIDs"></datalist>
+                        	<input type="hidden" id="transferIndex" value="" />
+						</div>
+						<div class="cl m3 t20">
+							<input id="same-reciever-[ID]" type="checkbox" value="same-reciever-[ID]" class="filled-in admin-block-line-b">
+							<label for="same-reciever-[ID]"></label>
+						</div>
                     </div>
+<!-- BULK TRANSFER ASSET FILL END -->
+<!-- BULK TRANSFER ASSET FILLER BEGIN -->
+					<div class="center cl t20 form-group" style="padding: 0px; margin-bottom: 3px;">
+						<div class="cl m3 t20"><span class="asset-tag-1">000123456</span></div>
+						<div class="cl m7 t20 shorten-text"><span class="asset-description-1">15" MacBook Pro w/ Retina Display and 2.8ghz CPU</span></div>
+						<div class="cl m7 t20">
+                        	<input type="text" class="awesomplete" id="recipient-name-1" list="PIDs">
+                        	<datalist id="PIDs"></datalist>
+                        	<input type="hidden" id="transferIndex" value="" />
+						</div>
+						<div class="cl m3 t20">
+							<input id="same-reciever-1" type="checkbox" value="same-reciever-1" class="filled-in admin-block-line-b">
+							<label for="same-reciever-1"></label>
+						</div>
+                    </div>
+					<div class="center cl t20 form-group" style="padding: 0px; margin-bottom: 3px;">
+						<div class="cl m3 t20"><span class="asset-tag-2">000123456</span></div>
+						<div class="cl m7 t20 shorten-text"><span class="asset-description-2">15" MacBook Pro w/ Retina Display and 2.8ghz CPU</span></div>
+						<div class="cl m7 t20">
+                        	<input type="text" class="awesomplete" id="recipient-name-2" list="PIDs">
+                        	<datalist id="PIDs"></datalist>
+                        	<input type="hidden" id="transferIndex" value="" />
+						</div>
+						<div class="cl m3 t20">
+							<input id="same-reciever-2" type="checkbox" value="same-reciever-2" class="filled-in admin-block-line-b">
+							<label for="same-reciever-2"></label>
+						</div>
+                    </div>
+<!-- BULK TRANSFER ASSET FILLER END -->
                 </form>
             </div>
         </div>
-        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;">
+
+        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -5px;">
             <div class="cl m20 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">
                 <p class="center info-title">Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
             </div>
@@ -626,6 +666,7 @@
         </div>
     </div>
 </div>
+<!-- BULK TRANSFER END -->
 <!-----Surplus Modal------>
 <div id="surplusModal" class="modal" style="width: 50% !important;">
     <div class="modal-content">
@@ -660,6 +701,60 @@
         </div>
     </div>
 </div>
+<!-- BULK SURPLUS BEGIN -->
+<div id="bulk-surplusModal" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title">Asset Transfer</h4> 
+        <div class="rw" style="padding: 10px; margin-bottom: 0px; !important">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+                <div class="cl m4 t20 info-title center" style="padding: 0px;">VT Tag Number</div>
+				<div class="cl m2">&nbsp;</div>
+                <div class="cl m14 t20 info-title center" style="padding: 0px;">Description</div>
+            </div>
+        </div>
+
+        <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -21px;">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px">
+                <form autocomplete="off">
+<!-- BULK SURPLUS ASSET FILL BEGIN -->
+					<div class="center cl t20 form-group" style="padding: 0px; margin-bottom: 3px;">
+						<div class="cl m4 t20"><span class="asset-tag-[ID]"></span></div>
+						<div class="cl m2">&nbsp;</div>
+						<div class="cl m14 t20 shorten-text text-left"><span class="asset-description-[ID]"></span></div>
+                    </div>
+<!-- BULK SURPLUS ASSET FILL END -->
+<!-- BULK SURPLUS ASSET FILLER BEGIN -->
+					<div class="center cl t20 form-group" style="padding: 0px; margin-bottom: 3px;">
+						<div class="cl m4 t20"><span class="asset-tag-1">000123456</span></div>
+						<div class="cl m2">&nbsp;</div>
+						<div class="cl m14 t20 shorten-text text-left"><span class="asset-description-1">15" MacBook Pro w/ Retina Display and 2.8ghz CPU</span></div>
+                    </div>
+					<div class="center cl t20 form-group" style="padding: 0px; margin-bottom: 3px;">
+						<div class="cl m4 t20"><span class="asset-tag-2">000123456</span></div>
+						<div class="cl m2">&nbsp;</div>
+						<div class="cl m14 t20 shorten-text text-left"><span class="asset-description-2">15" MacBook Pro w/ Retina Display and 2.8ghz CPU</span></div>
+                    </div>
+<!-- BULK SURPLUS ASSET FILLER END -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="rw">
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
+            </div>
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            </div>
+            <div class="cl m20 hide-small-down">
+                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
+                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BULK SURPLUS END -->
 <!-----Gallery Modal------>
 <div id="galleryModal" class="modal">
     <div class="modal-content">
@@ -863,8 +958,8 @@
 
     
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/toggle.js"></script>

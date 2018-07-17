@@ -14,10 +14,10 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
     background-color: #f6f6f6;
     border: 1px solid #9e9e9e;
     border-bottom: 2px solid #9e9e9e;
-    height: 2rem;
+    height: 1.5rem;
     text-align: center;
+	margin: 0px !important;
 }
-
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 2px solid #E87722;
     -webkit-box-shadow: 0 1px 0 0 #E87722;
@@ -145,6 +145,11 @@ select#org option:hover {
 }
 .lh-20 {
     line-height: 20px;
+}
+.shorten-text {
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
 }
 /* FIXED ASSETS ELEMENTS*/
 #asset-container {
