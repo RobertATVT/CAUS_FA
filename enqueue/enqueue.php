@@ -31,6 +31,9 @@ function causfa_enqueue() {
     wp_register_script('causfa_main', plugins_url('assets/js/main.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_transfer', plugins_url('assets/js/transfer.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_surplus', plugins_url('assets/js/surplus.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causfa_gallery', plugins_url('assets/js/gallery.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causfa_forms', plugins_url('assets/js/forms.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causfa_report_problem', plugins_url('assets/js/report_problem.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_sidenav', plugins_url('assets/js/sidenav.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_autocomplete', plugins_url('assets/js/autocomplete.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_materialize', plugins_url('assets/js/materialize.min.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
@@ -49,6 +52,9 @@ function causfa_enqueue() {
     wp_enqueue_script('causfa_main');
     wp_enqueue_script('causfa_transfer');
     wp_enqueue_script('causfa_surplus');
+    wp_enqueue_script('causfa_gallery');
+    wp_enqueue_script('causfa_forms');
+    wp_enqueue_script('causfa_report_problem');
     wp_enqueue_script('causfa_sidenav');
     wp_enqueue_script('causfa_autocomplete');
     wp_enqueue_script('causfa_materialize');

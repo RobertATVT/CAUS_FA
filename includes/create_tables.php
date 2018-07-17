@@ -168,4 +168,18 @@ function create_tables() {
         )".$charset_collate.";";
         dbDelta($sql);
     }
+    $table_name = 'causfa_alerts';
+    if ($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        ID INT NOT NULL AUTO_INCREMENT,
+        ORG varchar(32) NOT NULL,
+        CREATION_DATE TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        EXP_DATE TIMESTAMP NOT NULL,
+        CREATOR varchar(32) NOT NULL,
+        PRIORITY INT NOT NULL,
+        BODY LONGTEXT NOT NULL,
+        PRIMARY KEY (ID)
+        )".$charset_collate.";";
+        dbDelta($sql);
+    }
 }

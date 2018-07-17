@@ -1,19 +1,3 @@
-function generateForm(element, action) {
-    var ptag = jQuery('#formsModal').find('#formsPtag').val();
-    var form = {
-        action: 'causfa_form_fill_data',
-        ptag: ptag
-    };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if (data['status'] == 1) {
-            if (action == 1) {
-                generateOffieUse(data);
-            } else {
-                generateHomeUse(data);
-            }
-        }
-    });
-}
 function new_custodian_submit() {
     var building = jQuery('#Building').val();
     var office = jQuery('#Office').val();
@@ -54,101 +38,7 @@ function submitSVar(obj) {
         }
     });
 }
-function uploadImage() {
-    var fileInput = jQuery('#imageFileToUpload');
-    var file = fileInput.prop('files')[0];
-    var desc = jQuery('#imageDescription').val();
-    if (!file) {
-        alert('Please select a file to upload');
-    } else if (!desc) {
-        alert('Please enter a image description');
-    } else {
-        var ptag = jQuery('#galleryPtag').val();
-        var form = new FormData();
-        form.append('action', 'causfa_upload_image');
-        form.append('ptag', ptag);
-        form.append('imageFileToUpload', file);
-        form.append('desc', desc);
-        jQuery.ajax({
-            url: causfa_action_obj.ajax_url,
-            type: 'post',
-            contentType: false,
-            processData: false,
-            data: form,
-            success: function (data) {
-                if (data['status'] == 0) {
-                    alert(data['message']);
-                } else {
-                    alert(data['message']);
-                    $('#imageDescription').val('');
-                    $('#imageFileToUpload').val('');
-                    //var index = $('#slider-nav').slick('slickCurrentSlide');
-                    //index++;
-                    //$('#slider-nav').slick('slickGoTo', index);
-                    addImages(data['src'], data['desc'], data['date']);
-                }
-            }
-        });
-    }
-}
-function uploadFormHome(){
-    var fileInput = jQuery('#homeFormToUpload');
-    var file = fileInput.prop('files')[0];
-    if (!file) {
-        alert('Please select a file to upload');
-    } else {
-        var ptag = jQuery('#formsPtag').val();
-        var form = new FormData();
-        form.append('action', 'causfa_upload_form_home');
-        form.append('ptag', ptag);
-        form.append('homeFormToUpload', file);
-        jQuery.ajax({
-            url: causfa_action_obj.ajax_url,
-            type: 'post',
-            contentType: false,
-            processData: false,
-            data: form,
-            success: function (data) {
-                if (data['status'] == 0) {
-                    alert(data['message']);
-                } else {
-                    alert(data['message']);
-                    $('#homeFormToUpload').val('');
-                    getLastForm(ptag);
-                }
-            }
-        });
-    }
-}
-function uploadFormOffice(){
-    var fileInput = jQuery('#officeFormToUpload');
-    var file = fileInput.prop('files')[0];
-    if (!file) {
-        alert('Please select a file to upload');
-    } else {
-        var ptag = jQuery('#formsPtag').val();
-        var form = new FormData();
-        form.append('action', 'causfa_upload_form_office');
-        form.append('ptag', ptag);
-        form.append('officeFormToUpload', file);
-        jQuery.ajax({
-            url: causfa_action_obj.ajax_url,
-            type: 'post',
-            contentType: false,
-            processData: false,
-            data: form,
-            success: function (data) {
-                if (data['status'] == 0) {
-                    alert(data['message']);
-                } else {
-                    alert(data['message']);
-                    $('#officeFormToUpload').val('');
-                    getLastForm(ptag);
-                }
-            }
-        });
-    }
-}
+
 function addAsset() {
     var ptag = $('#addAssetPTAG').val();
     var serial = $('#addAssetSerial').val();
@@ -186,51 +76,6 @@ function addAsset() {
         });
     }
 }
-function addTicket() {
-    var ptag = $('#ticketPtag').text();
-    var serial = $('#ticketSerial').text();
-    var desc = $('#ticketDescription').text();
-    var notes = $('#ticketSelect').val();
-    var status = 1;
-    if (notes == 'other') {
-        notes = jQuery('#addTicketNotes').val();
-        if (notes.length == 0) {
-            status = 0;
-        }
-    }
-    if (status != 0) {
-        var form = {
-            action: 'causfa_add_ticket',
-            ptag: ptag,
-            serial: serial,
-            desc: desc,
-            note: notes,
-            type: 1
-        };
-        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-            if (data['status'] == 1) {
-                jQuery('#ticketModal').modal('close');
-                jQuery('#responseModal').find('#modal-response-title').text('Add Asset Request Submitted');
-                jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
-                jQuery('#responseModal').modal();
-                jQuery('#responseModal').modal('open');
-                var id = jQuery('#reportIndex').val();
-                var status = jQuery(('#status-' + id))
-                status.addClass('asset-pending');
-                status.html("Pending Ticket");
-                jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-                jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-                jQuery(('#problem-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            } else {
-                jQuery('#ticketModal').modal('close');
-                jQuery('#responseModal').find('#modal-response-title').text('Ticket Rejected');
-                jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
-                jQuery('#responseModal').modal();
-                jQuery('#responseModal').modal('open');
-            }
-        });
-    }
-}
 
 function checkSelected() {
     var input = $( "input:checkbox:checked" );
@@ -249,7 +94,7 @@ function checkSelected() {
         jQuery("#forms-ribbon-button").attr('onClick', '');
         jQuery("#report-ribbon").removeClass("ribbon-active");
         jQuery("#report-ribbon").addClass("ribbon-disabled");
-        jQuery("#report-ribbon-button").attr('onClick', '');
+        jQuery("#problem-ribbon-button").attr('onClick', '');
     } else if (input.length > 0) {
         jQuery("#transfer-ribbon").removeClass("ribbon-disabled");
         jQuery("#transfer-ribbon").addClass("ribbon-active");
@@ -259,13 +104,13 @@ function checkSelected() {
         jQuery("#surplus-ribbon-button").attr('onClick', 'bulkSurplusModalRequested()');
         jQuery("#gallery-ribbon").removeClass("ribbon-disabled");
         jQuery("#gallery-ribbon").addClass("ribbon-active");
-        jQuery("#gallery-ribbon-button").attr('onClick', '');
+        jQuery("#gallery-ribbon-button").attr('onClick', 'bulkGalleryModalRequested()');
         jQuery("#forms-ribbon").removeClass("ribbon-disabled");
         jQuery("#forms-ribbon").addClass("ribbon-active");
-        jQuery("#forms-ribbon-button").attr('onClick', '');
+        jQuery("#forms-ribbon-button").attr('onClick', 'bulkFormsModalRequested()');
         jQuery("#report-ribbon").removeClass("ribbon-disabled");
         jQuery("#report-ribbon").addClass("ribbon-active");
-        jQuery("#report-ribbon-button").attr('onClick', '');
+        jQuery("#problem-ribbon-button").attr('onClick', 'bulkTicketModalRequested()');
     } else {
         jQuery("#transfer-ribbon").removeClass("ribbon-active");
         jQuery("#transfer-ribbon").addClass("ribbon-disabled");
@@ -281,6 +126,6 @@ function checkSelected() {
         jQuery("#forms-ribbon-button").attr('onClick', '');
         jQuery("#report-ribbon").removeClass("ribbon-active");
         jQuery("#report-ribbon").addClass("ribbon-disabled");
-        jQuery("#report-ribbon-button").attr('onClick', '');
+        jQuery("#problem-ribbon-button").attr('onClick', '');
     }
 }
