@@ -85,12 +85,12 @@
 									</div>
 								</div>
 							</div>				
-<!-- END TEMPLATE faa-admin-impact.html -->
+
 							<div class="rw" style="margin:0px;">
 								<div class="cl t20" style="background: #fff;">
 									<div class="cl t20 vt-dk-grey center" style="padding: 10px; font-size: 150%; font-weight: 700;">ADMINISTRATIVE REPORTS</div>
-
-<!-- END TEMPLATE faa-admin-reports.html -->
+<!-- END TEMPLATE faa-admin-impact.html -->
+<!-- BEGIN TEMPLATE faa-admin-reports.html -->
 									<div class="cl t10 center" id="report-[ID]" style="padding: 8px;">
 										<div class="rw vt-dk-grey" style="border-radius: 2px;">
 											<div class="cl t20 center report-block-header">Individual Asset Report</div>
@@ -186,9 +186,9 @@
 						</div>
 					</div>
 				</div>
-<!-- END TEMPLATE faa-admin-reports.html -->
 			</div>
 		</div>
+<!-- END TEMPLATE faa-admin-reports.html -->		
 <!-- BEGIN TEMPLATE faa-admin-transfer-header.html -->
 		<div id="PendingTransfers" class="cl t20 tabcontent">
 			<div class="rw" style="margin:0px; display: block;">
@@ -297,7 +297,7 @@
 <!-- END TEMPLATE faa-admin-surplus-header.html -->
 <!-- BEGIN TEMPLATE faa-admin-surplus-fill.html -->
 						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
-							<form id="surplus-[ID]" actoin="#">
+							<form id="surplus-[ID]" action="#">
 								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-ptag-[ID]">[PTAG]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-[ID]">[PID 1]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid2-[ID]">[PID 2]</div>
@@ -329,7 +329,7 @@
 <!-- END TEMPLATE faa-admin-surplus-fill.html -->
 <!-- BEGIN SURPLUS FILLER -->
 						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
-							<form id="surplus-[ID]" actoin="#">
+							<form id="surplus-[ID]" action="#">
 								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-ptag-[ID]">[PTAG]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-[ID]">[PID 1]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid2-[ID]">[PID 2]</div>
@@ -385,7 +385,7 @@
 <!-- END TEMPLATE faa-admin-tickets-header.html -->
 <!-- BEGIN TEMPLATE faa-admin-tickets-fill.html -->
 						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
-							<form id="transfer-[ID]" actoin="#">
+							<form id="transfer-[ID]" action="#">
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-ptag-[ID]">[PTAG]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid1-[ID]">[PID 1]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
@@ -417,7 +417,7 @@
 <!-- END TEMPLATE faa-admin-tickets-fill.html -->
 <!-- BEGIN TICKETS FILLER -->
 						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
-							<form id="transfer-[ID]" actoin="#">
+							<form id="transfer-[ID]" action="#">
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-ptag-[ID]">[PTAG]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid1-[ID]">[PID 1]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
@@ -526,7 +526,7 @@
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
                         <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>
-                        <input type="text" class="awesomplete" id="recipient-name" list="PIDs"-+>
+                        <input type="text" class="awesomplete" id="recipient-name" list="PIDs">
                         <datalist id="PIDs"></datalist>
                         <input type="hidden" id="transferIndex" value="" />
                     </div>
@@ -746,7 +746,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="js/materialize.min.js"></script>
 	<script src="js/modal.js"></script>
 	<script src="js/toggle.js"></script>
 	<script src="js/main.js"></script>
@@ -786,7 +786,7 @@
 	  } );
 	  </script>
 
-	<script type="text/javascript">
+	<script>
 		jQuery(document).ready(function($) {
 			$('#myCarousel').carousel({
 				interval: 5000
