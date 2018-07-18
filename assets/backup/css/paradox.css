@@ -7,7 +7,6 @@
 @import 'paradox-large.css';
 @import 'paradox-xlarge.css';
 @import 'paradox-xxlarge.css';
-@import 'paradox-elements.css';
 
 :root {
     --col-1: 5%;
