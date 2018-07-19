@@ -2,7 +2,7 @@
 /**
  * Plugin Name: CAUS Fixed Assets Application
  * Description: Fixed Asset viewing and management application
- * Version: 0.490
+ * Version: 0.50
  * Author: VT CAUS IT
  * Author URI: http://www.caus.vt.edu
  * Text Domain: CAUS Fixed Assets Application

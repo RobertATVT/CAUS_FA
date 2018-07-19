@@ -129,3 +129,9 @@ function checkSelected() {
         jQuery("#problem-ribbon-button").attr('onClick', '');
     }
 }
+
+function openModal(element, data) {
+    alert("attempting to open a modal");
+    jQuery('#' + element).modal();
+    jQuery('#' + element).modal('open');
+}
