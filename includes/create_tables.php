@@ -156,7 +156,8 @@ function create_tables() {
     if ($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
         $sql = "CREATE TABLE ".$table_name." (
         ID INT NOT NULL AUTO_INCREMENT,
-        TIMESTAMP TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        DATE_CREATED date NOT NULL,
+        FZVFORG_ORGN_CODE varchar(9) NOT NULL,
         PID_Submit varchar(32) NOT NULL,
         PID_Assigned LONGTEXT NOT NULL,
         FZVFORG_PTAG varchar(9) NOT NULL,

@@ -96,3 +96,20 @@ function causfa_bulk_surplus() {
     $output['message'] = 'A surplus request has been sent to your Fixed Assets Liaison and Business Manager. They will be in contact with you soon to facilitate the transfer of the asset.';
     wp_send_json($output);
 }
+
+function causfa_surplus_number() {
+    global $wpdb;
+    $managementCode = causfa_groups_management_code();
+    $oldTime = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 14, date("Y")));
+    $newTime  = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 7, date("Y")));
+    $results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 1 AND FZVFORG_ORGN_CODE = '" . $managementCode . "';");
+    $results_old = $wpdb->get_results("SELECT * FROM causfa_pending WHERE DATE_CREATED < '".$oldTime."' AND PENDING_TYPE = 1 AND FZVFORG_ORGN_CODE = '" . $managementCode . "';");
+    $results_new = $wpdb->get_results("SELECT * FROM causfa_pending WHERE DATE_CREATED > '".$newTime."' AND PENDING_TYPE = 1 AND FZVFORG_ORGN_CODE = '" . $managementCode . "';");
+    $output = array (
+        'total' => count($results),
+        'old' => count($results_old),
+        'new' => count($results_new),
+    );
+    return $output;
+
+}

@@ -120,7 +120,16 @@ function causfa_update_transfer() {
 function causfa_transfer_number() {
     global $wpdb;
     $managementCode = causfa_groups_management_code();
-    $results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE FZVFORG_ORGN_CODE = " . $managementCode . ";");
-    echo count($results);
+    $oldTime = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 14, date("Y")));
+    $newTime  = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 7, date("Y")));
+    $results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 0 AND FZVFORG_ORGN_CODE = '" . $managementCode . "';");
+    $results_old = $wpdb->get_results("SELECT * FROM causfa_pending WHERE DATE_CREATED < '".$oldTime."' AND PENDING_TYPE = 0 AND FZVFORG_ORGN_CODE = '" . $managementCode . "';");
+    $results_new = $wpdb->get_results("SELECT * FROM causfa_pending WHERE DATE_CREATED > '".$newTime."' AND PENDING_TYPE = 0 AND FZVFORG_ORGN_CODE = '" . $managementCode . "';");
+    $output = array (
+        'total' => count($results),
+        'old' => count($results_old),
+        'new' => count($results_new),
+    );
+    return $output;
 
 }

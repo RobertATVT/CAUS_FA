@@ -17,6 +17,7 @@ function causfa_add_ticket() {
     $serial = sanitize_text_field($_POST['serial']);
     $desc = sanitize_text_field($_POST['desc']);
     $note = sanitize_text_field($_POST['note']);
+    $date_created = current_time('mysql');
     $type = $_POST['type'];
     $user = wp_get_current_user()->user_nicename;
     $FALs = causfa_groups_FAL();
@@ -28,6 +29,8 @@ function causfa_add_ticket() {
     $wpdb->insert(
         'causfa_tickets',
         array(
+            'DATE_CREATED' => $date_created,
+            'FZVFORG_ORGN_CODE' => causfa_groups_management_code(),
             'PID_Submit' => $user,
             'PID_Assigned' => $FAL_PIDs_s,
             'FZVFORG_PTAG' => $ptag,
@@ -35,7 +38,7 @@ function causfa_add_ticket() {
             'FZVFORG_DESCRIPTION' => $desc,
             'Notes' => $note,
             'Type' => $type
-        ), array('%s','%s','%s','%s','%s','%s','%d')
+        ), array('%s','%s','%s','%s','%s','%s','%s','%s','%d')
     );
     if ($type == 0) {
         $action = 18;
@@ -53,5 +56,22 @@ function causfa_add_ticket() {
     $output['status'] = 1;
     $output['message'] = 'Your request has been submitted and will be processed by your Fixed Assets Liaison';
     wp_send_json($output);
+
+}
+
+function causfa_ticket_number() {
+    global $wpdb;
+    $oldTime = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 14, date("Y")));
+    $newTime  = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 7, date("Y")));
+    $managementCode = causfa_groups_management_code();
+    $results = $wpdb->get_results("SELECT * FROM causfa_tickets WHERE Type = 1 AND FZVFORG_ORGN_CODE = '" . $managementCode . "';");
+    $results_old = $wpdb->get_results("SELECT * FROM causfa_tickets WHERE DATE_CREATED < '".$oldTime."' AND Type = 1 AND FZVFORG_ORGN_CODE = '" . $managementCode . "';");
+    $results_new = $wpdb->get_results("SELECT * FROM causfa_tickets WHERE DATE_CREATED > '".$newTime."' AND Type = 1 AND FZVFORG_ORGN_CODE = '" . $managementCode . "';");
+    $output = array (
+        'total' => count($results),
+        'old' => count($results_old),
+        'new' => count($results_new),
+    );
+    return $output;
 
 }

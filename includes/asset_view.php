@@ -57,8 +57,21 @@ function causfa_load_employee_view() {
 }
 
 function causfa_load_admin_view(){
+    global $wpdb;
 	$output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-header.html', true));
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-impact.html', true));
+	$transfers = causfa_transfer_number();
+	$output = str_replace('[TRANSFER#]', $transfers['total'], $output);
+    $output = str_replace('[TRANSFER OLD]', $transfers['old'], $output);
+    $output = str_replace('[TRANSFER NEW]', $transfers['new'], $output);
+    $surpluses = causfa_surplus_number();
+    $output = str_replace('[SURPLUS#]', $surpluses['total'], $output);
+    $output = str_replace('[SURPLUS OLD]', $surpluses['old'], $output);
+    $output = str_replace('[SURPLUS NEW]', $surpluses['new'], $output);
+    $tickets = causfa_ticket_number();
+    $output = str_replace('[TICKET#]', $tickets['total'], $output);
+    $output = str_replace('[TICKET OLD]', $tickets['old'], $output);
+    $output = str_replace('[TICKET NEW]', $tickets['new'], $output);
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-header.html', true));
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill.html', true));
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-footer.html', true));
