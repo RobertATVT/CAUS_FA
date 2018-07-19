@@ -1,12 +1,13 @@
-<!-- BEGIN TEMPLATE faa-admin-transfer-fill.html -->
-						<div class="cl t20 block-text" style="margin-top: 5px; padding-bottom: 5px;border-bottom: 3px solid rgba(255,255,255,0.2)">
+<!-- BEGIN faa-admin-transfer-fill.html -->
+					<div class="cl m20 t20">
+						<div class="cl t20 block-text" style="background: #f8f8f8; margin: 0px; padding: 5px !important; border-bottom: 1px solid rgba(0,0,0,0.25); min-height: 20px; ;line-height: 20px;">
 							<form id="transfer-[ID]" action="#">
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-ptag-[ID]">[PTAG]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid1-[ID]">[PID 1]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
 								<div class="cl xl2 t5 center admin-block-line=t" id="transfer-date-[ID]">[DATE]</div>
 								<div class="cl xl2 t5 center" id="transfer-stage1-[ID]">
-									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
+									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onClick="jQuery('#transferModal').modal('')" onRelease="jQuery('#transferModal').modal('open')">
 									<label for="transfer-stage-1-[ID]"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
@@ -29,4 +30,5 @@
 								</div>
 							</form>
 						</div>
-<!-- END TEMPLATE faa-admin-transfer-fill.html -->
+					</div>
+<!-- END faa-admin-transfer-fill.html -->
