@@ -6,16 +6,24 @@
  * Time: 9:42 PM
  */
 
-/**
- * @return string - the display name(s) of the FAL(s)
- *
- * Uses the groups plugin to determine the FAL(s) of the current users organization
- */
+
 function causfa_groups_FAL($PID = null) {
     global $wpdb;
     $output = array();
     if ($PID != null) {
-        $current_user = new Groups_User(get_user_by('email', $PID.'@vt.edu')->ID);
+        if (causfa_groups_is_admin($PID)) {
+            $current_user = new Groups_User(get_user_by('email', $PID.'@vt.edu')->ID);
+            $FAL = array(
+                'Name' => $current_user->user_nicename,
+                'Email' => $current_user->user_email,
+                'PID' => $PID,
+                'Phone' => ''
+            );
+            $output[] = $FAL;
+            return $output;
+        } else {
+            $current_user = new Groups_User(get_user_by('email', $PID.'@vt.edu')->ID);
+        }
     } else {
         $current_user = new Groups_User( get_current_user_id() );
     }
@@ -57,11 +65,7 @@ function causfa_groups_FAL($PID = null) {
     return $output;
 }
 
-/**
- * @return string - the display name(s) of the FAC(s)
- *
- * Uses the groups plugin to determine the FAC(s) of the current users organization
- */
+
 function causfa_groups_FAC() {
     global $wpdb;
     $output = array();
@@ -103,11 +107,7 @@ function causfa_groups_FAC() {
     return $output;
 }
 
-/**
- * @return string - display name(s) of the BM(s)
- *
- * Uses the groups plugin to determine the BM(s) of the current users organization
- */
+
 function causfa_groups_BM($PID = null) {
     global $wpdb;
     $output = array();
@@ -153,11 +153,6 @@ function causfa_groups_BM($PID = null) {
     return $output;
 }
 
-/**
- * @return mixed - the management code tied to the current users organization
- *
- * Uses the groups plugin to get the management code that is stored in the capability of the organization group
- */
 function causfa_groups_management_code() {
     $current_user = new Groups_User( get_current_user_id() );
     $current_user_groups = $current_user->groups;
@@ -171,9 +166,6 @@ function causfa_groups_management_code() {
     }
 }
 
-/**
- * @return bool - returns true or false if the current user is a admin (FAL, FAC, BM) or a standard user (Employee)
- */
 function causfa_groups_is_admin($PID = null) {
     $is_admin = false;
     if($PID != null) {

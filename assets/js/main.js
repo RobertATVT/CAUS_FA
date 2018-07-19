@@ -53,7 +53,7 @@ function addAsset() {
         type: 0
     };
     if (ptag == null) {
-        alert('Please enter the PTag for the asset');
+        alert('Please enter the Ptag for the asset');
     } else if (serial == null) {
         alert('Please enter the Serial number for the asset');
     } else if (desc == null) {

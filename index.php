@@ -54,6 +54,8 @@ add_filter( 'causfa_impact', 'causfa_filter_impact', 10, 4);
 add_filter( 'causfa_asset_info', 'causfa_filter_asset_info', 10, 2);
 add_action( 'wp_ajax_causfa_surplus', 'causfa_surplus');
 add_action( 'wp_ajax_causfa_transfer_asset', 'causfa_transfer_asset');
+add_action( 'wp_ajax_causfa_bulk_transfer_asset', 'causfa_bulk_transfer_asset');
+add_action( 'wp_ajax_causfa_bulk_surplus_asset', 'causfa_bulk_surplus');
 add_action( 'wp_ajax_causfa_autocomplete_PID', 'causfa_autocomplete_PID');
 add_action( 'wp_ajax_causfa_pending_action', 'causfa_pending_action');
 add_action( 'wp_ajax_causfa_new_custodian', 'causfa_new_custodian');
