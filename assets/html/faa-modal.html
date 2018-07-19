@@ -31,13 +31,13 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="transferAsset()">Transfer</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="transferAsset()">Transfer</button>
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
         </div>
@@ -59,6 +59,7 @@
         <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -21px;">
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
+                    <input type="hidden" id="bulk-transfer-ids">
                     <div id="bulk-transfer-items">
                     </div>
                 </form>
@@ -74,13 +75,13 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="bulkTransferAsset()">Transfer</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="bulkTransferAsset()">Transfer</button>
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
         </div>
@@ -135,11 +136,9 @@
         <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -21px;">
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
+                    <input type="hidden" id="bulk-surplus-ids">
 <!-- BULK SURPLUS ASSET FILL BEGIN -->
-					<div class="center cl t20 form-group" style="padding: 0px; margin-bottom: 3px;">
-						<div class="cl m4 t20"><span class="asset-tag-[ID]"></span></div>
-						<div class="cl m2">&nbsp;</div>
-						<div class="cl m14 t20 shorten-text text-left"><span class="asset-description-[ID]"></span></div>
+                    <div id="bulk-surplus-items">
                     </div>
 <!-- BULK SURPLUS ASSET FILL END -->
                 </form>
@@ -149,13 +148,13 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
+                <button type="button" class="btn btn-primary" id="surplusButton" onClick="bulkSurplusAsset()">Surplus</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
+                <button type="button" class="btn btn-primary" id="surplusButton" onClick="bulkSurplusAsset()">Surplus</button>
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
         </div>

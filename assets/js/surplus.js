@@ -12,6 +12,31 @@ function surplusModalRequested(elementID) {
 //End Surplus Modal Functions
 //Bulk Surplus Modal Functions
 function bulkSurplusModalRequested() {
+    jQuery('#bulk-surplus-items').html('');
+    var ids = [];
+    var tags = [];
+    var descriptions = [];
+    var selected = jQuery(" input:checkbox:checked");
+    for (var i = 0; i < selected.length; i++) {
+        var id = selected[i].id.split('-')[2];
+        ids.push(id);
+        tags.push(jQuery("#asset-tag-" + id).html());
+        descriptions.push(jQuery("#asset-desc-" + id).html());
+    }
+    var assets = '';
+    for (i = 0; i < tags.length; i++) {
+        var asset = '<div class="center cl t20 form-group" style="padding: 0px; margin-bottom: 3px;">' +
+            '           <div class="cl m4 t20"><span class="asset-tag-[ID]">' + tags[i] + '</span></div>' +
+            '           <div class="cl m2">&nbsp;</div>' +
+            '           <div class="cl m14 t20 shorten-text text-left"><span class="asset-description-[ID]">' + descriptions[i] + '</span></div>' +
+            '        </div>';
+    asset = asset.split('[ID]').join(ids[i]);
+    assets = assets + asset;
+    }
+    jQuery('#bulk-surplus-items').html(assets);
+    jQuery('#bulk-surplus-ids').val(ids.join(', '));
+    jQuery('#bulk-surplusModal').modal();
+    jQuery('#bulk-surplusModal').modal('open');
 
 }
 //End Bulk Surplus Modal Functions
@@ -40,24 +65,32 @@ function surplusAsset() {
 }
 
 function bulkSurplusAsset() {
-    ptags = jQuery('#surplusModal').find('.asset-tag').html().split(', ');
+    var ids = jQuery('#bulk-surplus-ids').val();
+    ids = ids.split(', ');
+    var tags = [];
+    for (var i = 0; i < ids.length; i++) {
+        var tag = jQuery('#asset-tag-' + ids[i]).html();
+        tags.push(tag);
+    }
     var form = {
-        action: 'causfa_surplus',
-        ptag: ptags,
+        action: 'causfa_bulk_surplus_asset',
+        ptags: tags.join(','),
         type: 1
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if(data['status'] == 1) {
-            var id = jQuery('#surplusModal').find('#surplusIndex').val();
-            id = id.split(', ');
-            for (var i = 0; i < id.length; i++) {
-                var status = jQuery(('#status-' + id[i]));
+        if (data['status'] == 1) {
+            for (var i = 0; i < ids.length; i++) {
+                var index = ids[i];
+                var status = jQuery(('#status-' + index));
                 status.html('<div class="asset-status asset-pending">Pending Surplus</div>');
-                jQuery(('#transfer-' + id[i])).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-                jQuery(('#surplus-' + id[i])).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-                jQuery(('#asset-select-' + id[i])).prop('checked', false);
+                jQuery(('#transfer-' + index)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+                jQuery(('#surplus-' + index)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+                var checkbox = jQuery(('#asset-select-' + index));
+                checkbox.attr('disabled', 'disabled');
+                checkbox.attr('checked', false);
             }
-            jQuery('#surplusModal').modal('close');
+            checkSelected();
+            jQuery('#bulk-surplusModal').modal('close');
             jQuery('#responseModal').find('#modal-response-title').text('Surplus Request Submitted');
             jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
             jQuery('#responseModal').modal();

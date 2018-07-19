@@ -35,7 +35,6 @@ function causfa_enqueue() {
     wp_register_script('causfa_forms', plugins_url('assets/js/forms.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_report_problem', plugins_url('assets/js/report_problem.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_sidenav', plugins_url('assets/js/sidenav.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
-    wp_register_script('causfa_autocomplete', plugins_url('assets/js/autocomplete.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_materialize', plugins_url('assets/js/materialize.min.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_tippy_script', 'https://unpkg.com/tippy.js@2.4.1/dist/tippy.all.min.js', array('jquery'), false, true);
     wp_register_script('causfa_font_awesome_script', 'https://use.fontawesome.com/releases/v5.0.8/js/all.js', array('jquery'), false, true);
@@ -56,7 +55,6 @@ function causfa_enqueue() {
     wp_enqueue_script('causfa_forms');
     wp_enqueue_script('causfa_report_problem');
     wp_enqueue_script('causfa_sidenav');
-    wp_enqueue_script('causfa_autocomplete');
     wp_enqueue_script('causfa_materialize');
     wp_enqueue_script('causfa_tippy_script');
     wp_enqueue_script('causfa_font_awesome_script');

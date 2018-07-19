@@ -51,11 +51,13 @@ function addTicket() {
                 jQuery('#responseModal').modal('open');
                 var id = jQuery('#reportIndex').val();
                 var status = jQuery(('#status-' + id))
-                status.addClass('asset-pending');
-                status.html("Pending Ticket");
+                status.html('<div class="asset-status asset-pending">Pending Ticket</div>');
                 jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
                 jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
                 jQuery(('#problem-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+                var checkbox = jQuery(('#asset-select-' + id));
+                checkbox.attr('disabled', 'disabled');
+                checkbox.attr('checked', false);
             } else {
                 jQuery('#ticketModal').modal('close');
                 jQuery('#responseModal').find('#modal-response-title').text('Ticket Rejected');
