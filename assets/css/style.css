@@ -341,7 +341,7 @@ select#org option:hover {
 }
 .block-footer {
     background: rgba(0,0,0,.2);
-    min-height: 15px; 
+    min-height: 15px !important; 
     border-radius: 0px 0px 3px 3px; 
     padding: 3px !important;
     margin-top: 10px;
