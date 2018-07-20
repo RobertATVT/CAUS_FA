@@ -94,6 +94,9 @@ function bulkTransferModalRequested() {
         document.getElementById(selector).addEventListener("awesomplete-select", function() {
             activateCheckboxes();
         });
+        document.getElementById(selector).addEventListener('keyup', function() {
+            inputBoxChange(this);
+        });
         selectors.push(selector);
     }
     transferModalLoad(selectors);
@@ -103,14 +106,72 @@ function bulkTransferModalRequested() {
 
 }
 
+function inputBoxChange(element) {
+    if(!element.value) {
+        var ids = jQuery('#bulk-transfer-ids').val().split(', ');
+        var allEmpty = true;
+        for (var i = 0; i < ids.length; i++) {
+            if (jQuery('#recipient-name-' + ids[i]).val()) {
+                allEmpty = false;
+            }
+        }
+        if (allEmpty) {
+            var checkboxes = jQuery("#bulk-transfer-items").find("input:checkbox");
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].disabled = true;
+                checkboxes[i].onclick = '';
+            }
+        }
+    }
+}
+
 function activateCheckboxes() {
     var checkboxes = jQuery("#bulk-transfer-items").find("input:checkbox");
     for (var i = 0; i < checkboxes.length; i++) {
         checkboxes[i].disabled = '';
+        checkboxes[i].onclick =  function() {sameReceiver(this.id);};
+    }
+}
+
+function sameReceiver(id) {
+    id = id.split('-')[2];
+    var name = jQuery('#recipient-name-' + id).val();
+    var checkboxes = jQuery("#bulk-transfer-items").find("input:checkbox");
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = true;
+        checkboxes[i].onclick = function() {changeReceiver(this.id, name)};
+        var index = checkboxes[i].id.split('-')[2];
+        var nameInput = jQuery('#recipient-name-' + index);
+        nameInput.val(name);
+        nameInput.prop('disabled', true);
+    }
+}
+
+function changeReceiver(id, name) {
+    var checkboxes = jQuery("#bulk-transfer-items").find("input:checkbox:checked");
+    id = id.split('-')[2];
+    if(checkboxes.length) {
+        var checkbox = jQuery('#same-reciever-' + id);
+        var nameInput = jQuery('#recipient-name-' + id);
+        if (nameInput.prop('disabled')) {
+            nameInput.val('');
+            nameInput.prop('disabled', '');
+        } else {
+            nameInput.val(name);
+            nameInput.prop('disabled', true);
+        }
+    } else {
+        var nameInput = jQuery('#recipient-name-' + id);
+        nameInput.val('');
+        nameInput.prop('disabled', '');
+        var checkboxes = jQuery("#bulk-transfer-items").find("input:checkbox");
+        for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].disabled = true;
+            checkboxes[i].onclick = '';
+        }
     }
 }
 //End Bulk Transfer Modal Functions
-
 //Transfer Data Processing Functions
 function validateForm() {
     // Get the input element
