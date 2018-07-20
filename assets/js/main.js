@@ -132,7 +132,6 @@ function checkSelected() {
         var id = input[i].id;
         id = id.split('-')[2];
         var status = jQuery('#status-' + id);
-        alert(JSON.stringify(status.children()));
         if (status.children().html() === 'Missing') {
             jQuery("#transfer-ribbon").removeClass("ribbon-active");
             jQuery("#transfer-ribbon").addClass("ribbon-disabled");
