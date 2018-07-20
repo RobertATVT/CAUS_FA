@@ -82,7 +82,7 @@
 			<div class="rw" style="margin:0px !important; display: block;">
 				<div class="cl m20 t20" style="padding:7px;">
 					<div class="cl t20 vt-teal vt-txt-white asset-block">
-						<div class="cl t20 block-text admin-list-heading" style="">
+						<div class="cl t20 block-text admin-list-heading" id="admin-transfer-header">
 							<div class="cl xl2 t5 center admin-block-line">VT PTAG</div>
 							<div class="cl xl2 t5 center admin-block-line">ISSUER PID</div>
 							<div class="cl xl2 t5 center admin-block-line">RECIEVER PID</div>
@@ -106,15 +106,15 @@
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
 								<div class="cl xl2 t5 center admin-block-line=t" id="transfer-date-[ID]">[DATE]</div>
 								<div class="cl xl2 t5 center" id="transfer-stage1-[ID]">
-									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transferModal','')">
+									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-1','')">
 									<label for="transfer-stage-1-[ID]"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
-									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('surplusModal','')">
+									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-2','')">
 									<label for="transfer-stage-2-[ID]"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage3-[ID]">
-									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('ticketModal','')">
 									<label for="transfer-stage-3-[ID]"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage4-[ID]">
@@ -178,7 +178,7 @@
 			<div class="rw" style="margin:0px !important; display: block;">
 				<div class="cl m20 t20" style="padding:7px;">
 					<div class="cl t20 vt-maroon vt-txt-white asset-block">
-						<div class="cl t20 block-text admin-list-heading" style="">
+						<div class="cl t20 block-text admin-list-heading" id="admin-surplus-header">
 							<div class="cl xl2 t5 center admin-block-line">VT PTAG</div>
 							<div class="cl xl2 t5 center admin-block-line">OWNER PID</div>
 							<div class="cl xl2 t5 center admin-block-line">DATE</div>
@@ -280,7 +280,7 @@
 		<div class="rw" style="margin:0px !important; display: block;">
 			<div class="cl m20 t20" style="padding:7px;">
 				<div class="cl t20 vt-dk-orange vt-txt-white asset-block">
-					<div class="cl t20 block-text admin-list-heading" style="">
+					<div class="cl t20 block-text admin-list-heading" id="admin-ticket-header">
 						<div class="cl xl2 t5 center admin-block-line">VT PTAG</div>
 						<div class="cl xl2 t5 center admin-block-line">OWNER PID</div>
 						<div class="cl xl2 t5 center admin-block-line">DATE</div>
@@ -485,33 +485,64 @@
 </div>
 <!-- END faa-admin-footer.html -->
 <!-- BEGIN modal.html -->
-<!-----Test Modal----->
-<div id="testModal" class="modal">
+<!-----Transfer Stage 1 Modal----->
+<div id="transfer-stage-1" class="modal">
     <div class="modal-content">
-        <h4 class="center faa-modal-title">Asset Transfer</h4> 
-        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+        <h4 class="center faa-modal-title">Transfer Stage 1</h4> 
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-1a">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                <div class="cl m3 t20 info-title" style="padding: 0px;">VT Tag Number:</div>
-                <div class="cl m6 t20"><span class="asset-tag"></span></div>
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>
-                <div class="cl m8 t20"><span class="asset-description"></span></div>
+                <div class="cl t15 info-title center" style="padding: 0px;">
+					Is this asset a computer or device that falls under your IT Departments area of influence?<br />
+					<span style="font-size:85%;font-weight: 400;color: #333;">
+						(i.e. Laptop Computer, Desktop Computer, Monitor, Printer, Hard Drive, Keyboard/Mouse, etc.)
+					</span>
+				</div>
+				<div class="t5 right">
+					<button type="button" class="btn btn-primary" id="transfer-stage-1-yes">Yes</button>
+					<button type="button" class="btn btn-primary" id="transfer-stage-1-no">No</button>
+				</div>
             </div>
         </div>
-        <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -10px;">
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="transfer-stage-1b">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+				<select id="it-select">
+					<option value="null">- None Selected -</option>
+                    <option value="mattjw6">Matthew Jezierski</option>
+                    <option value="robertav">Robert Vaughan</option>
+                    <option value="ricraig">Rick Craig</option>
+                </select>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none" id="transfer-stage-1c">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+                <div class="cl t15 info-title center" style="padding: 0px;">You have indicated that you have contacted the faculty/staff who initiated the transfer. Have you set a date for the pickup of the item?
+				</div>
+				<div class="cl t5 info-title center" style="padding: 0px;">
+					<div class="t5 right">
+						<button type="button" class="btn btn-primary" id="transfer-stage-1c-yes">Yes</button>
+						<button type="button" class="btn btn-primary" id="transfer-stage-1c-no">No</button>
+					</div>
+				</div>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="transfer-stage-1d">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+				<div class="t10 left">Please input the date that was initially set</div>
+				<div class="t10 right">
+					<input type="text" id="transfer-pickupdate" style="margin: 0px !important;">
+				</div>
+            </div>
+        </div>
+        <div class="rw" style="padding: 10px;margin-bottom: 0px; display: none;" id="transfer-stage-1e">
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
-                    <div class="center cl t20 form-group ui-widget" style="padding: 0px;">
-                        <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>
-                        <input type="text" class="form-control faa-input" id="recipient-name" list="PIDs">
-                        <datalist id="PIDs"></datalist>
-                        <input type="hidden" id="transferIndex" value="" />
+                    <div class="center cl t20 form-group" style="padding: 0px;">
+						<textarea name="transfer-stage-1-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
-        </div>
-        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;">
-            <div class="cl m20 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">
-                <p class="center info-title">Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
+			<div class="cl m20 faa-modal-info" style="padding: 5px; margin-top: 10px; padding-bottom: 0px;">
+                <p class="center info-title">Please fill in the notes box above with any notes that you may have concerning your initial contact with the initiating faculty/staff before selecting the yes/no options.</p>
             </div>
         </div>
     </div>
@@ -524,39 +555,34 @@
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+                <button type="button" class="btn btn-primary" id="transfer-stage-1-submit" onclick="validateForm(this)" id="transfer-stage-1-submit" disabled="disabled">submit step</button>
+                <button type="button" class="btn btn-secondary modal-close" id="transfer-stage-1-cancel" disabled="disabled">cancel</button>
             </div>
         </div>
     </div>
 </div>
-<!-----Transfer Modal----->
-<div id="transferModal" class="modal">
+<!-----Transfer Stage 2 Modal----->
+<div id="transfer-stage-2" class="modal">
     <div class="modal-content">
-        <h4 class="center faa-modal-title">Asset Transfer</h4> 
+        <h4 class="center faa-modal-title">Transfer Stage 1</h4> 
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                <div class="cl m3 t20 info-title" style="padding: 0px;">VT Tag Number:</div>
-                <div class="cl m6 t20"><span class="asset-tag"></span></div>
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>
-                <div class="cl m8 t20"><span class="asset-description"></span></div>
+                <div class="cl m20 t20 info-title center" style="padding: 0px;">You have indicated that you have picked up the item to be transferred. If this isn't an item t
+				</div>
             </div>
         </div>
         <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -10px;">
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
-                        <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>
-                        <input type="text" class="awesomplete" id="recipient-name" list="PIDs">
-                        <datalist id="PIDs"></datalist>
-                        <input type="hidden" id="transferIndex" value="" />
+						<textarea name="transfer-stage-1-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
         </div>
         <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;">
             <div class="cl m20 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">
-                <p class="center info-title">Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
+                <p class="center info-title">Please fill in the notes box above with any notes that you may have concerning your initial contact with the initiating faculty/staff before selecting the yes/no options.</p>
             </div>
         </div>
     </div>
@@ -569,8 +595,8 @@
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+                <button type="button" class="btn btn-primary" id="transfer-stage-1" onclick="validateForm(this)">Yes</button>
+                <button type="button" class="btn btn-secondary modal-close">No</button>
             </div>
         </div>
     </div>
@@ -810,8 +836,45 @@
   </script>
     
 <script>
-	
+$( function() {
+    $( "#transfer-pickupdate" ).datepicker();
+  } );
+$("#transfer-stage-1-yes").click(function() {
+	$("#transfer-stage-1b").toggle();
+	$("#transfer-stage-1-yes").attr("disabled", "disabled");
+	$("#transfer-stage-1-no").attr("disabled", "disabled");
+});
+$("#transfer-stage-1-no").click(function() {
+	$("#transfer-stage-1c").toggle();
+	$("#transfer-stage-1-yes").attr("disabled", "disabled");
+	$("#transfer-stage-1-no").attr("disabled", "disabled");
+});
+$("#it-select").change(function() {
+	$("#transfer-stage-1a").toggle();
+	$("#transfer-stage-1b").toggle();
+	$("#transfer-stage-1c").toggle();
+	$("#transfer-stage-1-yes").attr("disabled", "disabled");
+	$("#transfer-stage-1-no").attr("disabled", "disabled");
+});
+$("#transfer-stage-1c-yes").click(function() {
+	$("#transfer-stage-1d").toggle();
+	$("#transfer-stage-1c-yes").attr("disabled", "disabled");
+	$("#transfer-stage-1c-no").attr("disabled", "disabled");
+});
+$("#transfer-stage-1c-no").click(function() {
+	$("#transfer-stage-1e").toggle();
+	$("#transfer-stage-1a").toggle();
+	$("#transfer-stage-1c").toggle();
+	$("#transfer-stage-1-submit").removeAttr("disabled");
+	$("#transfer-stage-1-cancel").removeAttr("disabled");
+});
+$("#transfer-pickupdate").change(function() {
+	$("#transfer-stage-1e").toggle();
+	$("#transfer-stage-1c").toggle();
+	$("#transfer-stage-1d").toggle();
+	$("#transfer-stage-1-submit").removeAttr("disabled");
+	$("#transfer-stage-1-cancel").removeAttr("disabled");
+});
 </script>
-	
 </body>
 </html>
