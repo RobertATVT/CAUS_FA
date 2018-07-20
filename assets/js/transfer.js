@@ -290,7 +290,7 @@ function bulkTransferAsset() {
 }
 
 
-function acceptTransfer(ptag, id) {
+function causfa_acceptTransfer(ptag, id) {
     var form = {
         action: 'causfa_update_transfer',
         type: 0,
@@ -299,7 +299,6 @@ function acceptTransfer(ptag, id) {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
-            $("#alert-header-" + id).remove();
             if ($("#asset-alerts").children().length === 0) {
                 $("#asset-alerts").remove();
             }
@@ -307,7 +306,7 @@ function acceptTransfer(ptag, id) {
     });
 }
 
-function denyTransfer(ptag, id) {
+function causfa_denyTransfer(ptag, id) {
     var form = {
         action: 'causfa_update_transfer',
         type: 1,
@@ -316,7 +315,6 @@ function denyTransfer(ptag, id) {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
-            $("#alert-header-" + id).remove();
             if ($("#asset-alerts").children().length === 0) {
                 $("#asset-alerts").remove();
             }
