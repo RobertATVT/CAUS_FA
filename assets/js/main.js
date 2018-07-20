@@ -128,6 +128,20 @@ function checkSelected() {
         jQuery("#report-ribbon").addClass("ribbon-disabled");
         jQuery("#problem-ribbon-button").attr('onClick', '');
     }
+    for (var i = 0; i < input.length; i++) {
+        var id = input[i].id;
+        id = id.split('-')[2];
+        var status = jQuery('#status-' + id);
+        alert(JSON.stringify(status.children()));
+        if (status.children().html() === 'Missing') {
+            jQuery("#transfer-ribbon").removeClass("ribbon-active");
+            jQuery("#transfer-ribbon").addClass("ribbon-disabled");
+            jQuery("#transfer-ribbon-button").attr('onClick', '');
+            jQuery("#surplus-ribbon").removeClass("ribbon-active");
+            jQuery("#surplus-ribbon").addClass("ribbon-disabled");
+            jQuery("#surplus-ribbon-button").attr('onClick', '');
+        }
+    }
 }
 
 function openModal(element, data) {
