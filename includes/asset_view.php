@@ -72,14 +72,94 @@ function causfa_load_admin_view(){
     $output = str_replace('[TICKET#]', $tickets['total'], $output);
     $output = str_replace('[TICKET OLD]', $tickets['old'], $output);
     $output = str_replace('[TICKET NEW]', $tickets['new'], $output);
-	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-header.html', true));
-	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill.html', true));
+	$results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 0 AND PENDING_STATUS > 0 AND (FZVFORG_ORGN_CODE ='".causfa_groups_management_code()."' OR ASSIGNEE = '".wp_get_current_user()->user_nicename."');");
+	if (!count($results)) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-header-none.html', true));
+    } else {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-header.html', true));
+    }
+    $checkbox1 = '<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'transferModal\',\'\')">';
+	for ($i = 0; $i < count($results); $i++) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill.html', true));
+        switch($results[$i]->PENDING_STATUS) {
+            case 2:
+                $output = str_replace($checkbox1, '<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
+                $output = str_replace('<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'transferModal\',\'\')">', $output);
+                break;
+            case 3:
+                $output = str_replace($checkbox1, '<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
+                $output = str_replace('<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'transferModal\',\'\')">', $output);
+                break;
+            case 4:
+                $output = str_replace($checkbox1, '<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
+                $output = str_replace('<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'transferModal\',\'\')">', $output);
+                break;
+            case 5:
+                //Enable upload form button
+                break;
+            case 6:
+                //Enable complete button
+            default:
+                break;
+        }
+        $output = str_replace('[PTAG]', $results[$i]->FZVFORG_PTAG, $output);
+        $output = str_replace('[PID 1]', $results[$i]->PID_ORIGIN, $output);
+        $output = str_replace('[PID 2]', $results[$i]->PID_DESTINATION, $output);
+        $output = str_replace('[DATE]', $results[$i]->DATE_CREATED, $output);
+        $output = str_replace('[ID]', $i, $output);
+
+	}
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-footer.html', true));
-	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-header.html', true));
-	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill.html', true));
+    $results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 1 AND PENDING_STATUS > 0 AND (FZVFORG_ORGN_CODE ='".causfa_groups_management_code()."' OR ASSIGNEE = '".wp_get_current_user()->user_nicename."');");
+    if (!count($results)) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-header-none.html', true));
+    } else {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-header.html', true));
+    }
+    $checkbox1 = '<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'surplusModal\',\'\')">';
+    for ($i = 0; $i < count($results); $i++) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill.html', true));
+        switch($results[$i]->PENDING_STATUS) {
+            case 2:
+                $output = str_replace($checkbox1, '<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
+                $output = str_replace('<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'surplusModal\',\'\')">', $output);
+                break;
+            case 3:
+                $output = str_replace($checkbox1, '<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
+                $output = str_replace('<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'surplusModal\',\'\')">', $output);
+                break;
+            case 4:
+                $output = str_replace($checkbox1, '<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
+                $output = str_replace('<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'surplusModal\',\'\')">', $output);
+                break;
+            case 5:
+                //Enable upload form button
+                break;
+            case 6:
+                //Enable complete button
+            default:
+                break;
+        }
+        $output = str_replace('[PTAG]', $results[$i]->FZVFORG_PTAG, $output);
+        $output = str_replace('[PID 1]', $results[$i]->PID_ORIGIN, $output);
+        $output = str_replace('[DATE]', $results[$i]->DATE_CREATED, $output);
+        $output = str_replace('[ID]', $i, $output);
+
+    }
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-footer.html', true));
-	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-tickets-header.html', true));
-	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-tickets-fill.html', true));
+	$results = $wpdb->get_results("SELECT * FROM causfa_tickets WHERE FZVFORG_ORGN_CODE = '".causfa_groups_management_code()."';");
+	if (!count($results)) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-tickets-header-none.html', true));
+    } else {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-tickets-header.html', true));
+    }
+    for ($i = 0; $i < count($results); $i++) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-tickets-fill.html', true));
+        $output = str_replace('[PTAG]', $results[$i]->FZVFORG_PTAG, $output);
+        $output = str_replace('[PID 1]', $results[$i]->PID_Submit, $output);
+        $output = str_replace('[DATE]', $results[$i]->DATE_CREATED, $output);
+        $output = str_replace('[ID]', $i, $output);
+    }
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-tickets-footer.html', true));
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-reports.html', true));	
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-footer.html', true));
