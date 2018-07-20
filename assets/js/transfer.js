@@ -299,7 +299,7 @@ function causfa_acceptTransfer(ptag, id) {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
-            if ($("#asset-alerts").children().length === 0) {
+            if ($("#asset-alerts").children().length === 1) {
                 $("#asset-alerts").remove();
             }
         }
@@ -315,7 +315,7 @@ function causfa_denyTransfer(ptag, id) {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
-            if ($("#asset-alerts").children().length === 0) {
+            if ($("#asset-alerts").children().length === 1) {
                 $("#asset-alerts").remove();
             }
         }
