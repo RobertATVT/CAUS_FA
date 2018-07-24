@@ -106,20 +106,20 @@
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
 								<div class="cl xl2 t5 center admin-block-line=t" id="transfer-date-[ID]">[DATE]</div>
 								<div class="cl xl2 t5 center" id="transfer-stage1-[ID]">
-									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-1','')">
-									<label for="transfer-stage-1-[ID]"></label>
+									<input id="transfer-stage-1-0" type="checkbox" value="transfer-stage-1-complete-0]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-1','')">
+									<label for="transfer-stage-1-0"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
-									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-2','')">
-									<label for="transfer-stage-2-[ID]"></label>
+									<input id="transfer-stage-2-0" type="checkbox" value="transfer-stage-2-complete-0" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-2','')" disabled="disabled">
+									<label for="transfer-stage-2-0"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage3-[ID]">
-									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('ticketModal','')">
-									<label for="transfer-stage-3-[ID]"></label>
+									<input id="transfer-stage-3-0" type="checkbox" value="transfer-stage-3-complete-0" class="filled-in admin-block-line-b" onclick="openModal('ticketModal','')" disabled="disabled">
+									<label for="transfer-stage-3-0"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage4-[ID]">
-									<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-									<label for="transfer-stage-4-[ID]"></label>
+									<input id="transfer-stage-4-0" type="checkbox" value="transfer-stage-4-complete-0" class="filled-in admin-block-line-b" disabled="disabled">
+									<label for="transfer-stage-4-0"></label>
 								</div>
 								<div class="cl xl2 t10 center" id="transfer-stage5-[ID]">
 									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
@@ -133,38 +133,7 @@
 <!-- END faa-admin-transfer-fill.html -->
 
 <!-- BEGIN TRANSFER FILLER -->
-					<div class="cl m20 t20">
-						<div class="cl t20 block-text" style="background: #f8f8f8; margin: 0px; padding: 5px !important; border-bottom: 1px solid rgba(0,0,0,0.25); min-height: 20px; ;line-height: 20px;">
-							<form id="transfer-[ID]" action="#">
-								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-ptag-[ID]">[PTAG]</div>
-								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid1-[ID]">[PID 1]</div>
-								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
-								<div class="cl xl2 t5 center admin-block-line=t" id="transfer-date-[ID]">[DATE]</div>
-								<div class="cl xl2 t5 center" id="transfer-stage1-[ID]">
-									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transferModal','')">
-									<label for="transfer-stage-1-[ID]"></label>
-								</div>
-								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
-									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-									<label for="transfer-stage-2-[ID]"></label>
-								</div>
-								<div class="cl xl2 t5 center" id="transfer-stage3-[ID]">
-									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-									<label for="transfer-stage-3-[ID]"></label>
-								</div>
-								<div class="cl xl2 t5 center" id="transfer-stage4-[ID]">
-									<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-									<label for="transfer-stage-4-[ID]"></label>
-								</div>
-								<div class="cl xl2 t10 center" id="transfer-stage5-[ID]">
-									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
-								</div>
-								<div class="cl xl2 t10 center" id="transfer-stage6-[ID]">
-									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
-								</div>
-							</form>
-						</div>
-					</div>
+
 <!-- END TRANSFER FILLER -->
 					
 <!-- BEGIN faa-admin-transfer-footer.html -->						
@@ -565,23 +534,59 @@
 <div id="transfer-stage-2" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title">Transfer Stage 1</h4> 
-        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-2a">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                <div class="cl m20 t20 info-title center" style="padding: 0px;">You have indicated that you have picked up the item to be transferred. If this isn't an item t
+                <div class="cl t15 info-title center" style="padding: 0px;">
+					Is this asset a computer or device that falls under your IT Departments area of influence?<br />
+					<span style="font-size:85%;font-weight: 400;color: #333;">
+						(i.e. Laptop Computer, Desktop Computer, Monitor, Printer, Hard Drive, Keyboard/Mouse, etc.)
+					</span>
+				</div>
+				<div class="t5 right">
+					<button type="button" class="btn btn-primary" id="transfer-stage-2-yes">Yes</button>
+					<button type="button" class="btn btn-primary" id="transfer-stage-2-no">No</button>
 				</div>
             </div>
         </div>
-        <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -10px;">
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="transfer-stage-2b">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+				<select id="it-select">
+					<option value="null">- None Selected -</option>
+                    <option value="mattjw6">Matthew Jezierski</option>
+                    <option value="robertav">Robert Vaughan</option>
+                    <option value="ricraig">Rick Craig</option>
+                </select>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none" id="transfer-stage-2c">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+                <div class="cl t15 info-title center" style="padding: 0px;">You have indicated that you have contacted the faculty/staff who initiated the transfer. Have you set a date for the pickup of the item?
+				</div>
+				<div class="cl t5 info-title center" style="padding: 0px;">
+					<div class="t5 right">
+						<button type="button" class="btn btn-primary" id="transfer-stage-2c-yes">Yes</button>
+						<button type="button" class="btn btn-primary" id="transfer-stage-2c-no">No</button>
+					</div>
+				</div>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="transfer-stage-2d">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+				<div class="t10 left">Please input the date that was initially set</div>
+				<div class="t10 right">
+					<input type="text" id="transfer-pickupdate" style="margin: 0px !important;">
+				</div>
+            </div>
+        </div>
+        <div class="rw" style="padding: 10px;margin-bottom: 0px; display: none;" id="transfer-stage-2e">
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
-						<textarea name="transfer-stage-1-notes" placeholder="Please enter any notes that you may need here"></textarea>
+						<textarea name="transfer-stage-2-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
-        </div>
-        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;">
-            <div class="cl m20 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">
+			<div class="cl m20 faa-modal-info" style="padding: 5px; margin-top: 10px; padding-bottom: 0px;">
                 <p class="center info-title">Please fill in the notes box above with any notes that you may have concerning your initial contact with the initiating faculty/staff before selecting the yes/no options.</p>
             </div>
         </div>
@@ -595,8 +600,8 @@
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transfer-stage-1" onclick="validateForm(this)">Yes</button>
-                <button type="button" class="btn btn-secondary modal-close">No</button>
+                <button type="button" class="btn btn-primary" id="transfer-stage-2-submit" onclick="validateForm(this)" id="transfer-stage-2-submit" disabled="disabled">submit step</button>
+                <button type="button" class="btn btn-secondary modal-close" id="transfer-stage-2-cancel" disabled="disabled">cancel</button>
             </div>
         </div>
     </div>
@@ -836,44 +841,91 @@
   </script>
     
 <script>
-$( function() {
-    $( "#transfer-pickupdate" ).datepicker();
-  } );
-$("#transfer-stage-1-yes").click(function() {
-	$("#transfer-stage-1b").toggle();
-	$("#transfer-stage-1-yes").attr("disabled", "disabled");
-	$("#transfer-stage-1-no").attr("disabled", "disabled");
-});
-$("#transfer-stage-1-no").click(function() {
-	$("#transfer-stage-1c").toggle();
-	$("#transfer-stage-1-yes").attr("disabled", "disabled");
-	$("#transfer-stage-1-no").attr("disabled", "disabled");
-});
-$("#it-select").change(function() {
-	$("#transfer-stage-1a").toggle();
-	$("#transfer-stage-1b").toggle();
-	$("#transfer-stage-1c").toggle();
-	$("#transfer-stage-1-yes").attr("disabled", "disabled");
-	$("#transfer-stage-1-no").attr("disabled", "disabled");
-});
-$("#transfer-stage-1c-yes").click(function() {
-	$("#transfer-stage-1d").toggle();
-	$("#transfer-stage-1c-yes").attr("disabled", "disabled");
-	$("#transfer-stage-1c-no").attr("disabled", "disabled");
-});
-$("#transfer-stage-1c-no").click(function() {
-	$("#transfer-stage-1e").toggle();
-	$("#transfer-stage-1a").toggle();
-	$("#transfer-stage-1c").toggle();
-	$("#transfer-stage-1-submit").removeAttr("disabled");
-	$("#transfer-stage-1-cancel").removeAttr("disabled");
-});
-$("#transfer-pickupdate").change(function() {
-	$("#transfer-stage-1e").toggle();
-	$("#transfer-stage-1c").toggle();
-	$("#transfer-stage-1d").toggle();
-	$("#transfer-stage-1-submit").removeAttr("disabled");
-	$("#transfer-stage-1-cancel").removeAttr("disabled");
+$(function() {
+	var checkReady=$( "#transfer-pickupdate" );
+	if (checkReady){
+		$("#transfer-pickupdate").datepicker();
+//	STAGE ONE FUNCTIONS
+		$("#transfer-stage-1-yes").click(function() {
+			$("#transfer-stage-1b").toggle();
+			$("#transfer-stage-1-yes").attr("disabled", "disabled");
+			$("#transfer-stage-1-no").attr("disabled", "disabled");
+		});
+		$("#it-select").change(function() {
+			$("#transfer-stage-1a").toggle();
+			$("#transfer-stage-1b").toggle();
+			$("#transfer-stage-1c").toggle();
+		});
+		$("#transfer-stage-1-no").click(function() {
+			$("#transfer-stage-1a").toggle();
+			$("#transfer-stage-1c").toggle();
+		});
+		$("#transfer-stage-1c-yes").click(function() {
+			$("#transfer-stage-1d").toggle();
+			$("#transfer-stage-1c-yes").attr("disabled", "disabled");
+			$("#transfer-stage-1c-no").attr("disabled", "disabled");
+		});
+		$("#transfer-stage-1c-no").click(function() {
+			$("#transfer-stage-1e").toggle();
+			$("#transfer-stage-1c").toggle();
+			$("#transfer-stage-1-submit").removeAttr("disabled");
+			$("#transfer-stage-1-cancel").removeAttr("disabled");
+		});
+		$("#transfer-pickupdate").change(function() {
+			$("#transfer-stage-1e").toggle();
+			$("#transfer-stage-1c").toggle();
+			$("#transfer-stage-1d").toggle();
+			$("#transfer-stage-1-submit").removeAttr("disabled");
+			$("#transfer-stage-1-cancel").removeAttr("disabled");
+		});
+		$("#transfer-stage-1-submit").click(function() {
+			$("#transfer-stage-1").modal('close');
+			$("#transfer-stage-1-0").prop("checked", false);
+			$("#transfer-stage-1-0").attr("disabled", "disabled");
+			$("#transfer-stage-2-0").removeAttr("disabled");
+			$("#transfer-stage-2-0").prop("checked", false);
+		});
+//	STAGE TWO FUNCTIONS
+		$("#transfer-stage-2-yes").click(function() {
+			$("#transfer-stage-2b").toggle();
+			$("#transfer-stage-2-yes").attr("disabled", "disabled");
+			$("#transfer-stage-2-no").attr("disabled", "disabled");
+		});
+		$("#it-select").change(function() {
+			$("#transfer-stage-2a").toggle();
+			$("#transfer-stage-2b").toggle();
+			$("#transfer-stage-2c").toggle();
+		});
+		$("#transfer-stage-2-no").click(function() {
+			$("#transfer-stage-2a").toggle();
+			$("#transfer-stage-2c").toggle();
+		});
+		$("#transfer-stage-2c-yes").click(function() {
+			$("#transfer-stage-2d").toggle();
+			$("#transfer-stage-2c-yes").attr("disabled", "disabled");
+			$("#transfer-stage-2c-no").attr("disabled", "disabled");
+		});
+		$("#transfer-stage-2c-no").click(function() {
+			$("#transfer-stage-2e").toggle();
+			$("#transfer-stage-2c").toggle();
+			$("#transfer-stage-2-submit").removeAttr("disabled");
+			$("#transfer-stage-2-cancel").removeAttr("disabled");
+		});
+		$("#transfer-pickupdate").change(function() {
+			$("#transfer-stage-2e").toggle();
+			$("#transfer-stage-2c").toggle();
+			$("#transfer-stage-2d").toggle();
+			$("#transfer-stage-2-submit").removeAttr("disabled");
+			$("#transfer-stage-2-cancel").removeAttr("disabled");
+		});
+		$("#transfer-stage-2-submit").click(function() {
+			$("#transfer-stage-2").modal('close');
+			$("#transfer-stage-2-0").prop("checked", false);
+			$("#transfer-stage-2-0").attr("disabled", "disabled");
+			$("#transfer-stage-3-0").removeAttr("disabled");
+			$("#transfer-stage-3-0").prop("checked", false);
+		});
+	}
 });
 </script>
 </body>
