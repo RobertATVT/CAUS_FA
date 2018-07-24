@@ -281,6 +281,13 @@ function bulkTransferAsset() {
                         asset.parentNode.removeChild(asset);
                         ids.splice(ids.indexOf(ids_successful[i]), 1);
                         jQuery('#bulk-transfer-ids').val(ids);
+
+                    }
+                    var checkboxes = jQuery("#bulk-transfer-items").find("input:checkbox");
+                    for (i = 0; i < checkboxes.length; i++) {
+                        checkboxes[i].disabled = true;
+                        checkboxes[i].onclick = '';
+                        jQuery('#recipient-name-' + checkboxes[i].id.split('-')[2]).val('');
                     }
                 }
         }
