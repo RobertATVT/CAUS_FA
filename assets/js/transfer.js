@@ -281,6 +281,13 @@ function bulkTransferAsset() {
                         asset.parentNode.removeChild(asset);
                         ids.splice(ids.indexOf(ids_successful[i]), 1);
                         jQuery('#bulk-transfer-ids').val(ids);
+
+                    }
+                    var checkboxes = jQuery("#bulk-transfer-items").find("input:checkbox");
+                    for (i = 0; i < checkboxes.length; i++) {
+                        checkboxes[i].disabled = true;
+                        checkboxes[i].onclick = '';
+                        jQuery('#recipient-name-' + checkboxes[i].id.split('-')[2]).val('');
                     }
                 }
         }
@@ -290,7 +297,7 @@ function bulkTransferAsset() {
 }
 
 
-function acceptTransfer(ptag, id) {
+function causfa_acceptTransfer(ptag, id) {
     var form = {
         action: 'causfa_update_transfer',
         type: 0,
@@ -299,15 +306,14 @@ function acceptTransfer(ptag, id) {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
-            $("#alert-header-" + id).remove();
-            if ($("#asset-alerts").children().length === 0) {
+            if ($("#asset-alerts").children().length === 1) {
                 $("#asset-alerts").remove();
             }
         }
     });
 }
 
-function denyTransfer(ptag, id) {
+function causfa_denyTransfer(ptag, id) {
     var form = {
         action: 'causfa_update_transfer',
         type: 1,
@@ -316,8 +322,7 @@ function denyTransfer(ptag, id) {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] === 1) {
             $("#alert-body-" + id).remove();
-            $("#alert-header-" + id).remove();
-            if ($("#asset-alerts").children().length === 0) {
+            if ($("#asset-alerts").children().length === 1) {
                 $("#asset-alerts").remove();
             }
         }

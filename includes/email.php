@@ -29,16 +29,16 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 
 function causfa_email_transfer_update($action, $ptag) {
     if (CAUSFA_SEND_EMAIL) {
-        global $wpdb;
-        $result = $wpdb->get_row("SELECT * FROM causfa_pending where FZVFORG_PTAG = '".$ptag."';");
-        $headers = "MIME-Version: 1.0\n";
-        $headers .= "Content-type: text/html; charset=iso-8859-1";
-        $to = causfa_getRecipient_list($result->PID_ORIGIN, $result->PID_DESTINATION);
-        if (action === 0) {
-
-        } else {
-
-        }
+//        global $wpdb;
+//        $result = $wpdb->get_row("SELECT * FROM causfa_pending where FZVFORG_PTAG = '".$ptag."';");
+//        $headers = "MIME-Version: 1.0\n";
+//        $headers .= "Content-type: text/html; charset=iso-8859-1";
+//        $to = causfa_getRecipient_list($result->PID_ORIGIN, $result->PID_DESTINATION);
+//        if (action === 0) {
+//
+//        } else {
+//
+//        }
     }
 }
 
