@@ -16,11 +16,6 @@ function causfa_transfer_asset() {
     $type = $_POST['type'];
     $date_created = current_time('mysql');
     $PID_dest = $_POST['dest'];
-    $Assignee_info = causfa_groups_FAL($PID_origin);
-    $Assignee_pids = array();
-    foreach($Assignee_info as $value) {
-        $Assignee_pids[] = $value['PID'];
-    }
     $pending_status = 0;
     $wpdb->insert(
         'causfa_pending',
@@ -31,8 +26,7 @@ function causfa_transfer_asset() {
             'DATE_CREATED' => $date_created,
             'PID_ORIGIN' => $PID_origin,
             'PID_DESTINATION' => $PID_dest,
-            'PENDING_STATUS' => $pending_status,
-            'ASSIGNEE' => $Assignee_pids[0]
+            'PENDING_STATUS' => $pending_status
         ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
     );
     $logger_info = array(
@@ -63,11 +57,6 @@ function causfa_bulk_transfer_asset() {
     $date_created = current_time('mysql');
     $PID_dests = $_POST['dests'];
     $PID_dests = explode(',', $PID_dests);
-    $Assignee_info = causfa_groups_FAL($PID_origin);
-    $Assignee_pids = array();
-    foreach($Assignee_info as $value) {
-        $Assignee_pids[] = $value['PID'];
-    }
     $pending_status = 0;
     for($i = 0; $i < count($ptags); $i++) {
         $wpdb->insert(
@@ -80,7 +69,6 @@ function causfa_bulk_transfer_asset() {
                 'PID_ORIGIN' => $PID_origin,
                 'PID_DESTINATION' => $PID_dests[$i],
                 'PENDING_STATUS' => $pending_status,
-                'ASSIGNEE' => $Assignee_pids[0]
             ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
         );
         $logger_info = array(

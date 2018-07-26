@@ -28,6 +28,7 @@ function causfa_enqueue() {
 
     //Scripts
     wp_register_script('causfa_modal', plugins_url('assets/js/modal.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causfa_admin_modal', plugins_url('assets/js/admin-modal.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_main', plugins_url('assets/js/main.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_transfer', plugins_url('assets/js/transfer.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_surplus', plugins_url('assets/js/surplus.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
@@ -48,6 +49,7 @@ function causfa_enqueue() {
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('causfa_modal');
+    wp_enqueue_script('causfa_admin_modal');
     wp_enqueue_script('causfa_main');
     wp_enqueue_script('causfa_transfer');
     wp_enqueue_script('causfa_surplus');
