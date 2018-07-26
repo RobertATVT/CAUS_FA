@@ -271,7 +271,11 @@ select#org option:hover {
 }
 
 /* TYPOGRAPHY ELEMENTS */
-
+.shorten-text {
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis;
+}
 .biggertext {
     font-size:190%;
     font-weight:700;
@@ -327,7 +331,7 @@ select#org option:hover {
 /* ========== FIXED ASSETS SETTINGS ========== */
 #asset-container {
     width: 100%;
-    background: #45484b;
+    background: #efefef;
     padding: 10px;
 }
 #app-title-block {
@@ -369,6 +373,33 @@ select#org option:hover {
     font-weight: 700; 
     font-size: 12px; 
     color: #fff;
+}
+#general-alerts {
+    padding: 5px; 
+    background: #75787B;
+    border-radius: 2px;
+	border: 1px solid rgba(255,255,255,0.25);
+    border-left: 4px solid rgba(255,255,255,0.25); 
+    font-weight: 700; 
+    font-size: 12px; 
+    color: #fff;
+	margin-bottom: 10px !important;
+}
+.alert-normal {
+	background: #fcfcfc;
+	color: #333;
+}
+.alert-low {
+	background: #F7EA48;
+	color: #333;
+}
+.alert-medium {
+	background: #ED8B00;
+	color: #333;
+}
+.alert-high {
+	background:  #CC0E00;
+	color: #fff;
 }
 #add-asset {
     padding: 5px; 
@@ -415,9 +446,11 @@ select#org option:hover {
 .asset-block {
     box-sizing: border-box;
     min-height: 50px;
-/*	border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 2px 2px 2px 2px; */
-    padding: 0px !important;
+}
+.asset-border {
+	border: 1px solid rgba(0,0,0,0.15) !important;
+    border-radius: 5px !important;
+    padding: 0px !important;	
 }
 .block-header {
     background: rgba(0,0,0,.3);
@@ -428,12 +461,15 @@ select#org option:hover {
 }
 .block-footer {
     background: rgba(0,0,0,.2);
-    min-height: 15px; 
+    min-height: 15px !important; 
     border-radius: 0px 0px 3px 3px; 
     padding: 3px !important;
     margin-top: 10px;
 }
-
+.tablesorter-header-inner{
+	min-height: 25px;
+	line-height: 25px;
+}
 .asset-list-header {
     background: #fff; 
     padding:5px 0px !important;
@@ -465,6 +501,32 @@ select#org option:hover {
     font-weight: 400; 
     font-size: 75%;
     line-height: 20px;
+}
+.asset-list > td {
+	line-height: 31px;
+}
+.asset-list-r {
+	padding-top: 5px !important;
+}
+.asset-list-r2 {
+	padding-top: 7px !important;
+}
+.ribbon-disabled {
+	color: #333;
+	background: #888; 
+	padding-left: 5px !important; 
+	padding-top: 5px !important;
+}
+.ribbon-active {
+	color: #fff;
+	border: 1px solid #d76611; 
+	border-radius: 2px; 
+	background: #E87722; 
+	padding-left: 5px !important; 
+	padding-top: 5px !important;
+}
+.ribbon-active:hover {
+	border-color: rgba(255,255,255,0.4);
 }
 .asset-show {
 	height: 115px;
@@ -507,6 +569,20 @@ select#org option:hover {
 .asset-action:focus {
     color: #e87222;;
 }
+.edit-action {
+    background: transparent !important;
+	border: 0 !important;
+	padding: 0px;
+	text-align: right;
+    line-height: 20px;
+    color:#ddd;
+}
+.edit-action:hover {
+    color: #fff;
+}
+.edit-action:focus {
+    color: #fff;;
+}
 .asset-status {
     box-sizing: border-box;
 	padding: 0px;
@@ -524,17 +600,20 @@ select#org option:hover {
     font-size: 135%;
     background: #060 !important;
     color: #fff;
+    line-height: 20px;
 }
 .asset-home {
     font-size: 135%;
     background: #fd0 !important;
     color: #000;
+	line-height: 20px;
 }
 .asset-missing {
     font-size: 135%;
     background: #900 !important;
     color: #fff;
     letter-spacing: .2em;
+	line-height: 20px;
 }
 .asset-pending {
     font-size: 135%;
@@ -561,7 +640,7 @@ select#org option:hover {
 }
 .report-input {
 	width: 95% !important;
-	font-size: 100% !important;
+	font-size: 120% !important;
 	text-align: center;
 	padding: 1px;
 	max-height: 20px !important;
@@ -570,7 +649,7 @@ select#org option:hover {
 }
 .report-button {
 	width: 95% !important;
-	font-size: 65% !important;
+	font-size: 100% !important;
 	font-weight: 700;
 	text-align: center;
 	padding: 1px;
@@ -755,7 +834,16 @@ a.btn-menu {
 	max-height: 20px;
 	line-height: 20px;
 }
-
+.report-button {
+	width: 95% !important;
+	font-size: 65% !important;
+	font-weight: 700;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px;
+	line-height: 20px;
+	margin-bottom: 4px;
+}
 [type="checkbox"] + label {
 	padding-left: 0px !important;
 	height: 15px !important;
@@ -900,7 +988,7 @@ slider-for{
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
 
-@media (min-width: 200px) {
+@media (min-width: 200px){
     .biggertext {
         font-size:130%;
     }
@@ -1036,7 +1124,7 @@ slider-for{
 
 
 /* Small devices (landscape phones, 400px and up) */
-@media (min-width: 420px) {
+@media (min-width: 420px){
      .add-asset-text {
         font-size: 120%; 
     }
@@ -1096,7 +1184,7 @@ slider-for{
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 600px){
     #asset-container {
         margin-top: 0px;
     }
@@ -1104,7 +1192,9 @@ slider-for{
         width: 25%;
         outline: 0px;
     } 
-
+	.asset-block {
+		height: 115px !important;
+	}
     .asset-list-header {
         font-size: 65%;
     }
@@ -1125,6 +1215,10 @@ slider-for{
         margin-bottom: 0px;
         width: 90%;
     }
+	.add-asset-text {
+		font-size: 90% !important;
+		min-height: 0px !important;
+	}
     .make-small {
         max-height: unset !important;
     }
@@ -1211,7 +1305,7 @@ slider-for{
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: 992px){
     #asset-container {
         margin-top: 0px;
     }
@@ -1312,7 +1406,7 @@ slider-for{
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: 1200px){
     .x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce) {
         font-size: 11px !important;
     }
