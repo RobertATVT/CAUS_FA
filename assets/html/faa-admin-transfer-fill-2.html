@@ -1,4 +1,4 @@
-<!-- BEGIN faa-admin-transfer-fill.html -->
+<!-- BEGIN faa-admin-transfer-fill-1.html -->
 					<div class="cl m20 t20">
 						<div class="cl t20 block-text" style="background: #f8f8f8; margin: 0px; padding: 5px !important; border-bottom: 1px solid rgba(0,0,0,0.25); min-height: 20px; ;line-height: 20px;">
 							<form id="transfer-[ID]" action="#">
@@ -7,19 +7,19 @@
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
 								<div class="cl xl2 t5 center admin-block-line=t" id="transfer-date-[ID]">[DATE]</div>
 								<div class="cl xl2 t5 center" id="transfer-stage1-[ID]">
-									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-1','')">
+									<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-1','[ID]', true)" >
 									<label for="transfer-stage-1-[ID]"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
-									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-2','[ID]')" disabled="disabled">
 									<label for="transfer-stage-2-[ID]"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage3-[ID]">
-									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-3','[ID]')" disabled="disabled">
 									<label for="transfer-stage-3-[ID]"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage4-[ID]">
-									<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
+									<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-4','[ID]')" disabled="disabled">
 									<label for="transfer-stage-4-[ID]"></label>
 								</div>
 								<div class="cl xl2 t10 center" id="transfer-stage5-[ID]">
@@ -31,4 +31,4 @@
 							</form>
 						</div>
 					</div>
-<!-- END faa-admin-transfer-fill.html -->
+<!-- END faa-admin-transfer-fill-1.html -->

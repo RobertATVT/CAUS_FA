@@ -299,7 +299,7 @@ function bulkTransferAsset() {
 
 function causfa_acceptTransfer(ptag, id) {
     var form = {
-        action: 'causfa_update_transfer',
+        action: 'causfa_accept_reject',
         type: 0,
         ptag: ptag
     };
@@ -315,7 +315,7 @@ function causfa_acceptTransfer(ptag, id) {
 
 function causfa_denyTransfer(ptag, id) {
     var form = {
-        action: 'causfa_update_transfer',
+        action: 'causfa_accept_reject',
         type: 1,
         ptag: ptag
     };

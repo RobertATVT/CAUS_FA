@@ -46,6 +46,7 @@ function causfa_enqueue() {
 	wp_register_script('causfa_tabs_script', plugins_url('assets/js/tabs.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causfa_forms_script', plugins_url('assets/js/generate-form.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('jspdf_script', plugins_url('assets/js/jsPDF-master/dist/jspdf.debug.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('jquery_ui_script', plugins_url('assets/js/jquery-ui.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
 
     wp_enqueue_script('jquery');
     wp_enqueue_script('causfa_modal');
@@ -67,6 +68,7 @@ function causfa_enqueue() {
 	wp_enqueue_script('causfa_tabs_script');
 	wp_enqueue_script('causfa_forms_script');
 	wp_enqueue_script('jspdf_script');
+	wp_enqueue_script('jquery_ui_script');
 
 
     //This line creates a causfa_action_obj object that passes the ajax url to the front end scripts

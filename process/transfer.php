@@ -86,7 +86,7 @@ function causfa_bulk_transfer_asset() {
     $output['message'] = 'A transfer request has been sent to your Fixed Assets Liaison and Business Manager. They will be in contact with you soon to facilitate the transfer of the asset.';
     wp_send_json($output);
 }
-function causfa_update_transfer() {
+function causfa_accept_reject() {
     global $wpdb;
     $ptag = $_POST['ptag'];
     $type = $_POST['type'];
@@ -102,6 +102,36 @@ function causfa_update_transfer() {
         $wpdb->delete('causfa_pending', array( 'FZVFORG_PTAG' => $ptag));
         $output['status'] = 1;
     }
+    wp_send_json($output);
+}
+
+function causfa_update_transfer() {
+    global $wpdb;
+    $ptag = $_POST['ptag'];
+    $state = $_POST['state'];
+    $assignee = $_POST['assignee'];
+    $output = array(
+        'status' => 0,
+        'changeOrg' => 0
+    );
+    if ($state === '4') {
+        $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$ptag."';");
+        $PID_dest = $result->PID_DESTINATION;
+        $mgn_code = causfa_groups_management_code($PID_dest);
+        if($mgn_code !== $result->FZVFORG_ORGN_CODE) {
+            $output['changeOrg'] = 1;
+            $wpdb->update('causfa_pending', array('ASSIGNEE' => NULL, 'FZVFORG_ORGN_CODE' => $mgn_code), array('FZVFORG_PTAG' => $ptag));
+        } else {
+            $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => wp_get_current_user()->user_nicename), array('FZVFORG_PTAG' => $ptag));
+        }
+    } else {
+        if ($assignee !== '') {
+            $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => $assignee), array('FZVFORG_PTAG' => $ptag));
+        } else {
+            $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => wp_get_current_user()->user_nicename), array('FZVFORG_PTAG' => $ptag));
+        }
+    }
+    $output['status'] = 1;
     wp_send_json($output);
 }
 

@@ -2,6 +2,9 @@
 <div id="transfer-stage-1" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title" id="TransferStageTitle">Transfer Stage - Contacted</h4>
+        <input type="hidden" id="transfer-stage-1-ptag">
+        <input type="hidden" id="transfer-stage-1-pid" value="[PID]">
+        <input type="hidden" id="transfer-stage-1-id">
         <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-1a">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
                 <div class="cl t15 info-title center" style="padding: 0px;">
@@ -40,7 +43,7 @@
 						}
 						)()">
                     <option value="null">- None Selected -</option>
-                    <option value="mattjw6">Matthew Jezierski</option>
+                    <option value="mattwj6">Matthew Jezierski</option>
                     <option value="robertav">Robert Vaughan</option>
                     <option value="ricraig">Rick Craig</option>
                 </select>
@@ -91,7 +94,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
-                        <textarea name="transfer-stage-1-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                        <textarea id="transfer-stage-1-notes" name="transfer-stage-1-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
@@ -103,20 +106,13 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
+                <button type="button" class="btn btn-primary" id="transfer-stage-1-submit-small" onclick="submitRequest(1)" disabled="disabled">Submit Step</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transfer-stage-1-submit" onclick="(
-					function(){
-						$('#transfer-stage-1').modal('close');
-						$('#transfer-stage-1-0').prop('checked', false);
-						$('#transfer-stage-1-0').attr('disabled', 'disabled');
-						$('#transfer-stage-2-0').removeAttr('disabled');
-						$('#transfer-stage-2-0').prop('checked', false);
-					})()" id="transfer-stage-1-submit" disabled="disabled">submit step</button>
+                <button type="button" class="btn btn-primary" id="transfer-stage-1-submit" onclick="submitRequest(1)" disabled="disabled">Submit Step</button>
                 <button type="button" class="btn btn-secondary modal-close" id="transfer-stage-1-cancel">cancel</button>
             </div>
         </div>
@@ -126,6 +122,9 @@
 <div id="transfer-stage-2" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title">Transfer Stage - Recieved</h4>
+        <input type="hidden" id="transfer-stage-2-ptag">
+        <input type="hidden" id="transfer-stage-2-pid" value="[PID]">
+        <input type="hidden" id="transfer-stage-2-id">
         <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-2a">
             <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
                 <div class="t10 left">Please select the date that you picked up the asset.</div>
@@ -143,7 +142,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
-                        <textarea name="transfer-stage-2-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                        <textarea id="transfer-stage-2-notes" name="transfer-stage-2-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
@@ -155,21 +154,13 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
+                <button type="button" class="btn btn-primary" id="transfer-stage-2-submit-small" onclick="submitRequest(2)">Submit Step</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transfer-stage-2-submit" onclick="(
-					function(){
-						$('#transfer-stage-2').modal('close');
-						$('#transfer-stage-2-0').prop('checked', false);
-						$('#transfer-stage-2-0').attr('disabled', 'disabled');
-						$('#transfer-stage-3-0').removeAttr('disabled');
-						$('#transfer-stage-3-0').prop('checked', false);
-					})()"
-                        id="transfer-stage-2-submit" disabled="disabled">submit step</button>
+                <button type="button" class="btn btn-primary" id="transfer-stage-2-submit" onclick="submitRequest(2)" disabled="disabled">Submit Step</button>
                 <button type="button" class="btn btn-secondary modal-close" id="transfer-stage-2-cancel">cancel</button>
             </div>
         </div>
@@ -179,6 +170,9 @@
 <div id="transfer-stage-3" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title">Transfer Stage - Deployed</h4>
+        <input type="hidden" id="transfer-stage-3-ptag">
+        <input type="hidden" id="transfer-stage-3-pid" value="[PID]">
+        <input type="hidden" id="transfer-stage-3-id">
         <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-3a">
             <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
                 <div class="t10 left">Please select the date that you deployed the asset.</div>
@@ -196,7 +190,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
-                        <textarea name="transfer-stage-3-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                        <textarea id="transfer-stage-3-notes" name="transfer-stage-3-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
@@ -208,20 +202,13 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
+                <button type="button" class="btn btn-primary" id="transfer-stage-3-submit-small" onclick="submitRequest(3)">Transfer</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transfer-stage-3-submit" onclick="(
-					function(){
-						$('#transfer-stage-3').modal('close');
-						$('#transfer-stage-3-0').prop('checked', false);
-						$('#transfer-stage-3-0').attr('disabled', 'disabled');
-						$('#transfer-stage-4-0').removeAttr('disabled');
-						$('#transfer-stage-4-0').prop('checked', false);
-					})()"
+                <button type="button" class="btn btn-primary" id="transfer-stage-3-submit" onclick="submitRequest(3)"
                         id="transfer-stage-3-submit" disabled="disabled">submit step</button>
                 <button type="button" class="btn btn-secondary modal-close" id="transfer-stage-3-cancel">cancel</button>
             </div>
@@ -232,6 +219,9 @@
 <div id="transfer-stage-4" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title">Transfer Stage - Banner Update</h4>
+        <input type="hidden" id="transfer-stage-4-ptag">
+        <input type="hidden" id="transfer-stage-4-pid" value="[PID]">
+        <input type="hidden" id="transfer-stage-4-id">
         <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-4a">
             <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
                 <div class="t10 left">Please select the date that you updated the Banner Database for this asset.</div>
@@ -249,7 +239,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
-                        <textarea name="transfer-stage-43-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                        <textarea id="transfer-stage-4-notes" name="transfer-stage-4-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
@@ -261,20 +251,14 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="validateForm(this)">Transfer</button>
+                <button type="button" class="btn btn-primary" id="trasnfer-stage-4-submit-small" onclick="submitRequest(4)">Transfer</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transfer-stage-4-submit" onclick="(
-					function(){
-						$('#transfer-stage-4').modal('close');
-						$('#transfer-stage-4-0').prop('checked', false);
-						$('#transfer-stage-4-0').attr('disabled', 'disabled');
-						$('#transfer-stage-5-0').removeClass('disabled');
-					})()"
-                        id="transfer-stage-4-submit" disabled="disabled">submit step</button>
+                <button type="button" class="btn btn-primary" id="transfer-stage-4-submit" onclick="submitRequest(4)"
+                        disabled="disabled">submit step</button>
                 <button type="button" class="btn btn-secondary modal-close" id="transfer-stage-4-cancel">cancel</button>
             </div>
         </div>

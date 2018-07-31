@@ -78,28 +78,26 @@ function causfa_load_admin_view(){
     } else {
         $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-header.html', true));
     }
-    $checkbox1 = '<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'transfer-stage-1\',\'\')">';
 	for ($i = 0; $i < count($results); $i++) {
-        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill.html', true));
         switch($results[$i]->PENDING_STATUS) {
+            case 1:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-1.html', true));
+                break;
             case 2:
-                $output = str_replace($checkbox1, '<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
-                $output = str_replace('<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="transfer-stage-2-[ID]" type="checkbox" value="transfer-stage-2-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'transfer-stage-2\',\'\')">', $output);
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-2.html', true));
                 break;
             case 3:
-                $output = str_replace($checkbox1, '<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
-                $output = str_replace('<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'transfer-stage-3\',\'\')">', $output);
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-3.html', true));
                 break;
             case 4:
-                $output = str_replace($checkbox1, '<input id="transfer-stage-1-[ID]" type="checkbox" value="transfer-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
-                $output = str_replace('<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="transfer-stage-4-[ID]" type="checkbox" value="transfer-stage-4-complete-[ID]" class="filled-in admin-block-line-b"                 $output = str_replace(\'<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">\', \'<input id="transfer-stage-3-[ID]" type="checkbox" value="transfer-stage-3-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'transfer - stage - 4\',\'\')">\', $output);
-">', $output);
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-4.html', true));
                 break;
             case 5:
-                //Enable upload form button
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-5.html', true));
                 break;
             case 6:
-                //Enable complete button
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-6.html', true));
+                break;
             default:
                 break;
         }
@@ -165,5 +163,6 @@ function causfa_load_admin_view(){
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-reports.html', true));
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-footer.html', true));
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-modal.html', true));
+	$output = str_replace('[PID]', wp_get_current_user()->user_nicename, $output);
 	return $output;
 }

@@ -153,8 +153,12 @@ function causfa_groups_BM($PID = null) {
     return $output;
 }
 
-function causfa_groups_management_code() {
-    $current_user = new Groups_User( get_current_user_id() );
+function causfa_groups_management_code($PID = null) {
+    if($PID != null) {
+        $current_user = new Groups_User(get_user_by('email', $PID.'@vt.edu')->ID);
+    } else {
+        $current_user = new Groups_User( get_current_user_id() );
+    }
     $current_user_groups = $current_user->groups;
     for ($i = 0; $i < count($current_user_groups); $i++) {
         $current_user_group = $current_user_groups[$i];

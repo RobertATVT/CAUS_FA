@@ -183,4 +183,18 @@ function create_tables() {
         )".$charset_collate.";";
         dbDelta($sql);
     }
+    $table_name = 'causfa_notes';
+    if ($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        ID INT NOT NULL AUTO_INCREMENT,
+        DATE_CREATED TIMESTAMP NOT NULL,
+        CREATOR varchar(32) NOT NULL,
+        ACTION varchar(60) NOT NULL,
+        FZVFORG_PTAG varchar(9) NOT NULL,
+        NOTE longtext NULL,
+        PRIMARY KEY (ID)
+        )".$charset_collate.";";
+        dbDelta($sql);
+
+    }
 }
