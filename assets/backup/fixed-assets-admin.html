@@ -106,7 +106,7 @@
 								<div class="cl xl2 t5 center admin-block-line-t" id="transfer-pid2-[ID]">[PID 2]</div>
 								<div class="cl xl2 t5 center admin-block-line=t" id="transfer-date-[ID]">[DATE]</div>
 								<div class="cl xl2 t5 center" id="transfer-stage1-[ID]">
-									<input id="transfer-stage-1-0" type="checkbox" value="transfer-stage-1-complete-0]" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-1','')">
+									<input id="transfer-stage-1-0" type="checkbox" value="transfer-stage-1-complete-0" class="filled-in admin-block-line-b" onclick="openModal('transfer-stage-1','')">
 									<label for="transfer-stage-1-0"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="transfer-stage2-[ID]">
@@ -153,46 +153,36 @@
 							<div class="cl xl2 t5 center admin-block-line">DATE</div>
 							<div class="cl xl2 t5 center admin-block-line">CONTACTED</div>
 							<div class="cl xl2 hide-large-down center">RECIEVED</div>
-							<div class="cl xl2 hide-large-down center">RECIEVER PID</div>
-							<div class="cl xl2 hide-large-down center">UPDATED</div>
 							<div class="cl xl2 hide-large-down center">PICKED UP</div>
-							<div class="cl xl2 hide-large-down center">UPLOAD</div>
-							<div class="cl xl2 hide-large-down center">COMPLETE</div>
+							<div class="cl xl4 hide-large-down center">UPLOAD</div>
+							<div class="cl xl4 hide-large-down center">COMPLETE</div>
 						</div>
 <!-- END faa-admin-surplus-header.html -->
 						
 <!-- BEGIN faa-admin-surplus-fill.html -->
 						<div class="cl m20 t20">
 							<div class="cl t20 block-text" style="background: #f8f8f8; margin: 0px; padding: 5px !important; border-bottom: 1px solid rgba(0,0,0,0.25); min-height: 20px; ;line-height: 20px; color: #000;">
-								<form id="surplus-[ID]" action="#">
-									<div class="cl xl2 t5 center admin-block-line-t" id="surplus-ptag-[ID]">[PTAG]</div>
-									<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-[ID]">[PID 1]</div>
-									<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid2-[ID]">[DATE]</div>
-									<div class="cl xl2 t5 center" id="surplus-stage1-[ID]">
-										<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
-										<label for="surplus-stage-1-[ID]"></label>
+								<form id="surplus-0" action="#">
+									<div class="cl xl2 t5 center admin-block-line-t" id="surplus-ptag-0">[PTAG]</div>
+									<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-0">[PID 1]</div>
+									<div class="cl xl2 t5 center admin-block-line-t" id="surplus-date-0">[DATE]</div>
+									<div class="cl xl2 t5 center" id="surplus-stage1-0">
+										<input id="surplus-stage-1-0" type="checkbox" value="surplus-stage-1-complete-0" class="filled-in admin-block-line-b" onclick="openModal('surplus-stage-1','')">
+										<label for="surplus-stage-1-0"></label>
 									</div>
-									<div class="cl xl2 t5 center" id="surplus-stage2-[ID]">
-										<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-										<label for="surplus-stage-2-[ID]"></label>
+									<div class="cl xl2 t5 center" id="surplus-stage2-0">
+										<input id="surplus-stage-2-0" type="checkbox" value="surplus-stage-2-complete-0" class="filled-in admin-block-line-b" onclick="openModal('surplus-stage-2','')" disabled="disabled">
+										<label for="surplus-stage-2-0"></label>
 									</div>
-									<div class="cl xl2 t5 center" id="surplus-stage3-[ID]">
-										<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-										<label for="surplus-stage-3-[ID]"></label>
+									<div class="cl xl2 t5 center" id="surplus-stage3-0">
+										<input id="surplus-stage-3-0" type="checkbox" value="surplus-stage-3-complete-0" class="filled-in admin-block-line-b" onclick="openModal('surplus-stage-3','')" disabled="disabled">
+										<label for="surplus-stage-3-0"></label>
 									</div>
-									<div class="cl xl2 t5 center" id="surplus-stage4-[ID]">
-										<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-										<label for="surplus-stage-4-[ID]"></label>
+									<div class="cl xl4 t10 center" id="surplus-stage4-0">
+										<input id="surplus-stage-4-0" type="button" class="btn btn-primary form-upload disabled" value="Upload Form"  onclick="openModal('surplus-stage-4','')">
 									</div>
-									<div class="cl xl2 t5 center" id="surplus-stage5-[ID]">
-										<input id="surplus-stage-5-[ID]" type="checkbox" value="surplus-stage-5-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-										<label for="surplus-stage-5-[ID]"></label>
-									</div>
-									<div class="cl xl2 t10 center" id="surplus-stage6-[ID]">
-										<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
-									</div>
-									<div class="cl xl2 t10 center" id="surplus-stage7-[ID]">
-										<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+									<div class="cl xl4 t10 center" id="surplus-stage5-0">
+										<input id="surplus-stage-5-0" type="button" class="btn btn-primary ticket-complete disabled" value="Complete"  onclick="openModal('surplus-stage-5','')">
 									</div>
 								</form>
 							</div>
@@ -200,41 +190,6 @@
 <!-- END faa-admin-surplus-fill.html -->
 						
 <!-- BEGIN SURPLUS FILLER -->
-						<div class="cl m20 t20">
-							<div class="cl t20 block-text" style="background: #f8f8f8; margin: 0px; padding: 5px !important; border-bottom: 1px solid rgba(0,0,0,0.25); min-height: 20px; ;line-height: 20px; color: #000;">
-								<form id="surplus-[ID]" action="#">
-									<div class="cl xl2 t5 center admin-block-line-t" id="surplus-ptag-[ID]">[PTAG]</div>
-									<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-[ID]">[PID 1]</div>
-									<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid2-[ID]">[DATE]</div>
-									<div class="cl xl2 t5 center" id="surplus-stage1-[ID]">
-										<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
-										<label for="surplus-stage-1-[ID]"></label>
-									</div>
-									<div class="cl xl2 t5 center" id="surplus-stage2-[ID]">
-										<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-										<label for="surplus-stage-2-[ID]"></label>
-									</div>
-									<div class="cl xl2 t5 center" id="surplus-stage3-[ID]">
-										<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-										<label for="surplus-stage-3-[ID]"></label>
-									</div>
-									<div class="cl xl2 t5 center" id="surplus-stage4-[ID]">
-										<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-										<label for="surplus-stage-4-[ID]"></label>
-									</div>
-									<div class="cl xl2 t5 center" id="surplus-stage5-[ID]">
-										<input id="surplus-stage-5-[ID]" type="checkbox" value="surplus-stage-5-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-										<label for="surplus-stage-5-[ID]"></label>
-									</div>
-									<div class="cl xl2 t10 center" id="surplus-stage6-[ID]">
-										<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
-									</div>
-									<div class="cl xl2 t10 center" id="surplus-stage7-[ID]">
-										<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
-									</div>
-								</form>
-							</div>
-						</div>
 <!-- END SURPLUS FILLER -->
 						
 <!-- BEGIN faa-admin-surplus-footer.html -->
@@ -471,19 +426,19 @@
 				<div class="t5 right">
 					<button type="button" class="btn btn-primary" id="transfer-stage-1-yes" onclick="(
 						function() {
-							setTransferStage('1','b','on'); 
-							setTransferStage('1','c','off');
+							setProcessStage('transfer','1','b','on'); 
+							setProcessStage('transfer','1','c','off');
 							if (document.getElementById('it-select').value !== 'null') {
-								activateButtons('stage1','on');
+								activateButtons('transfer','stage1','on');
 								document.getElementById('transfer-stage-1-submit').value='send-IT';
 							};
 						}
 						)()">Yes</button>
 					<button type="button" class="btn btn-primary" id="transfer-stage-1-no" onclick="(
 						function() {
-							setTransferStage('1','c','on'); 
-							setTransferStage('1','b','off');
-							activateButtons('stage1','off')
+							setProcessStage('transfer','1','c','on'); 
+							setProcessStage('transfer','1','b','off');
+							activateButtons('transfer','stage1','off');
 						}
 						)()">No</button>
 				</div>
@@ -493,7 +448,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
 				<select id="it-select" onchange="(
 						function(){
-							activateButtons('stage1','on');
+							activateButtons('transfer','stage1','on');
 							document.getElementById('transfer-stage-1-submit').value='send-IT';
 						}
 						)()">
@@ -512,17 +467,17 @@
 					<div class="t5 right">
 						<button type="button" class="btn btn-primary" id="transfer-stage-1c-yes" onclick="(
 							function() {
-								setTransferStage('1','a','off'); 
-								setTransferStage('1','b','off'); 
-								setTransferStage('1','e','off'); 											  
-								setTransferStage('1','d','on');
+								setProcessStage('transfer','1','a','off'); 
+								setProcessStage('transfer','1','b','off'); 
+								setProcessStage('transfer','1','e','off'); 											  
+								setProcessStage('transfer','1','d','on');
 							}
 						)()">Yes</button>
 						<button type="button" class="btn btn-primary" id="transfer-stage-1c-no" onclick="(
 							function() {
-								setTransferStage('1','d','off'); 
-								setTransferStage('1','e','on');
-								activateButtons('stage1','on');
+								setProcessStage('transfer','1','d','off'); 
+								setProcessStage('transfer','1','e','on');
+								activateButtons('transfer','stage1','on');
 								$('#transfer-stage-1-submit').removeAttr('value');
 							}
 						)()">No</button>
@@ -536,10 +491,10 @@
 				<div class="t10 right">
 					<input type="text" id="transfer-pickupdate" style="margin: 0px !important;" onchange="(
 						function(){
-							setTransferStage('1','c','off'); 
-							setTransferStage('1','d','off'); 
-							setTransferStage('1','e','on');
-							activateButtons('stage1','on');
+							setProcessStage('transfer','1','c','off'); 
+							setProcessStage('transfer','1','d','off'); 
+							setProcessStage('transfer','1','e','on');
+							activateButtons('transfer','stage1','on');
 						}
 						)()">
 				</div>
@@ -590,8 +545,8 @@
 				<div class="t10 right">
 					<input type="text" id="recieve-pickupdate" style="margin: 0px !important;" onchange="(
 						function(){
-							setTransferStage('2','b','on'); 
-							activateButtons('stage2','on');
+							setProcessStage('transfer','2','b','on'); 
+							activateButtons('transfer','stage2','on');
 						}
 						)()">
 				</div>
@@ -643,8 +598,8 @@
 				<div class="t10 right">
 					<input type="text" id="deployed-date" style="margin: 0px !important;" onchange="(
 						function(){
-							setTransferStage('3','b','on'); 
-							activateButtons('stage3','on');
+							setProcessStage('transfer','3','b','on'); 
+							activateButtons('transfer','stage3','on');
 						}
 						)()">
 				</div>
@@ -696,8 +651,8 @@
 				<div class="t10 right">
 					<input type="text" id="banner-date" style="margin: 0px !important;" onchange="(
 						function(){
-							setTransferStage('4','b','on'); 
-							activateButtons('stage4','on');
+							setProcessStage('transfer','4','b','on'); 
+							activateButtons('transfer','stage4','on');
 						}
 						)()">
 				</div>
@@ -771,83 +726,253 @@
         <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
     </div>
 </div>
-
-<!-----Surplus Modal------>
-<div id="surplusModal" class="modal" style="width: 50% !important;">
+	
+<!----- Surplus Stage 1 Modal ----->
+<div id="surplus-stage-1" class="modal">
     <div class="modal-content">
-        <h4 class="center faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
-        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+        <h4 class="center faa-modal-title" id="SurplusStageTitle">Surplus Stage 1/6 - Contacted</h4> 
+		<div class="rw" style="padding: 10px; margin-bottom: 0px;display:" id="surplus-stage-1a">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                <div class="cl m2 t20 info-title" style="padding: 0px;">Asset Tag:</div>
-                <div class="cl m7 t20"><span class="asset-tag"></span></div>
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>
-                <div class="cl m8 t20"><span class="asset-description"></span></div>
-                <input type="hidden" id="surplusIndex" value="" />
+                <div class="cl t15 info-title center" style="padding: 0px;">You have indicated that you have contacted the faculty/staff who initiated the surplus request. Have you set a date for the pickup of the item?
+				</div>
+				<div class="cl t5 info-title center" style="padding: 0px;">
+					<div class="t5 right">
+						<button type="button" class="btn btn-primary" id="surplus-stage-1a-yes" onclick="(
+							function() {
+								setProcessStage('surplus','1','a','on'); 
+								setProcessStage('surplus','1','b','on'); 
+							}
+						)()">Yes</button>
+						<button type="button" class="btn btn-primary" id="surplus-stage-1a-no" onclick="(
+							function() {
+								setProcessStage('surplus','1','a','off'); 
+								setProcessStage('surplus','1','c','on');
+								activateButtons('surplus','stage1','off');
+								$('#surplus-stage-1-0').prop('checked', false);
+							}
+						)()">No</button>
+					</div>
+				</div>
             </div>
         </div>
-        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;margin-bottom: -10px;">
-            <div class="cl t20" style="padding: 0px;">
-                <p class="center info-title" style="font-size: 130%;">Are you sure you want to initiate this surplus request?</p>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="surplus-stage-1b">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+				<div class="t10 left">Please input the date that was initially set</div>
+				<div class="t10 right">
+					<input type="text" id="surplus-contactdate" style="margin: 0px !important;" onchange="(
+						function(){
+							setProcessStage('surplus','1','a','off'); 
+							setProcessStage('surplus','1','b','off'); 
+							setProcessStage('surplus','1','d','on');
+							activateButtons('surplus','stage1','on');
+						}
+						)()">
+				</div>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="surplus-stage-1c">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+				<div class="t10 info-title center">Please collaborate with the asset owner to set a date and time for pickup.</div>
+				
+            </div>
+        </div>
+        <div class="rw" style="padding: 10px;margin-bottom: 0px; display: none;" id="surplus-stage-1d">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px">
+                <form autocomplete="off">
+                    <div class="center cl t20 form-group" style="padding: 0px;">
+						<textarea name="surplus-stage-1-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                    </div>
+                </form>
+            </div>
+			<div class="cl m20 faa-modal-info" style="padding: 5px; margin-top: 10px; padding-bottom: 0px;">
+                <p class="center info-title">Please fill in the notes box above with any notes that you may have concerning your initial contact with the initiating faculty/staff before selecting the yes/no options.</p>
             </div>
         </div>
     </div>
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
+                <button type="button" class="btn btn-primary" id="surplusButton" onclick="validateForm(this)">Transfer</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
+                <button type="button" class="btn btn-primary" id="surplus-stage-1-submit" onclick="(
+					function(){
+						$('#surplus-stage-1').modal('close');
+						$('#surplus-stage-1-0').prop('checked', false);
+						$('#surplus-stage-1-0').attr('disabled', 'disabled');
+						$('#surplus-stage-2-0').removeAttr('disabled');
+						$('#surplus-stage-2-0').prop('checked', false);
+					})()" id="surplus-stage-1-submit" disabled="disabled">submit step</button>
+                <button type="button" class="btn btn-secondary modal-close" id="surplus-stage-1-cancel">cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----Surplus Stage 2 Modal----->
+<div id="surplus-stage-2" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title">Surplus Stage 2/6 - Recieved</h4> 
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="surplus-stage-2a">
+			<div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+				<div class="t10 left">Please select the date that you picked up the asset.</div>
+				<div class="t10 right">
+					<input type="text" id="surplus-receivedate" style="margin: 0px !important;" onchange="(
+						function(){
+							setProcessStage('surplus','2','b','on'); 
+							activateButtons('surplus','stage2','off');
+						}
+						)()">
+				</div>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none" id="surplus-stage-2b">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+                <div class="cl t15 info-title center" style="padding: 0px;">
+				Is this asset being re-deployed to another user?<br />
+					<span style="font-size:85%;font-weight: 400;color: #333;">
+						(Put into asset pool for later deployment, assigned to a different faculty/staff)
+					</span>
+				</div>
+				<div class="t5 right">
+					<button type="button" class="btn btn-primary" id="surplus-stage-2-yes" onclick="(
+						function() {
+							setProcessStage('surplus','2','a','off'); 
+							setProcessStage('surplus','2','b','off'); 
+							setProcessStage('surplus','2','c','on');
+							activateButtons('surplus','stage2','on');
+						}
+						)()">Yes</button>
+					<button type="button" class="btn btn-primary" id="surplus-stage-2-no" onclick="(
+						function() {
+							setProcessStage('surplus','2','a','off');
+							setProcessStage('surplus','2','b','off');
+							setProcessStage('surplus','2','d','on'); 
+							activateButtons('surplus','stage2','on');
+						}
+						)()">No</button>
+				</div>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none" id="surplus-stage-2c">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+				<div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -10px;">
+					<div class="rw faa-modal-info" style="margin-bottom: 0px">
+						<form autocomplete="off">
+							<div class="center cl t20 form-group" style="padding: 0px;">
+								<label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>
+								<input type="text" class="awesomplete" id="recipient-name" list="PIDs"-+>
+								<datalist id="PIDs"></datalist>
+								<input type="hidden" id="transferIndex" value="" />
+							</div>
+						</form>
+					</div>
+        		</div>
+				<div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;">
+					<div class="cl m20 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">
+						<p class="center info-title">Please enter the PID of the person that you wish to transfer this asset to.</p>
+					</div>
+				</div>
+            </div>
+        </div>
+        <div class="rw" style="padding: 10px;margin-bottom: 0px; display: none;" id="surplus-stage-2d">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px">
+                <form autocomplete="off">
+                    <div class="center cl t20 form-group" style="padding: 0px;">
+						<textarea name="surplus-stage-2-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                    </div>
+                </form>
+            </div>
+			<div class="cl m20 faa-modal-info" style="padding: 5px; margin-top: 10px; padding-bottom: 0px;">
+                <p class="center info-title">Please fill in the notes box above with any notes that you may have concerning your initial contact with the initiating faculty/staff before selecting the yes/no options.</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="rw">
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-primary" id="surplusButton" onclick="validateForm(this)">Surplus</button>
+            </div>
+            <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
-        </div>
-    </div>
-</div>
-<!-----Gallery Modal------>
-<div id="galleryModal" class="modal">
-    <div class="modal-content">
-        <h4 class="center faa-modal-title" id="galleryModalLabel">Gallery</h4>
-        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
-            <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                <div class="center cl t20" style="">
-                    <form >
-                        <input type="hidden" id="galleryPtag">
-                        <div class="center cl t20" style="padding-bottom: 0px;margin-bottom: 2px !important;height: 35px;">
-                            <input type="text" id ="imageDescription" placeholder="Please Enter Asset Description Here" style="width: 95%;">
-                        </div>
-                        <div class="center cl m10 t20" style="padding-bottom: 0px; margin: 0px !important;padding-left: 2.5%;">
-                            <input type="file" class="home-file" name="fileToUpload" id="imageFileToUpload">
-                        </div>
-                        <div class="center cl m10 t20" style="padding-bottom: 0px;  margin: 0px !important;padding-right: 2.5%;">
-                            <input type="button" class="btn btn-primary home-upload" value="Upload New Image" onclick="uploadImage()">    
-                        </div>
-
-                    </form>
-                </div>
-                <div class="center cl t20" style="display:block; margin-top: 5px; background-color: #333 !important; padding: 5px !important;">
-                    <div class="slider-for"></div>
-                    <div class="slider-nav"></div>
-                    <input type="hidden" id="imageCount">
-                </div>
+            <div class="cl m20 hide-small-down">
+                <button type="button" class="btn btn-primary" id="surplus-stage-2-submit" onclick="(
+					function(){
+						$('#surplus-stage-2').modal('close');
+						$('#surplus-stage-2-0').prop('checked', false);
+						$('#surplus-stage-2-0').attr('disabled', 'disabled');
+						$('#surplus-stage-3-0').removeAttr('disabled');
+						$('#surplus-stage-3-0').prop('checked', false);
+					})()" 
+					id="surplus-stage-2-submit" disabled="disabled">submit step</button>
+                <button type="button" class="btn btn-secondary modal-close" id="surplus-stage-2-cancel">cancel</button>
             </div>
         </div>
-
-        <input type="hidden" id="loaded">
     </div>
 </div>
-<!-----Forms Modal------>
-<div id="formsTransfer" class="modal">
+<!-----Surplus Stage 3 Modal----->
+<div id="surplus-stage-3" class="modal">
     <div class="modal-content">
-        <h4 class="center faa-modal-title" id="formsModalLabel">Forms</h4>
+        <h4 class="center faa-modal-title">Surplus Stage 3/6 - Picked Up</h4> 
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="surplus-stage-3a">
+			<div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+				<div class="t10 left">Please select the date that the Surplus Department picked up the asset.</div>
+				<div class="t10 right">
+					<input type="text" id="surplus-pickupdate" style="margin: 0px !important;" onchange="(
+						function(){
+							setProcessStage('surplus','3','a','off');
+							setProcessStage('surplus','3','b','on'); 
+							activateButtons('surplus','stage3','on');
+						}
+						)()">
+				</div>
+            </div>
+        </div>
+        <div class="rw" style="padding: 10px;margin-bottom: 0px; display: none;" id="surplus-stage-3b">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px">
+                <form autocomplete="off">
+                    <div class="center cl t20 form-group" style="padding: 0px;">
+						<textarea name="surplus-stage-3-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                    </div>
+                </form>
+            </div>
+			<div class="cl m20 faa-modal-info" style="padding: 5px; margin-top: 10px; padding-bottom: 0px;">
+                <p class="center info-title">Please fill in the notes box above with any notes that you may have concerning your initial contact with the initiating faculty/staff before selecting the yes/no options.</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="rw">
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-primary" id="surplusButton" onclick="validateForm(this)">Surplus</button>
+            </div>
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            </div>
+            <div class="cl m20 hide-small-down">
+                <button type="button" class="btn btn-primary" id="surplus-stage-3-submit" onclick="(
+					function(){
+						$('#surplus-stage-3').modal('close');
+						$('#surplus-stage-3-0').prop('checked', false);
+						$('#surplus-stage-3-0').attr('disabled', 'disabled');
+						$('#surplus-stage-4-0').removeClass('disabled');
+					})()" 
+					id="surplus-stage-3-submit" disabled="disabled">submit step</button>
+                <button type="button" class="btn btn-secondary modal-close" id="surplus-stage-3-cancel">cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!----- Surplus Stage 4 ----->
+<div id="surplus-stage-4" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="formsModalLabel">Transfer Stage 5/6 - Upload Forms</h4>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw" style="margin-bottom: 0px; padding: 0px;">
                 <div class="center cl m10 t20 forms-modal-left">
-                    <div class="center cl t20" style="padding-bottom: 0px;">
-                        <button type="button" class="btn btn-primary home-generate" onclick="generateForm(this, 0)">Print New Home Use Form</button>
-                    </div>
                     <div class="center cl t20" style="padding-bottom: 0px; margin-bottom: 0px;">
                         <input type="hidden" id="formsPtag" value="" />
                         <hr style="padding: 10px; margin: 0px; margin-top: 10px;">
@@ -858,9 +983,6 @@
                     </div>
                 </div>
                 <div class="center cl m10 t20 forms-modal-center">
-                    <div class="center cl t20" style="padding-bottom: 0px;">
-                        <button type="button" class="btn btn-primary home-generate" onclick="generateForm(this, 1)">Print New Office Use Form</button>
-                    </div>
                     <div class="center cl t20" style="padding-bottom: 0px; margin-bottom: 0px;">
                         <hr style="padding: 10px; margin: 0px; margin-top: 10px;">
                         <form>
@@ -875,89 +997,6 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
-    </div>
-</div>
-<!---- Ticket Modal ----->
-<div id="ticketModal" class="modal" style="width: 50% !important;">
-    <div class="modal-content">
-        <h4 class="center faa-modal-title" id="modal-report-title">Report Problem</h4>
-        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
-            <div class="rw faa-modal-info" style="margin-bottom: 5px;">
-                <div class="cl m3 t20 info-title" style="padding: 0px;">VT Tag Number:</div>
-                <div class="cl m7 t20"><span class="asset-tag" id="ticketPtag"></span></div>
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Serial Number:</div>
-                <div class="cl m7 t20"><span class="asset-serial" id="ticketSerial"></span></div>
-            </div>
-            <div class="rw faa-modal-info" style="margin-bottom: 5px;">
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>
-                <div class="cl m8 t20"><span class="asset-description" id="ticketDescription"></span></div>
-                <input type="hidden" id="reportIndex" value="" />
-            </div>
-        </div>
-        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;margin-bottom: -10px;">
-            <div class="cl t20" style="padding: 0px;margin-bottom:-20px;">
-                <p class="center info-title" style="font-size: 130%;">If the information above is correct please choose why you are filing this report below:</p>
-            </div>
-            <div class="cl t20" style="padding: 0px;margin:0px;margin-bottom: 10px;">
-                <select id="ticketSelect">
-                    <option value="not-missing">This item is not missing.</option>
-                    <option value="item-surplused">This item was previously surplused.</option>
-                    <option value="not-mine">This item was previously transferred.</option>
-                    <option value="what-is">I have no idea what this item is.</option>
-					<option value="other">Other options not listed here.</option>
-                </select>
-            </div>
-			<div class="center cl m20 t20">
-				<textarea id ="addTicketNotes" placeholder="Please enter any relevenat information such as why this should be added." style="width: 100%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea>
-			</div>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="reportButton" onclick="addTicket()">SUBMIT REPORT</button>
-        <button type="button" class="btn btn-secondary modal-close">CANCEL</button>
-    </div>
-</div>
-<!---- Add Assets Modal ----->
-<div id="addAssetsModal" class="modal">
-    <div class="modal-content">
-        <h4 class="center faa-modal-title" id="modal-add-asset-title">Add Missing Asset</h4>
-        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
-            <form>
-<!--        
-            <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                <div class="center cl m5 t5">VT Tag Number</div>
-                <div class="center cl m5 t5">Serial Number</div>
-                <div class="center cl m10 t10">Description</div>
-            </div>
--->
-                <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                    <div class="center cl m5 t5"><input type="text" id ="addAssetPTAG" placeholder="Enter VT Tag Number" style="width: 95%;"></div>
-                    <div class="center cl m5 t5"><input type="text" id ="addAssetSerial" placeholder="Enter Serial Number" style="width: 95%;"></div>
-                    <div class="center cl m10 t10"><input type="text" id ="addAssetDesc" placeholder="Please enter a Description" style="width: 95%;"></div>
-                </div>
-                <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                    <div class="center cl m20 t20"><textarea id ="addAssetNotes" placeholder="Please enter any relevenat information such as why this should be added." style="width: 99%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea></div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="addAssetButton" onclick="addAsset()">SUBMIT REQUEST</button>
-        <button type="button" class="btn btn-secondary modal-close">CANCEL REQUEST</button>
-    </div>
-</div>
-<!---- Response Modal ----->
-<div id="responseModal" class="modal">
-    <div class="modal-content">
-        <h4 class="center faa-modal-title" id="modal-response-title">[MODAL TITLE]</h4>
-        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
-            <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                <div id="modal-response-alert" class="center cl m20 t20">[MODAL RESPONSE]</div>
-            </div>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary modal-close">CLOSE</button>
     </div>
 </div>
 <!-- END modal.html --> 
@@ -1007,145 +1046,334 @@
   </script>
     
 <script>
-function activateButtons(stage, state){
-	switch (stage) {
-		case "stage1":
-			if (state === "on") {
-				$("#transfer-stage-1-submit").removeAttr("disabled");
-			} else if (state === "off") {
-				$("#transfer-stage-1-submit").attr("disabled", "disabled");
+function activateButtons(process, stage, state){
+	switch (process) {
+		case "transfer":
+			switch (stage) {
+				case "stage1":
+					if (state === "on") {
+						$("#transfer-stage-1-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#transfer-stage-1-submit").attr("disabled", "disabled");
+					}
+					break;
+				case "stage2":
+					if (state === "on") {
+						$("#transfer-stage-2-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#transfer-stage-2-submit").attr("disabled", "disabled");
+					}
+					break;
+				case "stage3":
+					if (state === "on") {
+						$("#transfer-stage-3-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#transfer-stage-3-submit").attr("disabled", "disabled");
+					}
+					break;
+				case "stage4":
+					if (state === "on") {
+						$("#transfer-stage-4-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#transfer-stage-4-submit").attr("disabled", "disabled");
+					}
+					break;
+				case "stage5":
+					break;
 			}
 			break;
-		case "stage2":
-			if (state === "on") {
-				$("#transfer-stage-2-submit").removeAttr("disabled");
-			} else if (state === "off") {
-				$("#transfer-stage-2-submit").attr("disabled", "disabled");
+		case "surplus":
+			switch (stage) {
+				case "stage1":
+					if (state === "on") {
+						$("#surplus-stage-1-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#surplus-stage-1-submit").attr("disabled", "disabled");
+					}
+					break;
+				case "stage2":
+					if (state === "on") {
+						$("#surplus-stage-2-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#surplus-stage-2-submit").attr("disabled", "disabled");
+					}
+					break;
+				case "stage3":
+					if (state === "on") {
+						$("#surplus-stage-3-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#surplus-stage-3-submit").attr("disabled", "disabled");
+					}
+					break;
+				case "stage4":
+					if (state === "on") {
+						$("#surplus-stage-4-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#surplus-stage-4-submit").attr("disabled", "disabled");
+					}
+					break;
+				case "stage5":
+					break;
 			}
 			break;
-		case "stage3":
-			if (state === "on") {
-				$("#transfer-stage-3-submit").removeAttr("disabled");
-			} else if (state === "off") {
-				$("#transfer-stage-3-submit").attr("disabled", "disabled");
-			}
-			break;
-		case "stage4":
-			if (state === "on") {
-				$("#transfer-stage-4-submit").removeAttr("disabled");
-			} else if (state === "off") {
-				$("#transfer-stage-4-submit").attr("disabled", "disabled");
-			}
-			break;
-		case "stage5":
-			break;
+		break;
 	}
 };
-function setTransferStage(stage, step, state) {
+function setProcessStage(process, stage, step, state) {
 	var checkReady=$( "#transfer-pickupdate" );
 	if (checkReady){
 		$("#transfer-pickupdate").datepicker();
 		$("#recieve-pickupdate").datepicker();
 		$("#deployed-date").datepicker();
 		$("#banner-date").datepicker();
-		switch (stage) {
-			case "1":
-				switch (step) {
-					case "a":
-						if (state === "on") {
-							$("#transfer-stage-1a").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-1a").css("display", "none");
-						};
+		$("#surplus-contactdate").datepicker();
+		$("#surplus-receivedate").datepicker();
+		$("#surplus-pickupdate").datepicker();
+		switch (process) {
+			case "transfer":
+				switch (stage) {
+					case "1":
+						switch (step) {
+							case "a":
+								if (state === "on") {
+									$("#transfer-stage-1a").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-1a").css("display", "none");
+								};
+								break;
+							case "b":
+								if (state === "on") {
+									$("#transfer-stage-1b").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-1b").css("display", "none");
+								};
+								break;
+							case "c":
+								if (state === "on") {
+									$("#transfer-stage-1c").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-1c").css("display", "none");
+								};
+								break;
+							case "d":
+								if (state === "on") {
+									$("#transfer-stage-1d").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-1d").css("display", "none");
+								};
+								break;
+							case "e":
+								if (state === "on") {
+									$("#transfer-stage-1e").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-1e").css("display", "none");
+								};
+								break;
+						}
 						break;
-					case "b":
-						if (state === "on") {
-							$("#transfer-stage-1b").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-1b").css("display", "none");
-						};
+					case "2":
+						switch (step) {
+							case "a":
+								if (state === "on") {
+									$("#transfer-stage-2a").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-2a").css("display", "none");
+								};
+								break;
+							case "b":
+								if (state === "on") {
+									$("#transfer-stage-2b").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-2b").css("display", "none");
+								};
+								break;
+						}
 						break;
-					case "c":
-						if (state === "on") {
-							$("#transfer-stage-1c").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-1c").css("display", "none");
-						};
+					case "3":
+						switch (step) {
+							case "a":
+								if (state === "on") {
+									$("#transfer-stage-3a").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-3a").css("display", "none");
+								};
+								break;
+							case "b":
+								if (state === "on") {
+									$("#transfer-stage-3b").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-3b").css("display", "none");
+								};
+								break;
+						}
 						break;
-					case "d":
-						if (state === "on") {
-							$("#transfer-stage-1d").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-1d").css("display", "none");
-						};
+					case "4":
+						switch (step) {
+							case "a":
+								if (state === "on") {
+									$("#transfer-stage-4a").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-4a").css("display", "none");
+								};
+								break;
+							case "b":
+								if (state === "on") {
+									$("#transfer-stage-4b").css("display", "");
+								} else if (state === "off") {
+									$("#transfer-stage-4b").css("display", "none");
+								};
+								break;
+						}
 						break;
-					case "e":
-						if (state === "on") {
-							$("#transfer-stage-1e").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-1e").css("display", "none");
-						};
+			break;
+			}
+		break;
+			case "surplus":
+				switch (stage) {
+					case "1":
+						switch (step) {
+							case "a":
+								if (state === "on") {
+									$("#surplus-stage-1a").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-1a").css("display", "none");
+								};
+								break;
+							case "b":
+								if (state === "on") {
+									$("#surplus-stage-1b").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-1b").css("display", "none");
+								};
+								break;
+							case "c":
+								if (state === "on") {
+									$("#surplus-stage-1c").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-1c").css("display", "none");
+								};
+								break;
+							case "d":
+								if (state === "on") {
+									$("#surplus-stage-1d").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-1d").css("display", "none");
+								};
+								break;
+							case "e":
+								if (state === "on") {
+									$("#surplus-stage-1e").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-1e").css("display", "none");
+								};
+								break;
+						}
 						break;
-				}
-				break;
-			case "2":
-				switch (step) {
-					case "a":
-						if (state === "on") {
-							$("#transfer-stage-2a").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-2a").css("display", "none");
-						};
+					case "2":
+						switch (step) {
+							case "a":
+								if (state === "on") {
+									$("#surplus-stage-2a").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-2a").css("display", "none");
+								};
+								break;
+							case "b":
+								if (state === "on") {
+									$("#surplus-stage-2b").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-2b").css("display", "none");
+								};
+								break;
+							case "c":
+								if (state === "on") {
+									$("#surplus-stage-2c").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-2c").css("display", "none");
+								};
+							break;
+							case "d":
+								if (state === "on") {
+									$("#surplus-stage-2d").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-2d").css("display", "none");
+								};
+							break;	
+							case "e":
+								if (state === "on") {
+									$("#surplus-stage-2e").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-2e").css("display", "none");
+								};
+							break;
+						}
 						break;
-					case "b":
-						if (state === "on") {
-							$("#transfer-stage-2b").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-2b").css("display", "none");
-						};
+					case "3":
+						switch (step) {
+							case "a":
+								if (state === "on") {
+									$("#surplus-stage-3a").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-3a").css("display", "none");
+								};
+							break;
+							case "b":
+								if (state === "on") {
+									$("#surplus-stage-3b").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-3b").css("display", "none");
+								};
+							break;
+							case "c":
+								if (state === "on") {
+									$("#surplus-stage-3a").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-3a").css("display", "none");
+								};
+							break;
+							case "d":
+								if (state === "on") {
+									$("#surplus-stage-3b").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-3b").css("display", "none");
+								};
+							break;
+							case "e":
+								if (state === "on") {
+									$("#surplus-stage-3a").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-3a").css("display", "none");
+								};
+							break;
+						}
 						break;
-				}
-				break;
-			case "3":
-				switch (step) {
-					case "a":
-						if (state === "on") {
-							$("#transfer-stage-3a").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-3a").css("display", "none");
-						};
+					case "4":
+						switch (step) {
+							case "a":
+								if (state === "on") {
+									$("#surplus-stage-4a").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-4a").css("display", "none");
+								};
+								break;
+							case "b":
+								if (state === "on") {
+									$("#surplus-stage-4b").css("display", "");
+								} else if (state === "off") {
+									$("#surplus-stage-4b").css("display", "none");
+								};
+								break;
+						}
 						break;
-					case "b":
-						if (state === "on") {
-							$("#transfer-stage-3b").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-3b").css("display", "none");
-						};
-						break;
-				}
-				break;
-			case "4":
-				switch (step) {
-					case "a":
-						if (state === "on") {
-							$("#transfer-stage-4a").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-4a").css("display", "none");
-						};
-						break;
-					case "b":
-						if (state === "on") {
-							$("#transfer-stage-4b").css("display", "");
-						} else if (state === "off") {
-							$("#transfer-stage-4b").css("display", "none");
-						};
-						break;
-				}
-				break;
+			break;
+			}
+			break;
+		}
 				
-		};
+	};
+};
 //	STAGE ONE FUNCTIONS
-//		$("#transfer-stage-1-yes").click(setTransferStage(a, off) {
+//		$("#transfer-stage-1-yes").click(setProcessStage(a, off) {
 //			
 //			$("#transfer-stage-1b").toggle();
 //			$("#transfer-stage-1-yes").attr("disabled", "disabled");
@@ -1188,47 +1416,47 @@ function setTransferStage(stage, step, state) {
 //			$("#transfer-stage-2-0").prop("checked", false);
 //		});
 //	STAGE TWO FUNCTIONS
-		$("#transfer-stage-2-yes").click(function() {
-			$("#transfer-stage-2b").toggle();
-			$("#transfer-stage-2-yes").attr("disabled", "disabled");
-			$("#transfer-stage-2-no").attr("disabled", "disabled");
-		});
-		$("#it-select").change(function() {
-			$("#transfer-stage-2a").toggle();
-			$("#transfer-stage-2b").toggle();
-			$("#transfer-stage-2c").toggle();
-		});
-		$("#transfer-stage-2-no").click(function() {
-			$("#transfer-stage-2a").toggle();
-			$("#transfer-stage-2c").toggle();
-		});
-		$("#transfer-stage-2c-yes").click(function() {
-			$("#transfer-stage-2d").toggle();
-			$("#transfer-stage-2c-yes").attr("disabled", "disabled");
-			$("#transfer-stage-2c-no").attr("disabled", "disabled");
-		});
-		$("#transfer-stage-2c-no").click(function() {
-			$("#transfer-stage-2e").toggle();
-			$("#transfer-stage-2c").toggle();
-			$("#transfer-stage-2-submit").removeAttr("disabled");
-			$("#transfer-stage-2-cancel").removeAttr("disabled");
-		});
-		$("#transfer-pickupdate").change(function() {
-			$("#transfer-stage-2e").toggle();
-			$("#transfer-stage-2c").toggle();
-			$("#transfer-stage-2d").toggle();
-			$("#transfer-stage-2-submit").removeAttr("disabled");
-			$("#transfer-stage-2-cancel").removeAttr("disabled");
-		});
-		$("#transfer-stage-2-submit").click(function() {
-			$("#transfer-stage-2").modal('close');
-			$("#transfer-stage-2-0").prop("checked", false);
-			$("#transfer-stage-2-0").attr("disabled", "disabled");
-			$("#transfer-stage-3-0").removeAttr("disabled");
-			$("#transfer-stage-3-0").prop("checked", false);
-		});
-	}
-}
+//		$("#transfer-stage-2-yes").click(function() {
+//			$("#transfer-stage-2b").toggle();
+//			$("#transfer-stage-2-yes").attr("disabled", "disabled");
+//			$("#transfer-stage-2-no").attr("disabled", "disabled");
+//		});
+//		$("#it-select").change(function() {
+//			$("#transfer-stage-2a").toggle();
+//			$("#transfer-stage-2b").toggle();
+//			$("#transfer-stage-2c").toggle();
+//		});
+//		$("#transfer-stage-2-no").click(function() {
+//			$("#transfer-stage-2a").toggle();
+//			$("#transfer-stage-2c").toggle();
+//		});
+//		$("#transfer-stage-2c-yes").click(function() {
+//			$("#transfer-stage-2d").toggle();
+//			$("#transfer-stage-2c-yes").attr("disabled", "disabled");
+//			$("#transfer-stage-2c-no").attr("disabled", "disabled");
+//		});
+//		$("#transfer-stage-2c-no").click(function() {
+//			$("#transfer-stage-2e").toggle();
+//			$("#transfer-stage-2c").toggle();
+//			$("#transfer-stage-2-submit").removeAttr("disabled");
+//			$("#transfer-stage-2-cancel").removeAttr("disabled");
+//		});
+//		$("#transfer-pickupdate").change(function() {
+//			$("#transfer-stage-2e").toggle();
+//			$("#transfer-stage-2c").toggle();
+//			$("#transfer-stage-2d").toggle();
+//			$("#transfer-stage-2-submit").removeAttr("disabled");
+//			$("#transfer-stage-2-cancel").removeAttr("disabled");
+//		});
+//		$("#transfer-stage-2-submit").click(function() {
+//			$("#transfer-stage-2").modal('close');
+//			$("#transfer-stage-2-0").prop("checked", false);
+//			$("#transfer-stage-2-0").attr("disabled", "disabled");
+//			$("#transfer-stage-3-0").removeAttr("disabled");
+//			$("#transfer-stage-3-0").prop("checked", false);
+//		});
+//	}
+//}
 </script>
 </body>
 </html>

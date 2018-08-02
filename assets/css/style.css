@@ -52,6 +52,7 @@ select#org option:hover {
 
     .ui-datepicker table {
         width: 100%;
+		background: #dfdfdf;
     }
 
 .ui-datepicker-header {
