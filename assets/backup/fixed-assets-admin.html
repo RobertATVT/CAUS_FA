@@ -735,11 +735,12 @@
 							function() {
 								setProcessStage('surplus','1','a','on'); 
 								setProcessStage('surplus','1','b','on'); 
+								setProcessStage('surplus','1','c','off'); 
 							}
 						)()">Yes</button>
 						<button type="button" class="btn btn-primary" id="surplus-stage-1a-no" onclick="(
 							function() {
-								setProcessStage('surplus','1','a','off'); 
+								setProcessStage('surplus','1','a','on'); 
 								setProcessStage('surplus','1','c','on');
 								activateButtons('surplus','stage1','off');
 								$('#surplus-stage-1-0').prop('checked', false);
@@ -756,7 +757,7 @@
 					<input type="text" id="surplus-contactdate" style="margin: 0px !important;" onchange="(
 						function(){
 							setProcessStage('surplus','1','a','off'); 
-							setProcessStage('surplus','1','b','off'); 
+							setProcessStage('surplus','1','b','on'); 
 							setProcessStage('surplus','1','d','on');
 							activateButtons('surplus','stage1','on');
 						}
@@ -834,15 +835,16 @@
 					<button type="button" class="btn btn-primary" id="surplus-stage-2-yes" onclick="(
 						function() {
 							setProcessStage('surplus','2','a','off'); 
-							setProcessStage('surplus','2','b','off'); 
+							setProcessStage('surplus','2','b','on'); 
 							setProcessStage('surplus','2','c','on');
 							activateButtons('surplus','stage2','on');
 						}
 						)()">Yes</button>
 					<button type="button" class="btn btn-primary" id="surplus-stage-2-no" onclick="(
 						function() {
-							setProcessStage('surplus','2','a','off');
+							setProcessStage('surplus','2','a','on');
 							setProcessStage('surplus','2','b','off');
+							setProcessStage('surplus','2','c','off');
 							setProcessStage('surplus','2','d','on'); 
 							activateButtons('surplus','stage2','on');
 						}
@@ -917,7 +919,6 @@
 				<div class="t10 right">
 					<input type="text" id="surplus-pickupdate" style="margin: 0px !important;" onchange="(
 						function(){
-							setProcessStage('surplus','3','a','off');
 							setProcessStage('surplus','3','b','on'); 
 							activateButtons('surplus','stage3','on');
 						}
@@ -1444,7 +1445,7 @@ function processStep(process, stage, step) {
 								$("#transfer-stage-1b").css("display", "none");
 								$("#transfer-stage-1c").css("display", "none");
 								$("#transfer-stage-1d").css("display", "");
-								$("#transfer-stage-1e").css("display", "none");
+								$("#transfer-stage-1e").css("display", "");
 								$('#transfer-stage-1-back').val('4');
 								$('#transfer-stage-1-back').css("display", "");
 								activateButtons('transfer','stage1','off');
@@ -1453,7 +1454,7 @@ function processStep(process, stage, step) {
 								$("#transfer-stage-1a").css("display", "none");
 								$("#transfer-stage-1b").css("display", "none");
 								$("#transfer-stage-1c").css("display", "none");
-								$("#transfer-stage-1d").css("display", "none");
+								$("#transfer-stage-1d").css("display", "");
 								$("#transfer-stage-1e").css("display", "");
 								$('#transfer-stage-1-back').val('5');
 								$('#transfer-stage-1-back').css("display", "");
