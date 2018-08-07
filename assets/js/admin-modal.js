@@ -19,12 +19,12 @@ function openModal(element, data, step) {
                 $("#transfer-pickupdate").datepicker();
                 jQuery('#transfer-stage-1-ptag').val(jQuery('#transfer-ptag-' + data).html());
                 jQuery('#transfer-stage-1-id').val(data);
-                setTransferStage('transfer','1','a','on');
-                setTransferStage('transfer','1','b','off');
-                setTransferStage('transfer','1','c','off');
-                setTransferStage('transfer','1','d','off');
-                setTransferStage('transfer','1','e','off');
-                setTransferStage('transfer','1','f','off');
+                setProcessStage('transfer','1','a','on');
+                setProcessStage('transfer','1','b','off');
+                setProcessStage('transfer','1','c','off');
+                setProcessStage('transfer','1','d','off');
+                setProcessStage('transfer','1','e','off');
+                setProcessStage('transfer','1','f','off');
                 activateButtons('transfer','1','off');
                 $('#transfer-stage-1-submit').removeAttr('value');
                 $("#transfer-pickupdate").val('');
