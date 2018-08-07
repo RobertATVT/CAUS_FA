@@ -25,7 +25,7 @@ function openModal(element, data, step) {
                 setProcessStage('transfer','1','d','off');
                 setProcessStage('transfer','1','e','off');
                 setProcessStage('transfer','1','f','off');
-                activateButtons('transfer','1','on');
+                activateButtons('transfer','1','off');
                 $('#transfer-stage-1-submit').removeAttr('value');
                 $("#transfer-pickupdate").val('');
                 $('#transfer-stage-1-notes').val('');
