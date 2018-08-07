@@ -535,8 +535,8 @@
         <h4 class="center faa-modal-title">Transfer Stage 2/6 - Recieved</h4> 
         <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-2a">
 			<div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
-				<div class="t10 left">Please select the date that you picked up the asset.</div>
-				<div class="t10 right">
+				<div class="cl t10 left">Please select the date that you picked up the asset.</div>
+				<div class="cl t10 right">
 					<input type="text" id="recieve-pickupdate" style="margin: 0px !important;" onchange="(
 						function(){
 							setProcessStage('transfer','2','b','on'); 
@@ -588,8 +588,8 @@
         <h4 class="center faa-modal-title">Transfer Stage 3/6 - Deployed</h4> 
         <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-3a">
 			<div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
-				<div class="t10 left">Please select the date that you deployed the asset.</div>
-				<div class="t10 right">
+				<div class="cl t10 left">Please select the date that you deployed the asset.</div>
+				<div class="cl t10 right">
 					<input type="text" id="deployed-date" style="margin: 0px !important;" onchange="(
 						function(){
 							setProcessStage('transfer','3','b','on'); 
@@ -641,8 +641,8 @@
         <h4 class="center faa-modal-title">Transfer Stage 4/6 - Banner Update</h4> 
         <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-4a">
 			<div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
-				<div class="t10 left">Please select the date that you updated the Banner Database for this asset.</div>
-				<div class="t10 right">
+				<div class="cl t10 left">Please select the date that you updated the Banner Database for this asset.</div>
+				<div class="cl t10 right">
 					<input type="text" id="banner-date" style="margin: 0px !important;" onchange="(
 						function(){
 							setProcessStage('transfer','4','b','on'); 
@@ -720,6 +720,39 @@
         <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
     </div>
 </div>
+<!-----Transfer Stage 6 Confirmation----->
+<div id="transfer-stage-6" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title">Transfer Stage Confirm</h4> 
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="transfer-stage-6">
+			<div class="rw faa-modal-info" style="margin-bottom: 5px; line-height: 25px;">
+				<div class="cl t20 center">Please Confirm that you wish to transfer this ticket to the IT Person below:</div>
+			</div>
+			<div class="rw faa-modal-info" style="margin-bottom: 5px; line-height: 25px;">
+				<div class="cl t2"></div>
+				<div class="cl t8">IT Staff for transfer:</div>
+				<div class="cl t8">[staff-name]</div>
+				<div class="cl t2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="rw" style="padding: 5px;">
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            </div>
+			<div class="cl m10 hide-small-down">
+				<button type="button" class="btn btn-primary left" id="transfer-stage-6-back" value="0" onclick="backButton('transfer', '1', this.value)">back</button>
+			</div>
+            <div class="cl m10 hide-small-down">
+                <button type="button" class="btn btn-primary" id="transfer-stage-6-submit"
+					id="transfer-stage-6-submit">Confirm</button>
+                <button type="button" class="btn btn-primary modal-close" id="transfer-stage-6-cancel">cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+	
 	
 <!----- Surplus Stage 1 Modal ----->
 <div id="surplus-stage-1" class="modal">
