@@ -1,0 +1,29 @@
+<!-- BEGIN faa-admin-surplus-fill-1.html -->
+<div class="cl m20 t20">
+	<div class="cl t20 block-text" style="background: #f8f8f8; margin: 0px; padding: 5px !important; border-bottom: 1px solid rgba(0,0,0,0.25); min-height: 20px; ;line-height: 20px; color: #000;">
+		<form id="surplus-[ID]" action="#">
+			<div class="cl xl2 t5 center admin-block-line-t" id="surplus-ptag-[ID]">[PTAG]</div>
+			<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-[ID]">[PID 1]</div>
+			<div class="cl xl2 t5 center admin-block-line-t" id="surplus-date-[ID]">[DATE]</div>
+			<div class="cl xl2 t5 center" id="surplus-stage1-[ID]">
+				<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('surplus-stage-1','')" disabled="disabled">
+				<label for="surplus-stage-1-[ID]"></label>
+			</div>
+			<div class="cl xl2 t5 center" id="surplus-stage2-[ID]">
+				<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('surplus-stage-2','')" disabled="disabled">
+				<label for="surplus-stage-2-[ID]"></label>
+			</div>
+			<div class="cl xl2 t5 center" id="surplus-stage3-[ID]">
+				<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('surplus-stage-3','')">
+				<label for="surplus-stage-3-[ID]"></label>
+			</div>
+			<div class="cl xl4 t10 center" id="surplus-stage4-[ID]">
+				<input id="surplus-stage-4-[ID]" type="button" class="btn btn-primary form-upload disabled" value="Upload Form"  onclick="openModal('surplus-stage-4','')">
+			</div>
+			<div class="cl xl4 t10 center" id="surplus-stage5-[ID]">
+				<input id="surplus-stage-5-[ID]" type="button" class="btn btn-primary ticket-complete disabled" value="Complete"  onclick="openModal('surplus-stage-5','')">
+			</div>
+		</form>
+	</div>
+</div>
+<!-- END faa-admin-surplus-fill-1.html -->
