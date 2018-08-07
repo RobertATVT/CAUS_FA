@@ -65,6 +65,63 @@ function causfa_groups_FAL($PID = null) {
     return $output;
 }
 
+function causfa_groups_IT($PID = null) {
+    global $wpdb;
+    $output = array();
+    if ($PID != null) {
+        if (causfa_groups_is_admin($PID)) {
+            $current_user = new Groups_User(get_user_by('email', $PID.'@vt.edu')->ID);
+            $FAL = array(
+                'Name' => $current_user->user_nicename,
+                'Email' => $current_user->user_email,
+                'PID' => $PID,
+                'Phone' => ''
+            );
+            $output[] = $FAL;
+            return $output;
+        } else {
+            $current_user = new Groups_User(get_user_by('email', $PID.'@vt.edu')->ID);
+        }
+    } else {
+        $current_user = new Groups_User( get_current_user_id() );
+    }
+    $it = Groups_Group::read_by_name('IT');
+    $it_group = new Groups_Group( $it->group_id);
+    $current_user_groups = $current_user->groups;
+    for ($i = 0; $i < count($current_user_groups); $i++) {
+        $current_user_group = $current_user_groups[$i];
+        $can_org = $current_user_group->__get('capabilities');
+        if($can_org) {
+            $users_in_group = $current_user_group->users;
+            for ($j=0; $j < count($users_in_group); $j++) {
+                for($k=0; $k < count($it_group->users); $k++) {
+                    if ($it_group->users[$k]->ID == $users_in_group[$j]->ID) {
+                        $isInList = false;
+                        for($l=0; $l < count($output); $l++) {
+                            if($output[$l]['Name'] == $it_group->users[$k]->display_name) {
+                                $isInList = true;
+                            }
+                        }
+                        if (!$isInList) {
+                            $phone = $wpdb->get_var('SELECT Phone FROM causfa_custodians WHERE Email = "'.$it_group->users[$k]->user_email.'";');
+                            if ($phone === null) {
+                                $phone = '';
+                            }
+                            $FAL = array(
+                                'Name' => $it_group->users[$k]->display_name,
+                                'Email' => $it_group->users[$k]->user_email,
+                                'PID' => $it_group->users[$k]->user_nicename,
+                                'Phone' => $phone
+                            );
+                            $output[] = $FAL;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return $output;
+}
 
 function causfa_groups_FAC() {
     global $wpdb;

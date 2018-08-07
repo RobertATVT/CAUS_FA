@@ -49,6 +49,11 @@ function causfa_activate_plugin() {
             $map = array('name' => 'Fixed Asset Liaison', 'description' => 'Fixed Asset Liaison Group');
             Groups_Group::create($map);
         }
+        $IT = Groups_Group::read_by_name('IT');
+        if ($IT == null) {
+            $map = array('name' => 'IT', 'description' => 'IT Group');
+            Groups_Group::create($map);
+        }
         $FAC = Groups_Group::read_by_name('Fixed Assets Coordinator');
         if ($FAC == null) {
             $map = array('name' => 'Fixed Assets Coordinator', 'description' => 'Fixed Assets Coordinator Group');

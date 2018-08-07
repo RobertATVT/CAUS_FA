@@ -23,10 +23,10 @@
 									<label for="transfer-stage-4-[ID]"></label>
 								</div>
 								<div class="cl xl2 t10 center" id="transfer-stage5-[ID]">
-									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
+									<input type="button" id="transfer-stage-5-[ID]" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="openModal('transfer-stage-5', '[ID]')">
 								</div>
 								<div class="cl xl2 t10 center" id="transfer-stage6-[ID]">
-									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+									<input type="button" id="transfer-stage-6-[ID]" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="submitRequest('transfer',7, this.id)">
 								</div>
 							</form>
 						</div>

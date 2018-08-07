@@ -77,8 +77,7 @@ function causfa_bulk_surplus() {
                 'DATE_CREATED' => $date_created,
                 'PID_ORIGIN' => $PID_origin,
                 'PID_DESTINATION' => $PID_dest,
-                'PENDING_STATUS' => $pending_status,
-                'ASSIGNEE' => $Assignee_pids[0]
+                'PENDING_STATUS' => $pending_status
             ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
         );
         $logger_info = array(

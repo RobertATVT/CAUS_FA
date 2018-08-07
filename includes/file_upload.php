@@ -85,7 +85,7 @@ function causfa_upload_form_home() {
         wp_send_json($output);
     }
     $user = wp_get_current_user();
-    $ptag = $_SESSION['ptag'];
+    $ptag = $_POST['ptag'];
     $first_name = $user->first_name;
     $first_name = explode(' ',$first_name)[0];
     $last_name = $user->last_name;
@@ -148,7 +148,7 @@ function causfa_upload_form_office() {
         wp_send_json($output);
     }
     $user = wp_get_current_user();
-    $ptag = $_SESSION['ptag'];
+    $ptag = $_POST['ptag'];
     $first_name = $user->first_name;
     $first_name = explode(' ',$first_name)[0];
     $last_name = $user->last_name;

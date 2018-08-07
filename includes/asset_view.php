@@ -98,6 +98,11 @@ function causfa_load_admin_view(){
             case 6:
                 $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-6.html', true));
                 break;
+            case 7:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-7.html',true));
+            case 8:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-8.html',true));
+                break;
             default:
                 break;
         }
@@ -109,34 +114,31 @@ function causfa_load_admin_view(){
 
 	}
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-footer.html', true));
-    $results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 1 AND PENDING_STATUS > 0 AND ((FZVFORG_ORGN_CODE ='".causfa_groups_management_code()."' AND ASSIGNEE IS NULL) OR ASSIGNEE = '".wp_get_current_user()->user_nicename."');");
+    $results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 1 AND ((FZVFORG_ORGN_CODE ='".causfa_groups_management_code()."' AND ASSIGNEE IS NULL) OR ASSIGNEE = '".wp_get_current_user()->user_nicename."');");
     if (!count($results)) {
         $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-header-none.html', true));
     } else {
         $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-header.html', true));
     }
-    $checkbox1 = '<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'surplusModal\',\'\')">';
     for ($i = 0; $i < count($results); $i++) {
-        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill.html', true));
         switch($results[$i]->PENDING_STATUS) {
+            case 0:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-1.html', true));
+                break;
+            case 1:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-2.html', true));
+                break;
             case 2:
-                $output = str_replace($checkbox1, '<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
-                $output = str_replace('<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'surplusModal\',\'\')">', $output);
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-3.html', true));
                 break;
             case 3:
-                $output = str_replace($checkbox1, '<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
-                $output = str_replace('<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'surplusModal\',\'\')">', $output);
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-4.html', true));
                 break;
             case 4:
-                $output = str_replace($checkbox1, '<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', $output);
-                $output = str_replace('<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">', '<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal(\'surplusModal\',\'\')">', $output);
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-5.html', true));
                 break;
             case 5:
-                //Enable upload form button
-                break;
-            case 6:
-                //Enable complete button
-            default:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-6.html', true));
                 break;
         }
         $output = str_replace('[PTAG]', $results[$i]->FZVFORG_PTAG, $output);
@@ -164,5 +166,12 @@ function causfa_load_admin_view(){
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-footer.html', true));
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-modal.html', true));
 	$output = str_replace('[PID]', wp_get_current_user()->user_nicename, $output);
+	$IT = causfa_groups_IT();
+	$IT_options = '';
+	for ($i = 0; $i < count($IT); $i++) {
+	    $IT_item = '<option value="'.$IT[$i]['PID'].'">'.$IT[$i]['Name'].'</option>';
+	    $IT_options = $IT_options.$IT_item;
+    }
+    $output = str_replace('[ITFILL]', $IT_options, $output);
 	return $output;
 }
