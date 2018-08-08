@@ -1306,7 +1306,7 @@ slider-for{
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px){
+@media (min-width: 900px){
     #asset-container {
         margin-top: 0px;
     }

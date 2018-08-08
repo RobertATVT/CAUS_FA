@@ -1121,6 +1121,15 @@ slider-for{
         padding-left: 10px;
         padding-right: 10px;
     }
+	.pcard-maroon {
+		margin-bottom: 10px !important;
+	}
+	.pcard-orange {
+		margin-bottom: 10px !important;
+	}
+	.pcard-dk-orange {
+		margin-bottom: 10px !important;
+	}
 }
 
 
@@ -1182,6 +1191,15 @@ slider-for{
         border-top: 0px !important;
         height: 100%;
     }
+	.pcard-maroon {
+		margin-bottom: 10px !important;
+	}
+	.pcard-orange {
+		margin-bottom: 10px !important;
+	}
+	.pcard-dk-orange {
+		margin-bottom: 10px !important;
+	}
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -1306,7 +1324,7 @@ slider-for{
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px){
+@media (min-width: 900px){
     #asset-container {
         margin-top: 0px;
     }
@@ -1403,7 +1421,13 @@ slider-for{
 	.admin-block-line {
 		margin-bottom: 5px !important;
 	}
-    
+    .pcard-title {
+		font-size: 18px !important;
+	}
+	.pcard-subtitle {
+		font-size: 12px !important;
+		line-height: 10px !important;
+	}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -1425,6 +1449,13 @@ slider-for{
 	}
 	.block-text > form .report-button {
 		font-size: 95% !important;
+	}
+	.pcard-title {
+		font-size: 24px !important;
+	}
+	.pcard-subtitle {
+		font-size: 12px !important;
+		line-height: 10px !important;
 	}
 }
 /* Extra large devices (large desktops, 1200px and up) */
