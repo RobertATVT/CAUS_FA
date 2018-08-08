@@ -1130,6 +1130,11 @@ slider-for{
 	.pcard-dk-orange {
 		margin-bottom: 10px !important;
 	}
+	.report-block-header {
+		font-size: 70% !important;
+		font-weight: 900 !important;
+		color: #fff;
+	}
 }
 
 
