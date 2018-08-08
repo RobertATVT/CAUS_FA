@@ -1135,6 +1135,12 @@ slider-for{
 		font-weight: 900 !important;
 		color: #fff;
 	}
+	.report-input {
+		font-size: 90% !important;
+	}
+	.report-button {
+		font-size: 60% !important;
+	}
 }
 
 
