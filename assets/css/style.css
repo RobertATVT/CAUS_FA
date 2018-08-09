@@ -1211,6 +1211,12 @@ slider-for{
 	.pcard-dk-orange {
 		margin-bottom: 10px !important;
 	}
+	.slider-for img {
+    	max-height: 36vh !important;
+	}
+	.slick-track {
+		transform: translate3D(-50%, 15%, 0) !important;
+	}
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -1331,6 +1337,9 @@ slider-for{
         text-align: left !important;
         font-size: 100% !important;
     }
+	.slider-for img{
+    	max-height: 41vh !important;
+	}
 }
 
 
