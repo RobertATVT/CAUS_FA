@@ -1214,7 +1214,7 @@ slider-for{
 	.slider-for img {
     	max-height: 36vh !important;
 	}
-	.slick-track {
+	.slider-nav .slick-track {
 		transform: translate3D(-50%, 15%, 0) !important;
 	}
 }
