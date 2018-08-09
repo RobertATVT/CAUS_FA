@@ -710,15 +710,15 @@ a.btn-menu {
 	margin-top: 4px;
 }
 .modal {
-    width: 45% !important;
+    width: 80vw !important;
+	height: 80vh !important;
     margin:0 auto;
-    
     border: none;
     border-radius: 3px !important;
     position: fixed;
     left: 0;
     right:0;
-    top: 50% !important; 
+    top: 55% !important; 
     overflow-y: visible !important;
 
     -webkit-transform:translateY(-50%);
@@ -888,7 +888,7 @@ slider-for{
 
 .slider-for img{
     margin: 0px auto !important;
-    /*max-height: 350px !important;*/
+    max-height: 53vh !important;
 }
 .slider-nav{
     width: 500px;
