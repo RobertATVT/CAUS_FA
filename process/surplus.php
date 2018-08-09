@@ -96,6 +96,21 @@ function causfa_bulk_surplus() {
     wp_send_json($output);
 }
 
+function causfa_update_surplus() {
+    global $wpdb;
+    $ptag = $_POST['ptag'];
+    $state = $_POST['state'];
+    $assignee = $_POST['assignee'];
+    $output = array(
+        'status' => 0
+    );
+    if ($assignee !== '') {
+        $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => $assignee), array('FZVFORG_PTAG' => $ptag));
+    } else {
+        $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => wp_get_current_user()->user_nicename), array('FZVFORG_PTAG' => $ptag));
+    }
+}
+
 function causfa_surplus_number() {
     global $wpdb;
     $managementCode = causfa_groups_management_code();

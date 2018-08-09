@@ -112,7 +112,8 @@ function causfa_update_transfer() {
     $assignee = $_POST['assignee'];
     $output = array(
         'status' => 0,
-        'changeOrg' => 0
+        'changeOrg' => 0,
+        'assignedOrg' => ''
     );
     if ($state === '4') {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$ptag."';");
@@ -120,6 +121,7 @@ function causfa_update_transfer() {
         $mgn_code = causfa_groups_management_code($PID_dest);
         if($mgn_code !== $result->FZVFORG_ORGN_CODE) {
             $output['changeOrg'] = 1;
+            $output['assignedOrg'] = $mgn_code;
             $wpdb->update('causfa_pending', array('ASSIGNEE' => NULL, 'FZVFORG_ORGN_CODE' => $mgn_code), array('FZVFORG_PTAG' => $ptag));
         } else {
             $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => wp_get_current_user()->user_nicename), array('FZVFORG_PTAG' => $ptag));

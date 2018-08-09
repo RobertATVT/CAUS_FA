@@ -285,6 +285,7 @@ function bulkTransferAsset() {
                     }
                     var checkboxes = jQuery("#bulk-transfer-items").find("input:checkbox");
                     for (i = 0; i < checkboxes.length; i++) {
+                        checkboxes[i].checked = false;
                         checkboxes[i].disabled = true;
                         checkboxes[i].onclick = '';
                         jQuery('#recipient-name-' + checkboxes[i].id.split('-')[2]).val('');
