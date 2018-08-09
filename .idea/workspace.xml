@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/process/live_feed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-8.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/admin-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/admin-modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/transfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/transfer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/surplus.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/surplus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/transfer.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/transfer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,15 +49,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="817" />
-          <entry key="js" value="2856" />
+          <entry key="html" value="948" />
+          <entry key="js" value="3432" />
           <entry key="php" value="793" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="817" />
-          <entry key="JavaScript" value="2856" />
+          <entry key="HTML" value="948" />
+          <entry key="JavaScript" value="3432" />
           <entry key="PHP" value="793" />
         </counts>
       </usages-collector>
@@ -90,16 +70,22 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/js/admin-modal.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="857" column="54" selection-start-line="857" selection-start-column="54" selection-end-line="857" selection-end-column="54" />
+                <state relative-caret-position="90">
+                  <caret line="830" column="39" selection-start-line="830" selection-start-column="39" selection-end-line="830" selection-end-column="39" />
                   <folding>
                     <element signature="n#!!block;n#openModal#0" />
+                    <element signature="e#593#1474#0" />
                     <element signature="e#3758#4585#0" />
                     <element signature="n#!!block;n#activateButtons#0" />
                     <element signature="n#!!block;n#setProcessStage#0" />
                     <element signature="n#!!block;n#processStep#0" />
+                    <element signature="e#21608#26651#0" />
+                    <element signature="e#24400#26441#0" />
+                    <element signature="e#27866#28389#0" />
                     <element signature="n#!!block;n#backButton#0" />
                     <element signature="n#!!block;n#submitRequest#0" />
+                    <element signature="e#30895#35386#0" />
+                    <element signature="n#!!block;n#cancelRequest#0" />
                     <element signature="n#!!block;n#admin_uploadFormHome#0" />
                     <element signature="n#!!block;n#admin_uploadFormOffice#0" />
                   </folding>
@@ -114,9 +100,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-modal.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="117" column="144" selection-start-line="117" selection-start-column="144" selection-end-line="117" selection-end-column="144" />
+                <state relative-caret-position="340">
+                  <caret line="306" column="104" selection-start-line="306" selection-start-column="104" selection-end-line="306" selection-end-column="104" />
                   <folding>
+                    <element signature="n#div#0;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -139,6 +126,7 @@
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#div#1;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -148,6 +136,7 @@
                     <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                    <element signature="n#div#2;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -155,6 +144,7 @@
                     <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+                    <element signature="n#div#3;n#!!top" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
@@ -465,12 +455,12 @@
       <workItem from="1528254068237" duration="7431000" />
       <workItem from="1529418749623" duration="140000" />
       <workItem from="1529419029718" duration="11920000" />
-      <workItem from="1533608762459" duration="17704000" />
+      <workItem from="1533608762459" duration="19665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420556000" />
+    <option name="totallyTimeSpent" value="422517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -946,16 +936,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/admin-modal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="857" column="54" selection-start-line="857" selection-start-column="54" selection-end-line="857" selection-end-column="54" />
+        <state relative-caret-position="90">
+          <caret line="830" column="39" selection-start-line="830" selection-start-column="39" selection-end-line="830" selection-end-column="39" />
           <folding>
             <element signature="n#!!block;n#openModal#0" />
+            <element signature="e#593#1474#0" />
             <element signature="e#3758#4585#0" />
             <element signature="n#!!block;n#activateButtons#0" />
             <element signature="n#!!block;n#setProcessStage#0" />
             <element signature="n#!!block;n#processStep#0" />
+            <element signature="e#21608#26651#0" />
+            <element signature="e#24400#26441#0" />
+            <element signature="e#27866#28389#0" />
             <element signature="n#!!block;n#backButton#0" />
             <element signature="n#!!block;n#submitRequest#0" />
+            <element signature="e#30895#35386#0" />
+            <element signature="n#!!block;n#cancelRequest#0" />
             <element signature="n#!!block;n#admin_uploadFormHome#0" />
             <element signature="n#!!block;n#admin_uploadFormOffice#0" />
           </folding>
@@ -964,9 +960,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="117" column="144" selection-start-line="117" selection-start-column="144" selection-end-line="117" selection-end-column="144" />
+        <state relative-caret-position="340">
+          <caret line="306" column="104" selection-start-line="306" selection-start-column="104" selection-end-line="306" selection-end-column="104" />
           <folding>
+            <element signature="n#div#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -989,6 +986,7 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -998,6 +996,7 @@
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
@@ -1005,6 +1004,7 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#!!top" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />

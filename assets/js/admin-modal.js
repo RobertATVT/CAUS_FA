@@ -26,8 +26,7 @@ function openModal(process, element, data, step) {
                         $("#recieve-pickupdate").datepicker();
                         jQuery('#transfer-stage-2-ptag').val(jQuery('#transfer-ptag-' + data).html());
                         jQuery('#transfer-stage-2-id').val(data);
-                        setProcessStage('transfer','2','a','on');
-                        setProcessStage('transfer','2','b','off');
+                        processStep('transfer','2','1');
                         $("#recieve-pickupdate").val('');
                         $('#transfer-stage-2-notes').val('');
                         break;
@@ -35,8 +34,7 @@ function openModal(process, element, data, step) {
                         $("#deployed-date").datepicker();
                         jQuery('#transfer-stage-3-ptag').val(jQuery('#transfer-ptag-' + data).html());
                         jQuery('#transfer-stage-3-id').val(data);
-                        setProcessStage('transfer','3','a','on');
-                        setProcessStage('transfer','3','b','off');
+                        processStep('transfer','3','1');
                         $("#deployed-date").val('');
                         $('#transfer-stage-3-notes').val('');
                         break;
@@ -44,8 +42,7 @@ function openModal(process, element, data, step) {
                         $("#banner-date").datepicker();
                         jQuery('#transfer-stage-4-ptag').val(jQuery('#transfer-ptag-' + data).html());
                         jQuery('#transfer-stage-4-id').val(data);
-                        setProcessStage('transfer','4','a','on');
-                        setProcessStage('transfer','4','b','off');
+                        processStep('transfer','4','1');
                         $("#banner-date").val('');
                         $('#transfer-stage-4-notes').val();
                         break;
@@ -448,9 +445,6 @@ function setProcessStage(process, stage, step, state) {
     }
 }
 function processStep(process, stage, step) {
-    $("#recieve-pickupdate").datepicker();
-    $("#deployed-date").datepicker();
-    $("#banner-date").datepicker();
     $("#surplus-contactdate").datepicker();
     $("#surplus-receivedate").datepicker();
     $("#surplus-pickupdate").datepicker();
@@ -551,48 +545,43 @@ function processStep(process, stage, step) {
                 case "2":
                     switch (step){
                         case "1":
-                            $("#transfer-stage-1a").css("display", "");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "none");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $('#transfer-stage-1-back').val('1');
+                            $("#transfer-stage-2a").css("display", "");
+                            $("#transfer-stage-2b").css("display", "none");
+                            $("#transfer-stage-2c").css("display", "none");
                             break;
                         case "2":
-                            $("#transfer-stage-1a").css("display", "");
-                            $("#transfer-stage-1b").css("display", "");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "none");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $('#transfer-stage-1-back').val("2");
-                            $('#transfer-stage-1-back').css("display", "");
+                            $("#transfer-stage-2a").css("display", "");
+                            $("#transfer-stage-2b").css("display", "");
+                            $("#transfer-stage-2c").css("display", "none");
                             break;
-                        case "3":
-                            $("#transfer-stage-1a").css("display", "none");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "");
-                            $("#transfer-stage-1d").css("display", "none");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $('#transfer-stage-1-back').val('3');
-                            $('#transfer-stage-1-back').css("display", "");
+                        case '3':
+                            $("#transfer-stage-2a").css("display", "none");
+                            $("#transfer-stage-2b").css("display", "none");
+                            $("#transfer-stage-2c").css("display", "");
                             break;
-                        case "4":
-                            $("#transfer-stage-1a").css("display", "none");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $('#transfer-stage-1-back').val('4');
-                            $('#transfer-stage-1-back').css("display", "");
+                    }
+                    break;
+                case '3':
+                    switch(step) {
+                        case '1':
+                            $("#transfer-stage-3a").css("display", "");
+                            $("#transfer-stage-3b").css("display", "none");
                             break;
-                        case "5":
-                            $("#transfer-stage-1a").css("display", "none");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "none");
-                            $("#transfer-stage-1e").css("display", "");
-                            $('#transfer-stage-1-back').val('5');
-                            $('#transfer-stage-1-back').css("display", "");
+                        case '2':
+                            $("#transfer-stage-3a").css("display", "");
+                            $("#transfer-stage-3b").css("display", "");
+                            break;
+                    }
+                    break;
+                case '4':
+                    switch(step) {
+                        case '1':
+                            $("#transfer-stage-4a").css("display", "");
+                            $("#transfer-stage-4b").css("display", "none");
+                            break;
+                        case '2':
+                            $("#transfer-stage-4a").css("display", "");
+                            $("#transfer-stage-4b").css("display", "");
                             break;
                     }
                     break;
@@ -605,29 +594,23 @@ function processStep(process, stage, step) {
 function backButton(process, stage, value){
     switch (process) {
         case "transfer":
-            switch (stage){
-                case "1":
-                    if (value === "1") {
-                        processStep("transfer","1","1");
-                    } else if (value === "2") {
-                        processStep("transfer","1","1");
-                        $('#transfer-stage-1-submit').html('Submit Step');
-                        $('#transfer-stage-1-submit-small').html('Submit Step');
-                    } else if (value === "3") {
-                        processStep("transfer","1","1")
-                    } else if (value === "4") {
-                        processStep("transfer","1","3")
-                    } else if (value === "5") {
-                        processStep("transfer","1","4")
-                    } else if (value === "6") {
-                        processStep("transfer","1","3")
-                    } else if (value === '7') {
-                        processStep('transfer','1','2');
-                    };
-                    break;
-                case "2":
-                    break;
-            }
+            if (value === "1") {
+                processStep("transfer","1","1");
+            } else if (value === "2") {
+                processStep("transfer","1","1");
+                $('#transfer-stage-1-submit').html('Submit Step');
+                $('#transfer-stage-1-submit-small').html('Submit Step');
+            } else if (value === "3") {
+                processStep("transfer","1","1")
+            } else if (value === "4") {
+                processStep("transfer","1","3")
+            } else if (value === "5") {
+                processStep("transfer","1","4")
+            } else if (value === "6") {
+                processStep("transfer","1","3")
+            } else if (value === '7') {
+                processStep('transfer','1','2');
+            };
             break;
         case "surplus":
             break;
@@ -715,7 +698,7 @@ function submitRequest(process, stage, index) {
                     var comment = $('#transfer-stage-2-notes').val();
                     var note = 'The asset was picked up on ' + date + '. ';
                     if (comment !== '') {
-                        note = note + 'THe Admin added the following notes: ' + comment;
+                        note = note + 'The Admin added the following notes: ' + comment;
                     }
                     var form = {
                         'action': 'causfa_add_note',
@@ -736,9 +719,7 @@ function submitRequest(process, stage, index) {
                                 var element = document.getElementById('transfer-' + $('#transfer-stage-2-id').val());
                                 var grandParent = element.parentNode.parentNode;
                                 grandParent.parentNode.removeChild(grandParent);
-                                setProcessStage('transfer', '2','c','on');
-                                setProcessStage('transfer', '2','b','off');
-                                setProcessStage('transfer', '2','a','off');
+                                processStep('transfer','2','3');
                                 activateButtons('transfer','stage2','off');
                                 $('#transfer-stage-2c-text').html('This ticket will be transferred to the following org -' + data['assignedOrg'] + ' because the recipient is in another org');
                             } else {
@@ -858,12 +839,23 @@ function cancelRequest(process, stage) {
                     $('#transfer-pickupdate').val('');
                     break;
                 case '2':
+                    processStep('transfer','2','1');
+                    $('#recieve-pickupdate').val('');
+                    $('#transfer-stage-2-notes').val('');
                     break;
                 case '3':
+                    processStep('transfer','3','1');
+                    $('#deployed-date').val('');
+                    $('#transfer-stage-3-notes').val('');
                     break;
                 case '4':
+                    processStep('transfer','4','1');
+                    $('#banner-date').val('');
+                    $('#transfer-stage-4-notes').val('');
                     break;
                 case '5':
+                    $('#homeFormToUpload').val('');
+                    $('#officeFormToUpload').val('');
                     break;
             }
             break;
