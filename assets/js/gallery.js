@@ -69,6 +69,7 @@ function addImages(image, desc, date) {
     }
     $('.slider-nav').append(item);
     $('.slider-for').append(item2);
+    $('#imageCount').val($('#imageCount').val() + 1);
     slickInit();
 }
 
@@ -79,7 +80,7 @@ function slickInit() {
         asNavFor: '.slider-nav',
         arrows: true,
         fade: true,
-        autoplay: true
+        autoplay: true,
     });
     $('.slider-nav').slick({
         slidesToShow: 3,

@@ -641,6 +641,7 @@ function submitRequest(process, stage, index) {
                                 $('#transfer-stage-1-submit').html('Submit Step');
                                 $('#transfer-stage-1-submit-small').html('Submit Step');
                                 processStep('transfer','1','3');
+                                $('#transfer-stage-1-back').css('display','none');
                                 $('#transfer-stage-1-submit').removeAttr('value');
                             } else {
                                 $('#transfer-stage-1').modal('close');

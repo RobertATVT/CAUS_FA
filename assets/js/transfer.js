@@ -265,8 +265,8 @@ function bulkTransferAsset() {
                 jQuery(('#transfer-' + index)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
                 jQuery(('#surplus-' + index)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
                 var checkbox = jQuery(('#asset-select-' + index));
-                checkbox.attr('disabled', 'disabled');
                 checkbox.attr('checked', false);
+                checkbox.attr('disabled', 'disabled');
             }
             checkSelected();
             if (ids_successful.length == ids.length) {
