@@ -151,7 +151,7 @@ html {
   	.hide-large {
     	display: none !important;
   	}
-	.hide-tiny-up, .hide-small-up, .hide-medium-up, hide-large-up {
+	.hide-tiny-up, .hide-small-up, .hide-medium-up, .hide-large-up {
 		display: none !important;
 	}
 	.hide-large-down {
@@ -162,7 +162,7 @@ html {
   	.hide-xlarge {
     	display: none !important;
   	}
-	.hide-tiny-up, .hide-small-up, .hide-medium-up, hide-large-up, .hide-xlarge-up {
+	.hide-tiny-up, .hide-small-up, .hide-medium-up, .hide-large-up, .hide-xlarge-up {
 		display: none !important;
 	}
 }
@@ -170,7 +170,7 @@ html {
   	.hide-xxlarge {
     	display: none !important;
   	}
-	.hide-tiny-up, .hide-small-up, .hide-medium-up, hide-large-up, .hide-xlarge-up {
+	.hide-tiny-up, .hide-small-up, .hide-medium-up, .hide-large-up, .hide-xlarge-up {
 		display: none !important;
 	}
 }
