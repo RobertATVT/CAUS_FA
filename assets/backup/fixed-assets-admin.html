@@ -226,7 +226,7 @@
 								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-[ID]">[PID 1]</div>
 								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid2-[ID]">[DATE]</div>
 								<div class="cl xl2 t5 center" id="surplus-stage1-[ID]">
-									<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
+									<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('tickets-stage-1','')">
 									<label for="surplus-stage-1-[ID]"></label>
 								</div>
 								<div class="cl xl2 t5 center" id="surplus-stage2-[ID]">
@@ -1027,6 +1027,107 @@
         <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
     </div>
 </div>
+<!-----Tickets Stage 1 Modal----->
+<div id="tickets-stage-1" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="TicketStageTitle">Asset Tickets</h4>
+        <input type="hidden" id="tickets-stage-1-ptag">
+        <input type="hidden" id="tickets-stage-1-pid" value="[PID]">
+        <input type="hidden" id="tickets-stage-1-id">
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="tickets-stage-1a">
+            <div class="rw faa-modal-info" style="margin-bottom: 10px;">
+                <div class="cl t15 info-title left" style="padding: 0px;">
+					Is this a ticket that should be resolved by your IT Departments?<br />
+					<span style="font-size:85%;font-weight: 400;color: #333;">
+						(i.e. Computer Software or Hardware Issues.)
+					</span>
+				</div>
+				<div class="t5 right">
+					<button type="button" class="btn btn-primary" id="tickets-stage-1-yes" onclick="(
+						function() {
+							processStep('tickets','1','2');
+							activateButtons('tickets','stage1','on');
+						})()">Yes</button>
+					<button type="button" class="btn btn-primary" id="tickets-stage-1-no" onclick="processStep('tickets','1','3')">No</button>
+				</div>
+            </div>
+			<div class="rw faa-modal-info" style="margin-bottom: 0px;">
+				<div class="cl t5 left" style="padding: 0px;">[PID]</div>
+				<div class="cl t15 left" style="padding: 0px;">
+					TICKET NOTE INFORMATION SUBMITTED BY USER EXAMPLE 
+				</div>
+			</div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="tickets-stage-1b">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+                <div class="cl t15 info-title left" style="padding: 0px;">You are about to send this ticket to the IT Helpdesk, please click the Confirm button below to complete this ticket.</div>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none" id="tickets-stage-1c">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+                <div class="cl t15 info-title left" style="padding: 0px;">Have you contacted the faculty/staff member that created this ticket?</div>
+				<div class="cl t5 info-title center" style="padding: 0px;">
+					<div class="t5 right">
+						<button type="button" class="btn btn-primary" id="tickets-stage-1c-yes" onclick="processStep('tickets','1','4')">Yes</button>
+						<button type="button" class="btn btn-primary" id="tickets-stage-1c-no" onclick="processStep('tickets','1','5');">No</button>
+					</div>
+				</div>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="tickets-stage-1d">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+				<div class="t10 left">Please input the date that was initially set</div>
+				<div class="t10 right">
+					<input type="text" id="tickets-date" style="margin: 0px !important;" onchange="(
+						function(){
+							processStep('tickets','1','6');
+							activateButtons('tickets','stage1','on');
+						}
+						)()">
+				</div>
+            </div>
+        </div>
+		<div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="tickets-stage-1e">
+			<div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+				<div class="t10 info-title center">Please collaborate with the asset owner to set a date and time for pickup.</div>
+			</div>
+    	</div>
+        <div class="rw" style="padding: 10px;margin-bottom: 0px; display: none;" id="tickets-stage-1f">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px">
+                <form autocomplete="off">
+                    <div class="center cl t20 form-group" style="padding: 0px;">
+                        <textarea id="tickets-stage-1-notes" name="tickets-stage-1-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                    </div>
+                </form>
+            </div>
+			<div class="cl m20 faa-modal-info" style="padding: 5px; margin-top: 10px; padding-bottom: 0px;">
+                <p class="center info-title">Please fill in the notes box above with any notes that you may have concerning your initial contact with the initiating faculty/staff before selecting the yes/no options.</p>
+            </div>
+        </div>
+    </div>
+    <div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="transfer-stage-1f">
+        <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+            <div class="t10 info-title center">Please collaborate with the asset owner to set a date and time for pickup.</div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="rw">
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-primary" id="tickets-stage-1-submit-small" onclick="submitRequest('tickets',1)" disabled="disabled">Submit Step</button>
+            </div>
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-primary modal-close" onclick="cancelRequest('tickets','1')">Cancel</button>
+            </div>
+            <div class="cl m10 hide-small-down">
+                <button type="button" class="btn btn-primary left" id="tickets-stage-1-back" value="0" style="display: none" onclick="backButton('tickets', '1', this.value)">back</button>
+            </div>
+            <div class="cl m10 hide-small-down">
+                <button type="button" class="btn btn-primary" id="tickets-stage-1-submit" onclick="submitRequest('tickets',1)" disabled="disabled">Confirm</button>
+                <button type="button" class="btn btn-primary modal-close" id="transfer-stage-1-cancel" onclick="cancelRequest('tickets','1')">cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- END modal.html --> 
 
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -1098,6 +1199,27 @@ function backButton(process, stage, value){
 			}
 			break;
 		case "surplus":
+			break;
+		case "tickets":
+			switch (stage){
+				case "1":
+					if (value === "1") {
+						processStep("tickets","1","1");
+					} else if (value === "2") {
+						processStep("tickets","1","1");
+					} else if (value === "3") {
+						processStep("tickets","1","1")
+					} else if (value === "4") {
+						processStep("tickets","1","3")
+					} else if (value === "5") {
+						processStep("tickets","1","3")
+					} else if (value === "6") {
+						processStep("tickets","1","3")
+					};
+					break;
+				case "2":
+					break;
+			}
 			break;
 	}
 }
@@ -1171,6 +1293,23 @@ function activateButtons(process, stage, state){
 					break;
 			}
 			break;
+		case "tickets":
+			switch (stage) {
+				case "stage1":
+					if (state === "on") {
+						$("#tickets-stage-1-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#tickets-stage-1-submit").attr("disabled", "disabled");
+					}
+				break;
+				case "stage2":
+					if (state === "on") {
+						$("#tickets-stage-2-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#tickets-stage-2-submit").attr("disabled", "disabled");
+					}
+				break;
+			}
 		break;
 	}
 };
@@ -1438,6 +1577,7 @@ function processStep(process, stage, step) {
 		$("#surplus-contactdate").datepicker();
 		$("#surplus-receivedate").datepicker();
 		$("#surplus-pickupdate").datepicker();
+		$("#tickets-date").datepicker();
 		switch (process){
 			case "transfer":
 				switch (stage){
@@ -1554,7 +1694,85 @@ function processStep(process, stage, step) {
 				}
 				break;
 			case "surplus":
+			break;
+			case "tickets":
+				switch (stage){
+					case "1":
+						switch (step) {
+							case "1":
+								$("#tickets-stage-1a").css("display", "");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('1');
+								$('#tickets-stage-1-back').css("display", "none");
+								activateButtons('tickets','stage1','off');
+								break;
+							case "2":
+								$("#tickets-stage-1a").css("display", "");
+								$("#tickets-stage-1b").css("display", "");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('2');
+								$('#tickets-stage-1-back').css("display", "none");
+								activateButtons('tickets','stage1','off');
+								break;
+							case "3":
+								$("#tickets-stage-1a").css("display", "none");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "");
+								$("#tickets-stage-1d").css("display", "none");
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('3');
+								$('#tickets-stage-1-back').css("display", "");
+								activateButtons('tickets','stage1','on');
+								break;
+							case "4":
+								$("#tickets-stage-1a").css("display", "none");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "");	
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('4');
+								$('#tickets-stage-1-back').css("display", "");
+								activateButtons('tickets','stage1','on');
+								break;
+							case "5":
+								$("#tickets-stage-1a").css("display", "none");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1e").css("display", "");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('5');
+								$('#tickets-stage-1-back').css("display", "");
+								activateButtons('tickets','stage1','on');
+								break;
+							case "6":
+								$("#tickets-stage-1a").css("display", "none");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "");
+								$('#tickets-stage-1-back').val('6');
+								$('#tickets-stage-1-back').css("display", "");
+								activateButtons('tickets','stage1','on');
+								break;
+						}
+							break;
+						break;
+					case "2":
+						break;
+				}
 				break;
+			break;
 		}
 	}
 }
