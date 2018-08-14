@@ -711,7 +711,7 @@ a.btn-menu {
 }
 .modal {
     width: 80vw !important;
-	height: 80vh !important;
+/*	height: 80vh !important;*/
     margin:0 auto;
     border: none;
     border-radius: 3px !important;

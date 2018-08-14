@@ -116,7 +116,7 @@ html {
 }
 
 @media only screen and (min-width: 400px) {
-  	.hide-small, .hide-small-down {
+  	.hide-small {
     	display: none !important;
   	}
 	.hide-tiny-up, .hide-small-up {
@@ -154,9 +154,6 @@ html {
 	.hide-tiny-up, .hide-small-up, .hide-medium-up, .hide-large-up {
 		display: none !important;
 	}
-	.hide-large-down {
-		display: none !important;
-	}
 }
 @media only screen and (min-width: 1200px) {
   	.hide-xlarge {
@@ -174,6 +171,11 @@ html {
 		display: none !important;
 	}
 }
+@media only screen and (max-width: 400px) {
+	.hide-small-down {
+		display: none;
+	}
+}
 @media only screen and (max-width: 600px) {
 	.show-small {
 		display: block !important;
@@ -181,24 +183,27 @@ html {
 	.center-small {
 		text-align: center;
   	}
+	.hide-medium-down {
+    	display: none !important;
+  	}
 }
 @media only screen and (max-width: 992px) {
 	.show-medium-down {
     	display: block !important;
   	}
-  	.hide-medium-down {
+	.hide-large-down {
+		display: none !important;
+	}
+}
+@media only screen and (max-width: 1200px) {
+  	.hide-xlarge-down {
     	display: none !important;
   	}
 }
-@media only screen and (max-width: 1200px) {
-  .hide-large-down {
-    display: none !important;
-  }
-}
 @media only screen and (max-width: 1600px) {
-  .hide-xlarge-down {
-    display: none !important;
-  }
+  	.hide-xxlarge-down {
+    	display: none !important;
+  	}
 }
 
 
