@@ -1373,8 +1373,7 @@ slider-for{
 		transform: translate3D(0%, 15%, 0) !important;
 	}
 	.ribbon-transfer {
-	line-height: 27px;
-	font-size: 110%;
+		font-size: 70%;
 	}
 	.ribbon-surplus {
 		font-size: 70%;
@@ -1495,6 +1494,21 @@ slider-for{
 	.pcard-subtitle {
 		font-size: 12px !important;
 		line-height: 10px !important;
+	}
+	.ribbon-transfer {
+		font-size: 90%;
+	}
+	.ribbon-surplus {
+		font-size: 90%;
+	}
+	.ribbon-gallery {
+		font-size: 90%;
+	}
+	.ribbon-forms {
+		font-size: 90%;
+	}
+	.ribbon-reports {
+		font-size: 90%;
 	}
 }
 
