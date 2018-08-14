@@ -110,9 +110,6 @@ html {
   	.hide-tiny, hide-tiny-up {
     	display: none !important;
   	}
-	.hide-large-down {
-		display: none !important;
-	}
 }
 
 @media only screen and (min-width: 400px) {
@@ -120,9 +117,6 @@ html {
     	display: none !important;
   	}
 	.hide-tiny-up, .hide-small-up {
-		display: none !important;
-	}
-	.hide-large-down {
 		display: none !important;
 	}
 }
@@ -138,9 +132,6 @@ html {
     	display: none !important;
   	}
 	.hide-tiny-up, .hide-small-up, .hide-medium-up {
-		display: none !important;
-	}
-	.hide-large-down {
 		display: none !important;
 	}
 }
