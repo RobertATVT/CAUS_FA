@@ -154,6 +154,24 @@ function activateButtons(process, stage, state){
                     break;
             }
             break;
+		case "tickets":
+			switch (stage) {
+				case "stage1":
+					if (state === "on") {
+						$("#tickets-stage-1-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#tickets-stage-1-submit").attr("disabled", "disabled");
+					}
+				break;
+				case "stage2":
+					if (state === "on") {
+						$("#tickets-stage-2-submit").removeAttr("disabled");
+					} else if (state === "off") {
+						$("#tickets-stage-2-submit").attr("disabled", "disabled");
+					}
+				break;
+			}
+		break;
     }
 };
 function setProcessStage(process, stage, step, state) {
@@ -616,6 +634,84 @@ function processStep(process, stage, step) {
                     break;
             }
             break;
+		case "tickets":
+				switch (stage){
+					case "1":
+						switch (step) {
+							case "1":
+								$("#tickets-stage-1a").css("display", "");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('1');
+								$('#tickets-stage-1-back').css("display", "none");
+								activateButtons('tickets','stage1','off');
+								break;
+							case "2":
+								$("#tickets-stage-1a").css("display", "");
+								$("#tickets-stage-1b").css("display", "");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('2');
+								$('#tickets-stage-1-back').css("display", "none");
+								activateButtons('tickets','stage1','off');
+								break;
+							case "3":
+								$("#tickets-stage-1a").css("display", "none");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "");
+								$("#tickets-stage-1d").css("display", "none");
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('3');
+								$('#tickets-stage-1-back').css("display", "");
+								activateButtons('tickets','stage1','on');
+								break;
+							case "4":
+								$("#tickets-stage-1a").css("display", "none");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "");	
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('4');
+								$('#tickets-stage-1-back').css("display", "");
+								activateButtons('tickets','stage1','on');
+								break;
+							case "5":
+								$("#tickets-stage-1a").css("display", "none");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1e").css("display", "");
+								$("#tickets-stage-1f").css("display", "none");
+								$('#tickets-stage-1-back').val('5');
+								$('#tickets-stage-1-back').css("display", "");
+								activateButtons('tickets','stage1','on');
+								break;
+							case "6":
+								$("#tickets-stage-1a").css("display", "none");
+								$("#tickets-stage-1b").css("display", "none");
+								$("#tickets-stage-1c").css("display", "none");
+								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1e").css("display", "none");
+								$("#tickets-stage-1f").css("display", "");
+								$('#tickets-stage-1-back').val('6');
+								$('#tickets-stage-1-back').css("display", "");
+								activateButtons('tickets','stage1','on');
+								break;
+						}
+							break;
+						break;
+					case "2":
+						break;
+				}
+				break;
+			break;
     }
 }
 function backButton(process, stage, value){
@@ -641,6 +737,27 @@ function backButton(process, stage, value){
             break;
         case "surplus":
             break;
+		case "tickets":
+			switch (stage){
+				case "1":
+					if (value === "1") {
+						processStep("tickets","1","1");
+					} else if (value === "2") {
+						processStep("tickets","1","1");
+					} else if (value === "3") {
+						processStep("tickets","1","1")
+					} else if (value === "4") {
+						processStep("tickets","1","3")
+					} else if (value === "5") {
+						processStep("tickets","1","3")
+					} else if (value === "6") {
+						processStep("tickets","1","3")
+					};
+					break;
+				case "2":
+					break;
+			}
+			break;
     }
 }
 function submitRequest(process, stage, index) {
