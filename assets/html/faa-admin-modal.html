@@ -321,20 +321,8 @@
                 </div>
                 <div class="cl t5 info-title center" style="padding: 0px;">
                     <div class="t5 right">
-                        <button type="button" class="btn btn-primary" id="surplus-stage-1a-yes" onclick="(
-							function() {
-								setProcessStage('surplus','1','a','on');
-								setProcessStage('surplus','1','b','on');
-							}
-						)()">Yes</button>
-                        <button type="button" class="btn btn-primary" id="surplus-stage-1a-no" onclick="(
-							function() {
-								setProcessStage('surplus','1','a','off');
-								setProcessStage('surplus','1','c','on');
-								activateButtons('surplus','stage1','off');
-								$('#surplus-stage-1-0').prop('checked', false);
-							}
-						)()">No</button>
+                        <button type="button" class="btn btn-primary" id="surplus-stage-1a-yes" onclick="processStep('surplus','1','2')">Yes</button>
+                        <button type="button" class="btn btn-primary" id="surplus-stage-1a-no" onclick="processStep('surplus','1','3')">No</button>
                     </div>
                 </div>
             </div>
@@ -343,14 +331,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
                 <div class="t10 left">Please input the date that was initially set</div>
                 <div class="t10 right">
-                    <input type="text" id="surplus-contactdate" style="margin: 0px !important;" onchange="(
-						function(){
-							setProcessStage('surplus','1','a','off');
-							setProcessStage('surplus','1','b','off');
-							setProcessStage('surplus','1','d','on');
-							activateButtons('surplus','stage1','on');
-						}
-						)()">
+                    <input type="text" id="surplus-contactdate" style="margin: 0px !important;" onchange="processStep('surplus','1','4')">
                 </div>
             </div>
         </div>
@@ -376,13 +357,13 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="surplus-stage-1-submit-small" onclick="submitRequest('surplus',1)">Transfer</button>
+                <button type="button" class="btn btn-primary" id="surplus-stage-1-submit-small" onclick="submitRequest('surplus',1)">Surplus</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-primary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="surplus-stage-1-submit" onclick="submitRequest('surplus',1)" id="surplus-stage-1-submit" disabled="disabled">submit step</button>
+                <button type="button" class="btn btn-primary" id="surplus-stage-1-submit" onclick="submitRequest('surplus',1)" id="surplus-stage-1-submit" disabled="disabled">Submit Step</button>
                 <button type="button" class="btn btn-primary modal-close" id="surplus-stage-1-cancel">cancel</button>
             </div>
         </div>
