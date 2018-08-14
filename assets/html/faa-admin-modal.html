@@ -274,7 +274,7 @@
 <!-----Transfer Stage 5 Modal----->
 <div id="transfer-stage-5" class="modal">
     <div class="modal-content">
-        <h4 class="center faa-modal-title" id="formsModalLabel">Transfer Stage 5/6 - Upload Forms</h4>
+        <h4 class="center faa-modal-title">Transfer Stage 5/6 - Upload Forms</h4>
         <input type="hidden" id="transfer-stage-5-ptag">
         <input type="hidden" id="transfer-stage-5-pid" value="[PID]">
         <input type="hidden" id="transfer-stage-5-id">
@@ -315,7 +315,7 @@
         <input type="hidden" id="surplus-stage-1-ptag">
         <input type="hidden" id="surplus-stage-1-pid" value="[PID]">
         <input type="hidden" id="surplus-stage-1-id">
-        <div class="rw" style="padding: 10px; margin-bottom: 0px;display:" id="surplus-stage-1a">
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;" id="surplus-stage-1a">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
                 <div class="cl t15 info-title center" style="padding: 0px;">You have indicated that you have contacted the faculty/staff who initiated the surplus request. Have you set a date for the pickup of the item?
                 </div>
@@ -345,7 +345,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
-                        <textarea name="surplus-stage-1-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                        <textarea id="surplus-stage-1-notes" name="surplus-stage-1-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
@@ -360,11 +360,14 @@
                 <button type="button" class="btn btn-primary" id="surplus-stage-1-submit-small" onclick="submitRequest('surplus',1)">Surplus</button>
             </div>
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary modal-close">Cancel</button>
+                <button type="button" class="btn btn-primary modal-close" onclick="cancelRequest('surplus','1')">Cancel</button>
+            </div>
+            <div class="cl m10 hide-small-down">
+                <button type="button" class="btn btn-primary left" id="surplus-stage-1-back" value="0" style="display: none" onclick="backButton('surplus', '1', this.value)">back</button>
             </div>
             <div class="cl m20 hide-small-down">
                 <button type="button" class="btn btn-primary" id="surplus-stage-1-submit" onclick="submitRequest('surplus',1)" id="surplus-stage-1-submit" disabled="disabled">Submit Step</button>
-                <button type="button" class="btn btn-primary modal-close" id="surplus-stage-1-cancel">cancel</button>
+                <button type="button" class="btn btn-primary modal-close" id="surplus-stage-1-cancel" onclick="cancelRequest('surplus','1')">cancel</button>
             </div>
         </div>
     </div>
@@ -380,12 +383,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
                 <div class="t10 left">Please select the date that you picked up the asset.</div>
                 <div class="t10 right">
-                    <input type="text" id="surplus-receivedate" style="margin: 0px !important;" onchange="(
-						function(){
-							setProcessStage('surplus','2','b','on');
-							activateButtons('surplus','stage2','off');
-						}
-						)()">
+                    <input type="text" id="surplus-receivedate" style="margin: 0px !important;" onchange="processStep('surplus','2','2')">
                 </div>
             </div>
         </div>
@@ -398,22 +396,8 @@
 					</span>
                 </div>
                 <div class="t5 right">
-                    <button type="button" class="btn btn-primary" id="surplus-stage-2-yes" onclick="(
-						function() {
-							setProcessStage('surplus','2','a','off');
-							setProcessStage('surplus','2','b','off');
-							setProcessStage('surplus','2','c','on');
-							activateButtons('surplus','stage2','on');
-						}
-						)()">Yes</button>
-                    <button type="button" class="btn btn-primary" id="surplus-stage-2-no" onclick="(
-						function() {
-							setProcessStage('surplus','2','a','off');
-							setProcessStage('surplus','2','b','off');
-							setProcessStage('surplus','2','d','on');
-							activateButtons('surplus','stage2','on');
-						}
-						)()">No</button>
+                    <button type="button" class="btn btn-primary" id="surplus-stage-2-yes" onclick="processStep('surplus','2','3')">Yes</button>
+                    <button type="button" class="btn btn-primary" id="surplus-stage-2-no" onclick="processStep('surplus','2','4')">No</button>
                 </div>
             </div>
         </div>
@@ -442,7 +426,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
-                        <textarea name="surplus-stage-2-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                        <textarea id="surplus-stage-2-notes" name="surplus-stage-2-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
@@ -454,22 +438,18 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="surplusButton" onclick="validateForm(this)">Surplus</button>
+                <button type="button" class="btn btn-primary" id="surplus-stage-2-submit-small" onclick="submitRequest('surplus',2)">Surplus</button>
             </div>
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary modal-close">Cancel</button>
+                <button type="button" class="btn btn-primary modal-close"onclick="cancelRequest('surplus','2')">Cancel</button>
+            </div>
+            <div class="cl m10 hide-small-down">
+                <button type="button" class="btn btn-primary left" id="surplus-stage-2-back" value="0" style="display: none" onclick="backButton('surplus', '2', this.value)">back</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="surplus-stage-2-submit" onclick="(
-					function(){
-						$('#surplus-stage-2').modal('close');
-						$('#surplus-stage-2-0').prop('checked', false);
-						$('#surplus-stage-2-0').attr('disabled', 'disabled');
-						$('#surplus-stage-3-0').removeAttr('disabled');
-						$('#surplus-stage-3-0').prop('checked', false);
-					})()"
+                <button type="button" class="btn btn-primary" id="surplus-stage-2-submit" onclick="submitRequest('surplus',2)"
                         id="surplus-stage-2-submit" disabled="disabled">submit step</button>
-                <button type="button" class="btn btn-primary modal-close" id="surplus-stage-2-cancel">cancel</button>
+                <button type="button" class="btn btn-primary modal-close" id="surplus-stage-2-cancel" onclick="cancelRequest('surplus','2')">cancel</button>
             </div>
         </div>
     </div>
@@ -485,13 +465,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
                 <div class="t10 left">Please select the date that the Surplus Department picked up the asset.</div>
                 <div class="t10 right">
-                    <input type="text" id="surplus-pickupdate" style="margin: 0px !important;" onchange="(
-						function(){
-							setProcessStage('surplus','3','a','off');
-							setProcessStage('surplus','3','b','on');
-							activateButtons('surplus','stage3','on');
-						}
-						)()">
+                    <input type="text" id="surplus-pickupdate" style="margin: 0px !important;" onchange="processStep('surplus','3','2')">
                 </div>
             </div>
         </div>
@@ -499,7 +473,7 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
                     <div class="center cl t20 form-group" style="padding: 0px;">
-                        <textarea name="surplus-stage-3-notes" placeholder="Please enter any notes that you may need here"></textarea>
+                        <textarea id="surplus-stage-3-notes" name="surplus-stage-3-notes" placeholder="Please enter any notes that you may need here"></textarea>
                     </div>
                 </form>
             </div>
@@ -511,21 +485,15 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="surplusButton" onclick="validateForm(this)">Surplus</button>
+                <button type="button" class="btn btn-primary" id="surplus-stage-3-submit-small" onclick="submitRequest('surplus',3)">Surplus</button>
             </div>
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary modal-close">Cancel</button>
+                <button type="button" class="btn btn-primary modal-close" onclick="cancelRequest('surplus','3')">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="surplus-stage-3-submit" onclick="(
-					function(){
-						$('#surplus-stage-3').modal('close');
-						$('#surplus-stage-3-0').prop('checked', false);
-						$('#surplus-stage-3-0').attr('disabled', 'disabled');
-						$('#surplus-stage-4-0').removeClass('disabled');
-					})()"
+                <button type="button" class="btn btn-primary" id="surplus-stage-3-submit" onclick="submitRequest('surplus',3)"
                         id="surplus-stage-3-submit" disabled="disabled">submit step</button>
-                <button type="button" class="btn btn-primary modal-close" id="surplus-stage-3-cancel">cancel</button>
+                <button type="button" class="btn btn-primary modal-close" id="surplus-stage-3-cancel" onclick="cancelRequest('surplus','3')">cancel</button>
             </div>
         </div>
     </div>
@@ -541,20 +509,11 @@
             <div class="rw" style="margin-bottom: 0px; padding: 0px;">
                 <div class="center cl m10 t20 forms-modal-left">
                     <div class="center cl t20" style="padding-bottom: 0px; margin-bottom: 0px;">
-                        <input type="hidden" id="formsPtag" value="" />
+                        <input type="hidden" id="surplusFormsPtag" value="" />
                         <hr style="padding: 10px; margin: 0px; margin-top: 10px;">
                         <form >
-                            <input type="file" class="home-file" name="fileToUpload" id="homeFormToUpload"><br>
+                            <input type="file" class="home-file" name="fileToUpload" id="surplusFormToUpload"><br>
                             <input type="button" class="btn btn-primary home-upload" value="Upload New Home Use Form" onclick="uploadFormHome()">
-                        </form>
-                    </div>
-                </div>
-                <div class="center cl m10 t20 forms-modal-center">
-                    <div class="center cl t20" style="padding-bottom: 0px; margin-bottom: 0px;">
-                        <hr style="padding: 10px; margin: 0px; margin-top: 10px;">
-                        <form>
-                            <input type="file" class="home-file" name="fileToUpload" id="officeFormToUpload"><br>
-                            <input type="button" class="btn btn-primary home-upload" value="Upload New Office Use Form" onclick="uploadFormOffice()">
                         </form>
                     </div>
                 </div>
@@ -643,7 +602,7 @@
             </div>
         </div>
     </div>
-    <div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="transfer-stage-1f">
+    <div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="tickets-stage-1g">
         <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
             <div class="t10 info-title center">Please collaborate with the asset owner to set a date and time for pickup.</div>
         </div>
@@ -661,7 +620,7 @@
             </div>
             <div class="cl m10 hide-small-down">
                 <button type="button" class="btn btn-primary" id="tickets-stage-1-submit" onclick="submitRequest('tickets',1)" disabled="disabled">Confirm</button>
-                <button type="button" class="btn btn-primary modal-close" id="transfer-stage-1-cancel" onclick="cancelRequest('tickets','1')">cancel</button>
+                <button type="button" class="btn btn-primary modal-close" id="tickets-stage-1-cancel" onclick="cancelRequest('tickets','1')">cancel</button>
             </div>
         </div>
     </div>

@@ -65,14 +65,26 @@ function openModal(process, element, data, step) {
                     case 'surplus-stage-1':
                         $("#surplus-contactdate").datepicker();
                         processStep('surplus','1','1');
-                        $('#surplus-stage-1-ptag').val(jQuery('#surplus-ptag-' + data).html());
+                        $('#surplus-stage-1-ptag').val(tag);
                         $('#surplus-stage-1-id').val(data);
+                        $('#surplus-contactdate').val('');
+                        $('#surplus-stage-1-notes').val('');
                         break;
                     case 'surplus-stage-2':
                         $("#surplus-receivedate").datepicker();
+                        processStep('surplus','2','1');
+                        $('#surplus-stage-2-ptag').val(tag);
+                        $('#surplus-stage-2-id').val(data);
+                        $('#surplus-receivedate').val('');
+                        $('#surplus-stage-2-notes').val('');
                         break;
                     case 'surplus-stage-3':
                         $("#surplus-pickupdate").datepicker();
+                        processStep('surplus','3','1');
+                        $('#surplus-stage-3-ptag').val(tag);
+                        $('#surplus-stage-3-id').val(data);
+                        $('#surplus-pickupdate').val('');
+                        $('#surplus-stage-3-notes').val('');
                         break;
                     case 'surplus-stage-4':
                         break;
@@ -503,7 +515,7 @@ function processStep(process, stage, step) {
                             $("#transfer-stage-1f").css("display", "none");
                             $("#transfer-stage-1g").css("display", "none");
                             $('#transfer-stage-1-back').val('3');
-                            $('#transfer-stage-1-back').css("display", "");
+                            $('#transfer-stage-1-back').css("display", "none");
                             activateButtons('transfer','stage1','off');
                             break;
                         case "4":
@@ -607,13 +619,17 @@ function processStep(process, stage, step) {
                             $('#surplus-stage-1b').css('display', 'none');
                             $('#surplus-stage-1c').css('display', 'none');
                             $('#surplus-stage-1d').css('display', 'none');
+                            $('#surplus-stage-1-back').css('display', 'none');
+                            $('#surplus-stage-1-back').val(1);
                             activateButtons('surplus','stage1','off');
                             break;
                         case '2':
-                            $('#surplus-stage-1a').css('display', '');
+                            $('#surplus-stage-1a').css('display', 'none');
                             $('#surplus-stage-1b').css('display', '');
                             $('#surplus-stage-1c').css('display', 'none');
                             $('#surplus-stage-1d').css('display', 'none');
+                            $('#surplus-stage-1-back').css('display', '');
+                            $('#surplus-stage-1-back').val(2);
                             activateButtons('surplus','stage1','off');
                             break;
                         case '3':
@@ -621,16 +637,74 @@ function processStep(process, stage, step) {
                             $('#surplus-stage-1b').css('display', 'none');
                             $('#surplus-stage-1c').css('display', '');
                             $('#surplus-stage-1d').css('display', 'none');
+                            $('#surplus-stage-1-back').css('display', '');
+                            $('#surplus-stage-1-back').val(3);
                             activateButtons('surplus','stage1','off');
                             break;
                         case '4':
                             $('#surplus-stage-1a').css('display', 'none');
-                            $('#surplus-stage-1b').css('display', 'none');
+                            $('#surplus-stage-1b').css('display', '');
                             $('#surplus-stage-1c').css('display', 'none');
                             $('#surplus-stage-1d').css('display', '');
+                            $('#surplus-stage-1-back').css('display', '');
+                            $('#surplus-stage-1-back').val(4);
                             activateButtons('surplus','stage1','on');
                             break;
-                    }34
+                    }
+                    break;
+                case '2':
+                    switch (step) {
+                        case '1':
+                            $('#surplus-stage-2a').css('display', '');
+                            $('#surplus-stage-2b').css('display', 'none');
+                            $('#surplus-stage-2c').css('display', 'none');
+                            $('#surplus-stage-2d').css('display', 'none');
+                            $('#surplus-stage-2-back').val('1');
+                            $('#surplus-stage-2-back').css('display','none');
+                            activateButtons('surplus','stage2','off');
+                            break;
+                        case '2':
+                            $('#surplus-stage-2a').css('display', '');
+                            $('#surplus-stage-2b').css('display', '');
+                            $('#surplus-stage-2c').css('display', 'none');
+                            $('#surplus-stage-2d').css('display', 'none');
+                            $('#surplus-stage-2-back').val('2');
+                            $('#surplus-stage-2-back').css('display','none');
+                            activateButtons('surplus','stage2','off');
+                            break;
+                        case '3':
+                            $('#surplus-stage-2a').css('display', 'none');
+                            $('#surplus-stage-2b').css('display', 'none');
+                            $('#surplus-stage-2c').css('display', '');
+                            $('#surplus-stage-2d').css('display', 'none');
+                            $('#surplus-stage-2-back').val('3');
+                            $('#surplus-stage-2-back').css('display','');
+                            activateButtons('surplus','stage2','off');
+                            break;
+                        case '4':
+                            $('#surplus-stage-2a').css('display', '');
+                            $('#surplus-stage-2b').css('display', 'none');
+                            $('#surplus-stage-2c').css('display', 'none');
+                            $('#surplus-stage-2d').css('display', '');
+                            $('#surplus-stage-2-back').val('4');
+                            $('#surplus-stage-2-back').css('display','');
+                            activateButtons('surplus','stage2','on');
+                            break;
+                    }
+                    break;
+                case '3':
+                    switch (step) {
+                        case '1':
+                            $('#surplus-stage-3a').css('display', '');
+                            $('#surplus-stage-3b').css('display', 'none');
+                            activateButtons('surplus','stage3','off');
+                            break;
+                        case '2':
+                            $('#surplus-stage-3a').css('display', '');
+                            $('#surplus-stage-3b').css('display', '');
+                            activateButtons('surplus','stage3','on');
+                            break;
+                    }
                     break;
             }
             break;
@@ -736,6 +810,30 @@ function backButton(process, stage, value){
             };
             break;
         case "surplus":
+            switch (stage) {
+                case '1':
+                    if (value === '1') {
+                        processStep('surplus','1','1');
+                    } else if (value === '2') {
+                        processStep('surplus','1','1');
+                    } else if (value === '3') {
+                        processStep('surplus','1','1');
+                    } else if (value === '4') {
+                        processStep('surplus','1','2');
+                    }
+                    break;
+                case '2':
+                    if (value === '1') {
+                        processStep('surplus','2','1');
+                    } else if (value === '2') {
+                        processStep('surplus','2','1');
+                    } else if (value === '3') {
+                        processStep('surplus','2','2');
+                    } else if (value === '4') {
+                        processStep('surplus','2','2');
+                    }
+                    break;
+            }
             break;
 		case "tickets":
 			switch (stage){
@@ -785,7 +883,6 @@ function submitRequest(process, stage, index) {
                                 $('#transfer-stage-1-submit').html('Submit Step');
                                 $('#transfer-stage-1-submit-small').html('Submit Step');
                                 processStep('transfer','1','3');
-                                alert('this is running');
                                 $('#transfer-stage-1-back').css('display','none');
                                 $('#transfer-stage-1-submit').removeAttr('value');
                             } else {
@@ -957,16 +1054,91 @@ function submitRequest(process, stage, index) {
             var id = $('#surplus-stage-' + stage + '-id').val();
             switch (stage) {
                 case 1:
+                    var note = 'This asset is scheduled to be picked up on ' + $('#surplus-contactdate').val() + '. ';
+                    var comment = $('#surplus-stage-1-notes').val();
+                    if (comment !== '') {
+                        note = note + 'The admin has entered the following notes: ' + comment;
+                    }
                     var form = {
                         'action': 'causfa_add_note',
                         'act': 'Surplus-Contacted',
                         'ptag': jQuery('#surplus-stage-1-ptag').val(),
-                        'note': 'Submitting note'
+                        'note': note
                     };
+                    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
+                    var form = {
+                        'action': 'causfa_update_surplus',
+                        'state': 1,
+                        'ptag': jQuery('#surplus-stage-1-ptag').val(),
+                        'assignee': ''
+                    };
+                    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+                       if (data['status'] === 1) {
+                           $('#surplus-stage-1-' + id).prop('checked', false);
+                           $('#surplus-stage-1-' + id).attr('disabled', 'disabled');
+                           $('#surplus-stage-2-' + id).removeAttr('disabled');
+                           $('#surplus-stage-2-' + id).prop('checked', false);
+                           $('#surplus-stage-1').modal('close');
+                       }
+
+                    });
                     break;
                 case 2:
+                    var note = 'This asset was picked up on ' + $('#surplus-receivedate').val() + '. ';
+                    var comment = $('#surplus-stage-2-notes').val();
+                    if (comment !== '') {
+                        note = note + 'The admin has entered the following notes: ' + comment;
+                    }
+                    var form = {
+                        'action': 'causfa_add_note',
+                        'act': 'Surplus-Recieved',
+                        'ptag': jQuery('#surplus-stage-2-ptag').val(),
+                        'note': note
+                    };
+                    jQuery.post(causfa_action_obj.ajax_url, form, function(data){});
+                    var form = {
+                        'action': 'causfa_update_surplus',
+                        'state': 2,
+                        'ptag': jQuery('#surplus-stage-2-ptag').val(),
+                        'assignee': ''
+                    };
+                    jQuery.post(causfa_action_obj.ajax_url, form, function(data){
+                       if (data['status'] === 1) {
+                           $('#surplus-stage-2-' + id).prop('checked', false);
+                           $('#surplus-stage-2-' + id).attr('disabled', 'disabled');
+                           $('#surplus-stage-3-' + id).removeAttr('disabled');
+                           $('#surplus-stage-3-' + id).prop('checked', false);
+                           $('#surplus-stage-2').modal('close');
+                       }
+                    });
                     break;
                 case 3:
+                    var note = 'This asset was pickup up by surplus on ' + $('#surplus-pickupdate').val() + '. ';
+                    var comment = $('#surplus-stage-3-notes').val();
+                    if (comment !== '') {
+                        note = note + 'The admin has entered the following notes: ' + comment;
+                    }
+                    var form = {
+                        'action': 'causfa_add_note',
+                        'act': 'Surplus-PickedUp',
+                        'ptag': jQuery('#surplus-stage-3-ptag').val(),
+                        'note': note
+                    };
+                    jQuery.post(causfa_action_obj.ajax_url, form, function(data){});
+                    var form = {
+                        'action': 'causfa_update_surplus',
+                        'state': 3,
+                        'ptag': jQuery('#surplus-stage-3-ptag').val(),
+                        'assignee': ''
+                    };
+                    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+                       if (data['status'] === 1) {
+                           $('#surplus-stage-3-' + id).prop('checked', false);
+                           $('#surplus-stage-3-' + id).attr('disabled', 'disabled');
+                           $('#surplus-stage-4-' + id).removeClass('disabled');
+                           $('#surplus-stage-3').modal('close');
+                       }
+                    });
                     break;
                 case 4:
                     break;
@@ -1006,6 +1178,25 @@ function cancelRequest(process, stage) {
             }
             break;
         case 'surplus':
+            switch (stage) {
+                case '1':
+                    processStep('surplus','1','1');
+                    $('#surplus-contactdate').val('');
+                    $('#surplus-stage-1-notes').val('');
+                    break;
+                case '2':
+                    processStep('surplus','2','1');
+                    $('#surplus-receivedate').val('');
+                    $('#surplus-stage-2-notes').val('');
+                    break;
+                case '3':
+                    processStep('surplus','3','1');
+                    $('#surplus-pickupdate').val('');
+                    $('#surplus-stage-3-notes').val('');
+                    break;
+                case '4':
+                    break;
+            }
             break;
     }
 }

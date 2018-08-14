@@ -194,6 +194,11 @@ function causfa_upload_form_office() {
         }
     }
 }
+function causfa_upload_surplus_form() {
+    global $wpdb;
+    $ptag = $_POST['ptag'];
+    $result = $wpdb->get_row("SELECT * FROM causfa_notes WHERE FZVFORG_PTAG = '" + $ptag + "';")
+}
 function causfa_output_images() {
     global $wpdb;
     $ptag = $_SESSION['ptag'];

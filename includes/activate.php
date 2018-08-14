@@ -21,6 +21,10 @@ function causfa_activate_plugin() {
     if(! is_dir($upload_dir)) {
         mkdir($upload_dir, 0755);
     }
+    $upload_dir_surplus = $upload_dir.'/surplus';
+    if(! is_dir($upload_dir_surplus)) {
+        mkdir($upload_dir_surplus, 0755);
+    }
     $upload_dir_images = $upload_dir.'/images';
     if(! is_dir($upload_dir_images)) {
         mkdir($upload_dir_images, 0755);

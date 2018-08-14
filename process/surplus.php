@@ -109,6 +109,8 @@ function causfa_update_surplus() {
     } else {
         $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => wp_get_current_user()->user_nicename), array('FZVFORG_PTAG' => $ptag));
     }
+    $output['status'] = 1;
+    wp_send_json($output);
 }
 
 function causfa_surplus_number() {
