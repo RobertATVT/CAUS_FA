@@ -512,23 +512,6 @@ select#org option:hover {
 .asset-list-r2 {
 	padding-top: 7px !important;
 }
-.ribbon-disabled {
-	color: #333;
-	background: #888; 
-	padding-left: 5px !important; 
-	padding-top: 5px !important;
-}
-.ribbon-active {
-	color: #fff;
-	border: 1px solid #d76611; 
-	border-radius: 2px; 
-	background: #E87722; 
-	padding-left: 5px !important; 
-	padding-top: 5px !important;
-}
-.ribbon-active:hover {
-	border-color: rgba(255,255,255,0.4);
-}
 .asset-show {
 	height: 115px;
     line-height: 20px;
@@ -629,7 +612,48 @@ select#org option:hover {
 	border-bottom: 1px solid rgba(255,255,255,.3);
 }
 
-/* ADMIN REPORT ELEMENTS */
+
+/*==============  ASSET RIBBON CSS  ==============*/
+
+.ribbon-disabled {
+	color: #333;
+	background: #888; 
+	padding-left: 5px !important; 
+	padding-top: 5px !important;
+}
+.ribbon-active {
+	color: #fff;
+	border: 1px solid #d76611; 
+	border-radius: 2px; 
+	background: #E87722; 
+	padding-left: 5px !important; 
+	padding-top: 5px !important;
+}
+.ribbon-active:hover {
+	border-color: rgba(255,255,255,0.4);
+}
+.ribbon-transfer {
+	line-height: 27px;
+	font-size: 110%;
+}
+.ribbon-surplus {
+	line-height: 27px;
+	font-size: 110%;
+}
+.ribbon-gallery {
+	line-height: 27px;
+	font-size: 110%;
+}
+.ribbon-forms {
+	line-height: 27px;
+	font-size: 110%;
+}
+.ribbon-reports {
+	line-height: 27px;
+	font-size: 110%;
+}
+
+/*==============  ADMIN REPORTS CSS  ==============*/
 
 .report-block-header {
 	background-color: rgba(255,255,255,0.2); 
@@ -659,7 +683,7 @@ select#org option:hover {
 	margin-bottom: 4px;
 }
 
-/* SIDEBAR AND CONTENT CONTAINERS */
+/*==============  SIDEBAR & CONTENT CSS  ==============*/
 #sidebar {
     transition: margin-left .4s;
 /*    transition: left .4s;     */
@@ -709,6 +733,9 @@ a.btn-menu {
 .small-title {
 	margin-top: 4px;
 }
+
+/*==============  MODAL CSS  ==============*/
+
 .modal {
     width: 80vw !important;
 /*	height: 80vh !important;*/
@@ -773,42 +800,6 @@ a.btn-menu {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-
-.btn-primary {
-    background: #e87722; 
-}
-.btn-primary:focus {
-    background: #861F41;
-    border: none;
-}
-.btn-primary:hover {
-    background: #861F41;
-}
-.btn-secondary {
-    background: #cfcfcf; 
-}
-.btn-secondary:focus {
-    background: #aaa;
-    border: none;
-}
-.btn-secondary:hover {
-    background: #aaa;
-}
-.btn {
-    border: none;
-}
-.btn:focus {
-    border: none;
-    outline: none;
-}
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    outline: 1px solid #333;
-}
 .home-generate {
 	width: 95% !important;
 	font-size: 80% !important;
@@ -845,6 +836,44 @@ a.btn-menu {
 	line-height: 20px;
 	margin-bottom: 4px;
 }
+
+/*==============  RESTYLING CSS  ==============*/
+
+.btn-primary {
+    background: #e87722; 
+}
+.btn-primary:focus {
+    background: #861F41;
+    border: none;
+}
+.btn-primary:hover {
+    background: #861F41;
+}
+.btn-secondary {
+    background: #cfcfcf; 
+}
+.btn-secondary:focus {
+    background: #aaa;
+    border: none;
+}
+.btn-secondary:hover {
+    background: #aaa;
+}
+.btn {
+    border: none;
+}
+.btn:focus {
+    border: none;
+    outline: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: 1px solid #333;
+}
 [type="checkbox"] + label {
 	padding-left: 0px !important;
 	height: 15px !important;
@@ -876,7 +905,7 @@ a.btn-menu {
 [type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
 	
 }
-/*==============  Gallery CSS  ==============*/
+/*==============  GALLERY CSS  ==============*/
 slider-for{
     width: 500px;
     height: 250px;
@@ -884,8 +913,6 @@ slider-for{
     overflow: hidden;
     position: relative;
 }
-
-
 .slider-for img{
     margin: 0px auto !important;
     max-height: 53vh !important;
@@ -1327,7 +1354,6 @@ slider-for{
         padding-left: 5px !important;
         font-size: 100% !important;
     }
-
     .col-2 {
         text-align: left !important;
         font-size: 100% !important;
@@ -1343,8 +1369,24 @@ slider-for{
 	.slider-for img{
     	max-height: 41vh !important;
 	}
-		.slider-nav .slick-track {
+	.slider-nav .slick-track {
 		transform: translate3D(0%, 15%, 0) !important;
+	}
+	.ribbon-transfer {
+	line-height: 27px;
+	font-size: 110%;
+	}
+	.ribbon-surplus {
+		font-size: 70%;
+	}
+	.ribbon-gallery {
+		font-size: 70%;
+	}
+	.ribbon-forms {
+		font-size: 70%;
+	}
+	.ribbon-reports {
+		font-size: 70%;
 	}
 }
 

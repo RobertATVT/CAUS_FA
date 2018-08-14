@@ -13,11 +13,12 @@
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
     background-color: #f6f6f6;
     border: 1px solid #9e9e9e;
-    border-bottom: 2px solid #9e9e9e;
-    height: 1.5rem;
+	border-bottom: 2px solid #9e9e9e;
+    height: 1.25rem !important;
     text-align: center;
 	margin: 0px !important;
 }
+
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 2px solid #E87722;
     -webkit-box-shadow: 0 1px 0 0 #E87722;
@@ -40,11 +41,11 @@ select#org option:hover {
     box-shadow: 0 0 10px 100px #1882A8 inset !important;
 }
 
-.ui-datepicker-calendar {
-    width: 300px;
-    height: 300px;
-    margin: 5px auto 0;
-    font: 12pt Arial, sans-serif;
+.ui-datepicker {
+    width: 210px;
+    height: 210px;
+    margin: 0px auto 0;
+    font: 9pt Arial, sans-serif;
     /*-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);*/
 }
@@ -55,12 +56,12 @@ select#org option:hover {
     }
 
 .ui-datepicker-header {
-    background: #3399ff;
+    background: #861F41;
     color: #ffffff;
-    font-family:'Times New Roman';
-    border-width: 1px 0 0 0;
+    border-width: 2px 0 0 0;
     border-style: solid;
-    border-color: #111;
+    border-color: #E87722;
+	padding: 3px;
 }
 
 .ui-datepicker-title {
@@ -82,16 +83,19 @@ select#org option:hover {
 }
 
 .ui-datepicker thead {
-    background-color: #f7f7f7;
-
+    background-color: none;
     /*border-bottom: 1px solid #bbb;*/
 }
 
 .ui-datepicker th {
-    background-color:#808080;
+    background-color: #E87722;
     text-transform: uppercase;
     font-size: 8pt;
-    color: #666666;
+    color: #fff;
+	border-radius: 0px !important;
+	height: 25px;
+	padding: 0px;
+	text-align: center
     /*text-shadow: 1px 0px 0px #fff;*/
     /*filter: dropshadow(color=#fff, offx=1, offy=0);*/
 }
@@ -106,7 +110,7 @@ select#org option:hover {
     }
 
 .ui-datepicker tbody tr {
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #ddd;
 }
 
     .ui-datepicker tbody tr:last-child {
@@ -130,20 +134,19 @@ select#org option:hover {
 }
 
 .ui-datepicker-calendar .ui-state-default {
-      background: linear-gradient(#999999, #737373);
-      color:#ffffff;
-      height:40px;
-      width:40px;
-
+	background: #efefef;
+	color:#333;
+	height:30px;
+	width:30px;
 }
 
 .ui-datepicker-calendar .ui-state-hover {
-    background: #33adff;
+    background: #ED8B00;
     color: #FFFFFF;
 }
 
 .ui-datepicker-calendar .ui-state-active {
-    background: #33adff;
+    background: #C64600;
     -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
     -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
     box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
@@ -160,9 +163,6 @@ select#org option:hover {
 }
 
 /* VT BACKGROUND COLORS */
-.vt-white {
-	background: #f8f8f8;
-}
 .vt-lt-orange {
     background: #ED8B00;
 }
@@ -203,7 +203,7 @@ select#org option:hover {
     background: #003C71;
 }
 
-/* VT TEXT COLORS */
+/* ========== VT TEXT COLORS ========== */
 .vt-txt-grey {
     color: #75787B;;
 }
@@ -213,6 +213,8 @@ select#org option:hover {
 .vt-txt-charcoal {
 	color: #333;
 }
+
+/* ========== TYPOGRAPHY SETTINGS ========== */
 .h1-text {
     font-size:175%;
     font-weight:700;
@@ -268,12 +270,66 @@ select#org option:hover {
 .lh-20 {
     line-height: 20px;
 }
+
+/* TYPOGRAPHY ELEMENTS */
 .shorten-text {
 	overflow: hidden; 
 	white-space: nowrap; 
 	text-overflow: ellipsis;
 }
-/* FIXED ASSETS ELEMENTS*/
+.biggertext {
+    font-size:190%;
+    font-weight:700;
+    letter-spacing: .1em; 
+    line-height: 20px;
+    padding-left: 10px !important;
+    padding-top: 10px !important;
+}
+.bigtext {
+    font-size:150%;
+    font-weight:700;
+    letter-spacing: .1em; 
+    line-height: 20px;
+    padding-left: 10px !important;
+    padding-top: 10px !important;
+}
+.block-headtext {
+    font-size:140%;
+    font-weight:700;
+    text-transform: uppercase;
+    letter-spacing: .05em; 
+}
+.block-bigtext {
+    font-size:115%;
+    font-weight:700;
+    line-height: 25px;
+    padding-top: 0px !important;    
+    padding-left: 10px !important;    
+}
+.block-text {
+    font-size:100%;
+    font-weight:400; 
+    line-height: 20px;
+    padding-top: 0px !important;    
+    padding-left: 10px !important;
+}
+.subtext {
+    font-size:100%;
+    font-weight:400; 
+    line-height: 20px;
+    padding-left: 10px !important;
+    padding-top: 10px !important;
+}
+.subtext-right {
+    font-size:100%;
+    font-weight:400; 
+    line-height: 20px;
+    padding-right: 10px !important;
+    padding-top: 10px !important;
+    text-align: right;
+}
+
+/* ========== FIXED ASSETS SETTINGS ========== */
 #asset-container {
     width: 100%;
     background: #efefef;
@@ -394,33 +450,8 @@ select#org option:hover {
 }
 .asset-border {
 	border: 1px solid rgba(0,0,0,0.15) !important;
-    border-radius: 3px !important;
+    border-radius: 5px !important;
     padding: 0px !important;	
-}
-.asset-list-r {
-	padding-top: 5px !important;
-}
-.asset-list-r2 {
-	padding-top: 7px !important;
-}
-.ribbon-disabled {
-	color: #333;
-	border: 1px solid #777; 
-	border-radius: 2px; 
-	background: #888; 
-	padding-left: 5px !important; 
-	padding-top: 5px !important;
-}
-.ribbon-active {
-	color: #fff;
-	border: 1px solid #d76611; 
-	border-radius: 2px; 
-	background: #E87722; 
-	padding-left: 5px !important; 
-	padding-top: 5px !important;
-}
-.ribbon-active:hover {
-	border-color: rgba(255,255,255,0.4);
 }
 .block-header {
     background: rgba(0,0,0,.3);
@@ -431,63 +462,14 @@ select#org option:hover {
 }
 .block-footer {
     background: rgba(0,0,0,.2);
-    min-height: 15px; 
+    min-height: 15px !important; 
     border-radius: 0px 0px 3px 3px; 
     padding: 3px !important;
     margin-top: 10px;
 }
-.biggertext {
-    font-size:190%;
-    font-weight:700;
-    letter-spacing: .1em; 
-    line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
-}
-.bigtext {
-    font-size:150%;
-    font-weight:700;
-    letter-spacing: .1em; 
-    line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
-}
-.block-headtext {
-    font-size:140%;
-    font-weight:700;
-    text-transform: uppercase;
-    letter-spacing: .05em; 
-    line-height: 25px;
-    padding-left: 10px !important;
-}
-.block-bigtext {
-    font-size:115%;
-    font-weight:700;
-    line-height: 25px;
-    padding-top: 0px !important;    
-    padding-left: 10px !important;    
-}
-.block-text {
-    font-size:100%;
-    font-weight:400; 
-    line-height: 20px;
-    padding-top: 0px !important;    
-    padding-left: 10px !important;
-}
-.subtext {
-    font-size:100%;
-    font-weight:400; 
-    line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
-}
-.subtext-right {
-    font-size:100%;
-    font-weight:400; 
-    line-height: 20px;
-    padding-right: 10px !important;
-    padding-top: 10px !important;
-    text-align: right;
+.tablesorter-header-inner{
+	min-height: 25px;
+	line-height: 25px;
 }
 .asset-list-header {
     background: #fff; 
@@ -498,12 +480,6 @@ select#org option:hover {
     border-bottom: 1px solid #D7D2CB;
     font-weight: 700; 
     font-size: 80%;
-}
-.asset-list-header > th {
-    padding-top:3px !important;
-	padding-bottom:3px !important;
-    font-weight: 700; 
-    font-size: 100%;
 }
 .asset-list-footer {
     background: #fff; 
@@ -524,9 +500,17 @@ select#org option:hover {
     border: 0px; 
     border-bottom: 1px solid #D7D2CB;
     font-weight: 400; 
-    font-size: 90%;
-    line-height: 30px;
-	height: 30px;
+    font-size: 75%;
+    line-height: 20px;
+}
+.asset-list > td {
+	line-height: 31px;
+}
+.asset-list-r {
+	padding-top: 5px !important;
+}
+.asset-list-r2 {
+	padding-top: 7px !important;
 }
 .asset-show {
 	height: 115px;
@@ -554,11 +538,7 @@ select#org option:hover {
     background: #e87222;
     box-shadow: none;
     border: none;
-}
-.asset-actions {
-	font-size: 100%;
-	padding: 0px !important;
-}
+}    
 .asset-action {
     background: transparent !important;
 	border: 0 !important;
@@ -587,7 +567,6 @@ select#org option:hover {
 .edit-action:focus {
     color: #fff;;
 }
-
 .asset-status {
     box-sizing: border-box;
 	padding: 0px;
@@ -597,37 +576,34 @@ select#org option:hover {
     height: 20px;
     width: 80%;
     border: 0px;
+    border-radius: 3px;
     margin-top: -1px;
     margin: 0px auto;
 }
 .asset-office {
     font-size: 135%;
-	font-weight: 700;
     background: #060 !important;
     color: #fff;
-	border-radius: 3px;
+    line-height: 20px;
 }
 .asset-home {
     font-size: 135%;
-	font-weight: 700;
     background: #fd0 !important;
     color: #000;
-	border-radius: 3px;
+	line-height: 20px;
 }
 .asset-missing {
     font-size: 135%;
-	font-weight: 700;
     background: #900 !important;
     color: #fff;
     letter-spacing: .2em;
-	border-radius: 3px;
+	line-height: 20px;
 }
 .asset-pending {
     font-size: 135%;
-	font-weight: 700;
 	background: #46c !important;
     color: #fff;
-	border-radius: 3px;
+    line-height: 20px;
 }
 .admin-list-heading {
 	background: rgba(255,255,255,.2); 
@@ -635,7 +611,75 @@ select#org option:hover {
 	padding-bottom: 3px !important;
 	border-bottom: 1px solid rgba(255,255,255,.3);
 }
-/* SIDEBAR AND CONTENT CONTAINERS */
+
+
+/*==============  ASSET RIBBON CSS  ==============*/
+
+.ribbon-disabled {
+	color: #333;
+	background: #888; 
+	padding-left: 5px !important; 
+	padding-top: 5px !important;
+}
+.ribbon-active {
+	color: #fff;
+	border: 1px solid #d76611; 
+	border-radius: 2px; 
+	background: #E87722; 
+	padding-left: 5px !important; 
+	padding-top: 5px !important;
+}
+.ribbon-active:hover {
+	border-color: rgba(255,255,255,0.4);
+}
+.ribbon-transfer {
+	line-height: 27px;
+	font-size: 110%;
+}
+.ribbon-surplus {
+	
+}
+.ribbon-gallery {
+	
+}
+.ribbon-forms {
+	
+}
+.ribbon-reports {
+	
+}
+
+/*==============  ADMIN REPORTS CSS  ==============*/
+
+.report-block-header {
+	background-color: rgba(255,255,255,0.2); 
+	padding: 2px !important; 
+	text-transform: uppercase; 
+	font-weight: 700;
+	font-size: 130%; 
+	letter-spacing: .05em;
+}
+.report-input {
+	width: 95% !important;
+	font-size: 120% !important;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px !important;
+	line-height: 20px !important;
+	margin-bottom: 0px;
+}
+.report-button {
+	width: 95% !important;
+	font-size: 100% !important;
+	font-weight: 700;
+	text-align: center;
+	padding: 1px;
+	max-height: 20px !important;
+	line-height: 20px !important;
+	margin-bottom: 4px;
+}
+
+/*==============  SIDEBAR & CONTENT CSS  ==============*/
 #sidebar {
     transition: margin-left .4s;
 /*    transition: left .4s;     */
@@ -685,16 +729,19 @@ a.btn-menu {
 .small-title {
 	margin-top: 4px;
 }
+
+/*==============  MODAL CSS  ==============*/
+
 .modal {
-    width: 45% !important;
+    width: 80vw !important;
+/*	height: 80vh !important;*/
     margin:0 auto;
-    
     border: none;
     border-radius: 3px !important;
     position: fixed;
     left: 0;
     right:0;
-    top: 50% !important; 
+    top: 55% !important; 
     overflow-y: visible !important;
 
     -webkit-transform:translateY(-50%);
@@ -749,42 +796,6 @@ a.btn-menu {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-
-.btn-primary {
-    background: #e87722; 
-}
-.btn-primary:focus {
-    background: #861F41;
-    border: none;
-}
-.btn-primary:hover {
-    background: #861F41;
-}
-.btn-secondary {
-    background: #cfcfcf; 
-}
-.btn-secondary:focus {
-    background: #aaa;
-    border: none;
-}
-.btn-secondary:hover {
-    background: #aaa;
-}
-.btn {
-    border: none;
-}
-.btn:focus {
-    border: none;
-    outline: none;
-}
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-    outline: 1px solid #333;
-}
 .home-generate {
 	width: 95% !important;
 	font-size: 80% !important;
@@ -821,6 +832,44 @@ a.btn-menu {
 	line-height: 20px;
 	margin-bottom: 4px;
 }
+
+/*==============  RESTYLING CSS  ==============*/
+
+.btn-primary {
+    background: #e87722; 
+}
+.btn-primary:focus {
+    background: #861F41;
+    border: none;
+}
+.btn-primary:hover {
+    background: #861F41;
+}
+.btn-secondary {
+    background: #cfcfcf; 
+}
+.btn-secondary:focus {
+    background: #aaa;
+    border: none;
+}
+.btn-secondary:hover {
+    background: #aaa;
+}
+.btn {
+    border: none;
+}
+.btn:focus {
+    border: none;
+    outline: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: 1px solid #333;
+}
 [type="checkbox"] + label {
 	padding-left: 0px !important;
 	height: 15px !important;
@@ -852,7 +901,7 @@ a.btn-menu {
 [type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
 	
 }
-/*==============  Gallery CSS  ==============*/
+/*==============  GALLERY CSS  ==============*/
 slider-for{
     width: 500px;
     height: 250px;
@@ -860,11 +909,9 @@ slider-for{
     overflow: hidden;
     position: relative;
 }
-
-
 .slider-for img{
     margin: 0px auto !important;
-    /*max-height: 350px !important;*/
+    max-height: 53vh !important;
 }
 .slider-nav{
     width: 500px;
@@ -912,59 +959,60 @@ slider-for{
     z-index: 2;
 }
 
-/* AUTOCOMPLETE CSS */
+/* ========== TABS STYLING ========== */
+/* Style tab links */
+.tablink {
+  	background-color: #8c8c88;
+  	color: white;
+  	float: center;
+  	border: 1px solid rgba(255,255,255,0.25);
+  	outline: none;
+  	cursor: pointer;
+  	padding: 2px 2px;
+	width: 97%;
+	font-size: 90%;
+	font-weight: 700;
+	letter-spacing: .05em;
+}
 
-/*
-.faa-autocomplete {
-  position: relative;
-  display: inline-block;
+.tablink:hover {
+  background-color: #777;
 }
-div.faa-autocomplete > input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
+
+/* Style the tab content (and add height:100% for full page content) */
+.cl .tabcontent {
+  color: white;
+  display: none;
+  padding: 20px;
+  height: 100%;
 }
-div.faa-autocomplete > input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
+
+#PendingTransfers {
+	background-color: #508590;
+	border: 1px solid rgba(0,0,0,0.25);
+	padding: 0px !important;
 }
-div.faa-autocomplete > input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
-  cursor: pointer;
+#PendingSurplus {
+	background-color: #861F41;
+	border: 1px solid rgba(255,255,255,0.25);
+	padding: 0px !important;
 }
-.faa-autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  top: 100%;
-  left: 0;
-  right: 0;
+#PendingTickets {
+	background-color: #C64600;
+	border: 1px solid rgba(255,255,255,0.25);
+	padding: 0px !important;	
 }
-.faa-autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
+#Dashboard {
+	background-color: #D7D2CB;
+	border: 1px solid rgba(255,255,255,0.25);
+	padding: 0px !important;
 }
-.faa-autocomplete-items div:hover {
-  when hovering an item:
-  background-color: #e9e9e9; 
-}
-.faa=autocomplete-active {
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
-}
-*/
 
 
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
 
-@media (min-width: 200px) {
+@media (min-width: 200px){
     .biggertext {
         font-size:130%;
     }
@@ -1007,13 +1055,10 @@ div.faa-autocomplete > input[type=submit] {
         margin-bottom: 3px;
         width: 95%;
     }
-    .asset-action {
+    .asset-actions {
+        margin-top: 5px;
+        margin-bottom: 3px;
         font-size: 180%;
-        padding: 0px !important;
-    }
-	.edit-action {
-		text-align: right;
-        font-size: 80%;
         padding: 0px !important;
     }
     .block-headtext {
@@ -1081,49 +1126,53 @@ div.faa-autocomplete > input[type=submit] {
         background: #fff; 
         border-radius: 0px 0px 5px 5px;
     }
-	th.col-1 {
+    .col-1 {
         text-align: center !important;
         font-size: 80% !important;
     }
 
-    th.col-2 {
+    .col-2 {
         text-align: center !important;
         font-size: 80% !important;
     }
-    th.col-3 {
+    .col-3 {
         text-align: center !important;
         font-size: 80% !important;
     }
-    th.col-4 {
+    .col-4 {
         text-align: center !important;
         padding-left: 10px;
         padding-right: 10px;
     }
-    td.col-1 {
-        text-align: center !important;
-        font-size: 80% !important;
-    }
-
-    td.col-2 {
-        text-align: center !important;
-        font-size: 80% !important;
-    }
-    td.col-3 {
-        text-align: center !important;
-        font-size: 80% !important;
-    }
-    td.col-4 {
-        text-align: center !important;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+	.pcard-maroon {
+		margin-bottom: 10px !important;
+	}
+	.pcard-orange {
+		margin-bottom: 10px !important;
+	}
+	.pcard-dk-orange {
+		margin-bottom: 10px !important;
+	}
+	.report-block-header {
+		font-size: 70% !important;
+		font-weight: 900 !important;
+		color: #fff;
+	}
+	.report-input {
+		font-size: 90% !important;
+	}
+	.report-button {
+		font-size: 60% !important;
+	}
+	.tablink {
+		font-size: 85% !important;
+	}
 }
 
 
 /* Small devices (landscape phones, 400px and up) */
-@media (min-width: 420px) {
-	
-    .add-asset-text {
+@media (min-width: 420px){
+     .add-asset-text {
         font-size: 120%; 
     }
     .biggertext {
@@ -1139,8 +1188,6 @@ div.faa-autocomplete > input[type=submit] {
         padding: 3px !important;
         margin-top: 10px;
         font-size: 90%;
-        min-height: 20px !important;
-        line-height: 20px !important;
     }
     .block-headtext {
         font-size:110%;
@@ -1181,10 +1228,25 @@ div.faa-autocomplete > input[type=submit] {
         border-top: 0px !important;
         height: 100%;
     }
+	.pcard-maroon {
+		margin-bottom: 10px !important;
+	}
+	.pcard-orange {
+		margin-bottom: 10px !important;
+	}
+	.pcard-dk-orange {
+		margin-bottom: 10px !important;
+	}
+	.slider-for img {
+    	max-height: 36vh !important;
+	}
+	.slider-nav .slick-track {
+		transform: translate3D(-50%, 15%, 0) !important;
+	}
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 600px){
     #asset-container {
         margin-top: 0px;
     }
@@ -1192,23 +1254,22 @@ div.faa-autocomplete > input[type=submit] {
         width: 25%;
         outline: 0px;
     } 
-	.asset-action {
-        font-size: 100%;
-        line-height: 20px;
-    }
+	.asset-block {
+		height: 115px !important;
+	}
     .asset-list-header {
         font-size: 65%;
     }
     .asset-list {
-        font-size: 70%;
+        font-size: 60%;
         line-height: 20px;
         margin-bottom: 0px !important;
         border-radius: 0px !important;
     }
-    .asset-action {
-        margin-top: 3px;
+    .asset-actions {
+        margin-top: 0px;
         margin-bottom: 0px;
-        font-size: 110%;
+        font-size: 130%;
         line-height: 20px;
     }
     .asset-status {
@@ -1216,6 +1277,10 @@ div.faa-autocomplete > input[type=submit] {
         margin-bottom: 0px;
         width: 90%;
     }
+	.add-asset-text {
+		font-size: 90% !important;
+		min-height: 0px !important;
+	}
     .make-small {
         max-height: unset !important;
     }
@@ -1235,7 +1300,7 @@ div.faa-autocomplete > input[type=submit] {
         line-height: 17px;
     }
     .asset-list-header {
-        font-size: 60% !important;
+        font-size: 55% !important;
     }
     .asset-office {
     font-size: 125%;
@@ -1247,7 +1312,7 @@ div.faa-autocomplete > input[type=submit] {
         font-size: 125%;
     }
     .asset-pending {
-        font-size: 90%;
+        font-size: 125%;
     }
     .modal {
         width: 90% !important;
@@ -1280,42 +1345,35 @@ div.faa-autocomplete > input[type=submit] {
         border-top: 0px !important;
         height: 100%;
     }
-    th.col-1 {
+    .col-1 {
         text-align: left !important;
         padding-left: 5px !important;
-		font-size: 100% !important;
+        font-size: 100% !important;
     }
 
-    th.col-2 {
-		font-size: 100% !important;
-    }
-    th.col-3 {
-		font-size: 100% !important;
-    }
-    th.col-4 {
+    .col-2 {
         text-align: left !important;
-		font-size: 100% !important;
+        font-size: 100% !important;
     }
-    td.col-1 {
+    .col-3 {
         text-align: left !important;
-        padding-left: 5px !important;
-		font-size: 100% !important;
+        font-size: 100% !important;
     }
-    td.col-2 {
-		font-size: 100% !important;
-    }
-    td.col-3 {
-		font-size: 100% !important;
-    }
-    td.col-4 {
+    .col-4 {
         text-align: left !important;
-		font-size: 100% !important;
+        font-size: 100% !important;
     }
+	.slider-for img{
+    	max-height: 41vh !important;
+	}
+		.slider-nav .slick-track {
+		transform: translate3D(0%, 15%, 0) !important;
+	}
 }
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (min-width: 900px){
     #asset-container {
         margin-top: 0px;
     }
@@ -1336,10 +1394,10 @@ div.faa-autocomplete > input[type=submit] {
         font-size: 70%;
         line-height: 20px;
     }
-    .asset-action {
-        margin-top: 3px;
+    .asset-actions {
+        margin-top: 0px;
         margin-bottom: 0px;
-        font-size: 100%;
+        font-size: 120%;
         line-height: 20px;
     }
     .asset-status {
@@ -1370,7 +1428,7 @@ div.faa-autocomplete > input[type=submit] {
         font-size: 8px !important;
     }
     .modal {
-        width: 75% !important;
+        width: 90% !important;
     }
     .home-generate {
         width: 95% !important;
@@ -1400,26 +1458,54 @@ div.faa-autocomplete > input[type=submit] {
         border-top: 0px !important;
         height: 100%;
     }
-    
+	.admin-list-heading {
+		font-size: 70% !important;
+	}
+	.block-text > form {
+		font-size: 90% !important;
+	}
+	.block-text > form .report-button {
+		font-size: 95% !important;
+	}
+	.admin-block-line {
+		margin-bottom: 5px !important;
+	}
+    .pcard-title {
+		font-size: 18px !important;
+	}
+	.pcard-subtitle {
+		font-size: 12px !important;
+		line-height: 10px !important;
+	}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: 1200px){
     .x-navbar .desktop .x-nav > li > a:not(.x-btn-navbar-woocommerce) {
         font-size: 11px !important;
     }
     .modal {
-        width: 50% !important;
+        width: 65% !important;
     }
     #reportsModal {
         width: 50% !important;
     }
-	.asset-action {
-        margin-top: 3px;
-        margin-bottom: 0px;
-        font-size: 110%;
-        line-height: 20px;
-    }
+	.admin-list-heading {
+		font-size: 70% !important;
+	}
+	.block-text > form {
+		font-size: 90% !important;
+	}
+	.block-text > form .report-button {
+		font-size: 95% !important;
+	}
+	.pcard-title {
+		font-size: 24px !important;
+	}
+	.pcard-subtitle {
+		font-size: 12px !important;
+		line-height: 10px !important;
+	}
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1600px) {
@@ -1427,13 +1513,13 @@ div.faa-autocomplete > input[type=submit] {
         font-size: 100%;
     }
     .asset-list {
-        font-size: 100%;
-        line-height: 25px;
+        font-size: 90%;
+        line-height: 20px;
     }
-    .asset-action {
-        margin-top: 2px;
+    .asset-actions {
+        margin-top: 0px;
         margin-bottom: 0px;
-        font-size: 95%;
+        font-size: 120%;
         line-height: 20px;
     }
     .asset-status {

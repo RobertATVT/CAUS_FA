@@ -175,6 +175,10 @@ html {
 	.hide-small-down {
 		display: none;
 	}
+	.hide-medium-down {
+    	display: none !important;
+  	}
+
 }
 @media only screen and (max-width: 600px) {
 	.show-small {
@@ -183,27 +187,25 @@ html {
 	.center-small {
 		text-align: center;
   	}
-	.hide-medium-down {
-    	display: none !important;
-  	}
+	.hide-large-down {
+		display: none !important;
+	}
 }
 @media only screen and (max-width: 992px) {
 	.show-medium-down {
     	display: block !important;
   	}
-	.hide-large-down {
-		display: none !important;
-	}
+	.hide-xlarge-down {
+    	display: none !important;
+  	}
 }
 @media only screen and (max-width: 1200px) {
-  	.hide-xlarge-down {
+  	.hide-xxlarge-down {
     	display: none !important;
   	}
 }
 @media only screen and (max-width: 1600px) {
-  	.hide-xxlarge-down {
-    	display: none !important;
-  	}
+  	
 }
 
 
