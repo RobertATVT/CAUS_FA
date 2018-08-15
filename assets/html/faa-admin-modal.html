@@ -630,4 +630,42 @@
         </div>
     </div>
 </div>
+<!-----ASSET REPORT UPLOAD MODAL----->
+<div id="fa-upload" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="formsModalLabel">Upload ORG Report</h4>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+			<form >
+				<div class="cl t20 center">
+					<input type="hidden" id="formsPtag" value="" />
+					<input type="file" class="org-file" name="fileToUpload" id="UploadORG">
+					<br><br>				
+					<input type="button" class="btn btn-primary org-upload" value="Process New ORG Report" onclick="processORG()">
+				</div>
+			</form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
+    </div>
+</div>
+<!-----ASSET REPORT UPLOAD MODAL----->
+<div id="fa-upload" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="formsModalLabel">Upload Missing Report</h4>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+			<form >
+				<div class="cl t20 center">
+					<input type="hidden" id="formsPtag" value="" />
+					<input type="file" class="missing-file" name="fileToUpload" id="UploadMissing">
+					<br><br>				
+					<input type="button" class="btn btn-primary org-upload" value="Process New Missing Report" onclick="processMissing()">
+				</div>
+			</form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
+    </div>
+</div>
 <!-- END faa-admin-modal.html -->
