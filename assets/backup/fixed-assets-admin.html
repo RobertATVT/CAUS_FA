@@ -305,7 +305,7 @@
 		<div class="rw" style="margin:0px;">
 			<div class="cl t20" style="background: #fff;">
 				<div class="cl t20 vt-dk-grey center" style="color: #fff; padding: 5px; font-size: 130%; font-weight: 700;">ADMINISTRATIVE REPORTS</div>
-				<div class="cl t10 center" id="report-[ID]" style="padding: 8px;">
+				<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
 					<div class="rw vt-dk-grey" style="border-radius: 2px;">
 						<div class="cl t20 center report-block-header">Individual Asset Report</div>
 						<div class="cl t20" style="padding: 10px;">
@@ -320,7 +320,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="cl t10 center" id="report-[ID]" style="padding: 8px;">
+				<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
 					<div class="rw vt-dk-grey" style="border-radius: 2px;">
 						<div class="cl t20 center report-block-header">Organizational Asset Report</div>
 						<div class="cl t20" style=" padding: 10px;">
@@ -335,7 +335,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="cl t10 center" id="report-[ID]" style="padding: 8px;">
+				<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
 					<div class="rw vt-dk-grey" style="border-radius: 2px;">
 						<div class="cl t20 center report-block-header">Individual Employee Report</div>
 						<div class="cl t20" style=" padding: 10px;">
@@ -350,7 +350,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="cl t10 center" id="report-[ID]" style="padding: 8px;">
+				<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
 					<div class="rw vt-dk-grey" style="border-radius: 2px;">
 						<div class="cl t20 center report-block-header">Missing Asset Report</div>
 						<div class="cl t20" style=" padding: 10px;">
@@ -365,7 +365,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="cl t10 center" id="report-[ID]" style="padding: 8px;">
+				<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
 					<div class="rw vt-dk-grey" style="border-radius: 2px;">
 						<div class="cl t20 center report-block-header">Individual Location Report</div>
 						<div class="cl t20" style=" padding: 10px;">
@@ -380,7 +380,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="cl t10 center" id="report-[ID]" style="padding: 8px;">
+				<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
 					<div class="rw vt-dk-grey" style="border-radius: 2px;">
 						<div class="cl t20 center report-block-header">Add/Change Report</div>
 						<div class="cl t20" style=" padding: 10px;">
@@ -395,6 +395,36 @@
 						</div>
 					</div>
 				</div>
+				<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
+					<div class="rw vt-dk-grey" style="border-radius: 2px;">
+						<div class="cl t20 center report-block-header">Upload Org Report</div>
+						<div class="cl t20" style=" padding: 10px;">
+							<form>
+								<div class="cl m10 t20">
+									<input type="text" placeholder="Dev Only Please" class="report-input">
+								</div>
+								<div class="cl m10 t20">
+									<input type="button" class="btn btn-primary report-button" value="UPLOAD" onclick="openModal('fa-upload','')">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
+					<div class="rw vt-dk-grey" style="border-radius: 2px;">
+						<div class="cl t20 center report-block-header">Upload Missing Report</div>
+						<div class="cl t20" style=" padding: 10px;">
+							<form>
+								<div class="cl m10 t20">
+									<input type="text" placeholder="Dev Only Please" class="report-input">
+								</div>
+								<div class="cl m10 t20">
+									<input type="button" class="btn btn-primary report-button" value="UPLOAD" onclick="openModal('fa-missing','')">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 <!-- END faa-admin-reports.html -->
@@ -402,9 +432,7 @@
 <!-- BEGIN faa-admin-footer.html -->
 	</div>
 	<div class="rw" style="margin:0px;">
-			<div class="cl t20" style="padding: 5px; padding-bottom: 7px;">
-				<div class="cl t20 vt-dk-grey" style="padding: 5px;"></div>
-			</div>
+			<div class="cl t20" style="padding: 0px;"></div>
 		</div>
 </div>
 <!-- END faa-admin-footer.html -->
@@ -1126,6 +1154,25 @@
                 <button type="button" class="btn btn-primary modal-close" id="transfer-stage-1-cancel" onclick="cancelRequest('tickets','1')">cancel</button>
             </div>
         </div>
+    </div>
+</div>
+<!-----ASSET REPORT UPLOAD MODAL----->
+<div id="fa-upload" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="formsModalLabel">Upload ORG Report</h4>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+			<form >
+				<div class="cl t20 center">
+					<input type="hidden" id="formsPtag" value="" />
+					<input type="file" class="org-file" name="fileToUpload" id="UploadORG">
+					<br><br>				
+					<input type="button" class="btn btn-primary org-upload" value="Upload New ORG Report" onclick="processORG()">
+				</div>
+			</form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
     </div>
 </div>
 <!-- END modal.html --> 
