@@ -113,6 +113,43 @@ function causfa_update_surplus() {
     wp_send_json($output);
 }
 
+function causfa_surplus_to_transfer() {
+    global $wpdb;
+    $ptag = $_POST['ptag'];
+    $recipient = $_POST['recipient'];
+    $dest_org = causfa_groups_management_code($recipient);
+    $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$ptag."';");
+    $output = array(
+        'status' => 0,
+        'message' => ''
+    );
+    if ($result->FZVFORG_ORGN_CODE !== $dest_org) {
+        $wpdb->update(
+            'causfa_pending',
+            array(
+                'FZVFORG_ORGN_CODE' => $dest_org,
+                'PENDING_TYPE' => 0,
+                'PID_DESTINATION' => $recipient,
+                'PENDING_STATUS' => 2,
+                'ASSIGNEE' => NULL
+            ), array('FZVFORG_PTAG' =>$ptag)
+        );
+        $output['status'] = 1;
+        $output['message'] = 'Transfering out of org';
+    } else {
+        $wpdb->update(
+            'causfa_pending',
+            array(
+                'PENDING_TYPE' => 0,
+                'PID_DESTINATION' => $recipient,
+                'PENDING_STATUS' => 3
+            ), array('FZVFORG_PTAG' =>$ptag)
+        );
+        $output['status'] = 1;
+        $output['message'] = 'Transfer internal to org';
+    }
+    wp_send_json($output);
+}
 function causfa_surplus_number() {
     global $wpdb;
     $managementCode = causfa_groups_management_code();

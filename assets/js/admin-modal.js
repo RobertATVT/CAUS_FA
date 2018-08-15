@@ -72,6 +72,12 @@ function openModal(process, element, data, step) {
                         break;
                     case 'surplus-stage-2':
                         $("#surplus-receivedate").datepicker();
+                        transferModalLoad(['recipient-name']);
+                        document.getElementById('recipient-name').addEventListener("awesomplete-select", function() {
+                            $('#surplus-stage-2-submit').val('Transfer');
+                            $('#surplus-stage-2-submit-small').val('Transfer');
+                            activateButtons('surplus','stage2','on');
+                        });
                         processStep('surplus','2','1');
                         $('#surplus-stage-2-ptag').val(tag);
                         $('#surplus-stage-2-id').val(data);
@@ -87,6 +93,9 @@ function openModal(process, element, data, step) {
                         $('#surplus-stage-3-notes').val('');
                         break;
                     case 'surplus-stage-4':
+                        $('#surplus-stage-4-ptag').val(tag);
+                        $('#surplus-stage-4-id').val(data);
+                        $('#surplusFormToUpload').val('');
                         break;
                 }
                 break;
@@ -186,290 +195,290 @@ function activateButtons(process, stage, state){
 		break;
     }
 };
-function setProcessStage(process, stage, step, state) {
-    switch (process) {
-        case 'transfer':
-            switch (stage) {
-                case "1":
-                    switch (step) {
-                        case "a":
-                            if (state === "on") {
-                                $("#transfer-stage-1a").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-1a").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "b":
-                            if (state === "on") {
-                                $("#transfer-stage-1b").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-1b").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "c":
-                            if (state === "on") {
-                                $("#transfer-stage-1c").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-1c").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "d":
-                            if (state === "on") {
-                                $("#transfer-stage-1d").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-1d").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "e":
-                            if (state === "on") {
-                                $("#transfer-stage-1e").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-1e").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "f":
-                            if (state == "on") {
-                                $("#transfer-stage-1f").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-1f").css("display", "none");
-                            }
-                            break;
-                    }
-                    break;
-                case "2":
-                    switch (step) {
-                        case "a":
-                            if (state === "on") {
-                                $("#transfer-stage-2a").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-2a").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "b":
-                            if (state === "on") {
-                                $("#transfer-stage-2b").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-2b").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "c":
-                            if (state === "on") {
-                                $("#transfer-stage-2c").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-2c").css("display", "none");
-                            }
-                            ;
-                            break;
-                    }
-                    break;
-                case "3":
-                    switch (step) {
-                        case "a":
-                            if (state === "on") {
-                                $("#transfer-stage-3a").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-3a").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "b":
-                            if (state === "on") {
-                                $("#transfer-stage-3b").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-3b").css("display", "none");
-                            }
-                            ;
-                            break;
-                    }
-                    break;
-                case "4":
-                    switch (step) {
-                        case "a":
-                            if (state === "on") {
-                                $("#transfer-stage-4a").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-4a").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "b":
-                            if (state === "on") {
-                                $("#transfer-stage-4b").css("display", "");
-                            } else if (state === "off") {
-                                $("#transfer-stage-4b").css("display", "none");
-                            }
-                            ;
-                            break;
-                    }
-                    break;
-
-            };
-            break;
-        case 'surplus':
-            switch (stage) {
-                case "1":
-                    switch (step) {
-                        case "a":
-                            if (state === "on") {
-                                $("#surplus-stage-1a").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-1a").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "b":
-                            if (state === "on") {
-                                $("#surplus-stage-1b").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-1b").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "c":
-                            if (state === "on") {
-                                $("#surplus-stage-1c").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-1c").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "d":
-                            if (state === "on") {
-                                $("#surplus-stage-1d").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-1d").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "e":
-                            if (state === "on") {
-                                $("#surplus-stage-1e").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-1e").css("display", "none");
-                            }
-                            ;
-                            break;
-                    }
-                    break;
-                case "2":
-                    switch (step) {
-                        case "a":
-                            if (state === "on") {
-                                $("#surplus-stage-2a").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-2a").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "b":
-                            if (state === "on") {
-                                $("#surplus-stage-2b").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-2b").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "c":
-                            if (state === "on") {
-                                $("#surplus-stage-2c").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-2c").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "d":
-                            if (state === "on") {
-                                $("#surplus-stage-2d").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-2d").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "e":
-                            if (state === "on") {
-                                $("#surplus-stage-2e").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-2e").css("display", "none");
-                            }
-                            ;
-                            break;
-                    }
-                    break;
-                case "3":
-                    switch (step) {
-                        case "a":
-                            if (state === "on") {
-                                $("#surplus-stage-3a").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-3a").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "b":
-                            if (state === "on") {
-                                $("#surplus-stage-3b").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-3b").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "c":
-                            if (state === "on") {
-                                $("#surplus-stage-3a").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-3a").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "d":
-                            if (state === "on") {
-                                $("#surplus-stage-3b").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-3b").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "e":
-                            if (state === "on") {
-                                $("#surplus-stage-3a").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-3a").css("display", "none");
-                            }
-                            ;
-                            break;
-                    }
-                    break;
-                case "4":
-                    switch (step) {
-                        case "a":
-                            if (state === "on") {
-                                $("#surplus-stage-4a").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-4a").css("display", "none");
-                            }
-                            ;
-                            break;
-                        case "b":
-                            if (state === "on") {
-                                $("#surplus-stage-4b").css("display", "");
-                            } else if (state === "off") {
-                                $("#surplus-stage-4b").css("display", "none");
-                            }
-                            ;
-                            break;
-                    }
-                    break;
-            }
-            break;
-    }
-}
+// function setProcessStage(process, stage, step, state) {
+//     switch (process) {
+//         case 'transfer':
+//             switch (stage) {
+//                 case "1":
+//                     switch (step) {
+//                         case "a":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-1a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-1a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "b":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-1b").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-1b").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "c":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-1c").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-1c").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "d":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-1d").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-1d").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "e":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-1e").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-1e").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "f":
+//                             if (state == "on") {
+//                                 $("#transfer-stage-1f").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-1f").css("display", "none");
+//                             }
+//                             break;
+//                     }
+//                     break;
+//                 case "2":
+//                     switch (step) {
+//                         case "a":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-2a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-2a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "b":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-2b").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-2b").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "c":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-2c").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-2c").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                     }
+//                     break;
+//                 case "3":
+//                     switch (step) {
+//                         case "a":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-3a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-3a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "b":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-3b").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-3b").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                     }
+//                     break;
+//                 case "4":
+//                     switch (step) {
+//                         case "a":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-4a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-4a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "b":
+//                             if (state === "on") {
+//                                 $("#transfer-stage-4b").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#transfer-stage-4b").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                     }
+//                     break;
+//
+//             };
+//             break;
+//         case 'surplus':
+//             switch (stage) {
+//                 case "1":
+//                     switch (step) {
+//                         case "a":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-1a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-1a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "b":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-1b").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-1b").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "c":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-1c").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-1c").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "d":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-1d").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-1d").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "e":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-1e").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-1e").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                     }
+//                     break;
+//                 case "2":
+//                     switch (step) {
+//                         case "a":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-2a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-2a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "b":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-2b").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-2b").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "c":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-2c").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-2c").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "d":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-2d").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-2d").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "e":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-2e").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-2e").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                     }
+//                     break;
+//                 case "3":
+//                     switch (step) {
+//                         case "a":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-3a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-3a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "b":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-3b").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-3b").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "c":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-3a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-3a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "d":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-3b").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-3b").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "e":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-3a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-3a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                     }
+//                     break;
+//                 case "4":
+//                     switch (step) {
+//                         case "a":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-4a").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-4a").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                         case "b":
+//                             if (state === "on") {
+//                                 $("#surplus-stage-4b").css("display", "");
+//                             } else if (state === "off") {
+//                                 $("#surplus-stage-4b").css("display", "none");
+//                             }
+//                             ;
+//                             break;
+//                     }
+//                     break;
+//             }
+//             break;
+//     }
+// }
 function processStep(process, stage, step) {
     switch (process){
         case "transfer":
@@ -659,17 +668,23 @@ function processStep(process, stage, step) {
                             $('#surplus-stage-2b').css('display', 'none');
                             $('#surplus-stage-2c').css('display', 'none');
                             $('#surplus-stage-2d').css('display', 'none');
+                            $('#surplus-stage-2e').css('display', 'none');
                             $('#surplus-stage-2-back').val('1');
                             $('#surplus-stage-2-back').css('display','none');
                             activateButtons('surplus','stage2','off');
+                            $('#surplus-stage-2-submit').val('');
+                            $('#surplus-stage-2-submit-small').val('');
                             break;
                         case '2':
                             $('#surplus-stage-2a').css('display', '');
                             $('#surplus-stage-2b').css('display', '');
                             $('#surplus-stage-2c').css('display', 'none');
                             $('#surplus-stage-2d').css('display', 'none');
+                            $('#surplus-stage-2e').css('display', 'none');
                             $('#surplus-stage-2-back').val('2');
                             $('#surplus-stage-2-back').css('display','none');
+                            $('#surplus-stage-2-submit').val('');
+                            $('#surplus-stage-2-submit-small').val('');
                             activateButtons('surplus','stage2','off');
                             break;
                         case '3':
@@ -677,19 +692,44 @@ function processStep(process, stage, step) {
                             $('#surplus-stage-2b').css('display', 'none');
                             $('#surplus-stage-2c').css('display', '');
                             $('#surplus-stage-2d').css('display', 'none');
+                            $('#surplus-stage-2e').css('display', 'none');
                             $('#surplus-stage-2-back').val('3');
                             $('#surplus-stage-2-back').css('display','');
-                            activateButtons('surplus','stage2','off');
+                            if ($('#recipient-name').val() !== '') {
+                                $('#surplus-stage-2-submit').val('Transfer');
+                                $('#surplus-stage-2-submit-small').val('Transfer');
+                                activateButtons('surplus','stage2','on');
+                            } else {
+                                activateButtons('surplus','stage2','off');
+
+                            }
                             break;
                         case '4':
                             $('#surplus-stage-2a').css('display', '');
                             $('#surplus-stage-2b').css('display', 'none');
                             $('#surplus-stage-2c').css('display', 'none');
                             $('#surplus-stage-2d').css('display', '');
+                            $('#surplus-stage-2e').css('display', 'none');
                             $('#surplus-stage-2-back').val('4');
                             $('#surplus-stage-2-back').css('display','');
+
                             activateButtons('surplus','stage2','on');
+                            $('#surplus-stage-2-submit').val('');
+                            $('#surplus-stage-2-submit-small').val('');
                             break;
+                        case '5':
+                            $('#surplus-stage-2a').css('display', 'none');
+                            $('#surplus-stage-2b').css('display', 'none');
+                            $('#surplus-stage-2c').css('display', 'none');
+                            $('#surplus-stage-2d').css('display', 'none');
+                            $('#surplus-stage-2e').css('display', '');
+                            $('#surplus-stage-2-back').val('5');
+                            $('#surplus-stage-2-back').css('display','none');
+                            activateButtons('surplus','stage2','off');
+                            $('#surplus-stage-2-submit').val('');
+                            $('#surplus-stage-2-submit-small').val('');
+                            break;
+
                     }
                     break;
                 case '3':
@@ -716,7 +756,7 @@ function processStep(process, stage, step) {
 								$("#tickets-stage-1a").css("display", "");
 								$("#tickets-stage-1b").css("display", "none");
 								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1d").css("display", "none");
 								$("#tickets-stage-1e").css("display", "none");
 								$("#tickets-stage-1f").css("display", "none");
 								$('#tickets-stage-1-back').val('1');
@@ -727,7 +767,7 @@ function processStep(process, stage, step) {
 								$("#tickets-stage-1a").css("display", "");
 								$("#tickets-stage-1b").css("display", "");
 								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1d").css("display", "none");
 								$("#tickets-stage-1e").css("display", "none");
 								$("#tickets-stage-1f").css("display", "none");
 								$('#tickets-stage-1-back').val('2');
@@ -749,7 +789,7 @@ function processStep(process, stage, step) {
 								$("#tickets-stage-1a").css("display", "none");
 								$("#tickets-stage-1b").css("display", "none");
 								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "");	
+								$("#tickets-stage-1d").css("display", "");
 								$("#tickets-stage-1e").css("display", "none");
 								$("#tickets-stage-1f").css("display", "none");
 								$('#tickets-stage-1-back').val('4');
@@ -760,7 +800,7 @@ function processStep(process, stage, step) {
 								$("#tickets-stage-1a").css("display", "none");
 								$("#tickets-stage-1b").css("display", "none");
 								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1d").css("display", "none");
 								$("#tickets-stage-1e").css("display", "");
 								$("#tickets-stage-1f").css("display", "none");
 								$('#tickets-stage-1-back').val('5');
@@ -771,7 +811,7 @@ function processStep(process, stage, step) {
 								$("#tickets-stage-1a").css("display", "none");
 								$("#tickets-stage-1b").css("display", "none");
 								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "none");	
+								$("#tickets-stage-1d").css("display", "none");
 								$("#tickets-stage-1e").css("display", "none");
 								$("#tickets-stage-1f").css("display", "");
 								$('#tickets-stage-1-back').val('6');
@@ -1095,22 +1135,43 @@ function submitRequest(process, stage, index) {
                         'ptag': jQuery('#surplus-stage-2-ptag').val(),
                         'note': note
                     };
-                    jQuery.post(causfa_action_obj.ajax_url, form, function(data){});
-                    var form = {
-                        'action': 'causfa_update_surplus',
-                        'state': 2,
-                        'ptag': jQuery('#surplus-stage-2-ptag').val(),
-                        'assignee': ''
-                    };
-                    jQuery.post(causfa_action_obj.ajax_url, form, function(data){
-                       if (data['status'] === 1) {
-                           $('#surplus-stage-2-' + id).prop('checked', false);
-                           $('#surplus-stage-2-' + id).attr('disabled', 'disabled');
-                           $('#surplus-stage-3-' + id).removeAttr('disabled');
-                           $('#surplus-stage-3-' + id).prop('checked', false);
-                           $('#surplus-stage-2').modal('close');
-                       }
-                    });
+                    if ($('#surplus-stage-2-submit').val() === 'Transfer') {
+                        var result = validateForm();
+                        if (result) {
+                            var form = {
+                                'action': 'causfa_surplus_to_transfer',
+                                'ptag': jQuery('#surplus-stage-2-ptag').val(),
+                                'recipient': result
+                            };
+                            jQuery.post(causfa_action_obj.ajax_url, form, function(data){
+                                if (data['status'] === 1) {
+                                    var element = document.getElementById('transfer-' + $('#surplusr-stage-2-id').val());
+                                    var grandParent = element.parentNode.parentNode;
+                                    grandParent.parentNode.removeChild(grandParent);
+                                }
+                            });
+                        }
+                        else {
+                            alert('Please select someone from the list');
+                        }
+                    } else {
+                        jQuery.post(causfa_action_obj.ajax_url, form, function(data){});
+                        var form = {
+                            'action': 'causfa_update_surplus',
+                            'state': 2,
+                            'ptag': jQuery('#surplus-stage-2-ptag').val(),
+                            'assignee': ''
+                        };
+                        jQuery.post(causfa_action_obj.ajax_url, form, function(data){
+                            if (data['status'] === 1) {
+                                $('#surplus-stage-2-' + id).prop('checked', false);
+                                $('#surplus-stage-2-' + id).attr('disabled', 'disabled');
+                                $('#surplus-stage-3-' + id).removeAttr('disabled');
+                                $('#surplus-stage-3-' + id).prop('checked', false);
+                                $('#surplus-stage-2').modal('close');
+                            }
+                        });
+                    }
                     break;
                 case 3:
                     var note = 'This asset was pickup up by surplus on ' + $('#surplus-pickupdate').val() + '. ';
@@ -1141,6 +1202,45 @@ function submitRequest(process, stage, index) {
                     });
                     break;
                 case 4:
+                    var fileInput = jQuery('#surplusFormToUpload');
+                    var file = fileInput.prop('files')[0];
+                    if (!file) {
+                        alert('Please select a file to upload');
+                    } else {
+                        var ptag = jQuery('#surplus-stage-4-ptag').val();
+                        var form = new FormData();
+                        form.append('action', 'causfa_upload_surplus_form');
+                        form.append('ptag', ptag);
+                        form.append('surplusFormToUpload', file);
+                        jQuery.ajax({
+                            url: causfa_action_obj.ajax_url,
+                            type: 'post',
+                            contentType: false,
+                            processData: false,
+                            data: form,
+                            success: function(data) {
+                                if (data['status'] === 1) {
+                                    alert(data['message']);
+                                    $('#surplus-stage-4-' + id).addClass('disabled');
+                                    $('#surplus-stage-5-' + id).removeClass('disabled');
+                                    $('#surplus-stage-4').modal('close');
+                                }
+                            }
+                        });
+                    }
+                    break;
+                case 5:
+                    var form = {
+                        'action': 'causfa_update_surplus',
+                        'ptag': jQuery('#surplus-ptag-' + index).html(),
+                        'state': 5
+                    };
+                    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+                        if (data['status'] === 1) {
+                            $('#surplus-stage-5-' + index).addClass('disabled');
+                            $('#surplus-stage-5-' + index).val('Processing');
+                        }
+                    });
                     break;
             }
             break;
@@ -1188,6 +1288,7 @@ function cancelRequest(process, stage) {
                     processStep('surplus','2','1');
                     $('#surplus-receivedate').val('');
                     $('#surplus-stage-2-notes').val('');
+                    $('#recipient-name').val('');
                     break;
                 case '3':
                     processStep('surplus','3','1');
@@ -1195,6 +1296,7 @@ function cancelRequest(process, stage) {
                     $('#surplus-stage-3-notes').val('');
                     break;
                 case '4':
+                    $('#surplusFormToUpload').val('');
                     break;
             }
             break;

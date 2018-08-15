@@ -73,6 +73,8 @@ add_action( 'wp_ajax_causfa_get_custodian', 'causfa_get_custodian');
 add_action( 'wp_ajax_causfa_accept_reject', 'causfa_accept_reject');
 add_action( 'wp_ajax_causfa_update_transfer', 'causfa_update_transfer');
 add_action( 'wp_ajax_causfa_update_surplus', 'causfa_update_surplus');
+add_action( 'wp_ajax_causfa_surplus_to_transfer', 'causfa_surplus_to_transfer');
+add_action( 'wp_ajax_causfa_upload_surplus_form', 'causfa_upload_surplus_form');
 add_action( 'wp_ajax_causfa_add_note', 'causfa_add_note');
 
 //Shortcode

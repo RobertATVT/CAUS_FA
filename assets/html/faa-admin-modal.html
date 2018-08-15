@@ -435,6 +435,11 @@
             </div>
         </div>
     </div>
+    <div class="rw" style="padding: 10px; margin-bottom: 0px; display: none;" id="surplus-stage-2e">
+        <div class="rw faa-modal-info" style="margin-bottom: 0px; line-height: 25px;">
+            <div id="surplus-stage-2e-text" class="t10 info-title center"></div>
+        </div>
+    </div>
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
@@ -513,7 +518,7 @@
                         <hr style="padding: 10px; margin: 0px; margin-top: 10px;">
                         <form >
                             <input type="file" class="home-file" name="fileToUpload" id="surplusFormToUpload"><br>
-                            <input type="button" class="btn btn-primary home-upload" value="Upload New Home Use Form" onclick="uploadFormHome()">
+                            <input type="button" class="btn btn-primary home-upload" value="Upload New Home Use Form" onclick="submitRequest('surplus',4)">
                         </form>
                     </div>
                 </div>
@@ -521,7 +526,7 @@
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary modal-close">CLOSE</button>
+        <button type="button" class="btn btn-primary modal-close" onclick="cancelRequest('surplus','4')">CLOSE</button>
     </div>
 </div>
 <!-----Tickets Stage 1 Modal----->
