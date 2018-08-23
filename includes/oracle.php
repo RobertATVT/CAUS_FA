@@ -20,8 +20,6 @@ function causfa_oracle_full_org() {
         $query = "select * from BANINST1.FZVFORG WHERE FZVFORG_PTAG = '000390860'";
         $stid = oci_parse($conn, $query);
         $r = oci_execute($stid);
-        $output = 'getting to right before compare';
-        wp_send_json($output);
         $output = causfa_oracle_compare($stid);
         wp_send_json($output);
     }
@@ -34,12 +32,13 @@ function causfa_oracle_compare($stid) {
     global $wpdb;
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner');
     $output = 'never finding it';
-    while ($row = oci_fetch_array($stid, OCI_RETURN_NULLS+OCI_ASSOC)) {
-        for($i = 0; $i < count($assets); $i++) {
-            if ($assets[$i]['FZVFORG_PTAG'] === $row['FZVFORG_PTAG']) {
-                $output = ('Found in database');
-            }
-        }
-    }
     return $output;
+//    while ($row = oci_fetch_array($stid, OCI_RETURN_NULLS+OCI_ASSOC)) {
+//        for($i = 0; $i < count($assets); $i++) {
+//            if ($assets[$i]['FZVFORG_PTAG'] === $row['FZVFORG_PTAG']) {
+//                $output = ('Found in database');
+//            }
+//        }
+//    }
+//    return $output;
 }
