@@ -195,6 +195,20 @@ function create_tables() {
         PRIMARY KEY (ID)
         )".$charset_collate.";";
         dbDelta($sql);
-
+    }
+    $table_name = 'causfa_surplus_forms';
+    if ($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        ID INT NOT NULL AUTO_INCREMENT,
+        PATH longtext NOT NULL,
+        FILENAME varchar(100) NOT NULL,
+        YEAR int(4) NOT NULL,
+        MONTH int(2) NOT NULL,
+        DAY int(2) NOT NULL,
+        PID varchar(32) NOT NULL,
+        ASSETS longtext NOT NULL,
+        PRIMARY KEY (ID)
+        )".$charset_collate.";";
+        dbDelta($sql);
     }
 }

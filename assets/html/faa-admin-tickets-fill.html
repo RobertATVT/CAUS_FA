@@ -1,35 +1,14 @@
 <!-- BEGIN faa-admin-tickets-fill.html -->
 					<div class="cl m20 t20">
 						<div class="cl t20 block-text" style="background: #f8f8f8; margin: 0px; padding: 5px !important; border-bottom: 1px solid rgba(0,0,0,0.25); min-height: 20px; ;line-height: 20px; color: #000;">
-							<form id="surplus-[ID]" action="#">
-								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-ptag-[ID]">[PTAG]</div>
-								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid1-[ID]">[PID 1]</div>
-								<div class="cl xl2 t5 center admin-block-line-t" id="surplus-pid2-[ID]">[DATE]</div>
-								<div class="cl xl2 t5 center" id="surplus-stage1-[ID]">
-									<input id="surplus-stage-1-[ID]" type="checkbox" value="surplus-stage-1-complete-[ID]" class="filled-in admin-block-line-b">
-									<label for="surplus-stage-1-[ID]"></label>
-								</div>
-								<div class="cl xl2 t5 center" id="surplus-stage2-[ID]">
-									<input id="surplus-stage-2-[ID]" type="checkbox" value="surplus-stage-2-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-									<label for="surplus-stage-2-[ID]"></label>
-								</div>
-								<div class="cl xl2 t5 center" id="surplus-stage3-[ID]">
-									<input id="surplus-stage-3-[ID]" type="checkbox" value="surplus-stage-3-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-									<label for="surplus-stage-3-[ID]"></label>
-								</div>
-								<div class="cl xl2 t5 center" id="surplus-stage4-[ID]">
-									<input id="surplus-stage-4-[ID]" type="checkbox" value="surplus-stage-4-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-									<label for="surplus-stage-4-[ID]"></label>
-								</div>
-								<div class="cl xl2 t5 center" id="surplus-stage5-[ID]">
-									<input id="surplus-stage-5-[ID]" type="checkbox" value="surplus-stage-5-complete-[ID]" class="filled-in admin-block-line-b" disabled="disabled">
-									<label for="surplus-stage-5-[ID]"></label>
-								</div>
-								<div class="cl xl2 t10 center" id="surplus-stage6-[ID]">
-									<input type="button" class="btn btn-primary form-upload disabled" value="Upload Form" onclick="uploadForm(this.id)">
-								</div>
-								<div class="cl xl2 t10 center" id="surplus-stage7-[ID]">
-									<input type="button" class="btn btn-primary ticket-complete disabled" value="Complete" onclick="completeTransfer(this.id)">
+							<form id="tickets-[ID]" action="#">
+								<div class="cl t3 center admin-block-line-t" id="tickets-ptag-[ID]">[PTAG]</div>
+								<div class="cl t3 center admin-block-line-t" id="tickets-pid1-[ID]">[PID 1]</div>
+								<div class="cl t3 center admin-block-line-t" id="tickets-pid2-[ID]">[DATE]</div>
+								<div class="cl t8 center admin-block-line-t truncate" id="tickets-note-[ID]">[NOTE]</div>
+								<div class="cl t3 center" id="tickets-stage1-[ID]">
+									<input id="tickets-stage-1-[ID]" type="checkbox" value="tickets-stage-1-complete-[ID]" class="filled-in admin-block-line-b" onclick="openModal('tickets','tickets-stage-1','[ID]')">
+									<label for="tickets-stage-1-[ID]"></label>
 								</div>
 							</form>
 						</div>

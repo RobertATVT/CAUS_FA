@@ -159,6 +159,7 @@ function causfa_load_admin_view(){
         $output = str_replace('[PTAG]', $results[$i]->FZVFORG_PTAG, $output);
         $output = str_replace('[PID 1]', $results[$i]->PID_Submit, $output);
         $output = str_replace('[DATE]', $results[$i]->DATE_CREATED, $output);
+        $output = str_replace('[NOTE]', $results[$i]->Notes, $output);
         $output = str_replace('[ID]', $i, $output);
     }
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-tickets-footer.html', true));
