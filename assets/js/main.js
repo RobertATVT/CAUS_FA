@@ -147,6 +147,11 @@ function causfa_run_full_org() {
     var form = {
         'action': 'causfa_update_from_banner'
     };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
+    $.ajax({
+        type: "POST",
+        url: causfa_action_obj.ajax_url,
+        data: form,
+        timeout: 10000,
+        });
 }
 
