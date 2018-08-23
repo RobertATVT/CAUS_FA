@@ -77,8 +77,9 @@ add_action( 'wp_ajax_causfa_update_surplus', 'causfa_update_surplus');
 add_action( 'wp_ajax_causfa_surplus_to_transfer', 'causfa_surplus_to_transfer');
 add_action( 'wp_ajax_causfa_upload_surplus_form', 'causfa_upload_surplus_form');
 add_action( 'wp_ajax_causfa_add_note', 'causfa_add_note');
+add_action( 'wp_ajax_causfa_update_from_banner', 'causfa_oracle_full_org');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
-add_shortcode( 'causfa_test', 'causfa_oracle_full_org'); //shortcode for a dev space to test functionality
+//add_shortcode( 'causfa_test', 'causfa_oracle_full_org'); //shortcode for a dev space to test functionality
 add_shortcode( 'causfa_admin', 'causfa_load_admin_view'); // shortcode for the admin page of the app
