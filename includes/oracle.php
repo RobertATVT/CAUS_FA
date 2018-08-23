@@ -26,13 +26,15 @@ function causfa_oracle_full_org() {
 
 function causfa_oracle_compare($stid) {
     global $wpdb;
+    print('test');
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner');
     while ($row = oci_fetch_array($stid, OCI_RETURN_NULLS+OCI_ASSOC)) {
-        for($i = 0; $i < count($assets); $i++) {
-            if ($assets[$i]['FZVFORG_PTAG'] === $row['FZVFORG_PTAG']) {
-                print ('Found in database');
-            }
-        }
+        print($row);
+        //        for($i = 0; $i < count($assets); $i++) {
+//            if ($assets[$i]['FZVFORG_PTAG'] === $row['FZVFORG_PTAG']) {
+//                print ('Found in database');
+//            }
+//        }
     }
 
 }
