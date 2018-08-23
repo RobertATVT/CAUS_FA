@@ -121,7 +121,8 @@ function causfa_surplus_to_transfer() {
     $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$ptag."';");
     $output = array(
         'status' => 0,
-        'message' => ''
+        'changeOrg' => 0,
+        'newOrg' => ''
     );
     if ($result->FZVFORG_ORGN_CODE !== $dest_org) {
         $wpdb->update(
@@ -130,23 +131,23 @@ function causfa_surplus_to_transfer() {
                 'FZVFORG_ORGN_CODE' => $dest_org,
                 'PENDING_TYPE' => 0,
                 'PID_DESTINATION' => $recipient,
-                'PENDING_STATUS' => 2,
+                'PENDING_STATUS' => 3,
                 'ASSIGNEE' => NULL
             ), array('FZVFORG_PTAG' =>$ptag)
         );
         $output['status'] = 1;
-        $output['message'] = 'Transfering out of org';
+        $output['changeOrg'] = 1;
+        $output['newOrg'] = $dest_org;
     } else {
         $wpdb->update(
             'causfa_pending',
             array(
                 'PENDING_TYPE' => 0,
                 'PID_DESTINATION' => $recipient,
-                'PENDING_STATUS' => 3
+                'PENDING_STATUS' => 4
             ), array('FZVFORG_PTAG' =>$ptag)
         );
         $output['status'] = 1;
-        $output['message'] = 'Transfer internal to org';
     }
     wp_send_json($output);
 }

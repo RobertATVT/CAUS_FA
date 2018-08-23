@@ -64,7 +64,7 @@ function openModal(process, element, data, step) {
                 switch (element) {
                     case 'surplus-stage-1':
                         $("#surplus-contactdate").datepicker();
-                        processStep('surplus','1','1');
+                        processStep('surplus', '1', '1');
                         $('#surplus-stage-1-ptag').val(tag);
                         $('#surplus-stage-1-id').val(data);
                         $('#surplus-contactdate').val('');
@@ -73,12 +73,12 @@ function openModal(process, element, data, step) {
                     case 'surplus-stage-2':
                         $("#surplus-receivedate").datepicker();
                         transferModalLoad(['recipient-name']);
-                        document.getElementById('recipient-name').addEventListener("awesomplete-select", function() {
+                        document.getElementById('recipient-name').addEventListener("awesomplete-select", function () {
                             $('#surplus-stage-2-submit').val('Transfer');
                             $('#surplus-stage-2-submit-small').val('Transfer');
-                            activateButtons('surplus','stage2','on');
+                            activateButtons('surplus', 'stage2', 'on');
                         });
-                        processStep('surplus','2','1');
+                        processStep('surplus', '2', '1');
                         $('#surplus-stage-2-ptag').val(tag);
                         $('#surplus-stage-2-id').val(data);
                         $('#surplus-receivedate').val('');
@@ -86,7 +86,7 @@ function openModal(process, element, data, step) {
                         break;
                     case 'surplus-stage-3':
                         $("#surplus-pickupdate").datepicker();
-                        processStep('surplus','3','1');
+                        processStep('surplus', '3', '1');
                         $('#surplus-stage-3-ptag').val(tag);
                         $('#surplus-stage-3-id').val(data);
                         $('#surplus-pickupdate').val('');
@@ -98,8 +98,23 @@ function openModal(process, element, data, step) {
                         $('#surplusFormToUpload').val('');
                         break;
                 }
-                break;
             }
+            break;
+        case 'tickets':
+            var tag = $('#tickets-ptag-' + data).html();
+            if (tag === jQuery('#tickets-stage-1-ptag').val()) {
+                jQuery('#' + element).modal();
+                jQuery('#' + element).modal('open');
+            } else {
+                $('#tickets-stage-1-ptag').val(tag);
+                $('#tickets-stage-1-id').val(data);
+                $('#tickets-date').datepicker();
+                processStep('tickets','1','1');
+                $('#tickets-stage-1-notes-text').html($('#tickets-note-' + data).html());
+                $('#tickets-date').val('');
+                $('#tickets-stage-1-notes').val('');
+            }
+            break;
     }
     jQuery('#' + element).modal();
     jQuery('#' + element).modal('open');
@@ -195,290 +210,6 @@ function activateButtons(process, stage, state){
 		break;
     }
 };
-// function setProcessStage(process, stage, step, state) {
-//     switch (process) {
-//         case 'transfer':
-//             switch (stage) {
-//                 case "1":
-//                     switch (step) {
-//                         case "a":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-1a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-1a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "b":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-1b").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-1b").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "c":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-1c").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-1c").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "d":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-1d").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-1d").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "e":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-1e").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-1e").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "f":
-//                             if (state == "on") {
-//                                 $("#transfer-stage-1f").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-1f").css("display", "none");
-//                             }
-//                             break;
-//                     }
-//                     break;
-//                 case "2":
-//                     switch (step) {
-//                         case "a":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-2a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-2a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "b":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-2b").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-2b").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "c":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-2c").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-2c").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                     }
-//                     break;
-//                 case "3":
-//                     switch (step) {
-//                         case "a":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-3a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-3a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "b":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-3b").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-3b").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                     }
-//                     break;
-//                 case "4":
-//                     switch (step) {
-//                         case "a":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-4a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-4a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "b":
-//                             if (state === "on") {
-//                                 $("#transfer-stage-4b").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#transfer-stage-4b").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                     }
-//                     break;
-//
-//             };
-//             break;
-//         case 'surplus':
-//             switch (stage) {
-//                 case "1":
-//                     switch (step) {
-//                         case "a":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-1a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-1a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "b":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-1b").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-1b").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "c":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-1c").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-1c").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "d":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-1d").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-1d").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "e":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-1e").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-1e").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                     }
-//                     break;
-//                 case "2":
-//                     switch (step) {
-//                         case "a":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-2a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-2a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "b":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-2b").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-2b").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "c":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-2c").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-2c").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "d":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-2d").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-2d").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "e":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-2e").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-2e").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                     }
-//                     break;
-//                 case "3":
-//                     switch (step) {
-//                         case "a":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-3a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-3a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "b":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-3b").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-3b").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "c":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-3a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-3a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "d":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-3b").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-3b").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "e":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-3a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-3a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                     }
-//                     break;
-//                 case "4":
-//                     switch (step) {
-//                         case "a":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-4a").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-4a").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                         case "b":
-//                             if (state === "on") {
-//                                 $("#surplus-stage-4b").css("display", "");
-//                             } else if (state === "off") {
-//                                 $("#surplus-stage-4b").css("display", "none");
-//                             }
-//                             ;
-//                             break;
-//                     }
-//                     break;
-//             }
-//             break;
-//     }
-// }
 function processStep(process, stage, step) {
     switch (process){
         case "transfer":
@@ -762,17 +493,19 @@ function processStep(process, stage, step) {
 								$('#tickets-stage-1-back').val('1');
 								$('#tickets-stage-1-back').css("display", "none");
 								activateButtons('tickets','stage1','off');
+                                $('#tickets-stage-1-submit').val('');
 								break;
 							case "2":
-								$("#tickets-stage-1a").css("display", "");
+								$("#tickets-stage-1a").css("display", "none");
 								$("#tickets-stage-1b").css("display", "");
 								$("#tickets-stage-1c").css("display", "none");
 								$("#tickets-stage-1d").css("display", "none");
 								$("#tickets-stage-1e").css("display", "none");
 								$("#tickets-stage-1f").css("display", "none");
 								$('#tickets-stage-1-back').val('2');
-								$('#tickets-stage-1-back').css("display", "none");
-								activateButtons('tickets','stage1','off');
+								$('#tickets-stage-1-back').css("display", "");
+                                activateButtons('tickets','stage1','on');
+                                $('#tickets-stage-1-submit').val('IT');
 								break;
 							case "3":
 								$("#tickets-stage-1a").css("display", "none");
@@ -783,7 +516,8 @@ function processStep(process, stage, step) {
 								$("#tickets-stage-1f").css("display", "none");
 								$('#tickets-stage-1-back').val('3');
 								$('#tickets-stage-1-back').css("display", "");
-								activateButtons('tickets','stage1','on');
+								activateButtons('tickets','stage1','off');
+                                $('#tickets-stage-1-submit').val('');
 								break;
 							case "4":
 								$("#tickets-stage-1a").css("display", "none");
@@ -794,7 +528,8 @@ function processStep(process, stage, step) {
 								$("#tickets-stage-1f").css("display", "none");
 								$('#tickets-stage-1-back').val('4');
 								$('#tickets-stage-1-back').css("display", "");
-								activateButtons('tickets','stage1','on');
+								activateButtons('tickets','stage1','off');
+                                $('#tickets-stage-1-submit').val('');
 								break;
 							case "5":
 								$("#tickets-stage-1a").css("display", "none");
@@ -805,18 +540,20 @@ function processStep(process, stage, step) {
 								$("#tickets-stage-1f").css("display", "none");
 								$('#tickets-stage-1-back').val('5');
 								$('#tickets-stage-1-back').css("display", "");
-								activateButtons('tickets','stage1','on');
+								activateButtons('tickets','stage1','off');
+                                $('#tickets-stage-1-submit').val('');
 								break;
 							case "6":
 								$("#tickets-stage-1a").css("display", "none");
 								$("#tickets-stage-1b").css("display", "none");
 								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "none");
+								$("#tickets-stage-1d").css("display", "");
 								$("#tickets-stage-1e").css("display", "none");
 								$("#tickets-stage-1f").css("display", "");
 								$('#tickets-stage-1-back').val('6');
 								$('#tickets-stage-1-back').css("display", "");
 								activateButtons('tickets','stage1','on');
+                                $('#tickets-stage-1-submit').val('');
 								break;
 						}
 							break;
@@ -1145,9 +882,15 @@ function submitRequest(process, stage, index) {
                             };
                             jQuery.post(causfa_action_obj.ajax_url, form, function(data){
                                 if (data['status'] === 1) {
-                                    var element = document.getElementById('transfer-' + $('#surplusr-stage-2-id').val());
+                                    var element = document.getElementById('surplus-' + $('#surplus-stage-2-id').val());
                                     var grandParent = element.parentNode.parentNode;
                                     grandParent.parentNode.removeChild(grandParent);
+                                    processStep('surplus','2','5');
+                                    if (data['changeOrg'] === 1) {
+                                        $('#surplus-stage-2e-text').html('A transfer will be initiated to transfer this asset to ' + $('#recipient-name').val() + '. This person is in the ' + data['newOrg'] + ' org so it will be transferred to their admins');
+                                    } else {
+                                        $('#surplus-stage-2e-text').html('A transfer will be initiated to transfer this asset to ' + $('#recipient-name').val() + '. This person is in your org so this item will become a transfer assigned to you.');
+                                    }
                                 }
                             });
                         }
@@ -1244,6 +987,31 @@ function submitRequest(process, stage, index) {
                     break;
             }
             break;
+        case 'tickets':
+            if ($('#tickets-stage-1-submit').val() === 'IT') {
+                var note = 'This ticket is an IT related ticket and will be transferred to the IT Ticket system';
+                var form = {
+                    'action': 'causfa_add_note',
+                    'act': 'Ticket-IT',
+                    'ptag': jQuery('#ticket-stage-1-ptag').val(),
+                    'note': note
+                };
+                jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
+            } else {
+                var note = 'The ticket requester was contacted on ' + $('#tickets-date').val() + '. ';
+                var comment = $('#tickets-stage-1-notes').val();
+                if (comment !== '') {
+                    note = note + 'The admin has entered the following notes: ' + comment;
+                }
+                var form = {
+                    'action': 'causfa_add_note',
+                    'act': 'Ticket-Response',
+                    'ptag': jQuery('#ticket-stage-1-ptag').val(),
+                    'note': note
+                };
+                jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
+            }
+            break;
     }
 }
 function cancelRequest(process, stage) {
@@ -1299,6 +1067,11 @@ function cancelRequest(process, stage) {
                     $('#surplusFormToUpload').val('');
                     break;
             }
+            break;
+        case 'tickets':
+            processStep('tickets','1','1');
+            $('#tickets-date').val('');
+            $('#tickets-stage-1-notes').val('');
             break;
     }
 }
