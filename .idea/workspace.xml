@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/oracle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-tickets-fill.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-tickets-fill.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-tickets-header.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-tickets-header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/admin-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/admin-modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/asset_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/asset_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/create_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/create_tables.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/oracle.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/oracle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/surplus.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/surplus.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +41,7 @@
           <entry key="html" value="75" />
           <entry key="ini" value="2" />
           <entry key="js" value="15" />
-          <entry key="php" value="25" />
+          <entry key="php" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -59,7 +49,7 @@
           <entry key="HTML" value="75" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="15" />
-          <entry key="PHP" value="25" />
+          <entry key="PHP" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -67,7 +57,7 @@
           <entry key="html" value="2129" />
           <entry key="ini" value="1" />
           <entry key="js" value="11471" />
-          <entry key="php" value="4708" />
+          <entry key="php" value="4763" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -76,14 +66,14 @@
           <entry key="HTML" value="2129" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="11470" />
-          <entry key="PHP" value="4708" />
+          <entry key="PHP" value="4763" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/admin-modal.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="528">
@@ -105,6 +95,27 @@
                 <element signature="n#!!block;n#cancelRequest#0" />
                 <element signature="n#!!block;n#admin_uploadFormHome#0" />
                 <element signature="n#!!block;n#admin_uploadFormOffice#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/oracle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="685">
+              <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+              <folding>
+                <element signature="e#6#322#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -360,10 +371,10 @@
         <option value="$PROJECT_DIR$/assets/html/faa-admin-tickets-header.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-tickets-fill.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-modal.html" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/includes/oracle.php" />
         <option value="$PROJECT_DIR$/../../../../../etc/php.ini" />
         <option value="$PROJECT_DIR$/assets/js/admin-modal.js" />
+        <option value="$PROJECT_DIR$/includes/oracle.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -500,12 +511,12 @@
       <workItem from="1533608762459" duration="23722000" />
       <workItem from="1534210873957" duration="23056000" />
       <workItem from="1534352505808" duration="11219000" />
-      <workItem from="1534460579842" duration="3446000" />
+      <workItem from="1534460579842" duration="4158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="464295000" />
+    <option name="totallyTimeSpent" value="465007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -937,23 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/oracle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          <folding>
-            <element signature="e#6#322#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -1119,6 +1113,23 @@
             <element signature="n#!!block;n#admin_uploadFormHome#0" />
             <element signature="n#!!block;n#admin_uploadFormOffice#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="82" column="53" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+          <folding>
+            <element signature="e#6#322#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/oracle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
         </state>
       </provider>
     </entry>
