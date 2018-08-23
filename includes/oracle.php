@@ -7,6 +7,8 @@
  */
 
 function causfa_oracle_full_org() {
+    $output = 'Test';
+    wp_send_json($output);
     // Create connection to Oracle
     $PROD="(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(PORT=1251)(HOST=prod-ha.db.vt.edu))(CONNECT_DATA=(UR=A)(SERVICE_NAME=PROD)))";
     $conn = oci_connect("FIN_FA_CAUS", "FdgfFcDsG_6NsLFpe_2m", $PROD);
