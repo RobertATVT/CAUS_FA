@@ -151,7 +151,7 @@ function causfa_run_full_org() {
         type: "POST",
         url: causfa_action_obj.ajax_url,
         data: form,
-        timeout: 10000,
+        timeout: 10000
         });
 }
 

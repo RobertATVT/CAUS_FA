@@ -20,6 +20,8 @@ function causfa_oracle_full_org() {
         $query = "select * from BANINST1.FZVFORG WHERE FZVFORG_PTAG = '000390860'";
         $stid = oci_parse($conn, $query);
         $r = oci_execute($stid);
+        $output = 'getting to right before compare';
+        wp_send_json($output);
         $output = causfa_oracle_compare($stid);
         wp_send_json($output);
     }
