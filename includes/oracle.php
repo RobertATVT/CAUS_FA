@@ -34,10 +34,9 @@ function causfa_oracle_compare($stid) {
     $output = 'never finding it';
     while ($row = oci_fetch_array($stid, OCI_RETURN_NULLS+OCI_ASSOC)) {
         for($i = 0; $i < count($assets); $i++) {
-            $output = 'for loop is working';
-//            if ($assets[$i]['FZVFORG_PTAG'] === $row['FZVFORG_PTAG']) {
-//                $output = ('Found in database');
-//            }
+            if ($assets[$i]['FZVFORG_PTAG'] === $row['FZVFORG_PTAG']) {
+                $output = 'Found in database';
+            }
         }
     }
     return $output;
