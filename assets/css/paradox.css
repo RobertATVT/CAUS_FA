@@ -106,6 +106,7 @@ html {
 
 /* DEFAULT ALL SCREEN GRID */
 
+/* TINY SCREEN */
 @media only screen and (min-width: 200px) {
   	.hide-tiny, hide-tiny-up {
     	display: none !important;
@@ -115,6 +116,7 @@ html {
 	}
 }
 
+/* SMALL SCREEN */
 @media only screen and (min-width: 400px) {
   	.hide-small {
     	display: none !important;
@@ -124,6 +126,7 @@ html {
 	}	
 }
 
+/* MEDIUM SCREEN */
 @media only screen and (min-width: 600px) {
 	.show-medium {
     	display: block !important;
@@ -141,6 +144,8 @@ html {
 		display: block !important;
 	}
 }
+
+/* LARGE SCREEN */
 @media only screen and (min-width: 992px) {
 	.show-large {
 		display: block !important;
