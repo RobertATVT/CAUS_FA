@@ -15,7 +15,7 @@ function causfa_oracle_full_org() {
         exit;
     }
     else {
-        $query = 'select * from BANINST1.FZVFORG';
+        $query = "select * from BANINST1.FZVFORG WHERE FZVFORG_PTAG = '000390860'";
         $stid = oci_parse($conn, $query);
         $r = oci_execute($stid);
 // Fetch each row in an associative array
