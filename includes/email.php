@@ -24,7 +24,7 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 		$transferBody = str_replace( '[footer]', $footerText, $transferBody);
 		$transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
-        mail('caus@vt.edu', $transferSubject, $transferBody, $headers);
+        mail($to, $transferSubject, $transferBody, $headers);
     }
 }
 
@@ -59,7 +59,7 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
 		$surplusBody = str_replace( '[footer]', $footerText, $surplusBody);
 		$surplusBody = str_replace( '[date]', date("D, m d, Y"), $surplusBody);
         $surplusBody = $surplusBody.'  '.print_r($to, true);
-        wp_mail('caus@vt.edu', $surplusSubject, $surplusBody, $headers);
+        mail('caus@vt.edu', $surplusSubject, $surplusBody, $headers);
     }
 }
 
