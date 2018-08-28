@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/file_upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/file_upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/oracle.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/oracle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/emailTemplates/transfer-body.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/emailTemplates/transfer-body.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/emailTemplates/transfer-body.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/email.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +39,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="76" />
+          <entry key="html" value="80" />
           <entry key="ini" value="2" />
           <entry key="js" value="18" />
           <entry key="php" value="31" />
@@ -47,7 +47,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="76" />
+          <entry key="HTML" value="80" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="18" />
           <entry key="PHP" value="31" />
@@ -55,19 +55,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2153" />
+          <entry key="html" value="2168" />
           <entry key="ini" value="1" />
           <entry key="js" value="11610" />
-          <entry key="php" value="6552" />
+          <entry key="php" value="7002" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="2153" />
+          <entry key="HTML" value="2168" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="11609" />
-          <entry key="PHP" value="6552" />
+          <entry key="PHP" value="7002" />
         </counts>
       </usages-collector>
     </session>
@@ -103,7 +103,25 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/email.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/emailTemplates/transfer-body-dest.html">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/emailTemplates/transfer-body.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -171,13 +189,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-header-none.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-surplus-header-none.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-tickets-header-none.html" />
         <option value="$PROJECT_DIR$/assets/js/tabs.js" />
         <option value="$PROJECT_DIR$/process/alerts.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-employee-alert-item.html" />
-        <option value="$PROJECT_DIR$/includes/email.php" />
         <option value="$PROJECT_DIR$/includes/autocomplete.php" />
         <option value="$PROJECT_DIR$/assets/backup/js/admin-modal.js" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-footer.html" />
@@ -222,6 +238,8 @@
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/includes/oracle.php" />
         <option value="$PROJECT_DIR$/includes/file_upload.php" />
+        <option value="$PROJECT_DIR$/assets/emailTemplates/transfer-body.html" />
+        <option value="$PROJECT_DIR$/includes/email.php" />
       </list>
     </option>
   </component>
@@ -258,6 +276,12 @@
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="emailTemplates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
@@ -359,12 +383,12 @@
       <workItem from="1533608762459" duration="23722000" />
       <workItem from="1534210873957" duration="23056000" />
       <workItem from="1534352505808" duration="11219000" />
-      <workItem from="1534460579842" duration="13482000" />
+      <workItem from="1534460579842" duration="14509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="474331000" />
+    <option name="totallyTimeSpent" value="475358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -455,16 +479,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-reports-footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/jquery-ui.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="603">
@@ -981,8 +995,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/email.php">
+    <entry file="file://$PROJECT_DIR$/assets/emailTemplates/transfer-body-dest.html">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/emailTemplates/transfer-body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

@@ -10,7 +10,7 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 		$headers = "MIME-Version: 1.0\n";
 		$headers .= "Content-type: text/html; charset=iso-8859-1";
         $headers .= "From: InsideCAUS <caus+inside@vt.edu>" . "\r\n" . "Reply-To: InsideCAUS <caus+inside@vt.edu>" . "\r\n"; 
-        $to = causfa_get_recipient_list($requester, $recipient);
+        $to = causfa_get_recipient_list($requester);
         $transferSubject = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-subject.txt', true);
         $transferSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferSubject);
         $transferSubject = str_replace('[EMPLOYEE]', $requester, $transferSubject);
@@ -23,8 +23,12 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 		$transferBody = str_replace( '[TransferBody]', $bodyText, $transferBody);
 		$transferBody = str_replace( '[footer]', $footerText, $transferBody);
 		$transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
+		$transferDest_buttons = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body-dest.html', true);
+		$transferBody_dest = str_replace('[TransferDest]', $transferDest_buttons, $transferBody);
+        $transferBody = str_replace('[TransferDest]','',$transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
         mail(implode(',',$to), $transferSubject, $transferBody, $headers);
+        mail($recipient.'@vt.edu,caus+fa@vt.edu', $transferSubject, $transferBody_dest, $headers);
     }
 }
 
@@ -76,7 +80,7 @@ function causfa_email_add_asset($to, $from, $ptag, $desc, $serial) {
         $headers .= "Content-type: text/html; charset=iso-8859-1";
     }
 }
-function causfa_get_recipient_list($requester, $recipient = null) {
+function causfa_get_recipient_list($requester) {
     $to = array();
     if (!causfa_groups_is_admin($requester)) {
         $requester_FAL = causfa_groups_FAL($requester);
@@ -94,22 +98,7 @@ function causfa_get_recipient_list($requester, $recipient = null) {
     } else {
         $to[] = $requester.'@vt.edu';
     }
-    if ($recipient != null) {
-        if (!causfa_groups_is_admin($recipient)) {
-            $recipient_FAL = causfa_groups_FAL($recipient);
-            $recipient_BM = causfa_groups_BM($recipient);
-            foreach($recipient_FAL as $FAL) {
-                if (!in_array($FAL['Email'], $to)) {
-                    $to[] = $FAL['Email'];
-                }
-            }
-            foreach($recipient_BM as $BM) {
-                if (!in_array($BM['Email'], $to)) {
-                    $to[] = $BM['Email'];
-                }
-            }
-        }
-    }
+    $to[] = 'caus+fa@vt.edu';
     return $to;
 }
 function causfa_email_get_name($PID) {
