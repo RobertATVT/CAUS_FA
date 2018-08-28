@@ -110,7 +110,7 @@ function causfa_upload_form_home() {
                 unlink($target_file);
             } else {
                 $output['status'] = 1;
-                $output['message'] = 'File Upload Successful';
+                $output['message'] = 'File Upload Successful<br /> Please mail a physical copy of this document to the Dean’s office at 1325 Perry Street , 202 Cowgill Hall (MC 0205), Blacksburg, VA 24061';
             }
             $logger_data = array(
                 'url' => $target_url,
@@ -173,7 +173,7 @@ function causfa_upload_form_office() {
                 unlink($target_file);
             } else {
                 $output['status'] = 1;
-                $output['message'] = 'File Upload Successful';
+                $output['message'] = 'File Upload Successful<br /> Please mail a physical copy of this document to the Dean’s office at 1325 Perry Street , 202 Cowgill Hall (MC 0205), Blacksburg, VA 24061';
             }
             $logger_data = array(
                 'url' => $target_url,
@@ -278,7 +278,7 @@ function causfa_upload_surplus_form() {
             array('PENDING_TYPE' => 1, 'FZVFORG_PTAG' => $ptag[0])
         );
         $output['status'] = 1;
-        $output['message'] = 'File Upload Successful';
+        $output['message'] = 'File Upload Successful<br /> Please mail a physical copy of this document to the Dean’s office at 1325 Perry Street , 202 Cowgill Hall (MC 0205), Blacksburg, VA 24061';
     }
 
     wp_send_json($output);
