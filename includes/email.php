@@ -24,7 +24,7 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 		$transferBody = str_replace( '[footer]', $footerText, $transferBody);
 		$transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
-        mail('caus@vt.edu', $transferSubject, $transferBody, $headers);
+        mail($to, $transferSubject, $transferBody, $headers);
     }
 }
 
@@ -91,6 +91,8 @@ function causfa_get_recipient_list($requester, $recipient = null) {
                 $to[] = $BM['Email'];
             }
         }
+    } else {
+        $to[] = $requester.'@vt.edu';
     }
     if ($recipient != null) {
         if (!causfa_groups_is_admin($recipient)) {
