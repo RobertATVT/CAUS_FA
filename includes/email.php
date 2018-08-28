@@ -24,7 +24,7 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 		$transferBody = str_replace( '[footer]', $footerText, $transferBody);
 		$transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
-        mail($to, $transferSubject, $transferBody, $headers);
+        mail('caus@vt.edu', $transferSubject, $transferBody, $headers);
     }
 }
 
