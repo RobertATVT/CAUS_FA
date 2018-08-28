@@ -9,7 +9,7 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
     if (CAUSFA_SEND_EMAIL) {
 		$headers = "MIME-Version: 1.0\n";
 		$headers .= "Content-type: text/html; charset=iso-8859-1";
-        $headers .= "From: caus@vt.edu" . "\r\n" . "Reply-To: caus@vt.edu" . "\r\n"; 
+        $headers .= "From: InsideCAUS <caus@vt.edu>" . "\r\n" . "Reply-To: InsideCAUS <caus@vt.edu>" . "\r\n"; 
         $to = causfa_get_recipient_list($requester, $recipient);
         $transferSubject = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-subject.txt', true);
         $transferSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferSubject);
@@ -24,7 +24,7 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 		$transferBody = str_replace( '[footer]', $footerText, $transferBody);
 		$transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
-        wp_mail('caus@vt.edu', $transferSubject, $transferBody, $headers);
+        mail('caus@vt.edu', $transferSubject, $transferBody, $headers);
     }
 }
 
