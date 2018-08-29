@@ -106,7 +106,7 @@ function causfa_email_transfer_change_admin($admin1, $admin2, $requester, $recip
         $transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
         $transferBody = str_replace('[TransferDest]','',$transferBody);
         $transferBody = $transferBody.'  '.print_r($to, true);
-        mail(implode(',',$to), $transferSubject, $transferBody, $headers);
+        mail($to, $transferSubject, $transferBody, $headers);
     }
 }
 
