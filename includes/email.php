@@ -26,7 +26,6 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 		$transferDest_buttons = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body-dest.html', true);
 		$transferBody_dest = str_replace('[TransferDest]', $transferDest_buttons, $transferBody);
         $transferBody = str_replace('[TransferDest]','',$transferBody);
-        //$transferBody = $transferBody.'  '.print_r($to, true);
         mail(implode(',',$to), $transferSubject, $transferBody, $headers);
         mail($recipient.'@vt.edu,caus+fa@vt.edu', $transferSubject, $transferBody_dest, $headers);
     }
@@ -38,7 +37,7 @@ function causfa_email_transfer_update($action, $ptag) {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending where FZVFORG_PTAG = '".$ptag."';");
         $headers = "MIME-Version: 1.0\n";
         $headers .= "Content-type: text/html; charset=iso-8859-1";
-        $to = causfa_getRecipient_list($result->PID_ORIGIN, $result->PID_DESTINATION);
+        $to = causfa_get_recipient_list($result->PID_ORIGIN, $result->PID_DESTINATION);
         $transferSubject = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-subject.txt', true);
         $transferSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($result->PID_ORIGIN), $transferSubject);
         $transferSubject = str_replace('[EMPLOYEE]', $result->PID_ORIGIN, $transferSubject);
@@ -60,7 +59,6 @@ function causfa_email_transfer_update($action, $ptag) {
         $transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
         $transferBody = str_replace('[TransferDest]','',$transferBody);
         mail(implode(',',$to), $transferSubject, $transferBody, $headers);
-        //$transferBody = $transferBody.'  '.print_r($to, true);
     }
 }
 
@@ -79,7 +77,6 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
 		$surplusBody = str_replace( '[surplusBody]', $bodyText, $surplusBody);
 		$surplusBody = str_replace( '[footer]', $footerText, $surplusBody);
 		$surplusBody = str_replace( '[date]', date("D, m d, Y"), $surplusBody);
-        //$surplusBody = $surplusBody.'  '.print_r($to, true);
         mail(implode(',', $to), $surplusSubject, $surplusBody, $headers);
     }
 }
