@@ -63,7 +63,7 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
 		$surplusBody = str_replace( '[footer]', $footerText, $surplusBody);
 		$surplusBody = str_replace( '[date]', date("D, m d, Y"), $surplusBody);
         $surplusBody = $surplusBody.'  '.print_r($to, true);
-        mail(impolode(',', $to), $surplusSubject, $surplusBody, $headers);
+        mail(implode(',', $to), $surplusSubject, $surplusBody, $headers);
     }
 }
 
