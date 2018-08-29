@@ -26,7 +26,7 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 		$transferDest_buttons = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body-dest.html', true);
 		$transferBody_dest = str_replace('[TransferDest]', $transferDest_buttons, $transferBody);
         $transferBody = str_replace('[TransferDest]','',$transferBody);
-        $transferBody = $transferBody.'  '.print_r($to, true);
+        //$transferBody = $transferBody.'  '.print_r($to, true);
         mail(implode(',',$to), $transferSubject, $transferBody, $headers);
         mail($recipient.'@vt.edu,caus+fa@vt.edu', $transferSubject, $transferBody_dest, $headers);
     }
@@ -34,16 +34,33 @@ function causfa_email_transfer($requester, $ptag, $manufacturer, $model, $recipi
 
 function causfa_email_transfer_update($action, $ptag) {
     if (CAUSFA_SEND_EMAIL) {
-//        global $wpdb;
-//        $result = $wpdb->get_row("SELECT * FROM causfa_pending where FZVFORG_PTAG = '".$ptag."';");
-//        $headers = "MIME-Version: 1.0\n";
-//        $headers .= "Content-type: text/html; charset=iso-8859-1";
-//        $to = causfa_getRecipient_list($result->PID_ORIGIN, $result->PID_DESTINATION);
-//        if (action === 0) {
-//
-//        } else {
-//
-//        }
+        global $wpdb;
+        $result = $wpdb->get_row("SELECT * FROM causfa_pending where FZVFORG_PTAG = '".$ptag."';");
+        $headers = "MIME-Version: 1.0\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1";
+        $to = causfa_getRecipient_list($result->PID_ORIGIN, $result->PID_DESTINATION);
+        $transferSubject = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-subject.txt', true);
+        $transferSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($result->PID_ORIGIN), $transferSubject);
+        $transferSubject = str_replace('[EMPLOYEE]', $result->PID_ORIGIN, $transferSubject);
+        $transferSubject = str_replace( '[PTAG]', $ptag, $transferSubject);
+        $transferSubject = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($result->PID_DESTINATION), $transferSubject);
+        $transferSubject = str_replace( '[RECIPIENT]', $result->PID_DESTINATION, $transferSubject);
+        $transferBody = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body.html', true);
+        $bodyText = '';
+        if ($action === 0) {
+            //Accept transfer email
+            $bodyText = 'This transfer was accepted by the recipient';
+        } else {
+            //Deny transfer email
+            $bodyText = 'This transfer was rejected by the recipient';
+        }
+        $footerText = "Email generated on behalf of " . causfa_email_get_name($result->PID_DESTINATION) . " (" . $result->PID_DESTINATION . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application ";
+        $transferBody = str_replace( '[TransferBody]', $bodyText, $transferBody);
+        $transferBody = str_replace( '[footer]', $footerText, $transferBody);
+        $transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
+        $transferBody = str_replace('[TransferDest]','',$transferBody);
+        mail(implode(',',$to), $transferSubject, $transferBody, $headers);
+        //$transferBody = $transferBody.'  '.print_r($to, true);
     }
 }
 
@@ -62,7 +79,7 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
 		$surplusBody = str_replace( '[surplusBody]', $bodyText, $surplusBody);
 		$surplusBody = str_replace( '[footer]', $footerText, $surplusBody);
 		$surplusBody = str_replace( '[date]', date("D, m d, Y"), $surplusBody);
-        $surplusBody = $surplusBody.'  '.print_r($to, true);
+        //$surplusBody = $surplusBody.'  '.print_r($to, true);
         mail(implode(',', $to), $surplusSubject, $surplusBody, $headers);
     }
 }
@@ -80,7 +97,7 @@ function causfa_email_add_asset($to, $from, $ptag, $desc, $serial) {
         $headers .= "Content-type: text/html; charset=iso-8859-1";
     }
 }
-function causfa_get_recipient_list($requester) {
+function causfa_get_recipient_list($requester, $recipient = null) {
     $to = array();
     if (!causfa_groups_is_admin($requester)) {
         $requester_FAL = causfa_groups_FAL($requester);
@@ -97,6 +114,24 @@ function causfa_get_recipient_list($requester) {
         }
     } else {
         $to[] = $requester.'@vt.edu';
+    }
+    if ($recipient != null) {
+        if (!causfa_groups_is_admin($recipient)) {
+            $recipient_FAL = causfa_groups_FAL($recipient);
+            $recipient_BM = causfa_groups_BM($recipient);
+            foreach($recipient_FAL as $FAL) {
+                if (!in_array($FAL['Email'], $to)) {
+                    $to[] = $FAL['Email'];
+                }
+            }
+            foreach($recipient_BM as $BM) {
+                if (!in_array($BM['Email'], $to)) {
+                    $to[] = $BM['Email'];
+                }
+            }
+        }
+    } else {
+        $to[] = $recipient.'@vt.edu';
     }
     $to[] = 'caus+fa@vt.edu';
     return $to;
