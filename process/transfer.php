@@ -120,6 +120,8 @@ function causfa_update_transfer() {
         $PID_dest = $result->PID_DESTINATION;
         $mgn_code = causfa_groups_management_code($PID_dest);
         if($mgn_code !== $result->FZVFORG_ORGN_CODE) {
+            $FAL_dest = causfa_groups_FAL($PID_dest);
+            causfa_email_transfer_change_admin($result->ASSIGNEE,$FAL_dest[0]['PID'],$result->PID_ORIGIN,$PID_dest,$result->FZVFORG_PTAG);
             $output['changeOrg'] = 1;
             $output['assignedOrg'] = $mgn_code;
             $wpdb->update('causfa_pending', array('ASSIGNEE' => NULL, 'FZVFORG_ORGN_CODE' => $mgn_code), array('FZVFORG_PTAG' => $ptag));

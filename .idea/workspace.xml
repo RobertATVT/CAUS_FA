@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/transfer.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/transfer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +42,7 @@
           <entry key="html" value="80" />
           <entry key="ini" value="2" />
           <entry key="js" value="19" />
-          <entry key="php" value="34" />
+          <entry key="php" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -48,7 +50,7 @@
           <entry key="HTML" value="80" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="19" />
-          <entry key="PHP" value="34" />
+          <entry key="PHP" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -56,7 +58,7 @@
           <entry key="html" value="2168" />
           <entry key="ini" value="1" />
           <entry key="js" value="11610" />
-          <entry key="php" value="7436" />
+          <entry key="php" value="7953" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -65,7 +67,7 @@
           <entry key="HTML" value="2168" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="11609" />
-          <entry key="PHP" value="7436" />
+          <entry key="PHP" value="7953" />
         </counts>
       </usages-collector>
     </session>
@@ -99,11 +101,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+            <state relative-caret-position="550">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
+              <folding>
+                <element signature="n#causfa_email_transfer_update#0;n#!!top" />
+                <element signature="n#causfa_email_surplus#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,8 +117,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process/transfer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="132" column="17" selection-start-line="132" selection-end-line="133" />
+            <state relative-caret-position="470">
+              <caret line="123" column="75" selection-start-line="123" selection-start-column="75" selection-end-line="123" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/groups.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1362">
+              <caret line="110" column="43" lean-forward="true" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -213,7 +228,6 @@
         <option value="$PROJECT_DIR$/assets/html/faa-admin-surplus-fill.html" />
         <option value="$PROJECT_DIR$/assets/backup/fixed-assets-admin.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-surplus-header.html" />
-        <option value="$PROJECT_DIR$/process/transfer.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-1.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-2.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-3.html" />
@@ -247,6 +261,7 @@
         <option value="$PROJECT_DIR$/includes/file_upload.php" />
         <option value="$PROJECT_DIR$/assets/emailTemplates/transfer-body.html" />
         <option value="$PROJECT_DIR$/includes/email.php" />
+        <option value="$PROJECT_DIR$/process/transfer.php" />
       </list>
     </option>
   </component>
@@ -395,16 +410,15 @@
       <workItem from="1533608762459" duration="23722000" />
       <workItem from="1534210873957" duration="23056000" />
       <workItem from="1534352505808" duration="11219000" />
-      <workItem from="1534460579842" duration="17867000" />
+      <workItem from="1534460579842" duration="19946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="478716000" />
+    <option name="totallyTimeSpent" value="480795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23962805" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24937657" />
@@ -525,13 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" selection-start-column="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="110" column="43" lean-forward="true" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -972,13 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2292">
-          <caret line="112" column="204" selection-start-line="112" selection-start-column="204" selection-end-line="112" selection-end-column="204" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/forms.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -1010,17 +1010,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/transfer.php">
+    <entry file="file://$PROJECT_DIR$/includes/file_upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="132" column="17" selection-start-line="132" selection-end-line="133" />
+        <state relative-caret-position="-2292">
+          <caret line="112" column="204" selection-start-line="112" selection-start-column="204" selection-end-line="112" selection-end-column="204" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/email.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+        <state relative-caret-position="550">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="n#causfa_email_transfer_update#0;n#!!top" />
+            <element signature="n#causfa_email_surplus#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/transfer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="123" column="75" selection-start-line="123" selection-start-column="75" selection-end-line="123" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1362">
+          <caret line="110" column="43" lean-forward="true" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
         </state>
       </provider>
     </entry>

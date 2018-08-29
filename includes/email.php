@@ -58,6 +58,7 @@ function causfa_email_transfer_update($action, $ptag) {
         $transferBody = str_replace( '[footer]', $footerText, $transferBody);
         $transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
         $transferBody = str_replace('[TransferDest]','',$transferBody);
+        $transferBody = $transferBody.'  '.print_r($to, true);
         mail(implode(',',$to), $transferSubject, $transferBody, $headers);
     }
 }
@@ -78,6 +79,34 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
 		$surplusBody = str_replace( '[footer]', $footerText, $surplusBody);
 		$surplusBody = str_replace( '[date]', date("D, m d, Y"), $surplusBody);
         mail(implode(',', $to), $surplusSubject, $surplusBody, $headers);
+    }
+}
+
+function causfa_email_transfer_to_IT() {
+
+}
+
+function causfa_email_transfer_change_admin($admin1, $admin2, $requester, $recipient, $ptag) {
+    if (CAUSFA_SEND_EMAIL) {
+        $headers = "MIME-Version: 1.0\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1";
+        $headers .= "From: InsideCAUS <caus+inside@vt.edu>" . "\r\n" . "Reply-To: InsideCAUS <caus+inside@vt.edu>" . "\r\n";
+        $to = $admin1.'@vt.edu,'.$admin2.'@vt.edu';
+        $transferSubject = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-subject.txt', true);
+        $transferSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $transferSubject);
+        $transferSubject = str_replace('[EMPLOYEE]', $requester, $transferSubject);
+        $transferSubject = str_replace( '[PTAG]', $ptag, $transferSubject);
+        $transferSubject = str_replace('[RECIPIENT_NAME]', causfa_email_get_name($recipient), $transferSubject);
+        $transferSubject = str_replace( '[RECIPIENT]', $recipient, $transferSubject);
+        $transferBody = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/transfer-body.html', true);
+        $bodyText = 'This ticket is being transferred from '.$admin1.' to '.$admin2;
+        $footerText = "Email generated on behalf of " . causfa_email_get_name($requester) . " (" . $requester . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application ";
+        $transferBody = str_replace( '[TransferBody]', $bodyText, $transferBody);
+        $transferBody = str_replace( '[footer]', $footerText, $transferBody);
+        $transferBody = str_replace( '[date]', date("D, m d, Y"), $transferBody);
+        $transferBody = str_replace('[TransferDest]','',$transferBody);
+        $transferBody = $transferBody.'  '.print_r($to, true);
+        mail(implode(',',$to), $transferSubject, $transferBody, $headers);
     }
 }
 
