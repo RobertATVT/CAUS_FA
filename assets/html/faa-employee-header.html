@@ -2,7 +2,10 @@
 <div id="asset-container">
     <script>
         if (/*@cc_on!@*/false || !!document.documentMode) {
-            alert('Dont use IE please and thank you');
+            $('#modal-response-title').html('Browser Conflict');
+            $('#modal-response-alert').html('Due to rendering limitations Internet Explorer is not supported by the application.<br />Please use a supported browser from the follwoing list: Chrome, Firefox, Opera, or Safari');
+            $('#responseModal').modal();
+            $('#responseModal').modal('open');
         }
     </script>
 <!-- END TEMPLATE faa-header-template.html -->
