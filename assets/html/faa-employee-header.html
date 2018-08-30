@@ -2,10 +2,8 @@
 <div id="asset-container">
     <script>
         if (/*@cc_on!@*/false || !!document.documentMode) {
-            $('#modal-response-title').html('Browser Conflict');
-            $('#modal-response-alert').html('Due to rendering limitations Internet Explorer is not supported by the application.<br />Please use a supported browser from the follwoing list: Chrome, Firefox, Opera, or Safari');
-            $('#responseModal').modal();
-            $('#responseModal').modal('open');
+            alert('Due to rendering limitations Internet Explorer is not supported by the application.\n\rPlease use a supported browser from the follwoing list: Chrome, Firefox, Opera, or Safari');
+            window.location.href = 'https://inside.caus.vt.edu/';
         }
     </script>
 <!-- END TEMPLATE faa-header-template.html -->
