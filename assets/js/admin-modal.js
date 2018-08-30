@@ -963,10 +963,13 @@ function submitRequest(process, stage, index) {
                             data: form,
                             success: function(data) {
                                 if (data['status'] === 1) {
-                                    alert(data['message']);
                                     $('#surplus-stage-4-' + id).addClass('disabled');
                                     $('#surplus-stage-5-' + id).removeClass('disabled');
                                     $('#surplus-stage-4').modal('close');
+                                    $('#modal-response-title').html('File Upload Successful');
+                                    $('#modal-response-alert').html(data['message']);
+                                    var modal = $('#responseModal').modal();
+                                    modal.modal('open');
                                 }
                             }
                         });
@@ -1096,7 +1099,10 @@ function admin_uploadFormHome() {
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    alert(data['message']);
+                    $('#modal-response-title').html('File Upload Successful');
+                    $('#modal-response-alert').html(data['message']);
+                    var modal = $('#responseModal').modal();
+                    modal.modal('open');
                     $('#homeFormToUpload').val('');
                 }
             }
@@ -1138,12 +1144,15 @@ function admin_uploadFormOffice() {
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    alert(data['message']);
                     $('#officeFormToUpload').val('');
                     $('#transfer-stage-5').modal('close');
                     var id = $('#transfer-stage-5-id').val();
                     $('#transfer-stage-5-' + id).addClass('disabled');
                     $('#transfer-stage-6-' + id).removeClass('disabled');
+                    $('#modal-response-title').html('File Upload Successful');
+                    $('#modal-response-alert').html(data['message']);
+                    var modal = $('#responseModal').modal();
+                    modal.modal('open');
                 }
             }
         });

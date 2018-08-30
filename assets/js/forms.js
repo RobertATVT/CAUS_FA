@@ -78,9 +78,12 @@ function uploadFormHome(){
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    alert(data['message']);
                     $('#homeFormToUpload').val('');
-                    getLastForm(ptag);
+                    $('#formsModal').modal('close');
+                    $('#modal-response-title').html('File Upload Successful');
+                    $('#modal-response-alert').html(data['message']);
+                    var modal = $('#responseModal').modal();
+                    modal.modal('open');
                 }
             }
         });
@@ -108,9 +111,12 @@ function uploadFormOffice(){
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    alert(data['message']);
                     $('#officeFormToUpload').val('');
-                    getLastForm(ptag);
+                    $('#formsModal').modal('close');
+                    $('#modal-response-title').html('File Upload Successful');
+                    $('#modal-response-alert').html(data['message']);
+                    var modal = $('#responseModal').modal();
+                    modal.modal('open');
                 }
             }
         });

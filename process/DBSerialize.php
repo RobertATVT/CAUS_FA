@@ -57,9 +57,9 @@ function causfa_DB_Serialize_Form_Home($file, $ptag) {
     $wpdb->replace(
         'causfa_forms',
         array(
-            FZVFORG_PTAG => $ptag,
-            HU_URL => $file,
-            HU_DATE => $date
+            'FZVFORG_PTAG' => $ptag,
+            'HU_URL' => $file,
+            'HU_DATE' => $date
         ), array('%s','%s','%s')
     );
     $result = $wpdb->get_row('SELECT * FROM causfa_forms_history WHERE FZVFORG_PTAG = '.$ptag.';');
@@ -109,9 +109,9 @@ function causfa_DB_Serialize_Form_Office($file, $ptag) {
     $wpdb->replace(
         'causfa_forms',
         array(
-            FZVFORG_PTAG => $ptag,
-            OU_URL => $file,
-            OU_DATE => $date
+            'FZVFORG_PTAG' => $ptag,
+            'OU_URL' => $file,
+            'OU_DATE' => $date
         ), array('%s','%s','%s')
     );
     $result = $wpdb->get_row('SELECT * FROM causfa_forms_history WHERE FZVFORG_PTAG = '.$ptag.';');
