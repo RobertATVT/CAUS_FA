@@ -82,10 +82,6 @@ function causfa_email_surplus($requester, $ptag, $manufacturer, $model) {
     }
 }
 
-function causfa_email_transfer_to_IT() {
-
-}
-
 function causfa_email_transfer_change_admin($admin1, $admin2, $requester, $recipient, $ptag) {
     if (CAUSFA_SEND_EMAIL) {
         $headers = "MIME-Version: 1.0\n";

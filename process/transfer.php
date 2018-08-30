@@ -129,7 +129,9 @@ function causfa_update_transfer() {
             $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => wp_get_current_user()->user_nicename), array('FZVFORG_PTAG' => $ptag));
         }
     } else {
+        $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$ptag."';");
         if ($assignee !== '') {
+            causfa_email_transfer_change_admin($result->ASSIGNEE, $assignee, $result->PID_ORIGIN, $result->PID_DESTINATION, $result->FZVFORG_PTAG);
             $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => $assignee), array('FZVFORG_PTAG' => $ptag));
         } else {
             $wpdb->update('causfa_pending', array('PENDING_STATUS' => $state, 'ASSIGNEE' => wp_get_current_user()->user_nicename), array('FZVFORG_PTAG' => $ptag));
