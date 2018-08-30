@@ -151,9 +151,9 @@ function causfa_get_recipient_list($requester, $recipient = null) {
                     $to[] = $BM['Email'];
                 }
             }
+        } else {
+            $to[] = $recipient.'@vt.edu';
         }
-    } else {
-        $to[] = $recipient.'@vt.edu';
     }
     $to[] = 'caus+fa@vt.edu';
     return $to;
