@@ -17,7 +17,7 @@ function causfa_oracle_full_org() {
         exit;
     }
     else {
-        $query = "select * from BANINST1.FZVFORG WHERE FZVFORG_PTAG = '000390860'";
+        $query = "select * from BANINST1.FZVFORG";
         $stid = oci_parse($conn, $query);
         $r = oci_execute($stid);
         $output = causfa_oracle_compare($stid);
@@ -44,6 +44,7 @@ function causfa_oracle_compare($stid) {
                 array_splice($assets, $i, 1);
                 $found = true;
             }
+            echo "<script>alert(".$found.");</script>";
         }
         if (!$found) {
             //log exception / change report
