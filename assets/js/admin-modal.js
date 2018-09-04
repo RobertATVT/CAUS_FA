@@ -1009,7 +1009,12 @@ function submitRequest(process, stage, index) {
                     'ptag': jQuery('#tickets-stage-1-ptag').val(),
                     'notes': comment
                 };
-                jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
+                jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+                    if (data['status'] ==- 1) {
+                        $('#tickets-stage-1-notes').val('');
+                        $('#tickets-stage-1').modal('close');
+                    }
+                });
             } else {
                 var note = 'The ticket requester was contacted on ' + $('#tickets-date').val() + '. ';
                 var comment = $('#tickets-stage-1-notes').val();

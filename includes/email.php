@@ -128,6 +128,10 @@ function causfa_email_to_spiceworks() {
         $body .= 'Admin Notes: '.$admin_notes."\r\n";
         $body .= '#created by '.$result->PID_Submit.'@vt.edu';
         mail($to, $subject, $body);
+        $output = array(
+            'stauts' => 1
+        );
+        wp_send_json($output);
     }
 }
 
