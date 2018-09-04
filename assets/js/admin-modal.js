@@ -1000,13 +1000,13 @@ function submitRequest(process, stage, index) {
                 var form = {
                     'action': 'causfa_add_note',
                     'act': 'Ticket-IT',
-                    'ptag': jQuery('#ticket-stage-1-ptag').val(),
+                    'ptag': jQuery('#tickets-stage-1-ptag').val(),
                     'note': note
                 };
                 jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
                 var form = {
                     'action': 'causfa_email_to_spiceworks',
-                    'ptag': jQuery('#ticket-stage-1-ptag').val(),
+                    'ptag': jQuery('#tickets-stage-1-ptag').val(),
                     'notes': comment
                 };
                 jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});

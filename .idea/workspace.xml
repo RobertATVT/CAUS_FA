@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-admin-modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-admin-modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/admin-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/admin-modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +53,7 @@
         <counts>
           <entry key="html" value="2657" />
           <entry key="ini" value="1" />
-          <entry key="js" value="12127" />
+          <entry key="js" value="12135" />
           <entry key="php" value="9088" />
         </counts>
       </usages-collector>
@@ -68,7 +62,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="2657" />
           <entry key="Ini" value="1" />
-          <entry key="JavaScript" value="12126" />
+          <entry key="JavaScript" value="12134" />
           <entry key="PHP" value="9088" />
         </counts>
       </usages-collector>
@@ -76,19 +70,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/admin-modal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="503" column="71" selection-start-line="503" selection-start-column="71" selection-end-line="503" selection-end-column="71" />
+            <state relative-caret-position="360">
+              <caret line="1008" column="22" selection-start-line="1008" selection-start-column="22" selection-end-line="1008" selection-end-column="22" />
               <folding>
                 <element signature="n#!!block;n#openModal#0" />
                 <element signature="e#110#3047#0" />
                 <element signature="e#3056#5431#0" />
                 <element signature="n#!!block;n#activateButtons#0" />
+                <element signature="n#!!block;n#processStep#0" />
                 <element signature="e#9929#18018#0" />
                 <element signature="e#18027#25483#0" />
                 <element signature="n#!!block;n#backButton#0" />
+                <element signature="e#31701#42879#0" />
+                <element signature="e#42888#51944#0" />
                 <element signature="n#!!block;n#cancelRequest#0" />
                 <element signature="n#!!block;n#admin_uploadFormHome#0" />
                 <element signature="n#!!block;n#admin_uploadFormOffice#0" />
@@ -100,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
+            <state relative-caret-position="257">
+              <caret line="118" column="8" lean-forward="true" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
               <folding>
                 <element signature="n#causfa_email_surplus#0;n#!!top" />
               </folding>
@@ -109,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="585">
               <caret line="558" column="44" selection-start-line="558" selection-start-column="44" selection-end-line="558" selection-end-column="44" />
               <folding>
                 <element signature="n#div#0;n#!!top" />
@@ -370,8 +367,8 @@
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/includes/email.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/assets/js/admin-modal.js" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-modal.html" />
+        <option value="$PROJECT_DIR$/assets/js/admin-modal.js" />
       </list>
     </option>
   </component>
@@ -515,12 +512,12 @@
       <workItem from="1533608762459" duration="23722000" />
       <workItem from="1534210873957" duration="23056000" />
       <workItem from="1534352505808" duration="11219000" />
-      <workItem from="1534460579842" duration="27781000" />
+      <workItem from="1534460579842" duration="28209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="488630000" />
+    <option name="totallyTimeSpent" value="489058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -975,16 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="123" column="52" selection-start-line="123" selection-start-column="52" selection-end-line="123" selection-end-column="52" />
-          <folding>
-            <element signature="n#causfa_email_surplus#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -999,28 +986,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/admin-modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="503" column="71" selection-start-line="503" selection-start-column="71" selection-end-line="503" selection-end-column="71" />
-          <folding>
-            <element signature="n#!!block;n#openModal#0" />
-            <element signature="e#110#3047#0" />
-            <element signature="e#3056#5431#0" />
-            <element signature="n#!!block;n#activateButtons#0" />
-            <element signature="e#9929#18018#0" />
-            <element signature="e#18027#25483#0" />
-            <element signature="n#!!block;n#backButton#0" />
-            <element signature="n#!!block;n#cancelRequest#0" />
-            <element signature="n#!!block;n#admin_uploadFormHome#0" />
-            <element signature="n#!!block;n#admin_uploadFormOffice#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="585">
           <caret line="558" column="44" selection-start-line="558" selection-start-column="44" selection-end-line="558" selection-end-column="44" />
           <folding>
             <element signature="n#div#0;n#!!top" />
@@ -1150,6 +1118,38 @@
             <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#2;n#div#9;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#10;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#11;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="118" column="8" lean-forward="true" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
+          <folding>
+            <element signature="n#causfa_email_surplus#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/admin-modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="1008" column="22" selection-start-line="1008" selection-start-column="22" selection-end-line="1008" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!block;n#openModal#0" />
+            <element signature="e#110#3047#0" />
+            <element signature="e#3056#5431#0" />
+            <element signature="n#!!block;n#activateButtons#0" />
+            <element signature="n#!!block;n#processStep#0" />
+            <element signature="e#9929#18018#0" />
+            <element signature="e#18027#25483#0" />
+            <element signature="n#!!block;n#backButton#0" />
+            <element signature="e#31701#42879#0" />
+            <element signature="e#42888#51944#0" />
+            <element signature="n#!!block;n#cancelRequest#0" />
+            <element signature="n#!!block;n#admin_uploadFormHome#0" />
+            <element signature="n#!!block;n#admin_uploadFormOffice#0" />
           </folding>
         </state>
       </provider>
