@@ -126,7 +126,7 @@ function causfa_email_to_spiceworks() {
         $body .= 'Description: '.$result->FZVFORG_DESCRIPTION."\n\r";
         $body .= 'Notes: '.$result->Notes."\r\n";
         $body .= 'Admin Notes: '.$admin_notes."\r\n";
-        $body .= '#creator by '.$result->PID_Submit.'@vt.edu';
+        $body .= '#created by '.$result->PID_Submit.'@vt.edu';
         mail($to, $subject, $body);
     }
 }
