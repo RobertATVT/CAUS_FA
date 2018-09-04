@@ -106,19 +106,43 @@ function causfa_email_transfer_change_admin($admin1, $admin2, $requester, $recip
     }
 }
 
-function causfa_email_problem($to, $from, $ptag, $problem) {
+function causfa_email_problem($requester, $ptag, $problem) {
     if (CAUSFA_SEND_EMAIL) {
         $headers = "MIME-Version: 1.0\n";
         $headers .= "Content-type: text/html; charset=iso-8859-1";
+        $to = causfa_get_recipient_list($requester);
+        $ticketSubject = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/ticket-subject.txt', true);
+        $ticketSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $ticketSubject);
+        $ticketSubject = str_replace('[EMPLOYEE]', $requester, $ticketSubject);
+        $ticketSubject = str_replace( '[PTAG]', $ptag, $ticketSubject);
+        $bodyText = causfa_email_get_name($requester)." (".$requester.") submitted a ticket for an asset with tag number ".$ptag.". The stated problem is - ".$problem;
+        $footerText = "Email generated on behalf of " . causfa_email_get_name($requester) . " (" . $requester . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application ";
+        $ticketBody = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/ticket-body.html', true);
+        $ticketBody = str_replace( '[ticketBody]', $bodyText, $ticketBody);
+        $ticketBody = str_replace( '[footer]', $footerText, $ticketBody);
+        $ticketBody = str_replace( '[date]', date("D, m d, Y"), $ticketBody);
+        mail(implode(',', $to), $ticketSubject, $ticketBody, $headers);
     }
 }
 
-function causfa_email_add_asset($to, $from, $ptag, $desc, $serial) {
+function causfa_email_to_spiceworks() {
     if (CAUSFA_SEND_EMAIL) {
-        $headers = "MIME-Version: 1.0\n";
-        $headers .= "Content-type: text/html; charset=iso-8859-1";
+        global $wpdb;
+        $ptag = $_POST['ptag'];
+        $admin_notes = $_POST['notes'];
+        $result = $wpdb->get_row("SELECT * FROM causfa_tickets WHERE FZVFORG_PTAG = '".$ptag."'");
+        $user = $wpdb->get_row('SELECT * FROM causfa_custodians WHERE PID = '.$result->PID_Submit.';');
+        $to = 'caussupport@vt.edu';
+        $subject = 'Ticket submitted on behalf of '.$user->Name.' ('.$result->PID_Submit.') through the Fixed Assets Application';
+        $body = 'Tag: '.$ptag."\n\r";
+        $body .= 'Description: '.$result->FZVFORG_DESCRIPTION."\n\r";
+        $body .= 'Notes: '.$result->Notes."\r\n";
+        $body .= 'Admin Notes: '.$admin_notes."\r\n";
+        $body .= '#created by '.$result->PID_Submit.'@vt.edu';
+        mail($to, $subject, $body);
     }
 }
+
 function causfa_get_recipient_list($requester, $recipient = null) {
     $to = array();
     if (!causfa_groups_is_admin($requester)) {

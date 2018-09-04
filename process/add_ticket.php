@@ -53,10 +53,21 @@ function causfa_add_ticket() {
         'Info' => $note
     );
     causfa_logger($logger_info);
+    causfa_email_problem($user, $ptag, $note);
     $output['status'] = 1;
     $output['message'] = 'Your request has been submitted and will be processed by your Fixed Assets Liaison';
     wp_send_json($output);
 
+}
+
+function causfa_close_ticket() {
+    global $wpdb;
+    $ptag = $_POST['ptag'];
+    $wpdb->delete('causfa_tickets', array('FZVFORG_PTAG' => $ptag));
+    $output = array(
+        'status' => 1
+    );
+    wp_send_json($output);
 }
 
 function causfa_ticket_number() {
