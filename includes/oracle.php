@@ -17,7 +17,7 @@ function causfa_oracle_full_org() {
         exit;
     }
     else {
-        $query = "select * from BANINST1.FZVFORG";
+        $query = "select * from BANINST1.FZVFORG order by FZVFORG_PTAG";
         $stid = oci_parse($conn, $query);
         $r = oci_execute($stid);
         $output = causfa_oracle_compare($stid);
@@ -30,7 +30,7 @@ function causfa_oracle_full_org() {
 
 function causfa_oracle_compare($stid) {
     global $wpdb;
-    $assets = $wpdb->get_results('SELECT * FROM causfa_banner');
+    $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
     $output = 'never finding it';
     while ($row = oci_fetch_array($stid, OCI_RETURN_NULLS+OCI_ASSOC)) {
         $found = false;
@@ -44,8 +44,8 @@ function causfa_oracle_compare($stid) {
                 array_splice($assets, $i, 1);
                 $found = true;
             }
-            echo "<script>alert(".$found.");</script>";
         }
+        echo "<script>alert(".$found.");</script>";
         if (!$found) {
             //log exception / change report
 
