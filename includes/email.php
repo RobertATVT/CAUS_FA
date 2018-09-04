@@ -106,10 +106,22 @@ function causfa_email_transfer_change_admin($admin1, $admin2, $requester, $recip
     }
 }
 
-function causfa_email_problem($to, $from, $ptag, $problem) {
+function causfa_email_problem($requester, $ptag, $problem) {
     if (CAUSFA_SEND_EMAIL) {
         $headers = "MIME-Version: 1.0\n";
         $headers .= "Content-type: text/html; charset=iso-8859-1";
+        $to = causfa_get_recipient_list($requester);
+        $ticketSubject = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/ticket-subject.txt', true);
+        $ticketSubject = str_replace('[EMPLOYEE_NAME]', causfa_email_get_name($requester), $ticketSubject);
+        $ticketSubject = str_replace('[EMPLOYEE]', $requester, $ticketSubject);
+        $ticketSubject = str_replace( '[PTAG]', $ptag, $ticketSubject);
+        $bodyText = causfa_email_get_name($requester)." (".$requester.") submitted a ticket for an asset with tag number ".$ptag.". The stated problem is - ".$problem;
+        $footerText = "Email generated on behalf of " . causfa_email_get_name($requester) . " (" . $requester . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application ";
+        $ticketBody = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/ticket-body.html', true);
+        $ticketBody = str_replace( '[surplusBody]', $bodyText, $ticketBody);
+        $ticketBody = str_replace( '[footer]', $footerText, $ticketBody);
+        $ticketBody = str_replace( '[date]', date("D, m d, Y"), $ticketBody);
+        mail(implode(',', $to), $ticketSubject, $ticketBody, $headers);
     }
 }
 
@@ -131,12 +143,6 @@ function causfa_email_to_spiceworks() {
     }
 }
 
-function causfa_email_add_asset($to, $from, $ptag, $desc, $serial) {
-    if (CAUSFA_SEND_EMAIL) {
-        $headers = "MIME-Version: 1.0\n";
-        $headers .= "Content-type: text/html; charset=iso-8859-1";
-    }
-}
 function causfa_get_recipient_list($requester, $recipient = null) {
     $to = array();
     if (!causfa_groups_is_admin($requester)) {
