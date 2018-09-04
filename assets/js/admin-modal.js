@@ -1030,7 +1030,7 @@ function submitRequest(process, stage, index) {
             };
             jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
                 if (data['status'] === 1) {
-                    var element = document.getElementById('transfer-' + $('#tickets-stage-1-id').val());
+                    var element = document.getElementById('tickets-' + $('#tickets-stage-1-id').val());
                     var grandParent = element.parentNode.parentNode;
                     grandParent.parentNode.removeChild(grandParent);
                     $('#tickets-stage-1-notes').val('');
