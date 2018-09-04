@@ -1009,12 +1009,7 @@ function submitRequest(process, stage, index) {
                     'ptag': jQuery('#tickets-stage-1-ptag').val(),
                     'notes': comment
                 };
-                jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-                    if (data['status'] ==- 1) {
-                        $('#tickets-stage-1-notes').val('');
-                        $('#tickets-stage-1').modal('close');
-                    }
-                });
+                jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
             } else {
                 var note = 'The ticket requester was contacted on ' + $('#tickets-date').val() + '. ';
                 var comment = $('#tickets-stage-1-notes').val();
@@ -1029,6 +1024,19 @@ function submitRequest(process, stage, index) {
                 };
                 jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
             }
+            var form = {
+                'action': 'causfa_close_ticket',
+                'ptag': jQuery('#tickets-stage-1-ptag').val()
+            };
+            jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+                if (data['status'] === 1) {
+                    var element = document.getElementById('transfer-' + $('#tickets-stage-1-id').val());
+                    var grandParent = element.parentNode.parentNode;
+                    grandParent.parentNode.removeChild(grandParent);
+                    $('#tickets-stage-1-notes').val('');
+                    $('#tickets-stage-1').modal('close');
+                }
+            });
             break;
     }
 }

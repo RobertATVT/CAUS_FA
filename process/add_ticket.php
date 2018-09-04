@@ -59,6 +59,16 @@ function causfa_add_ticket() {
 
 }
 
+function causfa_close_ticket() {
+    global $wpdb;
+    $ptag = $_POST['ptag'];
+    $wpdb->delete('causfa_tickets', array('FZVFORG_PTAG' => $ptag));
+    $output = array(
+        'status' => 1
+    );
+    wp_send_json($output);
+}
+
 function causfa_ticket_number() {
     global $wpdb;
     $oldTime = date('Y-m-d', mktime(0, 0, 0, date("m") , date("d") - 14, date("Y")));

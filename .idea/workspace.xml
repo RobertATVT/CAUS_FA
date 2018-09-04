@@ -4,6 +4,8 @@
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/assets/js/admin-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/admin-modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process/add_ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/add_ticket.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +43,7 @@
           <entry key="html" value="85" />
           <entry key="ini" value="2" />
           <entry key="js" value="26" />
-          <entry key="php" value="43" />
+          <entry key="php" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -49,15 +51,15 @@
           <entry key="HTML" value="85" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="26" />
-          <entry key="PHP" value="43" />
+          <entry key="PHP" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="2657" />
           <entry key="ini" value="1" />
-          <entry key="js" value="12215" />
-          <entry key="php" value="9164" />
+          <entry key="js" value="12322" />
+          <entry key="php" value="9432" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -65,19 +67,19 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="2657" />
           <entry key="Ini" value="1" />
-          <entry key="JavaScript" value="12214" />
-          <entry key="PHP" value="9164" />
+          <entry key="JavaScript" value="12321" />
+          <entry key="PHP" value="9432" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/admin-modal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="1013" column="60" lean-forward="true" selection-start-line="1013" selection-start-column="60" selection-end-line="1013" selection-end-column="60" />
+            <state relative-caret-position="498">
+              <caret line="1031" column="38" selection-start-line="1031" selection-start-column="38" selection-end-line="1031" selection-end-column="38" />
               <folding>
                 <element signature="n#!!block;n#openModal#0" />
                 <element signature="e#110#3047#0" />
@@ -100,10 +102,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="133" column="30" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+            <state relative-caret-position="422">
+              <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
               <folding>
                 <element signature="n#causfa_email_surplus#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/process/add_ticket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="618">
+              <caret line="81" column="66" selection-start-line="81" selection-start-column="66" selection-end-line="81" selection-end-column="66" />
+              <folding>
+                <element signature="e#6#322#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -321,7 +344,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/process/alerts.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-employee-alert-item.html" />
         <option value="$PROJECT_DIR$/includes/autocomplete.php" />
         <option value="$PROJECT_DIR$/assets/backup/js/admin-modal.js" />
@@ -368,10 +390,11 @@
         <option value="$PROJECT_DIR$/process/DBSerialize.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-employee-header.html" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-modal.html" />
-        <option value="$PROJECT_DIR$/includes/email.php" />
         <option value="$PROJECT_DIR$/assets/js/admin-modal.js" />
+        <option value="$PROJECT_DIR$/includes/email.php" />
+        <option value="$PROJECT_DIR$/process/add_ticket.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -413,18 +436,17 @@
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
               <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
+              <item name="process" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
@@ -515,12 +537,12 @@
       <workItem from="1533608762459" duration="23722000" />
       <workItem from="1534210873957" duration="23056000" />
       <workItem from="1534352505808" duration="11219000" />
-      <workItem from="1534460579842" duration="28834000" />
+      <workItem from="1534460579842" duration="30284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="489683000" />
+    <option name="totallyTimeSpent" value="491133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -899,11 +921,6 @@
     <entry file="file://$PROJECT_DIR$/assets/js/awesomplete.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/add_ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/process/retrieveForms.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -962,16 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="80" column="80" selection-start-line="80" selection-start-column="80" selection-end-line="80" selection-end-column="80" />
-          <folding>
-            <element signature="e#6#322#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1125,20 +1132,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="133" column="30" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
-          <folding>
-            <element signature="n#causfa_email_surplus#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/admin-modal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="1013" column="60" lean-forward="true" selection-start-line="1013" selection-start-column="60" selection-end-line="1013" selection-end-column="60" />
+        <state relative-caret-position="498">
+          <caret line="1031" column="38" selection-start-line="1031" selection-start-column="38" selection-end-line="1031" selection-end-column="38" />
           <folding>
             <element signature="n#!!block;n#openModal#0" />
             <element signature="e#110#3047#0" />
@@ -1153,6 +1150,33 @@
             <element signature="n#!!block;n#cancelRequest#0" />
             <element signature="n#!!block;n#admin_uploadFormHome#0" />
             <element signature="n#!!block;n#admin_uploadFormOffice#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+          <folding>
+            <element signature="n#causfa_email_surplus#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/add_ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="81" column="66" selection-start-line="81" selection-start-column="66" selection-end-line="81" selection-end-column="66" />
+          <folding>
+            <element signature="e#6#322#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
