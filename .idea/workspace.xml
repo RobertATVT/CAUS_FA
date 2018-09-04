@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/emailTemplates/ticket-subject.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/add_ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/add_ticket.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +58,7 @@
           <entry key="html" value="2657" />
           <entry key="ini" value="1" />
           <entry key="js" value="12329" />
-          <entry key="php" value="9944" />
+          <entry key="php" value="9959" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
@@ -70,7 +68,7 @@
           <entry key="HTML" value="2657" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="12328" />
-          <entry key="PHP" value="9944" />
+          <entry key="PHP" value="9959" />
           <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
@@ -78,25 +76,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="115" column="46" lean-forward="true" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
+            <state relative-caret-position="531">
+              <caret line="120" column="43" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
               <folding>
                 <element signature="n#causfa_email_transfer#0;n#!!top" />
                 <element signature="n#causfa_email_transfer_update#0;n#!!top" />
                 <element signature="n#causfa_email_transfer_change_admin#0;n#!!top" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/process/add_ticket.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="706">
-              <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -215,8 +204,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/js/admin-modal.js" />
         <option value="$PROJECT_DIR$/assets/emailTemplates/ticket-subject.txt" />
-        <option value="$PROJECT_DIR$/includes/email.php" />
         <option value="$PROJECT_DIR$/process/add_ticket.php" />
+        <option value="$PROJECT_DIR$/includes/email.php" />
       </list>
     </option>
   </component>
@@ -353,12 +342,12 @@
       <workItem from="1533608762459" duration="23722000" />
       <workItem from="1534210873957" duration="23056000" />
       <workItem from="1534352505808" duration="11219000" />
-      <workItem from="1534460579842" duration="32748000" />
+      <workItem from="1534460579842" duration="32958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="493597000" />
+    <option name="totallyTimeSpent" value="493807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -982,22 +971,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/process/add_ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/email.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="115" column="46" lean-forward="true" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
+        <state relative-caret-position="531">
+          <caret line="120" column="43" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
           <folding>
             <element signature="n#causfa_email_transfer#0;n#!!top" />
             <element signature="n#causfa_email_transfer_update#0;n#!!top" />
             <element signature="n#causfa_email_transfer_change_admin#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/add_ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="706">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
         </state>
       </provider>
     </entry>

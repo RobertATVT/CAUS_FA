@@ -118,7 +118,7 @@ function causfa_email_problem($requester, $ptag, $problem) {
         $bodyText = causfa_email_get_name($requester)." (".$requester.") submitted a ticket for an asset with tag number ".$ptag.". The stated problem is - ".$problem;
         $footerText = "Email generated on behalf of " . causfa_email_get_name($requester) . " (" . $requester . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application ";
         $ticketBody = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/ticket-body.html', true);
-        $ticketBody = str_replace( '[surplusBody]', $bodyText, $ticketBody);
+        $ticketBody = str_replace( '[ticketBody]', $bodyText, $ticketBody);
         $ticketBody = str_replace( '[footer]', $footerText, $ticketBody);
         $ticketBody = str_replace( '[date]', date("D, m d, Y"), $ticketBody);
         mail(implode(',', $to), $ticketSubject, $ticketBody, $headers);
