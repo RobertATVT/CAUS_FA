@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/includes/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/email.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process/add_ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/add_ticket.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,7 +58,7 @@
           <entry key="html" value="2657" />
           <entry key="ini" value="1" />
           <entry key="js" value="12329" />
-          <entry key="php" value="10562" />
+          <entry key="php" value="10572" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
@@ -69,7 +68,7 @@
           <entry key="HTML" value="2657" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="12328" />
-          <entry key="PHP" value="10562" />
+          <entry key="PHP" value="10572" />
           <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
@@ -123,8 +122,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/process/add_ticket.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+            <state relative-caret-position="590">
+              <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -387,12 +386,12 @@
       <workItem from="1533608762459" duration="23722000" />
       <workItem from="1534210873957" duration="23056000" />
       <workItem from="1534352505808" duration="11219000" />
-      <workItem from="1534460579842" duration="34654000" />
+      <workItem from="1534460579842" duration="34781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="495503000" />
+    <option name="totallyTimeSpent" value="495630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1025,8 +1024,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process/add_ticket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+        <state relative-caret-position="590">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
         </state>
       </provider>
     </entry>

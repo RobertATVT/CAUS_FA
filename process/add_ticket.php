@@ -54,9 +54,9 @@ function causfa_add_ticket() {
     );
     causfa_logger($logger_info);
     if ($type) {
-        causfa_email_add_asset($user, $ptag, $serial, $desc);
-    } else {
         causfa_email_problem($user, $ptag, $note);
+    } else {
+        causfa_email_add_asset($user, $ptag, $serial, $desc);
     }
     $output['status'] = 1;
     $output['message'] = 'Your request has been submitted and will be processed by your Fixed Assets Liaison';
