@@ -620,7 +620,7 @@
         </div>
     </div>
 </div>
-<!-----ASSET REPORT UPLOAD MODAL----->
+<!-----ORG REPORT UPLOAD MODAL----->
 <div id="fa-upload" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title" id="formsModalLabel">Upload ORG Report</h4>
@@ -640,7 +640,7 @@
     </div>
 </div>
 
-<!-----ASSET REPORT UPLOAD MODAL----->
+<!-----MISSING REPORT UPLOAD MODAL----->
 <div id="fa-upload" class="modal">
     <div class="modal-content">
         <h4 class="center faa-modal-title" id="formsModalLabel">Upload Missing Report</h4>
@@ -653,6 +653,29 @@
 					<input type="button" class="btn btn-primary org-upload" value="Process New Missing Report" onclick="processMissing()">
 				</div>
 			</form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
+    </div>
+</div>
+
+<!-----UPLOAD PROGRESS MODAL----->
+<div id="fa-progress" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="formsModalLabel">Upload Progress</h4>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+            <div class="cl t16 center">
+                Pulling new Database Information from the VT Banner Production Database. 
+            </div>
+            <div class="cl t1 center" id="FA_LoadPercent">[0]</div>
+            <div class="cl t1 left" id="FA_LoadPercent">%</div>
+            <div class="cl t1 left" id="FA_LoadPercent"> Loaded</div>
+            <div class="cl t20 center">
+                <div class="meter orange">
+                    <span id="FA_LoadProgress" style="width: 60%"></span>
+                </div>
+            </div>
         </div>
     </div>
     <div class="modal-footer">
