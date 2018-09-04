@@ -78,6 +78,7 @@ add_action( 'wp_ajax_causfa_surplus_to_transfer', 'causfa_surplus_to_transfer');
 add_action( 'wp_ajax_causfa_upload_surplus_form', 'causfa_upload_surplus_form');
 add_action( 'wp_ajax_causfa_add_note', 'causfa_add_note');
 add_action( 'wp_ajax_causfa_update_from_banner', 'causfa_oracle_full_org');
+add_action( 'wp_ajax_causfa_email_to_spiceworks', 'causfa_email_to_spiceworks');
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app

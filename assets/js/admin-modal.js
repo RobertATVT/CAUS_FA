@@ -501,7 +501,7 @@ function processStep(process, stage, step) {
 								$("#tickets-stage-1c").css("display", "none");
 								$("#tickets-stage-1d").css("display", "none");
 								$("#tickets-stage-1e").css("display", "none");
-								$("#tickets-stage-1f").css("display", "none");
+								$("#tickets-stage-1f").css("display", "");
 								$('#tickets-stage-1-back').val('2');
 								$('#tickets-stage-1-back').css("display", "");
                                 activateButtons('tickets','stage1','on');
@@ -993,11 +993,21 @@ function submitRequest(process, stage, index) {
         case 'tickets':
             if ($('#tickets-stage-1-submit').val() === 'IT') {
                 var note = 'This ticket is an IT related ticket and will be transferred to the IT Ticket system';
+                var comment = $('#tickets-stage-1-notes').val();
+                if (comment !== '') {
+                    note = note + 'The admin has entered the following notes: ' + comment;
+                }
                 var form = {
                     'action': 'causfa_add_note',
                     'act': 'Ticket-IT',
                     'ptag': jQuery('#ticket-stage-1-ptag').val(),
                     'note': note
+                };
+                jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
+                var form = {
+                    'action': 'causfa_email_to_spiceworks',
+                    'ptag': jQuery('#ticket-stage-1-ptag').val(),
+                    'notes': comment
                 };
                 jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
             } else {

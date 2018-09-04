@@ -113,6 +113,24 @@ function causfa_email_problem($to, $from, $ptag, $problem) {
     }
 }
 
+function causfa_email_to_spiceworks() {
+    if (CAUSFA_SEND_EMAIL) {
+        global $wpdb;
+        $ptag = $_POST['ptag'];
+        $admin_notes = $_POST['notes'];
+        $result = $wpdb->get_row("SELECT * FROM causfa_tickets WHERE FZVFORG_PTAG = '".$ptag."'");
+        $user = $wpdb->get_row('SELECT * FROM causfa_custodians WHERE PID = '.$result->PID_Submit.';');
+        $to = 'caussupport@vt.edu';
+        $subject = 'Ticket submitted on behalf of '.$user->Name.' ('.$result->PID_Submit.') through the Fixed Assets Application';
+        $body = 'Tag: '.$ptag."\n\r";
+        $body .= 'Description: '.$result->FZVFORG_DESCRIPTION."\n\r";
+        $body .= 'Notes: '.$result->Notes."\r\n";
+        $body .= 'Admin Notes: '.$admin_notes."\r\n";
+        $body .= '#created '.$result->PID_Submit.'@vt.edu';
+        mail($to, $subject, $body);
+    }
+}
+
 function causfa_email_add_asset($to, $from, $ptag, $desc, $serial) {
     if (CAUSFA_SEND_EMAIL) {
         $headers = "MIME-Version: 1.0\n";

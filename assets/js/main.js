@@ -32,7 +32,7 @@ function submitSVar(obj) {
         name: obj['Name'],
         input: obj['Input']
     };
-    jQUery.post(causfa_action_obj.ajax_url, form, function(data) {
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data != 1) {
             alert('Something went wrong');
         }
