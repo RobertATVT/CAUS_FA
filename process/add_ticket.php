@@ -36,7 +36,7 @@ function causfa_add_ticket() {
             'FZVFORG_PTAG' => $ptag,
             'FZVFORG_SERIAL_NUM' => $serial,
             'FZVFORG_DESCRIPTION' => $desc,
-            'Notes' => $note,
+            'Notes' => ($type ? $note : 'add-asset'),
             'Type' => $type
         ), array('%s','%s','%s','%s','%s','%s','%s','%s','%d')
     );
@@ -53,7 +53,11 @@ function causfa_add_ticket() {
         'Info' => $note
     );
     causfa_logger($logger_info);
-    causfa_email_problem($user, $ptag, $note);
+    if ($type) {
+        causfa_email_add_asset($user, $ptag, $serial, $desc);
+    } else {
+        causfa_email_problem($user, $ptag, $note);
+    }
     $output['status'] = 1;
     $output['message'] = 'Your request has been submitted and will be processed by your Fixed Assets Liaison';
     wp_send_json($output);
