@@ -48,6 +48,7 @@ include('includes/oracle.php');
 
 
 //Hooks
+add_action( 'admin_menu', 'causfa_admin_menu' );
 add_action( 'wp_enqueue_scripts', 'causfa_enqueue', 100);
 add_action( 'wp_login', 'causfa_logger_login', 100, 2);
 register_activation_hook( __FILE__, 'causfa_activate_plugin' );

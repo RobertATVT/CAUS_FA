@@ -74,3 +74,58 @@ function causfa_activate_plugin() {
     //This function creates the tables required by the plugin
     create_tables();
 }
+
+function causfa_admin_menu() {
+	add_menu_page( 'CAUS Fixed Assets Administration', 'CAUS Fixed Assets', 'edit_others_posts', 'causfa_admin_menu', 'causfa_admin_options' );
+    add_submenu_page( 'causfa_admin_menu', 'Transfers', 'Transfers', 'edit_others_posts', 'causfa_admin_transfers', 'causfa_admin_tran');
+    add_submenu_page( 'causfa_admin_menu', 'Surplus', 'Surplus', 'edit_others_posts', 'causfa_admin_Surplus', 'causfa_admin_surp');
+    add_submenu_page( 'causfa_admin_menu', 'Tickets', 'Tickets', 'edit_others_posts', 'causfa_admin_Tickets', 'causfa_admin_tick');
+    add_submenu_page( 'causfa_admin_menu', 'Reports', 'Reports', 'edit_others_posts', 'causfa_admin_Reports', 'causfa_admin_repo');
+}
+
+function causfa_admin_options() {
+	if ( !current_user_can( 'edit_others_posts' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+	echo '<div class="wrap">';
+    echo '<h1>Fixed Assets Administration Dashboard</h1>';
+	echo '<p>Here is where the form would go if I actually had options.</p>';
+	echo '</div>';
+}
+function causfa_admin_tran() {
+	if ( !current_user_can( 'edit_others_posts' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+	echo '<div class="wrap">';
+    echo '<h1>Fixed Assets Administration Transfers</h1>';
+	echo '<p>Here is where the form would go if I actually had options.</p>';
+	echo '</div>';
+}
+function causfa_admin_surp() {
+	if ( !current_user_can( 'edit_others_posts' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+	echo '<div class="wrap">';
+    echo '<h1>Fixed Assets Administration Surplus</h1>';
+	echo '<p>Here is where the form would go if I actually had options.</p>';
+	echo '</div>';
+}
+function causfa_admin_tick() {
+	if ( !current_user_can( 'edit_others_posts' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+	echo '<div class="wrap">';
+    echo '<h1>Fixed Assets Administration Tickets</h1>';
+	echo '<p>Here is where the form would go if I actually had options.</p>';
+	echo '</div>';
+}
+function causfa_admin_repo() {
+	if ( !current_user_can( 'edit_others_posts' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+	echo '<div class="wrap">';
+    echo '<h1>Fixed Assets Administration Reports</h1>';
+	echo '<p>Here is where the form would go if I actually had options.</p>';
+	echo '</div>';
+}
+?>
