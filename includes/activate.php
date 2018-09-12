@@ -91,6 +91,8 @@ function causfa_admin_options() {
 	$output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-header.html', true));
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-impact.html', true));
     
+    $output = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Admin Dashboard', $output);
+    
     $transfers = causfa_transfer_number();
 	$output = str_replace('[TRANSFER#]', $transfers['total'], $output);
     $output = str_replace('[TRANSFER OLD]', $transfers['old'], $output);
@@ -105,60 +107,61 @@ function causfa_admin_options() {
     $output = str_replace('[TICKET NEW]', $tickets['new'], $output);
     
     echo $output;
-//	echo '
-//    <div class="rw">
-//		<div class="cl t20" style="margin-bottom: 10px; background: #75787B; text-align: center; padding: 10px; color: #fff; font-weight: 700; font-size: 135%;">ADMIN DASHBOARD</div>
-//    </div>
-//    <div id="Dashboard" class="rw">
-//        <div class="rw" style="margin:0px !important; display: block;">
-//            <div class="cl m7 t20" style="padding:7px;">
-//                <div class="cl t20 vt-teal vt-txt-white asset-block">
-//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
-//                    <div class="cl m10 t8 biggertext">[TRANSFER#]</div>
-//                    <div class="cl m10 t12 subtext-right">Total Pending Transfers</div>
-//                    <div class="cl m10 t8 bigtext">[TRANSFER OLD]</div>
-//                    <div class="cl m10 t12 subtext-right">Total Transfers over 14 days</div>
-//                    <div class="cl m10 t8 bigtext">[TRANSFER NEW]</div>
-//                    <div class="cl m10 t12 subtext-right">Total Transfers under 7 days</div>
-//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
-//                </div>
-//            </div>
-//            <div class="cl m6 t20" style="padding:7px;">
-//                <div class="cl t20 vt-maroon vt-txt-white asset-block">
-//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
-//                    <div class="cl m10 t8 biggertext">[SURPLUS#]</div>
-//                    <div class="cl m10 t12 subtext-right">Total Pending Surplus Requests</div>
-//                    <div class="cl m10 t8 bigtext">[SURPLUS OLD]</div>
-//                    <div class="cl m10 t12 subtext-right">Total Surplus over 14 days</div>
-//                    <div class="cl m10 t8 bigtext">[SURPLUS NEW]</div>
-//                    <div class="cl m10 t12 subtext-right">Total Surplus under 7 days</div>
-//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
-//                </div>
-//            </div>
-//            <div class="cl m7 t20" style="padding:7px;">
-//                <div class="cl t20 vt-dk-orange vt-txt-white asset-block">
-//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
-//                    <div class="cl m10 t8 biggertext">[TICKET#]</div>
-//                    <div class="cl m10 t12 subtext-right">Total Pending Tickets</div>
-//                    <div class="cl m10 t8 bigtext">[TICKET OLD]</div>
-//                    <div class="cl m10 t12 subtext-right">Total Tickets over 14 days</div>
-//                    <div class="cl m10 t8 bigtext">[TICKET NEW]</div>
-//                    <div class="cl m10 t12 subtext-right">Total Tickets under 7 days</div>
-//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
-//                </div>
-//            </div>
-//        </div>
-//    </div>    
-//    ';
+
 }
 function causfa_admin_tran() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
-	echo '<div class="wrap">';
-    echo '<h1>Fixed Assets Administration Transfers</h1>';
-	echo '<p>Here is where the form would go if I actually had options.</p>';
-	echo '</div>';
+    global $wpdb;
+    $output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-header.html', true));
+    
+    $output = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Pending Transfers', $output);
+    
+	$results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 0 AND PENDING_STATUS > 0 AND ((FZVFORG_ORGN_CODE ='".causfa_groups_management_code()."'AND ASSIGNEE IS NULL) OR ASSIGNEE = '".wp_get_current_user()->user_nicename."');");
+	if (!count($results)) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-transfer-header-none.html', true));
+    } else {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-transfer-header.html', true));
+    }
+	for ($i = 0; $i < count($results); $i++) {
+        switch($results[$i]->PENDING_STATUS) {
+            case 1:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-1.html', true));
+                break;
+            case 2:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-2.html', true));
+                break;
+            case 3:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-3.html', true));
+                break;
+            case 4:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-4.html', true));
+                break;
+            case 5:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-5.html', true));
+                break;
+            case 6:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-6.html', true));
+                break;
+            case 7:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-7.html',true));
+            case 8:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-transfer-fill-8.html',true));
+                break;
+            default:
+                break;
+        }
+        $output = str_replace('[PTAG]', $results[$i]->FZVFORG_PTAG, $output);
+        $output = str_replace('[PID 1]', $results[$i]->PID_ORIGIN, $output);
+        $output = str_replace('[PID 2]', $results[$i]->PID_DESTINATION, $output);
+        $output = str_replace('[DATE]', $results[$i]->DATE_CREATED, $output);
+        $output = str_replace('[ID]', $i, $output);
+
+	}
+	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-transfer-footer.html', true));
+    
+    echo $output;
 }
 function causfa_admin_surp() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
