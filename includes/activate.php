@@ -4,7 +4,7 @@
  * User: mattwj6
  * Date: 3/7/18
  * Time: 2:01 AM
- */
+ */ 
 
 
 /**
@@ -87,10 +87,69 @@ function causfa_admin_options() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
-	echo '<div class="wrap">';
-    echo '<h1>Fixed Assets Administration Dashboard</h1>';
-	echo '<p>Here is where the form would go if I actually had options.</p>';
-	echo '</div>';
+    global $wpdb;
+	$output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-header.html', true));
+	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-impact.html', true));
+    
+    $transfers = causfa_transfer_number();
+	$output = str_replace('[TRANSFER#]', $transfers['total'], $output);
+    $output = str_replace('[TRANSFER OLD]', $transfers['old'], $output);
+    $output = str_replace('[TRANSFER NEW]', $transfers['new'], $output);
+    $surpluses = causfa_surplus_number();
+    $output = str_replace('[SURPLUS#]', $surpluses['total'], $output);
+    $output = str_replace('[SURPLUS OLD]', $surpluses['old'], $output);
+    $output = str_replace('[SURPLUS NEW]', $surpluses['new'], $output);
+    $tickets = causfa_ticket_number();
+    $output = str_replace('[TICKET#]', $tickets['total'], $output);
+    $output = str_replace('[TICKET OLD]', $tickets['old'], $output);
+    $output = str_replace('[TICKET NEW]', $tickets['new'], $output);
+    
+    echo $output;
+//	echo '
+//    <div class="rw">
+//		<div class="cl t20" style="margin-bottom: 10px; background: #75787B; text-align: center; padding: 10px; color: #fff; font-weight: 700; font-size: 135%;">ADMIN DASHBOARD</div>
+//    </div>
+//    <div id="Dashboard" class="rw">
+//        <div class="rw" style="margin:0px !important; display: block;">
+//            <div class="cl m7 t20" style="padding:7px;">
+//                <div class="cl t20 vt-teal vt-txt-white asset-block">
+//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
+//                    <div class="cl m10 t8 biggertext">[TRANSFER#]</div>
+//                    <div class="cl m10 t12 subtext-right">Total Pending Transfers</div>
+//                    <div class="cl m10 t8 bigtext">[TRANSFER OLD]</div>
+//                    <div class="cl m10 t12 subtext-right">Total Transfers over 14 days</div>
+//                    <div class="cl m10 t8 bigtext">[TRANSFER NEW]</div>
+//                    <div class="cl m10 t12 subtext-right">Total Transfers under 7 days</div>
+//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
+//                </div>
+//            </div>
+//            <div class="cl m6 t20" style="padding:7px;">
+//                <div class="cl t20 vt-maroon vt-txt-white asset-block">
+//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
+//                    <div class="cl m10 t8 biggertext">[SURPLUS#]</div>
+//                    <div class="cl m10 t12 subtext-right">Total Pending Surplus Requests</div>
+//                    <div class="cl m10 t8 bigtext">[SURPLUS OLD]</div>
+//                    <div class="cl m10 t12 subtext-right">Total Surplus over 14 days</div>
+//                    <div class="cl m10 t8 bigtext">[SURPLUS NEW]</div>
+//                    <div class="cl m10 t12 subtext-right">Total Surplus under 7 days</div>
+//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
+//                </div>
+//            </div>
+//            <div class="cl m7 t20" style="padding:7px;">
+//                <div class="cl t20 vt-dk-orange vt-txt-white asset-block">
+//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
+//                    <div class="cl m10 t8 biggertext">[TICKET#]</div>
+//                    <div class="cl m10 t12 subtext-right">Total Pending Tickets</div>
+//                    <div class="cl m10 t8 bigtext">[TICKET OLD]</div>
+//                    <div class="cl m10 t12 subtext-right">Total Tickets over 14 days</div>
+//                    <div class="cl m10 t8 bigtext">[TICKET NEW]</div>
+//                    <div class="cl m10 t12 subtext-right">Total Tickets under 7 days</div>
+//                    <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
+//                </div>
+//            </div>
+//        </div>
+//    </div>    
+//    ';
 }
 function causfa_admin_tran() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
