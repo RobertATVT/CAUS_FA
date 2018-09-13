@@ -106,8 +106,7 @@ function causfa_admin_options() {
     $output = str_replace('[TICKET OLD]', $tickets['old'], $output);
     $output = str_replace('[TICKET NEW]', $tickets['new'], $output);
     
-    return $output;
-    echo 'This is where the green gras grows';
+    echo $output;
 
 }
 function causfa_admin_tran() {
