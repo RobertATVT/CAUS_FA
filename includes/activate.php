@@ -106,7 +106,7 @@ function causfa_admin_options() {
     $output = str_replace('[TICKET OLD]', $tickets['old'], $output);
     $output = str_replace('[TICKET NEW]', $tickets['new'], $output);
     
-    echo $output;
+    return $output;
 
 }
 function causfa_admin_tran() {
