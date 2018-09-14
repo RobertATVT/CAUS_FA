@@ -642,8 +642,7 @@ select#org option:hover {
 /*==============  ADMIN CSS  ==============*/
 
 .wpadmin-header {
-    margin-bottom: 10px; 
-    background: #75787B; 
+    margin-bottom: 10px;  
     text-align: center; 
     padding: 10px !important; 
     color: #fff; 
@@ -653,16 +652,17 @@ select#org option:hover {
 }
 
 .report-block-header {
-	background-color: rgba(255,255,255,0.2); 
 	padding: 2px !important; 
+    background: #cecece;
+    color: #555;
 	text-transform: uppercase; 
 	font-weight: 700;
-	font-size: 130%; 
-	letter-spacing: .05em;
+	font-size: 100%; 
+	letter-spacing: .1em;
 }
 .report-input {
 	width: 95% !important;
-	font-size: 120% !important;
+	font-size: 100% !important;
 	text-align: center;
 	padding: 1px;
 	max-height: 20px !important;
@@ -873,14 +873,18 @@ a.btn-menu {
 }
 
 .btn-primary {
-    background: #e87722; 
+    background: #ED8B00; 
+/*    border: .5px solid #C64600 !important;*/
+    border-radius: 3px !important;
 }
 .btn-primary:focus {
     background: #861F41;
     border: none;
+    color: #fff !important;
 }
 .btn-primary:hover {
     background: #861F41;
+    color: #fff !important;
 }
 .btn-secondary {
     background: #cfcfcf; 
@@ -1194,15 +1198,14 @@ slider-for{
 		margin-bottom: 10px !important;
 	}
 	.report-block-header {
-		font-size: 70% !important;
-		font-weight: 900 !important;
-		color: #fff;
+		font-size: 100% !important;
+		font-weight: 700 !important;
 	}
 	.report-input {
-		font-size: 90% !important;
+		font-size: 100% !important;
 	}
 	.report-button {
-		font-size: 60% !important;
+		font-size: 100% !important;
 	}
 	.tablink {
 		font-size: 85% !important;

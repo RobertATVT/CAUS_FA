@@ -90,8 +90,12 @@ function causfa_admin_options() {
     
     global $wpdb;
     
-	$output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-header.html', true));
-    $output = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Admin Dashboard', $output);
+    $output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-header.html', true));
+    
+	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-title.html', true));
+    
+    $output = str_replace('%header-title%', 'CAUS Fixed Assets Admin Dashboard', $output);
+    $output = str_replace('%background%', 'vt-dk-blue', $output);
     
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-impact.html', true));
     
@@ -107,6 +111,15 @@ function causfa_admin_options() {
     $output = str_replace('[TICKET#]', $tickets['total'], $output);
     $output = str_replace('[TICKET OLD]', $tickets['old'], $output);
     $output = str_replace('[TICKET NEW]', $tickets['new'], $output);
+
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-title.html', true));
+    
+    $output = str_replace('%header-title%', 'administrative reports', $output);
+    $output = str_replace('%background%', 'vt-dk-blue', $output);
+      
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-reports.html', true));
+    
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-footer.html', true));
     
     echo $output;
 
