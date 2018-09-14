@@ -95,7 +95,8 @@ function causfa_admin_options() {
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-title.html', true));
     
     $output = str_replace('%header-title%', 'CAUS Fixed Assets Admin Dashboard', $output);
-    $output = str_replace('%background%', 'vt-dk-blue', $output);
+    $output = str_replace('%background%', 'vt-dk-grey', $output);
+    $output = str_replace('%style%', 'border-top-left-radius: 6px;border-top-right-radius: 6px;', $output);
     
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-impact.html', true));
     
@@ -114,10 +115,11 @@ function causfa_admin_options() {
 
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-title.html', true));
     
-    $output = str_replace('%header-title%', 'administrative reports', $output);
-    $output = str_replace('%background%', 'vt-dk-blue', $output);
+    $output = str_replace('%header-title%', 'Dashboard Help Information', $output);
+    $output = str_replace('%background%', 'vt-dk-grey', $output);
+    $output = str_replace('%style%', '', $output);
       
-    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-reports.html', true));
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-impact-help.html', true));
     
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-footer.html', true));
     
@@ -130,9 +132,14 @@ function causfa_admin_tran() {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
     global $wpdb;
+    
     $output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-header.html', true));
     
-    $output = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Pending Transfers', $output);
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-title.html', true));
+    
+    $output = str_replace('%header-title%', 'CAUS-FA Pending Transfers', $output);
+    $output = str_replace('%background%', 'vt-teal', $output);
+    $output = str_replace('%style%', 'border-top-left-radius: 6px;border-top-right-radius: 6px;', $output);
     
 	$results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 0 AND PENDING_STATUS > 0 AND ((FZVFORG_ORGN_CODE ='".causfa_groups_management_code()."'AND ASSIGNEE IS NULL) OR ASSIGNEE = '".wp_get_current_user()->user_nicename."');");
 	if (!count($results)) {
@@ -177,6 +184,10 @@ function causfa_admin_tran() {
 	}
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-transfer-footer.html', true));
     
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-transfer-help.html', true));
+    
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-footer.html', true));
+    
     echo $output;
 }
 
@@ -204,9 +215,21 @@ function causfa_admin_repo() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
-	echo '<div class="wrap">';
-    echo '<h1>Fixed Assets Administration Reports</h1>';
-	echo '<p>Here is where the form would go if I actually had options.</p>';
-	echo '</div>';
+	global $wpdb;
+    
+    $output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-header.html', true));
+    
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-title.html', true));
+    
+    $output = str_replace('%header-title%', 'administrative reports', $output);
+    $output = str_replace('%background%', 'vt-dk-blue', $output);
+    $output = str_replace('%style%', 'border-top-left-radius: 6px;border-top-right-radius: 6px;', $output);
+    
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-reports.html', true));
+    
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-footer.html', true));
+    
+    echo $output;
+    
 }
 ?>

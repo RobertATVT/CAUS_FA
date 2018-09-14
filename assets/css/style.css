@@ -268,16 +268,12 @@ select#org option:hover {
     font-weight:700;
     letter-spacing: .1em; 
     line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
 }
 .bigtext {
     font-size:150%;
     font-weight:700;
     letter-spacing: .1em; 
     line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
 }
 .block-headtext {
     font-size:140%;
@@ -434,6 +430,20 @@ select#org option:hover {
     box-sizing: border-box;
     min-height: 50px;
 }
+
+.admin-dash-left {
+    padding-right: 2px !important;
+}
+
+.admin-dash-center {
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+}
+
+.admin-dash-right {
+    padding-left: 2px !important;
+}
+
 .asset-border {
 	border: 1px solid rgba(0,0,0,0.15) !important;
     border-radius: 5px !important;
@@ -596,6 +606,7 @@ select#org option:hover {
 	padding-top: 5px !important; 
 	padding-bottom: 3px !important;
 	border-bottom: 1px solid rgba(255,255,255,.3);
+    font-weight: 700;
 }
 
 
@@ -647,7 +658,7 @@ select#org option:hover {
     padding: 10px !important; 
     color: #fff; 
     font-weight: 700; 
-    font-size: 135%;
+    font-size: 150%;
     text-transform: uppercase;
 }
 
@@ -807,21 +818,23 @@ a.btn-menu {
 }
 .form-upload {
 	width: 95% !important;
-	font-size: 65% !important;
+	font-size: 80% !important;
 	font-weight: 700;
 	text-align: center;
 	padding: 1px;
 	max-height: 20px;
 	line-height: 20px;
+    text-transform: uppercase;
 }
 .ticket-complete {
 	width: 95% !important;
-	font-size: 65% !important;
+	font-size: 80% !important;
 	font-weight: 700;
 	text-align: center;
 	padding: 1px;
 	max-height: 20px;
 	line-height: 20px;
+    text-transform: uppercase;
 }
 .report-button {
 	width: 95% !important;
@@ -1047,7 +1060,7 @@ slider-for{
     font-size: 150%;
 }
 #Dashboard {
-	background-color: #D7D2CB;
+	background-color: transparent;
 	border: 1px solid rgba(255,255,255,0.25);
 	padding: 0px !important;
 }
@@ -1064,7 +1077,7 @@ slider-for{
         font-size:90%;
     }
     .subtext {
-        font-size:80%;
+        font-size:100%;
     }
     .block-footer {
         padding: 3px !important;
@@ -1210,6 +1223,20 @@ slider-for{
 	.tablink {
 		font-size: 85% !important;
 	}
+    .admin-dash-left {
+        padding: 0px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .admin-dash-center {
+        padding: 0px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .admin-dash-right {
+        padding: 0px !important;
+        margin-bottom: 5px !important;
+    }
 }
 
 
@@ -1225,7 +1252,7 @@ slider-for{
         font-size:120%;
     }
     .subtext {
-        font-size:90%;
+        font-size:110%;
     }
     .block-footer {
         padding: 3px !important;
@@ -1327,9 +1354,6 @@ slider-for{
     .make-small {
         max-height: unset !important;
     }
-    .bigtext {
-        font-size:100%;
-    }
     .block-headtext {
         font-size:100%;
         line-height: 18px;
@@ -1426,6 +1450,15 @@ slider-for{
 	.ribbon-reports {
 		font-size: 70%;
 	}
+    .subtext-right {
+        font-size: 120%;
+    }
+    .biggertext {
+        font-size: 150%;
+    }
+    .bigtext {
+        font-size:130%;
+    }
 }
 
 
@@ -1578,6 +1611,16 @@ slider-for{
 		font-size: 12px !important;
 		line-height: 10px !important;
 	}
+    .admin-dash-left {
+    padding-right: 2px !important;
+    }
+    .admin-dash-center {
+        padding-right: 3px !important;
+        padding-left: 3px !important;
+    }
+    .admin-dash-right {
+        padding-left: 2px !important;
+    }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1600px) {
