@@ -87,9 +87,13 @@ function causfa_admin_options() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
+    
     global $wpdb;
+    echo 'global db set';
 	$output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-header.html', true));
+    echo 'header set';
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-impact.html', true));
+    echo 'impact set';
     
     $output = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Admin Dashboard', $output);
     
@@ -109,6 +113,7 @@ function causfa_admin_options() {
     echo $output;
 
 }
+
 function causfa_admin_tran() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
@@ -163,6 +168,7 @@ function causfa_admin_tran() {
     
     echo $output;
 }
+
 function causfa_admin_surp() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
@@ -172,6 +178,7 @@ function causfa_admin_surp() {
 	echo '<p>Here is where the form would go if I actually had options.</p>';
 	echo '</div>';
 }
+
 function causfa_admin_tick() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
@@ -181,6 +188,7 @@ function causfa_admin_tick() {
 	echo '<p>Here is where the form would go if I actually had options.</p>';
 	echo '</div>';
 }
+
 function causfa_admin_repo() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
