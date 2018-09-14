@@ -90,29 +90,25 @@ function causfa_admin_options() {
     
     global $wpdb;
     
-	$output1 = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-header.html', true));
-//    $output1 = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Admin Dashboard', $output1);
+	$output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-header.html', true));
+    $output = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Admin Dashboard', $output);
     
-    echo $output1;
-    
-	$output2 = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-impact.html', true));
-    
-    echo $output2;
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-impact.html', true));
     
     $transfers = causfa_transfer_number();
-	$output3 = str_replace('[TRANSFER#]', $transfers['total'], $output2);
-    $output3 = str_replace('[TRANSFER OLD]', $transfers['old'], $output2);
-    $output3 = str_replace('[TRANSFER NEW]', $transfers['new'], $output2);
+	$output = str_replace('[TRANSFER#]', $transfers['total'], $output);
+    $output = str_replace('[TRANSFER OLD]', $transfers['old'], $output);
+    $output = str_replace('[TRANSFER NEW]', $transfers['new'], $output);
     $surpluses = causfa_surplus_number();
-    $output3 = str_replace('[SURPLUS#]', $surpluses['total'], $output2);
-    $output3 = str_replace('[SURPLUS OLD]', $surpluses['old'], $output2);
-    $output3 = str_replace('[SURPLUS NEW]', $surpluses['new'], $output2);
+    $output = str_replace('[SURPLUS#]', $surpluses['total'], $output);
+    $output = str_replace('[SURPLUS OLD]', $surpluses['old'], $output);
+    $output = str_replace('[SURPLUS NEW]', $surpluses['new'], $output);
     $tickets = causfa_ticket_number();
-    $output3 = str_replace('[TICKET#]', $tickets['total'], $output2);
-    $output3 = str_replace('[TICKET OLD]', $tickets['old'], $output2);
-    $output3 = str_replace('[TICKET NEW]', $tickets['new'], $output2);
+    $output = str_replace('[TICKET#]', $tickets['total'], $output);
+    $output = str_replace('[TICKET OLD]', $tickets['old'], $output);
+    $output = str_replace('[TICKET NEW]', $tickets['new'], $output);
     
-//    echo $output;
+    echo $output;
 
 }
 
@@ -121,7 +117,7 @@ function causfa_admin_tran() {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
     global $wpdb;
-    $output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-header.html', true));
+    $output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-header.html', true));
     
     $output = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Pending Transfers', $output);
     
