@@ -91,7 +91,7 @@ function causfa_admin_options() {
     global $wpdb;
     
 	$output1 = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'assets\html\faa-wpadmin-header.html', true));
-    $output1 = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Admin Dashboard', $output1);
+//    $output1 = str_replace('[CAUSFA_ADMIN_HEADER]', 'CAUS Fixed Assets Admin Dashboard', $output1);
     
     echo $output1;
     
