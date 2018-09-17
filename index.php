@@ -46,7 +46,6 @@ include('process/alerts.php');
 include('process/notes.php');
 include('includes/oracle.php');
 
-
 //Hooks
 add_action( 'wp_enqueue_scripts', 'causfa_enqueue', 100);
 add_action( 'wp_login', 'causfa_logger_login', 100, 2);

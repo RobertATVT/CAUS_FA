@@ -144,14 +144,9 @@ function checkSelected() {
 }
 
 function causfa_run_full_org() {
-    var form = {
-        'action': 'causfa_update_from_banner'
-    };
-    $.ajax({
-        type: "POST",
-        url: causfa_action_obj.ajax_url,
-        data: form,
-        timeout: 10000
-        });
+    $('#fa-progress').modal();
+    $('#fa-progress').modal('open');
+    document.getElementById('uploadProgress').src = 'http://localhost/CAUS_FA/wp-content/plugins/CAUS_FA/includes/oracle.php';
 }
+
 
