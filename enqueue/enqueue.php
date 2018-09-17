@@ -85,5 +85,11 @@ function causfa_admin_enqueue() {
     wp_enqueue_style('causadmin_style');
     wp_enqueue_style('causadmin_paradox');
 	wp_enqueue_style('causadmin_awesomplete');
-    
+
+    wp_register_script('causfa_admin_modal', plugins_url('assets/js/admin-modal.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causfa_main', plugins_url('assets/js/main.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+
+    wp_enqueue_script('causfa_modal');
+    wp_enqueue_script('causfa_admin_modal');
+
 }
