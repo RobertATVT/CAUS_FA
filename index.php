@@ -8,7 +8,7 @@
  * Text Domain: CAUS Fixed Assets Application
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- */
+ */ 
 
 //checks if WordPress exists
 if( !function_exists( 'add_action')) {
@@ -47,6 +47,8 @@ include('process/notes.php');
 include('includes/oracle.php');
 
 //Hooks
+add_action( 'admin_menu', 'causfa_admin_menu' );
+add_action( 'admin_enqueue_scripts', 'causfa_admin_enqueue');
 add_action( 'wp_enqueue_scripts', 'causfa_enqueue', 100);
 add_action( 'wp_login', 'causfa_logger_login', 100, 2);
 register_activation_hook( __FILE__, 'causfa_activate_plugin' );

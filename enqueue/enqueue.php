@@ -1,5 +1,5 @@
 <?php
-/**
+/** 
  * Created by PhpStorm.
  * User: mattwj6
  * Date: 3/7/18
@@ -24,7 +24,6 @@ function causfa_enqueue() {
     wp_enqueue_style('causfa_paradox');
     wp_enqueue_style('causfa_slick');
 	wp_enqueue_style('causfa_awesomplete');
-
 
     //Scripts
     wp_register_script('causfa_modal', plugins_url('assets/js/modal.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
@@ -78,3 +77,13 @@ function causfa_enqueue() {
 
 }
 
+function causfa_admin_enqueue() {
+    wp_register_style('causadmin_style', plugins_url('assets/css/style.css', CAUSFA_PLUGIN_URL));
+    wp_register_style('causadmin_paradox', plugins_url('assets/css/paradox.css', CAUSFA_PLUGIN_URL));
+    wp_register_style('causadmin_awesomplete', plugins_url('assets/css/awesomplete.css', CAUSFA_PLUGIN_URL));
+    
+    wp_enqueue_style('causadmin_style');
+    wp_enqueue_style('causadmin_paradox');
+	wp_enqueue_style('causadmin_awesomplete');
+    
+}

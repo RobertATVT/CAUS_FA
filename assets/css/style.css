@@ -10,22 +10,8 @@
 
 /* MATERIALIZE CHANGES */
 
-input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
-    background-color: #f6f6f6;
-    border: 1px solid #9e9e9e;
-	border-bottom: 2px solid #9e9e9e;
-    height: 1.25rem !important;
-    text-align: center;
-	margin: 0px !important;
-}
-
-input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 2px solid #E87722;
-    -webkit-box-shadow: 0 1px 0 0 #E87722;
-    box-shadow: 0 1px 0 0 #E87722;
-}
 select {
-    display:inherit !important;
+    display: inline;
     background-color: #f6f6f6;
     border: 1px solid #9e9e9e;
     border-bottom: 2px solid #9e9e9e;
@@ -282,16 +268,12 @@ select#org option:hover {
     font-weight:700;
     letter-spacing: .1em; 
     line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
 }
 .bigtext {
     font-size:150%;
     font-weight:700;
     letter-spacing: .1em; 
     line-height: 20px;
-    padding-left: 10px !important;
-    padding-top: 10px !important;
 }
 .block-headtext {
     font-size:140%;
@@ -448,6 +430,20 @@ select#org option:hover {
     box-sizing: border-box;
     min-height: 50px;
 }
+
+.admin-dash-left {
+    padding-right: 2px !important;
+}
+
+.admin-dash-center {
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+}
+
+.admin-dash-right {
+    padding-left: 2px !important;
+}
+
 .asset-border {
 	border: 1px solid rgba(0,0,0,0.15) !important;
     border-radius: 5px !important;
@@ -610,6 +606,7 @@ select#org option:hover {
 	padding-top: 5px !important; 
 	padding-bottom: 3px !important;
 	border-bottom: 1px solid rgba(255,255,255,.3);
+    font-weight: 700;
 }
 
 
@@ -653,19 +650,30 @@ select#org option:hover {
 	font-size: 110%;
 }
 
-/*==============  ADMIN REPORTS CSS  ==============*/
+/*==============  ADMIN CSS  ==============*/
+
+.wpadmin-header {
+    margin-bottom: 10px;  
+    text-align: center; 
+    padding: 10px !important; 
+    color: #fff; 
+    font-weight: 700; 
+    font-size: 150%;
+    text-transform: uppercase;
+}
 
 .report-block-header {
-	background-color: rgba(255,255,255,0.2); 
 	padding: 2px !important; 
+    background: #cecece;
+    color: #555;
 	text-transform: uppercase; 
 	font-weight: 700;
-	font-size: 130%; 
-	letter-spacing: .05em;
+	font-size: 100%; 
+	letter-spacing: .1em;
 }
 .report-input {
 	width: 95% !important;
-	font-size: 120% !important;
+	font-size: 100% !important;
 	text-align: center;
 	padding: 1px;
 	max-height: 20px !important;
@@ -810,21 +818,23 @@ a.btn-menu {
 }
 .form-upload {
 	width: 95% !important;
-	font-size: 65% !important;
+	font-size: 80% !important;
 	font-weight: 700;
 	text-align: center;
 	padding: 1px;
 	max-height: 20px;
 	line-height: 20px;
+    text-transform: uppercase;
 }
 .ticket-complete {
 	width: 95% !important;
-	font-size: 65% !important;
+	font-size: 80% !important;
 	font-weight: 700;
 	text-align: center;
 	padding: 1px;
 	max-height: 20px;
 	line-height: 20px;
+    text-transform: uppercase;
 }
 .report-button {
 	width: 95% !important;
@@ -871,15 +881,23 @@ a.btn-menu {
 }
 /*==============  RESTYLING CSS  ==============*/
 
+#wpcontent {
+    padding-left: 0px !important;
+}
+
 .btn-primary {
-    background: #e87722; 
+    background: #ED8B00; 
+/*    border: .5px solid #C64600 !important;*/
+    border-radius: 3px !important;
 }
 .btn-primary:focus {
     background: #861F41;
     border: none;
+    color: #fff !important;
 }
 .btn-primary:hover {
     background: #861F41;
+    color: #fff !important;
 }
 .btn-secondary {
     background: #cfcfcf; 
@@ -1027,19 +1045,22 @@ slider-for{
 	background-color: #508590;
 	border: 1px solid rgba(0,0,0,0.25);
 	padding: 0px !important;
+    font-size: 150%;
 }
 #PendingSurplus {
 	background-color: #861F41;
 	border: 1px solid rgba(255,255,255,0.25);
 	padding: 0px !important;
+    font-size: 150%;
 }
 #PendingTickets {
 	background-color: #C64600;
 	border: 1px solid rgba(255,255,255,0.25);
 	padding: 0px !important;	
+    font-size: 150%;
 }
 #Dashboard {
-	background-color: #D7D2CB;
+	background-color: transparent;
 	border: 1px solid rgba(255,255,255,0.25);
 	padding: 0px !important;
 }
@@ -1056,7 +1077,7 @@ slider-for{
         font-size:90%;
     }
     .subtext {
-        font-size:80%;
+        font-size:100%;
     }
     .block-footer {
         padding: 3px !important;
@@ -1190,19 +1211,32 @@ slider-for{
 		margin-bottom: 10px !important;
 	}
 	.report-block-header {
-		font-size: 70% !important;
-		font-weight: 900 !important;
-		color: #fff;
+		font-size: 100% !important;
+		font-weight: 700 !important;
 	}
 	.report-input {
-		font-size: 90% !important;
+		font-size: 100% !important;
 	}
 	.report-button {
-		font-size: 60% !important;
+		font-size: 100% !important;
 	}
 	.tablink {
 		font-size: 85% !important;
 	}
+    .admin-dash-left {
+        padding: 0px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .admin-dash-center {
+        padding: 0px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .admin-dash-right {
+        padding: 0px !important;
+        margin-bottom: 5px !important;
+    }
 }
 
 
@@ -1218,7 +1252,7 @@ slider-for{
         font-size:120%;
     }
     .subtext {
-        font-size:90%;
+        font-size:110%;
     }
     .block-footer {
         padding: 3px !important;
@@ -1320,9 +1354,6 @@ slider-for{
     .make-small {
         max-height: unset !important;
     }
-    .bigtext {
-        font-size:100%;
-    }
     .block-headtext {
         font-size:100%;
         line-height: 18px;
@@ -1419,6 +1450,15 @@ slider-for{
 	.ribbon-reports {
 		font-size: 70%;
 	}
+    .subtext-right {
+        font-size: 120%;
+    }
+    .biggertext {
+        font-size: 150%;
+    }
+    .bigtext {
+        font-size:130%;
+    }
 }
 
 
@@ -1571,6 +1611,16 @@ slider-for{
 		font-size: 12px !important;
 		line-height: 10px !important;
 	}
+    .admin-dash-left {
+    padding-right: 2px !important;
+    }
+    .admin-dash-center {
+        padding-right: 3px !important;
+        padding-left: 3px !important;
+    }
+    .admin-dash-right {
+        padding-left: 2px !important;
+    }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1600px) {

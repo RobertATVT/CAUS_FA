@@ -174,5 +174,5 @@ function causfa_load_admin_view(){
 	    $IT_options = $IT_options.$IT_item;
     }
     $output = str_replace('[ITFILL]', $IT_options, $output);
-	return $output;
+	return $output; 
 }
