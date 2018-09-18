@@ -38,6 +38,6 @@ function myEchoFlush_init() {
     ini_set('implicit_flush', 1);
     ob_implicit_flush(1);
     ob_end_clean();
-    header('Content-Encoding: none;');
+    //header('Content-Encoding: none;');
 
 }
