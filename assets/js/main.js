@@ -146,6 +146,7 @@ function checkSelected() {
 function causfa_run_full_org() {
     $('#fa-progress').modal();
     $('#fa-progress').modal('open');
+    //es = new EventSource('http://localhost/CAUS_FA/wp-json/causfa/v1/progressbar');
     es = new EventSource('https://inside.caus.vt.edu/wp-json/causfa/v1/progressbar');
     es.addEventListener('message', function(e) {
         var result = JSON.parse( e.data );
