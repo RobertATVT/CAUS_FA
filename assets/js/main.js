@@ -150,7 +150,7 @@ function causfa_run_full_org() {
     es = new EventSource('https://inside.caus.vt.edu/wp-json/causfa/v1/progressbar');
     es.addEventListener('message', function(e) {
         var result = JSON.parse( e.data );
-        if (e.id == 'CLOSE') {
+        if (result.progress === 'CLOSE') {
             es.close();
             var pBar = document.getElementById('FA_LoadProgress');
             pBar.style.width = '100%';
@@ -159,7 +159,6 @@ function causfa_run_full_org() {
             pBar.style.width = result.progress + '%';
             var perc = document.getElementById('FA_LoadPercent');
             perc.innerHTML   = result.progress;
-            //perc.style.width = (Math.floor(pBar.clientWidth * (result.progress/100)) + 15) + 'px';
         }
     });
     es.addEventListener('error', function(e) {
