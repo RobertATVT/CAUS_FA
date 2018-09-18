@@ -22,12 +22,13 @@ function causfa_progressbar() {
 
 }
 function send_message($id, $message, $progress) {
+    ob_start();
     $d = array('message' => $message , 'progress' => $progress);
 
     echo "id: $id" . PHP_EOL;
     echo "data: " . json_encode($d) . PHP_EOL;
     echo PHP_EOL;
-
-    ob_flush();
-    flush();
+    ob_end_flush();
+    //ob_flush();
+    //flush();
 }
