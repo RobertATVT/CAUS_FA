@@ -8,9 +8,9 @@
 function causfa_progressbar() {
 
     header('Content-Type: text/event-stream');
-    header('Content-Encoding: none;');
 // recommended to prevent caching of event data.
     header('Cache-Control: no-cache');
+    myEchoFlush_init();
     //header('X-Accel-Buffering: no');
 //LONG RUNNING TASK
     for($i = 1; $i <= 10; $i++) {
@@ -30,4 +30,14 @@ function send_message($id, $message, $progress) {
     echo PHP_EOL;
     ob_flush();
     flush();
+}
+function myEchoFlush_init() {
+    ini_set('zlib.output_compression', 0);
+    ini_set('output_buffering', 'Off');
+    ini_set('output_handler', '');
+    ini_set('implicit_flush', 1);
+    ob_implicit_flush(1);
+    ob_end_clean();
+    header('Content-Encoding: none;');
+
 }
