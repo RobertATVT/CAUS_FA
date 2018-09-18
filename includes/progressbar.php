@@ -6,8 +6,7 @@
  * Time: 3:14 PM
  */
 function causfa_progressbar() {
-
-    ini_set('zlib.output_compression', '1');
+    
     header('Content-Type: text/event-stream');
 // recommended to prevent caching of event data.
     header('Cache-Control: no-cache');
