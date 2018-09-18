@@ -44,7 +44,7 @@ include('process/add_ticket.php');
 include('includes/email.php');
 include('process/alerts.php');
 include('process/notes.php');
-include('includes/oracle.php');
+//include('includes/oracle.php');
 
 //Hooks
 add_action( 'admin_menu', 'causfa_admin_menu' );
