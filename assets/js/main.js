@@ -150,7 +150,7 @@ function causfa_run_full_org() {
     es = new EventSource('https://inside.caus.vt.edu/wp-json/causfa/v1/progressbar');
     es.addEventListener('message', function(e) {
         var result = JSON.parse( e.data );
-        if (result.progress === 'CLOSE') {
+        if (result.message === 'CLOSE') {
             es.close();
             var pBar = document.getElementById('FA_LoadProgress');
             pBar.style.width = '100%';

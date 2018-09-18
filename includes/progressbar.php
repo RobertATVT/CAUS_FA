@@ -20,15 +20,11 @@ function causfa_progressbar() {
         sleep(1);
     }
 
-    send_message('CLOSE', 'Process complete');
+    send_message(0,'CLOSE', 'Process complete');
 
 }
-function send_message($id, $message, $progress = null) {
-    if ($progress === null) {
-        $d = ARRAY('message' => $message);
-    } else {
-        $d = array('message' => $message , 'progress' => $progress);
-    }
+function send_message($id, $message, $progress) {
+    $d = array('message' => $message , 'progress' => $progress);
     echo "id: $id" . PHP_EOL;
     echo "data: " . json_encode($d) . PHP_EOL;
     echo PHP_EOL;
