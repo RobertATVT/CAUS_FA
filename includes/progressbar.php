@@ -15,21 +15,16 @@ function causfa_progressbar() {
     ob_implicit_flush(1);
 //LONG RUNNING TASK
     for($i = 1; $i <= 10; $i++) {
-        send_message($i, 'on iteration ' . $i . ' of 10' , $i*10);
+        send_message('on iteration ' . $i . ' of 10' , $i*10);
 
         sleep(1);
     }
 
-    send_message('CLOSE', 'Process complete');
+    send_message('Process complete','CLOSE');
 
 }
-function send_message($id, $message, $progress = null) {
-    if ($progress === null) {
-        $d = ARRAY('message' => $message);
-    } else {
-        $d = array('message' => $message , 'progress' => $progress);
-    }
-    echo "id: $id" . PHP_EOL;
+function send_message($message, $progress) {
+    $d = array('message' => $message , 'progress' => $progress);
     echo "data: " . json_encode($d) . PHP_EOL;
     echo PHP_EOL;
     echo str_repeat(' ',1024*64);

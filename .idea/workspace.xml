@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/progressbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/progressbar.php" afterDir="false" />
-    </list>
+    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -439,12 +436,12 @@
       <workItem from="1537191610584" duration="761000" />
       <workItem from="1537193997241" duration="73000" />
       <workItem from="1537194097845" duration="4086000" />
-      <workItem from="1537235616672" duration="5893000" />
+      <workItem from="1537235616672" duration="6115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="515491000" />
+    <option name="totallyTimeSpent" value="515713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="173" width="1440" height="797" extended-state="0" />
