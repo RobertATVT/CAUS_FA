@@ -146,7 +146,25 @@ function checkSelected() {
 function causfa_run_full_org() {
     $('#fa-progress').modal();
     $('#fa-progress').modal('open');
-    document.getElementById('uploadProgress').src = 'https://inside.caus.vt.edu/wp-json/causfa/v1/progressbar';
+    es = new EventSource('http://localhost/CAUS_FA/wp-json/causfa/v1/progressbar');
+    es.addEventListener('message', function(e) {
+        var result = JSON.parse( e.data );
+        if (e.lastEventId == 'CLOSE') {
+            es.close();
+            var pBar = document.getElementById('FA_LoadProgress');
+            pBar.style.width = '100%';
+        } else {
+            var pBar = document.getElementById('FA_LoadProgress');
+            pBar.style.width = result.progress + '%';
+            var perc = document.getElementById('FA_LoadPercent');
+            perc.innerHTML   = result.progress;
+            //perc.style.width = (Math.floor(pBar.clientWidth * (result.progress/100)) + 15) + 'px';
+        }
+    });
+    es.addEventListener('error', function(e) {
+        alert('Error occurred');
+        es.close();
+    });
 }
 
 

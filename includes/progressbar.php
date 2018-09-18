@@ -7,30 +7,26 @@
  */
 function causfa_progressbar() {
 
-    if (!session_id()) {
-        session_start();
+    header('Content-Type: text/event-stream');
+// recommended to prevent caching of event data.
+    header('Cache-Control: no-cache');
+//LONG RUNNING TASK
+    for($i = 1; $i <= 10; $i++) {
+        send_message($i, 'on iteration ' . $i . ' of 10' , $i*10);
+
+        sleep(1);
     }
 
-    ini_set('max_execution_time', 0); // to get unlimited php script execution time
+    send_message('CLOSE', 'Process complete');
 
-    if(empty($_SESSION['i'])){
-        $_SESSION['i'] = 0;
-    }
+}
+function send_message($id, $message, $progress) {
+    $d = array('message' => $message , 'progress' => $progress);
 
-    $total = 100;
-    for($i=$_SESSION['i'];$i<$total;$i++)
-    {
-        $_SESSION['i'] = $i;
-        $percent = intval($i/$total * 100)."%";
-        sleep(1); // Here call your time taking function like sending bulk sms etc.
+    echo "id: $id" . PHP_EOL;
+    echo "data: " . json_encode($d) . PHP_EOL;
+    echo PHP_EOL;
 
-        echo '<script>
-    parent.document.getElementById("progressbar").innerHTML="<div style=\"width:'.$percent.';background:linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); ;height:35px;\">&nbsp;</div>";
-    parent.document.getElementById("FA_LoadPercent").innerHTML="'.$percent.'";</script>';
-
-
-        ob_flush();
-        flush();
-    }
-    session_destroy();
+    ob_flush();
+    flush();
 }
