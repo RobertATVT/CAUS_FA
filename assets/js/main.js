@@ -146,7 +146,7 @@ function checkSelected() {
 function causfa_run_full_org() {
     $('#fa-progress').modal();
     $('#fa-progress').modal('open');
-    document.getElementById('uploadProgress').src = 'http://localhost/CAUS_FA/wp-content/plugins/CAUS_FA/includes/oracle.php';
+    document.getElementById('uploadProgress').src = 'http://inside.caus.vt.edu/wp-content/plugins/CAUS_FA/includes/oracle.php';
 }
 
 
