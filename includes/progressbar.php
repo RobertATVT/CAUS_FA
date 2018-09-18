@@ -8,9 +8,10 @@
 function causfa_progressbar() {
 
     header('Content-Type: text/event-stream');
+    header('Content-Encoding: none;');
 // recommended to prevent caching of event data.
     header('Cache-Control: no-cache');
-    header('X-Accel-Buffering: no');
+    //header('X-Accel-Buffering: no');
 //LONG RUNNING TASK
     for($i = 1; $i <= 10; $i++) {
         send_message($i, 'on iteration ' . $i . ' of 10' , $i*10);
