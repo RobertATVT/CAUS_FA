@@ -29,7 +29,7 @@ function send_message($id, $message, $progress) {
     echo "id: $id" . PHP_EOL;
     echo "data: " . json_encode($d) . PHP_EOL;
     echo PHP_EOL;
-    //echo str_repeat(' ',1024*64);
+    echo str_repeat(' ',1024*64);
 //    ob_flush();
 //    flush();
 }
