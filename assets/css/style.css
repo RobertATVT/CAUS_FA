@@ -426,7 +426,7 @@ select#org option:hover {
 #asset-view::-webkit-scrollbar {
     display: none;
 }
-.asset-block {
+.asset-block { 
     box-sizing: border-box;
     min-height: 50px;
 }
@@ -662,6 +662,34 @@ select#org option:hover {
     text-transform: uppercase;
 }
 
+.asset-block-help {
+    line-height: 35px !important; 
+    border-bottom: 1px solid #aaa; 
+    border-top-left-radius: 6px; 
+    border-top-right-radius: 6px;
+    font-size:170%;
+    font-weight:700;
+    letter-spacing: .1em; 
+    text-transform: uppercase;
+}
+
+.causadmin-help-list {
+    list-style-type:disc !important;
+}
+
+.causadmin-help-list > li {
+     margin-left: 30px !important;
+}
+
+.causadmin-header {
+    margin: 10px !important;
+    margin-left: -10px !important;
+    border: 1px solid #75787B; 
+    border-radius: 6px; 
+    background: #fff !important; 
+    padding: 5px !important;
+}
+
 .report-block-header {
 	padding: 2px !important; 
     background: #cecece;
@@ -881,8 +909,8 @@ a.btn-menu {
 }
 /*==============  RESTYLING CSS  ==============*/
 
-#wpcontent {
-    padding-left: 0px !important;
+.wp-menu-name h3 {
+    font-size: 130% !important;
 }
 
 .btn-primary {
@@ -955,6 +983,54 @@ a.btn-menu {
 [type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
 	
 }
+
+.collapsible {
+/*
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  margin: 0px;
+*/
+}
+.collapsible li {
+    margin-bottom: 10px !important;
+}
+.collapsible-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    
+    line-height: 35px !important; 
+    border-bottom: 1px solid #aaa; 
+/*    background-color: rgba(0,0,0,0.1); */
+    border-top-left-radius: 3px; 
+    border-top-right-radius: 3px;
+    font-size:150%;
+    font-weight:700;
+    letter-spacing: .1em; 
+    text-transform: uppercase;
+}
+
+.collapsible-header i {
+  width: 200%;
+  font-size: 160%;
+  display: inline-block;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.collapsible-body {
+  display: none;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px !important;
+}
+
+
 /*==============  GALLERY CSS  ==============*/
 slider-for{
     width: 500px;
@@ -1059,7 +1135,18 @@ slider-for{
 	padding: 0px !important;	
     font-size: 150%;
 }
+
+#Impact-Dash {
+	background-color: transparent;
+	border: 1px solid rgba(255,255,255,0.25);
+	padding: 0px !important;
+}
 #Dashboard {
+	background-color: transparent;
+	border: 1px solid rgba(255,255,255,0.25);
+	padding: 0px !important;
+}
+#Transfer-Help {
 	background-color: transparent;
 	border: 1px solid rgba(255,255,255,0.25);
 	padding: 0px !important;
@@ -1621,6 +1708,9 @@ slider-for{
     .admin-dash-right {
         padding-left: 2px !important;
     }
+    .asset-block-help {
+        font-size: 120%;
+    }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1600px) {
@@ -1681,6 +1771,8 @@ slider-for{
         background: #fff; 
         border-radius: 0px 0px 5px 5px;
     }
-
+    .asset-block-help {
+        font-size: 170%;
+    }
     
 }

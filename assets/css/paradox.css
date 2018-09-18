@@ -54,6 +54,10 @@ html {
     min-height: 1px;
 }
 
+.tb {
+    display:table;
+}
+
 /* UTILITY ITEMS */
 .hide {
   display: none !important;
@@ -103,6 +107,96 @@ html {
 	overflow: hidden;
 	white-space: nowrap;
 }
+
+/********** TABLE STRUCTURE **********/
+.tb td.t1 {
+    width: var(--col-1);
+}
+.tb td.t2 {
+    width: var(--col-2);
+}
+.tb td.t3 {
+    width: var(--col-3);
+}
+.tb td.t4 {
+    width: var(--col-4);
+}
+.tb td.t5 {
+    width: var(--col-5);
+}
+.tb td.t6 {
+    width: var(--col-6);
+}
+.tb td.t7 {
+    width: var(--col-7);
+}
+.tb td.t8 {
+    width: var(--col-8);
+}
+.tb td.t9 {
+    width: var(--col-9);
+}
+.tb td.t10 {
+    width: var(--col-10);
+}
+.tb td.t11 {
+    width: var(--col-11);
+}
+.tb td.t12 {
+    width: var(--col-12);
+}
+.tb td.t13 {
+    width: var(--col-13);
+}
+.tb td.t14 {
+    width: var(--col-14);
+}
+.tb td.t15 {
+    width: var(--col-15);
+}
+.tb td.t16 {
+    width: var(--col-16);
+}
+.tb td.t17 {
+    width: var(--col-17);
+}
+.tb td.t18 {
+    width: var(--col-18);
+}
+.tb td.t19 {
+    width: var(--col-19);
+}
+.tb td.t20 {
+    width: var(--col-20);
+}
+
+/* PARADOX ACCORDIAN */
+/* Style the buttons that are used to open and close the accordion panel */
+.p-accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .p-accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.p-accordian-panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
 
 /* DEFAULT ALL SCREEN GRID */
 

@@ -78,12 +78,22 @@ function causfa_enqueue() {
 }
 
 function causfa_admin_enqueue() {
+    wp_register_style('causadmin_materialize', plugins_url('assets/css/materialize.css', CAUSFA_PLUGIN_URL));
+    wp_register_style('causadmin_material_icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
     wp_register_style('causadmin_style', plugins_url('assets/css/style.css', CAUSFA_PLUGIN_URL));
     wp_register_style('causadmin_paradox', plugins_url('assets/css/paradox.css', CAUSFA_PLUGIN_URL));
     wp_register_style('causadmin_awesomplete', plugins_url('assets/css/awesomplete.css', CAUSFA_PLUGIN_URL));
     
+    wp_enqueue_style('causadmin_materialize');
+    wp_enqueue_style('causadmin_material_icons');
     wp_enqueue_style('causadmin_style');
     wp_enqueue_style('causadmin_paradox');
 	wp_enqueue_style('causadmin_awesomplete');
+    
+    wp_register_script('causadmin_materialize_script', plugins_url('assets/js/materialize.min.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causadmin_paradox_script', plugins_url('assets/js/paradox.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    
+    wp_enqueue_script('causadmin_materialize_script');
+    wp_enqueue_script('causadmin_paradox_script');
     
 }

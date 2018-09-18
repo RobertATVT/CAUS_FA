@@ -2551,10 +2551,6 @@ ul:not(.browser-default) {
   list-style-type: none;
 }
 
-ul:not(.browser-default) > li {
-  list-style-type: none;
-}
-
 a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -2580,7 +2576,7 @@ a {
           box-shadow: none !important;
 }
 
-.z-depth-1, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+.z-depth-1, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .side-nav {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
@@ -5713,10 +5709,12 @@ button.btn-floating {
 }
 
 .collapsible {
+/*
   border-top: 1px solid #ddd;
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0px;
+*/
 }
 
 .collapsible-header {
@@ -5726,10 +5724,13 @@ button.btn-floating {
   display: flex;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  line-height: 1.5;
-  padding: 1rem;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+    
+    line-height: 35px !important; 
+    border-bottom: 1px solid #aaa; 
+    background-color: rgba(0,0,0,0.1); 
+    border-top-left-radius: 3px; 
+    border-top-right-radius: 3px;
+
 }
 
 .collapsible-header i {
