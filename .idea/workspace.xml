@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +90,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="148" column="78" selection-start-line="148" selection-start-column="78" selection-end-line="148" selection-end-column="78" />
+            <state relative-caret-position="384">
+              <caret line="137" column="66" lean-forward="true" selection-start-line="137" selection-start-column="66" selection-end-line="137" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -417,12 +415,12 @@
       <workItem from="1537191610584" duration="761000" />
       <workItem from="1537193997241" duration="73000" />
       <workItem from="1537194097845" duration="4086000" />
-      <workItem from="1537235616672" duration="509000" />
+      <workItem from="1537235616672" duration="832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="510107000" />
+    <option name="totallyTimeSpent" value="510430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -859,8 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="148" column="78" selection-start-line="148" selection-start-column="78" selection-end-line="148" selection-end-column="78" />
+        <state relative-caret-position="384">
+          <caret line="137" column="66" lean-forward="true" selection-start-line="137" selection-start-column="66" selection-end-line="137" selection-end-column="66" />
         </state>
       </provider>
     </entry>
