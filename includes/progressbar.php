@@ -30,5 +30,5 @@ function send_message($id, $message, $progress) {
     echo PHP_EOL;
     ob_end_flush();
     //ob_flush();
-    //flush();
+    flush();
 }
