@@ -45,6 +45,7 @@ include('includes/email.php');
 include('process/alerts.php');
 include('process/notes.php');
 //include('includes/oracle.php');
+include('includes/progressbar.php');
 
 //Hooks
 add_action( 'admin_menu', 'causfa_admin_menu' );
@@ -81,6 +82,12 @@ add_action( 'wp_ajax_causfa_add_note', 'causfa_add_note');
 add_action( 'wp_ajax_causfa_update_from_banner', 'causfa_oracle_full_org');
 add_action( 'wp_ajax_causfa_email_to_spiceworks', 'causfa_email_to_spiceworks');
 add_action( 'wp_ajax_causfa_close_ticket', 'causfa_close_ticket');
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'causfa/v1', '/progressbar', array(
+        'methods' => 'GET',
+        'callback' => 'causfa_progressbar'
+    ) );
+});
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
