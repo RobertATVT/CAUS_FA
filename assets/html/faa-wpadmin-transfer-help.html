@@ -2,21 +2,85 @@
     <div id="Transfer-Help" class="rw" style="margin-bottom: 15px !important;">
         <div class="rw" style="margin:0px !important; display: block;">
             <div class="cl m20 t20" style="margin-bottom: 10px;">
-                <div class="cl t20 vt-lt-grey vt-txt-black">
+                <div class="cl t20 vt-lt-grey vt-txt-charcoal">
                     <div class="cl t20 vt-teal vt-txt-white center biggertext asset-block-help">TRANSFER REQUEST WORKFLOW</div>
-                    <div class="cl t20">
-                        <button class="p-accordian">Ticket Information</button>
-                        <div class="p-accordian-panel">
-                            <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;"></div>
-                            <div class="cl m16 t20 subtext"></div>
-                            <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">ISSUER PID</div>
-                            <div class="cl m16 t20 subtext">The faculty or staff member PID that is the current custodian of the item and is requesting the transfer to someone else.</div>
-                            <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">RECEIVER PID</div>
-                            <div class="cl m16 t20 subtext">The faculty or staff member PID that will receive the asset when the process is completed.</div>
-                            <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">DATE</div>
-                            <div class="cl m16 t20 subtext">The date that the Transfer Request was begun by the asset custodian.</div>
+
+                    <div class="cl t20 center bigtext" style="line-height: 20px; border-bottom: 1px solid #aaa; border-top: 1px solid #aaa;background-color: rgba(0,0,0,0.1);">TICKET INFORMATION</div>
+                    <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">VT PTAG</div>
+                    <div class="cl m16 t20 subtext">The VT Property Tag of the item that the Transfer Request was created for.</div>
+                    <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">ISSUER PID</div>
+                    <div class="cl m16 t20 subtext">The faculty or staff member PID that is the current custodian of the item and is requesting the transfer to someone else.</div>
+                    <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">RECEIVER PID</div>
+                    <div class="cl m16 t20 subtext">The faculty or staff member PID that will receive the asset when the process is completed.</div>
+                    <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">DATE</div>
+                    <div class="cl m16 t20 subtext" style="margin-bottom: 10px;">The date that the Transfer Request was begun by the asset custodian.</div>
+                    
+                    <div class="cl t20 center bigtext" style="line-height: 20px; border-bottom: 1px solid #aaa; border-top: 1px solid #aaa;background-color: rgba(0,0,0,0.1); margin-bottom: 10px;">TICKET PROCESSES</div>
+                    
+                    <div class="p-accordian">
+                        <input id="p-accordian-one" type="checkbox" name="p-accordians">
+                        <label for="p-accordian-one" class="vt-lt-grey vt-txt-charcoal bigtext">Contacted</label>
+                        <div class="p-accordian-content vt-lt-grey vt-txt-charcoal">
+                            <div class="cl t4"></div>
+                            <div class="cl m16 t20 subtext">
+                                <div class="cl t20"><b>Step 1 -</b> In order to begin the workflow you need to select the check box to indicate that you have contacted the current Asset Custodian (Issuer) about the transfer. You will receive an email stating that the transfer request has been initiated and at that point you will need to reach out to the <br><br></div>
+                                <div class="cl t20"><b>Step 2 -</b> The popup window will ask if this asset falls under the IT Department Area of Influence. This is meant for computers and other devices that will need to be handled by the IT Staff to be prepared for the faculty or staff receiving the item. Examples include:<br><br></div>
+                                <div class="cl t1"></div>
+                                <div class="cl t19">a) Computers that need to be wiped.</div>
+                                <div class="cl t1"></div>
+                                <div class="cl t19">b) Tablets that need to be wiped.<br><br></div>
+                                <div class="cl t1"></div>
+                                <div class="cl t19">If the item falls under this category select <b>"YES"</b>.</div>
+                                <div class="cl t3"></div>
+                                <div class="cl t17"><b>IF YES -</b> The next portion of the popup will ask that you select the IT person that you wish to assign the ticket to. The app will list all applicable IT personel that are capable of taking the ticket. Once you click "CONTINUE" you will receive a notice that the ticket is transferred to that IT person and it will be removed from your Pending Transfers list and place it under the queue for the selected IT Person.<br><br></div>
+                                <div class="cl t1"></div>
+                                <div class="cl t19">If the item does NOT fall under the IT Department select <b>"NO"</b><br><br></div>
+                                <div class="cl t20"><b>Step 3 -</b> If the item doesn't fall under your IT Department then after you select the <b>"NO"</b> button you will be asked if </div>
+                            </div>
+                            <div class="cl t20" style="min-height: 2px; max-height: 2px;background-color: rgba(0,0,0,0.1);margin-top: 10px;">&nbsp;</div>
                         </div>
-                      </div>
+                    </div>
+                    <div class="p-accordian">
+                        <input id="p-accordian-two" type="checkbox" name="p-accordians">
+                        <label for="p-accordian-two" class="vt-lt-grey vt-txt-charcoal bigtext">Received</label>
+                        <div class="p-accordian-content vt-lt-grey vt-txt-charcoal">
+                            <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">Received</div>
+                            
+                        </div>
+                    </div>
+                    <div class="p-accordian">
+                        <input id="p-accordian-three" type="checkbox" name="p-accordians">
+                        <label for="p-accordian-three" class="vt-lt-grey vt-txt-charcoal bigtext">Deployed</label>
+                        <div class="p-accordian-content vt-lt-grey vt-txt-charcoal">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                    </div>
+                    <div class="p-accordian">
+                        <input id="p-accordian-four" type="checkbox" name="p-accordians">
+                        <label for="p-accordian-four" class="vt-lt-grey vt-txt-charcoal bigtext">Updated</label>
+                        <div class="p-accordian-content vt-lt-grey vt-txt-charcoal">
+                            <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">CONTACTED</div>
+                            
+                        </div>
+                    </div>
+                    <div class="p-accordian">
+                        <input id="p-accordian-five" type="checkbox" name="p-accordians">
+                        <label for="p-accordian-five" class="vt-lt-grey vt-txt-charcoal bigtext">Upload</label>
+                        <div class="p-accordian-content vt-lt-grey vt-txt-charcoal">
+                            <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">CONTACTED</div>
+                            
+                        </div>
+                    </div>
+                    <div class="p-accordian">
+                        <input id="p-accordian-six" type="checkbox" name="p-accordians">
+                        <label for="p-accordian-six" class="vt-lt-grey vt-txt-charcoal bigtext">Complete</label>
+                        <div class="p-accordian-content vt-lt-grey vt-txt-charcoal">
+                            <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">CONTACTED</div>
+                            
+                        </div>
+                    </div>
+                    
+<!--
                     <div class="cl t20 center bigtext" style="line-height: 20px; border-bottom: 1px solid #aaa; border-top: 1px solid #aaa;background-color: rgba(0,0,0,0.1);">TICKET INFORMATION</div>
                     <div class="cl m4 t20 bigtext" style="padding-left: 10px; padding-top: 10px;">VT PTAG</div>
                     <div class="cl m16 t20 subtext">The VT Property Tag of the item that the Transfer Request was created for.</div>
@@ -129,6 +193,7 @@
                         <div class="cl t20"><b>Step 3 -</b> If the item doesn't fall under your IT Department then after you select the <b>"NO"</b> button you will be asked if </div>
                     </div>
                     <div class="cl t20" style="min-height: 10px; max-height: 10px">&nbsp;</div>
+-->
                 </div>
             </div>
         </div>

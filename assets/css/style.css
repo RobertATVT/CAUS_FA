@@ -150,54 +150,58 @@ select#org option:hover {
 
 /* VT BACKGROUND COLORS */
 .vt-lt-orange {
-    background: #ED8B00;
+    background: #ED8B00 !important;
 }
 .vt-orange {
-    background: #E87722;
+    background: #E87722 !important;
 }
 .vt-dk-orange {
-    background: #C64600;
+    background: #C64600 !important;
 }
 .vt-maroon {
-    background: #861F41;
+    background: #861F41 !important;
 }
 .vt-lt-grey {
-    background: #E5E1E6;
+    background: #E5E1E6 !important;
 }
 .vt-grey {
-    background: #D7D2CB;
+    background: #D7D2CB !important;
 }
 .vt-dk-grey {
-    background: #75787B
+    background: #75787B !important;
 }
 .vt-purple {
-    background: #642667;
+    background: #642667 !important;
 }
 .vt-pink {
-    background: #CE0058;
+    background: #CE0058 !important;
 }
 .vt-yellow {
-    background: #F7EA48;
+    background: #F7EA48 !important;
 }
 .vt-teal {
-    background: #508590;
+    background: #508590 !important;
 }
 .vt-turquoise {
-    background: #2CD5C4;
+    background: #2CD5C4 !important;
 }
 .vt-dk-blue {
-    background: #003C71;
+    background: #003C71 !important;
 }
 
 /* ========== VT TEXT COLORS ========== */
 .vt-txt-grey {
-    color: #75787B;;
+    color: #75787B !important;
 }
 .vt-txt-white {
-    color: #fff;
+    color: #fff !important;
 }
 .vt-txt-charcoal {
-	color: #333;
+	color: #505050 !important;
+}
+
+.vt-txt-black {
+	color: #333 !important;
 }
 
 /* ========== TYPOGRAPHY SETTINGS ========== */
@@ -264,46 +268,46 @@ select#org option:hover {
 	text-overflow: ellipsis;
 }
 .biggertext {
-    font-size:190%;
+    font-size:190% !important;
     font-weight:700;
     letter-spacing: .1em; 
     line-height: 20px;
 }
 .bigtext {
-    font-size:150%;
+    font-size:150% !important;
     font-weight:700;
     letter-spacing: .1em; 
     line-height: 20px;
 }
 .block-headtext {
-    font-size:140%;
+    font-size:140% !important;
     font-weight:700;
     text-transform: uppercase;
     letter-spacing: .05em; 
 }
 .block-bigtext {
-    font-size:115%;
+    font-size:115% !important;
     font-weight:700;
     line-height: 25px;
     padding-top: 0px !important;    
     padding-left: 10px !important;    
 }
 .block-text {
-    font-size:100%;
+    font-size:100% !important;
     font-weight:400; 
     line-height: 20px;
     padding-top: 0px !important;    
     padding-left: 10px !important;
 }
 .subtext {
-    font-size:100%;
+    font-size:100% !important;
     font-weight:400; 
     line-height: 20px;
     padding-left: 10px !important;
     padding-top: 10px !important;
 }
 .subtext-right {
-    font-size:100%;
+    font-size:100% !important;
     font-weight:400; 
     line-height: 20px;
     padding-right: 10px !important;
@@ -1161,10 +1165,10 @@ slider-for{
         font-size:130%;
     }
     .bigtext {
-        font-size:90%;
+        font-size:90% !important;
     }
     .subtext {
-        font-size:100%;
+        font-size:100% !important;
     }
     .block-footer {
         padding: 3px !important;
@@ -1210,11 +1214,11 @@ slider-for{
         line-height: 18px;
     }
     .block-bigtext {
-        font-size:100%;
+        font-size:100% !important;
         line-height: 20px;
     }
     .block-text {
-        font-size:80%;
+        font-size:80% !important;
         line-height: 17px;
     }
     .modal {
@@ -1336,10 +1340,10 @@ slider-for{
         font-size:180%;
     }
     .bigtext {
-        font-size:120%;
+        font-size:120% !important;
     }
     .subtext {
-        font-size:110%;
+        font-size:110% !important;
     }
     .block-footer {
         padding: 3px !important;
@@ -1347,15 +1351,15 @@ slider-for{
         font-size: 90%;
     }
     .block-headtext {
-        font-size:110%;
+        font-size:110% !important;
         line-height: 18px;
     }
     .block-bigtext {
-        font-size:100%;
+        font-size:100% !important;
         line-height: 20px;
     }
     .block-text {
-        font-size:80%;
+        font-size:80% !important;
         line-height: 17px;
     }
     .home-generate {
@@ -1442,15 +1446,15 @@ slider-for{
         max-height: unset !important;
     }
     .block-headtext {
-        font-size:100%;
+        font-size:100% !important;
         line-height: 18px;
     }
     .block-bigtext {
-        font-size:100%;
+        font-size:100% !important;
         line-height: 20px;
     }
     .block-text {
-        font-size:80%;
+        font-size:80 !important%;
         line-height: 17px;
     }
     .asset-list-header {
@@ -1538,13 +1542,13 @@ slider-for{
 		font-size: 70%;
 	}
     .subtext-right {
-        font-size: 120%;
+        font-size: 120% !important;
     }
     .biggertext {
-        font-size: 150%;
+        font-size: 150% !important;
     }
     .bigtext {
-        font-size:130%;
+        font-size:130% !important;
     }
 }
 
@@ -1584,15 +1588,15 @@ slider-for{
         font-size: 130%;
     }
     .block-headtext {
-        font-size: 85%;
+        font-size: 85% !important;
         line-height: 18px;
     }
     .block-bigtext {
-        font-size: 90%;
+        font-size: 90% !important;
         line-height: 20px;
     }
     .block-text {
-        font-size: 80%;
+        font-size: 80% !important;
         line-height: 17px;
     }
     .emp-info-outside {
