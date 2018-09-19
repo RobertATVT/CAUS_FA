@@ -29,9 +29,9 @@ function casufa_oracle_org_report()
         $r = oci_execute($stid);
     }
     // Close the Oracle connection
+    $total = oci_num_rows($stid);
     oci_close($conn);
 
-    $total = count($r);
     $count = 0;
     global $wpdb;
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
