@@ -29,7 +29,7 @@ function casufa_oracle_org_report()
         $r = oci_execute($stid);
         oci_fetch_all($stid, $oracle_assets, 0, -1, OCI_FETCHSTATEMENT_BY_ROW);
         oci_close($conn);
-        send_message(-1, 'TEST', print_r($oracle_assets));
+        //send_message(-1, 'TEST', print_r($oracle_assets));
         causfa_oracle_compare($oracle_assets);
     }
 }
@@ -62,7 +62,8 @@ function causfa_oracle_compare($oracle) {
         }
         $count++;
         $percent = intval(($count / $total) * 100) . "%";
-        send_message($row['FZVFORG_PTAG'], $count. ' of '.$total. " = ".$found, $percent);
+        $found_text = ($found ? 'found in local database': 'not found in local database');
+        send_message($row['FZVFORG_PTAG'], $count. ' of '.$total. " was ".$found_text, $percent);
     }
     send_message(0,'CLOSE', 'Process complete');
 }
