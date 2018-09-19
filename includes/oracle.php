@@ -27,7 +27,6 @@ function casufa_oracle_org_report()
         $query = "select * from BANINST1.FZVFORG order by FZVFORG_PTAG";
         $stid = oci_parse($conn, $query);
         $r = oci_execute($stid);
-        $output = causfa_oracle_compare($stid);
     }
     // Close the Oracle connection
     oci_close($conn);
