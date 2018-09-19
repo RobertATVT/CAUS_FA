@@ -31,7 +31,7 @@ function casufa_oracle_org_report()
     // Close the Oracle connection
     oci_close($conn);
 
-    $total = count($stid);
+    $total = count($r);
     $count = 0;
     global $wpdb;
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
@@ -50,7 +50,7 @@ function casufa_oracle_org_report()
         }
         $count++;
         $percent = intval(($count / $total) * 100) . "%";
-        send_message($row['FZVFORG_PTAG'], $count. ' of '.$total, $percent);
+        send_message($row['FZVFORG_PTAG'], $count. ' of '.$total. " = ".$found, $percent);
     }
     send_message(0,'CLOSE', 'Process complete');
 }
