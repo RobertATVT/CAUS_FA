@@ -49,8 +49,8 @@ function casufa_oracle_org_report()
             }
         }
         $count++;
-        $percent = intval($count / $total * 100) . "%";
-        send_message($row['FZVFORG_PTAG'], $found, $percent);
+        $percent = intval(($count / $total) * 100) . "%";
+        send_message($row['FZVFORG_PTAG'], $count. ' of '.$total, $percent);
     }
     send_message(0,'CLOSE', 'Process complete');
 }
