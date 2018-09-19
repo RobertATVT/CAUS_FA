@@ -27,7 +27,7 @@ function casufa_oracle_org_report()
         $query = "select * from BANINST1.FZVFORG order by FZVFORG_PTAG";
         $stid = oci_parse($conn, $query);
         $r = oci_execute($stid);
-        oci_fetch_all($stid, $oracle_assets);
+        oci_fetch_all($stid, $oracle_assets, 0, -1, OCI_FETCHSTATEMENT_BY_ROW);
         oci_close($conn);
         causfa_oracle_compare($oracle_assets);
     }
@@ -49,7 +49,7 @@ function causfa_oracle_compare($oracle) {
         $found = false;
         for ($j = 0; $j < count($assets); $j++) {
             $found = false;
-            if ($assets[$i]->FZVFORG_PTAG === $row['FZVFORG_PTAG']) {
+            if ($assets[$j]->FZVFORG_PTAG === $row['FZVFORG_PTAG']) {
                 $output = causfa_oracle_compare_custodian($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_location($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_org($row, $assets[$i]);
