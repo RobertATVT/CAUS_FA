@@ -44,7 +44,7 @@ include('process/add_ticket.php');
 include('includes/email.php');
 include('process/alerts.php');
 include('process/notes.php');
-//include('includes/oracle.php');
+include('includes/oracle.php');
 include('includes/progressbar.php');
 
 //Hooks
@@ -86,6 +86,12 @@ add_action( 'rest_api_init', function () {
     register_rest_route( 'causfa/v1', '/progressbar', array(
         'methods' => 'GET',
         'callback' => 'causfa_progressbar'
+    ) );
+});
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'causfa/v1', '/oracle', array(
+        'methods' => 'GET',
+        'callback' => 'casufa_oracle_org_report'
     ) );
 });
 
