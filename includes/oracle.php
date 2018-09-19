@@ -27,7 +27,7 @@ function casufa_oracle_org_report()
         $query = "select * from BANINST1.FZVFORG order by FZVFORG_PTAG";
         $stid = oci_parse($conn, $query);
         $r = oci_execute($stid);
-        $oracle_assets = oci_fetch_all($stid);
+        oci_fetch_all($stid, $oracle_assets);
         oci_close($conn);
         causfa_oracle_compare($oracle_assets);
     }
