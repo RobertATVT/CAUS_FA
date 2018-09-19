@@ -15,7 +15,7 @@ function casufa_oracle_org_report()
     // recommended to prevent caching of event data.
     header('Cache-Control: no-cache');
     ob_implicit_flush(1);
-
+    send_message(-1,'START', 'Process Initiated');
     // Create connection to Oracle
     $PROD = "(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(PORT=1251)(HOST=prod-ha.db.vt.edu))(CONNECT_DATA=(UR=A)(SERVICE_NAME=PROD)))";
     $conn = oci_connect("FIN_FA_CAUS", "FdgfFcDsG_6NsLFpe_2m", $PROD);
