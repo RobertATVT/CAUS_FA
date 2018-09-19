@@ -121,7 +121,7 @@
         left: auto;
         right: auto;
     }
-    .rw .cl.off-s1 {
+   .rw .cl.off-s1 {
       margin-left: var(--col-1);
     }
     .rw .cl.pull-s1 {

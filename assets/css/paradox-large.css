@@ -120,8 +120,8 @@
         margin-left: auto;
         left: auto;
         right: auto;
-    }      
-    .rw .cl.off-l1 {
+    } 
+   .rw .cl.off-l1 {
       margin-left: var(--col-1);
     }
     .rw .cl.pull-l1 {
