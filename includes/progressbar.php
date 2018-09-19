@@ -23,12 +23,12 @@ function causfa_progressbar() {
     send_message(0,'CLOSE', 'Process complete');
 
 }
-function send_message($id, $message, $progress) {
-    $d = array('message' => $message , 'progress' => $progress);
-    echo "id: $id" . PHP_EOL;
-    echo "data: " . json_encode($d) . PHP_EOL;
-    echo PHP_EOL;
-    echo str_repeat(' ',1024*64);
-//    ob_flush();
-//    flush();
-}
+//function send_message($id, $message, $progress) {
+//    $d = array('message' => $message , 'progress' => $progress);
+//    echo "id: $id" . PHP_EOL;
+//    echo "data: " . json_encode($d) . PHP_EOL;
+//    echo PHP_EOL;
+//    echo str_repeat(' ',1024*64);
+////    ob_flush();
+////    flush();
+//}
