@@ -183,6 +183,8 @@ function causfa_admin_tran() {
 
 	}
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-transfer-footer.html', true));
+
+	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-modal.html', true));    
     
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-transfer-help.html', true));
     
@@ -195,20 +197,109 @@ function causfa_admin_surp() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
-	echo '<div class="wrap">';
-    echo '<h1>Fixed Assets Administration Surplus</h1>';
-	echo '<p>Here is where the form would go if I actually had options.</p>';
-	echo '</div>';
+	global $wpdb;
+    
+    $output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-header.html', true));
+    
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-title.html', true));
+    
+    $output = str_replace('%header-title%', 'CAUS-FA Pending Surplus', $output);
+    $output = str_replace('%background%', 'vt-maroon', $output);
+    $output = str_replace('%style%', 'border-top-left-radius: 6px;border-top-right-radius: 6px;', $output);
+    
+    $results = $wpdb->get_results("SELECT * FROM causfa_pending WHERE PENDING_TYPE = 1 AND ((FZVFORG_ORGN_CODE ='".causfa_groups_management_code()."' AND ASSIGNEE IS NULL) OR ASSIGNEE = '".wp_get_current_user()->user_nicename."');");
+    if (!count($results)) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-surplus-header-none.html', true));
+    } else {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-surplus-header.html', true));
+    }
+    for ($i = 0; $i < count($results); $i++) {
+        switch($results[$i]->PENDING_STATUS) {
+            case 0:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-1.html', true));
+                break;
+            case 1:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-2.html', true));
+                break;
+            case 2:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-3.html', true));
+                break;
+            case 3:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-4.html', true));
+                break;
+            case 4:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-5.html', true));
+                break;
+            case 5:
+                $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-surplus-fill-6.html', true));
+                break;
+            }
+    
+        $output = str_replace('[PTAG]', $results[$i]->FZVFORG_PTAG, $output);
+        $output = str_replace('[PID 1]', $results[$i]->PID_ORIGIN, $output);
+        $output = str_replace('[DATE]', $results[$i]->DATE_CREATED, $output);
+        $output = str_replace('[ID]', $i, $output);
+    }
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-surplus-footer.html', true));
+        
+	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-modal.html', true));
+        
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-surplus-help.html', true));
+
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-footer.html', true));
+
+    echo $output;
 }
 
 function causfa_admin_tick() {
 	if ( !current_user_can( 'edit_others_posts' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
-	echo '<div class="wrap">';
-    echo '<h1>Fixed Assets Administration Tickets</h1>';
-	echo '<p>Here is where the form would go if I actually had options.</p>';
-	echo '</div>';
+	global $wpdb;
+    
+    $output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-header.html', true));
+    
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-title.html', true));
+    
+    $output = str_replace('%header-title%', 'CAUS-FA Pending Tickets', $output);
+    $output = str_replace('%background%', 'vt-dk-orange', $output);
+    $output = str_replace('%style%', 'border-top-left-radius: 6px;border-top-right-radius: 6px;', $output);
+    
+    $results = $wpdb->get_results("SELECT * FROM causfa_tickets WHERE FZVFORG_ORGN_CODE = '".causfa_groups_management_code()."';");
+	if (!count($results)) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-tickets-header-none.html', true));
+    } else {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-tickets-header.html', true));
+    }
+    for ($i = 0; $i < count($results); $i++) {
+        $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-tickets-fill.html', true));
+        $output = str_replace('[PTAG]', $results[$i]->FZVFORG_PTAG, $output);
+        $output = str_replace('[PID 1]', $results[$i]->PID_Submit, $output);
+        $output = str_replace('[DATE]', $results[$i]->DATE_CREATED, $output);
+        $output = str_replace('[NOTE]', $results[$i]->Notes, $output);
+        $output = str_replace('[ID]', $i, $output);
+    }
+
+	$output = str_replace('[PID]', wp_get_current_user()->user_nicename, $output);
+	$IT = causfa_groups_IT();
+	$IT_options = '';
+	for ($i = 0; $i < count($IT); $i++) {
+	    $IT_item = '<option value="'.$IT[$i]['PID'].'">'.$IT[$i]['Name'].'</option>';
+	    $IT_options = $IT_options.$IT_item;
+    }
+    $output = str_replace('[ITFILL]', $IT_options, $output);
+
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-tickets-footer.html', true));
+
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-modal.html', true));
+    
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-tickets-help.html', true));
+
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-footer.html', true));
+
+    
+    echo $output;
+
 }
 
 function causfa_admin_repo() {

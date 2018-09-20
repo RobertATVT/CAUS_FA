@@ -2,14 +2,14 @@ function openModal(process, element, data, step) {
     event.preventDefault();
     switch (process) {
         case 'transfer':
-            var tag = $('#transfer-ptag-' + data).html();
+            var tag = jQuery('#transfer-ptag-' + data).html();
             if (tag === jQuery('#transfer-stage-' + element.split('-')[2] + '-ptag').val()) {
                 jQuery('#' + element).modal();
                 jQuery('#' + element).modal('open');
             } else {
                 switch(element) {
                     case 'transfer-stage-1':
-                        $("#transfer-pickupdate").datepicker();
+                        jQuery("#transfer-pickupdate").datepicker();
                         jQuery('#transfer-stage-1-ptag').val(jQuery('#transfer-ptag-' + data).html());
                         jQuery('#transfer-stage-1-id').val(data);
                         if (step) {
@@ -17,102 +17,102 @@ function openModal(process, element, data, step) {
                         } else {
                             processStep('transfer','1','1');
                         }
-                        $('#transfer-stage-1-submit').removeAttr('value');
-                        $("#transfer-pickupdate").val('');
-                        $('#transfer-stage-1-notes').val('');
-                        $('#it-select').val('null');
+                        jQuery('#transfer-stage-1-submit').removeAttr('value');
+                        jQuery("#transfer-pickupdate").val('');
+                        jQuery('#transfer-stage-1-notes').val('');
+                        jQuery('#it-select').val('null');
                         break;
                     case 'transfer-stage-2':
-                        $("#recieve-pickupdate").datepicker();
+                        jQuery("#recieve-pickupdate").datepicker();
                         jQuery('#transfer-stage-2-ptag').val(jQuery('#transfer-ptag-' + data).html());
                         jQuery('#transfer-stage-2-id').val(data);
                         processStep('transfer','2','1');
-                        $("#recieve-pickupdate").val('');
-                        $('#transfer-stage-2-notes').val('');
+                        jQuery("#recieve-pickupdate").val('');
+                        jQuery('#transfer-stage-2-notes').val('');
                         break;
                     case 'transfer-stage-3':
-                        $("#deployed-date").datepicker();
+                        jQuery("#deployed-date").datepicker();
                         jQuery('#transfer-stage-3-ptag').val(jQuery('#transfer-ptag-' + data).html());
                         jQuery('#transfer-stage-3-id').val(data);
                         processStep('transfer','3','1');
-                        $("#deployed-date").val('');
-                        $('#transfer-stage-3-notes').val('');
+                        jQuery("#deployed-date").val('');
+                        jQuery('#transfer-stage-3-notes').val('');
                         break;
                     case 'transfer-stage-4':
-                        $("#banner-date").datepicker();
+                        jQuery("#banner-date").datepicker();
                         jQuery('#transfer-stage-4-ptag').val(jQuery('#transfer-ptag-' + data).html());
                         jQuery('#transfer-stage-4-id').val(data);
                         processStep('transfer','4','1');
-                        $("#banner-date").val('');
-                        $('#transfer-stage-4-notes').val();
+                        jQuery("#banner-date").val('');
+                        jQuery('#transfer-stage-4-notes').val();
                         break;
                     case 'transfer-stage-5':
                         jQuery('#transfer-stage-5-ptag').val(jQuery('#transfer-ptag-' + data).html());
                         jQuery('#transfer-stage-5-id').val(data);
-                        $('#officeFormToUpload').val('');
-                        $('#homeFormToUpload').val('');
+                        jQuery('#officeFormToUpload').val('');
+                        jQuery('#homeFormToUpload').val('');
                         break;
                 }
             }
             break;
         case 'surplus':
-            var tag = $('#surplus-ptag-' + data).html();
+            var tag = jQuery('#surplus-ptag-' + data).html();
             if (tag === jQuery('#surplus-stage-' + element.split('-')[2] + '-ptag').val()) {
                 jQuery('#' + element).modal();
                 jQuery('#' + element).modal('open');
             } else {
                 switch (element) {
                     case 'surplus-stage-1':
-                        $("#surplus-contactdate").datepicker();
+                        jQuery("#surplus-contactdate").datepicker();
                         processStep('surplus', '1', '1');
-                        $('#surplus-stage-1-ptag').val(tag);
-                        $('#surplus-stage-1-id').val(data);
-                        $('#surplus-contactdate').val('');
-                        $('#surplus-stage-1-notes').val('');
+                        jQuery('#surplus-stage-1-ptag').val(tag);
+                        jQuery('#surplus-stage-1-id').val(data);
+                        jQuery('#surplus-contactdate').val('');
+                        jQuery('#surplus-stage-1-notes').val('');
                         break;
                     case 'surplus-stage-2':
-                        $("#surplus-receivedate").datepicker();
+                        jQuery("#surplus-receivedate").datepicker();
                         transferModalLoad(['recipient-name']);
                         document.getElementById('recipient-name').addEventListener("awesomplete-select", function () {
-                            $('#surplus-stage-2-submit').val('Transfer');
-                            $('#surplus-stage-2-submit-small').val('Transfer');
+                            jQuery('#surplus-stage-2-submit').val('Transfer');
+                            jQuery('#surplus-stage-2-submit-small').val('Transfer');
                             activateButtons('surplus', 'stage2', 'on');
                         });
                         processStep('surplus', '2', '1');
-                        $('#surplus-stage-2-ptag').val(tag);
-                        $('#surplus-stage-2-id').val(data);
-                        $('#surplus-receivedate').val('');
-                        $('#surplus-stage-2-notes').val('');
+                        jQuery('#surplus-stage-2-ptag').val(tag);
+                        jQuery('#surplus-stage-2-id').val(data);
+                        jQuery('#surplus-receivedate').val('');
+                        jQuery('#surplus-stage-2-notes').val('');
                         break;
                     case 'surplus-stage-3':
-                        $("#surplus-pickupdate").datepicker();
+                        jQuery("#surplus-pickupdate").datepicker();
                         processStep('surplus', '3', '1');
-                        $('#surplus-stage-3-ptag').val(tag);
-                        $('#surplus-stage-3-id').val(data);
-                        $('#surplus-pickupdate').val('');
-                        $('#surplus-stage-3-notes').val('');
+                        jQuery('#surplus-stage-3-ptag').val(tag);
+                        jQuery('#surplus-stage-3-id').val(data);
+                        jQuery('#surplus-pickupdate').val('');
+                        jQuery('#surplus-stage-3-notes').val('');
                         break;
                     case 'surplus-stage-4':
-                        $('#surplus-stage-4-ptag').val(tag);
-                        $('#surplus-stage-4-id').val(data);
-                        $('#surplusFormToUpload').val('');
+                        jQuery('#surplus-stage-4-ptag').val(tag);
+                        jQuery('#surplus-stage-4-id').val(data);
+                        jQuery('#surplusFormToUpload').val('');
                         break;
                 }
             }
             break;
         case 'tickets':
-            var tag = $('#tickets-ptag-' + data).html();
+            var tag = jQuery('#tickets-ptag-' + data).html();
             if (tag === jQuery('#tickets-stage-1-ptag').val()) {
                 jQuery('#' + element).modal();
                 jQuery('#' + element).modal('open');
             } else {
-                $('#tickets-stage-1-ptag').val(tag);
-                $('#tickets-stage-1-id').val(data);
-                $('#tickets-date').datepicker();
+                jQuery('#tickets-stage-1-ptag').val(tag);
+                jQuery('#tickets-stage-1-id').val(data);
+                jQuery('#tickets-date').datepicker();
                 processStep('tickets','1','1');
-                $('#tickets-stage-1-notes-text').html($('#tickets-note-' + data).html());
-                $('#tickets-date').val('');
-                $('#tickets-stage-1-notes').val('');
+                jQuery('#tickets-stage-1-notes-text').html(jQuery('#tickets-note-' + data).html());
+                jQuery('#tickets-date').val('');
+                jQuery('#tickets-stage-1-notes').val('');
             }
             break;
     }
@@ -125,33 +125,33 @@ function activateButtons(process, stage, state){
             switch (stage) {
                 case "stage1":
                     if (state === "on") {
-                        $("#transfer-stage-1-submit").removeAttr("disabled");
-                        $("#transfer-stage-1-submit-small").removeAttr("disabled");
+                        jQuery("#transfer-stage-1-submit").removeAttr("disabled");
+                        jQuery("#transfer-stage-1-submit-small").removeAttr("disabled");
 
                     } else if (state === "off") {
-                        $("#transfer-stage-1-submit").attr("disabled", "disabled");
-                        $("#transfer-stage-1-submit-small").attr("disabled", "disabled");
+                        jQuery("#transfer-stage-1-submit").attr("disabled", "disabled");
+                        jQuery("#transfer-stage-1-submit-small").attr("disabled", "disabled");
                     }
                     break;
                 case "stage2":
                     if (state === "on") {
-                        $("#transfer-stage-2-submit").removeAttr("disabled");
+                        jQuery("#transfer-stage-2-submit").removeAttr("disabled");
                     } else if (state === "off") {
-                        $("#transfer-stage-2-submit").attr("disabled", "disabled");
+                        jQuery("#transfer-stage-2-submit").attr("disabled", "disabled");
                     }
                     break;
                 case "stage3":
                     if (state === "on") {
-                        $("#transfer-stage-3-submit").removeAttr("disabled");
+                        jQuery("#transfer-stage-3-submit").removeAttr("disabled");
                     } else if (state === "off") {
-                        $("#transfer-stage-3-submit").attr("disabled", "disabled");
+                        jQuery("#transfer-stage-3-submit").attr("disabled", "disabled");
                     }
                     break;
                 case "stage4":
                     if (state === "on") {
-                        $("#transfer-stage-4-submit").removeAttr("disabled");
+                        jQuery("#transfer-stage-4-submit").removeAttr("disabled");
                     } else if (state === "off") {
-                        $("#transfer-stage-4-submit").attr("disabled", "disabled");
+                        jQuery("#transfer-stage-4-submit").attr("disabled", "disabled");
                     }
                     break;
             }
@@ -160,30 +160,30 @@ function activateButtons(process, stage, state){
             switch (stage) {
                 case "stage1":
                     if (state === "on") {
-                        $("#surplus-stage-1-submit").removeAttr("disabled");
+                        jQuery("#surplus-stage-1-submit").removeAttr("disabled");
                     } else if (state === "off") {
-                        $("#surplus-stage-1-submit").attr("disabled", "disabled");
+                        jQuery("#surplus-stage-1-submit").attr("disabled", "disabled");
                     }
                     break;
                 case "stage2":
                     if (state === "on") {
-                        $("#surplus-stage-2-submit").removeAttr("disabled");
+                        jQuery("#surplus-stage-2-submit").removeAttr("disabled");
                     } else if (state === "off") {
-                        $("#surplus-stage-2-submit").attr("disabled", "disabled");
+                        jQuery("#surplus-stage-2-submit").attr("disabled", "disabled");
                     }
                     break;
                 case "stage3":
                     if (state === "on") {
-                        $("#surplus-stage-3-submit").removeAttr("disabled");
+                        jQuery("#surplus-stage-3-submit").removeAttr("disabled");
                     } else if (state === "off") {
-                        $("#surplus-stage-3-submit").attr("disabled", "disabled");
+                        jQuery("#surplus-stage-3-submit").attr("disabled", "disabled");
                     }
                     break;
                 case "stage4":
                     if (state === "on") {
-                        $("#surplus-stage-4-submit").removeAttr("disabled");
+                        jQuery("#surplus-stage-4-submit").removeAttr("disabled");
                     } else if (state === "off") {
-                        $("#surplus-stage-4-submit").attr("disabled", "disabled");
+                        jQuery("#surplus-stage-4-submit").attr("disabled", "disabled");
                     }
                     break;
                 case "stage5":
@@ -194,16 +194,16 @@ function activateButtons(process, stage, state){
 			switch (stage) {
 				case "stage1":
 					if (state === "on") {
-						$("#tickets-stage-1-submit").removeAttr("disabled");
+						jQuery("#tickets-stage-1-submit").removeAttr("disabled");
 					} else if (state === "off") {
-						$("#tickets-stage-1-submit").attr("disabled", "disabled");
+						jQuery("#tickets-stage-1-submit").attr("disabled", "disabled");
 					}
 				break;
 				case "stage2":
 					if (state === "on") {
-						$("#tickets-stage-2-submit").removeAttr("disabled");
+						jQuery("#tickets-stage-2-submit").removeAttr("disabled");
 					} else if (state === "off") {
-						$("#tickets-stage-2-submit").attr("disabled", "disabled");
+						jQuery("#tickets-stage-2-submit").attr("disabled", "disabled");
 					}
 				break;
 			}
@@ -217,134 +217,134 @@ function processStep(process, stage, step) {
                 case "1":
                     switch (step){
                         case "1":
-                            $("#transfer-stage-1a").css("display", "");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "none");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $("#transfer-stage-1f").css("display", "none");
-                            $("#transfer-stage-1g").css("display", "none");
-                            $('#transfer-stage-1-back').val('1');
-                            $('#transfer-stage-1-back').css("display", "none");
+                            jQuery("#transfer-stage-1a").css("display", "");
+                            jQuery("#transfer-stage-1b").css("display", "none");
+                            jQuery("#transfer-stage-1c").css("display", "none");
+                            jQuery("#transfer-stage-1d").css("display", "none");
+                            jQuery("#transfer-stage-1e").css("display", "none");
+                            jQuery("#transfer-stage-1f").css("display", "none");
+                            jQuery("#transfer-stage-1g").css("display", "none");
+                            jQuery('#transfer-stage-1-back').val('1');
+                            jQuery('#transfer-stage-1-back').css("display", "none");
                             activateButtons('transfer','stage1','off');
                             break;
                         case "2":
-                            $("#transfer-stage-1a").css("display", "none");
-                            $("#transfer-stage-1b").css("display", "");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "none");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $("#transfer-stage-1f").css("display", "none");
-                            $("#transfer-stage-1g").css("display", "none");
-                            $('#transfer-stage-1-back').val("2");
-                            $('#transfer-stage-1-back').css("display", "");
-                            $('#transfer-stage-1-submit').html('Continue');
-                            $('#transfer-stage-1-submit-small').html('Continue');
-                            if ($('#it-select').val() === 'null') {
+                            jQuery("#transfer-stage-1a").css("display", "none");
+                            jQuery("#transfer-stage-1b").css("display", "");
+                            jQuery("#transfer-stage-1c").css("display", "none");
+                            jQuery("#transfer-stage-1d").css("display", "none");
+                            jQuery("#transfer-stage-1e").css("display", "none");
+                            jQuery("#transfer-stage-1f").css("display", "none");
+                            jQuery("#transfer-stage-1g").css("display", "none");
+                            jQuery('#transfer-stage-1-back').val("2");
+                            jQuery('#transfer-stage-1-back').css("display", "");
+                            jQuery('#transfer-stage-1-submit').html('Continue');
+                            jQuery('#transfer-stage-1-submit-small').html('Continue');
+                            if (jQuery('#it-select').val() === 'null') {
                                 activateButtons('transfer','stage1','off');
                             } else {
                                 activateButtons('transfer','stage1','on');
                             }
                             break;
                         case "3":
-                            $("#transfer-stage-1a").css("display", "none");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "");
-                            $("#transfer-stage-1d").css("display", "none");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $("#transfer-stage-1f").css("display", "none");
-                            $("#transfer-stage-1g").css("display", "none");
-                            $('#transfer-stage-1-back').val('3');
-                            $('#transfer-stage-1-back').css("display", "none");
+                            jQuery("#transfer-stage-1a").css("display", "none");
+                            jQuery("#transfer-stage-1b").css("display", "none");
+                            jQuery("#transfer-stage-1c").css("display", "");
+                            jQuery("#transfer-stage-1d").css("display", "none");
+                            jQuery("#transfer-stage-1e").css("display", "none");
+                            jQuery("#transfer-stage-1f").css("display", "none");
+                            jQuery("#transfer-stage-1g").css("display", "none");
+                            jQuery('#transfer-stage-1-back').val('3');
+                            jQuery('#transfer-stage-1-back').css("display", "none");
                             activateButtons('transfer','stage1','off');
                             break;
                         case "4":
-                            $("#transfer-stage-1a").css("display", "none");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $("#transfer-stage-1f").css("display", "none");
-                            $("#transfer-stage-1g").css("display", "none");
-                            $('#transfer-stage-1-back').val('4');
-                            $('#transfer-stage-1-back').css("display", "");
+                            jQuery("#transfer-stage-1a").css("display", "none");
+                            jQuery("#transfer-stage-1b").css("display", "none");
+                            jQuery("#transfer-stage-1c").css("display", "none");
+                            jQuery("#transfer-stage-1d").css("display", "");
+                            jQuery("#transfer-stage-1e").css("display", "none");
+                            jQuery("#transfer-stage-1f").css("display", "none");
+                            jQuery("#transfer-stage-1g").css("display", "none");
+                            jQuery('#transfer-stage-1-back').val('4');
+                            jQuery('#transfer-stage-1-back').css("display", "");
                             activateButtons('transfer','stage1','off');
                             break;
                         case "5":
-                            $("#transfer-stage-1a").css("display", "none");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "");
-                            $("#transfer-stage-1e").css("display", "");
-                            $("#transfer-stage-1f").css("display", "none");
-                            $("#transfer-stage-1g").css("display", "none");
-                            $('#transfer-stage-1-back').val('5');
-                            $('#transfer-stage-1-back').css("display", "");
+                            jQuery("#transfer-stage-1a").css("display", "none");
+                            jQuery("#transfer-stage-1b").css("display", "none");
+                            jQuery("#transfer-stage-1c").css("display", "none");
+                            jQuery("#transfer-stage-1d").css("display", "");
+                            jQuery("#transfer-stage-1e").css("display", "");
+                            jQuery("#transfer-stage-1f").css("display", "none");
+                            jQuery("#transfer-stage-1g").css("display", "none");
+                            jQuery('#transfer-stage-1-back').val('5');
+                            jQuery('#transfer-stage-1-back').css("display", "");
                             break;
                         case "6":
-                            $("#transfer-stage-1a").css("display", "none");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "none");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $("#transfer-stage-1f").css("display", "");
-                            $("#transfer-stage-1g").css("display", "none");
-                            $('#transfer-stage-1-back').val('6');
-                            $('#transfer-stage-1-back').css("display", "");
+                            jQuery("#transfer-stage-1a").css("display", "none");
+                            jQuery("#transfer-stage-1b").css("display", "none");
+                            jQuery("#transfer-stage-1c").css("display", "none");
+                            jQuery("#transfer-stage-1d").css("display", "none");
+                            jQuery("#transfer-stage-1e").css("display", "none");
+                            jQuery("#transfer-stage-1f").css("display", "");
+                            jQuery("#transfer-stage-1g").css("display", "none");
+                            jQuery('#transfer-stage-1-back').val('6');
+                            jQuery('#transfer-stage-1-back').css("display", "");
                             break;
                         case "7":
-                            $("#transfer-stage-1a").css("display", "none");
-                            $("#transfer-stage-1b").css("display", "none");
-                            $("#transfer-stage-1c").css("display", "none");
-                            $("#transfer-stage-1d").css("display", "none");
-                            $("#transfer-stage-1e").css("display", "none");
-                            $("#transfer-stage-1f").css("display", "none");
-                            $("#transfer-stage-1g").css("display", "");
-                            $('#transfer-stage-1-back').val('7');
-                            $('#transfer-stage-1-back').css("display", "");
+                            jQuery("#transfer-stage-1a").css("display", "none");
+                            jQuery("#transfer-stage-1b").css("display", "none");
+                            jQuery("#transfer-stage-1c").css("display", "none");
+                            jQuery("#transfer-stage-1d").css("display", "none");
+                            jQuery("#transfer-stage-1e").css("display", "none");
+                            jQuery("#transfer-stage-1f").css("display", "none");
+                            jQuery("#transfer-stage-1g").css("display", "");
+                            jQuery('#transfer-stage-1-back').val('7');
+                            jQuery('#transfer-stage-1-back').css("display", "");
                             break;
                     }
                     break;
                 case "2":
                     switch (step){
                         case "1":
-                            $("#transfer-stage-2a").css("display", "");
-                            $("#transfer-stage-2b").css("display", "none");
-                            $("#transfer-stage-2c").css("display", "none");
+                            jQuery("#transfer-stage-2a").css("display", "");
+                            jQuery("#transfer-stage-2b").css("display", "none");
+                            jQuery("#transfer-stage-2c").css("display", "none");
                             break;
                         case "2":
-                            $("#transfer-stage-2a").css("display", "");
-                            $("#transfer-stage-2b").css("display", "");
-                            $("#transfer-stage-2c").css("display", "none");
+                            jQuery("#transfer-stage-2a").css("display", "");
+                            jQuery("#transfer-stage-2b").css("display", "");
+                            jQuery("#transfer-stage-2c").css("display", "none");
                             break;
                         case '3':
-                            $("#transfer-stage-2a").css("display", "none");
-                            $("#transfer-stage-2b").css("display", "none");
-                            $("#transfer-stage-2c").css("display", "");
+                            jQuery("#transfer-stage-2a").css("display", "none");
+                            jQuery("#transfer-stage-2b").css("display", "none");
+                            jQuery("#transfer-stage-2c").css("display", "");
                             break;
                     }
                     break;
                 case '3':
                     switch(step) {
                         case '1':
-                            $("#transfer-stage-3a").css("display", "");
-                            $("#transfer-stage-3b").css("display", "none");
+                            jQuery("#transfer-stage-3a").css("display", "");
+                            jQuery("#transfer-stage-3b").css("display", "none");
                             break;
                         case '2':
-                            $("#transfer-stage-3a").css("display", "");
-                            $("#transfer-stage-3b").css("display", "");
+                            jQuery("#transfer-stage-3a").css("display", "");
+                            jQuery("#transfer-stage-3b").css("display", "");
                             break;
                     }
                     break;
                 case '4':
                     switch(step) {
                         case '1':
-                            $("#transfer-stage-4a").css("display", "");
-                            $("#transfer-stage-4b").css("display", "none");
+                            jQuery("#transfer-stage-4a").css("display", "");
+                            jQuery("#transfer-stage-4b").css("display", "none");
                             break;
                         case '2':
-                            $("#transfer-stage-4a").css("display", "");
-                            $("#transfer-stage-4b").css("display", "");
+                            jQuery("#transfer-stage-4a").css("display", "");
+                            jQuery("#transfer-stage-4b").css("display", "");
                             break;
                     }
                     break;
@@ -355,39 +355,39 @@ function processStep(process, stage, step) {
                 case '1':
                     switch (step) {
                         case '1':
-                            $('#surplus-stage-1a').css('display', '');
-                            $('#surplus-stage-1b').css('display', 'none');
-                            $('#surplus-stage-1c').css('display', 'none');
-                            $('#surplus-stage-1d').css('display', 'none');
-                            $('#surplus-stage-1-back').css('display', 'none');
-                            $('#surplus-stage-1-back').val(1);
+                            jQuery('#surplus-stage-1a').css('display', '');
+                            jQuery('#surplus-stage-1b').css('display', 'none');
+                            jQuery('#surplus-stage-1c').css('display', 'none');
+                            jQuery('#surplus-stage-1d').css('display', 'none');
+                            jQuery('#surplus-stage-1-back').css('display', 'none');
+                            jQuery('#surplus-stage-1-back').val(1);
                             activateButtons('surplus','stage1','off');
                             break;
                         case '2':
-                            $('#surplus-stage-1a').css('display', 'none');
-                            $('#surplus-stage-1b').css('display', '');
-                            $('#surplus-stage-1c').css('display', 'none');
-                            $('#surplus-stage-1d').css('display', 'none');
-                            $('#surplus-stage-1-back').css('display', '');
-                            $('#surplus-stage-1-back').val(2);
+                            jQuery('#surplus-stage-1a').css('display', 'none');
+                            jQuery('#surplus-stage-1b').css('display', '');
+                            jQuery('#surplus-stage-1c').css('display', 'none');
+                            jQuery('#surplus-stage-1d').css('display', 'none');
+                            jQuery('#surplus-stage-1-back').css('display', '');
+                            jQuery('#surplus-stage-1-back').val(2);
                             activateButtons('surplus','stage1','off');
                             break;
                         case '3':
-                            $('#surplus-stage-1a').css('display', 'none');
-                            $('#surplus-stage-1b').css('display', 'none');
-                            $('#surplus-stage-1c').css('display', '');
-                            $('#surplus-stage-1d').css('display', 'none');
-                            $('#surplus-stage-1-back').css('display', '');
-                            $('#surplus-stage-1-back').val(3);
+                            jQuery('#surplus-stage-1a').css('display', 'none');
+                            jQuery('#surplus-stage-1b').css('display', 'none');
+                            jQuery('#surplus-stage-1c').css('display', '');
+                            jQuery('#surplus-stage-1d').css('display', 'none');
+                            jQuery('#surplus-stage-1-back').css('display', '');
+                            jQuery('#surplus-stage-1-back').val(3);
                             activateButtons('surplus','stage1','off');
                             break;
                         case '4':
-                            $('#surplus-stage-1a').css('display', 'none');
-                            $('#surplus-stage-1b').css('display', '');
-                            $('#surplus-stage-1c').css('display', 'none');
-                            $('#surplus-stage-1d').css('display', '');
-                            $('#surplus-stage-1-back').css('display', '');
-                            $('#surplus-stage-1-back').val(4);
+                            jQuery('#surplus-stage-1a').css('display', 'none');
+                            jQuery('#surplus-stage-1b').css('display', '');
+                            jQuery('#surplus-stage-1c').css('display', 'none');
+                            jQuery('#surplus-stage-1d').css('display', '');
+                            jQuery('#surplus-stage-1-back').css('display', '');
+                            jQuery('#surplus-stage-1-back').val(4);
                             activateButtons('surplus','stage1','on');
                             break;
                     }
@@ -395,40 +395,40 @@ function processStep(process, stage, step) {
                 case '2':
                     switch (step) {
                         case '1':
-                            $('#surplus-stage-2a').css('display', '');
-                            $('#surplus-stage-2b').css('display', 'none');
-                            $('#surplus-stage-2c').css('display', 'none');
-                            $('#surplus-stage-2d').css('display', 'none');
-                            $('#surplus-stage-2e').css('display', 'none');
-                            $('#surplus-stage-2-back').val('1');
-                            $('#surplus-stage-2-back').css('display','none');
+                            jQuery('#surplus-stage-2a').css('display', '');
+                            jQuery('#surplus-stage-2b').css('display', 'none');
+                            jQuery('#surplus-stage-2c').css('display', 'none');
+                            jQuery('#surplus-stage-2d').css('display', 'none');
+                            jQuery('#surplus-stage-2e').css('display', 'none');
+                            jQuery('#surplus-stage-2-back').val('1');
+                            jQuery('#surplus-stage-2-back').css('display','none');
                             activateButtons('surplus','stage2','off');
-                            $('#surplus-stage-2-submit').val('');
-                            $('#surplus-stage-2-submit-small').val('');
+                            jQuery('#surplus-stage-2-submit').val('');
+                            jQuery('#surplus-stage-2-submit-small').val('');
                             break;
                         case '2':
-                            $('#surplus-stage-2a').css('display', '');
-                            $('#surplus-stage-2b').css('display', '');
-                            $('#surplus-stage-2c').css('display', 'none');
-                            $('#surplus-stage-2d').css('display', 'none');
-                            $('#surplus-stage-2e').css('display', 'none');
-                            $('#surplus-stage-2-back').val('2');
-                            $('#surplus-stage-2-back').css('display','none');
-                            $('#surplus-stage-2-submit').val('');
-                            $('#surplus-stage-2-submit-small').val('');
+                            jQuery('#surplus-stage-2a').css('display', '');
+                            jQuery('#surplus-stage-2b').css('display', '');
+                            jQuery('#surplus-stage-2c').css('display', 'none');
+                            jQuery('#surplus-stage-2d').css('display', 'none');
+                            jQuery('#surplus-stage-2e').css('display', 'none');
+                            jQuery('#surplus-stage-2-back').val('2');
+                            jQuery('#surplus-stage-2-back').css('display','none');
+                            jQuery('#surplus-stage-2-submit').val('');
+                            jQuery('#surplus-stage-2-submit-small').val('');
                             activateButtons('surplus','stage2','off');
                             break;
                         case '3':
-                            $('#surplus-stage-2a').css('display', 'none');
-                            $('#surplus-stage-2b').css('display', 'none');
-                            $('#surplus-stage-2c').css('display', '');
-                            $('#surplus-stage-2d').css('display', 'none');
-                            $('#surplus-stage-2e').css('display', 'none');
-                            $('#surplus-stage-2-back').val('3');
-                            $('#surplus-stage-2-back').css('display','');
-                            if ($('#recipient-name').val() !== '') {
-                                $('#surplus-stage-2-submit').val('Transfer');
-                                $('#surplus-stage-2-submit-small').val('Transfer');
+                            jQuery('#surplus-stage-2a').css('display', 'none');
+                            jQuery('#surplus-stage-2b').css('display', 'none');
+                            jQuery('#surplus-stage-2c').css('display', '');
+                            jQuery('#surplus-stage-2d').css('display', 'none');
+                            jQuery('#surplus-stage-2e').css('display', 'none');
+                            jQuery('#surplus-stage-2-back').val('3');
+                            jQuery('#surplus-stage-2-back').css('display','');
+                            if (jQuery('#recipient-name').val() !== '') {
+                                jQuery('#surplus-stage-2-submit').val('Transfer');
+                                jQuery('#surplus-stage-2-submit-small').val('Transfer');
                                 activateButtons('surplus','stage2','on');
                             } else {
                                 activateButtons('surplus','stage2','off');
@@ -436,29 +436,29 @@ function processStep(process, stage, step) {
                             }
                             break;
                         case '4':
-                            $('#surplus-stage-2a').css('display', '');
-                            $('#surplus-stage-2b').css('display', 'none');
-                            $('#surplus-stage-2c').css('display', 'none');
-                            $('#surplus-stage-2d').css('display', '');
-                            $('#surplus-stage-2e').css('display', 'none');
-                            $('#surplus-stage-2-back').val('4');
-                            $('#surplus-stage-2-back').css('display','');
+                            jQuery('#surplus-stage-2a').css('display', '');
+                            jQuery('#surplus-stage-2b').css('display', 'none');
+                            jQuery('#surplus-stage-2c').css('display', 'none');
+                            jQuery('#surplus-stage-2d').css('display', '');
+                            jQuery('#surplus-stage-2e').css('display', 'none');
+                            jQuery('#surplus-stage-2-back').val('4');
+                            jQuery('#surplus-stage-2-back').css('display','');
 
                             activateButtons('surplus','stage2','on');
-                            $('#surplus-stage-2-submit').val('');
-                            $('#surplus-stage-2-submit-small').val('');
+                            jQuery('#surplus-stage-2-submit').val('');
+                            jQuery('#surplus-stage-2-submit-small').val('');
                             break;
                         case '5':
-                            $('#surplus-stage-2a').css('display', 'none');
-                            $('#surplus-stage-2b').css('display', 'none');
-                            $('#surplus-stage-2c').css('display', 'none');
-                            $('#surplus-stage-2d').css('display', 'none');
-                            $('#surplus-stage-2e').css('display', '');
-                            $('#surplus-stage-2-back').val('5');
-                            $('#surplus-stage-2-back').css('display','none');
+                            jQuery('#surplus-stage-2a').css('display', 'none');
+                            jQuery('#surplus-stage-2b').css('display', 'none');
+                            jQuery('#surplus-stage-2c').css('display', 'none');
+                            jQuery('#surplus-stage-2d').css('display', 'none');
+                            jQuery('#surplus-stage-2e').css('display', '');
+                            jQuery('#surplus-stage-2-back').val('5');
+                            jQuery('#surplus-stage-2-back').css('display','none');
                             activateButtons('surplus','stage2','off');
-                            $('#surplus-stage-2-submit').val('');
-                            $('#surplus-stage-2-submit-small').val('');
+                            jQuery('#surplus-stage-2-submit').val('');
+                            jQuery('#surplus-stage-2-submit-small').val('');
                             break;
 
                     }
@@ -466,13 +466,13 @@ function processStep(process, stage, step) {
                 case '3':
                     switch (step) {
                         case '1':
-                            $('#surplus-stage-3a').css('display', '');
-                            $('#surplus-stage-3b').css('display', 'none');
+                            jQuery('#surplus-stage-3a').css('display', '');
+                            jQuery('#surplus-stage-3b').css('display', 'none');
                             activateButtons('surplus','stage3','off');
                             break;
                         case '2':
-                            $('#surplus-stage-3a').css('display', '');
-                            $('#surplus-stage-3b').css('display', '');
+                            jQuery('#surplus-stage-3a').css('display', '');
+                            jQuery('#surplus-stage-3b').css('display', '');
                             activateButtons('surplus','stage3','on');
                             break;
                     }
@@ -484,76 +484,76 @@ function processStep(process, stage, step) {
 					case "1":
 						switch (step) {
 							case "1":
-								$("#tickets-stage-1a").css("display", "");
-								$("#tickets-stage-1b").css("display", "none");
-								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "none");
-								$("#tickets-stage-1e").css("display", "none");
-								$("#tickets-stage-1f").css("display", "none");
-								$('#tickets-stage-1-back').val('1');
-								$('#tickets-stage-1-back').css("display", "none");
+								jQuery("#tickets-stage-1a").css("display", "");
+								jQuery("#tickets-stage-1b").css("display", "none");
+								jQuery("#tickets-stage-1c").css("display", "none");
+								jQuery("#tickets-stage-1d").css("display", "none");
+								jQuery("#tickets-stage-1e").css("display", "none");
+								jQuery("#tickets-stage-1f").css("display", "none");
+								jQuery('#tickets-stage-1-back').val('1');
+								jQuery('#tickets-stage-1-back').css("display", "none");
 								activateButtons('tickets','stage1','off');
-                                $('#tickets-stage-1-submit').val('');
+                                jQuery('#tickets-stage-1-submit').val('');
 								break;
 							case "2":
-								$("#tickets-stage-1a").css("display", "none");
-								$("#tickets-stage-1b").css("display", "");
-								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "none");
-								$("#tickets-stage-1e").css("display", "none");
-								$("#tickets-stage-1f").css("display", "");
-								$('#tickets-stage-1-back').val('2');
-								$('#tickets-stage-1-back').css("display", "");
+								jQuery("#tickets-stage-1a").css("display", "none");
+								jQuery("#tickets-stage-1b").css("display", "");
+								jQuery("#tickets-stage-1c").css("display", "none");
+								jQuery("#tickets-stage-1d").css("display", "none");
+								jQuery("#tickets-stage-1e").css("display", "none");
+								jQuery("#tickets-stage-1f").css("display", "");
+								jQuery('#tickets-stage-1-back').val('2');
+								jQuery('#tickets-stage-1-back').css("display", "");
                                 activateButtons('tickets','stage1','on');
-                                $('#tickets-stage-1-submit').val('IT');
+                                jQuery('#tickets-stage-1-submit').val('IT');
 								break;
 							case "3":
-								$("#tickets-stage-1a").css("display", "none");
-								$("#tickets-stage-1b").css("display", "none");
-								$("#tickets-stage-1c").css("display", "");
-								$("#tickets-stage-1d").css("display", "none");
-								$("#tickets-stage-1e").css("display", "none");
-								$("#tickets-stage-1f").css("display", "none");
-								$('#tickets-stage-1-back').val('3');
-								$('#tickets-stage-1-back').css("display", "");
+								jQuery("#tickets-stage-1a").css("display", "none");
+								jQuery("#tickets-stage-1b").css("display", "none");
+								jQuery("#tickets-stage-1c").css("display", "");
+								jQuery("#tickets-stage-1d").css("display", "none");
+								jQuery("#tickets-stage-1e").css("display", "none");
+								jQuery("#tickets-stage-1f").css("display", "none");
+								jQuery('#tickets-stage-1-back').val('3');
+								jQuery('#tickets-stage-1-back').css("display", "");
 								activateButtons('tickets','stage1','off');
-                                $('#tickets-stage-1-submit').val('');
+                                jQuery('#tickets-stage-1-submit').val('');
 								break;
 							case "4":
-								$("#tickets-stage-1a").css("display", "none");
-								$("#tickets-stage-1b").css("display", "none");
-								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "");
-								$("#tickets-stage-1e").css("display", "none");
-								$("#tickets-stage-1f").css("display", "none");
-								$('#tickets-stage-1-back').val('4');
-								$('#tickets-stage-1-back').css("display", "");
+								jQuery("#tickets-stage-1a").css("display", "none");
+								jQuery("#tickets-stage-1b").css("display", "none");
+								jQuery("#tickets-stage-1c").css("display", "none");
+								jQuery("#tickets-stage-1d").css("display", "");
+								jQuery("#tickets-stage-1e").css("display", "none");
+								jQuery("#tickets-stage-1f").css("display", "none");
+								jQuery('#tickets-stage-1-back').val('4');
+								jQuery('#tickets-stage-1-back').css("display", "");
 								activateButtons('tickets','stage1','off');
-                                $('#tickets-stage-1-submit').val('');
+                                jQuery('#tickets-stage-1-submit').val('');
 								break;
 							case "5":
-								$("#tickets-stage-1a").css("display", "none");
-								$("#tickets-stage-1b").css("display", "none");
-								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "none");
-								$("#tickets-stage-1e").css("display", "");
-								$("#tickets-stage-1f").css("display", "none");
-								$('#tickets-stage-1-back').val('5');
-								$('#tickets-stage-1-back').css("display", "");
+								jQuery("#tickets-stage-1a").css("display", "none");
+								jQuery("#tickets-stage-1b").css("display", "none");
+								jQuery("#tickets-stage-1c").css("display", "none");
+								jQuery("#tickets-stage-1d").css("display", "none");
+								jQuery("#tickets-stage-1e").css("display", "");
+								jQuery("#tickets-stage-1f").css("display", "none");
+								jQuery('#tickets-stage-1-back').val('5');
+								jQuery('#tickets-stage-1-back').css("display", "");
 								activateButtons('tickets','stage1','off');
-                                $('#tickets-stage-1-submit').val('');
+                                jQuery('#tickets-stage-1-submit').val('');
 								break;
 							case "6":
-								$("#tickets-stage-1a").css("display", "none");
-								$("#tickets-stage-1b").css("display", "none");
-								$("#tickets-stage-1c").css("display", "none");
-								$("#tickets-stage-1d").css("display", "");
-								$("#tickets-stage-1e").css("display", "none");
-								$("#tickets-stage-1f").css("display", "");
-								$('#tickets-stage-1-back').val('6');
-								$('#tickets-stage-1-back').css("display", "");
+								jQuery("#tickets-stage-1a").css("display", "none");
+								jQuery("#tickets-stage-1b").css("display", "none");
+								jQuery("#tickets-stage-1c").css("display", "none");
+								jQuery("#tickets-stage-1d").css("display", "");
+								jQuery("#tickets-stage-1e").css("display", "none");
+								jQuery("#tickets-stage-1f").css("display", "");
+								jQuery('#tickets-stage-1-back').val('6');
+								jQuery('#tickets-stage-1-back').css("display", "");
 								activateButtons('tickets','stage1','on');
-                                $('#tickets-stage-1-submit').val('');
+                                jQuery('#tickets-stage-1-submit').val('');
 								break;
 						}
 							break;
@@ -572,8 +572,8 @@ function backButton(process, stage, value){
                 processStep("transfer","1","1");
             } else if (value === "2") {
                 processStep("transfer","1","1");
-                $('#transfer-stage-1-submit').html('Submit Step');
-                $('#transfer-stage-1-submit-small').html('Submit Step');
+                jQuery('#transfer-stage-1-submit').html('Submit Step');
+                jQuery('#transfer-stage-1-submit-small').html('Submit Step');
             } else if (value === "3") {
                 processStep("transfer","1","1")
             } else if (value === "4") {
@@ -638,46 +638,46 @@ function backButton(process, stage, value){
 function submitRequest(process, stage, index) {
     switch (process) {
         case 'transfer':
-            var id = $('#transfer-stage-' + stage + '-id').val();
+            var id = jQuery('#transfer-stage-' + stage + '-id').val();
             switch(stage) {
                 case 1:
-                    if ($('#transfer-stage-1-submit').val() === 'send-IT') {
+                    if (jQuery('#transfer-stage-1-submit').val() === 'send-IT') {
                         var form = {
                             'action': 'causfa_add_note',
                             'act': 'Transfer-IT',
                             'ptag': jQuery('#transfer-stage-1-ptag').val(),
-                            'note': ('Asset falls under IT influence. Transferring to ' + $('#it-select').val())
+                            'note': ('Asset falls under IT influence. Transferring to ' + jQuery('#it-select').val())
                         };
                         jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
                         var form = {
                             'action': 'causfa_update_transfer',
                             'state': 2,
-                            'assignee': $('#it-select').val(),
+                            'assignee': jQuery('#it-select').val(),
                             'ptag': jQuery('#transfer-stage-1-ptag').val()
                         };
                         jQuery.post(causfa_action_obj.ajax_url, form, function(data){
-                            if ($('#transfer-stage-1-pid').val() === $('#it-select').val()) {
-                                $('#transfer-stage-1-submit').html('Submit Step');
-                                $('#transfer-stage-1-submit-small').html('Submit Step');
+                            if (jQuery('#transfer-stage-1-pid').val() === jQuery('#it-select').val()) {
+                                jQuery('#transfer-stage-1-submit').html('Submit Step');
+                                jQuery('#transfer-stage-1-submit-small').html('Submit Step');
                                 processStep('transfer','1','3');
-                                $('#transfer-stage-1-back').css('display','none');
-                                $('#transfer-stage-1-submit').removeAttr('value');
+                                jQuery('#transfer-stage-1-back').css('display','none');
+                                jQuery('#transfer-stage-1-submit').removeAttr('value');
                             } else {
-                                $('#transfer-stage-1').modal('close');
-                                var element = document.getElementById('transfer-' + $('#transfer-stage-1-id').val());
+                                jQuery('#transfer-stage-1').modal('close');
+                                var element = document.getElementById('transfer-' + jQuery('#transfer-stage-1-id').val());
                                 var grandParent = element.parentNode.parentNode;
                                 grandParent.parentNode.removeChild(grandParent);
                             }
                         });
-                    } else if ($('#transfer-stage-1-submit').val() === 'confirm-IT') {
+                    } else if (jQuery('#transfer-stage-1-submit').val() === 'confirm-IT') {
                         document.getElementById('transfer-stage-1-submit').value = 'send-IT';
                         processStep('transfer', '1', '7');
-                        if ($('#it-select').val() === $('#transfer-stage-1-pid').val()) {
-                            $('#transfer-stage-1g-body').html('You have indicated that this asset needs to be transferred to IT and that you will be serving as the IT personnel responsible for this ticket. <br />If this is correct click Continue');
+                        if (jQuery('#it-select').val() === jQuery('#transfer-stage-1-pid').val()) {
+                            jQuery('#transfer-stage-1g-body').html('You have indicated that this asset needs to be transferred to IT and that you will be serving as the IT personnel responsible for this ticket. <br />If this is correct click Continue');
                         } else {
-                            $('#transfer-stage-1-submit').html('Submit Step');
-                            $('#transfer-stage-1-submit-small').html('Submit Step');
-                            $('#transfer-stage-1g-body').html('You are requesting to transfer this ticket to IT. This ticket will be transferred to ' + $('#it-select').find('option:selected').html() + '.<br /> If you submit this request you will no longer have access to this ticket');
+                            jQuery('#transfer-stage-1-submit').html('Submit Step');
+                            jQuery('#transfer-stage-1-submit-small').html('Submit Step');
+                            jQuery('#transfer-stage-1g-body').html('You are requesting to transfer this ticket to IT. This ticket will be transferred to ' + jQuery('#it-select').find('option:selected').html() + '.<br /> If you submit this request you will no longer have access to this ticket');
                         }
                     } else {
                         var note = '';
@@ -704,18 +704,18 @@ function submitRequest(process, stage, index) {
                         };
                         jQuery.post(causfa_action_obj.ajax_url, form, function(data){
                             if (data['status'] === 1) {
-                                $('#transfer-stage-1').modal('close');
-                                $('#transfer-stage-1-' + id).prop('checked', false);
-                                $('#transfer-stage-1-' + id).attr('disabled', 'disabled');
-                                $('#transfer-stage-2-' + id).removeAttr('disabled');
-                                $('#transfer-stage-2-' + id).prop('checked', false);
+                                jQuery('#transfer-stage-1').modal('close');
+                                jQuery('#transfer-stage-1-' + id).prop('checked', false);
+                                jQuery('#transfer-stage-1-' + id).attr('disabled', 'disabled');
+                                jQuery('#transfer-stage-2-' + id).removeAttr('disabled');
+                                jQuery('#transfer-stage-2-' + id).prop('checked', false);
                             }
                         });
                     }
                     break;
                 case 2:
-                    var date = $('#recieve-pickupdate').val();
-                    var comment = $('#transfer-stage-2-notes').val();
+                    var date = jQuery('#recieve-pickupdate').val();
+                    var comment = jQuery('#transfer-stage-2-notes').val();
                     var note = 'The asset was picked up on ' + date + '. ';
                     if (comment !== '') {
                         note = note + 'The Admin added the following notes: ' + comment;
@@ -736,25 +736,25 @@ function submitRequest(process, stage, index) {
                     jQuery.post(causfa_action_obj.ajax_url, form, function(data){
                         if (data['status'] === 1) {
                             if(data['changeOrg'] === 1) {
-                                var element = document.getElementById('transfer-' + $('#transfer-stage-2-id').val());
+                                var element = document.getElementById('transfer-' + jQuery('#transfer-stage-2-id').val());
                                 var grandParent = element.parentNode.parentNode;
                                 grandParent.parentNode.removeChild(grandParent);
                                 processStep('transfer','2','3');
                                 activateButtons('transfer','stage2','off');
-                                $('#transfer-stage-2c-text').html('This ticket will be transferred to the following org - ' + data['assignedOrg'] + ' because the recipient is in another org');
+                                jQuery('#transfer-stage-2c-text').html('This ticket will be transferred to the following org - ' + data['assignedOrg'] + ' because the recipient is in another org');
                             } else {
-                                $('#transfer-stage-2').modal('close');
-                                $('#transfer-stage-2-' + id).prop('checked', false);
-                                $('#transfer-stage-2-' + id).attr('disabled', 'disabled');
-                                $('#transfer-stage-3-' + id).removeAttr('disabled');
-                                $('#transfer-stage-3-' + id).prop('checked', false);
+                                jQuery('#transfer-stage-2').modal('close');
+                                jQuery('#transfer-stage-2-' + id).prop('checked', false);
+                                jQuery('#transfer-stage-2-' + id).attr('disabled', 'disabled');
+                                jQuery('#transfer-stage-3-' + id).removeAttr('disabled');
+                                jQuery('#transfer-stage-3-' + id).prop('checked', false);
                             }
                         }
                     });
                     break;
                 case 3:
-                    var date = $('#deployed-date').val();
-                    var comment = $('#transfer-stage-3-notes').val();
+                    var date = jQuery('#deployed-date').val();
+                    var comment = jQuery('#transfer-stage-3-notes').val();
                     var note = 'The asset was deployed on ' + date + '. ';
                     if (comment !== '') {
                         note = note + 'The Admin added the following notes: ' + comment;
@@ -774,17 +774,17 @@ function submitRequest(process, stage, index) {
                     };
                     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
                         if (data['status'] === 1) {
-                            $('#transfer-stage-3').modal('close');
-                            $('#transfer-stage-3-' + id).prop('checked', false);
-                            $('#transfer-stage-3-' + id).attr('disabled', 'disabled');
-                            $('#transfer-stage-4-' + id).removeAttr('disabled');
-                            $('#transfer-stage-4-' + id).prop('checked', false);
+                            jQuery('#transfer-stage-3').modal('close');
+                            jQuery('#transfer-stage-3-' + id).prop('checked', false);
+                            jQuery('#transfer-stage-3-' + id).attr('disabled', 'disabled');
+                            jQuery('#transfer-stage-4-' + id).removeAttr('disabled');
+                            jQuery('#transfer-stage-4-' + id).prop('checked', false);
                         }
                     });
                     break;
                 case 4:
-                    var date = $('#banner-date').val();
-                    var comment = $('#transfer-stage-4-notes').val();
+                    var date = jQuery('#banner-date').val();
+                    var comment = jQuery('#transfer-stage-4-notes').val();
                     var note = 'The asset was updated in banner on ' + date + '. ';
                     if (comment != '') {
                         note = note + 'The Admin added the following notes: ' + comment;
@@ -804,9 +804,9 @@ function submitRequest(process, stage, index) {
                     };
                     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
                         if (data['status'] === 1) {
-                            $('#transfer-stage-4').modal('close');
-                            $('#transfer-stage-4-' + id).attr('disabled', 'disabled');
-                            $('#transfer-stage-5-' + id).removeClass('disabled')
+                            jQuery('#transfer-stage-4').modal('close');
+                            jQuery('#transfer-stage-4-' + id).attr('disabled', 'disabled');
+                            jQuery('#transfer-stage-5-' + id).removeClass('disabled')
                         }
                     });
                     break;
@@ -820,19 +820,19 @@ function submitRequest(process, stage, index) {
                     };
                     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
                         if (data['status'] ===1) {
-                            $('#transfer-stage-6-' + index).addClass('disabled');
-                            $('#transfer-stage-6-' + index).val('Processing');
+                            jQuery('#transfer-stage-6-' + index).addClass('disabled');
+                            jQuery('#transfer-stage-6-' + index).val('Processing');
                         }
                     });
                     break;
             }
             break;
         case 'surplus':
-            var id = $('#surplus-stage-' + stage + '-id').val();
+            var id = jQuery('#surplus-stage-' + stage + '-id').val();
             switch (stage) {
                 case 1:
-                    var note = 'This asset is scheduled to be picked up on ' + $('#surplus-contactdate').val() + '. ';
-                    var comment = $('#surplus-stage-1-notes').val();
+                    var note = 'This asset is scheduled to be picked up on ' + jQuery('#surplus-contactdate').val() + '. ';
+                    var comment = jQuery('#surplus-stage-1-notes').val();
                     if (comment !== '') {
                         note = note + 'The admin has entered the following notes: ' + comment;
                     }
@@ -851,18 +851,18 @@ function submitRequest(process, stage, index) {
                     };
                     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
                        if (data['status'] === 1) {
-                           $('#surplus-stage-1-' + id).prop('checked', false);
-                           $('#surplus-stage-1-' + id).attr('disabled', 'disabled');
-                           $('#surplus-stage-2-' + id).removeAttr('disabled');
-                           $('#surplus-stage-2-' + id).prop('checked', false);
-                           $('#surplus-stage-1').modal('close');
+                           jQuery('#surplus-stage-1-' + id).prop('checked', false);
+                           jQuery('#surplus-stage-1-' + id).attr('disabled', 'disabled');
+                           jQuery('#surplus-stage-2-' + id).removeAttr('disabled');
+                           jQuery('#surplus-stage-2-' + id).prop('checked', false);
+                           jQuery('#surplus-stage-1').modal('close');
                        }
 
                     });
                     break;
                 case 2:
-                    var note = 'This asset was picked up on ' + $('#surplus-receivedate').val() + '. ';
-                    var comment = $('#surplus-stage-2-notes').val();
+                    var note = 'This asset was picked up on ' + jQuery('#surplus-receivedate').val() + '. ';
+                    var comment = jQuery('#surplus-stage-2-notes').val();
                     if (comment !== '') {
                         note = note + 'The admin has entered the following notes: ' + comment;
                     }
@@ -872,7 +872,7 @@ function submitRequest(process, stage, index) {
                         'ptag': jQuery('#surplus-stage-2-ptag').val(),
                         'note': note
                     };
-                    if ($('#surplus-stage-2-submit').val() === 'Transfer') {
+                    if (jQuery('#surplus-stage-2-submit').val() === 'Transfer') {
                         var result = validateForm();
                         if (result) {
                             var form = {
@@ -882,14 +882,14 @@ function submitRequest(process, stage, index) {
                             };
                             jQuery.post(causfa_action_obj.ajax_url, form, function(data){
                                 if (data['status'] === 1) {
-                                    var element = document.getElementById('surplus-' + $('#surplus-stage-2-id').val());
+                                    var element = document.getElementById('surplus-' + jQuery('#surplus-stage-2-id').val());
                                     var grandParent = element.parentNode.parentNode;
                                     grandParent.parentNode.removeChild(grandParent);
                                     processStep('surplus','2','5');
                                     if (data['changeOrg'] === 1) {
-                                        $('#surplus-stage-2e-text').html('A transfer will be initiated to transfer this asset to ' + $('#recipient-name').val() + '. This person is in the ' + data['newOrg'] + ' org so it will be transferred to their admins');
+                                        jQuery('#surplus-stage-2e-text').html('A transfer will be initiated to transfer this asset to ' + jQuery('#recipient-name').val() + '. This person is in the ' + data['newOrg'] + ' org so it will be transferred to their admins');
                                     } else {
-                                        $('#surplus-stage-2e-text').html('A transfer will be initiated to transfer this asset to ' + $('#recipient-name').val() + '. This person is in your org so this item will become a transfer assigned to you.');
+                                        jQuery('#surplus-stage-2e-text').html('A transfer will be initiated to transfer this asset to ' + jQuery('#recipient-name').val() + '. This person is in your org so this item will become a transfer assigned to you.');
                                     }
                                 }
                             });
@@ -907,18 +907,18 @@ function submitRequest(process, stage, index) {
                         };
                         jQuery.post(causfa_action_obj.ajax_url, form, function(data){
                             if (data['status'] === 1) {
-                                $('#surplus-stage-2-' + id).prop('checked', false);
-                                $('#surplus-stage-2-' + id).attr('disabled', 'disabled');
-                                $('#surplus-stage-3-' + id).removeAttr('disabled');
-                                $('#surplus-stage-3-' + id).prop('checked', false);
-                                $('#surplus-stage-2').modal('close');
+                                jQuery('#surplus-stage-2-' + id).prop('checked', false);
+                                jQuery('#surplus-stage-2-' + id).attr('disabled', 'disabled');
+                                jQuery('#surplus-stage-3-' + id).removeAttr('disabled');
+                                jQuery('#surplus-stage-3-' + id).prop('checked', false);
+                                jQuery('#surplus-stage-2').modal('close');
                             }
                         });
                     }
                     break;
                 case 3:
-                    var note = 'This asset was pickup up by surplus on ' + $('#surplus-pickupdate').val() + '. ';
-                    var comment = $('#surplus-stage-3-notes').val();
+                    var note = 'This asset was pickup up by surplus on ' + jQuery('#surplus-pickupdate').val() + '. ';
+                    var comment = jQuery('#surplus-stage-3-notes').val();
                     if (comment !== '') {
                         note = note + 'The admin has entered the following notes: ' + comment;
                     }
@@ -937,10 +937,10 @@ function submitRequest(process, stage, index) {
                     };
                     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
                        if (data['status'] === 1) {
-                           $('#surplus-stage-3-' + id).prop('checked', false);
-                           $('#surplus-stage-3-' + id).attr('disabled', 'disabled');
-                           $('#surplus-stage-4-' + id).removeClass('disabled');
-                           $('#surplus-stage-3').modal('close');
+                           jQuery('#surplus-stage-3-' + id).prop('checked', false);
+                           jQuery('#surplus-stage-3-' + id).attr('disabled', 'disabled');
+                           jQuery('#surplus-stage-4-' + id).removeClass('disabled');
+                           jQuery('#surplus-stage-3').modal('close');
                        }
                     });
                     break;
@@ -963,12 +963,12 @@ function submitRequest(process, stage, index) {
                             data: form,
                             success: function(data) {
                                 if (data['status'] === 1) {
-                                    $('#surplus-stage-4-' + id).addClass('disabled');
-                                    $('#surplus-stage-5-' + id).removeClass('disabled');
-                                    $('#surplus-stage-4').modal('close');
-                                    $('#modal-response-title').html('File Upload Successful');
-                                    $('#modal-response-alert').html(data['message']);
-                                    var modal = $('#responseModal').modal();
+                                    jQuery('#surplus-stage-4-' + id).addClass('disabled');
+                                    jQuery('#surplus-stage-5-' + id).removeClass('disabled');
+                                    jQuery('#surplus-stage-4').modal('close');
+                                    jQuery('#modal-response-title').html('File Upload Successful');
+                                    jQuery('#modal-response-alert').html(data['message']);
+                                    var modal = jQuery('#responseModal').modal();
                                     modal.modal('open');
                                 }
                             }
@@ -983,17 +983,17 @@ function submitRequest(process, stage, index) {
                     };
                     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
                         if (data['status'] === 1) {
-                            $('#surplus-stage-5-' + index).addClass('disabled');
-                            $('#surplus-stage-5-' + index).val('Processing');
+                            jQuery('#surplus-stage-5-' + index).addClass('disabled');
+                            jQuery('#surplus-stage-5-' + index).val('Processing');
                         }
                     });
                     break;
             }
             break;
         case 'tickets':
-            if ($('#tickets-stage-1-submit').val() === 'IT') {
+            if (jQuery('#tickets-stage-1-submit').val() === 'IT') {
                 var note = 'This ticket is an IT related ticket and will be transferred to the IT Ticket system';
-                var comment = $('#tickets-stage-1-notes').val();
+                var comment = jQuery('#tickets-stage-1-notes').val();
                 if (comment !== '') {
                     note = note + 'The admin has entered the following notes: ' + comment;
                 }
@@ -1011,8 +1011,8 @@ function submitRequest(process, stage, index) {
                 };
                 jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
             } else {
-                var note = 'The ticket requester was contacted on ' + $('#tickets-date').val() + '. ';
-                var comment = $('#tickets-stage-1-notes').val();
+                var note = 'The ticket requester was contacted on ' + jQuery('#tickets-date').val() + '. ';
+                var comment = jQuery('#tickets-stage-1-notes').val();
                 if (comment !== '') {
                     note = note + 'The admin has entered the following notes: ' + comment;
                 }
@@ -1030,11 +1030,11 @@ function submitRequest(process, stage, index) {
             };
             jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
                 if (data['status'] === 1) {
-                    var element = document.getElementById('tickets-' + $('#tickets-stage-1-id').val());
+                    var element = document.getElementById('tickets-' + jQuery('#tickets-stage-1-id').val());
                     var grandParent = element.parentNode.parentNode;
                     grandParent.parentNode.removeChild(grandParent);
-                    $('#tickets-stage-1-notes').val('');
-                    $('#tickets-stage-1').modal('close');
+                    jQuery('#tickets-stage-1-notes').val('');
+                    jQuery('#tickets-stage-1').modal('close');
                 }
             });
             break;
@@ -1046,28 +1046,28 @@ function cancelRequest(process, stage) {
             switch (stage) {
                 case '1':
                     processStep('transfer','1','1');
-                    $('#it-select').val('null');
-                    $('#transfer-stage-1-notes').val('');
-                    $('#transfer-pickupdate').val('');
+                    jQuery('#it-select').val('null');
+                    jQuery('#transfer-stage-1-notes').val('');
+                    jQuery('#transfer-pickupdate').val('');
                     break;
                 case '2':
                     processStep('transfer','2','1');
-                    $('#recieve-pickupdate').val('');
-                    $('#transfer-stage-2-notes').val('');
+                    jQuery('#recieve-pickupdate').val('');
+                    jQuery('#transfer-stage-2-notes').val('');
                     break;
                 case '3':
                     processStep('transfer','3','1');
-                    $('#deployed-date').val('');
-                    $('#transfer-stage-3-notes').val('');
+                    jQuery('#deployed-date').val('');
+                    jQuery('#transfer-stage-3-notes').val('');
                     break;
                 case '4':
                     processStep('transfer','4','1');
-                    $('#banner-date').val('');
-                    $('#transfer-stage-4-notes').val('');
+                    jQuery('#banner-date').val('');
+                    jQuery('#transfer-stage-4-notes').val('');
                     break;
                 case '5':
-                    $('#homeFormToUpload').val('');
-                    $('#officeFormToUpload').val('');
+                    jQuery('#homeFormToUpload').val('');
+                    jQuery('#officeFormToUpload').val('');
                     break;
             }
             break;
@@ -1075,29 +1075,29 @@ function cancelRequest(process, stage) {
             switch (stage) {
                 case '1':
                     processStep('surplus','1','1');
-                    $('#surplus-contactdate').val('');
-                    $('#surplus-stage-1-notes').val('');
+                    jQuery('#surplus-contactdate').val('');
+                    jQuery('#surplus-stage-1-notes').val('');
                     break;
                 case '2':
                     processStep('surplus','2','1');
-                    $('#surplus-receivedate').val('');
-                    $('#surplus-stage-2-notes').val('');
-                    $('#recipient-name').val('');
+                    jQuery('#surplus-receivedate').val('');
+                    jQuery('#surplus-stage-2-notes').val('');
+                    jQuery('#recipient-name').val('');
                     break;
                 case '3':
                     processStep('surplus','3','1');
-                    $('#surplus-pickupdate').val('');
-                    $('#surplus-stage-3-notes').val('');
+                    jQuery('#surplus-pickupdate').val('');
+                    jQuery('#surplus-stage-3-notes').val('');
                     break;
                 case '4':
-                    $('#surplusFormToUpload').val('');
+                    jQuery('#surplusFormToUpload').val('');
                     break;
             }
             break;
         case 'tickets':
             processStep('tickets','1','1');
-            $('#tickets-date').val('');
-            $('#tickets-stage-1-notes').val('');
+            jQuery('#tickets-date').val('');
+            jQuery('#tickets-stage-1-notes').val('');
             break;
     }
 }
@@ -1122,11 +1122,11 @@ function admin_uploadFormHome() {
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    $('#modal-response-title').html('File Upload Successful');
-                    $('#modal-response-alert').html(data['message']);
-                    var modal = $('#responseModal').modal();
+                    jQuery('#modal-response-title').html('File Upload Successful');
+                    jQuery('#modal-response-alert').html(data['message']);
+                    var modal = jQuery('#responseModal').modal();
                     modal.modal('open');
-                    $('#homeFormToUpload').val('');
+                    jQuery('#homeFormToUpload').val('');
                 }
             }
         });
@@ -1138,10 +1138,10 @@ function admin_uploadFormHome() {
         };
         jQuery.post(causfa_action_obj.ajax_url, form, function(data){
             if (data['status'] === 1) {
-                $('#transfer-stage-5').modal('close');
-                var id = $('#transfer-stage-5-id').val();
-                $('#transfer-stage-5-' + id).addClass('disabled');
-                $('#transfer-stage-6-' + id).removeClass('disabled');
+                jQuery('#transfer-stage-5').modal('close');
+                var id = jQuery('#transfer-stage-5-id').val();
+                jQuery('#transfer-stage-5-' + id).addClass('disabled');
+                jQuery('#transfer-stage-6-' + id).removeClass('disabled');
             }
         });
     }
@@ -1167,14 +1167,14 @@ function admin_uploadFormOffice() {
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    $('#officeFormToUpload').val('');
-                    $('#transfer-stage-5').modal('close');
-                    var id = $('#transfer-stage-5-id').val();
-                    $('#transfer-stage-5-' + id).addClass('disabled');
-                    $('#transfer-stage-6-' + id).removeClass('disabled');
-                    $('#modal-response-title').html('File Upload Successful');
-                    $('#modal-response-alert').html(data['message']);
-                    var modal = $('#responseModal').modal();
+                    jQuery('#officeFormToUpload').val('');
+                    jQuery('#transfer-stage-5').modal('close');
+                    var id = jQuery('#transfer-stage-5-id').val();
+                    jQuery('#transfer-stage-5-' + id).addClass('disabled');
+                    jQuery('#transfer-stage-6-' + id).removeClass('disabled');
+                    jQuery('#modal-response-title').html('File Upload Successful');
+                    jQuery('#modal-response-alert').html(data['message']);
+                    var modal = jQuery('#responseModal').modal();
                     modal.modal('open');
                 }
             }
@@ -1187,10 +1187,10 @@ function admin_uploadFormOffice() {
         };
         jQuery.post(causfa_action_obj.ajax_url, form, function(data){
             if (data['status'] === 1) {
-                $('#transfer-stage-5').modal('close');
-                var id = $('#transfer-stage-5-id').val();
-                $('#transfer-stage-5-' + id).addClass('disabled');
-                $('#transfer-stage-6-' + id).removeClass('disabled');
+                jQuery('#transfer-stage-5').modal('close');
+                var id = jQuery('#transfer-stage-5-id').val();
+                jQuery('#transfer-stage-5-' + id).addClass('disabled');
+                jQuery('#transfer-stage-6-' + id).removeClass('disabled');
             }
         });
     }

@@ -6318,7 +6318,7 @@ form p:last-child {
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
-  opacity: 0;
+  opacity: 0 !important;
   pointer-events: none;
 }
 
