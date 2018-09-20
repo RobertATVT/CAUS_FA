@@ -51,7 +51,7 @@ function causfa_oracle_compare($oracle) {
         $found = false;
         for ($i = 0; $i < count($assets); $i++) {
             $found = false;
-            if ($assets[$i]->FZVFORG_PTAG == $row['FZVFORG_PTAG']) {
+            if (trim($assets[$i]->FZVFORG_PTAG) == trim($row['FZVFORG_PTAG'])) {
                 $output = causfa_oracle_compare_custodian($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_location($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_org($row, $assets[$i]);
