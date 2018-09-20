@@ -46,12 +46,10 @@ function causfa_oracle_compare($oracle) {
     global $wpdb;
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
     foreach ($oracle as $key => $row) {
-        //send_message(-1,gettype($row['FZVFORG_PTAG']),'');
-        //send_message(-1,gettype($assets[0]->FZVFORG_PTAG),'');
         $found = false;
         for ($i = 0; $i < count($assets); $i++) {
             $found = false;
-            if (trim($assets[$i]->FZVFORG_PTAG) == trim($row['FZVFORG_PTAG'])) {
+            if ($assets[$i]->FZVFORG_PTAG == $row['FZVFORG_PTAG']) {
                 $output = causfa_oracle_compare_custodian($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_location($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_org($row, $assets[$i]);
@@ -59,15 +57,12 @@ function causfa_oracle_compare($oracle) {
                 array_splice($assets, $i, 1);
                 array_splice($oracle, $key, 1);
                 $found = true;
+                break;
             }
         }
         $count++;
         $percent = intval(($count / $total) * 100) . "%";
-        if ($found) {
-            $found_text = 'found in local database';
-        } else {
-            $found_text = 'not found in local database';
-        }
+        $found_text = ($found ? 'found in local database': 'not found in local database');
         send_message($row['FZVFORG_PTAG'], $count. ' of '.$total. " was ".$found_text, $percent);
     }
     send_message(0,'CLOSE', 'Process complete');
