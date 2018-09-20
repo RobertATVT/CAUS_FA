@@ -46,8 +46,8 @@ function causfa_oracle_compare($oracle) {
     global $wpdb;
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
     foreach ($oracle as $key => $row) {
-        send_message(-1,$row['FZVFORG_PTAG'],'');
-        send_message(-1,$assets[0]->FZVFORG_PTAG,'');
+        send_message(-1,gettype($row['FZVFORG_PTAG']),'');
+        send_message(-1,gettype($assets[0]->FZVFORG_PTAG),'');
         $found = false;
         for ($i = 0; $i < count($assets); $i++) {
             $found = false;
