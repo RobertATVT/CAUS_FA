@@ -45,20 +45,19 @@ function causfa_oracle_compare($oracle) {
     $total = count($oracle);
     global $wpdb;
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
-    for ($i = 0; $i < $total; $i++) {
-        $row = $oracle[$i];
+    foreach ($oracle as $key => $row) {
         send_message(-1,$row['FZVFORG_PTAG'],'');
         send_message(-1,$assets[0]->FZVFORG_PTAG,'');
         $found = false;
-        for ($j = 0; $j < count($assets); $j++) {
+        for ($i = 0; $i < count($assets); $i++) {
             $found = false;
-            if ($assets[$j]->FZVFORG_PTAG == $row['FZVFORG_PTAG']) {
+            if ($assets[$i]->FZVFORG_PTAG == $row['FZVFORG_PTAG']) {
                 $output = causfa_oracle_compare_custodian($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_location($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_org($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_ownership($row, $assets[$i]);
-                array_splice($assets, $j, 1);
-                array_splice($oracle, $i, 1);
+                array_splice($assets, $i, 1);
+                array_splice($oracle, $key, 1);
                 $found = true;
             }
         }
