@@ -78,9 +78,9 @@ function causfa_activate_plugin() {
 function causfa_admin_menu() {
 	add_menu_page( 'CAUS Fixed Assets Administration', 'CAUS Fixed Assets', 'edit_others_posts', 'causfa_admin_menu', 'causfa_admin_options' );
     add_submenu_page( 'causfa_admin_menu', 'Transfers', 'Transfers', 'edit_others_posts', 'causfa_admin_transfers', 'causfa_admin_tran');
-    add_submenu_page( 'causfa_admin_menu', 'Surplus', 'Surplus', 'edit_others_posts', 'causfa_admin_Surplus', 'causfa_admin_surp');
-    add_submenu_page( 'causfa_admin_menu', 'Tickets', 'Tickets', 'edit_others_posts', 'causfa_admin_Tickets', 'causfa_admin_tick');
-    add_submenu_page( 'causfa_admin_menu', 'Reports', 'Reports', 'edit_others_posts', 'causfa_admin_Reports', 'causfa_admin_repo');
+    add_submenu_page( 'causfa_admin_menu', 'Surplus', 'Surplus', 'edit_others_posts', 'causfa_admin_surplus', 'causfa_admin_surp');
+    add_submenu_page( 'causfa_admin_menu', 'Tickets', 'Tickets', 'edit_others_posts', 'causfa_admin_tickets', 'causfa_admin_tick');
+    add_submenu_page( 'causfa_admin_menu', 'Reports', 'Reports', 'edit_others_posts', 'causfa_admin_reports', 'causfa_admin_repo');
 }
 
 function causfa_admin_options() {
@@ -317,6 +317,8 @@ function causfa_admin_repo() {
     $output = str_replace('%style%', 'border-top-left-radius: 6px;border-top-right-radius: 6px;', $output);
     
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-reports.html', true));
+    
+    $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-modal.html', true));
     
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-footer.html', true));
     
