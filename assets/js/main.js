@@ -154,6 +154,8 @@ function causfa_run_full_org() {
             es.close();
             var pBar = document.getElementById('FA_LoadProgress');
             pBar.style.width = '100%';
+        } else if (result.message === 'START') {
+
         } else {
             var pBar = document.getElementById('FA_LoadProgress');
             pBar.style.width = result.progress + '%';
