@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/oracle.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/oracle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,7 +62,7 @@
           <entry key="html" value="2774" />
           <entry key="ini" value="1" />
           <entry key="js" value="13124" />
-          <entry key="php" value="13158" />
+          <entry key="php" value="13215" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
@@ -73,7 +72,7 @@
           <entry key="HTML" value="2783" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="13123" />
-          <entry key="PHP" value="13149" />
+          <entry key="PHP" value="13206" />
           <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
@@ -84,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/oracle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+            <state relative-caret-position="228">
+              <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -430,12 +429,12 @@
       <workItem from="1537191610584" duration="761000" />
       <workItem from="1537193997241" duration="73000" />
       <workItem from="1537194097845" duration="4086000" />
-      <workItem from="1537235616672" duration="12614000" />
+      <workItem from="1537235616672" duration="12901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="522212000" />
+    <option name="totallyTimeSpent" value="522499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -873,8 +872,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/oracle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        <state relative-caret-position="228">
+          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
         </state>
       </provider>
     </entry>

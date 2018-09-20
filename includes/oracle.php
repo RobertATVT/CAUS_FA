@@ -47,10 +47,12 @@ function causfa_oracle_compare($oracle) {
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
     for ($i = 0; $i < $total; $i++) {
         $row = $oracle[$i];
+        send_message(-1,$row['FZVFORG_PTAG'],'');
+        send_message(-1,$assets[0]->FZVFORG_PTAG,'');
         $found = false;
         for ($j = 0; $j < count($assets); $j++) {
             $found = false;
-            if (strcmp($assets[$j]->FZVFORG_PTAG, $row['FZVFORG_PTAG']) == 0) {
+            if ($assets[$j]->FZVFORG_PTAG == $row['FZVFORG_PTAG']) {
                 $output = causfa_oracle_compare_custodian($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_location($row, $assets[$i]);
                 $output = $output . causfa_oracle_compare_org($row, $assets[$i]);
