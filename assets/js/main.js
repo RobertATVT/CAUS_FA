@@ -152,8 +152,8 @@ function causfa_run_full_org() {
             var pBar = document.getElementById('FA_LoadProgress');
             pBar.style.width = '100%';
         } else if (result.message === 'START') {
-            $('#fa-progress').modal();
-            $('#fa-progress').modal('open');
+            jQuery('#fa-progress').modal();
+            jQuery('#fa-progress').modal('open');
             var msg = document.getElementById('FA_LoadMessage');
             msg.innerHTML = result.message;
         } else {
