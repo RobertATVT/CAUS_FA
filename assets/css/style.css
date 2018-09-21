@@ -616,6 +616,16 @@ select#org option:hover {
     line-height: 52px;
     font-size: 300%;
 }
+.compliance-left {
+    line-height: 52px;
+    font-size: 300%;
+    border-right: 1px solid #efefef;
+}
+.compliance-right {
+    line-height: 52px;
+    font-size: 300%;
+    border-left: 1px solid #efefef;
+}
 .compliance-sub {
     line-height: 20px;
     font-weight: 700;
