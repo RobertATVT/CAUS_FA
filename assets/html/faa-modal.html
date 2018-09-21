@@ -352,6 +352,23 @@
         <button type="button" class="btn btn-secondary modal-close">CANCEL REQUEST</button>
     </div>
 </div>
+<!---- EULA Modal ----->
+<div id="responseModal" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="modal-response-title">Fixed Assets Application License Agreement</h4>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+            <div class="rw" style="margin-bottom: 0px; padding: 0px;">
+                <div id="modal-response-alert" class="center cl m20 t20">By clicking the accept button below you understand that you are using the Fixed Assets Application provided by the College of Architexture + Urban Studies and that it is provided as is.<br><br>
+                You are also agreeing to follow the Virginia Tech Acceptable Use and Administration of Computer and Communications Policy 7000 <a href="https://policies.vt.edu/7000.pdf">FOUND HERE</a> and all benefits and penalties contained therein.<br><br>
+                The University requires that we maintain a 95% or higher Fixed Assets Retention rating, this Fixed Assets Compliance Rating will be shown on the app, those who are not in acceptable compliance levels will be ineligible for the acquisition of new equipment until they are in compliance or unless they get approval through the Dean of the College, this is effective immediately.</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="acceptEULAButton" onclick="acceptEULA('true')">ACCEPT</button>
+        <button type="button" class="btn btn-primary" id="denyEULAButton" onclick="acceptEULA('false')">DENY</button>
+    </div>
+</div>
 <!---- Response Modal ----->
 <div id="responseModal" class="modal">
     <div class="modal-content">
