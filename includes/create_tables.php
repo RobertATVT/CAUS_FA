@@ -211,4 +211,16 @@ function create_tables() {
         )".$charset_collate.";";
         dbDelta($sql);
     }
+    $table_name = 'causfa_exception_reports';
+    if($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        ID INT NOT NULL AUTO_INCREMENT,
+        DATE TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        TOTAL_BANNER NOT NULL,
+        TOTAL_LOCAL NOT NULL,
+        EXCEPTIONS longtext NULL,
+        PRIMARY KEY (ID)
+        )".$charset_collate.";";
+        dbDelta($sql);
+    }
 }
