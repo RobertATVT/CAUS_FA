@@ -70,7 +70,7 @@ function causfa_oracle_compare($oracle) {
             }
         }
         if (!$found) {
-            $result = $wpdb->get_row("SELECT * FROM causfa_execption_reports WHERE ID = ".$id.";");
+            $result = $wpdb->get_row("SELECT * FROM causfa_exception_reports WHERE ID = ".$id.";");
             $exceptions_list = maybe_unserialize($result->EXCEPTIONS);
             if ($exceptions_list === null) {
                 $exceptions_list = array(
@@ -80,7 +80,7 @@ function causfa_oracle_compare($oracle) {
                 array_push($exceptions_list, ($row['FZVFORG_PTAG'].' was not found in the local databse'));
             }
             $wpdb->update(
-                'causfa_execpetion_reports',
+                'causfa_exception_reports',
                 array(
                     'EXCEPTIONS' => maybe_serialize($exceptions_list)
                 ),
