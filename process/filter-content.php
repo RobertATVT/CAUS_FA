@@ -85,12 +85,14 @@ function causfa_filter_header( $content) {
  * @param $missing_total - total value of missing items in the current users name
  * @return mixed - html corresponding to the footer of the employee asset view page
  */
-function causfa_filter_impact( $value_total, $total_number, $missing_total, $missing_number) {
+function causfa_filter_impact( $value_total, $total_number, $missing_total, $missing_number, $comp_number, $comp_dollar) {
     $asset_impact_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-impact.html', true);
     $asset_impact_html = str_replace('[TOTAL VALUE]', ('$'.$value_total), $asset_impact_html);
     $asset_impact_html = str_replace('[TOTAL NUMBER]', $total_number, $asset_impact_html);
-    $asset_impact_html = str_replace( '[MISSING VALUE]', ('$'.$missing_total), $asset_impact_html);
+    $asset_impact_html = str_replace('[MISSING VALUE]', ('$'.$missing_total), $asset_impact_html);
     $asset_impact_html = str_replace('[MISSING NUMBER]', $missing_number, $asset_impact_html);
+    $asset_impact_html = str_replace('[comp#]', ($comp_number.'%'), $asset_impact_html);
+    $asset_impact_html = str_replace('[comp$]', ($comp_dollar.'%'), $asset_impact_html);
     return $asset_impact_html;
 }
 

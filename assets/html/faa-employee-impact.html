@@ -1,24 +1,35 @@
 <!-- BEGIN TEMPLATE faa-employee-impact.html -->
         <div class="rw" style="margin:0px;">
             <div class="cl t20">
-                <div class="cl m10 t20" style="padding:5px;">
+                <div class="cl m8 t20" style="padding:5px;">
                     <div class="cl t20 vt-teal vt-txt-white asset-border">
-                        <div class="cl m5 t8 biggertext">[TOTAL NUMBER]</div>
+                        <div class="cl m5 t8 biggertext" style="padding-left: 10px; padding-top: 10px;">[TOTAL NUMBER]</div>
                         <div class="cl m15 t12 subtext-right">Total Number of Assets</div>
-                        <div class="cl m9 t8 bigtext">[TOTAL VALUE]</div>
-                        <div class="cl m11 t12 subtext-right">Total Asset Values</div>
+                        <div class="cl m5 t8 bigtext" style="padding-left: 10px; padding-top: 10px;">[TOTAL VALUE]</div>
+                        <div class="cl m15 t12 subtext-right">Total Asset Values</div>
                         <div class="center-text cl t20 block-footer">
                             <div class="cl l12 t20 add-asset-text" style="">Do you own an asset that isn't in the list below?</div>
                             <div class="cl l8 t20 add-asset-btn-div"><input type="button" class="btn btn-primary add-asset-btn" value="Submit Request" onclick="addAssetModalRequested(this.id)"></div>
                         </div>
                     </div>
                 </div>
-                <div class="cl m10 t20" style="padding:5px;">
+                <div class="cl m4 t20" style="padding:5px;">
+                    <div class="cl t20 vt-dk-grey vt-txt-white asset-border" style="height: 100%;">
+                        <div class="cl t20" style="height: 10px;"></div>
+                        <div class="cl m10 t10 compliance center" style="border-right: 2px solid #efefef;">[comp#]</div>
+                        <div class="cl m10 t10 compliance center">[comp$]</div>
+                        <div class="center-text cl t20 block-footer">
+							<div class="cl t10 compliance-sub">Compliance by Items</div>
+							<div class="cl t10 compliance-sub">Compliance by Dollars</div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="cl m8 t20" style="padding:5px;">
                     <div class="cl t20 vt-pink vt-txt-white asset-border">
-                        <div class="cl m5 t8 biggertext">[MISSING NUMBER]</div>
+                        <div class="cl m5 t8 biggertext" style="padding-left: 10px; padding-top: 10px;">[MISSING NUMBER]</div>
                         <div class="cl m15 t12 subtext-right">Total Missing Assets</div>
-                        <div class="cl m9 t8 bigtext">[MISSING VALUE]</div>
-                        <div class="cl m11 t12 subtext-right">Total Missing Value</div>
+                        <div class="cl m5 t8 bigtext" style="padding-left: 10px; padding-top: 10px;">[MISSING VALUE]</div>
+                        <div class="cl m15 t12 subtext-right">Total Missing Value</div>
                         <div class="center-text cl t20 block-footer">
 							<div class="cl l12 t20 add-asset-text" style="">&nbsp;</div>
 							<div class="cl l8 t20 add-asset-btn-div">&nbsp;</div>  

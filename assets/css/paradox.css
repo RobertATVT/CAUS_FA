@@ -53,7 +53,13 @@ html {
     padding: 0px;
     min-height: 1px;
 }
-
+.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+}
 .tb {
     display:table;
 }

@@ -30,6 +30,8 @@ function causfa_load_employee_view() {
         $assets = '';
         $total_number = 0;
         $missing_number = 0;
+        $comp_number = 0;
+        $comp_dollar = 0;
         for ($i =0; $i < count($results_assets); $i++) {
             $result_asset = $results_assets[$i];
             $value_total += $result_asset->FZVFORG_AMOUNT;
@@ -42,7 +44,10 @@ function causfa_load_employee_view() {
             }
             $asset_index++;
         }
-        $output = $output.(apply_filters('causfa_impact', $value_total, $total_number, $missing_total, $missing_number));
+        $comp_number = round(100-(($missing_number/$total_number)*100));
+        $comp_dollar = round(100-(($missing_total/$value_total)*100));
+        
+        $output = $output.(apply_filters('causfa_impact', $value_total, $total_number, $missing_total, $missing_number, $comp_number, $comp_dollar));
 		$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-asset-header.html', true ));
         $output = $output.$assets;
 		$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-asset-footer.html', true ));

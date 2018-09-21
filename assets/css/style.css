@@ -612,7 +612,18 @@ select#org option:hover {
 	border-bottom: 1px solid rgba(255,255,255,.3);
     font-weight: 700;
 }
-
+.compliance {
+    line-height: 52px;
+    font-size: 300%;
+}
+.compliance-sub {
+    line-height: 20px;
+    font-weight: 700;
+    font-size: 80%;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-align: center;
+}
 
 /*==============  ASSET RIBBON CSS  ==============*/
 
@@ -1559,7 +1570,7 @@ slider-for{
         margin-top: 0px;
     }
     .add-asset-text {
-        font-size: 90%; 
+        font-size: 90% !important; 
         padding-left: 10px !important; 
         min-height: 20px !important;
         line-height: 20px;

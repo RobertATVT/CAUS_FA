@@ -54,7 +54,7 @@ add_action( 'wp_enqueue_scripts', 'causfa_enqueue', 100);
 add_action( 'wp_login', 'causfa_logger_login', 100, 2);
 register_activation_hook( __FILE__, 'causfa_activate_plugin' );
 add_filter( 'causfa_header', 'causfa_filter_header', 10, 1);
-add_filter( 'causfa_impact', 'causfa_filter_impact', 10, 4);
+add_filter( 'causfa_impact', 'causfa_filter_impact', 10, 6);
 add_filter( 'causfa_asset_info', 'causfa_filter_asset_info', 10, 2);
 add_action( 'wp_ajax_causfa_surplus', 'causfa_surplus');
 add_action( 'wp_ajax_causfa_transfer_asset', 'causfa_transfer_asset');
