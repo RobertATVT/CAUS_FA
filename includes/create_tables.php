@@ -216,8 +216,8 @@ function create_tables() {
         $sql = "CREATE TABLE ".$table_name." (
         ID INT NOT NULL AUTO_INCREMENT,
         DATE TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        TOTAL_BANNER NOT NULL,
-        TOTAL_LOCAL NOT NULL,
+        TOTAL_BANNER INT NOT NULL,
+        TOTAL_LOCAL INT NOT NULL,
         EXCEPTIONS longtext NULL,
         PRIMARY KEY (ID)
         )".$charset_collate.";";
