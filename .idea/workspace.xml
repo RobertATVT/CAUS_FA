@@ -44,7 +44,7 @@
           <entry key="html" value="95" />
           <entry key="ini" value="2" />
           <entry key="js" value="33" />
-          <entry key="php" value="67" />
+          <entry key="php" value="68" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -53,7 +53,7 @@
           <entry key="HTML" value="95" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="33" />
-          <entry key="PHP" value="67" />
+          <entry key="PHP" value="68" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -62,7 +62,7 @@
           <entry key="html" value="2841" />
           <entry key="ini" value="1" />
           <entry key="js" value="13251" />
-          <entry key="php" value="14560" />
+          <entry key="php" value="15410" />
           <entry key="txt" value="17" />
         </counts>
       </usages-collector>
@@ -72,7 +72,7 @@
           <entry key="HTML" value="2850" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="13250" />
-          <entry key="PHP" value="14551" />
+          <entry key="PHP" value="15401" />
           <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
@@ -83,8 +83,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/oracle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="82" column="41" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+            <state relative-caret-position="132">
+              <caret line="62" column="68" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/email.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="139" column="56" selection-start-line="139" selection-start-column="56" selection-end-line="139" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -386,12 +395,12 @@
       <workItem from="1537191610584" duration="761000" />
       <workItem from="1537193997241" duration="73000" />
       <workItem from="1537194097845" duration="4086000" />
-      <workItem from="1537235616672" duration="19153000" />
+      <workItem from="1537235616672" duration="23629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528751000" />
+    <option name="totallyTimeSpent" value="533227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -813,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="139" column="56" selection-start-line="139" selection-start-column="56" selection-end-line="139" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/create_tables.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
@@ -827,10 +829,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="139" column="56" selection-start-line="139" selection-start-column="56" selection-end-line="139" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/oracle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="82" column="41" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+        <state relative-caret-position="132">
+          <caret line="62" column="68" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
         </state>
       </provider>
     </entry>
