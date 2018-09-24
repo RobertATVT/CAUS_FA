@@ -1009,6 +1009,14 @@ a.btn-menu {
 	
 }
 
+/* Remove default checkbox */
+.asset-list .cl [type="checkbox"]:not(:checked),
+.asset-list .cl [type="checkbox"]:checked {
+  position: absolute;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
 .collapsible {
 /*
   border-top: 1px solid #ddd;
