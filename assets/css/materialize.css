@@ -6317,7 +6317,7 @@ form p:last-child {
 /* Remove default checkbox */
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
-  position: absolute;
+/*  position: absolute;*/
 /*  opacity: 0 !important;*/
 /*  pointer-events: none;*/
 }
@@ -6622,7 +6622,7 @@ select.browser-default {
 
 select {
   background-color: rgba(255, 255, 255, 0.9);
-  width: 100%;
+/*  width: 100%;*/
   padding: 5px;
   border: 1px solid #f2f2f2;
   border-radius: 2px;
