@@ -11,7 +11,7 @@ function casufa_oracle_org_report()
     ini_set('zlib.output_compression', 0);
     ini_set('implicit_flush', 1);
     ini_set('max_execution_time', 0); // to get unlimited php script execution time
-    //header('Content-Type: text/event-stream');
+    header('Content-Type: text/event-stream');
     // recommended to prevent caching of event data.
     //header('Cache-Control: no-cache');
     ob_implicit_flush(1);
