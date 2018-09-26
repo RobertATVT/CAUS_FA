@@ -20,7 +20,6 @@ function create_tables() {
         FZVFORG_OWNER varchar(2) NOT NULL,
         FZVFORG_ORGN_CODE varchar(6) NOT NULL,
         FZVFORG_ORGN_TITLE varchar(35) NOT NULL,
-        FZVFORG_LOCN_CODE varchar(9) NOT NULL,
         FZVFORG_ROOM varchar(35) NOT NULL,
         FZVFORG_BLDG varchar(35) NOT NULL,
         FZVFORG_SORT_ROOM varchar(40) NOT NULL,
@@ -30,49 +29,30 @@ function create_tables() {
         FZVFORG_SERIAL_NUM varchar(40) NOT NULL,
         FZVFORG_DESCRIPTION varchar(60) NOT NULL,
         FZVFORG_CUSTODIAN varchar(4000) NOT NULL,
-        FZVFORG_PO varchar(8) NOT NULL,
         FZVFORG_ACQ_DATE varchar(20) NOT NULL,
         FZVFORG_AMOUNT decimal(13,2) NOT NULL,
         FZVFORG_OWNERSHIP varchar(35) NOT NULL,
-        FZVFORG_SCHEV_YEAR  varchar(2) NOT NULL,
-        FZVFORG_TAG_TYPE varchar(6) NOT NULL,
+        FZVFORG_SCHEV_YEAR  varchar(2) NULL,
         FZVFORG_ASSET_TYPE varchar(2) NOT NULL,
         FZVFORG_CONDITION varchar(10) NOT NULL,
-        FZVFORG_ATYPE_TITLE varchar(20) NOT NULL,
         FZVFORG_LAST_INVENTORY_DATE varchar(30) NOT NULL,
+        STATUS INT NOT NULL,
+        PENDING_STATUS INT NOT NULL,
         PRIMARY KEY  (FZVFORG_PTAG)
         ) ".$charset_collate.";";
         dbDelta( $sql );
     }
-    $table_name = 'causfa_banner_missing';
+    $table_name = 'causfa_reconciled_missing';
     if ($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
         $sql = "CREATE TABLE ".$table_name." (
-        FZVFORG_OWNER varchar(2) NOT NULL,
-        FZVFORG_ORGN_CODE varchar(6) NOT NULL,
-        FZVFORG_ORGN_TITLE varchar(35) NOT NULL,
-        FZVFORG_LOCN_CODE varchar(9) NOT NULL,
-        FZVFORG_ROOM varchar(35) NOT NULL,
-        FZVFORG_BLDG varchar(35) NOT NULL,
-        FZVFORG_SORT_ROOM varchar(40) NOT NULL,
+        ID INT NOT NULL AUTO_INCREMENT,
         FZVFORG_PTAG varchar(9) NOT NULL,
-        FZVFORG_MANUFACTURER varchar(35) NOT NULL,
-        FZVFORG_MODEL varchar(30) NOT NULL,
-        FZVFORG_SERIAL_NUM varchar(40) NOT NULL,
-        FZVFORG_DESCRIPTION varchar(60) NOT NULL,
-        FZVFORG_CUSTODIAN varchar(4000) NOT NULL,
-        FZVFORG_PO varchar(8) NOT NULL,
-        FZVFORG_ACQ_DATE varchar(20) NOT NULL,
-        FZVFORG_AMOUNT decimal(13,2) NOT NULL,
-        FZVFORG_OWNERSHIP varchar(35) NOT NULL,
-        FZVFORG_SCHEV_YEAR  varchar(2) NOT NULL,
-        FZVFORG_TAG_TYPE varchar(6) NOT NULL,
-        FZVFORG_ASSET_TYPE varchar(2) NOT NULL,
-        FZVFORG_CONDITION varchar(10) NOT NULL,
-        FZVFORG_ATYPE_TITLE varchar(20) NOT NULL,
-        FZVFORG_LAST_INVENTORY_DATE varchar(30) NOT NULL,
-        PRIMARY KEY  (FZVFORG_PTAG)
+        Notes longtext NOT NULL,
+        Approver varchar(32) NOT NULL,
+        Creator varchar(32) NOT NULL,
+        PRIMARY KEY (ID)
         ) ".$charset_collate.";";
-        dbDelta( $sql );
+        dbDelta($sql);
     }
     $table_name = 'causfa_forms';
     if ($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
@@ -134,6 +114,7 @@ function create_tables() {
         Office varchar(1000) NOT NULL,
         Phone varchar(13) NOT NULL,
         Org varchar(6) NOT NULL,
+        EULA BOOLEAN NOT NULL,
         PRIMARY KEY  (PID)
         ) ".$charset_collate.";";
         dbDelta($sql);

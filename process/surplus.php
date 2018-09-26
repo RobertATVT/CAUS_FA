@@ -33,6 +33,12 @@ function causfa_surplus() {
           'PENDING_STATUS' => $pending_status
         ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
     );
+    $wpdb->update(
+        'causfa_banner',
+        array(
+            'PENDING_STATUS' => 2
+        ), array('FZVFORG_PTAG' => $ptag)
+    );
     $logger_info = array(
         'PID' => $PID_origin,
         'Action' => 8,
@@ -79,6 +85,12 @@ function causfa_bulk_surplus() {
                 'PID_DESTINATION' => $PID_dest,
                 'PENDING_STATUS' => $pending_status
             ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
+        );
+        $wpdb->update(
+            'causfa_banner',
+            array(
+                'PENDING_STATUS' => 2
+            ), array('FZVFORG_PTAG' => $ptags[$i])
         );
         $logger_info = array(
             'PID' => $PID_origin,
@@ -149,6 +161,12 @@ function causfa_surplus_to_transfer() {
         );
         $output['status'] = 1;
     }
+    $wpdb->update(
+        'causfa_banner',
+        array(
+            'PENDING_STATUS' => 1
+        ), array('FZVFORG_PTAG' => $ptag)
+    );
     wp_send_json($output);
 }
 function causfa_surplus_number() {

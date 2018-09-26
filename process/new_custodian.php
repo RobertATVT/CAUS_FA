@@ -8,6 +8,7 @@
 function causfa_new_custodian_dialog() {
     if (is_user_logged_in()) {
         $new_custodian_modal = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-new-custodian.html', true);
+        $new_custodian_modal .= file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-eula-modal.html', true);
         return $new_custodian_modal;
     } else {
         return "Please login to view this page";
@@ -34,6 +35,7 @@ function causfa_new_custodian() {
     $phone = substr_replace($phone,'-', 3, 0);
     $phone = substr_replace($phone,'-', 7, 0);
     $org = $_POST['org'];
+    $eula = $_POST['eula'];
     $oldOrg = $wpdb->get_var("SELECT Org FROM causfa_custodians WHERE PID='".$PID."';");
     if ($wpdb->get_row("SELECT * FROM causfa_custodians WHERE PID='".$PID."';")) {
        $wpdb->update('causfa_custodians',
@@ -54,14 +56,8 @@ function causfa_new_custodian() {
             'Building' => $building,
             'Office' => $office,
             'Phone' => $phone,
-            'Org' => $org
-        ), array(
-            '%s',
-            '%s',
-            '%s',
-            '%s',
-            '%s',
-            '%s'
+            'Org' => $org,
+            'EULA' => $eula
         ))) {
             $output = 1;
         }

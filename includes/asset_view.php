@@ -30,8 +30,6 @@ function causfa_load_employee_view() {
         $assets = '';
         $total_number = 0;
         $missing_number = 0;
-        $comp_number = 0;
-        $comp_dollar = 0;
         for ($i =0; $i < count($results_assets); $i++) {
             $result_asset = $results_assets[$i];
             $value_total += $result_asset->FZVFORG_AMOUNT;

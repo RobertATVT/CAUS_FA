@@ -11,6 +11,7 @@ function formsModalRequested(elementID) {
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {});
     getLastForm(tag);
     jQuery('#formsModal').find('#formsPtag').val(tag);
+    jQuery('#formsModal').find('#formsId').val(id);
     jQuery('#homeFormToUpload').val('');
     jQuery('#officeFormToUpload').val('');
     jQuery('#formsModal').modal();
@@ -64,6 +65,7 @@ function uploadFormHome(){
         alert('Please select a file to upload');
     } else {
         var ptag = jQuery('#formsPtag').val();
+        var id = jQuery('#formsId').val();
         var form = new FormData();
         form.append('action', 'causfa_upload_form_home');
         form.append('ptag', ptag);
@@ -80,6 +82,12 @@ function uploadFormHome(){
                 } else {
                     $('#homeFormToUpload').val('');
                     $('#formsModal').modal('close');
+                    var status = $('#status-' + id);
+                    status.children().html('Home Use');
+                    status.children().removeClass();
+                    status.children().attr('class','asset-status asset-home');
+                    var checkbox = jQuery(('#asset-select-' + id));
+                    checkbox.attr('checked', false);
                     $('#modal-response-title').html('File Upload Successful');
                     $('#modal-response-alert').html(data['message']);
                     var modal = $('#responseModal').modal();
@@ -97,6 +105,7 @@ function uploadFormOffice(){
         alert('Please select a file to upload');
     } else {
         var ptag = jQuery('#formsPtag').val();
+        var id = jQuery('#formsId').val();
         var form = new FormData();
         form.append('action', 'causfa_upload_form_office');
         form.append('ptag', ptag);
@@ -113,6 +122,12 @@ function uploadFormOffice(){
                 } else {
                     $('#officeFormToUpload').val('');
                     $('#formsModal').modal('close');
+                    var status = $('#status-' + id);
+                    status.children().html('Office Use');
+                    status.children().removeClass();
+                    status.children().attr('class','asset-status asset-office');
+                    var checkbox = jQuery(('#asset-select-' + id));
+                    checkbox.attr('checked', false);
                     $('#modal-response-title').html('File Upload Successful');
                     $('#modal-response-alert').html(data['message']);
                     var modal = $('#responseModal').modal();

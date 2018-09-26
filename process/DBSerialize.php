@@ -53,6 +53,12 @@ function causfa_DB_Serialize_Images($file, $ptag, $desc) {
 
 function causfa_DB_Serialize_Form_Home($file, $ptag) {
     global $wpdb;
+    $wpdb->update(
+        'causfa_banner',
+        array(
+            'STATUS' => 5
+        ), array('FZVFORG_PTAG' => $ptag)
+    );
     $date = current_time('mysql');
     $wpdb->replace(
         'causfa_forms',
@@ -62,6 +68,7 @@ function causfa_DB_Serialize_Form_Home($file, $ptag) {
             'HU_DATE' => $date
         ), array('%s','%s','%s')
     );
+
     $result = $wpdb->get_row('SELECT * FROM causfa_forms_history WHERE FZVFORG_PTAG = '.$ptag.';');
     if (is_null($result)) {
         $file_input = array($file);
@@ -105,6 +112,12 @@ function causfa_DB_Serialize_Form_Home($file, $ptag) {
 
 function causfa_DB_Serialize_Form_Office($file, $ptag) {
     global $wpdb;
+    $wpdb->update(
+        'causfa_banner',
+        array(
+            'STATUS' => 3
+        ), array('FZVFORG_PTAG' => $ptag)
+    );
     $date = current_time('mysql');
     $wpdb->replace(
         'causfa_forms',

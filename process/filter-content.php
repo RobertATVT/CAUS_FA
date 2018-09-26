@@ -118,38 +118,65 @@ function causfa_filter_asset_info( $content, $asset_index) {
     $asset_info_html = str_replace('[ID]', $asset_index, $asset_info_html);
     $asset_info_html = str_replace('[PURCHASED]', $content->FZVFORG_ACQ_DATE, $asset_info_html);
     $missing = false;
-    if ($wpdb->get_row("SELECT * FROM causfa_banner_missing WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
-        $asset_info_html = str_replace( '[STATUS]', 'Missing', $asset_info_html);
-        $asset_info_html = str_replace('asset-status', 'asset-status asset-missing', $asset_info_html);
-        $missing = true;
-        $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
-        $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
-    } elseif ($row = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
-        if ($row->PENDING_TYPE == 0) {
-            $asset_info_html = str_replace( '[STATUS]', 'Pending Transfer', $asset_info_html);
-        } else {
-            $asset_info_html = str_replace( '[STATUS]', 'Pending Surplus', $asset_info_html);
+    if ($content->PENDING_STATUS == 0) {
+        switch ($content->STATUS) {
+            case 0:
+                break;
+            case 1:
+                $asset_info_html = str_replace( '[STATUS]', 'Missing', $asset_info_html);
+                $asset_info_html = str_replace('asset-status', 'asset-status asset-missing', $asset_info_html);
+                $missing = true;
+                $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
+                $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
+                break;
+            case 2:
+                $asset_info_html = str_replace( '[STATUS]', 'Missing Reconciled', $asset_info_html);
+                $asset_info_html = str_replace('asset-status', 'asset-status asset-missing', $asset_info_html);
+                $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
+                $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
+                break;
+            case 3:
+                $asset_info_html = str_replace('[STATUS]', 'Office Use', $asset_info_html);
+                $asset_info_html= str_replace('asset-status', 'asset-status asset-office', $asset_info_html);
+                break;
+            case 4:
+                $asset_info_html = str_replace('[STATUS]', 'Office Use*', $asset_info_html);
+                $asset_info_html= str_replace('asset-status', 'asset-status asset-office', $asset_info_html);
+                break;
+            case 5:
+                $asset_info_html= str_replace('[STATUS]', 'Home Use', $asset_info_html);
+                $asset_info_html= str_replace('asset-status', 'asset-status asset-home', $asset_info_html);
+                break;
+            case 6:
+                $asset_info_html= str_replace('[STATUS]', 'Home Use*', $asset_info_html);
+                $asset_info_html= str_replace('asset-status', 'asset-status asset-home', $asset_info_html);
+                break;
         }
-        $asset_info_html = str_replace( 'type="checkbox"', 'type="checkbox" disabled="disabled"', $asset_info_html);
-        $asset_info_html = str_replace('asset-status', 'asset-status asset-pending', $asset_info_html);
-        $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
-        $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
-    } else if ($row = $wpdb->get_row("SELECT * FROM causfa_tickets WHERE FZVFORG_PTAG = '".$content->FZVFORG_PTAG."';")) {
-        $asset_info_html = str_replace('[STATUS]', 'Pending Ticket', $asset_info_html);
-        $asset_info_html = str_replace('asset-status', 'asset-status asset-pending', $asset_info_html);
-        $asset_info_html = str_replace( 'type="checkbox"', 'type="checkbox" disabled="disabled"', $asset_info_html);
-        $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
-        $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
-        $asset_info_html = str_replace('ticketModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
     } else {
-        $asset_status = $content->FZVFORG_ROOM;
-        if (strpos($asset_status, 'HOME') !== false) {
-            $asset_info_html= str_replace('[STATUS]', 'Home Use', $asset_info_html);
-            $asset_info_html= str_replace('asset-status', 'asset-status asset-home', $asset_info_html);
-        } else {
-            $asset_info_html = str_replace('[STATUS]', 'Office Use', $asset_info_html);
-            $asset_info_html= str_replace('asset-status', 'asset-status asset-office', $asset_info_html);
-        }
+       switch ($content->PENDING_STATUS) {
+           case 1:
+               $asset_info_html = str_replace( '[STATUS]', 'Pending Transfer', $asset_info_html);
+               $asset_info_html = str_replace( 'type="checkbox"', 'type="checkbox" disabled="disabled"', $asset_info_html);
+               $asset_info_html = str_replace('asset-status', 'asset-status asset-pending', $asset_info_html);
+               $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+               $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+               break;
+           case 2:
+               $asset_info_html = str_replace( '[STATUS]', 'Pending Surplus', $asset_info_html);
+               $asset_info_html = str_replace( 'type="checkbox"', 'type="checkbox" disabled="disabled"', $asset_info_html);
+               $asset_info_html = str_replace('asset-status', 'asset-status asset-pending', $asset_info_html);
+               $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+               $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+               break;
+           case 3:
+               $asset_info_html = str_replace('[STATUS]', 'Pending Ticket', $asset_info_html);
+               $asset_info_html = str_replace('asset-status', 'asset-status asset-pending', $asset_info_html);
+               $asset_info_html = str_replace( 'type="checkbox"', 'type="checkbox" disabled="disabled"', $asset_info_html);
+               $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+               $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+               $asset_info_html = str_replace('ticketModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+               break;
+       }
     }
     return array($asset_info_html, $missing);
 }

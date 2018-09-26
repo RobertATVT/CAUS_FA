@@ -221,7 +221,6 @@ function transferAsset() {
             if(data['status'] == 1) {
                 var id = jQuery('#transferModal').find('#transferIndex').val();
                 var status = jQuery(('#status-' + id));
-                /*status.addClass('asset-pending');*/
                 status.html('<div class="asset-status asset-pending">Pending Transfer</div>');
                 jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
                 jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');

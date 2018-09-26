@@ -29,6 +29,13 @@ function causfa_transfer_asset() {
             'PENDING_STATUS' => $pending_status
         ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
     );
+    $wpdb->update(
+        'causfa_banner',
+        array(
+            'PENDING_STATUS' => 1
+        ),
+        array('FZVFORG_PTAG' => $ptag)
+    );
     $logger_info = array(
         'PID' => $PID_origin,
         'Action' => 1,
@@ -71,6 +78,12 @@ function causfa_bulk_transfer_asset() {
                 'PENDING_STATUS' => $pending_status,
             ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
         );
+        $wpdb->update(
+            'causfa_banner',
+            array(
+                'PENDING_STATUS' => 1
+            ), array('FZVFORG_PTAG' => $ptags[$i])
+        );
         $logger_info = array(
             'PID' => $PID_origin,
             'Action' => 1,
@@ -100,6 +113,12 @@ function causfa_accept_reject() {
     } else {
         causfa_email_transfer_update(1, $ptag);
         $wpdb->delete('causfa_pending', array( 'FZVFORG_PTAG' => $ptag));
+        $wpdb->update(
+            'causfa_banner',
+            array(
+                'PENDING_STATUS' => 0
+            ), array('FZVFORG_PTAG' => $ptag)
+        );
         $output['status'] = 1;
     }
     wp_send_json($output);

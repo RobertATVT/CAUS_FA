@@ -1,0 +1,25 @@
+<!---- EULA Modal ----->
+<div id="eulaModal" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="modal-eula-title">Fixed Assets Application License Agreement</h4>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+            <div class="rw" style="margin-bottom: 0px; padding: 10px;">
+                <div id="modal-eula-alert" class="cl m20 t20" style="border: 1px solid #aaa; background: #fff;padding: 10px;">
+                    The Fixed Assets Application provided by the College of Architecture & Urban Studies in intended to provide transparency and accountability. Custodians are responsible for reviewing and adhering to the <a href="http://www.policies.vt.edu/3950.pdf" target="_blank">Fixed Assets Accounting Policy 3950</a> and the <a href="https://policies.vt.edu/7000.pdf" target="_blank">Acceptable Use and Administration of Computer and Communication Systems Policy 7000</a>.<br><br>
+
+                    Virginia Tech requires at least a 95% Fixed Assets retention rating to be compliant. Persons not in compliance will be ineligible for the acquisition of new equipment until they meet the compliance criteria or have received approval from the Dean of the college.<br><br>
+
+                    By clicking the accept button below you understand that you are using the Fixed Assets Application provided by the College of Architecture & Urban Studies and that it is provided as is.<br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="acceptEULAButton" onclick="acceptEULA(1)">ACCEPT</button>
+        <button type="button" class="btn btn-primary" id="denyEULAButton" onclick="acceptEULA(0)">DENY</button>
+    </div>
+</div>
+<script>jQuery(document).ready(function() {
+    jQuery('#eulaModal').modal({dismissible: false});
+    jQuery('#eulaModal').modal('open');
+});</script>

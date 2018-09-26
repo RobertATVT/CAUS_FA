@@ -29,7 +29,6 @@ function casufa_oracle_org_report()
         $r = oci_execute($stid);
         oci_fetch_all($stid, $oracle_assets, 0, -1, OCI_FETCHSTATEMENT_BY_ROW);
         oci_close($conn);
-        //send_message(-1, 'TEST', print_r($oracle_assets));
         causfa_oracle_compare($oracle_assets);
     }
 }

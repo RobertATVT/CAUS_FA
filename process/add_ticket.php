@@ -45,6 +45,12 @@ function causfa_add_ticket() {
     } else {
         $action = 19;
     }
+    $wpdb->update(
+        'causfa_banner',
+        array(
+            'PENDING_STATUS' => 3
+        ), array('FZVFORG_PTAG' => $ptag)
+    );
     $logger_info = array(
         'PID' => $user,
         'Action' => $action,
@@ -70,6 +76,12 @@ function causfa_close_ticket() {
     $wpdb->delete('causfa_tickets', array('FZVFORG_PTAG' => $ptag));
     $output = array(
         'status' => 1
+    );
+    $wpdb->update(
+        'causfa_banner',
+        array(
+            'PENDING_STATUS' => 0
+        ), array('FZVFORG_PTAG' => $ptag)
     );
     wp_send_json($output);
 }
