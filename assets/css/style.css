@@ -599,6 +599,13 @@ select#org option:hover {
     letter-spacing: .2em;
 	line-height: 20px;
 }
+.asset-missing-recon {
+    font-size: 135%;
+    background: #c60 !important;
+    color: #fff;
+    letter-spacing: .2em;
+	line-height: 20px;
+}
 .asset-pending {
     font-size: 135%;
 	background: #46c !important;
@@ -1012,6 +1019,30 @@ a.btn-menu {
 /* Remove default checkbox */
 .asset-list .cl [type="checkbox"]:not(:checked),
 .asset-list .cl [type="checkbox"]:checked {
+  position: absolute;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+#PendingTransfers [type="checkbox"]:not(:checked),
+#PendingTransfers [type="checkbox"]:checked {
+  position: absolute;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+#PendingSurplus [type="checkbox"]:not(:checked),
+#PendingSurplus [type="checkbox"]:checked {
+  position: absolute;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+#PendingTickets [type="checkbox"]:not(:checked),
+#PendingTickets [type="checkbox"]:checked {
+  position: absolute;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+#bulk-transfer-items [type="checkbox"]:not(:checked),
+#bulk-transfer-items [type="checkbox"]:checked {
   position: absolute;
   opacity: 0 !important;
   pointer-events: none;
@@ -1496,6 +1527,9 @@ slider-for{
         font-size: 125%;
     }
     .asset-missing {
+        font-size: 125%;
+    }
+    .asset-missing-recon {
         font-size: 125%;
     }
     .asset-pending {
