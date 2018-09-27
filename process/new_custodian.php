@@ -63,6 +63,9 @@ function causfa_new_custodian() {
         }
         causfa_groups_add($org);
     }
+    if (!$eula) {
+        causfa_email_eula_reject($PID);
+    }
     wp_send_json($output);
 
 }

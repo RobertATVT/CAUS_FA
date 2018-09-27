@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/html/faa-eula-modal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/emailTemplates/eulaReject-body.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/emailTemplates/eulaReject-subject.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/html/faa-new-custodian.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/html/faa-new-custodian.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/forms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/transfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/transfer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/asset_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/asset_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/create_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/create_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/oracle.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/oracle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/DBSerialize.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/DBSerialize.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/add_ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/add_ticket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/filter-content.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/filter-content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/new_custodian.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/new_custodian.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/surplus.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/surplus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/transfer.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/transfer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/email.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/email.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,73 +46,79 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="html" value="101" />
+          <entry key="html" value="103" />
           <entry key="ini" value="2" />
           <entry key="js" value="36" />
-          <entry key="php" value="88" />
-          <entry key="txt" value="2" />
+          <entry key="php" value="92" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="101" />
+          <entry key="HTML" value="103" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="36" />
-          <entry key="PHP" value="88" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PHP" value="92" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="3" />
-          <entry key="html" value="3062" />
+          <entry key="html" value="3240" />
           <entry key="ini" value="1" />
           <entry key="js" value="13842" />
-          <entry key="php" value="16514" />
-          <entry key="txt" value="17" />
+          <entry key="php" value="17395" />
+          <entry key="txt" value="99" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="4" />
-          <entry key="HTML" value="3071" />
+          <entry key="HTML" value="3249" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="13841" />
-          <entry key="PHP" value="16505" />
-          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="PHP" value="17386" />
+          <entry key="PLAIN_TEXT" value="99" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/email.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="168" column="28" selection-start-line="168" selection-start-column="28" selection-end-line="168" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/js/forms.js">
+        <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="569">
+              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/transfer.js">
+        <entry file="file://$PROJECT_DIR$/includes/groups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="267" column="54" selection-start-line="265" selection-start-column="16" selection-end-line="267" selection-end-column="54" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-185">
+              <caret line="110" column="43" lean-forward="true" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/html/faa-modal.html">
+        <entry file="file://$PROJECT_DIR$/assets/emailTemplates/eulaReject-body.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="210" column="31" lean-forward="true" selection-start-line="210" selection-start-column="31" selection-end-line="210" selection-end-column="31" />
+            <state relative-caret-position="545">
+              <caret line="72" column="81" selection-start-line="72" selection-start-column="81" selection-end-line="72" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -195,9 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/backup/fixed-assets-admin.html" />
-        <option value="$PROJECT_DIR$/assets/html/faa-admin-surplus-header.html" />
-        <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-1.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-2.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-3.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-4.html" />
@@ -223,7 +213,6 @@
         <option value="$PROJECT_DIR$/assets/html/faa-employee-header.html" />
         <option value="$PROJECT_DIR$/assets/js/admin-modal.js" />
         <option value="$PROJECT_DIR$/assets/emailTemplates/ticket-subject.txt" />
-        <option value="$PROJECT_DIR$/includes/email.php" />
         <option value="$PROJECT_DIR$/endpoints/oracle_update.php" />
         <option value="$PROJECT_DIR$/includes/oracle_helper.php" />
         <option value="$PROJECT_DIR$/includes/progressbar.php" />
@@ -246,6 +235,10 @@
         <option value="$PROJECT_DIR$/assets/html/faa-modal.html" />
         <option value="$PROJECT_DIR$/assets/js/transfer.js" />
         <option value="$PROJECT_DIR$/assets/js/forms.js" />
+        <option value="$PROJECT_DIR$/assets/emailTemplates/eulaRejectBody.html" />
+        <option value="$PROJECT_DIR$/assets/emailTemplates/eulaRejectSubject.txt" />
+        <option value="$PROJECT_DIR$/assets/emailTemplates/eulaReject-body.html" />
+        <option value="$PROJECT_DIR$/includes/email.php" />
       </list>
     </option>
   </component>
@@ -287,13 +280,12 @@
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="emailTemplates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
@@ -398,12 +390,12 @@
       <workItem from="1537235616672" duration="24371000" />
       <workItem from="1537662904020" duration="300000" />
       <workItem from="1537663760662" duration="49000" />
-      <workItem from="1537665230583" duration="12192000" />
+      <workItem from="1537665230583" duration="14850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="546510000" />
+    <option name="totallyTimeSpent" value="549168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -494,27 +486,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/activate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="172" selection-start-line="23" selection-start-column="172" selection-end-line="23" selection-end-column="172" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="172" selection-start-line="23" selection-start-column="172" selection-end-line="23" selection-end-column="172" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/html/faa-admin-surplus-fill-5.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -571,13 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1401">
-          <caret line="110" column="43" lean-forward="true" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -682,13 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/enqueue/enqueue.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -700,13 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="995">
-          <caret line="139" column="56" selection-start-line="139" selection-start-column="56" selection-end-line="139" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -800,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/html/faa-modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="210" column="31" lean-forward="true" selection-start-line="210" selection-start-column="31" selection-end-line="210" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/transfer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -819,8 +762,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/forms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="697">
           <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/html/faa-modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="210" column="31" lean-forward="true" selection-start-line="210" selection-start-column="31" selection-end-line="210" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/emailTemplates/eulaReject-subject.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="74" selection-start-column="74" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/emailTemplates/surplus-body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="82" column="7" selection-end-line="82" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/emailTemplates/eulaReject-body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="72" column="81" selection-start-line="72" selection-start-column="81" selection-end-line="72" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-185">
+          <caret line="110" column="43" lean-forward="true" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="168" column="28" selection-start-line="168" selection-start-column="28" selection-end-line="168" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
         </state>
       </provider>
     </entry>

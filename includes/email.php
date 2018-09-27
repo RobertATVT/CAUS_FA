@@ -165,6 +165,24 @@ function causfa_email_to_spiceworks() {
     }
 }
 
+function causfa_email_eula_reject($pid) {
+    if (CAUSFA_SEND_EMAIL) {
+        $headers = "MIME-Version: 1.0\n";
+        $headers .= "Content-type: text/html; charset=iso-8859-1";
+        $to = causfa_groups_BM($pid)['Email'];
+        $subject = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/eulaReject-subject.txt');
+        $subject = str_replace('[PID]', $pid, $subject);
+        $subject = str_replace('[NAME]', causfa_email_get_name($pid),$subject);
+        $body = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/emailTemplates/eulaReject-body.html');
+        $body = str_replace('[PID]', $pid, $body);
+        $body = str_replace('[NAME]', causfa_email_get_name($pid), $body);
+        $footerText = "Email generated on behalf of " . causfa_email_get_name($pid) . " (" . $pid . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application ";
+        $body = str_replace('footer', $footerText, $body);
+        $body .= print_r($to);
+        mail('mattwj6@vt.edu', $subject, $body, $headers);
+    }
+}
+
 function causfa_get_recipient_list($requester, $recipient = null) {
     $to = array();
     if (!causfa_groups_is_admin($requester)) {
