@@ -76,15 +76,15 @@ function causfa_activate_plugin() {
 }
 
 function causfa_admin_menu() {
-	add_menu_page( 'CAUS Fixed Assets Administration', 'CAUS Fixed Assets', 'edit_others_posts', 'causfa_admin_menu', 'causfa_admin_options' );
-    add_submenu_page( 'causfa_admin_menu', 'Transfers', 'Transfers', 'edit_others_posts', 'causfa_admin_transfers', 'causfa_admin_tran');
-    add_submenu_page( 'causfa_admin_menu', 'Surplus', 'Surplus', 'edit_others_posts', 'causfa_admin_surplus', 'causfa_admin_surp');
-    add_submenu_page( 'causfa_admin_menu', 'Tickets', 'Tickets', 'edit_others_posts', 'causfa_admin_tickets', 'causfa_admin_tick');
-    add_submenu_page( 'causfa_admin_menu', 'Reports', 'Reports', 'edit_others_posts', 'causfa_admin_reports', 'causfa_admin_repo');
+	add_menu_page( 'CAUS Fixed Assets Administration', 'CAUS Fixed Assets', 'fixed_assets_admin', 'causfa_admin_menu', 'causfa_admin_options' );
+    add_submenu_page( 'causfa_admin_menu', 'Transfers', 'Transfers', 'fixed_assets_admin', 'causfa_admin_transfers', 'causfa_admin_tran');
+    add_submenu_page( 'causfa_admin_menu', 'Surplus', 'Surplus', 'fixed_assets_admin', 'causfa_admin_surplus', 'causfa_admin_surp');
+    add_submenu_page( 'causfa_admin_menu', 'Tickets', 'Tickets', 'fixed_assets_admin', 'causfa_admin_tickets', 'causfa_admin_tick');
+    add_submenu_page( 'causfa_admin_menu', 'Reports', 'Reports', 'fixed_assets_admin', 'causfa_admin_reports', 'causfa_admin_repo');
 }
 
 function causfa_admin_options() {
-	if ( !current_user_can( 'edit_others_posts' ) )  {
+	if ( !current_user_can( 'fixed_assets_admin' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
     
@@ -128,7 +128,7 @@ function causfa_admin_options() {
 }
 
 function causfa_admin_tran() {
-	if ( !current_user_can( 'edit_others_posts' ) )  {
+	if ( !current_user_can( 'fixed_assets_admin' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
     global $wpdb;
@@ -194,7 +194,7 @@ function causfa_admin_tran() {
 }
 
 function causfa_admin_surp() {
-	if ( !current_user_can( 'edit_others_posts' ) )  {
+	if ( !current_user_can( 'fixed_assets_admin' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
 	global $wpdb;
@@ -252,7 +252,7 @@ function causfa_admin_surp() {
 }
 
 function causfa_admin_tick() {
-	if ( !current_user_can( 'edit_others_posts' ) )  {
+	if ( !current_user_can( 'fixed_assets_admin' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
 	global $wpdb;
@@ -303,7 +303,7 @@ function causfa_admin_tick() {
 }
 
 function causfa_admin_repo() {
-	if ( !current_user_can( 'edit_others_posts' ) )  {
+	if ( !current_user_can( 'fixed_assets_admin' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
 	global $wpdb;
