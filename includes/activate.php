@@ -73,6 +73,7 @@ function causfa_activate_plugin() {
     }
     //This function creates the tables required by the plugin
     create_tables();
+    
 }
 
 function causfa_admin_menu() {
