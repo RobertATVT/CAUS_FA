@@ -131,7 +131,7 @@ function causfa_filter_asset_info( $content, $asset_index) {
                 break;
             case 2:
                 $asset_info_html = str_replace( '[STATUS]', 'Missing Reconciled', $asset_info_html);
-                $asset_info_html = str_replace('asset-status', 'asset-status asset-missing', $asset_info_html);
+                $asset_info_html = str_replace('asset-status', 'asset-status asset-missing-recon', $asset_info_html);
                 $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
                 $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnMissingAsset', $asset_info_html);
                 break;
