@@ -138,13 +138,16 @@ function checkSelected() {
         var id = input[i].id;
         id = id.split('-')[2];
         var status = jQuery('#status-' + id);
-        if (status.children().html() === 'Missing') {
+        if (status.children().html() === 'Missing' || status.children().html() === 'Missing Reconciled') {
             jQuery("#transfer-ribbon").removeClass("ribbon-active");
             jQuery("#transfer-ribbon").addClass("ribbon-disabled");
             jQuery("#transfer-ribbon-button").attr('onClick', '');
             jQuery("#surplus-ribbon").removeClass("ribbon-active");
             jQuery("#surplus-ribbon").addClass("ribbon-disabled");
             jQuery("#surplus-ribbon-button").attr('onClick', '');
+            jQuery("#forms-ribbon").removeClass("ribbon-active");
+            jQuery("#forms-ribbon").addClass("ribbon-disabled");
+            jQuery("#forms-ribbon-button").attr('onClick', '');
         }
     }
 }
