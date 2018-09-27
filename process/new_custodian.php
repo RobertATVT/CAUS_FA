@@ -15,6 +15,37 @@ function causfa_new_custodian_dialog() {
     }
 }
 
+function causfa_eula() {
+    global $wpdb;
+    $output = array(
+        'status' => 1
+    );
+    $status = $_POST['status'];
+    $pid = wp_get_current_user()->user_nicename;
+    $result = $wpdb->get_row("SELECT * FROM causfa_eula WHERE PID = '".$pid."'");
+    if($result !== null) {
+        if ($status == 0) {
+            if (!$result->ACCEPTANCE) {
+                //causfa_email_eula_reject($pid);
+                $output['status'] = 0;
+            }
+        }
+    } else {
+        if ($status == 0) {
+            causfa_email_eula_reject($pid);
+            $output['status'] = 0;
+        }
+        $wpdb->insert(
+            'causfa_eula',
+            array(
+                'PID' => $pid,
+                'ACCEPTANCE' => $status
+            )
+        );
+    }
+    wp_send_json($output);
+}
+
 function causfa_new_custodian() {
     global $wpdb;
     $output = 0;
@@ -35,7 +66,6 @@ function causfa_new_custodian() {
     $phone = substr_replace($phone,'-', 3, 0);
     $phone = substr_replace($phone,'-', 7, 0);
     $org = $_POST['org'];
-    $eula = $_POST['eula'];
     $oldOrg = $wpdb->get_var("SELECT Org FROM causfa_custodians WHERE PID='".$PID."';");
     if ($wpdb->get_row("SELECT * FROM causfa_custodians WHERE PID='".$PID."';")) {
        $wpdb->update('causfa_custodians',
@@ -57,14 +87,10 @@ function causfa_new_custodian() {
             'Office' => $office,
             'Phone' => $phone,
             'Org' => $org,
-            'EULA' => $eula
         ))) {
             $output = 1;
         }
         causfa_groups_add($org);
-    }
-    if (!$eula) {
-        causfa_email_eula_reject($PID);
     }
     wp_send_json($output);
 

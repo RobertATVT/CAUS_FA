@@ -114,7 +114,6 @@ function create_tables() {
         Office varchar(1000) NOT NULL,
         Phone varchar(13) NOT NULL,
         Org varchar(6) NOT NULL,
-        EULA BOOLEAN NOT NULL,
         PRIMARY KEY  (PID)
         ) ".$charset_collate.";";
         dbDelta($sql);
@@ -201,6 +200,16 @@ function create_tables() {
         TOTAL_LOCAL INT NOT NULL,
         EXCEPTIONS longtext NULL,
         PRIMARY KEY (ID)
+        )".$charset_collate.";";
+        dbDelta($sql);
+    }
+    $table_name = 'causfa_eula';
+    if($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        PID varchar(32) NOT NULL,
+        ACCEPTANCE BOOLEAN NOT NULL,
+        DATE TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (PID)
         )".$charset_collate.";";
         dbDelta($sql);
     }

@@ -1,13 +1,23 @@
 function acceptEULA(status) {
-    $('#eulaAcceptance').val(status);
-    $('#eulaModal').modal('close');
+    var form = {
+        'action': 'causfa_eula',
+        'status': status
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data){
+        if (data['status']) {
+            $('#eulaModal').modal('close');
+        } else {
+            location.replace('/');
+
+        }
+    });
+
 }
 function new_custodian_submit() {
     var building = jQuery('#Building').val();
     var office = jQuery('#Office').val();
     var phone = jQuery('#Phone').val();
     var org = jQuery('#org').val();
-    var eula = jQuery('#eulaAcceptance').val();
     if (office == null) {
         alert('Office field cannot be empty');
     } else if (phone == null) {
@@ -20,8 +30,7 @@ function new_custodian_submit() {
             'building': building,
             'office': office,
             'phone': phone,
-            'org': org,
-            'eula': eula
+            'org': org
         };
         jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
             if (data == 1) {
