@@ -96,8 +96,6 @@ add_action( 'rest_api_init', function () {
     ) );
 });
 
-add_role('fa_admin', 'Fixed Assets Admin', 'fixed_assets_admin');
-
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
 //add_shortcode( 'causfa_test', 'causfa_oracle_full_org'); //shortcode for a dev space to test functionality
