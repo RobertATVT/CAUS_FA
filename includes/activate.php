@@ -82,9 +82,8 @@ function causfa_activate_plugin() {
     
     $role = get_role( 'administrator' );
     $capabilities = $role->capabilities;
-    //array_push($capabilities,'fixed_assets_app');
+    $capabilities['fixed_assets_app'] = 1;
     add_role('fa_admin', 'Fixed Assets Admin', $capabilities);
-    $wp_roles->add_cap('fa-admin', 'fixed_assets_app');
 
     if (get_role('fa_editor') !== null){
         remove_role('fa_editor');
@@ -92,9 +91,9 @@ function causfa_activate_plugin() {
     
     $role = get_role( 'editor' );
     $capabilities = $role->capabilities;
-    //array_push($capabilities,'fixed_assets_app');
+    $capabilities['fixed_assets_app'] = 1;
     add_role('fa_editor', 'Fixed Assets Editor', $capabilities);
-    $wp_roles->add_cap('fa-editor', 'fixed_assets_app');
+
 
     if (get_role('fa_user') !== null){
         remove_role('fa_user');
@@ -102,17 +101,11 @@ function causfa_activate_plugin() {
     
     $role = get_role( 'subscriber' );
     $capabilities = $role->capabilities;
-    //array_push($capabilities,'fixed_assets_app');
+    $capabilities['fixed_assets_app'] = 1;
     add_role('fa_user', 'Fixed Assets User', $capabilities);
-    $wp_roles->add_cap('fa-user', 'fixed_assets_app');
-}
 
-function causfa_roles($get_role){
-    global $wp_roles;
-    $role = get_role($get_role);
-    $cap = $role['capabilities'];
-}
 
+}
 
 function causfa_admin_menu() {
 	add_menu_page( 'CAUS Fixed Assets Administration', 'CAUS Fixed Assets', 'fixed_assets_app', 'causfa_admin_menu', 'causfa_admin_options' );
