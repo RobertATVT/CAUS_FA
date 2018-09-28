@@ -74,26 +74,40 @@ function causfa_activate_plugin() {
     //This function creates the tables required by the plugin
     create_tables();
     
-    
-    
-    
-    
-    
     global $wp_roles;
+    
+    if (get_role('fa_admin') !== null){
+        remove_role('fa_admin');
+    } 
+    
     $role = get_role( 'administrator' );
-    $capabilities = $role['capabilities'];
+    $capabilities = $role->capabilities;
     array_push($capabilities,'fixed_assets_app');
     add_role('fa_admin', 'Fixed Assets Admin', $capabilities);
+
+    if (get_role('fa_editor') !== null){
+        remove_role('fa_editor');
+    } 
     
     $role = get_role( 'editor' );
-    $capabilities = $role['capabilities'];
+    $capabilities = $role->capabilities;
     array_push($capabilities,'fixed_assets_app');
     add_role('fa_editor', 'Fixed Assets Editor', $capabilities);
+
+    if (get_role('fa_user') !== null){
+        remove_role('fa_user');
+    } 
     
     $role = get_role( 'subscriber' );
-    $capabilities = $role['capabilities'];
+    $capabilities = $role->capabilities;
     array_push($capabilities,'fixed_assets_app');
     add_role('fa_user', 'Fixed Assets User', $capabilities);
+}
+
+function causfa_roles($get_role){
+    global $wp_roles;
+    $role = get_role($get_role);
+    $cap = $role['capabilities'];
 }
 
 
