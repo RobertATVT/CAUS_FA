@@ -26,9 +26,16 @@ function causfa_eula() {
     if($result !== null) {
         if ($status == 0) {
             if (!$result->ACCEPTANCE) {
-                //causfa_email_eula_reject($pid);
+                causfa_email_eula_reject($pid);
                 $output['status'] = 0;
             }
+        } else {
+            $wpdb->update(
+                'causfa_eula',
+                array(
+                    'ACCEPTANCE' => $status
+                ), array('PID' => $pid)
+            );
         }
     } else {
         if ($status == 0) {
