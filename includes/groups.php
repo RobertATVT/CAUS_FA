@@ -126,41 +126,53 @@ function causfa_groups_IT($PID = null) {
 function causfa_groups_FAC() {
     global $wpdb;
     $output = array();
-    $current_user = new Groups_User( get_current_user_id() );
+//    $current_user = new Groups_User( get_current_user_id() );
     $coordinator = Groups_Group::read_by_name('Fixed Assets Coordinator');
     $coordinator_group = new Groups_Group( $coordinator->group_id);
-    $current_user_groups = $current_user->groups;
-    for ($i = 0; $i < count($current_user_groups); $i++) {
-        $current_user_group = $current_user_groups[$i];
-        $can_org = $current_user_group->__get('capabilities');
-        if($can_org) {
-            $users_in_group = $current_user_group->users;
-            for ($j=0; $j < count($users_in_group); $j++) {
-                for($k=0; $k < count($coordinator_group->users); $k++) {
-                    if ($coordinator_group->users[$k]->ID == $users_in_group[$j]->ID) {
-                        $isInList = false;
-                        for($l=0; $l < count($output); $l++) {
-                            if($output[$l]['Name'] == $coordinator_group->users[$k]->display_name) {
-                                $isInList = true;
-                            }
-                        }
-                        if (!$isInList) {
-                            $phone = $wpdb->get_var('SELECT Phone FROM causfa_custodians WHERE Email = "'.$coordinator_group->users[$k]->user_email.'";');
-                            if ($phone === null) {
-                                $phone = '';
-                            }
-                            $FAC = array(
-                                'Name' => $coordinator_group->users[$k]->display_name,
-                                'Email' => $coordinator_group->users[$k]->user_email,
-                                'Phone' => $phone
-                            );
-                            $output[] = $FAC;
-                        }
-                    }
-                }
-            }
+    for ($i = 0; $i < count($coordinator_group->users); $i++) {
+        $phone = $wpdb->get_var('SELECT Phone FROM causfa_custodians WHERE Email = "'.$coordinator_group->users[$i]->user_email.'";');
+        if ($phone === null) {
+            $phone = '';
         }
+        $FAC = array(
+            'Name' => $coordinator_group->users[$i]->display_name,
+            'Email' => $coordinator_group->users[$i]->user_email,
+            'Phone' => $phone
+        );
+        $output[] = $FAC;
     }
+//    $current_user_groups = $current_user->groups;
+//    for ($i = 0; $i < count($current_user_groups); $i++) {
+//        $current_user_group = $current_user_groups[$i];
+//        $can_org = $current_user_group->__get('capabilities');
+//        if($can_org) {
+//            $users_in_group = $current_user_group->users;
+//            for ($j=0; $j < count($users_in_group); $j++) {
+//                for($k=0; $k < count($coordinator_group->users); $k++) {
+//                    if ($coordinator_group->users[$k]->ID == $users_in_group[$j]->ID) {
+//                        $isInList = false;
+//                        for($l=0; $l < count($output); $l++) {
+//                            if($output[$l]['Name'] == $coordinator_group->users[$k]->display_name) {
+//                                $isInList = true;
+//                            }
+//                        }
+//                        if (!$isInList) {
+//                            $phone = $wpdb->get_var('SELECT Phone FROM causfa_custodians WHERE Email = "'.$coordinator_group->users[$k]->user_email.'";');
+//                            if ($phone === null) {
+//                                $phone = '';
+//                            }
+//                            $FAC = array(
+//                                'Name' => $coordinator_group->users[$k]->display_name,
+//                                'Email' => $coordinator_group->users[$k]->user_email,
+//                                'Phone' => $phone
+//                            );
+//                            $output[] = $FAC;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
     return $output;
 }
 
