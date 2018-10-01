@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/groups.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/groups.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/oracle.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/oracle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/activate.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/activate.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,17 +28,16 @@
     <session id="-2021790754">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -49,7 +46,7 @@
           <entry key="html" value="105" />
           <entry key="ini" value="2" />
           <entry key="js" value="41" />
-          <entry key="php" value="106" />
+          <entry key="php" value="104" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -59,7 +56,7 @@
           <entry key="HTML" value="105" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="41" />
-          <entry key="PHP" value="106" />
+          <entry key="PHP" value="104" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -69,7 +66,7 @@
           <entry key="html" value="3240" />
           <entry key="ini" value="1" />
           <entry key="js" value="14206" />
-          <entry key="php" value="19759" />
+          <entry key="php" value="18584" />
           <entry key="txt" value="99" />
         </counts>
       </usages-collector>
@@ -79,19 +76,52 @@
           <entry key="HTML" value="3249" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="14205" />
-          <entry key="PHP" value="19750" />
+          <entry key="PHP" value="18575" />
           <entry key="PLAIN_TEXT" value="99" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/oracle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="139" column="40" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
+            <state relative-caret-position="160">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+              <folding>
+                <element signature="e#6#88#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/activate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="84" column="42" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+              <folding>
+                <element signature="e#6#322#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,6 +191,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-2.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-3.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-4.html" />
         <option value="$PROJECT_DIR$/assets/html/faa-admin-transfer-fill-5.html" />
@@ -190,6 +221,7 @@
         <option value="$PROJECT_DIR$/assets/html/faa-admin-modal.html" />
         <option value="$PROJECT_DIR$/enqueue/enqueue.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-eula-modal.html" />
+        <option value="$PROJECT_DIR$/includes/oracle.php" />
         <option value="$PROJECT_DIR$/includes/asset_view.php" />
         <option value="$PROJECT_DIR$/process/add_ticket.php" />
         <option value="$PROJECT_DIR$/process/transfer.php" />
@@ -210,8 +242,6 @@
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/process/new_custodian.php" />
         <option value="$PROJECT_DIR$/includes/activate.php" />
-        <option value="$PROJECT_DIR$/includes/groups.php" />
-        <option value="$PROJECT_DIR$/includes/oracle.php" />
       </list>
     </option>
   </component>
@@ -248,6 +278,24 @@
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="emailTemplates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
@@ -357,20 +405,18 @@
       <workItem from="1537235616672" duration="24371000" />
       <workItem from="1537662904020" duration="300000" />
       <workItem from="1537663760662" duration="49000" />
-      <workItem from="1537665230583" duration="20514000" />
-      <workItem from="1538228859263" duration="25000" />
-      <workItem from="1538228918705" duration="4361000" />
+      <workItem from="1537665230583" duration="19515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="559218000" />
+    <option name="totallyTimeSpent" value="553833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2825465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27539343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24937657" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -581,6 +627,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="681">
           <caret line="676" column="35" selection-start-line="676" selection-start-column="35" selection-end-line="676" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#12;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -734,6 +783,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/oracle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="110" column="43" lean-forward="true" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/asset_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -745,34 +818,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+          <folding>
+            <element signature="e#6#322#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/activate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="30">
           <caret line="84" column="42" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/process/new_custodian.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="131" column="49" lean-forward="true" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/oracle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="139" column="40" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
         </state>
       </provider>
     </entry>
