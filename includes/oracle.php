@@ -6,6 +6,19 @@
  * Time: 1:46 PM
  */
 
+/**
+ * Occurrence Codes
+ * 0 - Found in banner not in local
+ * 1 - Found in local not in banner
+ * 2 - Unexpected change
+ * 3 - Incomplete Action
+ */
+/**
+ * Change Codes
+ * 0 - Custodian
+ * 1 - Location
+ * 2 - Org
+ */
 function casufa_oracle_org_report()
 {
     ini_set('zlib.output_compression', 0);
@@ -74,7 +87,11 @@ function causfa_oracle_compare($oracle) {
             }
         }
         if (!$found) {
-            array_push($exceptions_list, ($row['FZVFORG_PTAG'].' was not found in the local database'));
+            $entry = array(
+                'FZVFORG_PTAG' => $row['FZVFORG_PTAG'],
+                'OCCURRENCE_CODE' => 0
+            );
+            array_push($exceptions_list, $entry);
             array_splice($oracle, $key, 1);
         }
         $count++;
@@ -96,13 +113,33 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
     global $wpdb;
     if ($oracle['FZVFORG_CUSTODIAN'] !== $asset->FZVFORG_CUSTODIAN) {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$oracle['FZVFORG_PTAG']."';");
-        if ($result->PENDING_TYPE === 0 ) {
-            if ($result->PENDING_STATUS !== 7) {
-                return $result->FZVFORG_PTAG. ' is part of a pending transfer that has not been completed. The transfer is from '.causfa_email_get_name($result->PID_ORIGIN).' to '.causfa_email_get_name($result->PID_DESTINATION);
-            }
+        if($result === null) {
+            return array (
+                'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
+                'OCCURRENCE_CODE' => 2,
+                'CHANGE_CODE' => 0,
+                'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                'NEW_VALUE' => $oracle->FZVFORG_CUSTODIAN
+            );
         } else {
-            if ($result->PENDING_STATUS !== 5) {
-                return $result->FZVFORG_PTAG. ' is part of a pending surplus that has not been completed. The surplus was initiated by '.causfa_email_get_name($result->PID_ORIGIN);
+            if ($result->PENDING_TYPE === 0 ) {
+                if ($result->PENDING_STATUS !== 7) {
+                    return array (
+                        'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                        'OCCURRENCE_CODE' => 3,
+                        'CHANGE_CODE' => 0,
+                        'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                        'NEW_VALUE' => $oracle->FZVFORG_CUSTODIAN
+                    );
+                }
+            } else {
+                if ($result->PENDING_STATUS !== 5) {
+                    return array (
+                        'FZVFORG_PTAG' => $result->FZVFORG_CUSTODIAN,
+                        'OCCURRENCE_CODE' => 3,
+                        'CHANGE_CODE' =>
+                    );
+                }
             }
         }
     } else {
