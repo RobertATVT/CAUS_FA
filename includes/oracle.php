@@ -137,7 +137,7 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
                     return array (
                         'FZVFORG_PTAG' => $result->FZVFORG_CUSTODIAN,
                         'OCCURRENCE_CODE' => 3,
-                        'CHANGE_CODE' =>
+                        'CHANGE_CODE' => 0
                     );
                 }
             }
