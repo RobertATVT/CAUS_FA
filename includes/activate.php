@@ -85,6 +85,7 @@ function causfa_activate_plugin() {
 //    $capabilities['fixed_assets_app'] = 1;
     add_role('fa_admin', 'Fixed Assets Admin', $capabilities);
     $wp_roles->add_cap('fa_admin', 'fixed_assets_app');
+    $wp_roles->add_cap('aministrator', 'fixed_assets_app');
 
     if (get_role('fa_editor') !== null){
         remove_role('fa_editor');
@@ -95,7 +96,6 @@ function causfa_activate_plugin() {
 //    $capabilities['fixed_assets_app'] = 1;
     add_role('fa_editor', 'Fixed Assets Editor', $capabilities);
     $wp_roles->add_cap('fa_editor', 'fixed_assets_app');
-
 
     if (get_role('fa_user') !== null){
         remove_role('fa_user');
