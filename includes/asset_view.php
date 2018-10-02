@@ -21,8 +21,6 @@ function causfa_load_employee_view() {
     if ($result_user == null) {
         return causfa_new_custodian_dialog();
     } else {
-		$output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-header.html', true ));
-        $output = $output.(apply_filters('causfa_header', $result_user));
         $results_assets = $wpdb->get_results('SELECT * FROM causfa_banner WHERE FZVFORG_CUSTODIAN = "'.$result_user->Name.'";');
         $value_total = 0.00;
         $missing_total = 0.00;
@@ -44,6 +42,33 @@ function causfa_load_employee_view() {
         }
         $comp_number = round(100-(($missing_number/$total_number)*100));
         $comp_dollar = round(100-(($missing_total/$value_total)*100));
+        if ($comp_number < 95 || $comp_dollar < 95) {
+            $compliance = $wpdb->get_row("SELECT * FROM causfa_alerts WHERE CREATOR = 'compliance' AND ORG = '".$current_user->user_nicename."';");
+            if ($compliance === null) {
+                $wpdb->insert(
+                    'causfa_alerts',
+                    array(
+                        'ORG'=>$current_user->user_nicename,
+                        'EXP_DATE'=>'',
+                        'CREATOR'=>'compliance',
+                        'PRIORITY'=>3,
+                        'BODY'=>'You are out of Compliance, to be eligible to purchase new equipment DO THIS',
+                    )
+                );    
+            }
+                 
+        } else {
+            $wpdb->delete(
+                'causfa_alerts',
+                array(
+                    'ORG'=>$current_user->user_nicename,
+                    'CREATOR'=>'compliance',  
+                )
+            );
+        }
+        
+        $output = (file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-header.html', true ));
+        $output = $output.(apply_filters('causfa_header', $result_user));
         
         $output = $output.(apply_filters('causfa_impact', $value_total, $total_number, $missing_total, $missing_number, $comp_number, $comp_dollar));
 		$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-asset-header.html', true ));
