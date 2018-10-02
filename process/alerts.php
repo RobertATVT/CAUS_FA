@@ -52,11 +52,23 @@ function causfa_general_alerts() {
                 // Specific person alert
             }
             if ($alert_found === true) {
-                $alerts = $alerts.file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-general-item.html', true);
-                $alerts = str_replace('[ORG]', $results[$i]->ORG, $alerts);
-                $alerts = str_replace('[EXPIRATION]', $results[$i]->EXP_DATE, $alerts);
-                $alerts = str_replace('[ISSUER]', $results[$i]->CREATOR, $alerts);
-                $alerts = str_replace('[MESSAGE]', $results[$i]->BODY, $alerts);
+                $alert = file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-general-item.html', true);
+                switch($results[$i]->PRIORITY) {
+                    case 1:
+                        $alert = str_replace('alert-normal', 'alert-low', $alert);
+                        break;
+                    case 2:
+                        $alert = str_replace('alert-normal', 'alert-medium', $alert);
+                        break;
+                    case 3:
+                        $alert = str_replace('alert-normal', 'alert-high', $alert);
+                        break;
+                }
+                $alert = str_replace('[ORG]', $results[$i]->ORG, $alert);
+                $alert = str_replace('[EXPIRATION]', $results[$i]->EXP_DATE, $alert);
+                $alert = str_replace('[ISSUER]', $results[$i]->CREATOR, $alert);
+                $alert = str_replace('[MESSAGE]', $results[$i]->BODY, $alert);
+                $alerts .=$alert;
             }
         }
         if ($count !== 0) {
