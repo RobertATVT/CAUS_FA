@@ -75,7 +75,7 @@ function causfa_bulk_surplus() {
     }
     $pending_status = 0;
     for ($i = 0; $i < count($ptags); $i++) {
-        $test = $wpdb->insert(
+        $wpdb->insert(
             'causfa_pending',
             array(
                 'FZVFORG_PTAG' => $ptags[$i],
@@ -87,6 +87,7 @@ function causfa_bulk_surplus() {
                 'PENDING_STATUS' => $pending_status
             ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
         );
+        $test = $wpdb->last_error;
         $wpdb->update(
             'causfa_banner',
             array(
