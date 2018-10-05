@@ -87,7 +87,7 @@ function causfa_bulk_surplus() {
                 'PENDING_STATUS' => $pending_status
             ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
         );
-        $test = $wpdb->last_error;
+        $test = $wpdb->last_query;
         $wpdb->update(
             'causfa_banner',
             array(
