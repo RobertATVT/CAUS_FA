@@ -59,7 +59,8 @@ function causfa_bulk_surplus() {
     global $wpdb;
     $output = array (
         'status' => 0,
-        'message' => ''
+        'message' => '',
+        'test' => ''
     );
     $ptags = $_POST['ptags'];
     $ptags = explode(',', $ptags);
@@ -74,7 +75,7 @@ function causfa_bulk_surplus() {
     }
     $pending_status = 0;
     for ($i = 0; $i < count($ptags); $i++) {
-        $wpdb->insert(
+        $test = $wpdb->insert(
             'causfa_pending',
             array(
                 'FZVFORG_PTAG' => $ptags[$i],
@@ -105,6 +106,7 @@ function causfa_bulk_surplus() {
     }
     $output['status'] = 1;
     $output['message'] = 'A surplus request has been sent to your Fixed Assets Liaison and Business Manager. They will be in contact with you soon to facilitate the transfer of the asset.';
+    $output['test'] = $test;
     wp_send_json($output);
 }
 
