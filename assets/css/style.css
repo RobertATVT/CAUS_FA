@@ -1663,7 +1663,7 @@ slider-for{
         line-height: 17px;
     }
     .emp-info-outside {
-        display: flex !important;
+        
     }
     .emp-info-inside {
         display: inline-flex;
