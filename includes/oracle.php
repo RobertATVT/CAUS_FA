@@ -155,11 +155,53 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
     }
 }
 function causfa_oracle_compare_location($oracle, $asset) {
-    return '';
+    return null;
 }
 function causfa_oracle_compare_org($oracle, $asset) {
-    return '';
+    global $wpdb;
+    if ($oracle['FZVFORG_ORGN_CODE'] !== $asset->FZVFORG_ORGN_CODE) {
+        $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$oracle['FZVFORG_PTAG']."';");
+        if($result === null) {
+            return array (
+                'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
+                'OCCURRENCE_CODE' => 2,
+                'CHANGE_CODE' => 0,
+                'OLD_VALUE' => $asset->FZVFORG_ORGN_CODE,
+                'NEW_VALUE' => $oracle->FZVFORG_ORGN_CODE
+            );
+        } else {
+            if ($result->PENDING_TYPE === 0 ) {
+                if ($result->PENDING_STATUS !== 7) {
+                    return array (
+                        'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                        'OCCURRENCE_CODE' => 3,
+                        'CHANGE_CODE' => 0,
+                        'PENDING_TYPE' => 0,
+                        'OLD_VALUE' => $asset->FZVFORG_ORGN_CODE,
+                        'NEW_VALUE' => $oracle->FZVFORG_ORGN_CODE
+                    );
+                } else {
+                    return null;
+                }
+            } else {
+                if ($result->PENDING_STATUS !== 5) {
+                    return array (
+                        'FZVFORG_PTAG' => $result->FZVFORG_ORGN_CODE,
+                        'OCCURRENCE_CODE' => 3,
+                        'CHANGE_CODE' => 0,
+                        'PENDING_TYPE' => 1,
+                        'OLD_VALUE' => $asset->FZVFORG_ORGN_CODE,
+                        'NEW_VALUE' => $oracle->FZVFORG_ORGN_CODE
+                    );
+                } else {
+                    return null;
+                }
+            }
+        }
+    } else {
+        return null;
+    }
 }
 function causfa_oracle_compare_ownership($oracle, $asset) {
-    return '';
+    return null;
 }

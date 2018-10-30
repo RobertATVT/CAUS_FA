@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/oracle.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/oracle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/process/surplus.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/surplus.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,18 +30,19 @@
     <session id="-2021790754">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -48,7 +51,7 @@
           <entry key="html" value="111" />
           <entry key="ini" value="2" />
           <entry key="js" value="41" />
-          <entry key="php" value="116" />
+          <entry key="php" value="120" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -58,7 +61,7 @@
           <entry key="HTML" value="111" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="41" />
-          <entry key="PHP" value="116" />
+          <entry key="PHP" value="120" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -68,7 +71,7 @@
           <entry key="html" value="3244" />
           <entry key="ini" value="1" />
           <entry key="js" value="14206" />
-          <entry key="php" value="20260" />
+          <entry key="php" value="20443" />
           <entry key="txt" value="99" />
         </counts>
       </usages-collector>
@@ -78,7 +81,7 @@
           <entry key="HTML" value="3253" />
           <entry key="Ini" value="1" />
           <entry key="JavaScript" value="14205" />
-          <entry key="PHP" value="20251" />
+          <entry key="PHP" value="20434" />
           <entry key="PLAIN_TEXT" value="99" />
         </counts>
       </usages-collector>
@@ -87,10 +90,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/process/surplus.php">
+        <entry file="file://$PROJECT_DIR$/includes/oracle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="89" column="8" lean-forward="true" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+            <state relative-caret-position="18">
+              <caret line="162" column="79" selection-start-line="162" selection-start-column="79" selection-end-line="162" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -208,9 +211,9 @@
         <option value="$PROJECT_DIR$/includes/activate.php" />
         <option value="$PROJECT_DIR$/includes/groups.php" />
         <option value="$PROJECT_DIR$/process/alerts.php" />
-        <option value="$PROJECT_DIR$/includes/oracle.php" />
         <option value="$PROJECT_DIR$/assets/html/faa-wpadmin-tickets-fill.html" />
         <option value="$PROJECT_DIR$/process/surplus.php" />
+        <option value="$PROJECT_DIR$/includes/oracle.php" />
       </list>
     </option>
   </component>
@@ -226,8 +229,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="797" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -247,18 +251,6 @@
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAUS_FA" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CAUS_FA" type="b2602c69:ProjectViewProjectNode" />
@@ -372,17 +364,21 @@
       <workItem from="1538228859263" duration="25000" />
       <workItem from="1538228918705" duration="4361000" />
       <workItem from="1538704659765" duration="1054000" />
+      <workItem from="1539369094143" duration="453000" />
+      <workItem from="1540180289805" duration="12000" />
+      <workItem from="1540180330695" duration="3758000" />
+      <workItem from="1540408564184" duration="20000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="564462000" />
+    <option name="totallyTimeSpent" value="568978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28612304" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30329043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24937657" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -707,13 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/oracle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/autocomplete.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -760,15 +749,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process/transfer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="370">
           <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/process/surplus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="89" column="8" lean-forward="true" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+        <state relative-caret-position="150">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/oracle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="162" column="79" selection-start-line="162" selection-start-column="79" selection-end-line="162" selection-end-column="79" />
         </state>
       </provider>
     </entry>

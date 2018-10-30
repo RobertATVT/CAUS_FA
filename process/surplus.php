@@ -13,7 +13,7 @@ function causfa_surplus() {
     global $wpdb;
     $output = array(
         'status' => 0,
-        'message' => ''
+        'message' => '',
     );
     $ptag = $_SESSION['ptag'];
     $PID_origin = $_SESSION['PID'];
@@ -86,7 +86,6 @@ function causfa_bulk_surplus() {
                 'PENDING_STATUS' => $pending_status
             ), array('%s', '%s', '%d', '%s', '%s', '%s', '%d')
         );
-        $wpdb->print_error();
         $wpdb->update(
             'causfa_banner',
             array(
