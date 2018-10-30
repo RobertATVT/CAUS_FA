@@ -119,7 +119,7 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
                 'OCCURRENCE_CODE' => 2,
                 'CHANGE_CODE' => 0,
                 'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
-                'NEW_VALUE' => $oracle->FZVFORG_CUSTODIAN
+                'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
             );
         } else {
             if ($result->PENDING_TYPE == 0 ) {
@@ -130,7 +130,7 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
                         'CHANGE_CODE' => 0,
                         'PENDING_TYPE' => 0,
                         'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
-                        'NEW_VALUE' => $oracle->FZVFORG_CUSTODIAN
+                        'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
                     );
                 } else {
                     return null;
@@ -143,7 +143,7 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
                         'CHANGE_CODE' => 0,
                         'PENDING_TYPE' => 1,
                         'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
-                        'NEW_VALUE' => $oracle->FZVFORG_CUSTODIAN
+                        'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
                     );
                 } else {
                     return null;

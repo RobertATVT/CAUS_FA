@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/oracle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2229">
-              <caret line="169" column="38" selection-start-line="169" selection-start-column="38" selection-end-line="169" selection-end-column="38" />
+            <state relative-caret-position="2368">
+              <caret line="163" column="21" lean-forward="true" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -364,12 +364,12 @@
       <workItem from="1540180289805" duration="12000" />
       <workItem from="1540180330695" duration="3758000" />
       <workItem from="1540408564184" duration="20000" />
-      <workItem from="1540904733518" duration="1664000" />
+      <workItem from="1540904733518" duration="1861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="570642000" />
+    <option name="totallyTimeSpent" value="570839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -760,8 +760,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/oracle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2229">
-          <caret line="169" column="38" selection-start-line="169" selection-start-column="38" selection-end-line="169" selection-end-column="38" />
+        <state relative-caret-position="2368">
+          <caret line="163" column="21" lean-forward="true" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
         </state>
       </provider>
     </entry>
