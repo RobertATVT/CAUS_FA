@@ -434,7 +434,21 @@ select#org option:hover {
     box-sizing: border-box;
     min-height: 50px;
 }
-
+.emp-info {
+    color: #333 !important;
+    background: #fff !important;
+    border: 1px solid #003C71 !important;
+    border-radius: 3px !important;
+    padding: 0px !important;
+}
+.emp-header {
+    background: #003C71 !important;
+    min-height: 15px; 
+    border-radius: 2px 2px 0px 0px; 
+    padding: 3px !important;
+    margin-bottom: 5px;
+    color: #fff !important;
+}
 .admin-dash-left {
     padding-right: 2px !important;
 }
