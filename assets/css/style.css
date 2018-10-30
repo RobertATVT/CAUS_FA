@@ -532,7 +532,9 @@ select#org option:hover {
 }
 .lbl-toggle {
     display: block;
-    color: #333;
+    color: #ED8B00;
+    font-weight: 700;
+    font-size: 95%;
     cursor: pointer;
     border-radius: 0px;
     transition: all 0.25s ease-out;
@@ -548,7 +550,7 @@ select#org option:hover {
 
     border-top: 5px solid transparent !important;
     border-bottom: 5px solid transparent !important;
-    border-left: 5px solid #333 !important;
+    border-left: 5px solid #ED8B00 !important;
     
     vertical-align: middle;
     margin-right: .5rem;
