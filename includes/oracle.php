@@ -186,7 +186,7 @@ function causfa_oracle_compare_org($oracle, $asset) {
             } else {
                 if ($result->PENDING_STATUS !== 5) {
                     return array (
-                        'FZVFORG_PTAG' => $result->FZVFORG_ORGN_CODE,
+                        'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
                         'OCCURRENCE_CODE' => 3,
                         'CHANGE_CODE' => 0,
                         'PENDING_TYPE' => 1,
