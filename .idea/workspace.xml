@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/includes/oracle.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/oracle.php" afterDir="false" />
-    </list>
+    <list default="true" id="98fc49d9-c06e-407d-9149-86db703e1598" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/oracle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+            <state relative-caret-position="359">
+              <caret line="107" column="38" lean-forward="true" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
               <folding>
                 <element signature="n#causfa_oracle_compare_custodian#0;n#!!top" />
                 <element signature="n#causfa_oracle_compare_location#0;n#!!top" />
@@ -372,12 +370,12 @@
       <workItem from="1540180289805" duration="12000" />
       <workItem from="1540180330695" duration="3758000" />
       <workItem from="1540408564184" duration="20000" />
-      <workItem from="1540904733518" duration="3940000" />
+      <workItem from="1540904733518" duration="3947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="572918000" />
+    <option name="totallyTimeSpent" value="572925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -768,8 +766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/oracle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
+        <state relative-caret-position="359">
+          <caret line="107" column="38" lean-forward="true" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
           <folding>
             <element signature="n#causfa_oracle_compare_custodian#0;n#!!top" />
             <element signature="n#causfa_oracle_compare_location#0;n#!!top" />

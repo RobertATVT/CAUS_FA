@@ -100,7 +100,8 @@ function causfa_oracle_compare($oracle) {
         $found_text = ($found ? 'found in local database': 'not found in local database');
         send_message($row['FZVFORG_PTAG'], $count. ' of '.$total. ". ".$row['FZVFPRG_PTAG']." was ".$found_text, $percent);
     }
-    foreach ($assets as $key => $row) {
+    for($i = 0; $i < count($assets); $i++) {
+        $row = $assets[$i];
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$row['FZVFORG_PTAG']."' AND PENDING_TYPE = 1;");
         if ($result == null) {
             $entry = array(
