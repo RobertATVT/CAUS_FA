@@ -163,11 +163,11 @@ function causfa_oracle_compare_org($oracle, $asset) {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$oracle['FZVFORG_PTAG']."';");
         if($result === null) {
             return array (
-                'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
                 'OCCURRENCE_CODE' => 2,
                 'CHANGE_CODE' => 0,
                 'OLD_VALUE' => $asset->FZVFORG_ORGN_CODE,
-                'NEW_VALUE' => $oracle-['FZVFORG_ORGN_CODE']
+                'NEW_VALUE' => $oracle['FZVFORG_ORGN_CODE']
             );
         } else {
             if ($result->PENDING_TYPE === 0 ) {
