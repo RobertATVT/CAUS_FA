@@ -516,6 +516,47 @@ select#org option:hover {
 	height: 115px;
     line-height: 20px;
 }
+.lbl-toggle {
+    display: block;
+    color: #333;
+    cursor: pointer;
+    border-radius: 0px;
+    transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+
+}
+
+.lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent !important;
+    border-bottom: 5px solid transparent !important;
+    border-left: 5px solid #333 !important;
+    
+    vertical-align: middle;
+    margin-right: .5rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+
+.collapsible-content {
+    display: none;
+    overflow: hidden;
+    transition: display .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
 .asset-toggle {
 	width: 18px;
 	height: 18px;
