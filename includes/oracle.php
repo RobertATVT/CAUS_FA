@@ -97,7 +97,7 @@ function causfa_oracle_compare($oracle) {
         $count++;
         $percent = intval(($count / $total) * 100) . "%";
         $found_text = ($found ? 'found in local database': 'not found in local database');
-        send_message($row['FZVFORG_PTAG'], $count. ' of '.$total. " was ".$found_text, $percent);
+        send_message($row['FZVFORG_PTAG'], $count. ' of '.$total. ". ".$row['FZVFPRG_PTAG']." was ".$found_text, $percent);
     }
     send_message(0,'CLOSE', 'Process complete');
     $wpdb->insert(
