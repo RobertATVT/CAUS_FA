@@ -20,22 +20,21 @@
 <body>
 <!-- BEGIN TEMPLATE faa-header.html -->
 <div id="asset-container">
-	<div class="rw" style="margin:0px; display: block;">
-		<div class="cl t20" style="padding-bottom: 5px;">
-			<div id="app-title-block" class="cl t20" style="">
-				<button class="title-block">CAUS FIXED ASSETS</button>
-			</div>
-		</div>
-	</div>
+    <script>
+        if (/*@cc_on!@*/false || !!document.documentMode) {
+            alert('Due to rendering limitations Internet Explorer is not supported by the application.\n\rPlease use a supported browser from the follwoing list: Chrome, Firefox, Opera, or Safari');
+            window.location.href = 'https://inside.caus.vt.edu/';
+        }
+    </script>
 <!-- END TEMPLATE faa-header-template.html -->
 <!-- BEGIN TEMPLATE faa-employee-info.html -->
 	<div class="rw emp-info-outside" style="margin:0px;">
-			<div class="cl l5 m10 s20 t20 emp-info-inside hide-small-down" style="padding:4px;">
-				<div class="cl t20 vt-orange vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+			<div class="cl l5 m10 s20 t20 emp-info-inside hide-small-down" style="padding:5px;">
+				<div class="cl t20 vt-orange vt-txt-white asset-block asset-border" style="padding-bottom: 10px !important;">
 					<div class="cl center t20 block-header block-headtext">Employee Information</div>
-					<div class="cl t19 block-bigtext">[NAME]</div>
-					<div class="cl t1">
-						<button class="edit-action" title="Edit Custodian Information" id="custodianButton" onclick="custodianModalRequested(this.id)">
+					<div class="cl t18 block-bigtext">[NAME]</div>
+					<div class="cl t2">
+						<button class="edit-action" title="Edit Custodian Information" id="custodianButton" onclick="custodianModalRequested()">
 										<i class="fas fa-edit"></i>
 								</button>
 					</div>
@@ -44,15 +43,15 @@
 				</div>
 			</div>
 			<div class="cl l5 m10 t20 emp-info-inside" style="padding:5px;">
-				<div class="cl t20 vt-orange vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+				<div class="cl t20 vt-orange vt-txt-white asset-block asset-border" style="padding-bottom: 10px !important;">
 					<div class="cl center t20 block-header block-headtext">FIXED ASSETS LIAISON</div>
 					<div class="cl t20 block-bigtext">[FAL]</div>
 					<div class="cl t20 block-text">[FAL-EMAIL]</div>
 					<div class="cl t20 block-text">[FAL-PHONE]</div>
 				</div>
 			</div>
-			<div class="cl l5 m10 t20 emp-info-inside" style="padding:4px;">
-				<div class="cl t20 vt-orange vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+			<div class="cl l5 m10 t20 emp-info-inside" style="padding:5px;">
+				<div class="cl t20 vt-orange vt-txt-white asset-block asset-border" style="padding-bottom: 10px !important;">
 					<div class="cl center t20 block-header block-headtext">FIXED ASSETS COORDINATOR</div>
 					<div class="cl t20 block-bigtext">[FAC]</div>
 					<div class="cl t20 block-text">[FAC-EMAIL]</div>
@@ -60,16 +59,18 @@
 				</div>
 			</div>
 			<div class="cl l5 m10 t20 emp-info-inside" style="padding:5px;">
-				<div class="cl t20 vt-orange vt-txt-white asset-block" style="padding-bottom: 10px !important;">
+				<div class="cl t20 vt-orange vt-txt-white asset-block asset-border" style="padding-bottom: 10px !important;">
 					<div class="cl center t20 block-header block-headtext">BUSINESS MANAGER</div>
 					<div class="cl t20 block-bigtext">[BM]</div>
 					<div class="cl t20 block-text">[BM-EMAIL]</div>
 					<div class="cl t20 block-text">[BM-PHONE]</div>
 				</div>
 			</div>
+
 	</div>
 	<div class="rw" style="margin:0px; display: block;">
-		<div class="cl t20" style="padding: 5px; padding-bottom: 7px;">
+		<div class="cl t20" style="padding: 0px; padding-bottom: 7px;">
+<!-- END TEMPLATE faa-employee-info.html -->
 <!-- BEGIN GENERAL ALERT HEADER -->
 			<div id="general-alerts" class="cl t20">
 				<div class="rw" style="margin: 0px !important; margin-top: 5px !important; margin-bottom: 5px !important;background: rgba(255,255,255,0.2);">
@@ -79,27 +80,17 @@
 					<div class="cl t4 center" style="padding-right: 10px;border: 1px solid rgba(255,255,255, 0.5); border-left: none; ">EXPIRES</div>
 				</div>
 <!-- END GENERAL ALERT HEADER -->
-<!-- BEGIN ASSET ALERT FILL -->
+<!-- BEGIN GENERAL ALERT FILL -->
 				<div class="rw alert-normal" style="margin: 0px !important; margin-bottom: 5px !important; border: 1px solid rgba(255,255,255, 0.5);">
 					<div class="cl t2 left" style="padding-left: 10px; border-right: none;">[ORG]</div>
 					<div class="cl t4 left" style="">[ISSUER]</div>
 					<div class="cl t10 left" style="">[MESSAGE]</div>
 					<div class="cl t4 center" style="padding-right: 10px;">[EXPIRATION]</div>
 				</div>
-<!-- END ASSET ALERT FILL -->				
-<!-- BEGIN ASSET ALERT FILLER -->
-				<div class="rw alert-normal" style="margin: 0px !important; margin-bottom: 5px !important; padding: 3px !important; border: 1px solid rgba(255,255,255, 0.5);">
-					<div class="cl t2 left" style="padding-left: 10px; border-right: none;">CAUS</div>
-					<div class="cl t4 left" style="">Erin Poff</div>
-					<div class="cl t10 left" style="">
-						Please be advised that Inventory will occur on Nov 1st 2018, please check your Fixed Assets so that you know what will need to be scanned. If you have any issues with any items in your fixed assets list please be sure to contact your Fixed Assets Liaison to get them corrected before the inventory date. Thank you.
-					</div>
-					<div class="cl t4 center" style="padding-right: 10px;">Nov 1, 2018</div>
-				</div>
-<!-- END ASSET ALERT FILLER -->
-<!-- BEGIN GENERALL ASSET ALERT FOOTER -->
+<!-- END GENERAL ALERT FILL -->
+<!-- BEGIN GENERAL ALERT FOOTER -->
 			</div>
-<!-- END GENERALL ASSET ALERT FOOTER -->
+<!-- END GENERAL ALERT FOOTER -->
 <!-- BEGIN ASSET ALERT HEADER -->
 			<div id="asset-alerts" class="cl t20">
 				<div class="rw" style="margin: 0px !important; margin-top: 5px !important; margin-bottom: 5px !important;background: rgba(255,255,255,0.2);">
@@ -110,157 +101,164 @@
 				</div>
 <!-- END ASSET ALERT HEADER -->
 <!-- BEGIN ASSET ALERT FILL -->
-				<div class="rw" style="margin: 0px !important; margin-bottom: 5px !important; background: #fff; color: #333;">
+				<div class="rw" id="alert-body-[ID]" style="margin: 0px !important; margin-bottom: 5px !important; background: #fff; color: #333;">
 					<div class="cl t5 left" style="padding-left: 10px; border: 1px solid rgba(255,255,255, 0.5); border-right: none;">[ISSUER]</div>
 					<div class="cl t3 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">[PTAG]</div>
-					<div class="cl t7 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">[REASON]</div>
-					<div class="cl t5 center" style="padding-right: 10px;border: 1px solid rgba(255,255,255, 0.5); border-left: none;"><a href="">ACCEPT</a> | <a href="">DENY</a></div>
+					<div class="cl t7 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">[DESCRIPTION]</div>
+					<div class="cl t5 center" style="padding-right: 10px;border: 1px solid rgba(255,255,255, 0.5); border-left: none;"><a href="#" onclick="causfa_acceptTransfer('[PTAG]', [ID])">ACCEPT</a> | <a href="#" onclick="causfa_denyTransfer('[PTAG]', [ID])">DENY</a></div>
 				</div>
-<!-- END ASSET ALERT FILL -->				
-<!-- BEGIN ASSET ALERT FILLER -->
-				<div class="rw" style="margin: 0px !important; margin-bottom: 5px !important; background: #fff; color: #333;">
-					<div class="cl t5 left" style="padding-left: 10px; border: 1px solid rgba(255,255,255, 0.5); border-right: none;">John Q Faculty</div>
-					<div class="cl t3 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">000000</div>
-					<div class="cl t7 left" style="border: 1px solid rgba(255,255,255, 0.5); border-right: none; border-left: none;">This Asset I don't want anymore</div>
-					<div class="cl t5 center" style="padding-right: 10px;border: 1px solid rgba(255,255,255, 0.5); border-left: none;"><a href="">ACCEPT</a> | <a href="">DENY</a></div>
-				</div>
-<!-- END ASSET ALERT FILLER -->
+<!-- END ASSET ALERT FILL -->			
 <!-- BEGIN ASSET ALERT FOOTER -->
 			</div>
 		</div>
 	</div>
 <!-- END ASSET ALERT HEADER -->
-<!-- END TEMPLATE faa-employee-info.html -->
 <!-- BEGIN TEMPLATE faa-employee-impact.html -->
-	<div class="rw" style="margin:0px;">
-		<div class="cl t20">
-			<div class="cl m10 t20" style="padding:5px;">
-				<div class="cl t20 vt-teal vt-txt-white asset-block">
-					<div class="cl m8 t8 biggertext">[TOTAL NUMBER]</div>
-					<div class="cl m12 t12 subtext-right">Total Number of Assets</div>
-					<div class="cl m8 t8 bigtext">[TOTAL VALUE]</div>
-					<div class="cl m12 t12 subtext-right">Total Asset Values</div>
-					<div class="left-text cl t20 block-footer">
-						<div class="cl l12 m20 t20 add-asset-text" style="">Do you own an asset that isn't in the list below?</div>
-						<div class="cl l8 m20 t20 add-asset-btn-div"><input type="button" class="btn btn-primary add-asset-btn" value="Submit Request" onclick="addAssetModalRequested(this.id)"></div>
-						<!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
-					</div>
-				</div>
-			</div>
-			<div class="cl m10 t20" style="padding:5px;">
-				<div class="cl t20 vt-pink vt-txt-white asset-block">
-					<div class="cl m10 t8 biggertext">[MISSING NUMBER]</div>
-					<div class="cl m10 t12 subtext-right">Total Missing Assets</div>
-					<div class="cl m10 t8 bigtext">[MISSING VALUE]</div>
-					<div class="cl m10 t12 subtext-right">Total Missing Value</div>
-					<div class="left-text cl t20 block-footer">
-						<div class="cl l12 m20 t20 add-asset-text make-small">&nbsp;</div>
-						<div class="cl l8 m20 t20 add-asset-btn-div make-small">&nbsp;</div>
-						<!-- <a href="#" class="vt-txt-white" style="display: inline-flex;"><span style="font-size: 110%; padding-right:10px">More Info</span><i class="material-icons" style="font-size: 1.5em">play_circle_outline</i></a> -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="rw" style="margin:0px;">
+            <div class="cl t20">
+                <div class="cl xl8 t20" style="padding:5px;">
+                    <div class="cl t20 vt-teal vt-txt-white asset-border center bigtext" style="margin-bottom: 5px;">
+                        <div style="background: rgba(0,0,0,.2);">POSITIVE ASSET IMPACT</div>
+                    </div>
+                    <div class="cl t20 vt-teal vt-txt-white asset-border">
+                        <div class="cl m5 t8 biggertext" style="padding-left: 10px; padding-top: 10px;">[TOTAL NUMBER]</div>
+                        <div class="cl m15 t12 subtext-right">Total Number of Assets</div>
+                        <div class="cl m5 t8 bigtext" style="padding-left: 10px; padding-top: 10px;">[TOTAL VALUE]</div>
+                        <div class="cl m15 t12 subtext-right">Total Asset Values</div>
+                        <div class="center-text cl t20 block-footer">
+                            <div class="cl l12 t20 add-asset-text" style="">Do you own an asset that isn't in the list below?</div>
+                            <div class="cl l8 t20 add-asset-btn-div"><input type="button" class="btn btn-primary add-asset-btn" value="Submit Request" onclick="addAssetModalRequested(this.id)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cl xl4 t20" style="padding:5px;">
+                    <div class="cl t20 vt-dk-orange vt-txt-white asset-border center bigtext" style="margin-bottom: 5px;">
+                        <div style="background: rgba(0,0,0,.2);">ASSET COMPLIANCE</div>
+                    </div>
+                    <div class="cl t20 vt-dk-orange vt-txt-white asset-border" style="height: 100%;">
+                        <div class="cl t20" style="height: 10px;"></div>
+                        <div class="cl m10 t10 compliance-left center">[comp#]</div>
+                        <div class="cl m10 t10 compliance-right center">[comp$]</div>
+                        <div class="center-text cl t20 block-footer">
+							<div class="cl t10 compliance-sub">Items</div>
+							<div class="cl t10 compliance-sub">Dollars</div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="cl xl8 t20" style="padding:5px;">
+                    <div class="cl t20 vt-pink vt-txt-white asset-border center bigtext" style="margin-bottom: 5px;">
+                        <div style="background: rgba(0,0,0,.2);">NEGATIVE ASSET IMPACT</div>
+                    </div>
+                    <div class="cl t20 vt-pink vt-txt-white asset-border">
+                        <div class="cl m5 t8 biggertext" style="padding-left: 10px; padding-top: 10px;">[MISSING NUMBER]</div>
+                        <div class="cl m15 t12 subtext-right">Total Missing Assets</div>
+                        <div class="cl m5 t8 bigtext" style="padding-left: 10px; padding-top: 10px;">[MISSING VALUE]</div>
+                        <div class="cl m15 t12 subtext-right">Total Missing Value</div>
+                        <div class="center-text cl t20 block-footer">
+							<div class="cl l12 t20 add-asset-text" style="">&nbsp;</div>
+							<div class="cl l8 t20 add-asset-btn-div">&nbsp;</div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 <!-- END TEMPLATE faa-employee-impact.html -->
 <!-- BEGIN TEMPLATE faa-employee-asset-header.html -->
-	<div class="rw hide-medium-down" id="asset-ribbon" style="margin: 0px; padding: 7px;">
-		<div class="cl t20" style="padding: 3px; background-color: #efefef; border-radius: 2px;">
+	<div class="rw hide-small-down" id="asset-ribbon" style="margin: 0px; padding: 4px;">
+		<div class="cl t20 asset-border" style="padding: 3px; background-color: #D7D2CB;">
 			<div class="cl t4 ribbon-transfer" style="padding: 3px;">
-				<a href="#" id="transfer-[ID]" onclick="transferModalRequested(this.id)" title="Transfer asset to another faculty or staff" style="color: #333 !important;">
+				<a href="#" id="transfer-ribbon-button" title="Transfer asset to another faculty or staff" style="color: #333 !important;">
 					<div id="transfer-ribbon" class="cl t20 ribbon-disabled">
 						<div class="cl t2">
 						<!--<button class="asset-action"  >-->
 							<i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
 						<!--</button>-->
 						</div>
-						<div class="cl t18 center b" style="line-height: 32px;">TRANSFER ASSET</div>
+						<div class="cl t18 center b">TRANSFER ASSET</div>
 					</div>
 				</a>
 			</div>
 			<div class="cl t4 ribbon-surplus" style="padding: 3px;">
-				<a href="#" id="surplus-[ID]" onclick="surplusModalRequested(this.id)" title="Initiate process to surplus asset" style="color: #333 !important;">
+				<a href="#" id="surplus-ribbon-button" title="Initiate process to surplus asset" style="color: #333 !important;">
 					<div id="surplus-ribbon" class="cl t20 ribbon-disabled">
 						<div class="cl t2">
 							<i class="fas fa-2x fa-external-link-square-alt"></i>
 						</div>
-						<div class="cl t18 center b" style="line-height: 32px;">SURPLUS ASSET</div>
+						<div class="cl t18 center b">SURPLUS ASSET</div>
 					</div>
 				</a>
 			</div>
 			<div class="cl t4 ribbon-gallery" style="padding: 3px;">
-				<a href="#" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)" style="color: #333 !important;">
+				<a href="#" title="View image gallery for asset and submit new images" id="gallery-ribbon-button" style="color: #333 !important;">
 					<div id="gallery-ribbon" class="cl t20 ribbon-disabled">
 						<div class="cl t2">
 							<i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
 						</div>
-						<div class="cl t18 center b" style="line-height: 32px;">IMAGE GALLERY</div>
+						<div class="cl t18 center b">IMAGE GALLERY</div>
 					</div>
 				</a>
 			</div>
 			<div class="cl t4 ribbon-forms" style="padding: 3px;">
-				<a href="#" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)" style="color: #333 !important;">
+				<a href="#" title="View and Download the CAUS Office and Home Use Forms" id="forms-ribbon-button" style="color: #333 !important;">
 					<div id="forms-ribbon" class="cl t20 ribbon-disabled">
 						<div class="cl t2">
 							<i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
 						</div>
-						<div class="cl t18 center b" style="line-height: 32px;">UPLOAD & VIEW FORMS</div>
+						<div class="cl t18 center b">UPLOAD & VIEW FORMS</div>
 					</div>
 				</a>
 			</div>
-			<div class="cl t4 ribbon-report" style="padding: 3px;">
-				<a href="#" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)" style="color: #333 !important;">
+			<div class="cl t4 ribbon-reports" style="padding: 3px;">
+				<a href="#" title="Report Problem with Asset" id="problem-ribbon-button" style="color: #333 !important;">
 					<div id="report-ribbon" class="cl t20 ribbon-disabled">
 						<div class="cl t2">
 							<i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
 						</div>
-						<div class="cl t18 center b" style="line-height: 32px;">REPORT PROBLEMS</div>
+						<div class="cl t18 center b">REPORT PROBLEMS</div>
 					</div>
 				</a>
 			</div>
-			<div class="cl t20 center b" style="padding: 3px; font-size: 85%; color: #777;">
+			<div class="cl t20 center b" style="padding: 3px; font-size: 85%; color: #777; font-weight: 700;">
 				Select and asset below by clicking the checkbox next to it and then click on a corresponding button above for the action you wish to perform. Transfers and Surplus can be done with multiple assets selected.
 			</div>
 		</div>
 	</div>
-	<div class="rw" id="asset-title" style="margin: 0px;">
-		<div class="cl t20" style="padding: 7px;">
+	<div class="rw" id="asset-title" style="margin: 0px; padding: 4px !important">
+		<div class="cl t20 asset-border">
 			<table class="tablesorter" role="grid">
 				<thead>
 					<tr class="rw asset-list-header">
-						<th class="cl center xl1 l1 m1 t1 hide-medium-down" style="padding-left: 12px !important;">SELECT</th>
-						<th class="center cl xl2 l2 m2 t6">TAG NUMBER</th>
-						<th class="center cl xl2 l2 m2 t8">SERIAL NUMBER</th>
-						<th class="center cl xl1 l1 m2 t6">VALUE</th>
-						<th class="cl xl4 l4 m5 hide-medium-down">DESCRIPTION</th>
-						<th class="center cl xl2 l2 m3 hide-medium-down">OWNERSHIP</th>
-						<th class="center cl xl3 l3 hide-medium-down">ORGANIZATION</th>
-						<th class="center cl xl1 hide-large-down">VT SCAN</th>
-						<th class="center cl xl1 hide-large-down">&nbsp;PURCHASED</th>
-						<th class="center cl xl3 l5 m3 hide-medium-down">STATUS</th>
-						<th class="center cl xl3 m2 hide-large-down">ACTIONS</th>
+						<th class="cl xl1 l1 m1 t1 center  hide-small-down" style="padding-left: 12px !important;">SELECT</th>
+						<th class="cl xl2 l2 m2 t6 center">TAG NUMBER</th>
+						<th class="cl xl3 l2 m2 t8 center">SERIAL NUMBER</th>
+						<th class="cl xl2 l2 m2 t6 center">MANUFACTURER</th>
+						<th class="cl xl5 l4 m5 hide-small-down">DESCRIPTION</th>
+                        <th class="cl xl1 l2 m2 t6 center">VALUE</th>
+						<th class="cl xl1 centerhide-large-down">VT SCAN</th>
+						<th class="cl xl1 center hide-large-down">&nbsp;PURCHASED</th>
+						<th class="cl xl3 l5 m5 center hide-small-down">STATUS</th>
 					</tr>
 				</thead>
 				<tbody>
 <!-- END TEMPLATE faa-employee-asset-header.html -->
 <!-- BEGIN TEMPLATE faa-employee-asset-list.html --> 
 					<tr class="rw asset-list" >
-						<td class="cl center xl1 l1 m1 t1 asset-list-r2 hide-medium-down">
-							<input id="asset-select-[ID]" type="checkbox" value="asset-select-[ID]" class="filled-in admin-block-line-b">
+						<td class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+							<input id="asset-select-[ID]" type="checkbox" value="asset-select-[ID]" class="filled-in admin-block-line-b" onclick="checkSelected()">
 							<label for="asset-select-[ID]"></label>
 						</td>
 						<td class="cl xl2 l2 m2 t6 center asset-list-r"id="asset-tag-[ID]">[VT TAG]</td>
 						<td class="center cl xl2 l2 m2 t8 asset-list-r" id="asset-serial-[ID]">[S/N]</td>
-						<td class="center cl xl1 l1 m2 t6 asset-list-r" id="asset-value-[ID]">[VALUE]</td>
-						<td class="cl xl4 l4 m5 t10 asset-list-r" id="asset-desc-[ID]" style="padding-left: 10px;">[DESCRIPTION]</td>
-						<td class="center cl xl2 l2 m3 t10 hide-small-down asset-list-r" id="asset-own-[ID]">[OWNERSHIP]</td>
-						<td class="center cl xl3 l3 hide-medium-down asset-list-r" id="asset-org-[ID]">[ORGANIZATION]</td>
+						<td class="center cl xl1 l2 m2 t6 asset-list-r" id="asset-value-[ID]">[VALUE]</td>
+						<td class="cl xl4 l5 m5 t10 asset-list-r truncate" id="asset-desc-[ID]" style="padding-left: 10px;">[DESCRIPTION]</td>
+						<td class="center cl xl2 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-[ID]">[OWNERSHIP]</td>
+						<td class="center cl xl3 hide-large-down asset-list-r" id="asset-org-[ID]">[ORGANIZATION]</td>
 						<td class="center cl xl1 hide-large-down asset-list-r" id="asset-vt-scan-[ID]">[VT SCAN]</td>
 						<td class="center cl xl1 hide-large-down asset-list-r" id="asset-purchased-[ID]">[PURCHASED]</td>
-						<td class="center cl xl3 l5 m3 t20" id="status-[ID]" style="padding: 4px !important;">
+						<td class="center cl xl3 l5 m5 t20" id="status-[ID]" style="padding: 4px !important;">
 							<div class="asset-status">[STATUS]</div>
 						</td>
-						<td class="center cl xl2 l3 m3 t20 asset-actions hide-small-up" style="display: inline-flex;">
+						<td class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
 							<div class="center cl t4">
 								<button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
 									<i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
@@ -290,227 +288,67 @@
 					</tr>
 <!-- END TEMPLATE faa-employee-asset-list.html -->
 <!-- BEGIN ASSET LIST FILLERl --> 
-					<tr class="asset-list" id="asset-0">
-						<td class="cl center xl1 l1 m1 t1 asset-list-r2 hide-medium-down">
-							<input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b">
-							<label for="asset-select-0"></label>
-						</td>
-						<td class="center cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-[ID]">000345678</td>
-						<td class="center cl xl2 l2 m2 t8 asset-list-r" id="asset-serial-[ID]">C000123456</td>
-						<td class="center cl xl1 l1 m2 t6 asset-list-r" id="asset-value-[ID]">$2015.53</td>
-						<td class="cl xl4 l4 m5 t10 asset-list-r" id="asset-desc-[ID]" style="padding-left: 10px;">Apple MacBook Pro 15"</td>
-						<td class="center cl xl2 l2 m3 t10 hide-small-down asset-list-r" id="asset-own-[ID]">University Owned</td>
-						<td class="center cl xl3 l3 hide-medium-down asset-list-r" id="asset-org-[ID]">Architecture Support</td>
-						<td class="center cl xl1 hide-large-down asset-list-r" id="asset-vt-scan-[ID]">10-APR-2017</td>
-						<td class="center cl xl1 hide-large-down asset-list-r" id="asset-purchased-[ID]">06-MAR-2016</td>
-						<td class="center cl xl3 l5 m3 t20" id="status-[ID]" style="padding: 4px !important;">
-							<div class="asset-home">HOME USE</div>
-						</td>
-						<td class="center cl xl2 l3 m3 t20 asset-actions hide-small-up" style="display: inline-flex;">
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
-									<i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
-										<i class="fas fa-2x fa-external-link-square-alt"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)">
-									<i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)">
-									<i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)">
-									<i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-						</td>
-					</tr>
-					<tr class="asset-list" id="asset-1">
-						<td class="cl center xl1 l1 m1 t1">
-							<input id="asset-select-1" type="checkbox" value="asset-select-1" class="filled-in admin-block-line-b">
-							<label for="asset-select-1"></label>
-						</td>
-						<td class="cl xl2 l2 m2 t6 center" id="asset-tag-[ID]">000378209</td>
-						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">C98A8OI209K</td>
-						<td class="cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">$1650.25</td>
-						<td class="cl xl4 l4 m5 t20 col-4" id="asset-desc-[ID]">Apple MacBook Air"</td>
-						<td class="center cl xl2 l2 m3 hide-small-down" id="asset-own-[ID]">SCHEV Owned</td>
-						<td class="center cl xl2 l2 m2 hide-medium-down" id="asset-org-[ID]">Architecture Support</td>
-						<td class="center cl xl1 hide-large-down" id="asset-vt-scan-[ID]">15-MAR-2016</td>
-						<td class="center cl xl1 hide-large-down" id="asset-purchased-[ID]">06-MAR-2016</td>
-						<td class="center cl xl3 l3 m3 t20" id="status-[ID]" style="padding: 4px !important;">
-							<div class="asset-office">OFFICE USE</div>
-						</td>
-						<td class="center cl xl2 l3 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
-									<i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
-										<i class="fas fa-2x fa-external-link-square-alt"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)">
-									<i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)">
-									<i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)">
-									<i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
+					<tr class="rw asset-list" >
+                        <td>
+                            <div class="rw">
+                                <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                    <input id="asset-select-[ID]" type="checkbox" value="asset-select-[ID]" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                    <label for="asset-select-[ID]"></label>
+                                </div>
+                                <div class="cl xl2 l2 m2 t6 center asset-list-r"id="asset-tag-[ID]">[VT TAG]</div>
+                                <div class="center cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-[ID]">[S/N]</div>
+                                <div class="center cl xl2 l2 m2 t6 asset-list-r" id="asset-value-[ID]">[MANUFACTURER]</div>
+                                <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-[ID]">[DESCRIPTION]</div>
+                                <div class="center cl xl1 l2 m2 t6 asset-list-r" id="asset-value-[ID]">[VALUE]</div>
+                                <div class="center cl xl1 hide-large-down asset-list-r" id="asset-vt-scan-[ID]">[VT SCAN]</div>
+                                <div class="center cl xl1 hide-large-down asset-list-r" id="asset-purchased-[ID]">[PURCHASED]</div>
+                                <div class="center cl xl3 l5 m5 t20" id="status-[ID]" style="padding: 4px !important;">
+                                    <div class="asset-status asset-office">[STATUS]</div>
+                                </div>
+                                <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
+                                            <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                        </button>
+                                    </div>
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
+                                                <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                        </button>
+                                    </div>
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)">
+                                            <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                        </button>
+                                    </div>
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)">
+                                            <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                        </button>
+                                    </div>
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)">
+                                            <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                    <input id="collapsible" onclick="asset_toggle(1)" class="toggle" type="checkbox">
+                                    <label for="collapsible" class="lbl-toggle">MORE</label>
+                                </div>
+                            </div>
+                            <div class="rw collapsible-content" id="asset-more-[ID]">
+                                <div class="rw">
+                                    <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                    <div class="cl xl2 l2 m2 t6 center asset-list-r" id="asset-room-[ID]"><b>ROOM #: </b>[ROOM]</div>
+                                    <div class="cl xl6 t6 asset-list-r" id="asset-bldg-[ID]"><b>BUILDING: </b>[BLDG]</div>
+                                    <div class="cl xl3 t6 asset-list-r" id="asset-cond-[ID]"><b>CONDITION: </b>[COND]</div>
+                                    <div class="center cl xl4 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-[ID]"><b>OWNERSHIP: </b>[OWNERSHIP]</div>
+                                    <div class="center cl xl4 hide-large-down asset-list-r" id="asset-org-[ID]"><b>ORGANIZATION: </b>[ORGANIZATION]</div>
+                                </div>
+                            </div>
 						</td>
 					</tr>
-					<tr class="asset-list" id="asset-2">
-						<td class="cl center xl1 l1 m1 t1">
-							<input id="asset-select-2" type="checkbox" value="asset-select-2" class="filled-in admin-block-line-b">
-							<label for="asset-select-2"></label>
-						</td>
-						<td class="cl xl2 l2 m2 t6 center" id="asset-tag-[ID]">000298765</td>
-						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">D09823OLIJ</td>
-						<td class="cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">$1985.71</td>
-						<td class="cl xl4 l4 m5 t20 col-4" id="asset-desc-[ID]">Del XPS 13</td>
-						<td class="center cl xl2 l2 m3 hide-small-down" id="asset-own-[ID]">University Owned</td>
-						<td class="center cl xl2 l2 m2 hide-medium-down" id="asset-org-[ID]">Architecture Support</td>
-						<td class="center cl xl1 hide-large-down" id="asset-vt-scan-[ID]">10-APR-2017</td>
-						<td class="center cl xl1 hide-large-down" id="asset-purchased-[ID]">06-MAR-2016</td>
-						<td class="center cl xl3 l3 m3 t20" id="status-[ID]" style="padding: 4px !important;">
-							<div class="asset-missing">MISSING</div>
-						</td>
-						<td class="center cl xl2 l3 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
-									<i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
-										<i class="fas fa-2x fa-external-link-square-alt"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)">
-									<i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)">
-									<i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)">
-									<i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-						</td>
-					</tr>
-					<tr class="asset-list" id="asset-3">
-						<td class="cl center xl1 l1 m1 t1">
-							<input id="asset-select-3" type="checkbox" value="asset-select-3" class="filled-in admin-block-line-b">
-							<label for="asset-select-3"></label>
-						</td>
-						<td class="cl xl2 l2 m2 t6 center" id="asset-tag-[ID]">000345678</td>
-						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">C000123456</td>
-						<td class="cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">$2015.53</td>
-						<td class="cl xl4 l4 m5 t20 col-4" id="asset-desc-[ID]">Apple MacBook Pro 15"</td>
-						<td class="center cl xl2 l2 m3 hide-small-down" id="asset-own-[ID]">University Owned</td>
-						<td class="center cl xl2 l2 m2 hide-medium-down" id="asset-org-[ID]">Architecture Support</td>
-						<td class="center cl xl1 hide-large-down" id="asset-vt-scan-[ID]">10-APR-2017</td>
-						<td class="center cl xl1 hide-large-down" id="asset-purchased-[ID]">06-MAR-2016</td>
-						<td class="center cl xl3 l3 m3 t20" id="status-[ID]" style="padding: 4px !important;">
-							<div class="asset-pending">PENDING TRANSFER</div>
-						</td>
-						<td class="center cl xl2 l3 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
-									<i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
-										<i class="fas fa-2x fa-external-link-square-alt"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)">
-									<i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)">
-									<i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)">
-									<i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-						</td>
-					</tr>
-					<tr class="asset-list" id="asset-4">
-						<td class="cl center xl1 l1 m1 t1">
-							<input id="asset-select-4" type="checkbox" value="asset-select-4" class="filled-in admin-block-line-b">
-							<label for="asset-select-4"></label>
-						</td>
-						<td class="cl xl2 l2 m2 t6 center" id="asset-tag-[ID]">000345678</td>
-						<td class="cl xl2 l2 m2 t8 col-2" id="asset-serial-[ID]">C000123456</td>
-						<td class="cl xl1 l2 m2 t6 col-3" id="asset-value-[ID]">$2015.53</td>
-						<td class="cl xl4 l4 m5 t20 col-4" id="asset-desc-[ID]">Apple MacBook Pro 15"</td>
-						<td class="center cl xl2 l2 m3 hide-small-down" id="asset-own-[ID]">University Owned</td>
-						<td class="center cl xl2 l2 m2 hide-medium-down" id="asset-org-[ID]">Architecture Support</td>
-						<td class="center cl xl1 hide-large-down" id="asset-vt-scan-[ID]">10-APR-2017</td>
-						<td class="center cl xl1 hide-large-down" id="asset-purchased-[ID]">06-MAR-2016</td>
-						<td class="center cl xl3 l3 m3 t20" id="status-[ID]" style="padding: 4px !important;">
-							<div class="asset-pending">PENDING SURPLUS</div>
-						</td>
-						<td class="center cl xl2 l3 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
-									<i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
-										<i class="fas fa-2x fa-external-link-square-alt"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)">
-									<i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)">
-									<i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)">
-									<i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-						</td>
-					</tr>
-				
 <!-- END ASSET LIST FILLER -->
 <!-- BEGIN TEMPLATE faa-employee-asset-footer.html -->
 				</tbody>
@@ -520,6 +358,11 @@
 					</tr>
 				</tfoot>
 			</table>
+			<script>
+                document.addEventListener("DOMContentLoaded", function(event) {
+                    $("table").tablesorter();
+                });
+			</script>
 <!-- END TEMPLATE faa-employee-asset-footer.html -->
 <!-- BEGIN TEMPLATE faa-employee-footer.html -->        
 		</div>

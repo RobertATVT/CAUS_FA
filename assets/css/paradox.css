@@ -209,7 +209,7 @@ html {
     outline: none;
 }
 [type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
-    border: none !important;
+/*    border: none !important;*/
 }
 .p-accordian-content {
   max-height: 0;

@@ -2937,7 +2937,7 @@ thead {
 }
 
 td, th {
-  padding: 15px 5px;
+  padding: 0px 0px;
   display: table-cell;
   text-align: left;
   vertical-align: middle;
@@ -6687,6 +6687,7 @@ form p:last-child {
 
 [type="checkbox"] + label:before,
 [type="checkbox"]:not(.filled-in) + label:after {
+/*
   content: '';
   position: absolute;
   top: 0;
@@ -6699,6 +6700,7 @@ form p:last-child {
   margin-top: 2px;
   -webkit-transition: .2s;
   transition: .2s;
+*/
 }
 
 [type="checkbox"]:not(.filled-in) + label:after {
@@ -6722,22 +6724,7 @@ form p:last-child {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-[type="checkbox"]:checked + label:before {
-  top: -4px;
-  left: -5px;
-  width: 12px;
-  height: 22px;
-  border-top: 2px solid transparent;
-  border-left: 2px solid transparent;
-  border-right: 2px solid #26a69a;
-  border-bottom: 2px solid #26a69a;
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
-}
+
 
 [type="checkbox"]:checked:disabled + label:before {
   border-right: 2px solid rgba(0, 0, 0, 0.42);
