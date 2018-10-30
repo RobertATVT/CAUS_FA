@@ -111,9 +111,9 @@ function causfa_oracle_compare($oracle) {
 }
 function causfa_oracle_compare_custodian($oracle, $asset) {
     global $wpdb;
-    if ($oracle['FZVFORG_CUSTODIAN'] !== $asset->FZVFORG_CUSTODIAN) {
+    if ($oracle['FZVFORG_CUSTODIAN'] != $asset->FZVFORG_CUSTODIAN) {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$oracle['FZVFORG_PTAG']."';");
-        if($result === null) {
+        if($result == null) {
             return array (
                 'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
                 'OCCURRENCE_CODE' => 2,
@@ -122,8 +122,8 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
                 'NEW_VALUE' => $oracle->FZVFORG_CUSTODIAN
             );
         } else {
-            if ($result->PENDING_TYPE === 0 ) {
-                if ($result->PENDING_STATUS !== 7) {
+            if ($result->PENDING_TYPE == 0 ) {
+                if ($result->PENDING_STATUS != 7) {
                     return array (
                         'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
                         'OCCURRENCE_CODE' => 3,
@@ -136,7 +136,7 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
                     return null;
                 }
             } else {
-                if ($result->PENDING_STATUS !== 5) {
+                if ($result->PENDING_STATUS != 5) {
                     return array (
                         'FZVFORG_PTAG' => $result->FZVFORG_CUSTODIAN,
                         'OCCURRENCE_CODE' => 3,
@@ -159,9 +159,9 @@ function causfa_oracle_compare_location($oracle, $asset) {
 }
 function causfa_oracle_compare_org($oracle, $asset) {
     global $wpdb;
-    if ($oracle['FZVFORG_ORGN_CODE'] !== $asset->FZVFORG_ORGN_CODE) {
+    if ($oracle['FZVFORG_ORGN_CODE'] != $asset->FZVFORG_ORGN_CODE) {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$oracle['FZVFORG_PTAG']."';");
-        if($result === null) {
+        if($result == null) {
             return array (
                 'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
                 'OCCURRENCE_CODE' => 2,
@@ -170,7 +170,7 @@ function causfa_oracle_compare_org($oracle, $asset) {
                 'NEW_VALUE' => $oracle['FZVFORG_ORGN_CODE']
             );
         } else {
-            if ($result->PENDING_TYPE === 0 ) {
+            if ($result->PENDING_TYPE == 0 ) {
                 if ($result->PENDING_STATUS !== 7) {
                     return array (
                         'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
@@ -184,7 +184,7 @@ function causfa_oracle_compare_org($oracle, $asset) {
                     return null;
                 }
             } else {
-                if ($result->PENDING_STATUS !== 5) {
+                if ($result->PENDING_STATUS != 5) {
                     return array (
                         'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
                         'OCCURRENCE_CODE' => 3,
