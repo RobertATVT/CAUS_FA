@@ -105,7 +105,7 @@ function causfa_oracle_compare($oracle) {
         array(
             'TOTAL_BANNER' => $total,
             'TOTAL_LOCAL' => $total_local,
-            'EXCEPTIONS' => $exceptions_list
+            'EXCEPTIONS' => maybe_serialize($exceptions_list)
         )
     );
 }
@@ -167,7 +167,7 @@ function causfa_oracle_compare_org($oracle, $asset) {
                 'OCCURRENCE_CODE' => 2,
                 'CHANGE_CODE' => 0,
                 'OLD_VALUE' => $asset->FZVFORG_ORGN_CODE,
-                'NEW_VALUE' => $oracle->FZVFORG_ORGN_CODE
+                'NEW_VALUE' => $oracle-['FZVFORG_ORGN_CODE']
             );
         } else {
             if ($result->PENDING_TYPE === 0 ) {
@@ -178,7 +178,7 @@ function causfa_oracle_compare_org($oracle, $asset) {
                         'CHANGE_CODE' => 0,
                         'PENDING_TYPE' => 0,
                         'OLD_VALUE' => $asset->FZVFORG_ORGN_CODE,
-                        'NEW_VALUE' => $oracle->FZVFORG_ORGN_CODE
+                        'NEW_VALUE' => $oracle['FZVFORG_ORGN_CODE']
                     );
                 } else {
                     return null;
@@ -191,7 +191,7 @@ function causfa_oracle_compare_org($oracle, $asset) {
                         'CHANGE_CODE' => 0,
                         'PENDING_TYPE' => 1,
                         'OLD_VALUE' => $asset->FZVFORG_ORGN_CODE,
-                        'NEW_VALUE' => $oracle->FZVFORG_ORGN_CODE
+                        'NEW_VALUE' => $oracle['FZVFORG_ORGN_CODE']
                     );
                 } else {
                     return null;
