@@ -105,20 +105,20 @@ function causfa_oracle_compare($oracle) {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$row->FZVFORG_PTAG."' AND PENDING_TYPE = 1;");
         if ($result == null) {
             $entry = array(
-                'FZVFORG_PTAG' => $row['FZVFORG_PTAG'],
+                'FZVFORG_PTAG' => $row->FZVFORG_PTAG,
                 'OCCURRENCE_CODE' => 1
             );
             array_push($exceptions_list, $entry);
-            send_message($row['FZVFORG_PTAG'], $row['FZVFPRG_PTAG']." was found in the local database but not in banner", $percent);
+            send_message($row->FZVFORG_PTAG, $row->FZVFPRG_PTAG." was found in the local database but not in banner", $percent);
         } else {
             if ($result->PENDING_STATUS != 5) {
                 $entry = array(
-                    'FZVFORG_PTAG' => $row['FZVFORG_PTAG'],
+                    'FZVFORG_PTAG' => $row->FZVFORG_PTAG,
                     'OCCURRENCE_CODE' => 2,
                     'CHANGE_CODE' => 3
                 );
                 array_push($exceptions_list, $entry);
-                send_message($row['FZVFORG_PTAG'], $row['FZVFPRG_PTAG']." was removed from the College's org but the surplus action was not complete", $percent);
+                send_message($row->FZVFORG_PTAG, $row->FZVFPRG_PTAG." was removed from the College's org but the surplus action was not complete", $percent);
             }
         }
         array_splice($$assets, $key, 1);
