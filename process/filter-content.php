@@ -106,17 +106,22 @@ function causfa_filter_impact( $value_total, $total_number, $missing_total, $mis
 function causfa_filter_asset_info( $content, $asset_index) {
     global $wpdb;
     $asset_info_html = file_get_contents ( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-employee-asset-list.html', true); 
-    $asset_info_html = str_replace('[VT TAG]', $content->FZVFORG_PTAG, $asset_info_html);
+    $asset_info_html = str_replace( '[VT TAG]', $content->FZVFORG_PTAG, $asset_info_html);
     $asset_info_html = str_replace( '[S/N]', $content->FZVFORG_SERIAL_NUM, $asset_info_html);
+    $asset_info_html = str_replace( '[MANUFACTURER]', $content->FZVFORG_MANUFACTURER, $asset_info_html);
     $asset_info_html = str_replace( '[DESCRIPTION]', $content->FZVFORG_DESCRIPTION, $asset_info_html);
     $asset_info_html = str_replace( '[VALUE]', ('$'.$content->FZVFORG_AMOUNT), $asset_info_html);
-    $asset_info_html = str_replace( '[ORGANIZATION]', $content->FZVFORG_ORGN_TITLE, $asset_info_html);
-    $asset_info_html = str_replace( '[OWNERSHIP]', $content->FZVFORG_OWNERSHIP, $asset_info_html);
     $asset_info_html = str_replace( '[VT SCAN]', $content->FZVFORG_LAST_INVENTORY_DATE, $asset_info_html);
     $asset_info_html = str_replace( '[CAUS SCAN]', '[CAUS SCAN]', $asset_info_html);
     $asset_info_html = str_replace( '[PURCHASE DATE]', $content->FZVFORG_ACQ_DATE, $asset_info_html);
     $asset_info_html = str_replace( '[ID]', $asset_index, $asset_info_html);
-    $asset_info_html = str_replace('[PURCHASED]', $content->FZVFORG_ACQ_DATE, $asset_info_html);
+    $asset_info_html = str_replace( '[PURCHASED]', $content->FZVFORG_ACQ_DATE, $asset_info_html);
+    $asset_info_html = str_replace( '[ROOM]', $content->FZVFORG_ROOM, $asset_info_html);
+    $asset_info_html = str_replace( '[BLDG]', $content->FZVFORG_BLDG, $asset_info_html);
+    $asset_info_html = str_replace( '[COND]', $content->FZVFORG_CONDITION, $asset_info_html);
+    $asset_info_html = str_replace( '[ORGANIZATION]', $content->FZVFORG_ORGN_TITLE, $asset_info_html);
+    $asset_info_html = str_replace( '[OWNERSHIP]', $content->FZVFORG_OWNERSHIP, $asset_info_html);
+
     $missing = false;
     if ($content->PENDING_STATUS == 0) {
         switch ($content->STATUS) {
