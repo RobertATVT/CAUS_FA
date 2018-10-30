@@ -117,44 +117,44 @@
         <div class="rw" style="margin:0px;">
             <div class="cl t20">
                 <div class="cl xl8 t20" style="padding:5px;">
-                    <div class="cl t20 vt-teal vt-txt-white asset-border center bigtext" style="margin-bottom: 5px;">
-                        <div style="background: rgba(0,0,0,.2);">POSITIVE ASSET IMPACT</div>
+                    <div class="cl t20 vt-teal vt-txt-white asset-border center bigtext" style="margin-bottom: 5px; padding: 3px !important;">
+                        <div>POSITIVE ASSET IMPACT</div>
                     </div>
-                    <div class="cl t20 vt-teal vt-txt-white asset-border">
+                    <div class="cl t20 asset-border" style="height: 100%; background: #fff !important; color: #508590 !important; border: 1px solid #508590 !important;">
                         <div class="cl m5 t8 biggertext" style="padding-left: 10px; padding-top: 10px;">[TOTAL NUMBER]</div>
                         <div class="cl m15 t12 subtext-right">Total Number of Assets</div>
                         <div class="cl m5 t8 bigtext" style="padding-left: 10px; padding-top: 10px;">[TOTAL VALUE]</div>
                         <div class="cl m15 t12 subtext-right">Total Asset Values</div>
-                        <div class="center-text cl t20 block-footer">
-                            <div class="cl l12 t20 add-asset-text" style="">Do you own an asset that isn't in the list below?</div>
+                        <div class="center-text cl t20 block-footer" style="background: #508590 !important;">
+                            <div class="cl l12 t20 add-asset-text" style="color: #fff;">Do you own an asset that isn't in the list below?</div>
                             <div class="cl l8 t20 add-asset-btn-div"><input type="button" class="btn btn-primary add-asset-btn" value="Submit Request" onclick="addAssetModalRequested(this.id)"></div>
                         </div>
                     </div>
                 </div>
                 <div class="cl xl4 t20" style="padding:5px;">
-                    <div class="cl t20 vt-dk-orange vt-txt-white asset-border center bigtext" style="margin-bottom: 5px;">
-                        <div style="background: rgba(0,0,0,.2);">ASSET COMPLIANCE</div>
+                    <div class="cl t20 vt-dk-orange vt-txt-white asset-border center bigtext" style="margin-bottom: 5px; padding: 3px !important;">
+                        <div>ASSET COMPLIANCE</div>
                     </div>
-                    <div class="cl t20 vt-dk-orange vt-txt-white asset-border" style="height: 100%;">
+                    <div class="cl t20 asset-border" style="height: 100%;background: #fff !important; color: #C64600 !important; border: 1px solid #c64600 !important;">
                         <div class="cl t20" style="height: 10px;"></div>
                         <div class="cl m10 t10 compliance-left center">[comp#]</div>
                         <div class="cl m10 t10 compliance-right center">[comp$]</div>
-                        <div class="center-text cl t20 block-footer">
+                        <div class="center-text cl t20 block-footer" style="background: #C64600 !important;">
 							<div class="cl t10 compliance-sub">Items</div>
 							<div class="cl t10 compliance-sub">Dollars</div>  
                         </div>
                     </div>
                 </div>
                 <div class="cl xl8 t20" style="padding:5px;">
-                    <div class="cl t20 vt-pink vt-txt-white asset-border center bigtext" style="margin-bottom: 5px;">
-                        <div style="background: rgba(0,0,0,.2);">NEGATIVE ASSET IMPACT</div>
+                    <div class="cl t20 vt-pink vt-txt-white asset-border center bigtext" style="margin-bottom: 5px; padding: 3px !important;">
+                        <div>NEGATIVE ASSET IMPACT</div>
                     </div>
-                    <div class="cl t20 vt-pink vt-txt-white asset-border">
+                    <div class="cl t20 asset-border" style="background: #fff !important; color: #CE0058 !important; border: 1px solid #CE0058 !important;">
                         <div class="cl m5 t8 biggertext" style="padding-left: 10px; padding-top: 10px;">[MISSING NUMBER]</div>
                         <div class="cl m15 t12 subtext-right">Total Missing Assets</div>
                         <div class="cl m5 t8 bigtext" style="padding-left: 10px; padding-top: 10px;">[MISSING VALUE]</div>
                         <div class="cl m15 t12 subtext-right">Total Missing Value</div>
-                        <div class="center-text cl t20 block-footer">
+                        <div class="center-text cl t20 block-footer" style="background: #CE0058 !important;">
 							<div class="cl l12 t20 add-asset-text" style="">&nbsp;</div>
 							<div class="cl l8 t20 add-asset-btn-div">&nbsp;</div>  
                         </div>
@@ -243,47 +243,65 @@
 <!-- END TEMPLATE faa-employee-asset-header.html -->
 <!-- BEGIN TEMPLATE faa-employee-asset-list.html --> 
 					<tr class="rw asset-list" >
-						<td class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
-							<input id="asset-select-[ID]" type="checkbox" value="asset-select-[ID]" class="filled-in admin-block-line-b" onclick="checkSelected()">
-							<label for="asset-select-[ID]"></label>
-						</td>
-						<td class="cl xl2 l2 m2 t6 center asset-list-r"id="asset-tag-[ID]">[VT TAG]</td>
-						<td class="center cl xl2 l2 m2 t8 asset-list-r" id="asset-serial-[ID]">[S/N]</td>
-						<td class="center cl xl1 l2 m2 t6 asset-list-r" id="asset-value-[ID]">[VALUE]</td>
-						<td class="cl xl4 l5 m5 t10 asset-list-r truncate" id="asset-desc-[ID]" style="padding-left: 10px;">[DESCRIPTION]</td>
-						<td class="center cl xl2 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-[ID]">[OWNERSHIP]</td>
-						<td class="center cl xl3 hide-large-down asset-list-r" id="asset-org-[ID]">[ORGANIZATION]</td>
-						<td class="center cl xl1 hide-large-down asset-list-r" id="asset-vt-scan-[ID]">[VT SCAN]</td>
-						<td class="center cl xl1 hide-large-down asset-list-r" id="asset-purchased-[ID]">[PURCHASED]</td>
-						<td class="center cl xl3 l5 m5 t20" id="status-[ID]" style="padding: 4px !important;">
-							<div class="asset-status">[STATUS]</div>
-						</td>
-						<td class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
-									<i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
-										<i class="fas fa-2x fa-external-link-square-alt"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)">
-									<i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)">
-									<i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
-							<div class="center cl t4">
-								<button class="asset-action" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)">
-									<i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
-								</button>
-							</div>
+                        <td>
+                            <div class="rw" style="margin-bottom: -5px !important;">
+                                <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                    <input id="asset-select-[ID]" type="checkbox" value="asset-select-[ID]" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                    <label for="asset-select-[ID]"></label>
+                                </div>
+                                <div class="cl xl2 l2 m2 t6 asset-list-r"id="asset-tag-[ID]">[VT TAG]</div>
+                                <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-[ID]">[S/N]</div>
+                                <div class="cl xl2 l2 m2 t6 center asset-list-r" id="asset-value-[ID]">[MANUFACTURER]</div>
+                                <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-[ID]">[DESCRIPTION]</div>
+                                <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-[ID]">[VALUE]</div>
+                                <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-[ID]">[VT SCAN]</div>
+                                <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-[ID]">[PURCHASED]</div>
+                                <div class="cl xl3 l5 m5 t20 center" id="status-[ID]" style="padding: 4px !important;">
+                                    <div class="asset-status asset-office">[STATUS]</div>
+                                </div>
+                                <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
+                                            <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                        </button>
+                                    </div>
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
+                                                <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                        </button>
+                                    </div>
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)">
+                                            <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                        </button>
+                                    </div>
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)">
+                                            <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                        </button>
+                                    </div>
+                                    <div class="center cl t4">
+                                        <button class="asset-action" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)">
+                                            <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down" style="padding: 3px !important;">
+                                    <input id="collapsible" onclick="asset_toggle(0)" class="toggle" type="checkbox">
+                                    <label for="collapsible" class="lbl-toggle">MORE</label>
+                                </div>
+                            </div>
+                            <div class="rw collapsible-content" id="asset-more-0">
+                                <div class="rw" style="margin-top: 5px !important;">
+                                    <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                    <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-room-[ID]"><b>ROOM #: </b>[ROOM]</div>
+                                    <div class="cl xl5 t6 asset-list-r" id="asset-bldg-[ID]"><b>BUILDING: </b>[BLDG]</div>
+                                    <div class="cl xl3 t6 asset-list-r" id="asset-cond-[ID]"><b>CONDITION: </b>[COND]</div>
+                                    <div class="center cl xl4 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-[ID]"><b>OWNERSHIP: </b>[OWNERSHIP]</div>
+                                    <div class="center cl xl4 hide-large-down asset-list-r" id="asset-org-[ID]"><b>ORGANIZATION: </b>[ORGANIZATION]</div>
+                                    <div class="cl xl1 t1">&nbsp;</div>
+                                </div>
+                            </div>
 						</td>
 					</tr>
 <!-- END TEMPLATE faa-employee-asset-list.html -->
@@ -333,11 +351,11 @@
                                     </div>
                                 </div>
                                 <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down" style="padding: 3px !important;">
-                                    <input id="collapsible" onclick="asset_toggle([ID])" class="toggle" type="checkbox">
+                                    <input id="collapsible" onclick="asset_toggle(1)" class="toggle" type="checkbox">
                                     <label for="collapsible" class="lbl-toggle">MORE</label>
                                 </div>
                             </div>
-                            <div class="rw collapsible-content" id="asset-more-[ID]">
+                            <div class="rw collapsible-content" id="asset-more-1">
                                 <div class="rw" style="margin-top: 5px !important;">
                                     <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
                                     <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-room-[ID]"><b>ROOM #: </b>[ROOM]</div>
