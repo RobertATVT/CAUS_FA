@@ -233,33 +233,34 @@ select#org option:hover {
     font-weight:700;
     letter-spacing: .05em; 
 }
-.lw-100 {
-    width: 100%;
-}
-.lw-90 {
-    width: 100%;
-}
-.lw-80 {
-    width: 100%;
-}
-.lw-70 {
-    width: 100%;
-}
-.lw-250 {
-    width: 250px;
-}
-.lh-35 {
-    line-height: 35px;
-}
-.lh-30 {
-    line-height: 30px;
-}
-.lh-25 {
-    line-height: 25px;
-}
-.lh-20 {
-    line-height: 20px;
-}
+
+.lw-100 { width: 100%; }
+.lw-90 { width: 100%; }
+.lw-80 { width: 100%; }
+.lw-70 { width: 100%; }
+.lw-250 { width: 250px; }
+
+.lh-35 { line-height: 35px; }
+.lh-30 { line-height: 30px; }
+.lh-25 { line-height: 25px; }
+.lh-20 { line-height: 20px; }
+
+.t40 { font-size: 40% !important; }
+.t50 { font-size: 50% !important; }
+.t60 { font-size: 60% !important; }
+.t70 { font-size: 70% !important; }
+.t80 { font-size: 80% !important; }
+.t90 { font-size: 90% !important; }
+.t110 { font-size: 110% !important; }
+.t120 { font-size: 120% !important; }
+.t130 { font-size: 130% !important; }
+.t140 { font-size: 140% !important; }
+.t150 { font-size: 150% !important; }
+.t160 { font-size: 160% !important; }
+.t170 { font-size: 170% !important; }
+.t180 { font-size: 180% !important; }
+.t190 { font-size: 190% !important; }
+.t200 { font-size: 200% !important; }
 
 /* TYPOGRAPHY ELEMENTS */
 .shorten-text {
@@ -683,22 +684,27 @@ select#org option:hover {
 .compliance-left {
     line-height: 52px;
     font-size: 300%;
-    border-right: 1px solid #efefef;
+    border-right: 1px solid #c64600;
 }
 .compliance-right {
     line-height: 52px;
     font-size: 300%;
-    border-left: 1px solid #efefef;
+    border-left: 1px solid #c64600;
 }
 .compliance-sub {
     line-height: 20px;
     font-weight: 700;
-    font-size: 80%;
+    font-size: 110%;
     letter-spacing: .1em;
     text-transform: uppercase;
     text-align: center;
 }
-
+.compliance-sub a{
+    color: #fff !important;
+}
+.compliance-sub a:hover{
+    color: #ED8B00 !important;
+}
 /*==============  ASSET RIBBON CSS  ==============*/
 
 .ribbon-disabled {
@@ -706,11 +712,12 @@ select#org option:hover {
 	background: #888; 
 	padding-left: 5px !important; 
 	padding-top: 5px !important;
+    border-radius: 3px !important;
 }
 .ribbon-active {
 	color: #fff;
 	border: 1px solid #d76611; 
-	border-radius: 2px; 
+	border-radius: 3px; 
 	background: #E87722; 
 	padding-left: 5px !important; 
 	padding-top: 5px !important;
