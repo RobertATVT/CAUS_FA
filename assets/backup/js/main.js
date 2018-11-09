@@ -265,11 +265,12 @@ function openModal(element, data) {
     jQuery('#' + element).modal();
     jQuery('#' + element).modal('open');
 }
+
 function asset_toggle(id) {
-    if (document.getElementById('asset-more-'+id).style.display) {
-        document.getElementById('asset-more-'+id).style.display="";
+    if (document.getElementById('asset-more-'+id+'').style.display) {
+        document.getElementById('asset-more-'+id+'').style.display="";
     } else {
-        document.getElementById('asset-more-'+id).style.display="inline";
+        document.getElementById('asset-more-'+id+'').style.display="inline";
     }
     
 }
