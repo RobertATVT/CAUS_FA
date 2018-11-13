@@ -1058,7 +1058,7 @@ a.btn-menu {
 	width: 15px !important;
 }
 [type="checkbox"].filled-in:checked + label:before {
-	top: -1px !important;
+	top: 1px !important;
 	left: 0px !important;
 	width: 7px !important;
 	height: 11px !important;
