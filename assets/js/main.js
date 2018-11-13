@@ -189,6 +189,7 @@ function causfa_run_full_org() {
     });
 }
 function asset_toggle(id) {
+    id = id.split('-')[1];
     if (document.getElementById('asset-more-'+id+'').style.display) {
         document.getElementById('asset-more-'+id+'').style.display="";
     } else {
