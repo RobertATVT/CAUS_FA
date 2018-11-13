@@ -699,11 +699,16 @@ select#org option:hover {
     text-transform: uppercase;
     text-align: center;
 }
+.compliance-sub.linked {
+    background: rgba(255,255,255,0.6) !important;
+    border-radius: 3px !important;
+/*    border: 1px solid rgba(255,255,255,0.4) !important;*/
+}
 .compliance-sub a{
-    color: #fff !important;
+    color: #000 !important;
 }
 .compliance-sub a:hover{
-    color: #ED8B00 !important;
+    color: #F7EA48 !important;
 }
 /*==============  ASSET RIBBON CSS  ==============*/
 
