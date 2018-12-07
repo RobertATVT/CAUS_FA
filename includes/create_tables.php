@@ -29,6 +29,7 @@ function create_tables() {
         FZVFORG_SERIAL_NUM varchar(40) NOT NULL,
         FZVFORG_DESCRIPTION varchar(60) NOT NULL,
         FZVFORG_CUSTODIAN varchar(4000) NOT NULL,
+        FZVFORG_PO varchar(10) NOT NULL,
         FZVFORG_ACQ_DATE varchar(20) NOT NULL,
         FZVFORG_AMOUNT decimal(13,2) NOT NULL,
         FZVFORG_OWNERSHIP varchar(35) NOT NULL,
@@ -199,6 +200,21 @@ function create_tables() {
         TOTAL_BANNER INT NOT NULL,
         TOTAL_LOCAL INT NOT NULL,
         EXCEPTIONS longtext NULL,
+        PRIMARY KEY (ID)
+        )".$charset_collate.";";
+        dbDelta($sql);
+    }
+    $table_name = 'causfa_change_reports';
+    if($wpdb->get_var("SHOW TABLES LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        ID INT NOT NULL AUTO_INCREMENT,
+        DATE TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        EXT_OUT longtext NULL,
+        EXT_IN longtext NULL,
+        INTERNAL longtext NULL,
+        CUSTODIAN longtext NULL,
+        LOCATION longtext NULL,
+        OWNERSHIP longtext NULL, 
         PRIMARY KEY (ID)
         )".$charset_collate.";";
         dbDelta($sql);

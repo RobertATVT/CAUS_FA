@@ -177,7 +177,7 @@ function causfa_filter_asset_info( $content, $asset_index) {
                $asset_info_html = str_replace('[STATUS]', 'Pending Ticket', $asset_info_html);
                $asset_info_html = str_replace('asset-status', 'asset-status asset-pending', $asset_info_html);
                $asset_info_html = str_replace( 'value="asset-select-'.$asset_index.'"', 'value="asset-select-'.$asset_index.'" disabled="disabled"', $asset_info_html);
-               $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
+                $asset_info_html = str_replace('transferModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
                $asset_info_html = str_replace('surplusModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
                $asset_info_html = str_replace('ticketModalRequested', 'modalRequestedOnPendingAsset', $asset_info_html);
                break;

@@ -179,7 +179,7 @@ function causfa_email_eula_reject($pid) {
         $footerText = "Email generated on behalf of " . causfa_email_get_name($pid) . " (" . $pid . ") by the College of Architecture and Urban Studies (CAUS) Fixed Assets Application ";
         $body = str_replace('footer', $footerText, $body);
         $body .= print_r($to);
-        mail('mattwj6@vt.edu', $subject, $body, $headers);
+        mail(implode(',', $to), $subject, $body, $headers);
     }
 }
 

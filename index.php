@@ -98,5 +98,5 @@ add_action( 'rest_api_init', function () {
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
-//add_shortcode( 'causfa_test', 'causfa_oracle_full_org'); //shortcode for a dev space to test functionality
+//add_shortcode( 'causfa_test', 'causfa_IT_FILL_Check'); //shortcode for a dev space to test functionality
 add_shortcode( 'causfa_admin', 'causfa_load_admin_view'); // shortcode for the admin page of the app

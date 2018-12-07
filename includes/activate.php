@@ -219,7 +219,15 @@ function causfa_admin_tran() {
 	}
 	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-transfer-footer.html', true));
 
-	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-modal.html', true));    
+	$output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-admin-modal.html', true));
+    
+    $IT = causfa_groups_IT();
+	$IT_options = '';
+	for ($i = 0; $i < count($IT); $i++) {
+	    $IT_item = '<option value="'.$IT[$i]['PID'].'">'.$IT[$i]['Name'].'</option>';
+	    $IT_options = $IT_options.$IT_item;
+    }
+    $output = str_replace('[ITFILL]', $IT_options, $output);
     
     $output = $output.(file_get_contents(plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-transfer-help.html', true));
     

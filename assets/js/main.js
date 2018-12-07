@@ -93,7 +93,7 @@ function addAsset() {
 }
 
 function checkSelected() {
-    var input = $('.tablesorter').find( "input:checkbox:checked" );
+    var input = $('.tablesorter').find('.asset-select').find( "input:checkbox:checked" );
     if (input.length > 1) {
         jQuery("#transfer-ribbon").removeClass("ribbon-disabled");
         jQuery("#transfer-ribbon").addClass("ribbon-active");

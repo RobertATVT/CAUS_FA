@@ -60,6 +60,14 @@ function causfa_oracle_compare($oracle) {
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
     $total_local = count($assets);
     $exceptions_list = array();
+    $change_list = array(
+        'EXT_OUT' => array(),
+        'EXT_IN' => array(),
+        'INTERNAL' => array(),
+        'CUSTODIAN' => array(),
+        'LOCATION' => array(),
+        'OWNERSHIP' => array()
+    );
     foreach ($oracle as $key => $row) {
         $found = false;
         for ($i = 0; $i < count($assets); $i++) {
@@ -93,6 +101,14 @@ function causfa_oracle_compare($oracle) {
                 'OCCURRENCE_CODE' => 0
             );
             array_push($exceptions_list, $entry);
+            $change_entry = array(
+                'FZVFORG_PTAG' => $row['FZVFORG_PTAG'],
+                'FZVFORG_DESCRIPTION' => $row['FZVFORG_DESCRIPTION'],
+                'FZVFORG_ORGN_CODE' => $row['FZVFORG_ORGN_CODE'],
+                'FZVFORG_CUSTODIAN' => $row['FZVFORG_CUSTODIAN'],
+                'FZVFORG_AMOUNT'=> $row['FZVFORG_AMOUNT']
+            );
+            array_push($change_list['EXT_IN'], $change_entry);
             array_splice($oracle, $key, 1);
         }
         $count++;
@@ -109,6 +125,14 @@ function causfa_oracle_compare($oracle) {
                 'OCCURRENCE_CODE' => 1
             );
             array_push($exceptions_list, $entry);
+            $change_entry = array(
+                'FZVFORG_PTAG' => $row['FZVFORG_PTAG'],
+                'FZVFORG_DESCRIPTION' => $row['FZVFORG_DESCRIPTION'],
+                'FZVFORG_ORGN_CODE' => 'EXTERNAL',
+                'FZVFORG_CUSTODIAN' => $row['FZVFORG_CUSTODIAN'],
+                'FZVFORG_AMOUNT'=> $row['FZVFORG_AMOUNT']
+            );
+            array_push($change_list['EXT_OUT'], $change_entry);
             send_message($row->FZVFORG_PTAG, $row->FZVFPRG_PTAG." was found in the local database but not in banner", $percent);
         } else {
             if ($result->PENDING_STATUS != 5) {

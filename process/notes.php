@@ -12,7 +12,7 @@ function causfa_add_note() {
     $date = current_time('mysql');
     $action = $_POST['act'];
     $ptag = $_POST['ptag'];
-    $note = $_POST['note'];
+    $note = sanitize_text_field($_POST['note']);
     $wpdb->insert(
         'causfa_notes',
         array(
