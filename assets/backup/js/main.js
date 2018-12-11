@@ -1,78 +1,29 @@
-function surplusAsset() {
-    ptag = jQuery('#surplusModal').find('.asset-tag').html();
+function acceptEULA(status) {
     var form = {
-        action: 'causfa_surplus',
-        type: 1
+        'action': 'causfa_eula',
+        'status': status
     };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if(data['status'] == 1) {
-            var id = jQuery('#surplusModal').find('#surplusIndex').val();
-            var status = jQuery(('#status-' + id))
-            status.addClass('asset-pending');
-            status.html("Pending Surplus");
-            jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery('#surplusModal').modal('close');
-            jQuery('#responseModal').find('#modal-response-title').text('Surplus Request Submitted');
-            jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
-            jQuery('#responseModal').modal();
-            jQuery('#responseModal').modal('open');
-        }
-    });
-}
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data){
+        if (data['status']) {
+            $('#eulaModal').modal('close');
+        } else {
+            location.replace('/');
 
-function transferAsset(PID_dest) {
-    var form = {
-        action: 'causfa_transfer_asset',
-        dest: PID_dest,
-        type: 0
-    };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if(data['status'] == 1) {
-            var id = jQuery('#transferModal').find('#transferIndex').val();
-            var status = jQuery(('#status-' + id))
-            /*status.addClass('asset-pending');*/
-            status.html('<div class="asset-status asset-missing">Missing</div>');
-            jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
-            jQuery('#transferModal').modal('close');
-            jQuery('#responseModal').find('#modal-response-title').text('Transfer Request Submitted');
-            jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
-            jQuery('#responseModal').modal();
-            jQuery('#responseModal').modal('open');
         }
     });
-}
-function generateForm(element, action) {
-    var ptag = jQuery('#formsModal').find('#formsPtag').val();
-    var form_type = '';
-    if (action == 0) {
-        var form_type = 'causfa_generate_form_Home';
-    } else {
-        form_type = 'causfa_generate_form_Office';
-    }
-    var form = {
-        action: form_type,
-        ptag: ptag
-    };
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        if (data['status'] == 1) {
-            window.open(data['url'])
-        }
-    });
+
 }
 function new_custodian_submit() {
-    var building = jQuery('#Building');
+    var building = jQuery('#Building').val();
     var office = jQuery('#Office').val();
     var phone = jQuery('#Phone').val();
     var org = jQuery('#org').val();
-    if (building == null) {
-        alert('Building field cannot be empty');
-    }
     if (office == null) {
         alert('Office field cannot be empty');
     } else if (phone == null) {
         alert('Phone field cannot be empty');
+    } else if (building == null) {
+        alert('Building field cannot be empty');
     } else {
         var form = {
             'action': 'causfa_new_custodian',
@@ -96,107 +47,13 @@ function submitSVar(obj) {
         name: obj['Name'],
         input: obj['Input']
     };
-    jQUery.post(causfa_action_obj.ajax_url, form, function(data) {
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data != 1) {
             alert('Something went wrong');
         }
     });
 }
-function uploadImage() {
-    var fileInput = jQuery('#imageFileToUpload');
-    var file = fileInput.prop('files')[0];
-    var desc = jQuery('#imageDescription').val();
-    if (!file) {
-        alert('Please select a file to upload');
-    } else if (!desc) {
-        alert('Please enter a image description');
-    } else {
-        var ptag = jQuery('#galleryPtag').val();
-        var form = new FormData();
-        form.append('action', 'causfa_upload_image');
-        form.append('ptag', ptag);
-        form.append('imageFileToUpload', file);
-        form.append('desc', desc);
-        jQuery.ajax({
-            url: causfa_action_obj.ajax_url,
-            type: 'post',
-            contentType: false,
-            processData: false,
-            data: form,
-            success: function (data) {
-                if (data['status'] == 0) {
-                    alert(data['message']);
-                } else {
-                    alert(data['message']);
-                    $('#imageDescription').val('');
-                    $('#imageFileToUpload').val('');
-                    //var index = $('#slider-nav').slick('slickCurrentSlide');
-                    //index++;
-                    //$('#slider-nav').slick('slickGoTo', index);
-                    addImages(data['src'], data['desc'], data['date']);
-                }
-            }
-        });
-    }
-}
-function uploadFormHome(){
-    var fileInput = jQuery('#homeFormToUpload');
-    var file = fileInput.prop('files')[0];
-    if (!file) {
-        alert('Please select a file to upload');
-    } else {
-        var ptag = jQuery('#formsPtag').val();
-        var form = new FormData();
-        form.append('action', 'causfa_upload_form_home');
-        form.append('ptag', ptag);
-        form.append('homeFormToUpload', file);
-        jQuery.ajax({
-            url: causfa_action_obj.ajax_url,
-            type: 'post',
-            contentType: false,
-            processData: false,
-            data: form,
-            success: function (data) {
-                if (data['status'] == 0) {
-                    alert(data['message']);
-                } else {
-                    alert(data['message']);
-                    $('#homeFormToUpload').val('');
-                    getLastForm(ptag);
-                }
-            }
-        });
-    }
-}
-function uploadFormOffice(){
-    var fileInput = jQuery('#officeFormToUpload');
-    var file = fileInput.prop('files')[0];
-    if (!file) {
-        alert('Please select a file to upload');
-    } else {
-        var ptag = jQuery('#formsPtag').val();
-        var form = new FormData();
-        form.append('action', 'causfa_upload_form_office');
-        form.append('ptag', ptag);
-        form.append('officeFormToUpload', file);
-        jQuery.ajax({
-            url: causfa_action_obj.ajax_url,
-            type: 'post',
-            contentType: false,
-            processData: false,
-            data: form,
-            success: function (data) {
-                if (data['status'] == 0) {
-                    alert(data['message']);
-                } else {
-                    alert(data['message']);
-                    $('#officeFormToUpload').val('');
-                    getLastForm(ptag);
-                }
-            }
-        });
-    }
-}
+
 function addAsset() {
     var ptag = $('#addAssetPTAG').val();
     var serial = $('#addAssetSerial').val();
@@ -211,7 +68,7 @@ function addAsset() {
         type: 0
     };
     if (ptag == null) {
-        alert('Please enter the PTag for the asset');
+        alert('Please enter the Ptag for the asset');
     } else if (serial == null) {
         alert('Please enter the Serial number for the asset');
     } else if (desc == null) {
@@ -224,35 +81,9 @@ function addAsset() {
                 jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
                 jQuery('#responseModal').modal();
                 jQuery('#responseModal').modal('open');
-            }
-        });
-    }
-}
-function addTicket() {
-    var ptag = $('#ticketPtag').text();
-    var serial = $('#ticketSerial').text();
-    var desc = $('#ticketDescription').text();
-    var notes = $('#ticketSelect').val();
-    var status = 1;
-    if (notes == 'other') {
-        notes = jQuery('#addTicketNotes').val();
-        if (notes.length == 0) {
-            status = 0;
-        }
-    }
-    if (status != 0) {
-        var form = {
-            action: 'causfa_add_ticket',
-            ptag: ptag,
-            serial: serial,
-            desc: desc,
-            note: notes,
-            type: 1
-        };
-        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-            if (data['status'] == 1) {
-                jQuery('#ticketModal').modal('close');
-                jQuery('#responseModal').find('#modal-response-title').text('Add Asset Request Submitted');
+            } else {
+                jQuery('#addAssetsModal').modal('close');
+                jQuery('#responseModal').find('#modal-response-title').text('Add Asset Request Rejected');
                 jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
                 jQuery('#responseModal').modal();
                 jQuery('#responseModal').modal('open');
@@ -260,13 +91,105 @@ function addTicket() {
         });
     }
 }
-function openModal(element, data) {
-   /* alert("attempting to open a modal");*/
-    jQuery('#' + element).modal();
-    jQuery('#' + element).modal('open');
+
+function checkSelected() {
+    var input = $('.tablesorter').find( "input:checkbox:checked" );
+    if (input.length > 1) {
+        jQuery("#transfer-ribbon").removeClass("ribbon-disabled");
+        jQuery("#transfer-ribbon").addClass("ribbon-active");
+        jQuery("#transfer-ribbon-button").attr('onClick', 'bulkTransferModalRequested()');
+        jQuery("#surplus-ribbon").removeClass("ribbon-disabled");
+        jQuery("#surplus-ribbon").addClass("ribbon-active");
+        jQuery("#surplus-ribbon-button").attr('onClick', 'bulkSurplusModalRequested()');
+        jQuery("#gallery-ribbon").removeClass("ribbon-active");
+        jQuery("#gallery-ribbon").addClass("ribbon-disabled");
+        jQuery("#gallery-ribbon-button").attr('onClick', '');
+        jQuery("#forms-ribbon").removeClass("ribbon-active");
+        jQuery("#forms-ribbon").addClass("ribbon-disabled");
+        jQuery("#forms-ribbon-button").attr('onClick', '');
+        jQuery("#report-ribbon").removeClass("ribbon-active");
+        jQuery("#report-ribbon").addClass("ribbon-disabled");
+        jQuery("#problem-ribbon-button").attr('onClick', '');
+    } else if (input.length > 0) {
+        jQuery("#transfer-ribbon").removeClass("ribbon-disabled");
+        jQuery("#transfer-ribbon").addClass("ribbon-active");
+        jQuery("#transfer-ribbon-button").attr('onClick', 'bulkTransferModalRequested()');
+        jQuery("#surplus-ribbon").removeClass("ribbon-disabled");
+        jQuery("#surplus-ribbon").addClass("ribbon-active");
+        jQuery("#surplus-ribbon-button").attr('onClick', 'bulkSurplusModalRequested()');
+        jQuery("#gallery-ribbon").removeClass("ribbon-disabled");
+        jQuery("#gallery-ribbon").addClass("ribbon-active");
+        jQuery("#gallery-ribbon-button").attr('onClick', 'bulkGalleryModalRequested()');
+        jQuery("#forms-ribbon").removeClass("ribbon-disabled");
+        jQuery("#forms-ribbon").addClass("ribbon-active");
+        jQuery("#forms-ribbon-button").attr('onClick', 'bulkFormsModalRequested()');
+        jQuery("#report-ribbon").removeClass("ribbon-disabled");
+        jQuery("#report-ribbon").addClass("ribbon-active");
+        jQuery("#problem-ribbon-button").attr('onClick', 'bulkTicketModalRequested()');
+    } else {
+        jQuery("#transfer-ribbon").removeClass("ribbon-active");
+        jQuery("#transfer-ribbon").addClass("ribbon-disabled");
+        jQuery("#transfer-ribbon-button").attr('onClick', '');
+        jQuery("#surplus-ribbon").removeClass("ribbon-active");
+        jQuery("#surplus-ribbon").addClass("ribbon-disabled");
+        jQuery("#surplus-ribbon-button").attr('onClick', '');
+        jQuery("#gallery-ribbon").removeClass("ribbon-active");
+        jQuery("#gallery-ribbon").addClass("ribbon-disabled");
+        jQuery("#gallery-ribbon-button").attr('onClick', '');
+        jQuery("#forms-ribbon").removeClass("ribbon-active");
+        jQuery("#forms-ribbon").addClass("ribbon-disabled");
+        jQuery("#forms-ribbon-button").attr('onClick', '');
+        jQuery("#report-ribbon").removeClass("ribbon-active");
+        jQuery("#report-ribbon").addClass("ribbon-disabled");
+        jQuery("#problem-ribbon-button").attr('onClick', '');
+    }
+    for (var i = 0; i < input.length; i++) {
+        var id = input[i].id;
+        id = id.split('-')[2];
+        var status = jQuery('#status-' + id);
+        if (status.children().html() === 'Missing' || status.children().html() === 'Missing Reconciled') {
+            jQuery("#transfer-ribbon").removeClass("ribbon-active");
+            jQuery("#transfer-ribbon").addClass("ribbon-disabled");
+            jQuery("#transfer-ribbon-button").attr('onClick', '');
+            jQuery("#surplus-ribbon").removeClass("ribbon-active");
+            jQuery("#surplus-ribbon").addClass("ribbon-disabled");
+            jQuery("#surplus-ribbon-button").attr('onClick', '');
+            jQuery("#forms-ribbon").removeClass("ribbon-active");
+            jQuery("#forms-ribbon").addClass("ribbon-disabled");
+            jQuery("#forms-ribbon-button").attr('onClick', '');
+        }
+    }
 }
 
+function causfa_run_full_org() {
+    es = new EventSource('https://inside.caus.vt.edu/wp-json/causfa/v1/oracle');
+    es.addEventListener('message', function(e) {
+        var result = JSON.parse( e.data );
+        if (result.message === 'CLOSE') {
+            es.close();
+            var pBar = document.getElementById('FA_LoadProgress');
+            pBar.style.width = '100%';
+        } else if (result.message === 'START') {
+            jQuery('#fa-progress').modal();
+            jQuery('#fa-progress').modal('open');
+            var msg = document.getElementById('FA_LoadMessage');
+            msg.innerHTML = result.message;
+        } else {
+            var pBar = document.getElementById('FA_LoadProgress');
+            pBar.style.width = result.progress + '%';
+            var perc = document.getElementById('FA_LoadPercent');
+            perc.innerHTML   = result.progress;
+            var msg = document.getElementById('FA_LoadMessage');
+            msg.innerHTML = result.message;
+        }
+    });
+    es.addEventListener('error', function(e) {
+        alert('Error occurred');
+        es.close();
+    });
+}
 function asset_toggle(id) {
+    id = id.split('-')[1];
     if (document.getElementById('asset-more-'+id+'').style.display) {
         document.getElementById('asset-more-'+id+'').style.display="";
     } else {
@@ -274,3 +197,4 @@ function asset_toggle(id) {
     }
     
 }
+

@@ -905,7 +905,7 @@ a.btn-menu {
     line-height: 35px;
     color: #fff;
     padding: 10px;
-    margin-bottom: 0px;
+    margin: 0px !important;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
