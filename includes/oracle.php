@@ -263,7 +263,7 @@ function causfa_oracle_compare_location($oracle, $asset) {
                 'FZVFORG_BLDG' => $oracle['FZVFORG_BLDG'],
                 'FZVFORG_SORT_ROOM' => $oracle['FZVFORG_SORT_ROOM']
             ),
-            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
+            array('FZVFORG_PTAG' => $oracle['FZVFORG_PTAG']));
       if ($result == null) {
           return array (
               'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
@@ -315,7 +315,7 @@ function causfa_oracle_compare_org($oracle, $asset) {
                 'FZVFORG_ORGN_CODE' => $oracle['FZVFORG_ORGN_CODE'],
                 'FZVFORG_ORGN_TITLE' => $oracle['FZVFORG_ORGN_TITLE']
             ),
-            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
+            array('FZVFORG_PTAG' => $oracle['FZVFORG_PTAG']));
         if($result == null) {
             return array (
                 'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
@@ -365,7 +365,7 @@ function causfa_oracle_compare_ownership($oracle, $asset) {
                 'FZVFORG_OWNER' => $oracle['FZVFORG_OWNER'],
                 'FZVFORG_OWNERSHIP' => $oracle['FZVFORG_OWNERSHIP']
             ),
-            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
+            array('FZVFORG_PTAG' => $oracle['FZVFORG_PTAG']));
     } else {
         return null;   
     }
