@@ -130,7 +130,7 @@ function causfa_oracle_compare($oracle) {
                     'FZVFORG_BLDG' => $row['FZVFORG_BLDG'],
                     'FZVFORG_SORT_ROOM' => $row['FZVFORG_SORT_ROOM'],
                     'FZVFORG_PTAG' => $row['FZVFORG_PTAG'],
-                    'FZVFORG_MANUFACTURER' => $row['FZVFORG_MANUGACTURER'],
+                    'FZVFORG_MANUFACTURER' => $row['FZVFORG_MANUFACTURER'],
                     'FZVFORG_MODEL' => $row['FZVFORG_MODEL'],
                     'FZVFORG_SERIAL_NUM' => $row['FZVFORG_SERIAL_NUM'], 
                     'FZVFORG_DESCRIPTION' => $row['FZVFORG_DESCRIPTION'],
@@ -162,14 +162,14 @@ function causfa_oracle_compare($oracle) {
             );
             array_push($exceptions_list, $entry);
             $change_entry = array(
-                'FZVFORG_PTAG' => $row['FZVFORG_PTAG'],
-                'FZVFORG_DESCRIPTION' => $row['FZVFORG_DESCRIPTION'],
+                'FZVFORG_PTAG' => $row->'FZVFORG_PTAG',
+                'FZVFORG_DESCRIPTION' => $row->'FZVFORG_DESCRIPTION',
                 'FZVFORG_ORGN_CODE' => 'EXTERNAL',
-                'FZVFORG_CUSTODIAN' => $row['FZVFORG_CUSTODIAN'],
-                'FZVFORG_AMOUNT'=> $row['FZVFORG_AMOUNT']
+                'FZVFORG_CUSTODIAN' => $row->'FZVFORG_CUSTODIAN',
+                'FZVFORG_AMOUNT'=> $row->'FZVFORG_AMOUNT'
             );
             array_push($change_list['EXT_OUT'], $change_entry);
-            $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row['FZVFORG_PTAG']));
+            $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row->'FZVFORG_PTAG'));
             send_message($row->FZVFORG_PTAG, $row->FZVFPRG_PTAG." was found in the local database but not in banner", $percent);
         } else {
             if ($result->PENDING_STATUS != 5) {
