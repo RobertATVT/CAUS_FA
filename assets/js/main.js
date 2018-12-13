@@ -188,6 +188,33 @@ function causfa_run_full_org() {
         es.close();
     });
 }
+function causfa_run_full_org_dev() {
+    es = new EventSource('https://dev1.caus.vt.edu/wp-json/causfa/v1/oracle');
+    es.addEventListener('message', function(e) {
+        var result = JSON.parse( e.data );
+        if (result.message === 'CLOSE') {
+            es.close();
+            var pBar = document.getElementById('FA_LoadProgress');
+            pBar.style.width = '100%';
+        } else if (result.message === 'START') {
+            jQuery('#fa-progress').modal();
+            jQuery('#fa-progress').modal('open');
+            var msg = document.getElementById('FA_LoadMessage');
+            msg.innerHTML = result.message;
+        } else {
+            var pBar = document.getElementById('FA_LoadProgress');
+            pBar.style.width = result.progress + '%';
+            var perc = document.getElementById('FA_LoadPercent');
+            perc.innerHTML   = result.progress;
+            var msg = document.getElementById('FA_LoadMessage');
+            msg.innerHTML = result.message;
+        }
+    });
+    es.addEventListener('error', function(e) {
+        alert('Error occurred');
+        es.close();
+    });
+}
 function asset_toggle(id) {
     id = id.split('-')[1];
     if (document.getElementById('asset-more-'+id+'').style.display) {

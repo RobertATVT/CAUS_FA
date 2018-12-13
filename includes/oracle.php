@@ -235,6 +235,13 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
                 }
             }
         }
+        $change_entry = array(
+                'FZVFORG_PTAG' => $row['FZVFORG_PTAG'],
+                'FZVFORG_DESCRIPTION' => $row['FZVFORG_DESCRIPTION'],
+                'FZVFORG_ORGN_CODE' => 'EXTERNAL',
+                'FZVFORG_CUSTODIAN' => $row['FZVFORG_CUSTODIAN'],
+                'FZVFORG_AMOUNT'=> $row['FZVFORG_AMOUNT']
+            );
         $wpdb->update(
             'causfa_banner',
             array('FZVFORG_CUSTODIAN' => $oracle['FZVFORG_CUSTODIAN']),
