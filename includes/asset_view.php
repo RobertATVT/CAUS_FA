@@ -50,9 +50,9 @@ function causfa_load_employee_view() {
                     array(
                         'ORG'=>$current_user->user_nicename,
                         'EXP_DATE'=>'',
-                        'CREATOR'=>'Compliance',
+                        'CREATOR'=>'compliance',
                         'PRIORITY'=>3,
-                        'BODY'=>'You are out of Compliance, to be eligible to purchase new equipment please <a href="https://inside.caus.vt.edu/fixed-assets/compliance-help/" class="get-help">CLICK HERE</a>',
+                        'BODY'=>'You are out of Compliance, to be eligible to purchase new equipment please <a href="https://inside.caus.vt.edu/fixed-assets/compliance-help/">GO HERE</a>',
                     )
                 );    
             }

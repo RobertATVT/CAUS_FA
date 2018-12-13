@@ -389,15 +389,6 @@ select#org option:hover {
 	background:  #CC0E00;
 	color: #fff;
 }
-.alert-compliance {
-    
-}
-.get-help {
-    color: #F7EA48 !important; 
-}
-.get-help:hover {
-    color: #FFF !important; 
-}
 #add-asset {
     padding: 5px; 
     background: #642667;
