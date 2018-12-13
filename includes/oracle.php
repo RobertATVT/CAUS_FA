@@ -150,7 +150,7 @@ function causfa_oracle_compare($oracle) {
         $count++;
         $percent = intval(($count / $total) * 100) . "%";
         $found_text = ($found ? 'found in local database': 'not found in local database');
-        send_message($row['FZVFORG_PTAG'], $count. ' of '.$total. ". ".$row['FZVFPRG_PTAG']." was ".$found_text, $percent);
+        send_message($row['FZVFORG_PTAG'], $count. ' of '.$total. ". ".$row['FZVFORG_PTAG']." was ".$found_text, $percent);
     }
     for($i = 0; $i < count($assets); $i++) {
         $row = $assets[$i];
@@ -374,7 +374,7 @@ function causfa_calculate_status($asset) {
     $sec = strtotime($inv_date);
     $date = date("m/d/Y", $sec);
     $sec = strtotime($asset['FZVFORG_LAST_INVENTORY_DATE']);
-    $last_inv_date("m/d/Y", $sec);
+    $last_inv_date= date("m/d/Y", $sec);
     if ($inv_date > $last_inv_date) {
         return 1;
     } else {
