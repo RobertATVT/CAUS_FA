@@ -170,7 +170,7 @@ function causfa_oracle_compare($oracle) {
             );
             array_push($change_list['EXT_OUT'], $change_entry);
             $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row->FZVFORG_PTAG));
-            send_message($row->FZVFORG_PTAG, $row->FZVFPRG_PTAG." was found in the local database but not in banner", $percent);
+            send_message($row->FZVFORG_PTAG, $row->FZVFORG_PTAG." was found in the local database but not in banner", $percent);
         } else {
             if ($result->PENDING_STATUS != 5) {
                 $entry = array(
@@ -179,7 +179,7 @@ function causfa_oracle_compare($oracle) {
                     'CHANGE_CODE' => 3
                 );
                 array_push($exceptions_list, $entry);
-                send_message($row->FZVFORG_PTAG, $row->FZVFPRG_PTAG." was removed from the College's org but the surplus action was not complete", $percent);
+                send_message($row->FZVFORG_PTAG, $row->FZVFORG_PTAG." was removed from the College's org but the surplus action was not complete", $percent);
             }
         }
         array_splice($$assets, $key, 1);
