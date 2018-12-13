@@ -200,11 +200,11 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
     if ($oracle['FZVFORG_CUSTODIAN'] != $asset->FZVFORG_CUSTODIAN) {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$oracle['FZVFORG_PTAG']."';");
         $change_entry = array(
-                'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
-                'FZVFORG_DESCRIPTION' => $result->FZVFORG_DESCRIPTION,
+                'FZVFORG_PTAG' => $oracle['FZVFORG_PTAG'],
+                'FZVFORG_DESCRIPTION' => $oracle['FZVFORG_DESCRIPTION'],
                 'FZVFORG_ORGN_CODE' => 'Custodian',
-                'FZVFORG_CUSTODIAN' => $$result->FZVFORG_CUSTODIAN,
-                'FZVFORG_AMOUNT'=> $result->FZVFORG_AMOUNT
+                'FZVFORG_CUSTODIAN' => $oracle['FZVFORG_CUSTODIAN'],
+                'FZVFORG_AMOUNT'=> $oracle['FZVFORG_AMOUNT']
             );
         $wpdb->update(
             'causfa_banner',
