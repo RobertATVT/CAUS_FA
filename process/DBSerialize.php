@@ -147,9 +147,9 @@ function causfa_DB_Serialize_Form_Office($file, $ptag) {
             $file_input = array($file);
             $date_input = array($date);
         } else {
-            $file_input = unserialize($result->OU_URL);
+            $file_input = maybe_unserialize($result->OU_URL);
             array_push($file_input, $file);
-            $date_input = unserialize($result->OU_DATE);
+            $date_input = maybe_unserialize($result->OU_DATE);
             array_push($date_input, $date);
         }
         $file_input_s = maybe_serialize($file_input);
