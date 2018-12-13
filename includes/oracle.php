@@ -182,7 +182,7 @@ function causfa_oracle_compare($oracle) {
                 send_message($row->FZVFORG_PTAG, $row->FZVFORG_PTAG." was removed from the College's org but the surplus action was not complete", $percent);
             }
         }
-        array_splice($$assets, $key, 1);
+        array_splice($assets, $key, 1);
     }
     send_message(0,'CLOSE', 'Process complete');
     $wpdb->insert(
