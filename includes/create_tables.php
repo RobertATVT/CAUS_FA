@@ -229,4 +229,13 @@ function create_tables() {
         )".$charset_collate.";";
         dbDelta($sql);
     }
+    $table_name = 'causfa_info';
+    if($wpdb->get_var("SHOW TABLE LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        NAME varchar(100) NOT NULL,
+        VALUE varchar(100) NOT NULL,
+        PRIMARY KEY (NAME)
+        )".$charset_collate.";"
+        dbDelta($sql);
+    }
 }
