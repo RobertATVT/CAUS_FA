@@ -209,7 +209,7 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
         $wpdb->update(
             'causfa_banner',
             array('FZVFORG_CUSTODIAN' => $oracle['FZVFORG_CUSTODIAN']),
-            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
+            array('FZVFORG_PTAG' => $oracle['FZVFORG_PTAG']));
         if($result == null) {
             return array (
                 'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
