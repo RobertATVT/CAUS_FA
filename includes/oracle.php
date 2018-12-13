@@ -169,7 +169,7 @@ function causfa_oracle_compare($oracle) {
                 'FZVFORG_AMOUNT'=> $row['FZVFORG_AMOUNT']
             );
             array_push($change_list['EXT_OUT'], $change_entry);
-            $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' = $row['FZVFORG_PTAG']));
+            $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row['FZVFORG_PTAG']));
             send_message($row->FZVFORG_PTAG, $row->FZVFPRG_PTAG." was found in the local database but not in banner", $percent);
         } else {
             if ($result->PENDING_STATUS != 5) {
@@ -340,7 +340,7 @@ function causfa_oracle_compare_org($oracle, $asset) {
         $wpdb->update(
             'causfa_banner',
             array(
-                'FZVFORG_ORGN_CODE' => $oracle['FZVFORG_ORGN_CODE']
+                'FZVFORG_ORGN_CODE' => $oracle['FZVFORG_ORGN_CODE'],
                 'FZVFORG_ORGN_TITLE' => $oracle['FZVFORG_ORGN_TITLE']
             ),
             array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
@@ -353,7 +353,7 @@ function causfa_oracle_compare_ownership($oracle, $asset) {
         $wpdb->update(
             'causfa_banner',
             array(
-                'FZVFORG_OWNER' => $oracle['FZVFORG_OWNER']
+                'FZVFORG_OWNER' => $oracle['FZVFORG_OWNER'],
                 'FZVFORG_OWNERSHIP' => $oracle['FZVFORG_OWNERSHIP']
             ),
             array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));

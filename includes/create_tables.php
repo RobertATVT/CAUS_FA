@@ -235,7 +235,7 @@ function create_tables() {
         NAME varchar(100) NOT NULL,
         VALUE varchar(100) NOT NULL,
         PRIMARY KEY (NAME)
-        )".$charset_collate.";"
+        )".$charset_collate.";";
         dbDelta($sql);
     }
 }
