@@ -199,6 +199,17 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
     global $wpdb;
     if ($oracle['FZVFORG_CUSTODIAN'] != $asset->FZVFORG_CUSTODIAN) {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$oracle['FZVFORG_PTAG']."';");
+        $change_entry = array(
+                'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                'FZVFORG_DESCRIPTION' => $result->FZVFORG_DESCRIPTION,
+                'FZVFORG_ORGN_CODE' => 'Custodian',
+                'FZVFORG_CUSTODIAN' => $$result->FZVFORG_CUSTODIAN,
+                'FZVFORG_AMOUNT'=> $result->FZVFORG_AMOUNT
+            );
+        $wpdb->update(
+            'causfa_banner',
+            array('FZVFORG_CUSTODIAN' => $oracle['FZVFORG_CUSTODIAN']),
+            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
         if($result == null) {
             return array (
                 'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
@@ -236,17 +247,7 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
                 }
             }
         }
-        $change_entry = array(
-                'FZVFORG_PTAG' => $row['FZVFORG_PTAG'],
-                'FZVFORG_DESCRIPTION' => $row['FZVFORG_DESCRIPTION'],
-                'FZVFORG_ORGN_CODE' => 'EXTERNAL',
-                'FZVFORG_CUSTODIAN' => $row['FZVFORG_CUSTODIAN'],
-                'FZVFORG_AMOUNT'=> $row['FZVFORG_AMOUNT']
-            );
-        $wpdb->update(
-            'causfa_banner',
-            array('FZVFORG_CUSTODIAN' => $oracle['FZVFORG_CUSTODIAN']),
-            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
+        
     } else {
         return null;
     }
@@ -255,6 +256,14 @@ function causfa_oracle_compare_location($oracle, $asset) {
     global $wpdb;
     if ($oracle['FZVFORG_SORT_ROOM'] != $asset->FZVFORG_SORT_ROOM) {
       $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG ='".$oracle['FZVFORG_PTAG']."';");
+        $wpdb->update(
+            'causfa_banner',
+            array(
+                'FZVFORG_ROOM' => $oracle['FZVFORG_ROOM'],
+                'FZVFORG_BLDG' => $oracle['FZVFORG_BLDG'],
+                'FZVFORG_SORT_ROOM' => $oracle['FZVFORG_SORT_ROOM']
+            ),
+            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
       if ($result == null) {
           return array (
               'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
@@ -292,14 +301,6 @@ function causfa_oracle_compare_location($oracle, $asset) {
               }
           }
       }
-        $wpdb->update(
-            'causfa_banner',
-            array(
-                'FZVFORG_ROOM' => $oracle['FZVFORG_ROOM'],
-                'FZVFORG_BLDG' => $oracle['FZVFORG_BLDG'],
-                'FZVFORG_SORT_ROOM' => $oracle['FZVFORG_SORT_ROOM']
-            ),
-            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
     } else {
         return null;
     }
@@ -308,6 +309,13 @@ function causfa_oracle_compare_org($oracle, $asset) {
     global $wpdb;
     if ($oracle['FZVFORG_ORGN_CODE'] != $asset->FZVFORG_ORGN_CODE) {
         $result = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$oracle['FZVFORG_PTAG']."';");
+        $wpdb->update(
+            'causfa_banner',
+            array(
+                'FZVFORG_ORGN_CODE' => $oracle['FZVFORG_ORGN_CODE'],
+                'FZVFORG_ORGN_TITLE' => $oracle['FZVFORG_ORGN_TITLE']
+            ),
+            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
         if($result == null) {
             return array (
                 'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
@@ -345,13 +353,6 @@ function causfa_oracle_compare_org($oracle, $asset) {
                 }
             }
         }
-        $wpdb->update(
-            'causfa_banner',
-            array(
-                'FZVFORG_ORGN_CODE' => $oracle['FZVFORG_ORGN_CODE'],
-                'FZVFORG_ORGN_TITLE' => $oracle['FZVFORG_ORGN_TITLE']
-            ),
-            array('FZVFORG_PTAG' => $result->FZVFORG_PTAG));
     } else {
         return null;
     }
