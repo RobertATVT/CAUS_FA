@@ -162,14 +162,14 @@ function causfa_oracle_compare($oracle) {
             );
             array_push($exceptions_list, $entry);
             $change_entry = array(
-                'FZVFORG_PTAG' => $row->'FZVFORG_PTAG',
-                'FZVFORG_DESCRIPTION' => $row->'FZVFORG_DESCRIPTION',
+                'FZVFORG_PTAG' => $row->FZVFORG_PTAG,
+                'FZVFORG_DESCRIPTION' => $row->FZVFORG_DESCRIPTION,
                 'FZVFORG_ORGN_CODE' => 'EXTERNAL',
-                'FZVFORG_CUSTODIAN' => $row->'FZVFORG_CUSTODIAN',
-                'FZVFORG_AMOUNT'=> $row->'FZVFORG_AMOUNT'
+                'FZVFORG_CUSTODIAN' => $row->FZVFORG_CUSTODIAN,
+                'FZVFORG_AMOUNT'=> $row->FZVFORG_AMOUNT
             );
             array_push($change_list['EXT_OUT'], $change_entry);
-            $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row->'FZVFORG_PTAG'));
+            $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row->FZVFORG_PTAG));
             send_message($row->FZVFORG_PTAG, $row->FZVFPRG_PTAG." was found in the local database but not in banner", $percent);
         } else {
             if ($result->PENDING_STATUS != 5) {
