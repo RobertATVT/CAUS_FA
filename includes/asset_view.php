@@ -52,7 +52,7 @@ function causfa_load_employee_view() {
                         'EXP_DATE'=>'',
                         'CREATOR'=>'compliance',
                         'PRIORITY'=>3,
-                        'BODY'=>'You are out of Compliance, to be eligible to purchase new equipment please <a href="https://inside.caus.vt.edu/fixed-assets/compliance-help/">GO HERE</a>',
+                        'BODY'=>'You are out of Compliance, to be eligible to purchase new equipment please <a href="https://inside.caus.vt.edu/fixed-assets/compliance-help/" class="get-help">GO HERE</a>',
                     )
                 );    
             }
