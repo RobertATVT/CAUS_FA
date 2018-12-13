@@ -161,15 +161,7 @@ function causfa_oracle_compare($oracle) {
                 'OCCURRENCE_CODE' => 1
             );
             array_push($exceptions_list, $entry);
-            $change_entry = array(
-                'FZVFORG_PTAG' => $row->FZVFORG_PTAG,
-                'FZVFORG_DESCRIPTION' => $row->FZVFORG_DESCRIPTION,
-                'FZVFORG_ORGN_CODE' => 'EXTERNAL',
-                'FZVFORG_CUSTODIAN' => $row->FZVFORG_CUSTODIAN,
-                'FZVFORG_AMOUNT'=> $row->FZVFORG_AMOUNT
-            );
-            array_push($change_list['EXT_OUT'], $change_entry);
-            $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row->FZVFORG_PTAG));
+            
             send_message($row->FZVFORG_PTAG, $row->FZVFORG_PTAG." was found in the local database but not in banner", $percent);
         } else {
             if ($result->PENDING_STATUS != 5) {
@@ -182,6 +174,15 @@ function causfa_oracle_compare($oracle) {
                 send_message($row->FZVFORG_PTAG, $row->FZVFORG_PTAG." was removed from the College's org but the surplus action was not complete", $percent);
             }
         }
+        $change_entry = array(
+                'FZVFORG_PTAG' => $row->FZVFORG_PTAG,
+                'FZVFORG_DESCRIPTION' => $row->FZVFORG_DESCRIPTION,
+                'FZVFORG_ORGN_CODE' => 'EXTERNAL',
+                'FZVFORG_CUSTODIAN' => $row->FZVFORG_CUSTODIAN,
+                'FZVFORG_AMOUNT'=> $row->FZVFORG_AMOUNT
+            );
+            array_push($change_list['EXT_OUT'], $change_entry);
+            $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row->FZVFORG_PTAG));
         array_splice($assets, $key, 1);
     }
     send_message(0,'CLOSE', 'Process complete');
