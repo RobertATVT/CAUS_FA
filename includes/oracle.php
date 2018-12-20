@@ -399,7 +399,7 @@ function causfa_calculate_status($asset) {
 function causfa_banner_backup() {
     global $wpdb;
     for ($i = 1; $i < 6; $i++) {
-        $filename = wp_upload_dir()['basedir'].'/causfa/backups/backup_'.$i.'.csv';
+        $filename = wp_upload_dir()['basedir'].'/causfa/backup/backup_'.$i.'.csv';
         if(!file_exists($filename)) {
             break;
         }
@@ -407,7 +407,7 @@ function causfa_banner_backup() {
     $file = fopen($filename, 'w');
     $results = $wpdb->get_results("SELECT * FROM causfa_banner");
     for ($i = 0; $i < count($results); $i++) {
-        $text = $results[$i]['FZVFORG_OWNER'].', ';
+        $text = $results[$i]->FZVFORG_OWNER.', ';
         $text = $text.$results[$i]->FZVFORG_ORGN_CODE.', ';
         $text = $text.$results[$i]->FZVFORG_ORGN_TITLE.', ';
         $text = $text.$results[$i]->FZVFORG_ROOM.', ';
