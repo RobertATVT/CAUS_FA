@@ -29,6 +29,10 @@ function causfa_activate_plugin() {
     if(! is_dir($upload_dir_images)) {
         mkdir($upload_dir_images, 0755);
     }
+    $upload_dir_backup = $upload_dir.'/backup';
+    if(! is_dir($upload_dir_backup)) {
+        mkdir($upload_dir_backup, 0755);
+    }
     $upload_dir_forms = $upload_dir.'/forms';
     if(! is_dir($upload_dir_forms)) {
         mkdir($upload_dir_forms);

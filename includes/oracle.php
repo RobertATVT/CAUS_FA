@@ -57,6 +57,20 @@ function causfa_oracle_compare($oracle) {
     $count = 0;
     $total = count($oracle);
     global $wpdb;
+    for ($i = 1, $i < 6; $i++) {
+        $file = wp_upload_dir()['basedir'].'/causfa/backups/backup_'.$i.'.csv';
+        if(!file_exists($file)) {
+            break;
+        }
+    }
+    $wpdb->query(
+        $wpdb->prepare(
+            'SELECT * INTO OUTFILE "'.$file.'"
+            FIELDS TERMINATED BY "," OPTIONALLY ENCLOSED BY \'"\'
+            LINES TERMINATED BY "\n"
+            FROM causfa_banner;"
+        )
+    );
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
     $total_local = count($assets);
     $exceptions_list = array();
@@ -180,6 +194,7 @@ function causfa_oracle_compare($oracle) {
                 array_push($exceptions_list, $entry);
                 send_message($row->FZVFORG_PTAG, $row->FZVFORG_PTAG." was removed from the College's org but the surplus action was not complete", $percent);
             }
+            $wpdb->delete('causfa-pending', array('FZVFORG_PTAG' => $row->FZVFORG_PTAG));
         }
         $change_entry = array(
                 'FZVFORG_PTAG' => $row->FZVFORG_PTAG,
