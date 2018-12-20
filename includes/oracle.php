@@ -57,21 +57,7 @@ function causfa_oracle_compare($oracle) {
     $count = 0;
     $total = count($oracle);
     global $wpdb;
-    for ($i = 1; $i < 6; $i++) {
-        $file = wp_upload_dir()['basedir'].'/causfa/backups/backup_'.$i.'.csv';
-        if(!file_exists($file)) {
-            break;
-        }
-    }
-    $wpdb->query(
-        $wpdb->prepare(
-            "SELECT * INTO OUTFILE \"%s\"
-            FIELDS TERMINATED BY \",\" OPTIONALLY ENCLOSED BY '\"'
-            LINES TERMINATED BY \"\\n\"
-            FROM causfa_banner;",
-            $file
-        )
-    );
+    causfa_banner_backup)();
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
     $total_local = count($assets);
     $exceptions_list = array();
@@ -408,5 +394,21 @@ function causfa_calculate_status($asset) {
         } else {
             return 4;
         }
+    }
+}
+function causfa_banner_backup() {
+    global $wpdb;
+    for ($i = 1; $i < 6; $i++) {
+        $filename = wp_upload_dir()['basedir'].'/causfa/backups/backup_'.$i.'.csv';
+        if(!file_exists($filename)) {
+            break;
+        }
+    }
+    $file = fopen($filename, 'w');
+    $results = $wpdb->get_results("SELECT * FROM causfa_banner");
+    for ($i = 0; $i < count($results); $i++) {
+        $text = implode(', ', $results[$i]);
+        $text = $text."\n";
+        fwrite($file, $text);
     }
 }
