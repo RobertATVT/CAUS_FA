@@ -57,7 +57,7 @@ function causfa_oracle_compare($oracle) {
     $count = 0;
     $total = count($oracle);
     global $wpdb;
-    causfa_banner_backup)();
+    causfa_banner_backup();
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
     $total_local = count($assets);
     $exceptions_list = array();
