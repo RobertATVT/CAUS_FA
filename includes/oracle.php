@@ -74,30 +74,37 @@ function causfa_oracle_compare($oracle) {
             $found = false;
             if ($assets[$i]->FZVFORG_PTAG == $row['FZVFORG_PTAG']) {
                 $result = causfa_oracle_compare_custodian($row, $assets[$i]);
+                $changed = false;
                 if ($result !== null) {
                     array_push($exceptions_list, $result);
+                    $changed = true;
                 }
                 $result = causfa_oracle_compare_location($row, $assets[$i]);
                 if ($result !== null) {
                     array_push($exceptions_list, $result);
+                    $changed = true;
                 }
                 $result = causfa_oracle_compare_org($row, $assets[$i]);
                 if ($result !== null) {
                     array_push($exceptions_list, $result);
+                    $changed = true;
                 }
                 $result = causfa_oracle_compare_ownership($row, $assets[$i]);
                 if ($result !== null) {
                     array_push($exceptions_list, $result);
+                    $changed = true;
                 }
-                $pending = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$assets[$i]->FZVFORG_PTAG."';");
-                if ($pending != null) {
-                    $wpdb->delete(
-                        'causfa_pending',
-                        array('FZVFORG_PTAG' => $assets[$i]->FZVFORG_PTAG));
-                    $wpdb->update(
-                        'causfa_banner',
-                        array('PENDING_STATUS' => 0),
-                        array('FZVFORG_PTAG' => $assets[$i]->FZVFORG_PTAG));
+                if ($changed) {
+                    $pending = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$assets[$i]->FZVFORG_PTAG."';");
+                    if ($pending != null) {
+                        $wpdb->delete(
+                            'causfa_pending',
+                            array('FZVFORG_PTAG' => $assets[$i]->FZVFORG_PTAG));
+                        $wpdb->update(
+                            'causfa_banner',
+                            array('PENDING_STATUS' => 0),
+                            array('FZVFORG_PTAG' => $assets[$i]->FZVFORG_PTAG));
+                    }   
                 }
                 array_splice($assets, $i, 1);
                 array_splice($oracle, $key, 1);
