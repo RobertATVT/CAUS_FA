@@ -57,7 +57,7 @@ function causfa_oracle_compare($oracle) {
     $count = 0;
     $total = count($oracle);
     global $wpdb;
-    for ($i = 1, $i < 6; $i++) {
+    for ($i = 1; $i < 6; $i++) {
         $file = wp_upload_dir()['basedir'].'/causfa/backups/backup_'.$i.'.csv';
         if(!file_exists($file)) {
             break;
