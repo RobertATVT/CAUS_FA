@@ -65,10 +65,11 @@ function causfa_oracle_compare($oracle) {
     }
     $wpdb->query(
         $wpdb->prepare(
-            'SELECT * INTO OUTFILE "'.$file.'"
-            FIELDS TERMINATED BY "," OPTIONALLY ENCLOSED BY \'"\'
-            LINES TERMINATED BY "\n"
-            FROM causfa_banner;'
+            "SELECT * INTO OUTFILE \"%s\"
+            FIELDS TERMINATED BY \",\" OPTIONALLY ENCLOSED BY '\"'
+            LINES TERMINATED BY \"\\n\"
+            FROM causfa_banner;",
+            $file
         )
     );
     $assets = $wpdb->get_results('SELECT * FROM causfa_banner ORDER BY FZVFORG_PTAG');
