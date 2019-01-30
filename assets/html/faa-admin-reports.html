@@ -1,68 +1,68 @@
 <!-- BEGIN faa-admin-reports.html -->		
     <div class="rw">
 		<div class="cl t20" style="background: #fff;">
-			<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
+			<div class="cl t10 center" id="report-indv-asset" style="padding: 4px;">
 				<div class="rw" style="border-radius: 3px; border: 1px solid #D7D2CB;">
 					<div class="cl t20 center report-block-header">Individual Asset Report</div>
 					<div class="cl t20" style="padding: 10px; background: #efefef;">
 						<form>
 							<div class="cl m10 t20">
-								<input type="text" placeholder="VT Tag Number" class="report-input">
+								<input type="text" placeholder="VT Tag Number" id="report-indv-asset-input" class="report-input">
 							</div>
 							<div class="cl m10 t20">
-								<input type="button" class="btn btn-primary report-button" value="Look Up Asset" onclick="get-report(this.id)" disabled="disabled">
+								<input type="button" class="btn btn-primary report-button" value="Look Up Asset" onclick="admin_reports(0, '#report-indv-asset-input')">
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
-			<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
+			<div class="cl t10 center" id="report-org-asset" style="padding: 4px;">
 				<div class="rw" style="border-radius: 3px; border: 1px solid #D7D2CB;">
 					<div class="cl t20 center report-block-header hide-medium-down">Organizational Asset Report</div>
 					<div class="cl t20 center report-block-header hide-large-up">Org Asset Report</div>
 					<div class="cl t20" style=" padding: 10px; background: #efefef;">
 						<form>
 							<div class="cl m10 t20">
-								<input type="text" placeholder="Organizational Code" class="report-input">
+								<input type="text" placeholder="Organizational Code" class="report-input" id="report-org-input">
 							</div>
 							<div class="cl m10 t20">
-								<input type="button" class="btn btn-primary report-button" value="Look Up Organization Assets" onclick="get-report(this.id)" disabled="disabled">
+								<input type="button" class="btn btn-primary report-button" value="Look Up Organization Assets" onclick="admin_reports(3, '#report-org-input')" disabled="disabled">
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
-			<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
+			<div class="cl t10 center" id="report-indv-employee" style="padding: 4px;">
 				<div class="rw vt-dk-grey" style="border-radius: 3px; border: 1px solid #D7D2CB;">
 					<div class="cl t20 center report-block-header">Individual Employee Report</div>
 					<div class="cl t20" style=" padding: 10px; background: #efefef;">
 						<form>
 							<div class="cl m10 t20">
-								<input type="text" placeholder="Employee PID" class="report-input">
+								<input type="text" placeholder="Employee PID" class="report-input" id="report-indv-employee-input">
 							</div>
 							<div class="cl m10 t20">
-								<input type="button" class="btn btn-primary report-button" value="Look Up Employee" onclick="get-report(this.id)" disabled="disabled">
+								<input type="button" class="btn btn-primary report-button" value="Look Up Employee" onclick="admin_reports(1, '#report-indv-employee-input')">
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
-			<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
+			<div class="cl t10 center" id="report-missing" style="padding: 4px;">
 				<div class="rw vt-dk-grey" style="border-radius: 3px; border: 1px solid #D7D2CB;">
 					<div class="cl t20 center report-block-header">Missing Asset Report</div>
 					<div class="cl t20" style=" padding: 10px; background: #efefef;">
 						<form>
 							<div class="cl m10 t20">
-								<input type="text" placeholder="Organizational Code" class="report-input">
+								<input type="text" placeholder="Organizational Code" class="report-input" id="report-missing-input">
 							</div>
 							<div class="cl m10 t20">
-								<input type="button" class="btn btn-primary report-button" value="Look Up Asset" onclick="get-report(this.id)" disabled="disabled">
+								<input type="button" class="btn btn-primary report-button" value="Look Up Asset" onclick="admin_reports(4, '#report-missing-input')" disabled="disabled">
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
-			<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
+			<div class="cl t10 center" id="report-indv-location" style="padding: 4px;">
 				<div class="rw vt-dk-grey" style="border-radius: 3px; border: 1px solid #D7D2CB;">
 					<div class="cl t20 center report-block-header">Individual Location Report</div>
 					<div class="cl t20" style=" padding: 10px; background: #efefef;">
@@ -77,7 +77,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="cl t10 center" id="report-[ID]" style="padding: 4px;">
+			<div class="cl t10 center" id="report-change" style="padding: 4px;">
 				<div class="rw vt-dk-grey" style="border-radius: 3px; border: 1px solid #D7D2CB;">
 					<div class="cl t20 center report-block-header">Add/Change Report</div>
 					<div class="cl t20" style=" padding: 10px; background: #efefef;">

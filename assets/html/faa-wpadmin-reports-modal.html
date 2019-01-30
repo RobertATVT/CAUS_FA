@@ -1,0 +1,107 @@
+<div id="orgModal" class="modal" style="border: 1px solid #333;border-radius: 4px; background: #fcfcfc;">
+        <div class="modal-content">
+            <h4 class="center faa-modal-title">Single Asset Report</h4> 
+            <!-- BEGIN TEMPLATE faa-employee-asset-header.html -->
+            <div class="rw hide-small-down" id="asset-ribbon" style="margin: 0px; padding: 4px;">
+                <div class="cl t20 asset-border" style="padding: 3px; background-color: #fff;border: 1px solid #85888b !important;">
+                    <div class="cl t3 ribbon-transfer" style="padding: 3px;">
+                        <a href="#" id="transfer-ribbon-button" title="Transfer asset to another faculty or staff" style="color: #333 !important;">
+                            <div id="transfer-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t2">
+                                <!--<button class="asset-action"  >-->
+                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                <!--</button>-->
+                                </div>
+                                <div class="cl t18 center b">TRANSFER ASSET</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t3 ribbon-surplus" style="padding: 3px;">
+                        <a href="#" id="surplus-ribbon-button" title="Initiate process to surplus asset" style="color: #333 !important;">
+                            <div id="surplus-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t2">
+                                    <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                </div>
+                                <div class="cl t18 center b">SURPLUS ASSET</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t3 ribbon-gallery" style="padding: 3px;">
+                        <a href="#" title="View image gallery for asset and submit new images" id="gallery-ribbon-button" style="color: #333 !important;">
+                            <div id="gallery-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t2">
+                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                </div>
+                                <div class="cl t18 center b">IMAGE GALLERY</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t3 ribbon-forms" style="padding: 3px;">
+                        <a href="#" title="View and Download the CAUS Office and Home Use Forms" id="forms-ribbon-button" style="color: #333 !important;">
+                            <div id="forms-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t2">
+                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                </div>
+                                <div class="cl t18 center b">UPLOAD & VIEW FORMS</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t3 ribbon-notes" style="padding: 3px;">
+                        <a href="#" title="Report Problem with Asset" id="problem-ribbon-button" style="color: #333 !important;">
+                            <div id="report-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t2">
+                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                </div>
+                                <div class="cl t18 center b">VIEW/ADD NOTES</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t3 ribbon-status" style="padding: 3px;">
+                        <a href="#" title="View image gallery for asset and submit new images" id="gallery-ribbon-button" style="color: #333 !important;">
+                            <div id="gallery-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t2">
+                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                </div>
+                                <div class="cl t18 center b">CHANGE STATUS</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t2 ribbon-cancel" style="padding: 3px;">
+                        <a href="#" title="View image gallery for asset and submit new images" id="gallery-ribbon-button" style="color: #333 !important;">
+                            <div id="gallery-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t2">
+                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                </div>
+                                <div class="cl t18 center b">CANCEL ACTION</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="rw" id="asset-title" style="margin: 0px; padding: 4px !important">
+                <div class="cl t20 asset-border" style="border: 1px solid #85888b !important;">
+                    <table class="tablesorter" role="grid" id="reports-modal-table">
+                        </table>
+                    <!---<script>
+                        document.addEventListener("DOMContentLoaded", function(event) {
+                            jQuery("table").tablesorter();
+                        });
+                    </script>-->
+                </div>
+                <div class="modal-footer">
+                    <div class="rw">
+                        <div class="center cl t10 hide-medium-up">
+                            <button type="button" class="btn btn-primary" id="transferButton" onclick="transferAsset()">Transfer</button>
+                        </div>
+                        <div class="center cl t10 hide-medium-up">
+                            <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+                        </div>
+                        <div class="cl m20 hide-small-down">
+                            <button type="button" class="btn btn-primary" id="transferButton" onclick="transferAsset()">Transfer</button>
+                            <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

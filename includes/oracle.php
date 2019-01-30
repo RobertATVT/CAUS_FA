@@ -4,7 +4,7 @@
  * User: mattwj6
  * Date: 8/21/18
  * Time: 1:46 PM
- */
+**/
 
 /**
  * Occurrence Codes
@@ -20,8 +20,7 @@
  * 2 - Org
  * 3 - Moved outside of College
  */
-function casufa_oracle_org_report()
-{
+function casufa_oracle_org_report() {
     ini_set('zlib.output_compression', 0);
     ini_set('implicit_flush', 1);
     ini_set('max_execution_time', 0); // to get unlimited php script execution time
@@ -77,22 +76,22 @@ function causfa_oracle_compare($oracle) {
                 $result = causfa_oracle_compare_custodian($row, $assets[$i]);
                 $changed = false;
                 if ($result !== null) {
-                    array_push($exceptions_list, $result);
+                    array_push($exceptions_list, $result['exception']);
                     $changed = true;
                 }
                 $result = causfa_oracle_compare_location($row, $assets[$i]);
                 if ($result !== null) {
-                    array_push($exceptions_list, $result);
+                    array_push($exceptions_list, $result['exception']);
                     $changed = true;
                 }
                 $result = causfa_oracle_compare_org($row, $assets[$i]);
                 if ($result !== null) {
-                    array_push($exceptions_list, $result);
+                    array_push($exceptions_list, $result['exception']);
                     $changed = true;
                 }
                 $result = causfa_oracle_compare_ownership($row, $assets[$i]);
                 if ($result !== null) {
-                    array_push($exceptions_list, $result);
+                    array_push($exceptions_list, $result['exception']);
                     $changed = true;
                 }
                 if ($changed) {
@@ -221,38 +220,86 @@ function causfa_oracle_compare_custodian($oracle, $asset) {
             array('FZVFORG_PTAG' => $oracle['FZVFORG_PTAG']));
         if($result == null) {
             return array (
-                'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
-                'OCCURRENCE_CODE' => 2,
-                'CHANGE_CODE' => 0,
-                'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
-                'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                'exception' => 
+                    array(
+                        'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
+                        'OCCURRENCE_CODE' => 2,
+                        'CHANGE_CODE' => 0,
+                        'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                        'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                    ),
+                'change' =>
+                    array(
+                        'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
+                        'CHANGE_CODE' => 0,
+                        'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                        'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                    )
             );
         } else {
             if ($result->PENDING_TYPE == 0 ) {
                 if ($result->PENDING_STATUS != 7) {
                     return array (
-                        'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
-                        'OCCURRENCE_CODE' => 3,
-                        'CHANGE_CODE' => 0,
-                        'PENDING_TYPE' => 0,
-                        'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
-                        'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                        array (
+                            'exception' => 
+                                array (
+                                'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                                'OCCURRENCE_CODE' => 3,
+                                'CHANGE_CODE' => 0,
+                                'PENDING_TYPE' => 0,
+                                'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                                'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                            ),
+                            'change' => 
+                                array (
+                                'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                                'OCCURRENCE_CODE' => 3,
+                                'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                                'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                            )
+                        )
                     );
                 } else {
-                    return null;
+                    return array(
+                        'exception' => null,
+                        'change' => array(
+                            'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                            'OCCURRENCE_CODE' => 3,
+                            'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                            'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']  
+                        )
+                    );
                 }
             } else {
                 if ($result->PENDING_STATUS != 5) {
                     return array (
-                        'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
-                        'OCCURRENCE_CODE' => 3,
-                        'CHANGE_CODE' => 0,
-                        'PENDING_TYPE' => 1,
-                        'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
-                        'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                        'exception' =>
+                            array(
+                                'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                                'OCCURRENCE_CODE' => 3,
+                                'CHANGE_CODE' => 0,
+                                'PENDING_TYPE' => 1,
+                                'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                                'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                            ),
+                        'change' =>
+                            array(
+                                'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                                'OCCURRENCE_CODE' => 3,
+                                'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                                'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                            )
                     );
                 } else {
-                    return null;
+                    return array(
+                        'exception' => null,
+                        'change' => array (
+                            'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                            'OCCURRENCE_CODE' => 3,
+                            'OLD_VALUE' => $asset->FZVFORG_CUSTODIAN,
+                            'NEW_VALUE' => $oracle['FZVFORG_CUSTODIAN']
+                        )
+                    );
                 }
             }
         }
@@ -275,26 +322,54 @@ function causfa_oracle_compare_location($oracle, $asset) {
             array('FZVFORG_PTAG' => $oracle['FZVFORG_PTAG']));
       if ($result == null) {
           return array (
-              'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
-              'OCCURRENCE_CODE' => 2,
-              'CHANGE_CODE' => 1,
-              'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
-              'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+            'exception' =>
+                array(
+                   'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
+                    'OCCURRENCE_CODE' => 2,
+                    'CHANGE_CODE' => 1,
+                    'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
+                    'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM'] 
+                ),
+            'change' =>
+                array(
+                    'FZVFORG_PTAG' => $asset->FZVFORG_PTAG,
+                    'OCCURRENCE_CODE' => 2,
+                    'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
+                    'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+                )
           );
       } else {
           if ($result->PENDING_TYPE == 0) {
               if ($result->PENDING_STATUS != 7) {
                   return array (
-                      'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
-                      'OCCURRENCE_CODE' => 3,
-                      'CHANGE_CODE' => 1,
-                      'PENDING_TYPE' => 0,
-                      'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
-                      'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+                      'exception' =>
+                        array(
+                            'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                            'OCCURRENCE_CODE' => 3,
+                            'CHANGE_CODE' => 1,
+                            'PENDING_TYPE' => 0,
+                            'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
+                            'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+                        ),
+                      'change' =>
+                        array(
+                            'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                            'OCCURRENCE_CODE' => 3,
+                            'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
+                            'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+                        )
                   );
-              } else {
-                  return null;
-              }
+            } else {
+                return array(
+                    'exception' => null,
+                    'change' => array(
+                        'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                        'OCCURRENCE_CODE' => 3,
+                        'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
+                        'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+                    )
+                );
+            }
           } else {
               if ($result->PENDING_STATUS != 5) {
                   return array (
@@ -367,6 +442,7 @@ function causfa_oracle_compare_org($oracle, $asset) {
     }
 }
 function causfa_oracle_compare_ownership($oracle, $asset) {
+    global $wpdb;
     if ($oracle['FZVFORG_OWNERSHIP'] != $asset->FZVFORG_OWNERSHIP) {
         $wpdb->update(
             'causfa_banner',
@@ -407,28 +483,28 @@ function causfa_banner_backup() {
     $file = fopen($filename, 'w');
     $results = $wpdb->get_results("SELECT * FROM causfa_banner");
     for ($i = 0; $i < count($results); $i++) {
-        $text = $results[$i]->FZVFORG_OWNER.', ';
-        $text = $text.$results[$i]->FZVFORG_ORGN_CODE.', ';
-        $text = $text.$results[$i]->FZVFORG_ORGN_TITLE.', ';
-        $text = $text.$results[$i]->FZVFORG_ROOM.', ';
-        $text = $text.$results[$i]->FZVFORG_BLDG.', ';
-        $text = $text.$results[$i]->FZVFORG_SORT_ROOM.', ';
-        $text = $text.$results[$i]->FZVFORG_PTAG.', ';
-        $text = $text.$results[$i]->FZVFORG_MANUFACTURER.', ';
-        $text = $text.$results[$i]->FZVFORG_MODEL.', ';
-        $text = $text.$results[$i]->FZVFORG_SERIAL_NUM.', ';
-        $text = $text.$results[$i]->FZVFORG_DESCRIPTION.', ';
-        $text = $text.$results[$i]->FZVFORG_CUSTODIAN.', ';
-        $text = $text.$results[$i]->FZVFORG_PO.', ';
-        $text = $text.$results[$i]->FZVFORG_ACQ_DATE.', ';
-        $text = $text.$results[$i]->FZVFORG_AMOUNT.', ';
-        $text = $text.$results[$i]->FZVFORG_OWNERSHIP.', ';
-        $text = $text.$results[$i]->FZVFORG_SCHEV_YEAR.', ';
-        $text = $text.$results[$i]->FZVFORG_ASSET_TYPE.', ';
-        $text = $text.$results[$i]->FZVFORG_CONDITION.', ';
-        $text = $text.$results[$i]->FZVFORG_LAST_INVENTORY_DATE.', ';
-        $text = $text.$results[$i]->STATUS.', ';
-        $text = $text.$results[$i]->PENDING_STATUS.', ';
+        $text = '"'.$results[$i]->FZVFORG_OWNER.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_ORGN_CODE.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_ORGN_TITLE.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_ROOM.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_BLDG.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_SORT_ROOM.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_PTAG.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_MANUFACTURER.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_MODEL.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_SERIAL_NUM.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_DESCRIPTION.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_CUSTODIAN.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_PO.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_ACQ_DATE.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_AMOUNT.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_OWNERSHIP.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_SCHEV_YEAR.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_ASSET_TYPE.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_CONDITION.'", ';
+        $text = $text.'"'.$results[$i]->FZVFORG_LAST_INVENTORY_DATE.'", ';
+        $text = $text.'"'.$results[$i]->STATUS.'", ';
+        $text = $text.'"'.$results[$i]->PENDING_STATUS.'", ';
         $text = $text."\n";
         fwrite($file, $text);
     }

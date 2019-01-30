@@ -46,6 +46,7 @@ include('process/alerts.php');
 include('process/notes.php');
 include('includes/oracle.php');
 include('includes/progressbar.php');
+include('process/reports.php');
 
 //Hooks
 add_action( 'admin_menu', 'causfa_admin_menu' );
@@ -83,6 +84,7 @@ add_action( 'wp_ajax_causfa_update_from_banner', 'causfa_oracle_full_org');
 add_action( 'wp_ajax_causfa_email_to_spiceworks', 'causfa_email_to_spiceworks');
 add_action( 'wp_ajax_causfa_close_ticket', 'causfa_close_ticket');
 add_action( 'wp_ajax_causfa_eula', 'causfa_eula');
+add_action( 'wp_ajax_causfa_get_report', 'causfa_get_report');
 add_action( 'rest_api_init', function () {
     register_rest_route( 'causfa/v1', '/progressbar', array(
         'methods' => 'GET',
@@ -98,5 +100,5 @@ add_action( 'rest_api_init', function () {
 
 //Shortcode
 add_shortcode( 'causfa', 'causfa_load_employee_view'); //shortcode for the main page of the app
-//add_shortcode( 'causfa_test', 'causfa_IT_FILL_Check'); //shortcode for a dev space to test functionality
+//add_shortcode( 'causfa_test', 'causfa_get_report'); //shortcode for a dev space to test functionality
 add_shortcode( 'causfa_admin', 'causfa_load_admin_view'); // shortcode for the admin page of the app
