@@ -224,4 +224,47 @@ function asset_toggle(id) {
     }
     
 }
-
+function admin_reports(type, inputBox, inputBox2) {
+    switch (type) {
+        case 2:
+            var input = jQuery(inputBox).val();
+            var input2 = jQuery(inputBox2).val();
+            var form = {
+                'action': 'causfa_get_report',
+                'type': type,
+                'input': input,
+                'input2': input2
+            }
+            break;
+        default:
+            var input = jQuery(inputBox).val();
+            var form = {
+                'action': 'causfa_get_report',
+                'type': type,
+                'input': input
+            }
+            break;
+        
+    }
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data){
+        if (data['status'] === 1 ) {
+            jQuery('#reportContent').html(data['report']);
+            jQuery('#reportContent').show();
+            jQuery('#reportContentControls').show();
+            jQuery('#reportOptions').hide();
+        }
+    })
+}
+function admin_report_return() {
+    jQuery('#reportContent').html('');
+    jQuery('#reportContent').hide();
+    jQuery('#reportContentControls').hide();
+    jQuery('#reportOptions').show();
+}
+function printDiv(divName){
+    var printContents = document.getElementById(divName).innerHTML;	
+    var originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    window.print();
+	//document.body.innerHTML = originalContents;
+}

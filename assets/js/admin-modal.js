@@ -1195,33 +1195,3 @@ function admin_uploadFormOffice() {
         });
     }
 }
-function admin_reports(type, inputBox, inputBox2) {
-    switch (type) {
-        case 2:
-            var input = jQuery(inputBox).val();
-            var input2 = jQuery(inputBox2).val();
-            var form = {
-                'action': 'causfa_get_report',
-                'type': type,
-                'input': input,
-                'input2': input2
-            }
-            break;
-        default:
-            var input = jQuery(inputBox).val();
-            var form = {
-                'action': 'causfa_get_report',
-                'type': type,
-                'input': input
-            }
-            break;
-        
-    }
-    jQuery.post(causfa_action_obj.ajax_url, form, function(data){
-        if (data['status'] === 1 ) {
-            jQuery('#reports-modal-table').html(data['report']);
-            jQuery('#orgModal').modal();
-            jQuery('#orgModal').modal('open');
-        }
-    })
-}

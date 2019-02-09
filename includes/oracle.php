@@ -373,15 +373,31 @@ function causfa_oracle_compare_location($oracle, $asset) {
           } else {
               if ($result->PENDING_STATUS != 5) {
                   return array (
-                      'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
-                      'OCCURRENCE_CODE' => 3,
-                      'CHANGE_CODE' => 1,
-                      'PENDING_TYPE' => 1,
-                      'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
-                      'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+                      'exception' => array (
+                          'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                          'OCCURRENCE_CODE' => 3,
+                          'CHANGE_CODE' => 1,
+                          'PENDING_TYPE' => 1,
+                          'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
+                          'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+                      ),
+                      'change' => array(
+                        'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                        'OCCURRENCE_CODE' => 3,
+                        'OLD_VALULE' => $asset->FZVFORG_SORT_ROOM,
+                        'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+                      )
                   );
               } else {
-                  return null;
+                  return array(
+                      'exception' => null,
+                      'change' => array (
+                            'FZVFORG_PTAG' => $result->FZVFORG_PTAG,
+                            'OCCURRENCE_CODE' => 3,
+                            'OLD_VALUE' => $asset->FZVFORG_SORT_ROOM,
+                            'NEW_VALUE' => $oracle['FZVFORG_SORT_ROOM']
+                      )
+                   );
               }
           }
       }
