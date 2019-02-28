@@ -474,11 +474,9 @@ function causfa_oracle_compare_ownership($oracle, $asset) {
 function causfa_calculate_status($asset) {
     global $wpdb;
     $inv_date = $wpdb->get_var("SELECT VALUE FROM causfa_info WHERE NAME = 'INV_DATE'");
-    $sec = strtotime($inv_date);
-    $date = date("m/d/Y", $sec);
-    $sec = strtotime($asset['FZVFORG_LAST_INVENTORY_DATE']);
-    $last_inv_date= date("m/d/Y", $sec);
-    if ($date > $last_inv_date) {
+    $inv_date = strtotime($inv_date);
+    $last_inv_date = strtotime($asset['FZVFORG_LAST_INVENTORY_DATE']);
+    if ($inv_date > $last_inv_date) {
         return 1;
     } else {
         if ($row['FZVFORG_ROOM'] == 'HOME') {
