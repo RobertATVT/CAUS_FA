@@ -95,6 +95,12 @@ function causfa_oracle_compare($oracle) {
                     $changed = true;
                 }
                 if ($changed) {
+                    $status = causfa_calculate_status($assets[$i]);
+                    $wpdb->update(
+                        'causfa_banner',
+                        array('STATUS' => $status),
+                        array('FZVFORG_PTAG' => $assets[$i]->FZVFORG_PTAG));
+
                     $pending = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$assets[$i]->FZVFORG_PTAG."';");
                     if ($pending != null) {
                         $wpdb->delete(
