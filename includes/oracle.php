@@ -481,7 +481,7 @@ function causfa_calculate_status($asset) {
     global $wpdb;
     $inv_date = $wpdb->get_var("SELECT VALUE FROM causfa_info WHERE NAME = 'INV_DATE'");
     $inv_date = strtotime($inv_date);
-    $last_inv_date = strtotime($asset['FZVFORG_LAST_INVENTORY_DATE']);
+    $last_inv_date = strtotime($asset->FZVFORG_LAST_INVENTORY_DATE);
     if ($inv_date > $last_inv_date) {
         return 1;
     } else {
