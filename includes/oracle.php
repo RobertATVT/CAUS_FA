@@ -478,7 +478,7 @@ function causfa_calculate_status($asset) {
     $date = date("m/d/Y", $sec);
     $sec = strtotime($asset['FZVFORG_LAST_INVENTORY_DATE']);
     $last_inv_date= date("m/d/Y", $sec);
-    if ($inv_date > $last_inv_date) {
+    if ($date > $last_inv_date) {
         return 1;
     } else {
         if ($row['FZVFORG_ROOM'] == 'HOME') {
