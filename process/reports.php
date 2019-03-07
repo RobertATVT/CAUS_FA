@@ -200,7 +200,11 @@ function causfa_indv_employee_report($name) {
 }
 function causfa_indv_location_report($bldg, $room) {
     global $wpdb;
-    $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$bldg."' AND FZVFORG_ROOM = ".$room);
+    if ($room == '') {
+        $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$bldg."'"; 
+    } else {
+        $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$bldg."' AND FZVFORG_ROOM = ".$room);
+    }
     $output = '';
     $filler = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-indv-report-fill.html', true);
     for ($i = 0; $i < count($results); $i++) {
