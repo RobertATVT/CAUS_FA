@@ -37,7 +37,7 @@ function casufa_oracle_org_report() {
         $output = $m['message'] . "\n";
         exit;
     } else {
-        $query = "select * from BANINST1.FZVFORG where not regexp_like(trim(fzvforg_asset_type), '^[0-9]') AND (fzvforg_amount >= '2000' OR fzvforg_schev_year is not null) order by FZVFORG_PTAG";
+        $query = "select * from BANINST1.FZVFORG where not regexp_like(trim(fzvforg_asset_type), '^[0-9]') order by FZVFORG_PTAG";
         $stid = oci_parse($conn, $query);
         $r = oci_execute($stid);
         oci_fetch_all($stid, $oracle_assets, 0, -1, OCI_FETCHSTATEMENT_BY_ROW);
@@ -485,7 +485,7 @@ function causfa_calculate_status($asset) {
     if ($inv_date > $last_inv_date) {
         return 1;
     } else {
-        if ($row['FZVFORG_ROOM'] == 'HOME') {
+        if ($asset->FZVFORG_ROOM == 'HOME') {
             return 6;
         } else {
             return 4;
