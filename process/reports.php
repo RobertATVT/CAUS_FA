@@ -201,7 +201,7 @@ function causfa_indv_employee_report($name) {
 function causfa_indv_location_report($bldg, $room) {
     global $wpdb;
     if ($room == '') {
-        $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$bldg."'"; 
+        $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$bldg."'"); 
     } else {
         $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$bldg."' AND FZVFORG_ROOM = ".$room);
     }
