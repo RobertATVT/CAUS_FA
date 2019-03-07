@@ -483,11 +483,20 @@ function causfa_calculate_status($asset) {
     $inv_date = strtotime($inv_date);
     $last_inv_date = strtotime($asset->FZVFORG_LAST_INVENTORY_DATE);
     if ($inv_date > $last_inv_date) {
+        if ($asset->STATUS == 2) {
+            return 2;
+        }
         return 1;
     } else {
         if ($asset->FZVFORG_ROOM == 'HOME') {
+            if ($asset->STATUS == 5) {
+                return 5;
+            }
             return 6;
         } else {
+            if ($asset->STATUS == 3) {
+                return 3;
+            }
             return 4;
         }
     }
