@@ -389,6 +389,13 @@ select#org option:hover {
 	background:  #CC0E00;
 	color: #fff;
 }
+.get-help {
+    color: #F7EA48 !important;
+}
+.get-help:hover {
+    color: #fff !important;
+}
+
 #add-asset {
     padding: 5px; 
     background: #642667;
@@ -904,7 +911,7 @@ a.btn-menu {
     background: #333;
     line-height: 35px;
     color: #fff;
-    padding: 0px;
+    padding: 10px;
     margin: 0px !important;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -1911,4 +1918,21 @@ slider-for{
         font-size: 170%;
     }
     
+}
+@media print{
+    .printDiv {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .hide-small-down {
+        display:none;
+    }
 }

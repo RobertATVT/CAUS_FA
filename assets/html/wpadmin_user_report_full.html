@@ -1,0 +1,1584 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your page title</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/tippy.js@2.4.1/dist/tippy.all.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/paradox.css" rel="stylesheet" type="text/css">
+    <link href="slick/slick.css" rel="stylesheet" type="text/css">
+    <link href="slick/slick-theme.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+<div id="wpwrap">
+
+<table class="tablesorter" role="grid" id="reports-modal-table">
+                        <thead style="border-bottom: 1px solid #85888b !important;">
+                            <tr class="rw asset-list-header">
+                                <th class="cl xl1 l1 m1 t1 center  hide-small-down" style="padding-left: 12px !important;">SELECT</th>
+                                <th class="cl xl2 l2 m2 t6">TAG NUMBER</th>
+                                <th class="cl xl3 l2 m2 t8">SERIAL NUMBER</th>
+                                <th class="cl xl3 l3 m3 t7 center">MANUFACTURER</th>
+                                <th class="cl xl5 l4 m5 hide-small-down">DESCRIPTION</th>
+                                <th class="cl xl1 l2 m2 t6 center">VALUE</th>
+                                <th class="cl xl1 centerhide-large-down">VT SCAN</th>
+                                <th class="cl xl1 center hide-large-down">&nbsp;PURCHASED</th>
+                                <th class="cl xl3 l5 m5 center hide-small-down">STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000292891</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">JPFC56F04Q</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">HEWLETT PACKARD</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Printer, HP</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">3349.00</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">3-Oct-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">13-Apr-06</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P0602980</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>School of Architecture and Design</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000316921</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">W89241PT8YB</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Apple MacBook Pro, 17-inch</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">2437.00</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">3-Oct-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">24-Jun-09</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P9140413</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>Federally funded, university owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000317334</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">W89341A564C</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Apple MacBook Pro, 15-inch</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">3298.00</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">18-Oct-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">1-Sep-09</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P1019564</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>Federally funded, university owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000321028</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">SW80090RK64C</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Apple Macbook Pro 15.4/ CTO</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">2755.21</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">1-Oct-14</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">14-Apr-10</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-missing-recon asset-office">Missing Reconciled</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="modalRequestedOnMissingAsset(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="modalRequestedOnMissingAsset(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P1097228</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000331421</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">C02FJFAG0F8V</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Apple Macbook Pro</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">100.00</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">18-OCT-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">11-DEC-12</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>DEC1112</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000334798</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">DN6FTPTXDFJ1</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Apple iPad 2 wi-Fi+3G 16GB fpr AT&amp;T - Black (M</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">629.00</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">24-Oct-14</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">24-Jun-11</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-missing-recon asset-office">Missing Reconciled</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="modalRequestedOnMissingAsset(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="modalRequestedOnMissingAsset(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2153560</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000339842</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">57M5JS1</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Computer, Dell OptiPlex 790</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1264.49</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">3-Oct-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">9-Feb-12</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>117A</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2255629</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>School of Architecture and Design</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000340607</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">C02H70DFDJY9</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Apple MacBook Air</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1421.00</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">3-Nov-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">28-Feb-12</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-home asset-office">Home Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>HOME</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Home Use</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2265359</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000342671</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">W82081A76JL</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Apple 27" Cinema Display</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">982.75</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">3-Oct-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">18-Apr-12</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2280836</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>SCHEV ownership</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000354669</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">C02K505CFGFL</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Apple Macbook Pro</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">2662.89</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">1-Aug-17</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">26-Mar-13</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2451271</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000355243</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">86MDYW1</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Dell Latitude E6230</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1740.21</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">7-Nov-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">25-Apr-13</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2455246</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000355273</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">HVKDYW1</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Dell Latitude E6430</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1554.68</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">7-Dec-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">25-Apr-13</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2454959</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Dean - Architecture</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000364018</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">C02MF3X5F6T6</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Apple MacBook Air</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1736.00</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">3-Oct-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">29-Apr-14</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2624445</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000366928</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">HFF9M02</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Computer, Dell OptiPlex 9020 Minitower</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">970.44</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">04-OCT-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">16-JUN-14</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>201</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Cowgill Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2669336</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>School of Architecture and Design</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000366929</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">D1VBM02</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Computer, Dell Optiplex 9020</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">100.00</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">03-OCT-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">01-JUL-14</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>122K</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>JUN1214</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000370370</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">GNN6Y12</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Computer, Dell Optiplex 9030</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1211.14</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">04-OCT-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">02-AUG-14</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>204</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Cowgill Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>AUG0214</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>School of Architecture and Design</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000372898</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">DSCBL32</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Computer, Dell XPS 13</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1499.32</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">3-Oct-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">10-Mar-15</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2783266</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000374481</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">D71PM32</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Laptop, Dell XPS 15</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">2547.92</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">1-Aug-17</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">27-May-15</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2808734</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>University owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000374636</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">C02PF3XCF2GC</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Apple Thunderbolt Display</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1002.98</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">4-Oct-16</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">17-Apr-15</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P2802985</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>SCHEV ownership</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000386612</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">4SBSJC2</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Computer, DELL PRECISION 7710</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">3916.54</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">6-Mar-17</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">25-Oct-16</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P3041607</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>Good</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>SCHEV ownership</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000389692</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">029117163554</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">MICROSOFT</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Computer, Microsoft Surface Book</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1299.99</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">24-JAN-17</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">23-JAN-17</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>JAN2317</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>New</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>Privately funded, university owned</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000392449</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">C02T700QGTJ8</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">-MacBook 12" - Silver 1.3GHz/ core m7/8GB/512SSD;</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">1791.46</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">31-Mar-17</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">3-Apr-17</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P3153394</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>New</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>SCHEV ownership</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>School of Architecture and Design</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000396559</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">DCTT9H2</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">210-AKKD-Dell Precision 7520;Dell Precision 7520 X</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">3857.53</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">29-Aug-17</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">24-Aug-17</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-home asset-office">Home Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>HOME</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Home Use</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P3238352</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>New</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>SCHEV ownership</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000396652</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">2854027143</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">MICROSOFT</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">MISPI7161-Surface Pro 12 3 1TB Multi-Touch Tablet</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">4009.99</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">11-Sep-17</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">12-Sep-17</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P3247091</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>New</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>SCHEV ownership</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000399694</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">C02WF0DTHTDD</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">APPLE</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">Apple 15" Macbook Pro with Touch Bar Space Gray</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">2646.72</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">11-Apr-18</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">6-Apr-18</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office asset-office">Office Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>123B</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Burruss Hall</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P3347892</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>New</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>SCHEV ownership</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                            <tr class="rw asset-list">
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <input id="asset-select-0" type="checkbox" value="asset-select-0" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                            <label for="asset-select-0"></label>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r" id="asset-tag-0">000406010</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-0">5DN0VT2</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-0">DELL</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-0">210-ANWG-Dell Latitude 5290 2-in-1;Dell Latitude 5</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-0">2255.75</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-0">28-FEB-19</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-0">26-FEB-19</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-0" style="padding: 4px !important;">
+                                            <div class="asset-status asset-home asset-office">Home Use*</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-0" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-0" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-0" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-0" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-0" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-0">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-0"><b>CUSTODIAN: </b>Vaughan, Robert</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-0"><b>ROOM #: </b>HOME</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-0"><b>BUILDING: </b>Home Use</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-0"><b>PO: </b>P3512422</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-0"><b>CONDITION: </b>New</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-0"><b>OWNERSHIP: </b>SCHEV ownership</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-0"><b>ORGANIZATION: </b>Architecture Support</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>                        </tbody>
+                        <tfoot>
+                            <tr class="rw asset-list-footer" style="margin:0px;">
+                                <td class="center cl t20" colspan="10"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+<script type='text/javascript' src='https://inside.caus.vt.edu/wp-content/plugins/google-analytics-dashboard-for-wp/admin/js/ui.js?ver=5.3.7'></script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+</body>
+</html>
