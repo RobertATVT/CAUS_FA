@@ -255,6 +255,58 @@ function admin_reports(type, inputBox, inputBox2) {
         }
     })
 }
+function admin_report_enter_in_input(input) {
+    switch(input) {
+        case 'report-indv-asset-input':
+            jQuery("#" + input).on("keypress", function(e) {
+                if (e.keyCode == 13) {
+                    admin_reports(0, '#report-indv-asset-input');
+                    return false; // prevent the button click from happening
+                }
+            });
+            break;
+        case 'report-org-input':
+            jQuery("#" + input).on("keypress", function(e) {
+                if (e.keyCode == 13) {
+                    admin_reports(3, '#report-org-input');                    
+                    return false; // prevent the button click from happening
+                }
+            });
+            break;
+        case 'report-indv-employee-input':
+            jQuery("#" + input).on("keypress", function(e) {
+                if (e.keyCode == 13) {
+                    admin_reports(1, '#report-indv-employee-input');                   
+                    return false; // prevent the button click from happening
+                }
+            });
+            break;
+        case 'report-missing-input':
+            jQuery("#" + input).on("keypress", function(e) {
+                if (e.keyCode == 13) {
+                    admin_reports(4, '#report-missing-input');
+                    return false; // prevent the button click from happening
+                }
+            });
+            break;
+        case 'report-indv-location-input':
+            jQuery("#" + input).on("keypress", function(e) {
+                if (e.keyCode == 13) {
+                    admin_reports(2, '#report-indv-location-input', '#report-indv-location-input2');
+                    return false; // prevent the button click from happening
+                }
+            });
+            break;
+        case 'report-indv-location-input2':
+            jQuery("#" + input).on("keypress", function(e) {
+                if (e.keyCode == 13) {
+                    admin_reports(2, '#report-indv-location-input', '#report-indv-location-input2');
+                    return false; // prevent the button click from happening
+                }
+            });
+            break;
+    }
+}
 function admin_report_return() {
     jQuery('#reportContent').html('');
     jQuery('#reportContent').hide();
@@ -267,4 +319,12 @@ function printDiv(divName){
     document.body.innerHTML = printContents;
     window.print();
 	//document.body.innerHTML = originalContents;
+}
+if(document.getElementById("report-indv-asset-input")) {
+    admin_report_enter_in_input("report-indv-asset-input");
+    admin_report_enter_in_input("report-org-input");
+    admin_report_enter_in_input("report-indv-employee-input");
+    admin_report_enter_in_input("report-missing-input");
+    admin_report_enter_in_input("report-indv-location-input");
+    admin_report_enter_in_input("report-indv-location-input2");
 }
