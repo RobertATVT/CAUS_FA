@@ -99,7 +99,8 @@ function causfa_admin_enqueue() {
     wp_register_script('causadmin_report_problem', plugins_url('assets/js/report_problem.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_awesomplete_script', plugins_url('assets/js/awesomplete.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_jquery_ui_script', plugins_url('assets/js/jquery-ui.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
-    wp_register_script('causadmin_generate_report_script', plugins_url('assets/js/generate-report.js', CAUSFA+PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causadmin_generate_report_script', plugins_url('assets/js/generate-report.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causadmin_jspdf_script', plugins_url('assets/js/jsPDF-master/dist/jspdf.debug.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     
     wp_enqueue_script('jquery');
     wp_enqueue_script('causadmin_materialize_script');
@@ -112,6 +113,7 @@ function causfa_admin_enqueue() {
     wp_enqueue_script('causadmin_awesomplete_script');
     wp_enqueue_script('causadmin_jquery_ui_script');
     wp_enqueue_script('causadmin_generate_report_script');
+    wp_enqueue_script('causadmin_jspdf_script');
     
     //This line creates a causfa_action_obj object that passes the ajax url to the front end scripts
     wp_localize_script('causadmin_main', 'causfa_action_obj', array(
