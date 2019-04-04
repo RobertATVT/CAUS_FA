@@ -2,14 +2,22 @@
 
 
 function causfa_get_report() {
+    global $wpdb;
     $type = $_POST['type'];
     $result = '';
+    $name = '';
     switch ($type) {
         case 0:
             $result = causfa_indv_asset_report($_POST['input']);
             break;
         case 1:
-            $result = causfa_indv_employee_report($_POST['input']);
+            $input = $_POST['input'];
+            $userID = $wpdb->get_var("SELECT ID FROM ".$wpdb->base_prefix."users WHERE user_nicename = '".$input."'");
+            $lastname = $wpdb->get_var("SELECT meta_value FROM ".$wpdb->base_prefix."usermeta WHERE meta_key = 'last_name' AND user_id =".$userID.";");
+            $firstname = $wpdb->get_var("SELECT meta_value FROM ".$wpdb->base_prefix."usermeta WHERE meta_key = 'first_name' AND user_id =".$userID.";");
+            $name = $lastname.', '.explode(" ", $firstname)[0];
+            $result = causfa_indv_employee_report($name);
+            
             break;
         case 2:
             $result = causfa_indv_location_report($_POST['input'], $_POST['input2']);
@@ -25,7 +33,8 @@ function causfa_get_report() {
     $footer = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-indv-report-footer.html', true);
     $output = array (
         'status' => 1,
-        'report' => ($header.$result.$footer)
+        'report' => ($header.$result.$footer),
+        'name' => $name
     );
     wp_send_json($output);
 }
@@ -462,4 +471,38 @@ function causfa_missing_report($org) {
     }
     
     return $output;
+}
+
+function causfa_report_data() {
+    global $wpdb;
+    $type = $_POST['type'];
+    $input1 = $_POST['input1'];
+    $input2 = $_POST['input2'];
+    switch ($type) {
+        case 0:
+            $result = $wpdb->get_row("SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = '".$input1."'");
+            break;
+        case 1:
+            $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_CUSTODIAN = '".$input1."'");
+            break;
+        case 2:
+            if ($room == '') {
+                $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$$input1."'"); 
+            } else {
+                $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$input1."' AND FZVFORG_ROOM = ".$input2);
+            }
+            break;
+        case 3:
+            $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_ORGN_CODE = ".$input1);
+            break;
+        case 4:
+            $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE (Status = 1 OR Status = 2) AND FZVFORG_ORGN_CODE = ".$input1);
+            break;
+    }
+    $output = array(
+        'status'=>1,
+        'data'=>$results
+    );
+    wp_send_json($output);
+    
 }

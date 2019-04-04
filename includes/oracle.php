@@ -195,8 +195,8 @@ function causfa_oracle_compare($oracle) {
                 'FZVFORG_CUSTODIAN' => $row->FZVFORG_CUSTODIAN,
                 'FZVFORG_AMOUNT'=> $row->FZVFORG_AMOUNT
             );
-            array_push($change_list['EXT_OUT'], $change_entry);
-            $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row->FZVFORG_PTAG));
+        array_push($change_list['EXT_OUT'], $change_entry);
+        $wpdb->delete('causfa_banner', array('FZVFORG_PTAG' => $row->FZVFORG_PTAG));
         array_splice($assets, $key, 1);
     }
     send_message(0,'CLOSE', 'Process complete');

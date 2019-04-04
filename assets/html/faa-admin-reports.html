@@ -38,7 +38,8 @@
 					<div class="cl t20" style=" padding: 10px; background: #efefef;">
 						<form>
 							<div class="cl m10 t20">
-								<input type="text" placeholder="Employee PID" class="report-input" id="report-indv-employee-input">
+								<input type="text" class="awesomplete" placeholder="Employee PID" class="report-input" id="report-indv-employee-input" list="PIDs">
+                                <datalist id="PIDs"></datalist>
 							</div>
 							<div class="cl m10 t20">
 								<input type="button" class="btn btn-primary report-button" value="Look Up Employee" onclick="admin_reports(1, '#report-indv-employee-input')">
@@ -127,6 +128,10 @@
 			</div>
 		</div>
 	</div>
+    <script>jQuery( document).ready(function() {
+                transferModalLoad(['report-indv-employee-input'])
+            });
+        </script>
     <div id="reportContentControls" style="display: none;">
         <div class="cl t10 center">
             <input type="button" class="btn btn-primary" value="Back" onclick="admin_report_return()">

@@ -18,12 +18,14 @@ function new_custodian_submit() {
     var office = jQuery('#Office').val();
     var phone = jQuery('#Phone').val();
     var org = jQuery('#org').val();
-    if (office == null) {
+    if (office == '') {
         alert('Office field cannot be empty');
-    } else if (phone == null) {
+    } else if (phone == '') {
         alert('Phone field cannot be empty');
-    } else if (building == null) {
+    } else if (building == '') {
         alert('Building field cannot be empty');
+    } else if (org == '') {
+        alert('Please select your school from the dropdown');
     } else {
         var form = {
             'action': 'causfa_new_custodian',
@@ -236,6 +238,14 @@ function admin_reports(type, inputBox, inputBox2) {
                 'input2': input2
             }
             break;
+        case 1:
+            var PID = validateFormIndvEmployee();
+            var form = {
+                'action': 'causfa_get_report',
+                'type': type,
+                'input': PID
+            }
+            break;
         default:
             var input = jQuery(inputBox).val();
             var form = {
@@ -327,4 +337,37 @@ if(document.getElementById("report-indv-asset-input")) {
     admin_report_enter_in_input("report-missing-input");
     admin_report_enter_in_input("report-indv-location-input");
     admin_report_enter_in_input("report-indv-location-input2");
+}
+
+function getReportData(){
+    var form = {
+        'action': 'causfa_report_data',
+        'type': 1,
+        'input1': 'Jezierski, Matthew',
+        'input2': ''
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+        alert('data received');
+    });
+}
+
+function validateFormIndvEmployee() {
+    // Get the input element
+    var input = document.getElementById('report-indv-employee-input');
+    // Get the datalist
+    var PIDs = jQuery('#PIDs');
+
+
+    // If we find the input inside our list, we submit the form
+    var children = PIDs.children();
+    for(var i = 0; i < children.length; i++){
+        if(children[i].value == input.value) {
+            var PID_dest = children[i].getAttribute('data_value');
+            return PID_dest;
+        }
+    }
+
+    // we send an error message
+    alert("Name input is invalid")
+    return false;
 }
