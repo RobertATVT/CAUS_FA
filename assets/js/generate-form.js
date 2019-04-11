@@ -69,13 +69,15 @@ function generateHomeUse(data) {
 	doc.text(236, 330, 'BUILDING');
 	doc.text(398, 330, 'OFFICE');
 
-    doc.setFontSize(9);
-	doc.setFontType("normal");
+    doc.setFontType("normal");
 	doc.text(105, 306, data['manufacturer'], null, null, 'center');
-	doc.text(203, 306, data['model'], null, null, 'center');
+	doc.setFontSize(9);
+    doc.text(203, 306, data['model'], null, null, 'center');
 	doc.text(338, 306, data['serial'], null, null, 'center');
 	doc.text(465, 306, data['ptag'], null, null, 'center');
+    doc.setFontSize(7);
 	doc.text(185, 318, data['desc']);
+    doc.setFontSize(9);
 	doc.text(135, 330, data['pid']);
 	doc.text(280, 330, data['bldg']);
 	doc.text(440, 330, data['office']);
@@ -230,13 +232,16 @@ function generateOffieUse(data) {
     doc.text(236, 330, 'BUILDING');
     doc.text(398, 330, 'OFFICE');
 
-    doc.setFontSize(9);
+    
     doc.setFontType("normal");
     doc.text(105, 306, data['manufacturer'], null, null, 'center');
+    doc.setFontSize(9);
     doc.text(203, 306, data['model'], null, null, 'center');
     doc.text(338, 306, data['serial'], null, null, 'center');
     doc.text(465, 306, data['ptag'], null, null, 'center');
+    doc.setFontSize(7);
     doc.text(185, 318, data['desc']);
+    doc.setFontSize(9);
     doc.text(135, 330, data['pid']);
     doc.text(280, 330, data['bldg']);
     doc.text(440, 330, data['office']);
