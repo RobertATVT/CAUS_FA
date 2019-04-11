@@ -69,6 +69,7 @@ function generateHomeUse(data) {
 	doc.text(236, 330, 'BUILDING');
 	doc.text(398, 330, 'OFFICE');
 
+    doc.setFontSize(9);
 	doc.setFontType("normal");
 	doc.text(105, 306, data['manufacturer'], null, null, 'center');
 	doc.text(203, 306, data['model'], null, null, 'center');
@@ -229,6 +230,7 @@ function generateOffieUse(data) {
     doc.text(236, 330, 'BUILDING');
     doc.text(398, 330, 'OFFICE');
 
+    doc.setFontSize(9);
     doc.setFontType("normal");
     doc.text(105, 306, data['manufacturer'], null, null, 'center');
     doc.text(203, 306, data['model'], null, null, 'center');
