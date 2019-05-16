@@ -1,7 +1,6 @@
 function generatePrintedReport(assets, searchCriteria) {
     var numPages = Math.ceil(assets.length / 11);
     var doc = new jsPDF('landscape','pt',[612,792]);
-    alert(searchCriteria);
     for (var i=0; i < numPages; i++){
         var remainingAssets = assets.length - (i*11);
         
