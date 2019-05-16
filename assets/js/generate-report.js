@@ -48,7 +48,7 @@ function generatePrintedReport(assets) {
             doc.text(635, group_a, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_a, assets[i*11+0][value];
+            doc.text(695, group_a, assets[i*11+0][value]);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -148,7 +148,7 @@ function generatePrintedReport(assets) {
             doc.text(153, group_b, 'MANUFACTURER');
 
             doc.setFontType("normal");
-            doc.text(245, group_b, assets[i*11+1][manufacturer]');
+            doc.text(245, group_b, assets[i*11+1][manufacturer]);
 
             doc.setFontType("bold");
             doc.text(372, group_b, 'DESCRIPTION');
