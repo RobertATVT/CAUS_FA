@@ -205,6 +205,12 @@ select#org option:hover {
 }
 
 /* ========== TYPOGRAPHY SETTINGS ========== */
+.b {
+    font-weight: 700;
+}
+.bb {
+    font-weight: 900;
+}
 .h1-text {
     font-size:175%;
     font-weight:700;
@@ -754,6 +760,10 @@ select#org option:hover {
 	font-size: 110%;
 }
 .ribbon-reports {
+	line-height: 27px;
+	font-size: 110%;
+}
+.ribbon-status {
 	line-height: 27px;
 	font-size: 110%;
 }
@@ -1680,6 +1690,9 @@ slider-for{
 	.ribbon-reports {
 		font-size: 70%;
 	}
+    .ribbon-status {
+		font-size: 70%;
+	}
     .subtext-right {
         font-size: 120% !important;
     }
@@ -1810,6 +1823,9 @@ slider-for{
 		font-size: 90%;
 	}
 	.ribbon-reports {
+		font-size: 90%;
+	}
+    .ribbon-status {
 		font-size: 90%;
 	}
 }

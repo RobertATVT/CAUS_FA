@@ -127,7 +127,7 @@ function causfa_indv_employee_report($name) {
     $filler = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-indv-report-fill.html', true);
     for ($i = 0; $i < count($results); $i++) {
         $result = $results[$i];
-        $item = str_replace("[ID]", "0", $filler);
+        $item = str_replace("[ID]", $i, $filler);
         $item = str_replace("[VT TAG]", $result->FZVFORG_PTAG, $item);
         $item = str_replace("[S/N]", $result->FZVFORG_SERIAL_NUM, $item);
         $item = str_replace("[MANUFACTURER]", $result->FZVFORG_MANUFACTURER, $item);
@@ -218,7 +218,7 @@ function causfa_indv_location_report($bldg, $room) {
     $filler = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-indv-report-fill.html', true);
     for ($i = 0; $i < count($results); $i++) {
         $result = $results[$i];
-        $item = str_replace("[ID]", "0", $filler);
+        $item = str_replace("[ID]", $i, $filler);
         $item = str_replace("[VT TAG]", $result->FZVFORG_PTAG, $item);
         $item = str_replace("[S/N]", $result->FZVFORG_SERIAL_NUM, $item);
         $item = str_replace("[MANUFACTURER]", $result->FZVFORG_MANUFACTURER, $item);
@@ -305,7 +305,7 @@ function causfa_org_report($org) {
     $filler = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-indv-report-fill.html', true);
     for ($i = 0; $i < count($results); $i++) {
         $result = $results[$i];
-        $item = str_replace("[ID]", "0", $filler);
+        $item = str_replace("[ID]", $i, $filler);
         $item = str_replace("[VT TAG]", $result->FZVFORG_PTAG, $item);
         $item = str_replace("[S/N]", $result->FZVFORG_SERIAL_NUM, $item);
         $item = str_replace("[MANUFACTURER]", $result->FZVFORG_MANUFACTURER, $item);
@@ -392,7 +392,7 @@ function causfa_missing_report($org) {
     $filler = file_get_contents( plugin_dir_path(CAUSFA_PLUGIN_URL).'/assets/html/faa-wpadmin-indv-report-fill.html', true);
     for ($i = 0; $i < count($results); $i++) {
         $result = $results[$i];
-        $item = str_replace("[ID]", "0", $filler);
+        $item = str_replace("[ID]", $i, $filler);
         $item = str_replace("[VT TAG]", $result->FZVFORG_PTAG, $item);
         $item = str_replace("[S/N]", $result->FZVFORG_SERIAL_NUM, $item);
         $item = str_replace("[MANUFACTURER]", $result->FZVFORG_MANUFACTURER, $item);
