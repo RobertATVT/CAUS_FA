@@ -227,10 +227,13 @@ function asset_toggle(id) {
     
 }
 function admin_reports(type, inputBox, inputBox2) {
+    jQuery("#reportType").val(type);
     switch (type) {
         case 2:
             var input = jQuery(inputBox).val();
+            jQuery("#reportInput1").val(input);
             var input2 = jQuery(inputBox2).val();
+            jQUery("#reportInput2").val(input2);
             var form = {
                 'action': 'causfa_get_report',
                 'type': type,
@@ -240,6 +243,8 @@ function admin_reports(type, inputBox, inputBox2) {
             break;
         case 1:
             var PID = validateFormIndvEmployee();
+            jQuery("#reportInput1").val(PID);
+            jQuery("#reportInput2").val("");
             var form = {
                 'action': 'causfa_get_report',
                 'type': type,
@@ -248,6 +253,8 @@ function admin_reports(type, inputBox, inputBox2) {
             break;
         default:
             var input = jQuery(inputBox).val();
+            jQuery("#reportInput1").val(input);
+            jQuery("#reportInput2").val("");
             var form = {
                 'action': 'causfa_get_report',
                 'type': type,
@@ -342,12 +349,12 @@ if(document.getElementById("report-indv-asset-input")) {
 function getReportData(){
     var form = {
         'action': 'causfa_report_data',
-        'type': 1,
-        'input1': 'Jezierski, Matthew',
-        'input2': ''
+        'type': jQuery("#reportType").val(),
+        'input1': jQuery("#reportInput1").val(),
+        'input2': jQuery("#reportInput2").val()
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
-        alert('data received');
+        generatePrintedReport(data["data"], data["criteria"]);
     });
 }
 

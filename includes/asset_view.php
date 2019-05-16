@@ -40,8 +40,13 @@ function causfa_load_employee_view() {
             }
             $asset_index++;
         }
-        $comp_number = round(100-(($missing_number/$total_number)*100));
-        $comp_dollar = round(100-(($missing_total/$value_total)*100));
+        if ($total_number > 0) {
+            $comp_number = round(100-(($missing_number/$total_number)*100));
+            $comp_dollar = round(100-(($missing_total/$value_total)*100));
+        } else {
+            $comp_number = 100;
+            $comp_dollar = 100;
+        }
         if ($comp_number < 95 || $comp_dollar < 95) {
             $compliance = $wpdb->get_row("SELECT * FROM causfa_alerts WHERE CREATOR = 'compliance' AND ORG = '".$current_user->user_nicename."';");
             if ($compliance === null) {

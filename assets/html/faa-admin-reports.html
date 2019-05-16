@@ -143,7 +143,10 @@
             <input type="button" class="btn btn-primary" value="Back" onclick="admin_report_return()">
         </div>
         <div class="cl t10 center">
-            <input type="button" class="btn btn-primary" value="Print" onclick="generatePrintedReport('reportContent')">
+            <input type="hidden" id="reportType">
+            <input type="hidden" id="reportInput1">
+            <input type="hidden" id="reportInput2">
+            <input type="button" class="btn btn-primary" value="Print" onclick="getReportData()">
         </div>
     </div>
     <div id="reportContent" style="display: none;"></div>

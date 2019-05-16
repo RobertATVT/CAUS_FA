@@ -472,36 +472,47 @@ function causfa_missing_report($org) {
     
     return $output;
 }
-
 function causfa_report_data() {
     global $wpdb;
     $type = $_POST['type'];
     $input1 = $_POST['input1'];
     $input2 = $_POST['input2'];
+    $searchCriteria = '';
     switch ($type) {
         case 0:
             $result = $wpdb->get_row("SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = '".$input1."'");
+            $searchCriteria = "Individual Asset Report - $input1";
             break;
         case 1:
-            $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_CUSTODIAN = '".$input1."'");
+            $userID = $wpdb->get_var("SELECT ID FROM ".$wpdb->base_prefix."users WHERE user_nicename = '".$input1."'");
+            $lastname = $wpdb->get_var("SELECT meta_value FROM ".$wpdb->base_prefix."usermeta WHERE meta_key = 'last_name' AND user_id =".$userID.";");
+            $firstname = $wpdb->get_var("SELECT meta_value FROM ".$wpdb->base_prefix."usermeta WHERE meta_key = 'first_name' AND user_id =".$userID.";");
+            $name = $lastname.', '.explode(" ", $firstname)[0];
+            $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_CUSTODIAN = '".$name."'");
+            $searchCriteria = "Individual Employee Report - $name";
             break;
         case 2:
             if ($room == '') {
-                $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$$input1."'"); 
+                $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$input1."'"); 
+                $searchCriteria = "Full Building Report - $input1";
             } else {
                 $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_BLDG = '".$input1."' AND FZVFORG_ROOM = ".$input2);
+                $searchCriteria = "Inidividual Location Report - $input1 $input2";
             }
             break;
         case 3:
             $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_ORGN_CODE = ".$input1);
+            $searchCriteria = "Organizational Report - $input1";
             break;
         case 4:
             $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE (Status = 1 OR Status = 2) AND FZVFORG_ORGN_CODE = ".$input1);
+            $searchCriteria = "Missing Report - $input1";
             break;
     }
     $output = array(
         'status'=>1,
-        'data'=>$results
+        'data'=>$results,
+        'criteria'=>$searchCriteria
     );
     wp_send_json($output);
     
