@@ -480,7 +480,7 @@ function causfa_report_data() {
     $searchCriteria = '';
     switch ($type) {
         case 0:
-            $result = $wpdb->get_row("SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = '".$input1."'");
+            $results = $wpdb->get_results("SELECT * FROM causfa_banner WHERE FZVFORG_PTAG = '".$input1."'");
             $searchCriteria = "Individual Asset Report - $input1";
             break;
         case 1:
