@@ -1,3 +1,41 @@
+function getDate(){
+    var now = new Date();
+    var y = now.getFullYear();
+    var m = now.getMonth() + 1;
+    var d = now.getDate();
+    var mm = m < 10 ? '0' + m : m;
+    var dd = d < 10 ? '0' + d : d;
+    return '' + y + mm + dd;; 
+}
+
+function getReportType(searchType){
+    var reportType = searchType.substr(0, searchType.indexOf("-"));
+    var reportType = reportType.trim();
+    switch(reportType){
+        case "Individual Asset Report":
+            return "IAR";
+            break;
+        case "Individual Employee Report":
+            return "IER";
+            break;
+        case "Full Building Report":
+            return "FBR";
+            break;
+        case "Individual Locattion Report":
+            return "ILR";
+            break;
+        case "Organizational Report":
+            return "FOR";
+            break;
+        case "Missing Report":
+            return "FMR";
+            break;
+        default:
+            return reportType;
+            break;
+    }
+}
+
 function acceptEULA(status) {
     var form = {
         'action': 'causfa_eula',
@@ -233,7 +271,7 @@ function admin_reports(type, inputBox, inputBox2) {
             var input = jQuery(inputBox).val();
             jQuery("#reportInput1").val(input);
             var input2 = jQuery(inputBox2).val();
-            jQUery("#reportInput2").val(input2);
+            jQuery("#reportInput2").val(input2);
             var form = {
                 'action': 'causfa_get_report',
                 'type': type,

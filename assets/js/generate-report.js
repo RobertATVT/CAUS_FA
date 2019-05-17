@@ -1304,8 +1304,15 @@ function generatePrintedReport(assets, searchCriteria) {
         doc.text(710, group_l+17, (i + 1) + '/' + numPages);
     }
     
-   
-
-    var filename = 'Individual_Assets.pdf';
+    var thisDate = getDate();
+    
+    var reportType = getReportType(searchCriteria);
+    
+    var criteriaClean = searchCriteria.split('-')[1];
+    var criteriaClean = criteriaClean.replace(", ","-");
+    var criteriaClean = criteriaClean.trim();
+    
+    /*alert(thisDate+'-'+reportType+'-'+criteriaClean+'.pdf');*/
+    var filename = thisDate+'-'+reportType+'-'+criteriaClean+'.pdf';
     doc.save(filename);
 }
