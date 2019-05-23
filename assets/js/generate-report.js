@@ -50,7 +50,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_a, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_a, assets[i*11+0]['FZVFORG_AMOUNT']);
+            doc.text(695, group_a, '$'+assets[i*11+0]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -167,7 +167,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_b, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_b, assets[i*11+1]['FZVFORG_AMOUNT']);
+            doc.text(695, group_b, '$'+assets[i*11+1]['FZVFORG_AMOUNT']);
 
            //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -284,7 +284,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_c, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_c, assets[i*11+2]['FZVFORG_AMOUNT']);
+            doc.text(695, group_c, '$'+assets[i*11+2]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -401,7 +401,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_d, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_d, assets[i*11+3]['FZVFORG_AMOUNT']);
+            doc.text(695, group_d, '$'+assets[i*11+3]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -518,7 +518,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_e, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_e, assets[i*11+4]['FZVFORG_AMOUNT']);
+            doc.text(695, group_e, '$'+assets[i*11+4]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -635,7 +635,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_f, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_f, assets[i*11+5]['FZVFORG_AMOUNT']);
+            doc.text(695, group_f, '$'+assets[i*11+5]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -752,7 +752,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_g, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_g, assets[i*11+6]['FZVFORG_AMOUNT']);
+            doc.text(695, group_g, '$'+assets[i*11+6]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -869,7 +869,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_h, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_h, assets[i*11+7]['FZVFORG_AMOUNT']);
+            doc.text(695, group_h, '$'+assets[i*11+7]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -986,7 +986,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_i, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_i, assets[i*11+8]['FZVFORG_AMOUNT']);
+            doc.text(695, group_i, '$'+assets[i*11+8]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -1103,7 +1103,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_j, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_j, assets[i*11+9]['FZVFORG_AMOUNT']);
+            doc.text(695, group_j, '$'+assets[i*11+9]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -1220,7 +1220,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_k, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_k, assets[i*11+10]['FZVFORG_AMOUNT']);
+            doc.text(695, group_k, '$'+assets[i*11+10]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
