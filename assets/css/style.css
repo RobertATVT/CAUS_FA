@@ -22,7 +22,14 @@ select:focus {
     outline: 1px solid #75787B;
 }
 
+#status {
+    width: 90%;
+}
 select#org option:hover {
+    background-color: #ED8B00 !important;
+    box-shadow: 0 0 10px 100px #1882A8 inset !important;
+}
+select#status option:hover {
     background-color: #ED8B00 !important;
     box-shadow: 0 0 10px 100px #1882A8 inset !important;
 }
@@ -759,6 +766,10 @@ select#org option:hover {
 	line-height: 27px;
 	font-size: 110%;
 }
+.ribbon-notes {
+	line-height: 27px;
+	font-size: 110%;
+}
 .ribbon-reports {
 	line-height: 27px;
 	font-size: 110%;
@@ -950,6 +961,25 @@ a.btn-menu {
     background: #fff; 
     border-radius: 0px;
 }
+.faa-modal-fill {
+    border: 1px solid #aaa; 
+    padding: 3px; 
+    background: #fafafa; 
+    border-radius: 0px;
+}
+.faa-modal-fill a {
+    color: #900;
+    font-weight: 700;
+}
+.faa-modal-fill a:hover {
+    color: #900;
+}
+.faa-modal-fill a:active {
+    color: #900;
+}
+.faa-modal-fill a:visited {
+    color: #900;
+}
 .modal .modal-footer {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -992,7 +1022,9 @@ a.btn-menu {
 	line-height: 20px;
 	margin-bottom: 4px;
 }
-
+.note-fill {
+    font-size: 80% !important;
+}
 .meter { 
     height: 20px;  /* Can be anything */
     position: relative;
@@ -1687,6 +1719,9 @@ slider-for{
 	.ribbon-forms {
 		font-size: 70%;
 	}
+    .ribbon-notes {
+		font-size: 70%;
+	}
 	.ribbon-reports {
 		font-size: 70%;
 	}
@@ -1820,6 +1855,9 @@ slider-for{
 		font-size: 90%;
 	}
 	.ribbon-forms {
+		font-size: 90%;
+	}
+    .ribbon-notes {
 		font-size: 90%;
 	}
 	.ribbon-reports {

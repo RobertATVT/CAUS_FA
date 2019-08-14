@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your page title</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/tippy.js@2.4.1/dist/tippy.all.min.js"></script>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/paradox.css" rel="stylesheet" type="text/css">
+    <link href="../slick/slick.css" rel="stylesheet" type="text/css">
+    <link href="../slick/slick-theme.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+<!-- BEGIN TEMPLATE faa-wpadmin-indv-report-header.html -->
+            <div class="rw hide-small-down" id="asset-ribbon" style="margin: 0px; padding: 4px;">
+                <div class="cl t20 asset-border" style="padding: 3px; background-color: #fff;border: 1px solid #85888b !important;">
+                    <div class="cl t3 ribbon-transfer" style="padding: 3px;">
+                        <a href="#" id="transfer-ribbon-button" title="Transfer asset to another faculty or staff" style="color: #333 !important;">
+                            <div id="transfer-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t20 center b">TRANSFER ASSET</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t3 ribbon-surplus" style="padding: 3px;">
+                        <a href="#" id="surplus-ribbon-button" title="Initiate process to surplus asset" style="color: #333 !important;">
+                            <div id="surplus-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t20 center b">SURPLUS ASSET</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t3 ribbon-gallery" style="padding: 3px;">
+                        <a href="#" title="View image gallery for asset and submit new images" id="gallery-ribbon-button" style="color: #333 !important;">
+                            <div id="gallery-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t20 center b">IMAGE GALLERY</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t3 ribbon-forms" style="padding: 3px;">
+                        <a href="#" title="View and Download the CAUS Office and Home Use Forms" id="forms-ribbon-button" style="color: #333 !important;">
+                            <div id="forms-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t20 center b">UPLOAD & VIEW FORMS</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t4 ribbon-notes" style="padding: 3px;">
+                        <a href="#" title="View and add notes to this asset" id="notes-ribbon-button" style="color: #333 !important;">
+                            <div id="notes-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t20 center b">ADD/VIEW NOTES</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t4 ribbon-status" style="padding: 3px;">
+                        <a href="#" title="Change the status of an asset" id="status-ribbon-button" style="color: #333 !important;">
+                            <div id="report-ribbon" class="cl t20 ribbon-disabled">
+                                <div class="cl t20 center b">CHANGE STATUS</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cl t20 center b" style="padding: 3px; font-size: 85%; color: #777; font-weight: 700;">
+                        Select and asset below by clicking the checkbox next to it and then click on a corresponding button above for the action you wish to perform. Transfers and Surplus can be done with multiple assets selected.
+                    </div>
+                </div>
+            </div>
+            <div class="rw" id="asset-title" style="margin: 0px; padding: 4px !important">
+                <div class="cl t20 asset-border" style="border: 1px solid #85888b !important;">
+                    <table class="tablesorter" role="grid" id="reports-modal-table">
+                        <thead style="border-bottom: 1px solid #85888b !important;">
+                            <tr class="rw asset-list-header">
+                                <th class="cl xl1 l1 m1 t1 center  hide-small-down" style="padding-left: 12px !important;">SELECT</th>
+                                <th class="cl xl2 l2 m2 t6">TAG NUMBER</th>
+                                <th class="cl xl3 l2 m2 t8">SERIAL NUMBER</th>
+                                <th class="cl xl3 l3 m3 t7 center">MANUFACTURER</th>
+                                <th class="cl xl5 l4 m5 hide-small-down">DESCRIPTION</th>
+                                <th class="cl xl1 l2 m2 t6 center">VALUE</th>
+                                <th class="cl xl1 centerhide-large-down">VT SCAN</th>
+                                <th class="cl xl1 center hide-large-down">&nbsp;PURCHASED</th>
+                                <th class="cl xl3 l5 m5 center hide-small-down">STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+<!-- END TEMPLATE faa-wpadmin-indv-report-header.html -->
+<!-- BEGIN TEMPLATE faa-wpadmin-indv-report-fill.html -->
+                            <tr class="rw asset-list" >
+                                <td>
+                                    <div class="rw" style="margin-bottom: -5px !important;">
+                                        <div class="cl center xl1 l1 m1 t1 asset-list-r2 hide-small-down">
+                                            <div class="asset-select">
+                                                <input id="asset-select-[ID]" type="checkbox" value="asset-select-[ID]" class="filled-in admin-block-line-b" onclick="checkSelected()">
+                                                <label for="asset-select-[ID]"></label>
+                                            </div>
+                                        </div>
+                                        <div class="cl xl2 l2 m2 t6 asset-list-r"id="asset-tag-[ID]">[VT TAG]</div>
+                                        <div class="cl xl3 l2 m2 t8 asset-list-r" id="asset-serial-[ID]">[S/N]</div>
+                                        <div class="cl xl3 l3 m3 t7 center asset-list-r" id="asset-value-[ID]">[MANUFACTURER]</div>
+                                        <div class="cl xl5 l4 m4 t10 asset-list-r truncate" id="asset-desc-[ID]">[DESCRIPTION]</div>
+                                        <div class="cl xl1 l2 m2 t6 center asset-list-r" id="asset-value-[ID]">$[VALUE]</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-vt-scan-[ID]">[VT SCAN]</div>
+                                        <div class="cl xl1 center hide-large-down asset-list-r" id="asset-purchased-[ID]">[PURCHASED]</div>
+                                        <div class="cl xl3 l5 m5 t20 center" id="status-[ID]" style="padding: 4px !important;">
+                                            <div class="asset-status asset-office">[STATUS]</div>
+                                        </div>
+                                        <div class="center cl xl2 m3 t20 asset-actions hide-medium-up" style="display: inline-flex;">
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to another faculty or staff" id="transfer-[ID]" onclick="transferModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exchange-alt" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Transfer asset to surplus" id="surplus-[ID]" onclick="surplusModalRequested(this.id)">
+                                                        <i class="fas fa-2x fa-external-link-square-alt"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View image gallery for asset and submit new images" id="gallery-[ID]" onclick="galleryModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-image" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="View and Download the CAUS Office and Home Use Forms" id="forms-[ID]" onclick="formsModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-folder" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                            <div class="center cl t4">
+                                                <button class="asset-action" title="Report Problem with Asset" id="problem-[ID]" onclick="ticketModalRequested(this.id)">
+                                                    <i class="fas fa-2x fa-exclamation-circle" data-fa-transform="shrink-5" data-fa-mask="fas fa-square"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rw" id="asset-more-[ID]">
+                                        <div class="rw" style="margin-top: 5px !important;">
+                                            <div class="cl xl1 t1 center asset-list-r2 hide-small-down">&nbsp;</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-custodian-[ID]"><b>CUSTODIAN: </b>[CUSTODIAN]</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-room-[ID]"><b>ROOM #: </b>[ROOM]</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-bldg-[ID]"><b>BUILDING: </b>[BLDG]</div>
+                                            <div class="cl xl2 l2 m2 t5 asset-list-r" id="asset-po-[ID]"><b>PO: </b>[PO]</div>
+                                            <div class="cl xl3 t5 asset-list-r" id="asset-cond-[ID]"><b>CONDITION: </b>[COND]</div>
+                                            <div class="center cl xl3 l3 m3 t10 hide-small-down asset-list-r" id="asset-own-[ID]"><b>OWNERSHIP: </b>[OWNERSHIP]</div>
+                                            <div class="center cl xl3 hide-large-down asset-list-r" id="asset-org-[ID]"><b>ORGANIZATION: </b>[ORGANIZATION]</div>
+                                            <div class="cl xl1 t1">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+<!-- END TEMPLATE faa-wpadmin-indv-report-fill.html -->
+<!-- BEGIN TEMPLATE faa-wpadmin-indv-report-footer.html -->
+                    </tbody>
+                        <tfoot>
+                            <tr class="rw asset-list-footer" style="margin:0px;">
+                                <td class="center cl t20" colspan="10"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+<!-- END TEMPLATE faa-wpadmin-indv-report-footer.html -->
+                </div>
+            </div>
+</body>
+</html>
