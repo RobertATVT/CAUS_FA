@@ -45,9 +45,7 @@
 			</div>
             </div>
         </div>
-        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;">
-            
-        </div>
+        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;"></div>
     </div>
     <div class="modal-footer">
         <div class="rw">
@@ -64,8 +62,8 @@
         </div>
     </div>
 </div>
-<!---- Notes Modal ----->
-<div id="notestModal-1" class="modal" style="width: 50% !important; display: block !important;">
+<!---- Notes Modal 1 ----->
+<div id="notesModal-1" class="modal" style="width: 50% !important;">
     <div class="modal-content">
         <h4 class="center faa-modal-title" id="modal-notes-title">Asset Notes</h4>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
@@ -108,15 +106,42 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <div class="center cl m20 t20 faa-modal-info info-title" style="text-transform: uppercase">New Note Information</div>
                 <div class="center cl m20 t20">
-				<textarea id ="changeReason" placeholder="Please enter detailed information on the purpose of this note." style="width: 100%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea>
-			</div>
+				    <textarea id ="changeReason" placeholder="Please enter detailed information on the purpose of this note." style="width: 100%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea>
+                </div>
             </div>
         </div>
-        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;">
+        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;"></div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="notesButton" onclick="addNote()">Add New Note</button>
+            <button type="button" class="btn btn-secondary modal-close">CANCEL</button>
+        </div>
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="reportButton" onclick="addNote()">SUBMIT REPORT</button>
-        <button type="button" class="btn btn-secondary modal-close">CANCEL</button>
+</div>
+<!---- Notes Modal 2 ----->
+<div id="notesModal-2" class="modal" style="width: 50% !important;">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title" id="modal-notes-title">Asset Notes</h4>
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+            <div class="rw faa-modal-info" style="margin-bottom: 5px;">
+                <div class="cl m2 t20 info-title"></div>
+                <div class="cl m2 t20 info-title">USER</div>
+                <div class="cl m4 t20">robertav</div>
+                <div class="cl m2 t20 info-title">DATE</div>
+                <div class="cl m4 t20">08-13-2019</div>
+                <div class="cl m2 t20 info-title">TYPE</div>
+                <div class="cl m4 t20">Transfer</div>
+            </div>
+<!-- BEGIN Notes Modal Fill -->
+            <div class="rw faa-modal-info" style="margin-bottom: -1px;">
+                <div class="cl t20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent elementum. Aliquet bibendum enim facilisis gravida neque. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Etiam erat velit scelerisque in dictum non consectetur. Enim sed faucibus turpis in eu. Fermentum et sollicitudin ac orci. Ipsum consequat nisl vel pretium lectus quam id leo in. Donec ac odio tempor orci dapibus. Vitae congue eu consequat ac felis donec et. Nunc eget lorem dolor sed viverra ipsum nunc.</div>
+            </div>
+<!-- END Notes Modal Fill -->
+
+        </div>
+        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;"></div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary modal-close">CLOSE</button>
+        </div>
     </div>
 </div>
 </body>
