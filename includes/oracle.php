@@ -94,6 +94,10 @@ function causfa_oracle_compare($oracle) {
                     array_push($exceptions_list, $result['exception']);
                     $changed = true;
                 }
+                $result = causfa_oracle_compare_last_inventory_date($row, $assets[$i]);
+                if ($result !== null) {
+                    $changed = true;   
+                }
                 if ($changed) {
                     $pending = $wpdb->get_row("SELECT * FROM causfa_pending WHERE FZVFORG_PTAG = '".$assets[$i]->FZVFORG_PTAG."';");
                     if ($pending != null) {
@@ -471,6 +475,19 @@ function causfa_oracle_compare_ownership($oracle, $asset) {
             array(
                 'FZVFORG_OWNER' => $oracle['FZVFORG_OWNER'],
                 'FZVFORG_OWNERSHIP' => $oracle['FZVFORG_OWNERSHIP']
+            ),
+            array('FZVFORG_PTAG' => $oracle['FZVFORG_PTAG']));
+    } else {
+        return null;   
+    }
+}
+function causfa_oracle_compare_last_inventory_date($oracle, $asset) {
+        global $wpdb;
+    if ($oracle['FZVFORG_LAST_INVENTORY_DATE'] != $asset->FZVFORG_LAST_INVENTORY_DATE) {
+        $wpdb->update(
+            'causfa_banner',
+            array(
+                'FZVFORG_LAST_INVENTORY_DATE' => $oracle['FZVFORG_LAST_INVENTORY_DATE']
             ),
             array('FZVFORG_PTAG' => $oracle['FZVFORG_PTAG']));
     } else {
