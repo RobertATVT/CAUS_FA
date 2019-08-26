@@ -50,7 +50,7 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_a, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_a, assets[i*11+0]['FZVFORG_AMOUNT']);
+            doc.text(695, group_a, '$'+assets[i*11+0]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
@@ -74,11 +74,11 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(splitSerial[0],450, group_a+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_a+11, 'BUILDING');
+            doc.text(635, group_a+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_a+11, assets[i*11+0]['FZVFORG_BLDG']);
-
+            doc.text(695, group_a+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_a+22, 'PO NUMBER');
@@ -87,18 +87,21 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(90, group_a+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_a+22, 'CONDITION');
-
-            doc.setFontType("normal");
-            doc.text(245, group_a+22, assets[i*11+0]['FZVFORG_CONDITION']);
-
-            doc.setFontType("bold");
-            doc.text(372, group_a+22, 'ORGANIZATION');
+            doc.text(153, group_a+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
             var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
-            var splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_a+22);
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_a+22);
+
+            doc.setFontType("bold");
+            doc.text(372, group_a+22, 'BUILDING');
+
+            doc.setFontType("normal");
+            /*doc.text(450, group_a+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_a+22);
 
             doc.setFontType("bold");
             doc.text(635, group_a+22, 'ROOM');
@@ -164,61 +167,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_b, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_b, assets[i*11+1]['FZVFORG_AMOUNT']);
+            doc.text(695, group_b, '$'+assets[i*11+1]['FZVFORG_AMOUNT']);
 
-            //----------------- ROW 2-----------------------//
+           //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_b+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_b+11, assets[i*11+1]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_b+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_b+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_b+11, assets[i*11+1]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_b+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_b+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+1]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_b+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_b+11, 'BUILDING');
+            doc.text(635, group_b+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_b+11, assets[i*11+1]['FZVFORG_BLDG']);
-
+            doc.text(695, group_b+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_b+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_b+22, assets[i*11+1]['FZVFORG_PO']);
+            doc.text(90, group_b+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_b+22, 'CONDITION');
+            doc.text(153, group_b+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_b+22, assets[i*11+1]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_b+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_b+22, 'ORGANIZATION');
+            doc.text(372, group_b+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+1]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_b+22);
+            /*doc.text(450, group_b+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_b+22);
 
             doc.setFontType("bold");
             doc.text(635, group_b+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_b+22, assets[i*11+1]['FZVFORG_ROOM']);
+            doc.text(695, group_b+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
@@ -278,61 +284,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_c, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_c, assets[i*11+2]['FZVFORG_AMOUNT']);
+            doc.text(695, group_c, '$'+assets[i*11+2]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_c+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_c+11, assets[i*11+2]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_c+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_c+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_c+11, assets[i*11+2]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_c+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_c+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+2]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_c+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_c+11, 'BUILDING');
+            doc.text(635, group_c+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_c+11, assets[i*11+2]['FZVFORG_BLDG']);
-
+            doc.text(695, group_c+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_c+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_c+22, assets[i*11+2]['FZVFORG_PO']);
+            doc.text(90, group_c+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_c+22, 'CONDITION');
+            doc.text(153, group_c+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_c+22, assets[i*11+2]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_c+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_c+22, 'ORGANIZATION');
+            doc.text(372, group_c+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+2]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_c+22);
+            /*doc.text(450, group_c+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_c+22);
 
             doc.setFontType("bold");
             doc.text(635, group_c+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_c+22, assets[i*11+2]['FZVFORG_ROOM']);
+            doc.text(695, group_c+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
@@ -392,61 +401,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_d, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_d, assets[i*11+3]['FZVFORG_AMOUNT']);
+            doc.text(695, group_d, '$'+assets[i*11+3]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_d+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_d+11, assets[i*11+3]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_d+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_d+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_d+11, assets[i*11+3]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_d+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_d+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+3]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_d+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_d+11, 'BUILDING');
+            doc.text(635, group_d+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_d+11, assets[i*11+3]['FZVFORG_BLDG']);
-
+            doc.text(695, group_d+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_d+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_d+22, assets[i*11+3]['FZVFORG_PO']);
+            doc.text(90, group_d+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_d+22, 'CONDITION');
+            doc.text(153, group_d+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_d+22, assets[i*11+3]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_d+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_d+22, 'ORGANIZATION');
+            doc.text(372, group_d+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+3]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_d+22);
+            /*doc.text(450, group_d+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_d+22);
 
             doc.setFontType("bold");
             doc.text(635, group_d+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_d+22, assets[i*11+3]['FZVFORG_ROOM']);
+            doc.text(695, group_d+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
@@ -506,61 +518,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_e, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_e, assets[i*11+4]['FZVFORG_AMOUNT']);
+            doc.text(695, group_e, '$'+assets[i*11+4]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_e+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_e+11, assets[i*11+4]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_e+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_e+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_e+11, assets[i*11+4]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_e+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_e+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+4]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_e+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_e+11, 'BUILDING');
+            doc.text(635, group_e+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_e+11, assets[i*11+4]['FZVFORG_BLDG']);
-
+            doc.text(695, group_e+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_e+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_e+22, assets[i*11+4]['FZVFORG_PO']);
+            doc.text(90, group_e+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_e+22, 'CONDITION');
+            doc.text(153, group_e+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_e+22, assets[i*11+4]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_e+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_e+22, 'ORGANIZATION');
+            doc.text(372, group_e+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+4]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_e+22);
+            /*doc.text(450, group_e+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_e+22);
 
             doc.setFontType("bold");
             doc.text(635, group_e+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_e+22, assets[i*11+4]['FZVFORG_ROOM']);
+            doc.text(695, group_e+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
@@ -620,61 +635,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_f, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_f, assets[i*11+5]['FZVFORG_AMOUNT']);
+            doc.text(695, group_f, '$'+assets[i*11+5]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_f+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_f+11, assets[i*11+5]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_f+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_f+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_f+11, assets[i*11+5]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_f+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_f+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+5]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_f+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_f+11, 'BUILDING');
+            doc.text(635, group_f+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_f+11, assets[i*11+5]['FZVFORG_BLDG']);
-
+            doc.text(695, group_f+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_f+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_f+22, assets[i*11+5]['FZVFORG_PO']);
+            doc.text(90, group_f+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_f+22, 'CONDITION');
+            doc.text(153, group_f+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_f+22, assets[i*11+5]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_f+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_f+22, 'ORGANIZATION');
+            doc.text(372, group_f+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+5]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_f+22);
+            /*doc.text(450, group_f+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_f+22);
 
             doc.setFontType("bold");
             doc.text(635, group_f+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_f+22, assets[i*11+5]['FZVFORG_ROOM']);
+            doc.text(695, group_f+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
@@ -734,61 +752,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_g, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_g, assets[i*11+6]['FZVFORG_AMOUNT']);
+            doc.text(695, group_g, '$'+assets[i*11+6]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_g+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_g+11, assets[i*11+6]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_g+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_g+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_g+11, assets[i*11+6]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_g+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_g+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+6]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_g+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_g+11, 'BUILDING');
+            doc.text(635, group_g+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_g+11, assets[i*11+6]['FZVFORG_BLDG']);
-
+            doc.text(695, group_g+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_g+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_g+22, assets[i*11+6]['FZVFORG_PO']);
+            doc.text(90, group_g+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_g+22, 'CONDITION');
+            doc.text(153, group_g+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_g+22, assets[i*11+6]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_g+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_g+22, 'ORGANIZATION');
+            doc.text(372, group_g+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+6]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_g+22);
+            /*doc.text(450, group_g+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_g+22);
 
             doc.setFontType("bold");
             doc.text(635, group_g+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_g+22, assets[i*11+6]['FZVFORG_ROOM']);
+            doc.text(695, group_g+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
@@ -848,61 +869,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_h, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_h, assets[i*11+7]['FZVFORG_AMOUNT']);
+            doc.text(695, group_h, '$'+assets[i*11+7]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_h+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_h+11, assets[i*11+7]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_h+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_h+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_h+11, assets[i*11+7]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_h+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_h+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+7]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_h+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_h+11, 'BUILDING');
+            doc.text(635, group_h+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_h+11, assets[i*11+7]['FZVFORG_BLDG']);
-
+            doc.text(695, group_h+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_h+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_h+22, assets[i*11+7]['FZVFORG_PO']);
+            doc.text(90, group_h+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_h+22, 'CONDITION');
+            doc.text(153, group_h+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_h+22, assets[i*11+7]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_h+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_h+22, 'ORGANIZATION');
+            doc.text(372, group_h+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+7]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_h+22);
+            /*doc.text(450, group_h+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_h+22);
 
             doc.setFontType("bold");
             doc.text(635, group_h+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_h+22, assets[i*11+7]['FZVFORG_ROOM']);
+            doc.text(695, group_h+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
@@ -962,61 +986,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_i, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_i, assets[i*11+8]['FZVFORG_AMOUNT']);
+            doc.text(695, group_i, '$'+assets[i*11+8]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_i+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_i+11, assets[i*11+8]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_i+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_i+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_i+11, assets[i*11+8]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_i+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_i+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+8]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_i+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_i+11, 'BUILDING');
+            doc.text(635, group_i+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_i+11, assets[i*11+8]['FZVFORG_BLDG']);
-
+            doc.text(695, group_i+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_i+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_i+22, assets[i*11+8]['FZVFORG_PO']);
+            doc.text(90, group_i+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_i+22, 'CONDITION');
+            doc.text(153, group_i+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_i+22, assets[i*11+8]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_i+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_i+22, 'ORGANIZATION');
+            doc.text(372, group_i+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+8]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_i+22);
+            /*doc.text(450, group_i+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_i+22);
 
             doc.setFontType("bold");
             doc.text(635, group_i+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_i+22, assets[i*11+8]['FZVFORG_ROOM']);
+            doc.text(695, group_i+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
@@ -1076,61 +1103,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_j, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_j, assets[i*11+9]['FZVFORG_AMOUNT']);
+            doc.text(695, group_j, '$'+assets[i*11+9]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_j+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_j+11, assets[i*11+9]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_j+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_j+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_j+11, assets[i*11+9]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_j+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_j+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+9]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_j+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_j+11, 'BUILDING');
+            doc.text(635, group_j+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_j+11, assets[i*11+9]['FZVFORG_BLDG']);
-
+            doc.text(695, group_j+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_j+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_j+22, assets[i*11+9]['FZVFORG_PO']);
+            doc.text(90, group_j+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_j+22, 'CONDITION');
+            doc.text(153, group_j+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_j+22, assets[i*11+9]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_j+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_j+22, 'ORGANIZATION');
+            doc.text(372, group_j+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+9]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_j+22);
+            /*doc.text(450, group_j+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_j+22);
 
             doc.setFontType("bold");
             doc.text(635, group_j+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_j+22, assets[i*11+9]['FZVFORG_ROOM']);
+            doc.text(695, group_j+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
@@ -1190,61 +1220,64 @@ function generatePrintedReport(assets, searchCriteria) {
             doc.text(635, group_k, 'VALUE');
 
             doc.setFontType("normal");
-            doc.text(695, group_k, assets[i*11+10]['FZVFORG_AMOUNT']);
+            doc.text(695, group_k, '$'+assets[i*11+10]['FZVFORG_AMOUNT']);
 
             //----------------- ROW 2-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_k+11, 'PURCHASED');
 
             doc.setFontType("normal");
-            doc.text(90, group_k+11, assets[i*11+10]['FZVFORG_ACQ_DATE']);
+            doc.text(90, group_k+11, assets[i*11+0]['FZVFORG_ACQ_DATE']);
 
             doc.setFontType("bold");
             doc.text(153, group_k+11, 'LAST VT SCAN');
 
             doc.setFontType("normal");
-            doc.text(245, group_k+11, assets[i*11+10]['FZVFORG_LAST_INVENTORY_DATE']);
+            doc.text(245, group_k+11, assets[i*11+0]['FZVFORG_LAST_INVENTORY_DATE']);
 
             doc.setFontType("bold");
             doc.text(372, group_k+11, 'SERIAL');
 
             doc.setFontType("normal");
-            serialText = assets[i*11+10]['FZVFORG_SERIAL_NUM'];
-            splitSerial = doc.splitTextToSize(serialText, 180);
+            var serialText = assets[i*11+0]['FZVFORG_SERIAL_NUM'];
+            var splitSerial = doc.splitTextToSize(serialText, 180);
             doc.text(splitSerial[0],450, group_k+11);
 
             doc.setFontType("bold");
-            doc.text(635, group_k+11, 'BUILDING');
+            doc.text(635, group_k+11, 'CONDITION');
 
             doc.setFontType("normal");
-            doc.text(695, group_k+11, assets[i*11+10]['FZVFORG_BLDG']);
-
+            doc.text(695, group_k+11, assets[i*11+0]['FZVFORG_CONDITION']);
+            
             //----------------- ROW 3-----------------------//
             doc.setFontType("bold");
             doc.text(15, group_k+22, 'PO NUMBER');
 
             doc.setFontType("normal");
-            doc.text(90, group_k+22, assets[i*11+10]['FZVFORG_PO']);
+            doc.text(90, group_k+22, assets[i*11+0]['FZVFORG_PO']);
 
             doc.setFontType("bold");
-            doc.text(153, group_k+22, 'CONDITION');
+            doc.text(153, group_k+22, 'ORGANIZATION');
 
             doc.setFontType("normal");
-            doc.text(245, group_k+22, assets[i*11+10]['FZVFORG_CONDITION']);
+            var orgText = assets[i*11+0]['FZVFORG_ORGN_TITLE'];
+            var splitORG = doc.splitTextToSize(orgText, 128);
+            doc.text(splitORG[0],245, group_k+22);
 
             doc.setFontType("bold");
-            doc.text(372, group_k+22, 'ORGANIZATION');
+            doc.text(372, group_k+22, 'BUILDING');
 
             doc.setFontType("normal");
-            orgText = assets[i*11+10]['FZVFORG_ORGN_TITLE'];
-            splitORG = doc.splitTextToSize(orgText, 180);
-            doc.text(splitORG[0],450, group_k+22);
+            /*doc.text(450, group_k+22, assets[i*11+0]['FZVFORG_BLDG']);*/
+            var bldgText = assets[i*11+0]['FZVFORG_BLDG'];
+            var splitBLDG = doc.splitTextToSize(bldgText, 180);
+            doc.text(splitBLDG[0],450, group_k+22);
 
             doc.setFontType("bold");
             doc.text(635, group_k+22, 'ROOM');
 
             doc.setFontType("normal");
-            doc.text(695, group_k+22, assets[i*11+10]['FZVFORG_ROOM']);
+            doc.text(695, group_k+22, assets[i*11+0]['FZVFORG_ROOM']);
 
             //----------------- ROW 4 -----------------------//
             doc.setFontType("bold");
