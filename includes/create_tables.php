@@ -238,4 +238,13 @@ function create_tables() {
         )".$charset_collate.";";
         dbDelta($sql);
     }
+    $table_name = 'causfa_org';
+    if($wpdb->get_var("SHOW TABLE LIKE '".$table_name."'") != $table_name) {
+        $sql = "CREATE TABLE ".$table_name." (
+        CODE varchar(4) NOT NULL,
+        VALUE longtext NOT NULL,
+        PRIMARY KEY (CODE)
+        )".$charset_collate.";";
+        dbDelta($sql);
+    }
 }
