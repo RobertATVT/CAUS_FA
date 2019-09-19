@@ -16,11 +16,11 @@ function causfa_surplus() {
         'message' => '',
     );
     $ptag = $_SESSION['ptag'];
-    $PID_origin = $_SESSION['PID'];
+    $PID_origin = wp_get_current_user()->user_nicename;
     $type = $_POST['type'];
     $date_created = current_time('mysql');
     $PID_dest = 'surplus';
-    $pending_status = 0;
+    $pending_status = $_POST['status'];
     $wpdb->insert(
         'causfa_pending',
         array(
@@ -63,7 +63,7 @@ function causfa_bulk_surplus() {
     );
     $ptags = $_POST['ptags'];
     $ptags = explode(',', $ptags);
-    $PID_origin = $_SESSION['PID'];
+    $PID_origin = wp_get_current_user()->user_nicename;
     $type = $_POST['type'];
     $date_created = current_time('mysql');
     $PID_dest = 'surplus';
@@ -72,7 +72,7 @@ function causfa_bulk_surplus() {
     foreach($Assignee_info as $value) {
         $Assignee_pids[] = $value['PID'];
     }
-    $pending_status = 0;
+    $pending_status = $_POST['status'];
     for ($i = 0; $i < count($ptags); $i++) {
         $wpdb->insert(
             'causfa_pending',

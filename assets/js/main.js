@@ -7,7 +7,6 @@ function getDate(){
     var dd = d < 10 ? '0' + d : d;
     return '' + y + mm + dd;; 
 }
-
 function getReportType(searchType){
     var reportType = searchType.substr(0, searchType.indexOf("-"));
     var reportType = reportType.trim();
@@ -35,7 +34,6 @@ function getReportType(searchType){
             break;
     }
 }
-
 function acceptEULA(status) {
     var form = {
         'action': 'causfa_eula',
@@ -93,7 +91,6 @@ function submitSVar(obj) {
         }
     });
 }
-
 function addAsset() {
     var ptag = $('#addAssetPTAG').val();
     var serial = $('#addAssetSerial').val();
@@ -131,7 +128,6 @@ function addAsset() {
         });
     }
 }
-
 function checkSelected() {
     var input = jQuery('.tablesorter').find('.asset-select').find( "input:checkbox:checked" );
     if (input.length > 1) {
@@ -200,7 +196,67 @@ function checkSelected() {
         }
     }
 }
-
+function checkSelectedAdmin() {
+    var input = jQuery('.tablesorter').find('.asset-select').find( "input:checkbox:checked" );
+    if (input.length > 1) {
+        jQuery("#transfer-ribbon").removeClass("ribbon-disabled");
+        jQuery("#transfer-ribbon").addClass("ribbon-active");
+        jQuery("#transfer-ribbon-button").attr('onClick', 'bulkTransferModalRequested()');
+        jQuery("#surplus-ribbon").removeClass("ribbon-disabled");
+        jQuery("#surplus-ribbon").addClass("ribbon-active");
+        jQuery("#surplus-ribbon-button").attr('onClick', 'bulkSurplusModalRequested()');
+        jQuery("#gallery-ribbon").removeClass("ribbon-active");
+        jQuery("#gallery-ribbon").addClass("ribbon-disabled");
+        jQuery("#gallery-ribbon-button").attr('onClick', '');
+        jQuery("#forms-ribbon").removeClass("ribbon-active");
+        jQuery("#forms-ribbon").addClass("ribbon-disabled");
+        jQuery("#forms-ribbon-button").attr('onClick', '');
+        jQuery("#notes-ribbon").removeClass("ribbon-active");
+        jQuery("#notes-ribbon").addClass("ribbon-disabled");
+        jQuery("#notes-ribbon-button").attr('onClick', '');
+        jQuery("#status-ribbon").removeClass("ribbon-disabled");
+        jQuery("#status-ribbon").addClass("ribbon-active");
+        jQuery("#status-ribbon-button").attr('onClick', '');
+    } else if (input.length > 0) {
+        jQuery("#transfer-ribbon").removeClass("ribbon-disabled");
+        jQuery("#transfer-ribbon").addClass("ribbon-active");
+        jQuery("#transfer-ribbon-button").attr('onClick', 'bulkTransferModalRequested()');
+        jQuery("#surplus-ribbon").removeClass("ribbon-disabled");
+        jQuery("#surplus-ribbon").addClass("ribbon-active");
+        jQuery("#surplus-ribbon-button").attr('onClick', 'bulkSurplusModalRequested()');
+        jQuery("#gallery-ribbon").removeClass("ribbon-disabled");
+        jQuery("#gallery-ribbon").addClass("ribbon-active");
+        jQuery("#gallery-ribbon-button").attr('onClick', 'bulkGalleryModalRequested()');
+        jQuery("#forms-ribbon").removeClass("ribbon-disabled");
+        jQuery("#forms-ribbon").addClass("ribbon-active");
+        jQuery("#forms-ribbon-button").attr('onClick', 'bulkFormsModalRequested()');
+        jQuery("#notes-ribbon").removeClass("ribbon-disabled");
+        jQuery("#notes-ribbon").addClass("ribbon-active");
+        jQuery("#notes-ribbon-button").attr('onClick', '');
+        jQuery("#status-ribbon").removeClass("ribbon-disabled");
+        jQuery("#status-ribbon").addClass("ribbon-active");
+        jQuery("#status-ribbon-button").attr('onClick', '');
+    } else {
+        jQuery("#transfer-ribbon").removeClass("ribbon-active");
+        jQuery("#transfer-ribbon").addClass("ribbon-disabled");
+        jQuery("#transfer-ribbon-button").attr('onClick', '');
+        jQuery("#surplus-ribbon").removeClass("ribbon-active");
+        jQuery("#surplus-ribbon").addClass("ribbon-disabled");
+        jQuery("#surplus-ribbon-button").attr('onClick', '');
+        jQuery("#gallery-ribbon").removeClass("ribbon-active");
+        jQuery("#gallery-ribbon").addClass("ribbon-disabled");
+        jQuery("#gallery-ribbon-button").attr('onClick', '');
+        jQuery("#forms-ribbon").removeClass("ribbon-active");
+        jQuery("#forms-ribbon").addClass("ribbon-disabled");
+        jQuery("#forms-ribbon-button").attr('onClick', '');
+        jQuery("#notes-ribbon").removeClass("ribbon-active");
+        jQuery("#notes-ribbon").addClass("ribbon-disabled");
+        jQuery("#notes-ribbon-button").attr('onClick', '');
+        jQuery("#status-ribbon").removeClass("ribbon-active");
+        jQuery("#status-ribbon").addClass("ribbon-disabled");
+        jQuery("#status-ribbon-button").attr('onClick', '');
+    }
+}
 function causfa_run_full_org() {
     es = new EventSource('https://inside.caus.vt.edu/wp-json/causfa/v1/oracle');
     es.addEventListener('message', function(e) {

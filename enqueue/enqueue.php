@@ -96,10 +96,14 @@ function causfa_admin_enqueue() {
     wp_register_script('causadmin_main', plugins_url('assets/js/main.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_transfer', plugins_url('assets/js/transfer.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_surplus', plugins_url('assets/js/surplus.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causadmin_gallery', plugins_url('assets/js/gallery.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causadmin_forms', plugins_url('assets/js/forms.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_report_problem', plugins_url('assets/js/report_problem.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causadmin_slick_script', plugins_url('assets/slick/slick.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_awesomplete_script', plugins_url('assets/js/awesomplete.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_jquery_ui_script', plugins_url('assets/js/jquery-ui.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_generate_report_script', plugins_url('assets/js/generate-report.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causadmin_forms_script', plugins_url('assets/js/generate-form.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_jspdf_script', plugins_url('assets/js/jsPDF-master/dist/jspdf.debug.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_transfer_script', plugins_url('assets/js/transfer.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     
@@ -110,10 +114,14 @@ function causfa_admin_enqueue() {
     wp_enqueue_script('causadmin_main');
     wp_enqueue_script('causadmin_transfer');
     wp_enqueue_script('causadmin_surplus');
+    wp_enqueue_script('causadmin_gallery');
+    wp_enqueue_script('causadmin_forms');
     wp_enqueue_script('causadmin_report_problem');
+    wp_enqueue_script('causadmin_slick_script');
     wp_enqueue_script('causadmin_awesomplete_script');
     wp_enqueue_script('causadmin_jquery_ui_script');
     wp_enqueue_script('causadmin_generate_report_script');
+    wp_enqueue_script('causadmin_forms_script');
     wp_enqueue_script('causadmin_jspdf_script');
     wp_enqueue_script('causadmin_transfer_script');
     

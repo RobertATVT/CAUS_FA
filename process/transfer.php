@@ -12,11 +12,11 @@ function causfa_transfer_asset() {
         'message' => ''
     );
     $ptag = $_POST['ptag'];
-    $PID_origin = $_SESSION['PID'];
+    $PID_origin = wp_get_current_user()->user_nicename;
     $type = $_POST['type'];
     $date_created = current_time('mysql');
     $PID_dest = $_POST['dest'];
-    $pending_status = 0;
+    $pending_status = $_POST['status'];
     $wpdb->insert(
         'causfa_pending',
         array(
@@ -59,12 +59,12 @@ function causfa_bulk_transfer_asset() {
     );
     $ptags = $_POST['ptags'];
     $ptags = explode(',', $ptags);
-    $PID_origin = $_SESSION['PID'];
+    $PID_origin = wp_get_current_user()->user_nicename;
     $type = $_POST['type'];
     $date_created = current_time('mysql');
     $PID_dests = $_POST['dests'];
     $PID_dests = explode(',', $PID_dests);
-    $pending_status = 0;
+    $pending_status = $_POST['status'];
     for($i = 0; $i < count($ptags); $i++) {
         $wpdb->insert(
             'causfa_pending',

@@ -1,6 +1,6 @@
 // Forms Modal Functions
 function formsModalRequested(elementID) {
-    $('#last-form').html('');
+    jQuery('#last-form').html('');
     var id = elementID.split('-')[1];
     var tag = document.getElementById(('asset-tag-' + id)).innerHTML;
     var form = {
@@ -24,11 +24,11 @@ function getLastForm(tag) {
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] === 0) {
-            $('#last-form').html('No form on record');
+            jQuery('#last-form').html('No form on record');
         } else if(data['type'] === 0) {
-            $('#last-form').html('<a target="_blank" href="' + data['url'] + '">OfficeUse-' + data['date'] + '</a>');
+            jQuery('#last-form').html('<a target="_blank" href="' + data['url'] + '">OfficeUse-' + data['date'] + '</a>');
         } else {
-            $('#last-form').html('<a target="_blank" href="' + data['url'] + '">HomeUse-' + data['date'] + '</a>');
+            jQuery('#last-form').html('<a target="_blank" href="' + data['url'] + '">HomeUse-' + data['date'] + '</a>');
         }
 
     });
@@ -80,17 +80,17 @@ function uploadFormHome(){
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    $('#homeFormToUpload').val('');
-                    $('#formsModal').modal('close');
-                    var status = $('#status-' + id);
+                    jQuery('#homeFormToUpload').val('');
+                    jQuery('#formsModal').modal('close');
+                    var status = jQuery('#status-' + id);
                     status.children().html('Home Use');
                     status.children().removeClass();
                     status.children().attr('class','asset-status asset-home');
                     var checkbox = jQuery(('#asset-select-' + id));
                     checkbox.attr('checked', false);
-                    $('#modal-response-title').html('File Upload Successful');
-                    $('#modal-response-alert').html(data['message']);
-                    var modal = $('#responseModal').modal();
+                    jQuery('#modal-response-title').html('File Upload Successful');
+                    jQuery('#modal-response-alert').html(data['message']);
+                    var modal = jQuery('#responseModal').modal();
                     modal.modal('open');
                 }
             }
@@ -120,17 +120,17 @@ function uploadFormOffice(){
                 if (data['status'] == 0) {
                     alert(data['message']);
                 } else {
-                    $('#officeFormToUpload').val('');
-                    $('#formsModal').modal('close');
-                    var status = $('#status-' + id);
+                    jQuery('#officeFormToUpload').val('');
+                    jQuery('#formsModal').modal('close');
+                    var status = jQuery('#status-' + id);
                     status.children().html('Office Use');
                     status.children().removeClass();
                     status.children().attr('class','asset-status asset-office');
                     var checkbox = jQuery(('#asset-select-' + id));
                     checkbox.attr('checked', false);
-                    $('#modal-response-title').html('File Upload Successful');
-                    $('#modal-response-alert').html(data['message']);
-                    var modal = $('#responseModal').modal();
+                    jQuery('#modal-response-title').html('File Upload Successful');
+                    jQuery('#modal-response-alert').html(data['message']);
+                    var modal = jQuery('#responseModal').modal();
                     modal.modal('open');
                 }
             }

@@ -216,6 +216,36 @@ function transferAsset() {
             dest: PID_dest,
             ptag: tag,
             type: 0,
+            status: 0
+        };
+        jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+            if(data['status'] == 1) {
+                var id = jQuery('#transferModal').find('#transferIndex').val();
+                var status = jQuery(('#status-' + id));
+                status.html('<div class="asset-status asset-pending">Pending Transfer</div>');
+                jQuery(('#transfer-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+                jQuery(('#surplus-' + id)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+                jQuery('#transferModal').modal('close');
+                jQuery('#responseModal').find('#modal-response-title').text('Transfer Request Submitted');
+                jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
+                jQuery('#responseModal').modal();
+                jQuery('#responseModal').modal('open');
+            }
+        });
+    }
+}
+
+function transferAssetAdmin() {
+    var id = jQuery('#transferIndex').val();
+    var tag = jQuery('#asset-tag-' + id).html();
+    var PID_dest = validateForm();
+    if (PID_dest !== false) {
+        var form = {
+            action: 'causfa_transfer_asset',
+            dest: PID_dest,
+            ptag: tag,
+            type: 0,
+            status: 3
         };
         jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
             if(data['status'] == 1) {
@@ -253,7 +283,71 @@ function bulkTransferAsset() {
         action: 'causfa_bulk_transfer_asset',
         dests: PID_dests.join(','),
         ptags: tags.join(','),
-        type: 0
+        type: 0,
+        status: 0
+    };
+    jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
+        if (data['status'] == 1) {
+            for (var i = 0; i < ids_successful.length; i++) {
+                var index = ids_successful[i];
+                var status = jQuery(('#status-' + index));
+                status.html('<div class="asset-status asset-pending">Pending Transfer</div>');
+                jQuery(('#transfer-' + index)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+                jQuery(('#surplus-' + index)).attr('onclick', 'modalRequestedOnPendingAsset(this.id)');
+                var checkbox = jQuery(('#asset-select-' + index));
+                checkbox.attr('checked', false);
+                checkbox.attr('disabled', 'disabled');
+            }
+            checkSelected();
+            if (ids_successful.length == ids.length) {
+                    jQuery('#bulk-transferModal').modal('close');
+                    jQuery('#responseModal').find('#modal-response-title').text('Transfer Request Submitted');
+                    jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
+                    jQuery('#responseModal').modal();
+                    jQuery('#responseModal').modal('open');
+                } else {
+                    for (i = 0; i < ids_successful.length; i++) {
+                        var asset = document.getElementById('bulk-asset-tag-' + ids_successful[i]).parentNode.parentNode;
+                        asset.parentNode.removeChild(asset);
+                        ids.splice(ids.indexOf(ids_successful[i]), 1);
+                        jQuery('#bulk-transfer-ids').val(ids);
+
+                    }
+                    var checkboxes = jQuery("#bulk-transfer-items").find("input:checkbox");
+                    for (i = 0; i < checkboxes.length; i++) {
+                        checkboxes[i].checked = false;
+                        checkboxes[i].disabled = true;
+                        checkboxes[i].onclick = '';
+                        jQuery('#recipient-name-' + checkboxes[i].id.split('-')[2]).val('');
+                    }
+                }
+        }
+    })
+
+
+}
+
+function bulkTransferAssetAdmin() {
+    var ids = jQuery('#bulk-transfer-ids').val();
+    ids = ids.split(', ');
+    var ids_successful = [];
+    var tags = [];
+    var PID_dests = [];
+    for (var i = 0; i < ids.length; i++) {
+        var tag = jQuery('#asset-tag-' + ids[i]).html();
+        var PID_dest = validateFormBulk(ids[i]);
+        if (PID_dest !== false) {
+            ids_successful.push(ids[i]);
+            tags.push(tag);
+            PID_dests.push(PID_dest);
+        }
+    }
+    var form = {
+        action: 'causfa_bulk_transfer_asset',
+        dests: PID_dests.join(','),
+        ptags: tags.join(','),
+        type: 0,
+        status: 3
     };
     jQuery.post(causfa_action_obj.ajax_url, form, function(data) {
         if (data['status'] == 1) {
