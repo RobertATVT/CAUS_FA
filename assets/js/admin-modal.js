@@ -1102,7 +1102,7 @@ function cancelRequest(process, stage) {
     }
 }
 function admin_uploadFormHome() {
-    var fileInput = jQuery('#homeFormToUpload');
+    var fileInput = jQuery('#homeFormToUpload_t');
     var file = fileInput.prop('files')[0];
     if (!file) {
         alert('Please select a file to upload');
@@ -1147,7 +1147,7 @@ function admin_uploadFormHome() {
     }
 }
 function admin_uploadFormOffice() {
-    var fileInput = jQuery('#officeFormToUpload');
+    var fileInput = jQuery('#officeFormToUpload_t');
     var file = fileInput.prop('files')[0];
     if (!file) {
         alert('Please select a file to upload');
