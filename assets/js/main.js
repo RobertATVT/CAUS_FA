@@ -232,7 +232,7 @@ function checkSelectedAdmin() {
         jQuery("#forms-ribbon-button").attr('onClick', 'bulkFormsModalRequested()');
         jQuery("#notes-ribbon").removeClass("ribbon-disabled");
         jQuery("#notes-ribbon").addClass("ribbon-active");
-        jQuery("#notes-ribbon-button").attr('onClick', '');
+        jQuery("#notes-ribbon-button").attr('onClick', 'notesModalRequested()');
         jQuery("#status-ribbon").removeClass("ribbon-disabled");
         jQuery("#status-ribbon").addClass("ribbon-active");
         jQuery("#status-ribbon-button").attr('onClick', '');

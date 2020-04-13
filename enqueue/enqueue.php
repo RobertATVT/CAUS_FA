@@ -104,6 +104,7 @@ function causfa_admin_enqueue() {
     wp_register_script('causadmin_jquery_ui_script', plugins_url('assets/js/jquery-ui.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_generate_report_script', plugins_url('assets/js/generate-report.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_forms_script', plugins_url('assets/js/generate-form.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
+    wp_register_script('causfa_notes_script', plugins_url('assets/js/notes.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_jspdf_script', plugins_url('assets/js/jsPDF-master/dist/jspdf.debug.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     wp_register_script('causadmin_transfer_script', plugins_url('assets/js/transfer.js', CAUSFA_PLUGIN_URL), array('jquery'), false, true);
     
@@ -122,6 +123,7 @@ function causfa_admin_enqueue() {
     wp_enqueue_script('causadmin_jquery_ui_script');
     wp_enqueue_script('causadmin_generate_report_script');
     wp_enqueue_script('causadmin_forms_script');
+    wp_enqueue_script('causfa_notes_script');
     wp_enqueue_script('causadmin_jspdf_script');
     wp_enqueue_script('causadmin_transfer_script');
     

@@ -86,6 +86,7 @@ add_action( 'wp_ajax_causfa_close_ticket', 'causfa_close_ticket');
 add_action( 'wp_ajax_causfa_eula', 'causfa_eula');
 add_action( 'wp_ajax_causfa_get_report', 'causfa_get_report');
 add_action( 'wp_ajax_causfa_report_data', 'causfa_report_data');
+add_action( 'wp_ajax_causfa_pull_notes', 'causfa_pull_notes');
 add_action( 'rest_api_init', function () {
     register_rest_route( 'causfa/v1', '/progressbar', array(
         'methods' => 'GET',

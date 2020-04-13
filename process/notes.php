@@ -28,3 +28,19 @@ function causfa_add_note() {
     );
     wp_send_json($output);
 }
+
+function causfa_pull_notes() {
+    global $wpdb;
+    $ptag = $_POST['ptag'];
+    $results = $wpdb->get_results("SELECT * FROM causfa_notes WHERE FZVFORG_PTAG = ".$ptag);
+    $output = '';
+    foreach($results as $result) {
+        $output = $output.'<div class="rw faa-modal-fill" style="margin-bottom: -1px;">
+                <div class="cl m3 t20 center note-fill"><span>'.$result->CREATOR.'</span></div>
+                <div class="cl m3 t20 center note-fill"><span>'.$result->DATE_CREATED.'</span></div>
+                <div class="cl m3 t20 center note-fill"><span>'.$result->ACTION.'</span></div>
+                <div class="cl m11 t20 center note-fill"><a href="#" id="notePreview">'.$result->NOTE.'</a></div>
+            </div>';
+    }
+    wp_send_json($output);
+}
