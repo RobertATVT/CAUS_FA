@@ -105,6 +105,51 @@
             </div>
         </div>
     </div>
+<!-----Change Status Modal----->
+<div id="statusModal" class="modal">
+    <div class="modal-content">
+        <h4 class="center faa-modal-title">Change Asset Status</h4> 
+        <div class="rw" style="padding: 10px; margin-bottom: 0px;">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+                <div class="cl m3 t20 info-title" style="padding: 0px;">Current Status</div>
+                <div class="cl m6 t20"><span class="asset-status"></span></div>
+                <div class="cl m3 t20 info-title" style="padding: 0px;">Change To: </div>
+                <div class="cl m8 t20">
+                    <select id="status">
+                        <option value="">Choose the New Status</option>
+                        <option value="office">Office Use</option>
+                        <option value="home">Home Use</option>
+                        <option value="missing">Missing</option>
+                        <option value="missing-rec">Missing Reconciled</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -10px;">
+            <div class="rw faa-modal-info" style="margin-bottom: 0px">
+                <div class="center cl m20 t20 faa-modal-info info-title" style="text-transform: uppercase">Reason for status change</div>
+                <div class="center cl m20 t20">
+				<textarea id ="changeReason" placeholder="Please enter why you changed the status of this asset." style="width: 100%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea>
+			</div>
+            </div>
+        </div>
+        <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;"></div>
+    </div>
+    <div class="modal-footer">
+        <div class="rw">
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="changeStatus()">Change Status</button>
+            </div>
+            <div class="center cl t10 hide-medium-up">
+                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            </div>
+            <div class="cl m20 hide-small-down">
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="changeStatus()">Change Status</button>
+                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!---- Notes Modal 1 ----->
 <div id="notesModal-1" class="modal" style="width: 50% !important;">
     <div class="modal-content">
@@ -121,13 +166,13 @@
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <div class="center cl m20 t20 faa-modal-info info-title" style="text-transform: uppercase">New Note Information</div>
                 <div class="center cl m20 t20">
-				    <textarea id ="changeReason" placeholder="Please enter detailed information on the purpose of this note." style="width: 100%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea>
+				    <textarea id ="noteText" placeholder="Please enter detailed information on the purpose of this note." style="width: 100%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea>
                 </div>
             </div>
         </div>
         <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;"></div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary" id="notesButton" onclick="addNote()">Add New Note</button>
+            <button type="button" class="btn btn-primary" id="notesButton" onclick="addNoteFromNoteModal()">Add New Note</button>
             <button type="button" class="btn btn-secondary modal-close">CANCEL</button>
         </div>
     </div>
