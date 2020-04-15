@@ -111,16 +111,16 @@
         <h4 class="center faa-modal-title">Change Asset Status</h4> 
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
+                <input type="hidden" id="changeStatusPtag">
+                <input type="hidden" id="changeStatusIndex">
                 <div class="cl m3 t20 info-title" style="padding: 0px;">Current Status</div>
                 <div class="cl m6 t20"><span class="asset-status"></span></div>
                 <div class="cl m3 t20 info-title" style="padding: 0px;">Change To: </div>
                 <div class="cl m8 t20">
                     <select id="status">
                         <option value="">Choose the New Status</option>
-                        <option value="office">Office Use</option>
-                        <option value="home">Home Use</option>
-                        <option value="missing">Missing</option>
-                        <option value="missing-rec">Missing Reconciled</option>
+                        <option value="1">Missing</option>
+                        <option value="2">Missing Reconciled</option>
                     </select>
                 </div>
             </div>
@@ -138,13 +138,13 @@
     <div class="modal-footer">
         <div class="rw">
             <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="changeStatus()">Change Status</button>
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="submitStatusChange()">Change Status</button>
             </div>
             <div class="center cl t10 hide-medium-up">
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
             <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="changeStatus()">Change Status</button>
+                <button type="button" class="btn btn-primary" id="transferButton" onclick="submitStatusChange()">Change Status</button>
                 <button type="button" class="btn btn-secondary modal-close">Cancel</button>
             </div>
         </div>

@@ -235,7 +235,7 @@ function checkSelectedAdmin() {
         jQuery("#notes-ribbon-button").attr('onClick', 'notesModalRequested()');
         jQuery("#status-ribbon").removeClass("ribbon-disabled");
         jQuery("#status-ribbon").addClass("ribbon-active");
-        jQuery("#status-ribbon-button").attr('onClick', '');
+        jQuery("#status-ribbon-button").attr('onClick', 'changeStatusModalRequested()');
     } else {
         jQuery("#transfer-ribbon").removeClass("ribbon-active");
         jQuery("#transfer-ribbon").addClass("ribbon-disabled");
