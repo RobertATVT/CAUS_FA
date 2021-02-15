@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
  * Created by PhpStorm.
  * User: mattwj6
@@ -23,11 +23,6 @@
  * 12 = surplus - Surplus picked up and confirmation uploaded
  * 13 = surplus - Updated in banner
  * 14 = surplus - Cancelled by Liaison/IT
- * 15 = image upload
- * 16 = home use form upload
- * 17 = office use form upload
- * 18 = add asset request
- * 19 = asset ticket submitted
  */
 function causfa_logger($input) {
     global $wpdb;
@@ -41,11 +36,11 @@ function causfa_logger_login($user_login, $user) {
     $wpdb->insert(
         'causfa_logs',
         array(
-            'PID' => $PID,
-            'Action' => 0,
-            'FZVFORG_PTAG' => null,
-            'PID_dest' => null,
-            'Info' => null
+            "PID" => $PID,
+            "Action" => 0,
+            "FZVFORG_PTAG" => null,
+            "PID_dest" => null,
+            "Info" => null
         ), array('%s', '%d', '%s', '%s', '%s')
     );
 }
@@ -59,11 +54,11 @@ function causfa_ajax_logger() {
     $wpdb->insert(
         'causfa_logs',
         array(
-            PID => $PID,
-            Action=> $type,
-            FZVFORG_PTAG => $ptag,
-            PID_dest => $PID_dest,
-            Info => $Info
+            "PID" => $PID,
+            "Action" => $type,
+            "FZVFORG_PTAG" => $ptag,
+            "PID_dest" => $PID_dest,
+            "Info" => $Info
         ), array('%s', '%d', '%s', '%s', '%s')
     );
     wp_send_json('1');
