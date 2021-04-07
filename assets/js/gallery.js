@@ -45,6 +45,7 @@ function galleryModalRequested(elementID) {
         });
     }
     jQuery('#galleryModal').modal();
+	document.getElementById('galleryModal').style.maxWidth = "1024px";
     jQuery('#galleryModal').modal('open');
 }
 

@@ -15,6 +15,7 @@ function formsModalRequested(elementID) {
     jQuery('#homeFormToUpload').val('');
     jQuery('#officeFormToUpload').val('');
     jQuery('#formsModal').modal();
+	document.getElementById('formsModal').style.maxWidth = "1024px";
     jQuery('#formsModal').modal('open');
 }
 function getLastForm(tag) {

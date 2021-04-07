@@ -7,6 +7,7 @@ function addAssetModalRequested(elementID) {
     jQuery('#addAssetDesc').val('');
     jQuery('#addAssetNotes').val('');
     jQuery('#addAssetsModal').modal();
+	document.getElementById('addAssetsModal').style.maxWidth = "1024px";
     jQuery('#addAssetsModal').modal('open');
 }
 
@@ -20,6 +21,7 @@ function custodianModalRequested() {
         jQuery('#Phone').val(data['Phone']);
         jQuery('#org').val(data['Org']);
         jQuery('#custodianModal').modal();
+		document.getElementById('custodianModal').style.maxWidth = "1024px";
         jQuery('#custodianModal').modal('open');
     });
 }
@@ -34,6 +36,7 @@ function modalRequestedOnPendingAsset(elementID) {
         jQuery('#responseModal').find('#modal-response-title').text('Asset Status Pending');
         jQuery('#responseModal').find('#modal-response-alert').text(data);
         jQuery('#responseModal').modal();
+		document.getElementById('responseModal').style.maxWidth = "1024px";
         jQuery('#responseModal').modal('open');
     });
 }

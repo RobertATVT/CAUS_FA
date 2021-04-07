@@ -11,6 +11,7 @@ function ticketModalRequested(elementID) {
     jQuery('#ticketSerial').text(serial);
     jQuery('#ticketDescription').text(desc);
     jQuery('#ticketModal').modal();
+	document.getElementById('ticketModal').style.maxWidth = "1024px";
     jQuery('#ticketModal').modal('open');
 }
 // END Report Problem Modal Functions

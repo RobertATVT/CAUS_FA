@@ -4,16 +4,16 @@
         <h4 class="center faa-modal-title">Asset Transfer</h4> 
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                <div class="cl m3 t20 info-title" style="padding: 0px;">VT Tag Number:</div>
-                <div class="cl m6 t20"><span class="asset-tag"></span></div>
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>
-                <div class="cl m8 t20"><span class="asset-description"></span></div>
+                <div class="cl t4 info-title" style="padding: 0px;">VT Tag Number:</div>
+                <div class="cl t8"><span class="asset-tag"></span></div>
+                <div class="cl t4 info-title" style="padding: 0px;">Description: </div>
+                <div class="cl t8"><span class="asset-description"></span></div>
             </div>
         </div>
         <div class="rw" style="padding: 10px;margin-bottom: 0px; margin-top: -10px;">
             <div class="rw faa-modal-info" style="margin-bottom: 0px">
                 <form autocomplete="off">
-                    <div class="center cl t20 form-group" style="padding: 0px;">
+                    <div class="cl t24 center form-group" style="padding: 0px;">
                         <label for="recipient-name" class="form-control-label info-title" style="font-size: 150%; text-align: center;">RECEIVER NAME</label>
                         <input type="text" class="awesomplete" id="recipient-name" list="PIDs"-+>
                         <datalist id="PIDs"></datalist>
@@ -23,36 +23,32 @@
             </div>
         </div>
         <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;">
-            <div class="cl m20 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">
+            <div class="cl t24 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">
                 <p class="center info-title">Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
             </div>
         </div>
     </div>
     <div class="modal-footer">
         <div class="rw">
-            <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="transferAsset()">Transfer</button>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-primary" id="transferButton" style="width: 33%;line-height: 20px;font-size: 18px;" onclick="transferAsset()">Transfer</button>
             </div>
-            <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
-            </div>
-            <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="transferAsset()">Transfer</button>
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-secondary modal-close" style="width: 33%;line-height: 20px;font-size: 18px;">Cancel</button>
             </div>
         </div>
     </div>
 </div>
 <!-----Bulk Transfer Modal----->
-<div id="bulk-transferModal" class="modal">
+<div id="bulk-transferModal" class="modal" style="max-width: 960px !important;">
     <div class="modal-content">
         <h4 class="center faa-modal-title">Asset Transfer</h4> 
         <div class="rw" style="padding: 10px; margin-bottom: 0px; !important">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                <div class="cl m3 t20 info-title center" style="padding: 0px;">VT Tag Number</div>
-                <div class="cl m7 t20 info-title center" style="padding: 0px;">Description</div>
-				<div class="cl m7 t20 info-title center" style="padding: 0px;">Reciever</div>
-				<div class="cl m3 t20 info-title center" style="padding: 0px;">Same Receiver</div>
+                <div class="cl t4 info-title center" style="padding: 0px;">VT Tag Number</div>
+                <div class="cl t8 info-title center" style="padding: 0px;">Description</div>
+				<div class="cl t8 info-title center" style="padding: 0px;">Reciever</div>
+				<div class="cl t4 info-title center" style="padding: 0px;">Same Receiver</div>
             </div>
         </div>
 
@@ -67,22 +63,18 @@
         </div>
 
         <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -5px;">
-            <div class="cl m20 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">
+            <div class="cl t24 faa-modal-info" style="padding: 10px;padding-bottom: 0px;">
                 <p class="center info-title">Please enter the PID of the person that you wish to transfer this asset to and then click Submit to alert your IT and Fixed Assets Liaison to facilitate the transfer.</p>
             </div>
         </div>
     </div>
     <div class="modal-footer">
         <div class="rw">
-            <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="bulkTransferAsset()">Transfer</button>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-primary" id="transferButton" style="width: 33%;line-height: 20px;font-size: 18px;" onclick="bulkTransferAsset()">Transfer</button>
             </div>
-            <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
-            </div>
-            <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="transferButton" onclick="bulkTransferAsset()">Transfer</button>
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-secondary modal-close" style="width: 33%;line-height: 20px;font-size: 18px;">Cancel</button>
             </div>
         </div>
     </div>
@@ -93,30 +85,26 @@
         <h4 class="center faa-modal-title" id="surplusModalLabel">Surplus Request</h4>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                <div class="cl m2 t20 info-title" style="padding: 0px;">Asset Tag:</div>
-                <div class="cl m7 t20"><span class="asset-tag"></span></div>
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>
-                <div class="cl m8 t20"><span class="asset-description"></span></div>
+                <div class="cl t3 info-title" style="padding: 0px;">Asset Tag:</div>
+                <div class="cl t8"><span class="asset-tag"></span></div>
+                <div class="cl t4 info-title" style="padding: 0px;">Description: </div>
+                <div class="cl t9"><span class="asset-description"></span></div>
                 <input type="hidden" id="surplusIndex" value="" />
             </div>
         </div>
         <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;margin-bottom: -10px;">
-            <div class="cl t20" style="padding: 0px;">
+            <div class="cl t24" style="padding: 0px;">
                 <p class="center info-title" style="font-size: 130%;">Are you sure you want to initiate this surplus request?</p>
             </div>
         </div>
     </div>
     <div class="modal-footer">
         <div class="rw">
-            <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-primary" id="surplusButton" style="width: 33%;line-height: 20px;font-size: 18px;" onClick="surplusAsset()">Surplus</button>
             </div>
-            <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
-            </div>
-            <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="surplusButton" onClick="surplusAsset()">Surplus</button>
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-secondary modal-close" style="width: 33%;line-height: 20px;font-size: 18px;">Cancel</button>
             </div>
         </div>
     </div>
@@ -127,9 +115,9 @@
         <h4 class="center faa-modal-title">Asset Transfer</h4> 
         <div class="rw" style="padding: 10px; margin-bottom: 0px; !important">
             <div class="rw faa-modal-info" style="margin-bottom: 0px;">
-                <div class="cl m4 t20 info-title center" style="padding: 0px;">VT Tag Number</div>
-				<div class="cl m2">&nbsp;</div>
-                <div class="cl m14 t20 info-title center" style="padding: 0px;">Description</div>
+                <div class="cl t5 info-title center" style="padding: 0px;">VT Tag Number</div>
+				<div class="cl t3">&nbsp;</div>
+                <div class="cl t16 info-title center" style="padding: 0px;">Description</div>
             </div>
         </div>
 
@@ -147,15 +135,11 @@
     </div>
     <div class="modal-footer">
         <div class="rw">
-            <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-primary" id="surplusButton" onClick="bulkSurplusAsset()">Surplus</button>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-primary" id="surplusButton" style="width: 33%;line-height: 20px;font-size: 18px;" onClick="bulkSurplusAsset()">Surplus</button>
             </div>
-            <div class="center cl t10 hide-medium-up">
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
-            </div>
-            <div class="cl m20 hide-small-down">
-                <button type="button" class="btn btn-primary" id="surplusButton" onClick="bulkSurplusAsset()">Surplus</button>
-                <button type="button" class="btn btn-secondary modal-close">Cancel</button>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-secondary modal-close" style="width: 33%;line-height: 20px;font-size: 18px;">Cancel</button>
             </div>
         </div>
     </div>
@@ -167,22 +151,22 @@
         <h4 class="center faa-modal-title" id="galleryModalLabel">Gallery</h4>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                <div class="center cl t20" style="">
+                <div class="center cl t24" style="">
                     <form >
                         <input type="hidden" id="galleryPtag">
-                        <div class="center cl t20" style="padding-bottom: 0px;margin-bottom: 2px !important;height: 35px;">
+                        <div class="center cl t24" style="padding-bottom: 0px;margin-bottom: 2px !important;height: 35px;">
                             <input type="text" id ="imageDescription" placeholder="Please Enter Asset Description Here" style="width: 95%;">
                         </div>
-                        <div class="center cl m10 t20" style="padding-bottom: 0px; margin: 0px !important;padding-left: 2.5%;">
+                        <div class="center cl t12" style="padding-bottom: 0px; margin: 0px !important;padding-left: 2.5%;">
                             <input type="file" class="home-file" name="fileToUpload" id="imageFileToUpload">
                         </div>
-                        <div class="center cl m10 t20" style="padding-bottom: 0px;  margin: 0px !important;padding-right: 2.5%;">
+                        <div class="center cl t12" style="padding-bottom: 0px;  margin: 0px !important;padding-right: 2.5%;">
                             <input type="button" class="btn btn-primary home-upload" value="Upload New Image" onclick="uploadImage()">    
                         </div>
 
                     </form>
                 </div>
-                <div class="center cl t20" style="display:block; margin-top: 5px; background-color: #333 !important; padding: 5px !important;">
+                <div class="center cl t24" style="display:block; margin-top: 5px; background-color: #333 !important; padding: 5px !important;">
                     <div class="slider-for"></div>
                     <div class="slider-nav"></div>
                     <input type="hidden" id="imageCount">
@@ -200,38 +184,43 @@
         <iframe id="Form_output" width="0" height="0"></iframe>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                <div class="center cl m10 t20 forms-modal-left">
-                    <div class="center cl t20" style="padding-bottom: 0px;">
-                        <button type="button" class="btn btn-primary home-generate" onclick="generateForm(this, 0)">Print New Home Use Form</button>
+                <div class="center cl t12 forms-modal-left">
+                    <div class="center cl t24" style="padding-bottom: 0px;">
+                        <button type="button" class="btn btn-primary home-generate" style="line-height: 20px;" onclick="generateForm(this, 0)">Print New Home Use Form</button>
                     </div>
-                    <div class="center cl t20" style="padding-bottom: 0px; margin-bottom: 0px;">
+                    <div class="center cl t24" style="padding-bottom: 0px; margin-bottom: 0px;">
                         <input type="hidden" id="formsId" value="" />
                         <input type="hidden" id="formsPtag" value="" />
                         <hr style="padding: 10px; margin: 0px; margin-top: 10px;">
                         <form >
                             <input type="file" class="home-file" name="fileToUpload" id="homeFormToUpload"><br>
-                            <input type="button" class="btn btn-primary home-upload" value="Upload New Home Use Form" onclick="uploadFormHome()">
+                            <input type="button" class="btn btn-primary home-upload" style="line-height: 20px;" value="Upload New Home Use Form" onclick="uploadFormHome()">
                         </form>
                     </div>
                 </div>
-                <div class="center cl m10 t20 forms-modal-center">
-                    <div class="center cl t20" style="padding-bottom: 0px;">
-                        <button type="button" class="btn btn-primary home-generate" onclick="generateForm(this, 1)">Print New Office Use Form</button>
+                <div class="center cl t12 forms-modal-center">
+                    <div class="center cl t24" style="padding-bottom: 0px;">
+                        <button type="button" class="btn btn-primary home-generate" style="line-height: 20px;" onclick="generateForm(this, 1)">Print New Office Use Form</button>
                     </div>
-                    <div class="center cl t20" style="padding-bottom: 0px; margin-bottom: 0px;">
+                    <div class="center cl t24" style="padding-bottom: 0px; margin-bottom: 0px;">
                         <hr style="padding: 10px; margin: 0px; margin-top: 10px;">
                         <form>
                             <input type="file" class="home-file" name="fileToUpload" id="officeFormToUpload"><br>
-                            <input type="button" class="btn btn-primary home-upload" value="Upload New Office Use Form" onclick="uploadFormOffice()">
+                            <input type="button" class="btn btn-primary home-upload" style="line-height: 20px;" value="Upload New Office Use Form" onclick="uploadFormOffice()">
                         </form>   
                     </div>
                 </div>
-                <div id="last-form" class="center cl m20 t20 forms-modal-right"></div>
+                <div id="last-form" class="center cl t24 forms-modal-right"></div>
             </div>
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary modal-close">CLOSE</button>
+        <div class="rw">
+            <div class="center cl t12"></div>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-secondary modal-close" style="width: 33%;line-height: 20px;font-size: 18px;">CLOSE</button>
+            </div>
+        </div>
     </div>
 </div>
 <!---- Ticket Modal ----->
@@ -240,22 +229,22 @@
         <h4 class="center faa-modal-title" id="modal-report-title">Report Problem</h4>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw faa-modal-info" style="margin-bottom: 5px;">
-                <div class="cl m3 t20 info-title" style="padding: 0px;">VT Tag Number:</div>
-                <div class="cl m7 t20"><span class="asset-tag" id="ticketPtag"></span></div>
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Serial Number:</div>
-                <div class="cl m7 t20"><span class="asset-serial" id="ticketSerial"></span></div>
+                <div class="cl t4 info-title" style="padding: 0px;">VT Tag Number:</div>
+                <div class="cl t8"><span class="asset-tag" id="ticketPtag"></span></div>
+                <div class="cl t4 info-title" style="padding: 0px;">Serial Number:</div>
+                <div class="cl t8"><span class="asset-serial" id="ticketSerial"></span></div>
             </div>
             <div class="rw faa-modal-info" style="margin-bottom: 5px;">
-                <div class="cl m3 t20 info-title" style="padding: 0px;">Description: </div>
-                <div class="cl m8 t20"><span class="asset-description" id="ticketDescription"></span></div>
+                <div class="cl t12 info-title" style="padding: 0px;">Description: </div>
+                <div class="cl t12"><span class="asset-description" id="ticketDescription"></span></div>
                 <input type="hidden" id="reportIndex" value="" />
             </div>
         </div>
         <div class="rw" style="margin-bottom: 0px;padding: 10px; margin-top: -10px;margin-bottom: -10px;">
-            <div class="cl t20" style="padding: 0px;margin-bottom:-20px;">
+            <div class="cl t24" style="padding: 0px;margin-bottom:-20px;">
                 <p class="center info-title" style="font-size: 130%;">If the information above is correct please choose why you are filing this report below:</p>
             </div>
-            <div class="cl t20" style="padding: 0px;margin:0px;margin-bottom: 10px;">
+            <div class="cl t24" style="padding: 0px;margin:0px;margin-bottom: 10px;">
                 <select id="ticketSelect">
                     <option value="not-missing">This item is not missing.</option>
                     <option value="item-surplused">This item was previously surplused.</option>
@@ -266,14 +255,20 @@
 					<option value="other">Other options not listed here.</option>
                 </select>
             </div>
-			<div class="center cl m20 t20">
+			<div class="center cl t24">
 				<textarea id ="addTicketNotes" placeholder="Please enter any relevenat information such as why this should be added." style="width: 100%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea>
 			</div>
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="reportButton" onclick="addTicket()">SUBMIT REPORT</button>
-        <button type="button" class="btn btn-secondary modal-close">CANCEL</button>
+		<div class="rw">
+            <div class="center cl t12">
+                <button type="button" class="btn btn-primary" id="surplusButton" style="width: 33%;line-height: 20px;font-size: 18px;" onclick="addTicket()">Submit Report</button>
+            </div>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-secondary modal-close" style="width: 33%;line-height: 20px;font-size: 18px;">Cancel</button>
+            </div>
+        </div>
     </div>
 </div>
 <!---- Add Assets Modal ----->
@@ -282,27 +277,26 @@
         <h4 class="center faa-modal-title" id="modal-add-asset-title">Add Missing Asset</h4>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <form>
-<!--        
-            <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                <div class="center cl m5 t5">VT Tag Number</div>
-                <div class="center cl m5 t5">Serial Number</div>
-                <div class="center cl m10 t10">Description</div>
-            </div>
--->
                 <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                    <div class="center cl m5 t5"><input type="text" id ="addAssetPTAG" placeholder="Enter VT Tag Number" style="width: 95%;"></div>
-                    <div class="center cl m5 t5"><input type="text" id ="addAssetSerial" placeholder="Enter Serial Number" style="width: 95%;"></div>
-                    <div class="center cl m10 t10"><input type="text" id ="addAssetDesc" placeholder="Please enter a Description" style="width: 95%;"></div>
+                    <div class="center cl t6"><input type="text" id ="addAssetPTAG" placeholder="Enter VT Tag Number" style="width: 95%;"></div>
+                    <div class="center cl t6"><input type="text" id ="addAssetSerial" placeholder="Enter Serial Number" style="width: 95%;"></div>
+                    <div class="center cl t12"><input type="text" id ="addAssetDesc" placeholder="Please enter a Description" style="width: 95%;"></div>
                 </div>
                 <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                    <div class="center cl m20 t20"><textarea id ="addAssetNotes" placeholder="Please enter any relevenat information such as why this should be added." style="width: 99%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea></div>
+                    <div class="center cl t24"><textarea id ="addAssetNotes" placeholder="Please enter any relevenat information such as why this should be added." style="width: 99%; height: auto; border-color: #9e9e9e !important; border: 1px solid; border-bottom: 2px solid;"></textarea></div>
                 </div>
             </form>
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="addAssetButton" onclick="addAsset()">SUBMIT REQUEST</button>
-        <button type="button" class="btn btn-secondary modal-close">CANCEL REQUEST</button>
+		<div class="rw">
+            <div class="center cl t12">
+                <button type="button" class="btn btn-primary" id="surplusButton" style="width: 50%;line-height: 20px;font-size: 18px;" onclick="addAsset()">Submit Request</button>
+            </div>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-secondary modal-close" style="width: 50%;line-height: 20px;font-size: 18px;">Cancel Request</button>
+            </div>
+        </div>
     </div>
 </div>
 <!---- New Custodian Modal ---->
@@ -313,24 +307,24 @@
 			<div class="rw" style="padding: 0px; margin-bottom: 0px;">
 				<form>
 					<div class="rw" style="margin-bottom: 0px; font-size: 120% !important;">
-						<div class="cl t20 info-title" style="text-align:center;padding: 0px; padding-top: 10px; padding-bottom: 15px;">Please enter the new information to update.</div>
+						<div class="cl t24 info-title" style="text-align:center;padding: 0px; padding-top: 10px; padding-bottom: 15px;">Please enter the new information to update.</div>
 						<div class="rw">
-							<div class="cl t20">
-								<div class="cl t20">
-									<div class="cl m8 t20">Building name:</div>
-									<div class="cl m12 t20" style="padding: 0px;"><input type="text" name="building" id="Building" value="" placeholder="Building"></div>
+							<div class="cl t24">
+								<div class="cl t24">
+									<div class="cl t10">Building name:</div>
+									<div class="cl t14" style="padding: 0px;"><input type="text" name="building" id="Building" value="" placeholder="Building"></div>
 								</div>
-                                <div class="cl t20">
-                                    <div class="cl m8 t20">Office number:</div>
-                                    <div class="cl m12 t20" style="padding: 0px;"><input type="text" name="office" id="Office" value="" placeholder="Office Number"></div>
+                                <div class="cl t24">
+                                    <div class="cl t10">Office number:</div>
+                                    <div class="cl t14" style="padding: 0px;"><input type="text" name="office" id="Office" value="" placeholder="Office Number"></div>
                                 </div>
-								<div class="cl t20">
-									<div class="cl m8 t20">Phone Number</div>
-									<div class="cl m12 t20" style="padding: 0px;"><input type="text" name="phone" id="Phone" value="" placeholder="000-000-0000"></div> 
+								<div class="cl t24">
+									<div class="cl t10">Phone Number</div>
+									<div class="cl t14" style="padding: 0px;"><input type="text" name="phone" id="Phone" value="" placeholder="000-000-0000"></div> 
 								</div>
-								<div class="cl t20">
-									<div class="cl m8 t20">Organization</div>
-									<div class="cl m12 t20" style="padding: 0px;">
+								<div class="cl t24">
+									<div class="cl t10">Organization</div>
+									<div class="cl t14" style="padding: 0px;">
 										<select id="org">
 											<option value="CAUS">College of Architecture and Urban Studies</option>
 											<option value="A+D">Architecture + Design</option>
@@ -349,8 +343,14 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-    	<button type="button" class="btn btn-primary"  id="newCustodianButton" onclick="new_custodian_submit()">SUBMIT REQUEST</button>
-        <button type="button" class="btn btn-secondary modal-close">CANCEL REQUEST</button>
+		<div class="rw">
+            <div class="center cl t12">
+                <button type="button" class="btn btn-primary" id="surplusButton" style="width: 33%;line-height: 20px;font-size: 18px;" onclick="new_custodian_submit()">Submit Request</button>
+            </div>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-secondary modal-close" style="width: 33%;line-height: 20px;font-size: 18px;">Cancel Request</button>
+            </div>
+        </div>
     </div>
 </div>
 <!---- Response Modal ----->
@@ -359,11 +359,16 @@
         <h4 class="center faa-modal-title" id="modal-response-title">[MODAL TITLE]</h4>
         <div class="rw" style="padding: 10px; margin-bottom: 0px;">
             <div class="rw" style="margin-bottom: 0px; padding: 0px;">
-                <div id="modal-response-alert" class="center cl m20 t20">[MODAL RESPONSE]</div>
+                <div id="modal-response-alert" class="center cl t24">[MODAL RESPONSE]</div>
             </div>
         </div>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary modal-close">CLOSE</button>
+		<div class="rw">
+            <div class="center cl t12"></div>
+            <div class="center cl t12">
+                <button type="button" class="btn btn-secondary modal-close" style="width: 33%;line-height: 20px;font-size: 18px;">CLOSE</button>
+            </div>
+        </div>
     </div>
 </div>

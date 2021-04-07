@@ -25,10 +25,10 @@ function bulkSurplusModalRequested() {
     }
     var assets = '';
     for (i = 0; i < tags.length; i++) {
-        var asset = '<div class="center cl t20 form-group" style="padding: 0px; margin-bottom: 3px;">' +
-            '           <div class="cl m4 t20"><span class="asset-tag-[ID]">' + tags[i] + '</span></div>' +
-            '           <div class="cl m2">&nbsp;</div>' +
-            '           <div class="cl m14 t20 shorten-text text-left"><span class="asset-description-[ID]">' + descriptions[i] + '</span></div>' +
+        var asset = '<div class="center cl t24 form-group" style="padding: 0px; margin-bottom: 3px;">' +
+            '           <div class="cl t5"><span class="asset-tag-[ID]">' + tags[i] + '</span></div>' +
+            '           <div class="cl t3">&nbsp;</div>' +
+            '           <div class="cl t16 shorten-text text-left"><span class="asset-description-[ID]">' + descriptions[i] + '</span></div>' +
             '        </div>';
     asset = asset.split('[ID]').join(ids[i]);
     assets = assets + asset;
@@ -36,6 +36,7 @@ function bulkSurplusModalRequested() {
     jQuery('#bulk-surplus-items').html(assets);
     jQuery('#bulk-surplus-ids').val(ids.join(', '));
     jQuery('#bulk-surplusModal').modal();
+	document.getElementById('bulk-surplusModal').style.maxWidth = "1024px";
     jQuery('#bulk-surplusModal').modal('open');
 
 }
@@ -156,6 +157,7 @@ function bulkSurplusAssetAdmin() {
             jQuery('#responseModal').find('#modal-response-title').text('Surplus Request Submitted');
             jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
             jQuery('#responseModal').modal();
+			document.getElementById('responseModal').style.maxWidth = "1024px";
             jQuery('#responseModal').modal('open');
         }
     });

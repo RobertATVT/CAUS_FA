@@ -70,14 +70,14 @@ function bulkTransferModalRequested() {
     }
     var assets = '';
     for (i = 0; i < tags.length; i++) {
-        var asset = '<div class="center cl t20 form-group" style="padding: 0px;">' +
-            '    <div class="cl m3 t20"><span id="bulk-asset-tag-[ID]">' + tags[i] + '</span></div>' +
-            '    <div class="cl m7 t20 shorten-text"><span class="asset-description-[ID]">' + descriptions[i] + '</span></div>' +
-            '    <div class="cl m7 t20">' +
+        var asset = '<div class="cl t24 center form-group" style="padding: 0px;">' +
+            '    <div class="cl t4"><span id="bulk-asset-tag-[ID]">' + tags[i] + '</span></div>' +
+            '    <div class="cl t8 shorten-text"><span class="asset-description-[ID]">' + descriptions[i] + '</span></div>' +
+            '    <div class="cl t8">' +
             '        <input type="text" class="awesomplete" id="recipient-name-[ID]" list="PIDs">' +
             '        <input type="hidden" id="transferIndex" value="" />' +
             '    </div>' +
-            '    <div class="cl m3 t20">' +
+            '    <div class="cl t4">' +
             '        <input id="same-reciever-[ID]" type="checkbox" value="same-reciever-[ID]" class="filled-in admin-block-line-b" disabled="disabled">' +
             '        <label for="same-reciever-[ID]"></label>' +
             '    </div>' +
@@ -102,8 +102,8 @@ function bulkTransferModalRequested() {
     transferModalLoad(selectors);
     jQuery('#bulk-transfer-ids').val(ids.join(', '));
     jQuery('#bulk-transferModal').modal();
+	document.getElementById('bulk-transferModal').style.maxWidth = "1024px";
     jQuery('#bulk-transferModal').modal('open');
-
 }
 
 function inputBoxChange(element) {
@@ -229,6 +229,7 @@ function transferAsset() {
                 jQuery('#responseModal').find('#modal-response-title').text('Transfer Request Submitted');
                 jQuery('#responseModal').find('#modal-response-alert').text(data['message']);
                 jQuery('#responseModal').modal();
+				document.getElementById('responseModal').style.maxWidth = "1024px";
                 jQuery('#responseModal').modal('open');
             }
         });
