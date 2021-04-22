@@ -196,10 +196,10 @@ function generateOffieUse(data) {
     doc.text(70, 168, 'Administration of Computer and Communications Systems Policy, and the VT Statement of');
     doc.text(70, 180, 'Business Conduct Standards.');
 
-    doc.text(80, 204, 'It is understoof that this equipment is owned by Virginia Tech and custodianship will be returned');
-    doc.text(70, 216, 'upon request of the Departmen Head, Auditors, Inventory Services, or prior to your departure from');
+    doc.text(80, 204, 'It is understood that this equipment is owned by Virginia Tech and custodianship will be returned');
+    doc.text(70, 216, 'upon request of the Department Head, Auditors, Inventory Services, or prior to your departure from');
     doc.text(70, 228, 'CAUS. In the event that this equipment is destroyed or lost, you are responsible for immediately');
-    doc.text(70, 240, 'notifying your Department Head and your departments fixed assets liaison. Any problems that you');
+    doc.text(70, 240, 'notifying your Department Head and your departments fixed assets liaison. Any problems that you have');
     doc.text(70, 252, 'with the asset will be reported to your IT Staff. Should this equipment need to be moved from its');
     doc.text(70, 264, 'current location, prior approval and coordination with IT and/or Facilities is required.');
 
